@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 import consort
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
@@ -23,6 +23,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_1 = self._make_staff(
             'Performer 1', 'percussion',
             abbreviation='p_1',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-1',
             )
@@ -30,6 +31,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_2 = self._make_staff(
             'Performer 2', 'percussion',
             abbreviation='p_2',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-2',
             )
@@ -37,6 +39,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_3 = self._make_staff(
             'Performer 3', 'percussion',
             abbreviation='p_3',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-3',
             )
@@ -44,6 +47,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_4 = self._make_staff(
             'Performer 4', 'percussion',
             abbreviation='p_4',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-4',
             )
@@ -51,6 +55,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_5 = self._make_staff(
             'Performer 5', 'percussion',
             abbreviation='p_5',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-5',
             )
@@ -58,6 +63,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_6 = self._make_staff(
             'Performer 6', 'percussion',
             abbreviation='p_6',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-6',
             )
@@ -65,6 +71,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_7 = self._make_staff(
             'Performer 7', 'percussion',
             abbreviation='p_7',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-7',
             )
@@ -72,6 +79,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_8 = self._make_staff(
             'Performer 8', 'percussion',
             abbreviation='p_8',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-8',
             )
@@ -79,6 +87,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_9 = self._make_staff(
             'Performer 9', 'percussion',
             abbreviation='p_9',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-9',
             )
@@ -86,6 +95,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_10 = self._make_staff(
             'Performer 10', 'percussion',
             abbreviation='p_10',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-10',
             )
@@ -93,6 +103,7 @@ class ScoreTemplate(consort.ScoreTemplate):
         performer_11 = self._make_staff(
             'Performer 11', 'percussion',
             abbreviation='p_11',
+            context_name='Staff',
             instrument=instrumenttools.Percussion(),
             tag='performer-11',
             )
