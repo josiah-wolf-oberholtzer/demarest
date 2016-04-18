@@ -1,4 +1,4 @@
-Demerest
+Demarest
 ========
 
-Demerest (2016)
+Demarest (2016)
