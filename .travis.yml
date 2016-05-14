@@ -12,7 +12,7 @@ before_install:
 install:
     - pip install --allow-external abjad --allow-unverified abjad -e git://github.com/Abjad/abjad.git#egg=abjad
     - pip install --allow-external ide --allow-unverified ide -e git://github.com/Abjad/ide.git#egg=ide
-    #- pip install --allow-external consort --allow-unverified consort -e git://github.com/josiah-wolf-oberholtzer/consort.git#egg=consort
+    #- pip install --allow-external library --allow-unverified library -e git://github.com/josiah-wolf-oberholtzer/library.git#egg=library
     - pip install -e .
 
 script:

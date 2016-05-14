@@ -1,4 +1,1 @@
-Demarest
-========
-
-Demarest (2016)
+# Demarest (2016)
