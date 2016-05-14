@@ -36,7 +36,7 @@
     max-systems-per-page = 1
     page-breaking = #ly:optimal-breaking
     ragged-bottom = ##f
-    ragged-last-bottom = ##t
+    ragged-last-bottom = ##f
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 12)
@@ -152,10 +152,70 @@
     %%% PERFORMERS %%%
 
     \context {
+        \Staff
+        \name VocalizationStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(0)
+    }
+
+    \context {
+        \Staff
+        \name ChorusPercussionStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-4 -2 0 4)
+    }
+
+    \context {
+        \Staff
+        \name QuartetAPercussionStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-4 0 4)
+    }
+
+    \context {
+        \Staff
+        \name QuartetBPercussionStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-4 0 4)
+    }
+
+    \context {
+        \Staff
+        \name QuartetCPercussionStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-4 0 4)
+    }
+
+    \context {
+        \Staff
+        \name QuartetDPercussionStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-4 0 4)
+    }
+
+    \context {
         \StaffGroup
         \name PerformerStaffGroup
         \type Engraver_group
         \alias StaffGroup
+        \accepts ChorusPercussionStaff
+        \accepts VocalizationStaff
+        \accepts QuartetAPercussionStaff
+        \accepts QuartetBPercussionStaff
+        \accepts QuartetCPercussionStaff
+        \accepts QuartetDPercussionStaff
+        \override StaffGrouper.staff-staff-spacing = #'(
+            (basic-distance . 10)
+            (minimum-distance . 10)
+            (padding . 5)
+            (stretchability . 10)
+            )
         systemStartDelimiter = #'SystemStartSquare
     }
 
@@ -190,13 +250,13 @@
             (basic-distance . 10)
             (minimum-distance . 10)
             (padding . 5)
-            (stretchability . 0)
+            (stretchability . 100)
             )
         \override StaffGrouper.staff-staff-spacing = #'(
             (basic-distance . 10)
             (minimum-distance . 10)
             (padding . 5)
-            (stretchability . 0)
+            (stretchability . 100)
             )
         \override BarLine.bar-extent = #'(-2 . 2)
         \override BarLine.hair-thickness = 0.5
