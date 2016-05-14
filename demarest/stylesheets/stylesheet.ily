@@ -169,6 +169,13 @@
 
     \context {
         \Staff
+        \name PitchedPercussionStaff
+        \type Engraver_group
+        \alias Staff
+    }
+
+    \context {
+        \Staff
         \name QuartetAPercussionStaff
         \type Engraver_group
         \alias Staff
@@ -206,6 +213,7 @@
         \alias StaffGroup
         \accepts ChorusPercussionStaff
         \accepts VocalizationStaff
+        \accepts PitchedPercussionStaff
         \accepts QuartetAPercussionStaff
         \accepts QuartetBPercussionStaff
         \accepts QuartetCPercussionStaff
