@@ -1,7 +1,9 @@
 # -*- encoding: utf-8 -*-
 import consort
+from abjad import attach
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
+from abjad.tools import indicatortools
 
 
 class ScoreTemplate(consort.ScoreTemplate):
@@ -20,113 +22,119 @@ class ScoreTemplate(consort.ScoreTemplate):
             )
         self._attach_tag('time', time_signature_context)
 
-        performer_1 = self._make_staff(
-            'Performer 1', 'percussion',
-            abbreviation='p_1',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-1',
-            )
-
-        performer_2 = self._make_staff(
-            'Performer 2', 'percussion',
-            abbreviation='p_2',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-2',
-            )
-
-        performer_3 = self._make_staff(
-            'Performer 3', 'percussion',
-            abbreviation='p_3',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-3',
-            )
-
-        performer_4 = self._make_staff(
-            'Performer 4', 'percussion',
-            abbreviation='p_4',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-4',
-            )
-
-        performer_5 = self._make_staff(
-            'Performer 5', 'percussion',
-            abbreviation='p_5',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-5',
-            )
-
-        performer_6 = self._make_staff(
-            'Performer 6', 'percussion',
-            abbreviation='p_6',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-6',
-            )
-
-        performer_7 = self._make_staff(
-            'Performer 7', 'percussion',
-            abbreviation='p_7',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-7',
-            )
-
-        performer_8 = self._make_staff(
-            'Performer 8', 'percussion',
-            abbreviation='p_8',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-8',
-            )
-
-        performer_9 = self._make_staff(
-            'Performer 9', 'percussion',
-            abbreviation='p_9',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-9',
-            )
-
-        performer_10 = self._make_staff(
-            'Performer 10', 'percussion',
-            abbreviation='p_10',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-10',
-            )
-
-        performer_11 = self._make_staff(
-            'Performer 11', 'percussion',
-            abbreviation='p_11',
-            context_name='Staff',
-            instrument=instrumenttools.Percussion(),
-            tag='performer-11',
-            )
-
-        staff_group = scoretools.StaffGroup(
+        chorus_a = scoretools.StaffGroup(
             [
-                performer_1,
-                performer_2,
-                performer_3,
-                performer_4,
-                performer_5,
-                performer_6,
-                performer_7,
-                performer_8,
-                performer_9,
-                performer_10,
-                performer_11,
+                self._make_chorus_performer('a1'),
+                self._make_chorus_performer('a2'),
+                self._make_chorus_performer('a3'),
                 ],
-            name='Staff Group',
+            name='Chorus A',
+            context_name='SectionStaffGroup',
+            )
+
+        quartet = scoretools.StaffGroup(
+            [
+                self._make_chorus_performer('A'),
+                self._make_chorus_performer('B'),
+                self._make_chorus_performer('C'),
+                self._make_chorus_performer('D'),
+                ],
+            name='Core Quartet',
+            context_name='SectionStaffGroup',
+            )
+
+        chorus_b = scoretools.StaffGroup(
+            [
+                self._make_chorus_performer('b1'),
+                self._make_chorus_performer('b2'),
+                self._make_chorus_performer('b3'),
+                self._make_chorus_performer('b4'),
+                ],
+            name='Chorus B',
+            context_name='SectionStaffGroup',
             )
 
         score = scoretools.Score(
-            [time_signature_context, staff_group],
+            [
+                time_signature_context,
+                chorus_a,
+                quartet,
+                chorus_b,
+                ],
             name='Demarest Score',
             )
         return score
+
+    ### PRIVATE METHODS ###
+
+    def _make_quartet_a(self):
+        staff_group = scoretools.StaffGroup(
+            [
+                ],
+            name='Quartet A Performer Staff Group',
+            context_name='PerformerStaffGroup',
+            )
+        return staff_group
+
+    def _make_quartet_b(self):
+        staff_group = scoretools.StaffGroup(
+            [
+                ],
+            name='Quartet B Performer Staff Group',
+            context_name='PerformerStaffGroup',
+            )
+        return staff_group
+
+    def _make_quartet_c(self):
+        staff_group = scoretools.StaffGroup(
+            [
+                ],
+            name='Quartet C Performer Staff Group',
+            context_name='PerformerStaffGroup',
+            )
+        return staff_group
+
+    def _make_quartet_d(self):
+        staff_group = scoretools.StaffGroup(
+            [
+                ],
+            name='Quartet D Performer Staff Group',
+            context_name='PerformerStaffGroup',
+            )
+        return staff_group
+
+    def _make_chorus_performer(self, chorus_index):
+        mapping = self._context_name_abbreviations
+
+        instrument = instrumenttools.Percussion(
+            #instrument_name='chorus {}'.format(index),
+            #instrument_name_markup='Chorus {}'.format(index),
+            #short_instrument_name='Ch. {}'.format(index)
+            )
+
+        vocal_voice = scoretools.Voice()
+        vocal_staff = scoretools.Staff(
+            [vocal_voice],
+            )
+        attach(indicatortools.Clef('percussion'), vocal_staff)
+        abbreviation = ''
+        mapping[abbreviation] = vocal_voice.name
+
+        percussion_voice = scoretools.Voice()
+        percussion_staff = scoretools.Staff(
+            [percussion_voice],
+            )
+        attach(indicatortools.Clef('percussion'), percussion_staff)
+        abbreviation = ''
+        mapping[abbreviation] = percussion_voice.name
+
+        staff_group = scoretools.StaffGroup(
+            [
+                vocal_staff,
+                percussion_staff,
+                ],
+            context_name='PerformerStaffGroup',
+            )
+        attach(instrument, staff_group)
+
+        return staff_group
