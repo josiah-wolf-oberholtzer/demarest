@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 import consort
-from abjad import attach
 from abjad.tools import instrumenttools
 from abjad.tools import markuptools
 from abjad.tools import scoretools
@@ -126,24 +125,34 @@ class ScoreTemplate(consort.ScoreTemplate):
             context_name='PerformerStaffGroup',
             name='{}{} Staff Group'.format(group, index),
             )
-#        instrument = instrumenttools.Instrument(
-#            instrument_name_markup=markuptools.Markup.concat([
-#                markuptools.Markup(
-#                    'Chorus {} {}'.format(group, index),
-#                    ).italic(),
-#                markuptools.Markup.hspace(2),
-#                ]),
-#            short_instrument_name_markup=markuptools.Markup.concat([
-#                markuptools.Markup(
-#                    'Ch.{}{}'.format(group, index),
-#                    ).italic(),
-#                markuptools.Markup.hspace(4),
-#                ]),
-#            )
-#        instrument._default_scope = scoretools.StaffGroup
-#        attach(instrument, staff_group)
         self._attach_tag('{}{}'.format(group, index), staff_group)
         return staff_group
+
+    def _make_vocal_staff(self, group, index):
+        vocal_staff = self._make_staff(
+            '{}{} Vocalization'.format(group, index),
+            'percussion',
+            abbreviation='voice_{}{}'.format(group, index).lower(),
+            context_name='VocalizationStaff',
+            instrument=instrumenttools.Percussion(
+                instrument_name_markup=self._make_markup('voice'),
+                short_instrument_name_markup=self._make_markup('v.'),
+                ),
+            )
+        return vocal_staff
+
+    def _make_column_markup(self, pieces):
+        return self._make_markup(markuptools.Markup.right_column(pieces))
+
+    def _make_markup(self, markup):
+        return (
+            markuptools.Markup(markup)
+                .italic()
+                .small()
+                .pad_around(0.5)
+                .bracket()
+                .pad_around(0.5),
+            )
 
     def _make_quartet_a(self):
         group, index = 'Q', '1'
@@ -267,29 +276,3 @@ class ScoreTemplate(consort.ScoreTemplate):
             )
         self._attach_tag('{}{}'.format(group, index), staff_group)
         return staff_group
-
-    def _make_vocal_staff(self, group, index):
-        vocal_staff = self._make_staff(
-            '{}{} Vocalization'.format(group, index),
-            'percussion',
-            abbreviation='voice_{}{}'.format(group, index).lower(),
-            context_name='VocalizationStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_markup('voice'),
-                short_instrument_name_markup=self._make_markup('v.'),
-                ),
-            )
-        return vocal_staff
-
-    def _make_column_markup(self, pieces):
-        return self._make_markup(markuptools.Markup.right_column(pieces))
-
-    def _make_markup(self, markup):
-        return (
-            markuptools.Markup(markup)
-                .italic()
-                .small()
-                .pad_around(0.5)
-                .bracket()
-                .pad_around(0.5),
-            )

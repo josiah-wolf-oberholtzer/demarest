@@ -157,6 +157,7 @@
         \type Engraver_group
         \alias Staff
         \override StaffSymbol.line-positions = #'(0)
+        \override Stem.direction = #UP
     }
 
     \context {
@@ -293,6 +294,7 @@
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3
         \override Hairpin.bound-padding = 1.5
+        \override Hairpin.outside-staff-priority = 1000
         \override InstrumentName.self-alignment-X = #RIGHT
         \override MultiMeasureRest.expand-limit = #1
         \override NoteCollision.merge-differently-dotted = ##t
