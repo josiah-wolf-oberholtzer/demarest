@@ -207,6 +207,22 @@
     }
 
     \context {
+        \Staff
+        \name TomsStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-8 -4 -2 0 2 4 8)
+    }
+    
+    \context {
+        \Staff
+        \name WoodblockStaff
+        \type Engraver_group
+        \alias Staff
+        \override StaffSymbol.line-positions = #'(-8 -4 -2 0 2 4 8)
+    }
+    
+    \context {
         \StaffGroup
         \name PerformerStaffGroup
         \type Engraver_group
@@ -218,6 +234,8 @@
         \accepts QuartetBPercussionStaff
         \accepts QuartetCPercussionStaff
         \accepts QuartetDPercussionStaff
+        \accepts TomsStaff
+        \accepts WoodblockStaff
         \override StaffGrouper.staff-staff-spacing = #'(
             (basic-distance . 10)
             (minimum-distance . 10)

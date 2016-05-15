@@ -6,7 +6,7 @@ from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
 
-marimba_shimmer = consort.MusicSpecifier(
+pitched_shimmer = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expressions=consort.DynamicExpression(
             division_period=2,
