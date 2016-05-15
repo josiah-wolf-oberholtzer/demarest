@@ -1,18 +1,9 @@
-% 2016-04-25 22:42
+% 2016-05-15 00:59
 
 \version "2.19.15"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
-
-\header {
-    tagline = \markup {}
-    title = \markup {
-        \override
-            #'(font-name . "Didot")
-            "Marimba Shimmer"
-        }
-}
 
 \score {
     \context Score = "String Quartet Score" <<

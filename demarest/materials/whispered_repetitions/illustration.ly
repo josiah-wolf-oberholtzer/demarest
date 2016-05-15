@@ -1,4 +1,4 @@
-% 2016-05-14 23:58
+% 2016-05-15 00:44
 
 \version "2.19.15"
 \language "english"
@@ -63,73 +63,125 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                         }
                         % [Violin 1 Voice] Measure 2
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -161,17 +213,29 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \p \startTextSpan [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -207,121 +271,208 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         % [Violin 1 Voice] Measure 5
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -357,45 +508,77 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -453,87 +636,149 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                         }
                         % [Violin 2 Voice] Measure 3
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -568,24 +813,41 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \p \startTextSpan [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -618,84 +880,145 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         % [Violin 2 Voice] Measure 5
                         {
                             c'16 -\staccato \p [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         % [Violin 2 Voice] Measure 6
@@ -703,57 +1026,98 @@
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \> [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         % [Violin 2 Voice] Measure 7
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -811,86 +1175,148 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                         }
                         % [Viola Voice] Measure 2
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                         }
                         % [Viola Voice] Measure 3
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -927,64 +1353,110 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                         }
                         % [Viola Voice] Measure 5
@@ -992,70 +1464,121 @@
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                         }
                         % [Viola Voice] Measure 6
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        f-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -1115,73 +1638,125 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                         }
                         % [Cello Voice] Measure 2
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
-                                    \italic
-                                        s-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -1214,59 +1789,101 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                         }
                         % [Cello Voice] Measure 4
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
-                                    \italic
-                                        sh-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -1299,50 +1916,86 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \startTextSpan \< [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                         }
                         % [Cello Voice] Measure 5
@@ -1350,42 +2003,73 @@
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                         }
                         {
                             c'16 -\staccato [
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        ch-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
@@ -1423,17 +2107,29 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead #'style = #'cross
                             c'16 -\staccato \p \startTextSpan [
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
-                                    \italic
-                                        t-
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
                                     }
+                            \revert NoteHead #'style
                             <> \stopTextSpan
                         }
                     }
