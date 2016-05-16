@@ -7,6 +7,32 @@ from abjad.tools import selectortools
 from abjad.tools import spannertools
 
 
+class UnpitchedPercussion(object):
+
+    SNARE_DRUM = pitchtools.NamedPitch('B4')
+    WOOD_BLOCK_5 = pitchtools.NamedPitch('G4')
+    WOOD_BLOCK_4 = pitchtools.NamedPitch('E4')
+    WOOD_BLOCK_3 = pitchtools.NamedPitch('C4')
+    WOOD_BLOCK_2 = pitchtools.NamedPitch('A3')
+    WOOD_BLOCK_1 = pitchtools.NamedPitch('F3')
+    BASS_DRUM = pitchtools.NamedPitch('D3')
+
+    RATCHET = pitchtools.NamedPitch('A4')
+    TOM_4 = pitchtools.NamedPitch('F4')
+    TOM_3 = pitchtools.NamedPitch('D4')
+    TOM_2 = pitchtools.NamedPitch('B3')
+    TOM_1 = pitchtools.NamedPitch('G3')
+    TAM_TAM = pitchtools.NamedPitch('E3')
+
+    # BAMBOO_WIND_CHIMES = pitchtools.NamedPitch('F4')
+    # THUNDER_SHEET = pitchtools.NamedPitch('C4')
+
+    MARACA = pitchtools.NamedPitch('G4')
+    STRUCK_2X4 = pitchtools.NamedPitch('C4')
+    SERATED_2x4 = pitchtools.NamedPitch('A3')
+    SCRATCHED_2x4 = pitchtools.NamedPitch('F3')
+
+
 chords = tuple(
     pitchtools.PitchSegment(_) for _ in (
         "d  c' f'  a'",
