@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 import consort
+from abjad.tools import patterntools
 from abjad.tools import rhythmmakertools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
@@ -36,9 +37,19 @@ pitched_shimmer = consort.MusicSpecifier(
             ),
         pitch_operation_specifier=abbreviations.pitch_operation_specifier,
         ),
-    rhythm_maker=rhythmmakertools.NoteRhythmMaker(
+    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
+        denominators=[8],
+        division_masks=[
+            rhythmmakertools.SustainMask(
+                patterntools.Pattern(indices=[0, -1]),
+                ),
+            rhythmmakertools.SustainMask(
+                patterntools.Pattern(indices=[1], period=4),
+                ),
+            ],
+        extra_counts_per_division=[0, 0, 1, 0, 0, 1, 2],
         tie_specifier=rhythmmakertools.TieSpecifier(
-            tie_across_divisions=True,
+            tie_across_divisions=[True, False],
             ),
         ),
     )
