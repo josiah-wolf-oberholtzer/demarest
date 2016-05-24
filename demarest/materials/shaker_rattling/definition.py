@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 import consort
+from abjad import Rest
 from abjad.tools import indicatortools
 from abjad.tools import patterntools
 from abjad.tools import rhythmmakertools
@@ -29,17 +30,24 @@ shaker_rattling = consort.MusicSpecifier(
     pitch_handler=consort.PitchClassPitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.MARACA,
         ),
-    rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
+    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
+        burnish_specifier=rhythmmakertools.BurnishSpecifier(
+            left_classes=[Rest],
+            left_counts=[0, 0, 1],
+            outer_divisions_only=True,
+            ),
+        denominators=[8],
         division_masks=[
             rhythmmakertools.SustainMask(
-                patterntools.Pattern([2], 3),
+                patterntools.Pattern(indices=[0, -1]),
+                ),
+            rhythmmakertools.SustainMask(
+                patterntools.Pattern(indices=[1], period=4),
                 ),
             ],
-        incise_specifier=rhythmmakertools.InciseSpecifier(
-            fill_with_notes=False,
-            prefix_counts=[1, 2, 3],
-            prefix_talea=[1],
-            talea_denominator=8,
+        extra_counts_per_division=[0, 0, 1, 0, 0, 1, 2],
+        tie_specifier=rhythmmakertools.TieSpecifier(
+            tie_across_divisions=[True, False],
             ),
-        )
+        ),
     )

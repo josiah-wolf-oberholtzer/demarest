@@ -1,7 +1,7 @@
 \include "scheme.ily"
 
 #(set-default-paper-size "11x17" 'portrait)
-#(set-global-staff-size 12)
+#(set-global-staff-size 11)
 
 \header {
     composer = \markup {
@@ -69,6 +69,50 @@
     ragged-last = ##f
     ragged-right = ##t
 
+    %%% ANNOTATIONS %%%
+
+    \context {
+        \Voice
+        \name AnnotatedDivisionsVoice
+        \type Engraver_group
+        \alias Voice
+        \override Accidental.stencil = ##f
+        \override Dots.stencil = ##f
+        \override Flag.stencil = ##f
+        \override NoteCollision.merge-differently-dotted = ##t
+        \override NoteCollision.merge-differently-headed = ##t
+        \override NoteColumn.ignore-collision = ##t
+        \override NoteHead.no-ledgers = ##t
+        \override NoteHead.transparent = ##t
+        \override Stem.stencil = ##f
+        \override TupletBracket.direction = #down
+        \override TupletBracket.outside-staff-padding = 1
+        \override TupletBracket.outside-staff-priority = 999
+        \override TupletBracket.thickness = 2
+        \override TupletNumber.stencil = ##f
+    }
+
+    \context {
+        \Voice
+        \name AnnotatedPhrasesVoice
+        \type Engraver_group
+        \alias Voice
+        \override Accidental.stencil = ##f
+        \override Dots.stencil = ##f
+        \override Flag.stencil = ##f
+        \override NoteCollision.merge-differently-dotted = ##t
+        \override NoteCollision.merge-differently-headed = ##t
+        \override NoteColumn.ignore-collision = ##t
+        \override NoteHead.no-ledgers = ##t
+        \override NoteHead.transparent = ##t
+        \override Stem.stencil = ##f
+        \override TupletBracket.direction = #down
+        \override TupletBracket.outside-staff-padding = 1
+        \override TupletBracket.outside-staff-priority = 1000
+        \override TupletBracket.thickness = 2
+        \override TupletNumber.stencil = ##f
+    }
+
     %%% DEFAULTS %%%
 
     \context {
@@ -79,6 +123,8 @@
     \context {
         \Staff
         \remove Time_signature_engraver
+        \accepts AnnotatedDivisionsVoice
+        \accepts AnnotatedPhrasesVoice
     }
 
     \context {
@@ -156,8 +202,15 @@
         \name VocalizationStaff
         \type Engraver_group
         \alias Staff
+        \override DynamicLineSpanner.outside-staff-priority = 1000
+        \override DynamicText.outside-staff-priority = 1000
         \override StaffSymbol.line-positions = #'(0)
         \override Stem.direction = #UP
+        %\override TextScript.extra-spacing-height = #'(-inf.0 . +inf.0)
+        %\override TextScript.extra-spacing-width = #'(-0.0 . 0.4)
+        \override TextScript.outside-staff-padding = 1
+        \override TextScript.outside-staff-priority = 500
+        \override TextSpanner.outside-staff-padding = 1
     }
 
     \context {
@@ -291,6 +344,8 @@
         \override Beam.breakable = ##t
         \override Beam.damping = 5
         \override Beam.length-fraction = 1.5
+        \override DynamicLineSpanner.outside-staff-padding = 1
+        \override DynamicText.outside-staff-padding = 1
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3
         \override Hairpin.bound-padding = 1.5
@@ -322,8 +377,10 @@
         \override SustainPedalLineSpanner.to-barline = ##t
         \override SystemStartSquare.thickness = 1.5
         \override SystemStartSquare.X-offset = -1.25
+        \override TextScript.outside-staff-padding = 1
         \override TextSpanner.bound-details.right.padding = 2
         \override TextSpanner.padding = 1
+        \override TextSpanner.outside-staff-padding = 1
         \override TrillSpanner.bound-details.right.padding = 1
         \override TupletBracket.breakable = ##t
         \override TupletBracket.full-length-padding = 1.5
@@ -334,7 +391,7 @@
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
-        proportionalNotationDuration = #(ly:make-moment 1 12)
+        proportionalNotationDuration = #(ly:make-moment 1 16)
         tupletFullLength = ##t
         barNumberFormatter = #format-oval-barnumbers
     }

@@ -5,3 +5,5 @@
 from demarest import tools
 from demarest import materials
 from demarest import segments
+from demarest.tools import *
+from demarest.materials import *

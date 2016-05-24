@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 import consort
-from abjad import Rest, override
+from abjad import override
 from abjad.tools import rhythmmakertools
 from abjad.tools import indicatortools
 from abjad.tools import markuptools
@@ -36,19 +36,19 @@ staccati = consort.AttachmentExpression(
     selector=selectortools.select_pitched_runs(),
     )
 
-whispered_repetitions = consort.MusicSpecifier(
+whispered_pointillism = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         performance_instruction=performance_instruction,
         sibilances=sibilances,
         swells=swells,
         staccati=staccati,
         ),
-    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-        burnish_specifier=rhythmmakertools.BurnishSpecifier(
-            left_classes=[Rest],
-            left_counts=[0, 0, 1],
-            outer_divisions_only=True,
+    rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
+        incise_specifier=rhythmmakertools.InciseSpecifier(
+            fill_with_notes=False,
+            prefix_counts=[1],
+            prefix_talea=[1],
+            talea_denominator=16,
             ),
-        denominators=[16],
         ),
     )
