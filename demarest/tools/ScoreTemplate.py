@@ -20,30 +20,25 @@ class ScoreTemplate(consort.ScoreTemplate):
         >>> for item in sorted(template.context_name_abbreviations.items()):
         ...     item
         ...
-        ('bells', 'Tubular Bells Voice')
         ('chorus_a_1', 'A1 Percussion Voice')
         ('chorus_a_2', 'A2 Percussion Voice')
         ('chorus_a_3', 'A3 Percussion Voice')
+        ('chorus_a_4', 'A4 Percussion Voice')
         ('chorus_b_1', 'B1 Percussion Voice')
         ('chorus_b_2', 'B2 Percussion Voice')
         ('chorus_b_3', 'B3 Percussion Voice')
         ('chorus_b_4', 'B4 Percussion Voice')
-        ('crotales', 'Crotales Voice')
-        ('marimba', 'Marimba Voice')
-        ('toms', 'Toms Voice')
-        ('vibraphone', 'Vibraphone Voice')
         ('voice_a_1', 'A1 Vocalization Voice')
         ('voice_a_2', 'A2 Vocalization Voice')
         ('voice_a_3', 'A3 Vocalization Voice')
+        ('voice_a_4', 'A4 Vocalization Voice')
         ('voice_b_1', 'B1 Vocalization Voice')
         ('voice_b_2', 'B2 Vocalization Voice')
         ('voice_b_3', 'B3 Vocalization Voice')
         ('voice_b_4', 'B4 Vocalization Voice')
-        ('voice_q_1', 'Q1 Vocalization Voice')
-        ('voice_q_2', 'Q2 Vocalization Voice')
-        ('voice_q_3', 'Q3 Vocalization Voice')
-        ('voice_q_4', 'Q4 Vocalization Voice')
-        ('woodblocks', 'Woodblocks Voice')
+        ('voice_t_1', 'T1 Vocalization Voice')
+        ('voice_t_2', 'T2 Vocalization Voice')
+        ('voice_t_3', 'T3 Vocalization Voice')
 
     '''
 
@@ -66,19 +61,19 @@ class ScoreTemplate(consort.ScoreTemplate):
                 self._make_chorus_performer('A', 1),
                 self._make_chorus_performer('A', 2),
                 self._make_chorus_performer('A', 3),
+                self._make_chorus_performer('A', 4),
                 ],
             name='Chorus A',
             context_name='SectionStaffGroup',
             )
 
-        quartet = scoretools.StaffGroup(
+        trio = scoretools.StaffGroup(
             [
-                self._make_quartet_a(),
-                self._make_quartet_b(),
-                self._make_quartet_c(),
-                self._make_quartet_d(),
+                self._make_trio_a(),
+                self._make_trio_b(),
+                self._make_trio_c(),
                 ],
-            name='Core Quartet',
+            name='Core Trio',
             context_name='SectionStaffGroup',
             )
 
@@ -97,7 +92,7 @@ class ScoreTemplate(consort.ScoreTemplate):
             [
                 time_signature_context,
                 chorus_a,
-                quartet,
+                trio,
                 chorus_b,
                 ],
             name='Demarest Score',
@@ -151,127 +146,43 @@ class ScoreTemplate(consort.ScoreTemplate):
                 .small()
                 .pad_around(0.5)
                 .bracket()
-                .pad_around(0.5),
+                .pad_around(0.5)
             )
 
-    def _make_quartet_a(self):
-        group, index = 'Q', '1'
+    def _make_trio_a(self):
+        group, index = 'T', '1'
         vocal_staff = self._make_vocal_staff(group, index)
-        tubular_bells_staff = self._make_staff(
-            'Tubular Bells',
-            'treble',
-            abbreviation='bells',
-            context_name='PitchedPercussionStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_column_markup(
-                    ['tubular', 'bells']),
-                short_instrument_name_markup=self._make_markup('t.b.'),
-                )
-            )
-        unpitched_staff = self._make_staff(
-            'Toms',
-            'percussion',
-            abbreviation='toms',
-            context_name='TomsStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_column_markup(
-                    ['ratchet', 'toms', 'tam tam']),
-                short_instrument_name_markup=self._make_column_markup(
-                    ['r.', 't.', 'tt.']),
-                ),
-            )
         staff_group = scoretools.StaffGroup(
             [
                 vocal_staff,
-                unpitched_staff,
-                tubular_bells_staff,
                 ],
-            name='Quartet {} Performer Staff Group'.format(index),
+            name='Trio {} Performer Staff Group'.format(index),
             context_name='PerformerStaffGroup',
             )
         self._attach_tag('{}{}'.format(group, index), staff_group)
         return staff_group
 
-    def _make_quartet_b(self):
-        group, index = 'Q', '2'
+    def _make_trio_b(self):
+        group, index = 'T', '2'
         vocal_staff = self._make_vocal_staff(group, index)
-        vibraphone_staff = self._make_staff(
-            'Vibraphone',
-            'treble',
-            abbreviation='vibraphone',
-            context_name='PitchedPercussionStaff',
-            instrument=instrumenttools.Vibraphone(
-                instrument_name_markup=self._make_markup('vibraphone'),
-                short_instrument_name_markup=self._make_markup('vb.'),
-                ),
-            )
         staff_group = scoretools.StaffGroup(
             [
                 vocal_staff,
-                vibraphone_staff,
                 ],
-            name='Quartet {} Performer Staff Group'.format(index),
+            name='Trio {} Performer Staff Group'.format(index),
             context_name='PerformerStaffGroup',
             )
         self._attach_tag('{}{}'.format(group, index), staff_group)
         return staff_group
 
-    def _make_quartet_c(self):
-        group, index = 'Q', '3'
+    def _make_trio_c(self):
+        group, index = 'T', '3'
         vocal_staff = self._make_vocal_staff(group, index)
-        marimba_staff = self._make_staff(
-            'Marimba',
-            'treble',
-            abbreviation='marimba',
-            context_name='PitchedPercussionStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_markup('marimba'),
-                short_instrument_name_markup=self._make_markup('mb.'),
-                ),
-            )
         staff_group = scoretools.StaffGroup(
             [
                 vocal_staff,
-                marimba_staff,
                 ],
-            name='Quartet {} Performer Staff Group'.format(index),
-            context_name='PerformerStaffGroup',
-            )
-        self._attach_tag('{}{}'.format(group, index), staff_group)
-        return staff_group
-
-    def _make_quartet_d(self):
-        group, index = 'Q', '4'
-        vocal_staff = self._make_vocal_staff(group, index)
-        crotales_staff = self._make_staff(
-            'Crotales',
-            'treble',
-            abbreviation='crotales',
-            context_name='PitchedPercussionStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_markup('crotales'),
-                short_instrument_name_markup=self._make_markup('ct.'),
-                ),
-            )
-        unpitched_staff = self._make_staff(
-            'Woodblocks',
-            'percussion',
-            abbreviation='woodblocks',
-            context_name='WoodblockStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_column_markup(
-                    ['snare', 'woodblocks', 'bass drum']),
-                short_instrument_name_markup=self._make_column_markup(
-                    ['sn.', 'wb.', 'bd.']),
-                ),
-            )
-        staff_group = scoretools.StaffGroup(
-            [
-                vocal_staff,
-                unpitched_staff,
-                crotales_staff,
-                ],
-            name='Quartet {} Performer Staff Group'.format(index),
+            name='Trio {} Performer Staff Group'.format(index),
             context_name='PerformerStaffGroup',
             )
         self._attach_tag('{}{}'.format(group, index), staff_group)
