@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad.tools import durationtools
-from abjad.tools import markuptools
 import consort
 
 
@@ -50,19 +49,7 @@ class SegmentMaker(consort.SegmentMaker):
 
     @property
     def final_markup(self):
-        portland = markuptools.Markup('Portland, OR')
-        date = markuptools.Markup('January 2016 - June 2016')
-        null = markuptools.Markup.null()
-        contents = [
-            null,
-            null,
-            null,
-            portland,
-            date,
-            ]
-        markup = markuptools.Markup.right_column(contents)
-        markup = markup.italic()
-        return markup
+        return None
 
     @property
     def score_package_name(self):

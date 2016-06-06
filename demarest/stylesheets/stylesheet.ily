@@ -11,14 +11,30 @@
             " "
         }
     }
-    tagline = \markup { "" }
+    tagline = ##f
     title = \markup {
         \column {
             \center-align {
-                \override #'(font-name . "Didot")
-                    \fontsize #16 {
-                        \line { DEMAREST }
+                \override #'(font-name . "Didot Italic") {
+                    \fontsize #1 {
+                        "to my mother,"
+                        "on her 64th birthday"
                     }
+                }
+                \null
+                \override #'(font-name . "Didot") {
+                    \fontsize #16 {
+                        "DEMAREST"
+                    }
+                }
+                \null
+                \override #'(font-name . "Didot Italic") {
+                    \fontsize #1 {
+                        "for Sam Solomon and the"
+                        "Boston University Tanglewood Institute"
+                        "Young Percussion Ensemble"
+                    }
+                }
             }
         }
     }

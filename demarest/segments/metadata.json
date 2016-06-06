@@ -1,10 +1,13 @@
 {
     "segments": [
-        "segment_a",
-        "segment_b",
-        "segment_c",
-        "segment_d",
-        "segment_e",
-        "segment_f"
+        "segment_1",
+        "segment_2",
+        "cut_1",
+        "segment_3",
+        "segment_4",
+        "cut_2",
+        "segment_5",
+        "cut_3",
+        "segment_6"
     ]
 }

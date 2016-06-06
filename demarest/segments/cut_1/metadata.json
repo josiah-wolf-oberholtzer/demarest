@@ -6,6 +6,8 @@
         "A2 Vocalization Staff": "percussion",
         "A3 Percussion Staff": "percussion",
         "A3 Vocalization Staff": "percussion",
+        "A4 Percussion Staff": "percussion",
+        "A4 Vocalization Staff": "percussion",
         "B1 Percussion Staff": "percussion",
         "B1 Vocalization Staff": "percussion",
         "B2 Percussion Staff": "percussion",
@@ -14,16 +16,9 @@
         "B3 Vocalization Staff": "percussion",
         "B4 Percussion Staff": "percussion",
         "B4 Vocalization Staff": "percussion",
-        "Crotales Staff": "percussion",
-        "Marimba Staff": "percussion",
-        "Q1 Vocalization Staff": "percussion",
-        "Q2 Vocalization Staff": "percussion",
-        "Q3 Vocalization Staff": "percussion",
-        "Q4 Vocalization Staff": "percussion",
-        "Toms Staff": "percussion",
-        "Tubular Bells Staff": "percussion",
-        "Vibraphone Staff": "vibraphone",
-        "Woodblocks Staff": "percussion"
+        "T1 Vocalization Staff": "percussion",
+        "T2 Vocalization Staff": "percussion",
+        "T3 Vocalization Staff": "percussion"
     },
     "end_tempo": [
         [
@@ -33,12 +28,12 @@
         72
     ],
     "end_time_signature": [
-        5,
-        8
+        3,
+        4
     ],
-    "first_bar_number": 1,
-    "is_repeated": null,
-    "measure_count": 53,
-    "segment_count": 3,
-    "segment_number": 1
+    "first_bar_number": 61,
+    "is_repeated": true,
+    "measure_count": 2,
+    "segment_count": 9,
+    "segment_number": 3
 }
