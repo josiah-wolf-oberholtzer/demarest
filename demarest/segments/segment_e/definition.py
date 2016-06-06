@@ -6,6 +6,7 @@ import demarest
 ### SEGMENT ###
 
 segment_maker = demarest.SegmentMaker(
+    annotate_phrasing=False,
     desired_duration_in_seconds=60,
     permitted_time_signatures=[
         (3, 4), (4, 4), (6, 8), (7, 8), (5, 8),
