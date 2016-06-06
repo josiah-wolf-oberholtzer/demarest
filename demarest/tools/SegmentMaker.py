@@ -13,12 +13,12 @@ class SegmentMaker(consort.SegmentMaker):
 
     def __init__(
         self,
-        annotate_colors=None,
-        annotate_phrasing=None,
+        annotate_colors=True,
+        annotate_phrasing=True,
         annotate_timespans=None,
         desired_duration_in_seconds=None,
         discard_final_silence=None,
-        maximum_meter_run_length=None,
+        maximum_meter_run_length=3,
         name=None,
         permitted_time_signatures=None,
         repeat=None,

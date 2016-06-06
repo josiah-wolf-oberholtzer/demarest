@@ -85,6 +85,26 @@
     ragged-last = ##f
     ragged-right = ##t
 
+    %%% DEFAULTS %%%
+
+    \context {
+        \Voice
+        \remove Forbid_line_break_engraver
+    }
+
+    \context {
+        \Staff
+        \remove Time_signature_engraver
+    }
+
+    \context {
+        \Dynamics
+        \remove Bar_engraver
+        \override DynamicLineSpanner.staff-padding = 11.5
+        \override DynamicText.self-alignment-X = -1
+    }
+
+
     %%% ANNOTATIONS %%%
 
     \context {
@@ -101,6 +121,7 @@
         \override NoteHead.no-ledgers = ##t
         \override NoteHead.transparent = ##t
         \override Stem.stencil = ##f
+        \override TupletBracket.breakable = ##t
         \override TupletBracket.direction = #down
         \override TupletBracket.outside-staff-padding = 1
         \override TupletBracket.outside-staff-priority = 999
@@ -122,6 +143,7 @@
         \override NoteHead.no-ledgers = ##t
         \override NoteHead.transparent = ##t
         \override Stem.stencil = ##f
+        \override TupletBracket.breakable = ##t
         \override TupletBracket.direction = #down
         \override TupletBracket.outside-staff-padding = 1
         \override TupletBracket.outside-staff-priority = 1000
@@ -132,22 +154,9 @@
     %%% DEFAULTS %%%
 
     \context {
-        \Voice
-        \remove Forbid_line_break_engraver
-    }
-
-    \context {
         \Staff
-        \remove Time_signature_engraver
         \accepts AnnotatedDivisionsVoice
         \accepts AnnotatedPhrasesVoice
-    }
-
-    \context {
-        \Dynamics
-        \remove Bar_engraver
-        \override DynamicLineSpanner.staff-padding = 11.5
-        \override DynamicText.self-alignment-X = -1
     }
 
     %%% TIME SIGNATURE CONTEXT %%%
@@ -374,6 +383,7 @@
         \override OttavaBracket.padding = 2
         \shape #'((-1.5 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie                 
         \override RepeatTie.X-extent = ##f
+        \override RepeatTie.breakable = ##t
         \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 32)
         \override SpacingSpanner.strict-grace-spacing = ##f
         \override SpacingSpanner.strict-note-spacing = ##f
