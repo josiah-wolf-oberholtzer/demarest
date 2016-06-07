@@ -16,6 +16,28 @@ segment_maker = demarest.SegmentMaker(
     tempo=abjad.Tempo((1, 4), 72),
     )
 
+### SHORTHAND ###
+
+chorus_a = dict(
+    chorus_a_1=None,
+    chorus_a_2=None,
+    chorus_a_3=None,
+    chorus_a_4=None,
+    )
+
+chorus_b = dict(
+    chorus_b_1=None,
+    chorus_b_2=None,
+    chorus_b_3=None,
+    chorus_b_4=None,
+    )
+
+trio = dict(
+    trio_1=None,
+    trio_2=None,
+    trio_3=None,
+    )
+
 ### TUTTI BACKGROUND ###
 
 segment_maker.add_setting(
@@ -31,16 +53,29 @@ segment_maker.add_setting(
             denominator=4,
             ),
         ),
-    chorus_a_1=None,
-    chorus_a_2=None,
-    chorus_a_3=None,
-    chorus_a_4=None,
-    chorus_b_1=None,
-    chorus_b_2=None,
-    chorus_b_3=None,
-    chorus_b_4=None,
     color='LemonChiffon',  # this should work
+    **chorus_a,
+    **chorus_b,
     )
+
+segment_maker.add_setting(
+    timespan_maker=consort.CascadingTimespanMaker(
+        cascade_pattern=[1, 3, -1, 2, 1, 1],
+        playing_groupings=[1, 2, 2, 3],
+        playing_talea=abjad.rhythmmakertools.Talea(
+            counts=[2, 4, 2, 4, 2, 4],
+            denominator=8,
+            ),
+        silence_talea=abjad.rhythmmakertools.Talea(
+            counts=[1, 2, 1, 1, 2, 3],
+            denominator=8,
+            ),
+        ),
+    color='lavender',  # this should work
+    **chorus_a,
+    **chorus_b,
+    )
+
 
 ### CHORUS A ###
 

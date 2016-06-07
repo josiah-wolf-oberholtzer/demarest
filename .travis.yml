@@ -1,8 +1,7 @@
 language: python
 
 python:
-    - 2.7
-    - 3.4
+    - 3.5
 
 before_install:
     - wget -q http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.29-1.linux-64.sh
