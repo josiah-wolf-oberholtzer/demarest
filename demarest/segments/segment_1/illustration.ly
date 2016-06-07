@@ -1,9 +1,9 @@
-% 2016-06-06 08:40
+% 2016-06-06 18:37
 
-% package "abjad" @ 31809e9 [josiah/demarest] (2016-06-05 22:06:28)
+% package "abjad" @ 21135b8 [josiah/demarest] (2016-06-06 17:48:58)
 % package "ide" @ 2a867e0 [fix-new-score-tests] (2016-05-23 20:00:37)
 % package "consort" @ 953337f [master] (2016-06-05 22:02:22)
-% package "demarest" @ 9d6fb87 [master] (2016-06-05 21:55:45)
+% package "demarest" @ 6c481fe [master] (2016-06-06 08:41:37)
 
 \version "2.19.41"
 \language "english"
@@ -143,7 +143,7 @@
         \context SectionStaffGroup = "Chorus A" <<
             \tag #'a-1
             \context PerformerStaffGroup = "A1 Staff Group" <<
-                \context VocalizationStaff = "A1 Vocalization Staff" <<
+                \context VocalizationStaff = "A1 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -294,76 +294,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "A1 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "A1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -395,20 +327,12 @@
                     }
                     \context Voice = "A1 Percussion Voice" {
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A1 Percussion Voice] Measure 1
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -433,23 +357,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A1 Percussion Voice] Measure 5
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -470,23 +386,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A1 Percussion Voice] Measure 8
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -503,23 +411,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A1 Percussion Voice] Measure 11
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A1 Percussion Voice] Measure 12
@@ -537,19 +437,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -570,19 +462,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -603,23 +487,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A1 Percussion Voice] Measure 21
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -640,14 +516,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A1 Percussion Voice] Measure 24
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -655,12 +527,8 @@
                             % [A1 Percussion Voice] Measure 25
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -677,14 +545,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A1 Percussion Voice] Measure 27
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -692,12 +556,8 @@
                             % [A1 Percussion Voice] Measure 28
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -718,20 +578,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A1 Percussion Voice] Measure 31
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -756,23 +608,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A1 Percussion Voice] Measure 35
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -793,23 +637,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A1 Percussion Voice] Measure 38
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -826,23 +662,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A1 Percussion Voice] Measure 41
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A1 Percussion Voice] Measure 42
@@ -860,374 +688,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'a-2
             \context PerformerStaffGroup = "A2 Staff Group" <<
-                \context VocalizationStaff = "A2 Vocalization Staff" <<
+                \context VocalizationStaff = "A2 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -1378,76 +843,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "A2 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "A2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -1498,20 +895,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A2 Percussion Voice] Measure 4
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -1532,23 +921,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A2 Percussion Voice] Measure 8
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A2 Percussion Voice] Measure 9
@@ -1570,23 +951,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A2 Percussion Voice] Measure 14
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A2 Percussion Voice] Measure 15
@@ -1604,23 +977,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A2 Percussion Voice] Measure 18
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -1649,23 +1014,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A2 Percussion Voice] Measure 24
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -1690,20 +1047,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A2 Percussion Voice] Measure 28
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -1732,20 +1081,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A2 Percussion Voice] Measure 34
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -1766,23 +1107,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A2 Percussion Voice] Measure 38
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A2 Percussion Voice] Measure 39
@@ -1808,249 +1141,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'a-3
             \context PerformerStaffGroup = "A3 Staff Group" <<
-                \context VocalizationStaff = "A3 Vocalization Staff" <<
+                \context VocalizationStaff = "A3 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -2201,76 +1296,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "A3 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "A3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -2313,23 +1340,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 2
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A3 Percussion Voice] Measure 3
@@ -2343,23 +1362,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 5
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A3 Percussion Voice] Measure 6
@@ -2377,19 +1388,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2410,23 +1413,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A3 Percussion Voice] Measure 12
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2447,23 +1442,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A3 Percussion Voice] Measure 15
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2484,14 +1471,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 18
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -2499,12 +1482,8 @@
                             % [A3 Percussion Voice] Measure 19
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2525,20 +1504,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 22
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2559,20 +1530,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 25
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2597,23 +1560,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A3 Percussion Voice] Measure 29
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2630,23 +1585,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 32
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A3 Percussion Voice] Measure 33
@@ -2660,23 +1607,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A3 Percussion Voice] Measure 35
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [A3 Percussion Voice] Measure 36
@@ -2694,19 +1633,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2727,23 +1658,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A3 Percussion Voice] Measure 42
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -2764,368 +1687,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'a-4
             \context PerformerStaffGroup = "A4 Staff Group" <<
-                \context VocalizationStaff = "A4 Vocalization Staff" <<
+                \context VocalizationStaff = "A4 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -3276,76 +1842,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "A4 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "A4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -3383,23 +1881,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A4 Percussion Voice] Measure 2
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3420,19 +1910,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3461,19 +1943,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3494,14 +1968,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A4 Percussion Voice] Measure 15
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -3509,12 +1979,8 @@
                             % [A4 Percussion Voice] Measure 16
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3539,14 +2005,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [A4 Percussion Voice] Measure 21
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -3554,12 +2016,8 @@
                             % [A4 Percussion Voice] Measure 22
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3584,23 +2042,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A4 Percussion Voice] Measure 26
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3629,23 +2079,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [A4 Percussion Voice] Measure 32
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3666,19 +2108,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3707,19 +2141,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -3740,288 +2166,13 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
         >>
         \context SectionStaffGroup = "Core Trio" <<
             \tag #'t-1
             \context PerformerStaffGroup = "Trio 1 Performer Staff Group" <<
-                \context VocalizationStaff = "T1 Vocalization Staff" <<
+                \context VocalizationStaff = "T1 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -4172,79 +2323,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'t-2
             \context PerformerStaffGroup = "Trio 2 Performer Staff Group" <<
-                \context VocalizationStaff = "T2 Vocalization Staff" <<
+                \context VocalizationStaff = "T2 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -4395,79 +2478,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'t-3
             \context PerformerStaffGroup = "Trio 3 Performer Staff Group" <<
-                \context VocalizationStaff = "T3 Vocalization Staff" <<
+                \context VocalizationStaff = "T3 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -4618,81 +2633,13 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
         >>
         \context SectionStaffGroup = "Chorus B" <<
             \tag #'b-1
             \context PerformerStaffGroup = "B1 Staff Group" <<
-                \context VocalizationStaff = "B1 Vocalization Staff" <<
+                \context VocalizationStaff = "B1 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -4843,76 +2790,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "B1 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "B1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -4959,19 +2838,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -4992,23 +2863,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B1 Percussion Voice] Measure 6
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5029,14 +2892,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B1 Percussion Voice] Measure 9
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -5044,12 +2903,8 @@
                             % [B1 Percussion Voice] Measure 10
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5066,14 +2921,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B1 Percussion Voice] Measure 12
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -5081,12 +2932,8 @@
                             % [B1 Percussion Voice] Measure 13
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5107,20 +2954,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B1 Percussion Voice] Measure 16
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5145,23 +2984,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B1 Percussion Voice] Measure 20
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5182,23 +3013,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B1 Percussion Voice] Measure 23
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5215,23 +3038,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B1 Percussion Voice] Measure 26
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [B1 Percussion Voice] Measure 27
@@ -5249,19 +3064,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5282,19 +3089,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5315,23 +3114,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B1 Percussion Voice] Measure 36
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5352,14 +3143,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B1 Percussion Voice] Measure 39
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -5367,12 +3154,8 @@
                             % [B1 Percussion Voice] Measure 40
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5389,14 +3172,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B1 Percussion Voice] Measure 42
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -5404,12 +3183,8 @@
                             % [B1 Percussion Voice] Measure 43
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -5426,392 +3201,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'b-2
             \context PerformerStaffGroup = "B2 Staff Group" <<
-                \context VocalizationStaff = "B2 Vocalization Staff" <<
+                \context VocalizationStaff = "B2 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -5962,76 +3356,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "B2 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "B2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -6078,23 +3404,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B2 Percussion Voice] Measure 3
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6123,23 +3441,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B2 Percussion Voice] Measure 9
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6164,20 +3474,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B2 Percussion Voice] Measure 13
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6206,20 +3508,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B2 Percussion Voice] Measure 19
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6240,23 +3534,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B2 Percussion Voice] Measure 23
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [B2 Percussion Voice] Measure 24
@@ -6278,23 +3564,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B2 Percussion Voice] Measure 29
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [B2 Percussion Voice] Measure 30
@@ -6312,23 +3590,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B2 Percussion Voice] Measure 33
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6357,23 +3627,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B2 Percussion Voice] Measure 39
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6398,20 +3660,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B2 Percussion Voice] Measure 43
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -6428,278 +3682,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'b-3
             \context PerformerStaffGroup = "B3 Staff Group" <<
-                \context VocalizationStaff = "B3 Vocalization Staff" <<
+                \context VocalizationStaff = "B3 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -6850,76 +3837,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "B3 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "B3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -6966,14 +3885,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 3
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -6981,12 +3896,8 @@
                             % [B3 Percussion Voice] Measure 4
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7007,20 +3918,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 7
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7041,20 +3944,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 10
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7079,23 +3974,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B3 Percussion Voice] Measure 14
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7112,23 +3999,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 17
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [B3 Percussion Voice] Measure 18
@@ -7142,23 +4021,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 20
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'2 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             % [B3 Percussion Voice] Measure 21
@@ -7176,19 +4047,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7209,23 +4072,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B3 Percussion Voice] Measure 27
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7246,23 +4101,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B3 Percussion Voice] Measure 30
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7283,14 +4130,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 33
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -7298,12 +4141,8 @@
                             % [B3 Percussion Voice] Measure 34
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7324,20 +4163,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 37
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7358,20 +4189,12 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B3 Percussion Voice] Measure 40
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7396,23 +4219,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B3 Percussion Voice] Measure 44
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -7421,374 +4236,11 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'2
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1/2
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/4
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/8
-                        }
-                    }
-                >>
+                }
             >>
             \tag #'b-4
             \context PerformerStaffGroup = "B4 Staff Group" <<
-                \context VocalizationStaff = "B4 Vocalization Staff" <<
+                \context VocalizationStaff = "B4 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -7939,76 +4391,8 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
-                \context ChorusPercussionStaff = "B4 Percussion Staff" <<
+                }
+                \context ChorusPercussionStaff = "B4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
@@ -8063,14 +4447,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B4 Percussion Voice] Measure 6
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -8078,12 +4458,8 @@
                             % [B4 Percussion Voice] Measure 7
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8108,23 +4484,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B4 Percussion Voice] Measure 11
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8153,23 +4521,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B4 Percussion Voice] Measure 17
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8190,19 +4550,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8231,19 +4583,11 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'4
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'4 \startGroup
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8264,14 +4608,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B4 Percussion Voice] Measure 30
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -8279,12 +4619,8 @@
                             % [B4 Percussion Voice] Measure 31
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8309,14 +4645,10 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             % [B4 Percussion Voice] Measure 36
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             {
                                 c'4 \repeatTie
@@ -8324,12 +4656,8 @@
                             % [B4 Percussion Voice] Measure 37
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8354,23 +4682,15 @@
                             }
                         }
                         {
-                            \override Beam.color = #darkblue
-                            \override Dots.color = #darkblue
-                            \override Flag.color = #darkblue
-                            \override NoteHead.color = #darkblue
-                            \override Stem.color = #darkblue
                             {
-                                c'2
+                                \colorSpan #-4 #4 #(x11-color 'LemonChiffon)
+                                c'2 \startGroup
                             }
                             % [B4 Percussion Voice] Measure 41
                             {
                                 c'4 \repeatTie
+                                <> \stopGroup
                             }
-                            \revert Beam.color
-                            \revert Dots.color
-                            \revert Flag.color
-                            \revert NoteHead.color
-                            \revert Stem.color
                         }
                         {
                             {
@@ -8391,275 +4711,7 @@
                             }
                         }
                     }
-                    \new AnnotatedDivisionsVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 1/2 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        \override TupletBracket.color = #darkblue
-                        \times 1/4 {
-                            c'''1
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                    \new AnnotatedPhrasesVoice {
-                        {
-                            s1 * 3/4
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/5 {
-                            c'8
-                            c'8
-                            c'8
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/2
-                            s1 * 1
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 8/11 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 1/2
-                            s1 * 1
-                            s1 * 3/4
-                            s1 * 1/4
-                        }
-                        \override TupletBracket.color = #darkblue
-                        \times 2/3 {
-                            c'8
-                            c'8
-                            c'8
-                            c'2
-                            c'4
-                        }
-                        \revert TupletBracket.color
-                        {
-                            s1 * 3/4
-                            s1 * 3/2
-                            s1 * 5/8
-                        }
-                    }
-                >>
+                }
             >>
         >>
     >>

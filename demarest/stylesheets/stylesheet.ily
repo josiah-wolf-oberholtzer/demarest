@@ -89,6 +89,7 @@
 
     \context {
         \Voice
+        \consists Horizontal_bracket_engraver
         \remove Forbid_line_break_engraver
     }
 
@@ -375,6 +376,7 @@
         \override Glissando.thickness = 3
         \override Hairpin.bound-padding = 1.5
         \override Hairpin.outside-staff-priority = 1000
+        \override HorizontalBracket.to-barline = ##t
         \override InstrumentName.self-alignment-X = #RIGHT
         \override MultiMeasureRest.expand-limit = #1
         \override NoteCollision.merge-differently-dotted = ##t

@@ -8,7 +8,7 @@ import demarest
 
 segment_maker = demarest.SegmentMaker(
     annotate_colors=True,
-    annotate_phrasing=True,
+    annotate_phrasing=False,
     desired_duration_in_seconds=120,
     permitted_time_signatures=[
         (3, 4), (4, 4), (6, 8), (7, 8), (5, 8),
@@ -39,7 +39,7 @@ segment_maker.add_setting(
     chorus_b_2=None,
     chorus_b_3=None,
     chorus_b_4=None,
-    color='darkblue',  # this should work
+    color='LemonChiffon',  # this should work
     )
 
 ### CHORUS A ###

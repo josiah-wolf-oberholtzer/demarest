@@ -27,3 +27,21 @@ Create a box of the same height as the current font."
 
 date = #(strftime "(%Y-%m-%d)" (localtime (current-time)))
 
+colorSpan =
+#(define-music-function (parser location y-lower y-upper color) 
+     (number? number? color?)
+    #{
+      \once\override HorizontalBracket.stencil =
+        $(lambda (grob)
+          (let* (
+            (area (ly:horizontal-bracket::print grob))
+              (X-ext (ly:stencil-extent area X))
+              (Y-ext (ly:stencil-extent area Y)))
+            (set! Y-ext (cons y-lower y-upper))
+            (ly:grob-set-property! grob 'layer -10)
+            (ly:make-stencil (list 'color color
+              (ly:stencil-expr (ly:round-filled-box X-ext Y-ext 0))
+              X-ext Y-ext))))
+      \once\override HorizontalBracket.Y-offset = #0
+      \once\override HorizontalBracket.shorten-pair = #'(-.95 . -1.65)
+    #})
