@@ -41,7 +41,7 @@ segment_maker.add_setting(
     voice_b_2=music_specifiers,
     voice_b_3=music_specifiers,
     voice_b_4=music_specifiers,
-    color='lavender',
+    color=consort.Color.from_x11('Lavender'),
     )
 segment_maker.add_setting(
     timespan_identifier=[-2, 1, -2, 1, -1, 2, -1, 2],
@@ -53,7 +53,7 @@ segment_maker.add_setting(
     voice_t_1=music_specifiers,
     voice_t_2=music_specifiers,
     voice_t_3=music_specifiers,
-    color='lavender',
+    color=consort.Color.from_x11('Lavender'),
     )
 
 #segment_maker.add_setting(

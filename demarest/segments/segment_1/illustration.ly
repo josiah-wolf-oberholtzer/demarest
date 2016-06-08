@@ -1,9 +1,9 @@
-% 2016-06-07 21:10
+% 2016-06-07 23:03
 
 % package "abjad" @ 97724f1 [josiah/demarest] (2016-06-07 20:57:13)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 58af069 [master] (2016-06-07 20:57:37)
-% package "demarest" @ 89c12eb [master] (2016-06-07 21:01:11)
+% package "consort" @ 9256fd6 [master] (2016-06-07 22:10:09)
+% package "demarest" @ b1f547c [master] (2016-06-07 21:13:51)
 
 \version "2.19.41"
 \language "english"
@@ -186,7 +186,8 @@
                             % [A1 Vocalization Voice] Measure 1
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -222,6 +223,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -258,7 +260,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -281,6 +284,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -297,7 +301,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -320,6 +325,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -333,7 +339,8 @@
                             % [A1 Vocalization Voice] Measure 4
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -356,6 +363,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -413,7 +421,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -436,6 +445,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -473,7 +483,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -511,6 +522,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -561,7 +573,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -599,6 +612,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -624,7 +638,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -660,6 +675,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -672,7 +688,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -695,6 +712,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -707,7 +725,8 @@
                             % [A1 Vocalization Voice] Measure 26
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -730,6 +749,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -768,7 +788,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -805,6 +826,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -828,7 +850,8 @@
                             % [A1 Vocalization Voice] Measure 30
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -864,6 +887,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -921,7 +945,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -958,6 +983,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -996,7 +1022,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1020,6 +1047,7 @@
                                                     }
                                         }
                                 c'2 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1033,7 +1061,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1056,6 +1085,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -1069,7 +1099,8 @@
                             % [A1 Vocalization Voice] Measure 39
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1092,6 +1123,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -1139,7 +1171,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1164,6 +1197,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1190,7 +1224,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1226,6 +1261,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -1247,7 +1283,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1270,6 +1307,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -1316,7 +1354,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1340,6 +1379,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1589,7 +1629,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1626,6 +1667,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1668,7 +1710,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1691,6 +1734,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1707,7 +1751,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1730,6 +1775,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -1783,7 +1829,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1819,6 +1866,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1856,7 +1904,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1892,6 +1941,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -1944,7 +1994,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -1969,6 +2020,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -2020,7 +2072,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2056,6 +2109,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -2069,7 +2123,8 @@
                             % [A2 Vocalization Voice] Measure 26
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2092,6 +2147,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2106,7 +2162,8 @@
                             % [A2 Vocalization Voice] Measure 27
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2129,6 +2186,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2167,7 +2225,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2203,6 +2262,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -2216,7 +2276,8 @@
                             % [A2 Vocalization Voice] Measure 30
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2252,6 +2313,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2304,7 +2366,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2327,6 +2390,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -2362,7 +2426,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2412,6 +2477,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -2426,7 +2492,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2449,6 +2516,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2461,7 +2529,8 @@
                             % [A2 Vocalization Voice] Measure 38
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2484,6 +2553,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2498,7 +2568,8 @@
                             % [A2 Vocalization Voice] Measure 39
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2521,6 +2592,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2538,7 +2610,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2574,6 +2647,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2586,7 +2660,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2622,6 +2697,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2634,7 +2710,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2657,6 +2734,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2670,7 +2748,8 @@
                             % [A2 Vocalization Voice] Measure 43
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2693,6 +2772,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -2731,7 +2811,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -2767,6 +2848,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3020,7 +3102,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3056,6 +3139,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3089,7 +3173,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3126,6 +3211,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3151,7 +3237,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3174,6 +3261,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -3207,7 +3295,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3243,6 +3332,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -3276,7 +3366,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3312,6 +3403,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3325,7 +3417,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3348,6 +3441,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -3360,7 +3454,8 @@
                             % [A3 Vocalization Voice] Measure 14
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3383,6 +3478,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -3430,7 +3526,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2.. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2.. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3453,6 +3550,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3491,7 +3589,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3528,6 +3627,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3553,7 +3653,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3576,6 +3677,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -3613,7 +3715,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3649,6 +3752,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3682,7 +3786,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3718,6 +3823,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3781,7 +3887,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3818,6 +3925,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3866,7 +3974,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -3915,6 +4024,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -3931,7 +4041,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3954,6 +4065,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -3976,7 +4088,8 @@
                             % [A3 Vocalization Voice] Measure 43
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4012,6 +4125,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -4044,7 +4158,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4080,6 +4195,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -4097,7 +4213,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4120,6 +4237,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -4166,7 +4284,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4203,6 +4322,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -4452,7 +4572,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4475,6 +4596,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -4537,7 +4659,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2.. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2.. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4574,6 +4697,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -4599,7 +4723,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4635,6 +4760,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -4680,7 +4806,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4703,6 +4830,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -4749,7 +4877,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4786,6 +4915,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -4812,7 +4942,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4835,6 +4966,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -4848,7 +4980,8 @@
                             % [A4 Vocalization Voice] Measure 28
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4871,6 +5004,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -4894,7 +5028,8 @@
                             % [A4 Vocalization Voice] Measure 30
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -4930,6 +5065,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -4983,7 +5119,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5033,6 +5170,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5071,7 +5209,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5109,6 +5248,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5122,7 +5262,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5145,6 +5286,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -5170,7 +5312,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5206,6 +5349,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -5251,7 +5395,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5287,6 +5432,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5304,7 +5450,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5327,6 +5474,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -5372,7 +5520,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5408,6 +5557,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5680,7 +5830,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5705,6 +5856,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5741,7 +5893,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5764,6 +5917,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5778,7 +5932,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5801,6 +5956,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -5814,7 +5970,8 @@
                             % [T1 Vocalization Voice] Measure 12
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5837,6 +5994,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -5887,7 +6045,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5923,6 +6082,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -5961,7 +6121,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -5998,6 +6159,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6054,7 +6216,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'1 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'1 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6090,6 +6253,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6108,7 +6272,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6144,6 +6309,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -6162,7 +6328,8 @@
                             % [T1 Vocalization Voice] Measure 34
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6185,6 +6352,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -6222,7 +6390,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6259,6 +6428,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6318,7 +6488,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6342,6 +6513,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6385,7 +6557,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6409,6 +6582,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6422,7 +6596,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6445,6 +6620,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -6457,7 +6633,8 @@
                             % [T1 Vocalization Voice] Measure 44
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6480,6 +6657,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -6494,7 +6672,8 @@
                             % [T1 Vocalization Voice] Measure 45
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6517,6 +6696,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -6543,7 +6723,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6579,6 +6760,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -6681,7 +6863,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6717,6 +6900,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6759,7 +6943,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6782,6 +6967,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6833,7 +7019,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6857,6 +7044,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6901,7 +7089,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -6937,6 +7126,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -6995,7 +7185,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7018,6 +7209,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7062,7 +7254,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7098,6 +7291,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7124,7 +7318,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7147,6 +7342,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7159,7 +7355,8 @@
                             % [T2 Vocalization Voice] Measure 36
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7182,6 +7379,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7238,7 +7436,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7263,6 +7462,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7292,7 +7492,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7328,6 +7529,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7343,7 +7545,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7366,6 +7569,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7378,7 +7582,8 @@
                             % [T2 Vocalization Voice] Measure 45
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7401,6 +7606,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7440,7 +7646,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7476,6 +7683,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7557,7 +7765,8 @@
                             % [T3 Vocalization Voice] Measure 10
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7593,6 +7802,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7628,7 +7838,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7651,6 +7862,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7664,7 +7876,8 @@
                             % [T3 Vocalization Voice] Measure 12
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7687,6 +7900,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7741,7 +7955,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7766,6 +7981,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7804,7 +8020,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7840,6 +8057,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -7853,7 +8071,8 @@
                             % [T3 Vocalization Voice] Measure 25
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7876,6 +8095,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -7931,7 +8151,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -7968,6 +8189,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8005,7 +8227,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8029,6 +8252,7 @@
                                                     }
                                         }
                                 c'4. \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8051,7 +8275,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8074,6 +8299,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -8111,7 +8337,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8135,6 +8362,7 @@
                                                     }
                                         }
                                 c'4. \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8173,7 +8401,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8210,6 +8439,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8261,7 +8491,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8297,6 +8528,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8331,7 +8563,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8355,6 +8588,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8369,7 +8603,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8392,6 +8627,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -8405,7 +8641,8 @@
                             % [T3 Vocalization Voice] Measure 44
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8428,6 +8665,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -8454,7 +8692,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8490,6 +8729,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -8559,7 +8799,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8583,6 +8824,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8630,7 +8872,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8666,6 +8909,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8719,7 +8963,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8742,6 +8987,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8792,7 +9038,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8816,6 +9063,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8863,7 +9111,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8888,6 +9137,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -8910,7 +9160,8 @@
                             % [B1 Vocalization Voice] Measure 23
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -8946,6 +9197,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -8958,7 +9210,8 @@
                             % [B1 Vocalization Voice] Measure 24
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8981,6 +9234,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -9018,7 +9272,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9041,6 +9296,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9088,7 +9344,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9139,6 +9396,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9153,7 +9411,8 @@
                             % [B1 Vocalization Voice] Measure 30
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9176,6 +9435,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -9234,7 +9494,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9271,6 +9532,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9308,7 +9570,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9346,6 +9609,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9360,7 +9624,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9383,6 +9648,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -9395,7 +9661,8 @@
                             % [B1 Vocalization Voice] Measure 40
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9418,6 +9685,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -9434,7 +9702,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9470,6 +9739,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -9507,7 +9777,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9543,6 +9814,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9556,7 +9828,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9579,6 +9852,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -9626,7 +9900,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9662,6 +9937,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9915,7 +10191,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -9952,6 +10229,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -9969,7 +10247,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10005,6 +10284,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10026,7 +10306,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10049,6 +10330,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10081,7 +10363,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10117,6 +10400,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10154,7 +10438,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10190,6 +10475,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10208,7 +10494,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10231,6 +10518,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10243,7 +10531,8 @@
                             % [B2 Vocalization Voice] Measure 15
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10266,6 +10555,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10318,7 +10608,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10368,6 +10659,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10402,7 +10694,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10427,6 +10720,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10453,7 +10747,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10476,6 +10771,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10526,7 +10822,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10562,6 +10859,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10621,7 +10919,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10657,6 +10956,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10707,7 +11007,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10744,6 +11045,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10757,7 +11059,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10780,6 +11083,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10792,7 +11096,8 @@
                             % [B2 Vocalization Voice] Measure 41
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10815,6 +11120,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10831,7 +11137,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10867,6 +11174,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -10899,7 +11207,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -10922,6 +11231,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -10941,7 +11251,8 @@
                             % [B2 Vocalization Voice] Measure 45
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10964,6 +11275,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -11008,7 +11320,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11032,6 +11345,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11284,7 +11598,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11320,6 +11635,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11354,7 +11670,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11390,6 +11707,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11424,7 +11742,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11460,6 +11779,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -11493,7 +11813,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11529,6 +11850,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11546,7 +11868,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11569,6 +11892,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -11616,7 +11940,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11640,6 +11965,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11678,7 +12004,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11714,6 +12041,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11736,7 +12064,8 @@
                             % [B3 Vocalization Voice] Measure 25
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11759,6 +12088,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -11796,7 +12126,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11832,6 +12163,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -11851,7 +12183,8 @@
                             % [B3 Vocalization Voice] Measure 29
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11887,6 +12220,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -11945,7 +12279,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -11982,6 +12317,7 @@
                                                     }
                                         }
                                 c'4 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12025,7 +12361,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12063,6 +12400,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12079,7 +12417,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12102,6 +12441,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -12148,7 +12488,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12173,6 +12514,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12220,7 +12562,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12256,6 +12599,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12274,7 +12618,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12297,6 +12642,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -12343,7 +12689,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12380,6 +12727,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12609,7 +12957,8 @@
                             % [B4 Vocalization Voice] Measure 2
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12645,6 +12994,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -12681,7 +13031,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12705,6 +13056,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12730,7 +13082,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12753,6 +13106,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -12806,7 +13160,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2.. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2.. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12842,6 +13197,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12886,7 +13242,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12910,6 +13267,7 @@
                                                     }
                                         }
                                 c'8 \repeatTie \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -12939,7 +13297,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -12975,6 +13334,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -13020,7 +13380,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13045,6 +13406,7 @@
                                         }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -13061,7 +13423,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13084,6 +13447,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -13096,7 +13460,8 @@
                             % [B4 Vocalization Voice] Measure 25
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13119,6 +13484,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -13150,7 +13516,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4. -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13173,6 +13540,7 @@
                                                         f-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -13220,7 +13588,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'4 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13270,6 +13639,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -13329,7 +13699,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13379,6 +13750,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -13414,7 +13786,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2.. \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2.. \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13450,6 +13823,7 @@
                                                         s-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -13466,7 +13840,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13489,6 +13864,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -13514,7 +13890,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'4 -\accent \fp
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13550,6 +13927,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -13586,7 +13964,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'8 \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13623,6 +14002,7 @@
                                                         h-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
@@ -13636,7 +14016,8 @@
                         {
                             {
                                 \override NoteHead.style = #'cross
-                                c'16 -\staccato \p
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13659,6 +14040,7 @@
                                                                 wh.
                                                             }
                                     }
+                                <> \)
                                 \revert NoteHead.style
                             }
                         }
@@ -13704,7 +14086,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
-                                c'2 -\accent \fp \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \( \startTextSpan
                                     ^ \markup {
                                         \box
                                             \whiteout
@@ -13727,6 +14110,7 @@
                                                         sh-
                                                     }
                                         }
+                                <> \)
                                 \revert NoteHead.style
                                 <> \stopTextSpan
                             }
