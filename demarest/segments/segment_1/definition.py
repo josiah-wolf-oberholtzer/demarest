@@ -18,6 +18,44 @@ segment_maker = demarest.SegmentMaker(
 
 ###
 
+music_specifiers = consort.MusicSpecifierSequence(
+    application_rate='division',
+    music_specifiers=[
+        demarest.materials.whispered_inhales,
+        demarest.materials.whispered_inhales,
+        demarest.materials.whispered_pointillism,
+        ],
+    )
+segment_maker.add_setting(
+    timespan_identifier=[1, -1, 1, -1, 2, -1, 3],
+    timespan_maker=abjad.new(
+        demarest.materials.sparse_timespan_maker,
+        playing_groupings=[1, 1, 2, 1, 2, 3],
+        fuse_groups=True,
+        ),
+    voice_a_1=music_specifiers,
+    voice_a_2=music_specifiers,
+    voice_a_3=music_specifiers,
+    voice_a_4=music_specifiers,
+    voice_b_1=music_specifiers,
+    voice_b_2=music_specifiers,
+    voice_b_3=music_specifiers,
+    voice_b_4=music_specifiers,
+    color='lavender',
+    )
+segment_maker.add_setting(
+    timespan_identifier=[-2, 1, -2, 1, -1, 2, -1, 2],
+    timespan_maker=abjad.new(
+        demarest.materials.sparse_timespan_maker,
+        playing_groupings=[1, 1, 2, 1, 2, 3],
+        fuse_groups=True,
+        ),
+    voice_t_1=music_specifiers,
+    voice_t_2=music_specifiers,
+    voice_t_3=music_specifiers,
+    color='lavender',
+    )
+
 #segment_maker.add_setting(
 #    timespan_maker=abjad.new(
 #        demarest.materials.sparse_timespan_maker,
