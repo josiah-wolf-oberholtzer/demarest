@@ -16,83 +16,53 @@ segment_maker = demarest.SegmentMaker(
     tempo=abjad.Tempo((1, 4), 72),
     )
 
-### SHORTHAND ###
+###
 
-chorus_a = dict(
-    chorus_a_1=None,
-    chorus_a_2=None,
-    chorus_a_3=None,
-    chorus_a_4=None,
-    )
+#segment_maker.add_setting(
+#    timespan_maker=abjad.new(
+#        demarest.materials.sparse_timespan_maker,
+#        playing_groupings=[1],
+#        fuse_groups=True,
+#        ),
+#    color='LightBlue',
+#    **voice_a,
+#    **voice_b,
+#    **voice_trio,
+#    )
 
-chorus_b = dict(
-    chorus_b_1=None,
-    chorus_b_2=None,
-    chorus_b_3=None,
-    chorus_b_4=None,
-    )
+#segment_maker.add_setting(
+#    timespan_maker=consort.CascadingTimespanMaker(
+#        cascade_pattern=[3, -1, 2, 1, 1],
+#        playing_groupings=[1, 2, 2],
+#        playing_talea=abjad.rhythmmakertools.Talea(
+#            counts=[2, 4, 2, 4, 4],
+#            denominator=8,
+#            ),
+#        silence_talea=abjad.rhythmmakertools.Talea(
+#            counts=[1, 2, 1, 1, 2, 3],
+#            denominator=4,
+#            ),
+#        ),
+#    color='LemonChiffon',
+#    **chorus_a,
+#    **chorus_b,
+#    )
 
-trio = dict(
-    trio_1=None,
-    trio_2=None,
-    trio_3=None,
-    )
+#segment_maker.add_setting(
+#    timespan_maker=consort.CascadingTimespanMaker(
+#        cascade_pattern=[1, 3, -1, 2, 1, 1],
+#        playing_groupings=[1, 2, 2, 3],
+#        playing_talea=abjad.rhythmmakertools.Talea(
+#            counts=[2, 4, 2, 4, 2, 4],
+#            denominator=8,
+#            ),
+#        silence_talea=abjad.rhythmmakertools.Talea(
+#            counts=[1, 2, 1, 1, 2, 3],
+#            denominator=8,
+#            ),
+#        ),
+#    color='lavender',
+#    **chorus_a,
+#    **chorus_b,
+#    )
 
-### TUTTI BACKGROUND ###
-
-segment_maker.add_setting(
-    timespan_maker=consort.CascadingTimespanMaker(
-        cascade_pattern=[3, -1, 2, 1, 1],
-        playing_groupings=[1, 2, 2],
-        playing_talea=abjad.rhythmmakertools.Talea(
-            counts=[2, 4, 2, 4, 4],
-            denominator=8,
-            ),
-        silence_talea=abjad.rhythmmakertools.Talea(
-            counts=[1, 2, 1, 1, 2, 3],
-            denominator=4,
-            ),
-        ),
-    color='LemonChiffon',  # this should work
-    **chorus_a,
-    **chorus_b,
-    )
-
-segment_maker.add_setting(
-    timespan_maker=consort.CascadingTimespanMaker(
-        cascade_pattern=[1, 3, -1, 2, 1, 1],
-        playing_groupings=[1, 2, 2, 3],
-        playing_talea=abjad.rhythmmakertools.Talea(
-            counts=[2, 4, 2, 4, 2, 4],
-            denominator=8,
-            ),
-        silence_talea=abjad.rhythmmakertools.Talea(
-            counts=[1, 2, 1, 1, 2, 3],
-            denominator=8,
-            ),
-        ),
-    color='lavender',  # this should work
-    **chorus_a,
-    **chorus_b,
-    )
-
-
-### CHORUS A ###
-
-segment_maker.add_setting(
-    )
-
-## CHORUS B ###
-
-segment_maker.add_setting(
-    )
-
-### QUARTET ###
-
-segment_maker.add_setting(
-    )
-
-### TUTTI FOREGROUND ###
-
-segment_maker.add_setting(
-    )

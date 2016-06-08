@@ -121,11 +121,42 @@ pitch_operation_specifier = consort.PitchOperationSpecifier(
     )
 
 
-__all__ = [
-    'chords',
-    'laissez_vibrer',
-    'make_text_markup',
-    'make_text_spanner',
-    'percussion_staff',
-    'pitch_operation_specifier',
-    ]
+sketch_chorus_a = dict(
+    chorus_a_1=None,
+    chorus_a_2=None,
+    chorus_a_3=None,
+    chorus_a_4=None,
+    )
+
+sketch_chorus_b = dict(
+    chorus_b_1=None,
+    chorus_b_2=None,
+    chorus_b_3=None,
+    chorus_b_4=None,
+    )
+
+sketch_trio = dict(
+    trio_1=None,
+    trio_2=None,
+    trio_3=None,
+    )
+
+sketch_voice_a = dict(
+    voice_a_1=None,
+    voice_a_2=None,
+    voice_a_3=None,
+    voice_a_4=None,
+    )
+
+sketch_voice_b = dict(
+    voice_b_1=None,
+    voice_b_2=None,
+    voice_b_3=None,
+    voice_b_4=None,
+    )
+
+sketch_voice_trio = dict(
+    voice_t_1=None,
+    voice_t_2=None,
+    voice_t_3=None,
+    )

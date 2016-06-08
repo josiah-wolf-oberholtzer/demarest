@@ -17,8 +17,8 @@
             \center-align {
                 \override #'(font-name . "Didot Italic") {
                     \fontsize #1 {
-                        "to my mother,"
-                        "on her 64th birthday"
+                        "to my mom,"
+                        "on her birthday"
                     }
                 }
                 \null
