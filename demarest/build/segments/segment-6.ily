@@ -2,7 +2,9 @@
         currentBarNumber = #164
     } <<
         \tag #'time
+        \repeat volta 2
         \context TimeSignatureContext = "Time Signature Context" {
+            \break
             {
                 \tempo 4=64
                 \time 4/4
@@ -13,12 +15,17 @@
                             \caps
                                 H
                     }
-                s1 * 32
+                s1 * 15
+            }
+            {
+                \time 5/8
+                s1 * 5/4
             }
         }
         \context SectionStaffGroup = "Chorus A" <<
             \tag #'a-1
             \context PerformerStaffGroup = "A1 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "A1 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -48,12 +55,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A1 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "A1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -91,8 +102,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A1 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -100,6 +114,7 @@
             >>
             \tag #'a-2
             \context PerformerStaffGroup = "A2 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "A2 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -129,12 +144,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A2 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "A2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -172,8 +191,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A2 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -181,6 +203,7 @@
             >>
             \tag #'a-3
             \context PerformerStaffGroup = "A3 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "A3 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -210,12 +233,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A3 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "A3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -253,8 +280,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A3 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -262,6 +292,7 @@
             >>
             \tag #'a-4
             \context PerformerStaffGroup = "A4 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "A4 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -291,12 +322,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A4 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "A4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -334,8 +369,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [A4 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -345,6 +383,7 @@
         \context SectionStaffGroup = "Core Trio" <<
             \tag #'t-1
             \context PerformerStaffGroup = "Trio 1 Performer Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "T1 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -374,8 +413,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [T1 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -383,6 +425,7 @@
             >>
             \tag #'t-2
             \context PerformerStaffGroup = "Trio 2 Performer Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "T2 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -412,8 +455,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [T2 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -421,6 +467,7 @@
             >>
             \tag #'t-3
             \context PerformerStaffGroup = "Trio 3 Performer Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "T3 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -450,8 +497,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [T3 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -461,6 +511,7 @@
         \context SectionStaffGroup = "Chorus B" <<
             \tag #'b-1
             \context PerformerStaffGroup = "B1 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "B1 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -490,12 +541,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B1 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "B1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -533,8 +588,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B1 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -542,6 +600,7 @@
             >>
             \tag #'b-2
             \context PerformerStaffGroup = "B2 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "B2 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -571,12 +630,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B2 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "B2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -614,8 +677,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B2 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -623,6 +689,7 @@
             >>
             \tag #'b-3
             \context PerformerStaffGroup = "B3 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "B3 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -652,12 +719,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B3 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "B3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -695,8 +766,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B3 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
@@ -704,6 +778,7 @@
             >>
             \tag #'b-4
             \context PerformerStaffGroup = "B4 Staff Group" <<
+                \repeat volta 2
                 \context VocalizationStaff = "B4 Vocalization Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -733,12 +808,16 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B4 Vocalization Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }
                 }
+                \repeat volta 2
                 \context ChorusPercussionStaff = "B4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
@@ -776,19 +855,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 32
-                                    - \markup {
-                                        \italic
-                                            \right-column
-                                                {
-                                                    \null
-                                                    \null
-                                                    \null
-                                                    "Portland, OR"
-                                                    "January 2016 - June 2016"
-                                                }
-                                        }
-                                \bar "|."
+                                R1 * 15
+                            }
+                            % [B4 Percussion Voice] Measure 179
+                            {
+                                R1 * 5/4
                             }
                         }
                     }

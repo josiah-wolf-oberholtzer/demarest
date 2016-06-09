@@ -32,8 +32,8 @@
         8
     ],
     "first_bar_number": 1,
-    "is_repeated": null,
-    "measure_count": 48,
+    "is_repeated": true,
+    "measure_count": 24,
     "segment_count": 9,
     "segment_number": 1
 }
