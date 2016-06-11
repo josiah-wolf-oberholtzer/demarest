@@ -1,9 +1,9 @@
-% 2016-06-08 18:59
+% 2016-06-10 21:25
 
-% package "abjad" @ 7abac45 [josiah/demarest] (2016-06-08 09:21:18)
+% package "abjad" @ 6aebd61 [josiah/demarest] (2016-06-09 18:38:24)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ 8c75c29 [master] (2016-06-08 11:13:42)
-% package "demarest" @ 9805ac3 [master] (2016-06-08 00:43:06)
+% package "demarest" @ 58aa124 [master] (2016-06-08 22:05:35)
 
 \version "2.19.41"
 \language "english"

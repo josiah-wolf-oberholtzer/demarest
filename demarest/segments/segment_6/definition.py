@@ -1,11 +1,13 @@
 # -*- encoding: utf-8 -*-
 import abjad
+import consort
 import demarest
 
 
-### SEGMENT ###
+### SEGMENT 6 ###
 
 segment_maker = demarest.SegmentMaker(
+    annotate_colors=True,
     annotate_phrasing=False,
     desired_duration_in_seconds=120 / 2,
     permitted_time_signatures=[
@@ -15,27 +17,38 @@ segment_maker = demarest.SegmentMaker(
     tempo=abjad.Tempo((1, 4), 64),
     )
 
-### TUTTI BACKGROUND ###
+### VOCALS ###
 
 segment_maker.add_setting(
+    timespan_maker=abjad.new(
+        demarest.materials.sparse_timespan_maker,
+        fuse_groups=True,
+        initial_silence_talea__denominator=4,
+        playing_talea__denominator=4,
+        playing_groupings=[2, 2, 1],
+        silence_talea__denominator=4,
+        ),
+    voice_a_1=demarest.materials.pitch_pipe_drones,
+    voice_a_2=demarest.materials.pitch_pipe_drones,
+    voice_a_3=demarest.materials.pitch_pipe_drones,
+    voice_a_4=demarest.materials.pitch_pipe_drones,
+    voice_b_1=demarest.materials.pitch_pipe_drones,
+    voice_b_2=demarest.materials.pitch_pipe_drones,
+    voice_b_3=demarest.materials.pitch_pipe_drones,
+    voice_b_4=demarest.materials.pitch_pipe_drones,
+    color=consort.Color.from_x11('Lavender').rotate_hue(0.25),
     )
 
-### CHORUS A ###
+### GLASS ###
 
 segment_maker.add_setting(
-    )
-
-## CHORUS B ###
-
-segment_maker.add_setting(
-    )
-
-### QUARTET ###
-
-segment_maker.add_setting(
-    )
-
-### TUTTI FOREGROUND ###
-
-segment_maker.add_setting(
+    chorus_a_1=demarest.materials.glass_drones,
+    chorus_a_2=demarest.materials.glass_drones,
+    chorus_a_3=demarest.materials.glass_drones,
+    chorus_a_4=demarest.materials.glass_drones,
+    chorus_b_1=demarest.materials.glass_drones,
+    chorus_b_2=demarest.materials.glass_drones,
+    chorus_b_3=demarest.materials.glass_drones,
+    chorus_b_4=demarest.materials.glass_drones,
+    color=consort.Color.from_x11('Lavender').rotate_hue(0.45),
     )

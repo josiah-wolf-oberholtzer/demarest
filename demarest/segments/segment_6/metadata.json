@@ -28,12 +28,12 @@
         64
     ],
     "end_time_signature": [
-        5,
-        8
+        3,
+        4
     ],
     "first_bar_number": 164,
     "is_repeated": true,
-    "measure_count": 17,
+    "measure_count": 20,
     "segment_count": 9,
     "segment_number": 9
 }

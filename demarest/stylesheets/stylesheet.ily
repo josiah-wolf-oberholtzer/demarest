@@ -244,7 +244,6 @@
         \name ChorusPercussionStaff
         \type Engraver_group
         \alias Staff
-        \override StaffSymbol.line-positions = #'(-4 -2 0 4)
     }
 
     \context {
@@ -409,6 +408,7 @@
         \override TextSpanner.bound-details.right.padding = 2
         \override TextSpanner.padding = 1
         \override TextSpanner.outside-staff-padding = 1
+        \override TextSpanner.to-barline = ##t
         \override TrillSpanner.bound-details.right.padding = 1
         \override TupletBracket.breakable = ##t
         \override TupletBracket.full-length-padding = 1.5

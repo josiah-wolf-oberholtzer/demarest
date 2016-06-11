@@ -3,9 +3,10 @@ import abjad
 import demarest
 
 
-### SEGMENT ###
+### CUT 3 ###
 
 segment_maker = demarest.SegmentMaker(
+    annotate_colors=True,
     annotate_phrasing=False,
     desired_duration_in_seconds=5,
     permitted_time_signatures=[
@@ -13,29 +14,4 @@ segment_maker = demarest.SegmentMaker(
         ],
     repeat=True,
     tempo=abjad.Tempo((1, 4), 96),
-    )
-
-### TUTTI BACKGROUND ###
-
-segment_maker.add_setting(
-    )
-
-### CHORUS A ###
-
-segment_maker.add_setting(
-    )
-
-## CHORUS B ###
-
-segment_maker.add_setting(
-    )
-
-### QUARTET ###
-
-segment_maker.add_setting(
-    )
-
-### TUTTI FOREGROUND ###
-
-segment_maker.add_setting(
     )

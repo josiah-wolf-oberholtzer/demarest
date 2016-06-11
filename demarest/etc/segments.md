@@ -3,6 +3,8 @@
 ## [2] @72 
 
 - whispered inhales
+- whispered pointillism
+- [suggest] whispered repetition
 
 ## [1] @96
 
@@ -13,7 +15,8 @@
 
 ## [3] @64
 
-- repeated sibilances
+- whispered repetitions
+    - building from sparse to dense over segment
 - chorus fanfare
     - shaker waves
     - guero waves
@@ -22,6 +25,7 @@
 ## [2] @48
 
 - white noise hiss
+    - shaker rolls
 - pitch pipe repetitions
 - snare swells (emerge from hiss)
 

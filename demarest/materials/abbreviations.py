@@ -27,10 +27,10 @@ class UnpitchedPercussion(object):
     # BAMBOO_WIND_CHIMES = pitchtools.NamedPitch('F4')
     # THUNDER_SHEET = pitchtools.NamedPitch('C4')
 
-    MARACA = pitchtools.NamedPitch('G4')
-    STRUCK_2X4 = pitchtools.NamedPitch('C4')
-    SERATED_2x4 = pitchtools.NamedPitch('A3')
-    SCRATCHED_2x4 = pitchtools.NamedPitch('F3')
+    MARACA = pitchtools.NamedPitch('F4')
+    CASTANET = pitchtools.NamedPitch('D4')
+    GUIRO = pitchtools.NamedPitch('B3')
+    GLASS = pitchtools.NamedPitch('G3')
 
 
 chords = tuple(
