@@ -17,3 +17,56 @@ segment_maker = demarest.SegmentMaker(
     )
 
 ### WHISPERING ###
+
+color = consort.Color.from_x11('Lavender')
+music_specifiers = consort.MusicSpecifierSequence(
+    application_rate='division',
+    music_specifiers=[
+        demarest.materials.whispered_inhales,
+        demarest.materials.whispered_inhales,
+        demarest.materials.whispered_pointillism,
+        ],
+    )
+timespan_maker = abjad.new(
+    demarest.materials.sparse_timespan_maker,
+    playing_groupings=[1, 1, 2, 1, 2, 3],
+    fuse_groups=True,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_identifier=[
+        -2, 1, -2, 2, -3,
+        2, -1, 2, -2, 3,
+        -4, 5,
+        ],
+    timespan_maker=abjad.new(timespan_maker, seed=1),
+    a_1_voice=music_specifiers,
+    a_2_voice=music_specifiers,
+    a_3_voice=music_specifiers,
+    a_4_voice=music_specifiers,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_identifier=[
+        -1, 2, -2, 4, -1,
+        1, -2, 2, -3, 2,
+        -4, 2, -1, 2,
+        ],
+    timespan_maker=abjad.new(timespan_maker, seed=2),
+    b_1_voice=music_specifiers,
+    b_2_voice=music_specifiers,
+    b_3_voice=music_specifiers,
+    b_4_voice=music_specifiers,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_identifier=[
+        -2, 1, -2, 1,
+        -2, 1, -2, 1,
+        -2, 1, -2, 1,
+        ],
+    timespan_maker=abjad.new(timespan_maker, seed=3),
+    t_1_voice=music_specifiers,
+    t_2_voice=music_specifiers,
+    t_3_voice=music_specifiers,
+    )

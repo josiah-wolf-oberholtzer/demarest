@@ -231,9 +231,7 @@
         \override DynamicLineSpanner.outside-staff-priority = 1000
         \override DynamicText.outside-staff-priority = 1000
         \override StaffSymbol.line-positions = #'(0)
-        \override Stem.direction = #UP
-        %\override TextScript.extra-spacing-height = #'(-inf.0 . +inf.0)
-        %\override TextScript.extra-spacing-width = #'(-0.0 . 0.4)
+        \override Stem.direction = #DOWN
         \override TextScript.outside-staff-padding = 1
         \override TextScript.outside-staff-priority = 500
         \override TextSpanner.outside-staff-padding = 1
@@ -241,80 +239,25 @@
 
     \context {
         \Staff
-        \name ChorusPercussionStaff
+        \name PercussionStaff
         \type Engraver_group
         \alias Staff
+        \override DynamicLineSpanner.outside-staff-priority = 1000
+        \override DynamicText.outside-staff-priority = 1000
+        \override StaffSymbol.line-positions = #'(0)
+        \override Stem.direction = #DOWN
+        \override TextScript.outside-staff-padding = 1
+        \override TextScript.outside-staff-priority = 500
+        \override TextSpanner.outside-staff-padding = 1
     }
 
-    \context {
-        \Staff
-        \name PitchedPercussionStaff
-        \type Engraver_group
-        \alias Staff
-    }
-
-    \context {
-        \Staff
-        \name QuartetAPercussionStaff
-        \type Engraver_group
-        \alias Staff
-        \override StaffSymbol.line-positions = #'(-4 0 4)
-    }
-
-    \context {
-        \Staff
-        \name QuartetBPercussionStaff
-        \type Engraver_group
-        \alias Staff
-        \override StaffSymbol.line-positions = #'(-4 0 4)
-    }
-
-    \context {
-        \Staff
-        \name QuartetCPercussionStaff
-        \type Engraver_group
-        \alias Staff
-        \override StaffSymbol.line-positions = #'(-4 0 4)
-    }
-
-    \context {
-        \Staff
-        \name QuartetDPercussionStaff
-        \type Engraver_group
-        \alias Staff
-        \override StaffSymbol.line-positions = #'(-4 0 4)
-    }
-
-    \context {
-        \Staff
-        \name TomsStaff
-        \type Engraver_group
-        \alias Staff
-        \override StaffSymbol.line-positions = #'(-8 -4 -2 0 2 4 8)
-    }
-    
-    \context {
-        \Staff
-        \name WoodblockStaff
-        \type Engraver_group
-        \alias Staff
-        \override StaffSymbol.line-positions = #'(-8 -4 -2 0 2 4 8)
-    }
-    
     \context {
         \StaffGroup
         \name PerformerStaffGroup
         \type Engraver_group
         \alias StaffGroup
-        \accepts ChorusPercussionStaff
+        \accepts PercussionStaff
         \accepts VocalizationStaff
-        \accepts PitchedPercussionStaff
-        \accepts QuartetAPercussionStaff
-        \accepts QuartetBPercussionStaff
-        \accepts QuartetCPercussionStaff
-        \accepts QuartetDPercussionStaff
-        \accepts TomsStaff
-        \accepts WoodblockStaff
         \override StaffGrouper.staff-staff-spacing = #'(
             (basic-distance . 10)
             (minimum-distance . 10)

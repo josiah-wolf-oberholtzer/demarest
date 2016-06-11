@@ -22,6 +22,7 @@ sibilances = [markuptools.Markup(x, 'down') for x in sibilances]
 sibilances = consort.AttachmentExpression(
     attachments=sibilances,
     selector=selectortools.select_pitched_runs(),
+    use_only_first_attachment=True,
     )
 
 swells = consort.DynamicExpression(
