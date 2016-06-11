@@ -1,13 +1,7 @@
 {
     "segments": [
-        "segment_1",
-        "segment_2",
-        "cut_1",
-        "segment_3",
-        "segment_4",
-        "cut_2",
-        "segment_5",
-        "cut_3",
-        "segment_6"
+        "section_x",
+        "section_y",
+        "section_z"
     ]
 }
