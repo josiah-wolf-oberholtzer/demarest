@@ -63,24 +63,60 @@ segment_maker.add_setting(
     b_4_voice=music_specifiers,
     )
 
-### WHISPERING FOREGROUND ###
+### WHISPERING CASCADE ###
 
-color = consort.Color.from_x11('Lavender').scale_luminance(1)
+color = consort.Color.from_x11('Lavender').scale_luminance(-1)
+music_specifiers = [demarest.materials.whispered_repetitions]
 timespan_maker = consort.CascadingTimespanMaker(
-    playing_talea=abjad.rhythmmakertools.Talea([2, 3], 4),
+    cascade_pattern=[3, -1],
+    playing_talea=abjad.rhythmmakertools.Talea([2, 3, 4], 8),
     playing_groupings=[1, 2, 1, 2, 1, 1, 2, 3],
     silence_talea=abjad.rhythmmakertools.Talea([1], 8),
     repeat=False,
     )
-music_specifiers = [demarest.materials.whispered_repetitions]
 segment_maker.add_setting(
     color=color,
     timespan_maker=timespan_maker,
-    #timespan_identifier=[
-    #    1, -5,
-    #    1, -1, 1, -3,
-    #    1, -5,
-    #    ],
+    timespan_identifier=[
+        -1, 1, -5,
+        1, -1, 1, -3,
+        1, -5, 1,
+        ],
+    a_1_voice=music_specifiers,
+    a_2_voice=music_specifiers,
+    a_3_voice=music_specifiers,
+    a_4_voice=music_specifiers,
+    t_1_voice=music_specifiers,
+    t_2_voice=music_specifiers,
+    t_3_voice=music_specifiers,
+    b_1_voice=music_specifiers,
+    b_2_voice=music_specifiers,
+    b_3_voice=music_specifiers,
+    b_4_voice=music_specifiers,
+    )
+
+music_specifiers = [
+    abjad.new(
+        demarest.materials.whispered_pointillism,
+        rhythm_maker__incise_specifier__prefix_talea=[1, 1, 1, -1],
+        rhythm_maker__incise_specifier__prefix_counts=[2, 3],
+        )
+    ]
+timespan_maker = consort.CascadingTimespanMaker(
+    cascade_pattern=[-3, 1],
+    playing_talea=abjad.rhythmmakertools.Talea([1, 1, 2], 8),
+    playing_groupings=[1, 2],
+    silence_talea=abjad.rhythmmakertools.Talea([1], 8),
+    repeat=False,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_maker=timespan_maker,
+    timespan_identifier=[
+        -3, 1, -3,
+        1, -2, 1, -2,
+        1, -3,
+        ],
     a_1_voice=music_specifiers,
     a_2_voice=music_specifiers,
     a_3_voice=music_specifiers,
