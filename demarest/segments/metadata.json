@@ -2,6 +2,8 @@
     "segments": [
         "section_x",
         "section_y",
-        "section_z"
+        "section_z",
+        "percussion_tremolo",
+        "percussion_pointillism"
     ]
 }

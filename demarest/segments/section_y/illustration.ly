@@ -1,9 +1,9 @@
-% 2016-06-11 17:15
+% 2016-06-11 18:00
 
 % package "abjad" @ 458a077 [josiah/demarest] (2016-06-11 12:39:40)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 004088b [master] (2016-06-10 22:28:16)
-% package "demarest" @ 55d99f2 [master] (2016-06-11 16:28:48)
+% package "consort" @ 7d893dd [master] (2016-06-11 17:24:25)
+% package "demarest" @ 6eed7cc [master] (2016-06-11 17:17:20)
 
 \version "2.19.41"
 \language "english"
@@ -3307,7 +3307,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -3317,7 +3323,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "A 1 Percussion Voice" {
@@ -5959,7 +5971,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -5969,7 +5987,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "A 2 Percussion Voice" {
@@ -9195,7 +9219,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -9205,7 +9235,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "A 3 Percussion Voice" {
@@ -12610,7 +12646,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -12620,7 +12662,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "A 4 Percussion Voice" {
@@ -21866,7 +21914,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -21876,7 +21930,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "B 1 Percussion Voice" {
@@ -25099,7 +25159,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -25109,7 +25175,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "B 2 Percussion Voice" {
@@ -28475,7 +28547,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -28485,7 +28563,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "B 3 Percussion Voice" {
@@ -31483,7 +31567,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -31493,7 +31583,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \bar "||"
                     \context Voice = "B 4 Percussion Voice" {

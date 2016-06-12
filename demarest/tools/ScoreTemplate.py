@@ -89,10 +89,10 @@ class ScoreTemplate(consort.ScoreTemplate):
 
         chorus_a = scoretools.StaffGroup(
             [
-                self._make_performer('A', 1),
-                self._make_performer('A', 2),
-                self._make_performer('A', 3),
-                self._make_performer('A', 4),
+                self._make_performer('A', 1, chorus=True),
+                self._make_performer('A', 2, chorus=True),
+                self._make_performer('A', 3, chorus=True),
+                self._make_performer('A', 4, chorus=True),
                 ],
             name='Chorus A',
             context_name='SectionStaffGroup',
@@ -110,10 +110,10 @@ class ScoreTemplate(consort.ScoreTemplate):
 
         chorus_b = scoretools.StaffGroup(
             [
-                self._make_performer('B', '1'),
-                self._make_performer('B', '2'),
-                self._make_performer('B', '3'),
-                self._make_performer('B', '4'),
+                self._make_performer('B', '1', chorus=True),
+                self._make_performer('B', '2', chorus=True),
+                self._make_performer('B', '3', chorus=True),
+                self._make_performer('B', '4', chorus=True),
                 ],
             name='Chorus B',
             context_name='SectionStaffGroup',
@@ -132,9 +132,9 @@ class ScoreTemplate(consort.ScoreTemplate):
 
     ### PRIVATE METHODS ###
 
-    def _make_performer(self, group, index):
+    def _make_performer(self, group, index, chorus=False):
         vocal_staff = self._make_vocal_staff(group, index)
-        percussion_staff = self._make_percussion_staff(group, index)
+        percussion_staff = self._make_percussion_staff(group, index, chorus)
         staff_group = scoretools.StaffGroup(
             [vocal_staff, percussion_staff],
             context_name='PerformerStaffGroup',
@@ -150,16 +150,25 @@ class ScoreTemplate(consort.ScoreTemplate):
             )
         return staff_group
 
-    def _make_percussion_staff(self, group, index):
+    def _make_percussion_staff(self, group, index, chorus=False):
+        if chorus:
+            instrument = instrumenttools.Percussion(
+                instrument_name_markup=self._make_column_markup(
+                    ['shaker', 'maraca', 'castanet', 'wine glass']),
+                short_instrument_name_markup=self._make_column_markup(
+                    ['sh.', 'mc.', 'cst.', 'w.g.']),
+                )
+        else:
+            instrument = instrumenttools.Percussion(
+                instrument_name_markup=self._make_markup('perc.'),
+                short_instrument_name_markup=self._make_markup('perc.'),
+                )
         percussion_staff = self._make_staff(
             '{} {} Percussion'.format(group, index),
             'percussion',
             abbreviation='{}_{}_percussion'.format(group, index).lower(),
             context_name='PercussionStaff',
-            instrument=instrumenttools.Percussion(
-                instrument_name_markup=self._make_markup('perc.'),
-                short_instrument_name_markup=self._make_markup('perc.'),
-                ),
+            instrument=instrument,
             )
         return percussion_staff
 
