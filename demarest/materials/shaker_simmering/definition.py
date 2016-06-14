@@ -21,7 +21,7 @@ shaker_simmering = consort.MusicSpecifier(
             ),
         tremoli=spannertools.StemTremoloSpanner,
         ),
-    pitch_handler=consort.PitchClassPitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.MARACA,
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(

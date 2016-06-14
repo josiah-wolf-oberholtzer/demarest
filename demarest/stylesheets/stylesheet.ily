@@ -244,7 +244,7 @@
         \alias Staff
         \override DynamicLineSpanner.outside-staff-priority = 1000
         \override DynamicText.outside-staff-priority = 1000
-        \override StaffSymbol.line-positions = #'(0)
+        %% \override StaffSymbol.line-positions = #'(-3 -1 1 3)
         \override Stem.direction = #DOWN
         \override TextScript.outside-staff-padding = 1
         \override TextScript.outside-staff-priority = 500

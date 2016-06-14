@@ -129,3 +129,58 @@ segment_maker.add_setting(
     b_3_voice=music_specifiers,
     b_4_voice=music_specifiers,
     )
+
+### PITCH PIPES ###
+
+color = consort.Color.from_x11('Lavender').rotate_hue(0.75)
+music_specifiers = consort.CompositeMusicSpecifier(
+    primary_music_specifier=demarest.materials.pitch_pipe_drones,
+    secondary_music_specifier=demarest.materials.percussion_pointillism,
+    )
+timespan_maker = abjad.new(
+    demarest.materials.semitutti_timespan_maker,
+    fuse_groups=True,
+    padding=abjad.Duration(1, 4),
+    )
+segment_maker.add_setting(
+    color=color.scale_luminance(-1),
+    timespan_maker=timespan_maker,
+    timespan_identifier=[
+        1, -6,
+        1, -6,
+        1, -6,
+        1, -6,
+        ],
+    a_1=music_specifiers,
+    a_2=music_specifiers,
+    a_3=music_specifiers,
+    a_4=music_specifiers,
+    b_1=music_specifiers,
+    b_2=music_specifiers,
+    b_3=music_specifiers,
+    b_4=music_specifiers,
+    )
+
+music_specifiers = demarest.materials.pitch_pipe_flutter
+timespan_maker = abjad.new(
+    demarest.materials.sparse_timespan_maker,
+    fuse_groups=True,
+    padding=abjad.Duration(1, 4),
+    playing_groupings=[1, 2, 2, 1, 2, 3],
+    silence_talea__denominator=2,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_maker=timespan_maker,
+    timespan_identifier=[
+        1, -1, 1,
+        ],
+    a_1_voice=music_specifiers,
+    a_2_voice=music_specifiers,
+    a_3_voice=music_specifiers,
+    a_4_voice=music_specifiers,
+    b_1_voice=music_specifiers,
+    b_2_voice=music_specifiers,
+    b_3_voice=music_specifiers,
+    b_4_voice=music_specifiers,
+    )

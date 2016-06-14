@@ -19,7 +19,7 @@ percussion_pointillism = consort.MusicSpecifier(
                 [0],
             ),
         ),
-    pitch_handler=consort.PitchClassPitchHandler(pitch_specifier="C4"),
+    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier="C4"),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,

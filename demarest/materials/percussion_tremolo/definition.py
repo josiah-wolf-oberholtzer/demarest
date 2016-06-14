@@ -19,7 +19,7 @@ percussion_tremolo = consort.MusicSpecifier(
             selector=selectortools.select_pitched_runs(),
             ),
         ),
-    pitch_handler=consort.PitchClassPitchHandler(pitch_specifier="C4"),
+    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier="C4"),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=[8],
         division_masks=[

@@ -24,7 +24,7 @@ shaker_pointillism = consort.MusicSpecifier(
                 [0],
             ),
         ),
-    pitch_handler=consort.PitchClassPitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.MARACA,
         ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(

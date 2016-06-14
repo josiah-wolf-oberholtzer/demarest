@@ -27,7 +27,7 @@ shaker_rattling = consort.MusicSpecifier(
         performance_instruction=abbreviations.make_text_spanner('maracas'),
         tremoli=spannertools.StemTremoloSpanner,
         ),
-    pitch_handler=consort.PitchClassPitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.MARACA,
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(

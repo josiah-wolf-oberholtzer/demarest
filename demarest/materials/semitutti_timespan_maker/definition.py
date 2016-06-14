@@ -7,7 +7,7 @@ from abjad.tools import rhythmmakertools
 semitutti_timespan_maker = consort.TaleaTimespanMaker(
     division_masks=[
         rhythmmakertools.SilenceMask(
-            patterntools.Pattern(indices=[1, 2], period=6),
+            patterntools.Pattern(indices=[1, 2, 5], period=6),
             ),
         rhythmmakertools.SilenceMask(
             patterntools.Pattern(indices=[0], period=7),
