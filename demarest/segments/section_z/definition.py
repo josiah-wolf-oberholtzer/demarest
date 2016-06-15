@@ -22,7 +22,11 @@ color = consort.Color.from_x11('Lavender').rotate_hue(0.75)
 music_specifiers = demarest.materials.glass_drones
 segment_maker.add_setting(
     color=color,
-    timespan_maker=consort.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(
+        timespan_specifier=consort.TimespanSpecifier(
+            minimum_duration=abjad.Duration(1, 2),
+            ),
+        ),
     a_1_percussion=music_specifiers,
     a_2_percussion=music_specifiers,
     a_3_percussion=music_specifiers,

@@ -27,7 +27,7 @@ class UnpitchedPercussion(object):
     # BAMBOO_WIND_CHIMES = pitchtools.NamedPitch('F4')
     # THUNDER_SHEET = pitchtools.NamedPitch('C4')
 
-    MARACA = pitchtools.NamedPitch('F4')
+    MARACA = pitchtools.NamedPitch('G4')
     CASTANET = pitchtools.NamedPitch('D4')
     GUIRO = pitchtools.NamedPitch('B3')
     GLASS = pitchtools.NamedPitch('G3')
@@ -105,6 +105,18 @@ percussion_staff = consort.AttachmentExpression(
     )
 
 
+pitch_specifier = consort.PitchSpecifier(
+    pitch_segments=[
+        pitchtools.PitchClassSegment([0, 3, 2, 5, 11, 1]),
+        pitchtools.PitchClassSegment([11, 9]),
+        pitchtools.PitchClassSegment([2, 4, 5, 8]),
+        pitchtools.PitchClassSegment([0, 3, 5]),
+        pitchtools.PitchClassSegment([2, 4, 5, 8]),
+        ],
+    ratio=[1, 2, 1, 2, 1],
+    )
+
+
 pitch_operation_specifier = consort.PitchOperationSpecifier(
     pitch_operations=[
         pitchtools.Rotation(1),
@@ -118,45 +130,4 @@ pitch_operation_specifier = consort.PitchOperationSpecifier(
         pitchtools.Retrogression(),
         ],
     ratio=(1, 3, 1, 1, 2, 1),
-    )
-
-
-sketch_chorus_a = dict(
-    chorus_a_1=None,
-    chorus_a_2=None,
-    chorus_a_3=None,
-    chorus_a_4=None,
-    )
-
-sketch_chorus_b = dict(
-    chorus_b_1=None,
-    chorus_b_2=None,
-    chorus_b_3=None,
-    chorus_b_4=None,
-    )
-
-sketch_trio = dict(
-    trio_1=None,
-    trio_2=None,
-    trio_3=None,
-    )
-
-sketch_voice_a = dict(
-    voice_a_1=None,
-    voice_a_2=None,
-    voice_a_3=None,
-    voice_a_4=None,
-    )
-
-sketch_voice_b = dict(
-    voice_b_1=None,
-    voice_b_2=None,
-    voice_b_3=None,
-    voice_b_4=None,
-    )
-
-sketch_voice_trio = dict(
-    voice_t_1=None,
-    voice_t_2=None,
-    voice_t_3=None,
     )
