@@ -153,7 +153,7 @@ segment_maker.add_setting(
         -1, 9
         ],
     timespan_maker=abjad.new(
-        timespan_maker, 
+        timespan_maker,
         seed=1,
         playing_groupings=[2, 2, 2, 1, 3],
         ),
@@ -179,4 +179,42 @@ segment_maker.add_setting(
     t_1_voice=music_specifiers,
     t_2_voice=music_specifiers,
     t_3_voice=music_specifiers,
+    )
+
+### PITCHED PERCUSSION ###
+
+color = consort.Color.from_x11('Lavender').rotate_hue(-0.1).scale_luminance(-1)
+music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        bowed=demarest.abbreviations.make_text_spanner('bowed'),
+        ),
+    pitch_handler=consort.PitchClassPitchHandler(
+        pitch_specifier=demarest.abbreviations.pitch_specifier,
+        pitch_operation_specifier=demarest.abbreviations.pitch_operation_specifier,
+        forbid_repetitions=True,
+        ),
+    register_handler=consort.RegisterHandler(),
+    rhythm_maker=abjad.rhythmmakertools.NoteRhythmMaker(
+        tie_specifier=abjad.rhythmmakertools.TieSpecifier(
+            tie_across_divisions=[True, False, True],
+            ),
+        ),
+    )
+timespan_maker = abjad.new(
+    demarest.materials.sparse_timespan_maker,
+    playing_groupings=[1, 2, 2, 1, 1, 1, 2],
+    silence_talea__denominator=2,
+    fuse_groups=True,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_maker=abjad.new(
+        timespan_maker,
+        seed=2,
+        playing_groupings=[3, 4, 5],
+        silence_talea__denominator=8,
+        ),
+    t_1_percussion=music_specifier,
+    t_2_percussion=music_specifier,
+    t_3_percussion=music_specifier,
     )

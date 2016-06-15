@@ -1,9 +1,9 @@
-% 2016-06-13 22:42
+% 2016-06-14 23:05
 
 % package "abjad" @ 458a077 [josiah/demarest] (2016-06-11 12:39:40)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 0b049bf [master] (2016-06-13 22:28:31)
-% package "demarest" @ 377454d [master] (2016-06-13 22:26:40)
+% package "consort" @ 7d7d53a [master] (2016-06-14 22:08:58)
+% package "demarest" @ 88c2029 [master] (2016-06-14 22:33:31)
 
 \version "2.19.41"
 \language "english"
@@ -72,36 +72,68 @@
                 s1 * 5/8
             }
             {
-                \time 7/8
-                s1 * 7/8
+                \time 4/4
+                s1 * 1
             }
             {
                 \time 5/8
                 s1 * 5/4
+            }
+            {
+                \time 7/8
+                s1 * 7/8
             }
             {
                 \time 4/4
-                s1 * 3
+                s1 * 1
+            }
+            {
+                \time 5/8
+                s1 * 15/8
+            }
+            {
+                \time 4/4
+                s1 * 1
             }
             {
                 \time 5/8
                 s1 * 5/4
             }
             {
+                \time 3/4
+                s1 * 3/4
+            }
+            {
                 \time 7/8
                 s1 * 7/8
+            }
+            {
+                \time 4/4
+                s1 * 2
             }
             {
                 \time 5/8
                 s1 * 5/8
             }
             {
+                \time 6/8
+                s1 * 3/4
+            }
+            {
                 \time 7/8
                 s1 * 7/8
             }
             {
+                \time 4/4
+                s1 * 1
+            }
+            {
                 \time 5/8
-                s1 * 5/4
+                s1 * 5/8
+            }
+            {
+                \time 3/4
+                s1 * 3/4
             }
             {
                 \time 7/8
@@ -109,35 +141,23 @@
             }
             {
                 \time 5/8
-                s1 * 5/8
+                s1 * 5/4
             }
             {
-                \time 4/4
-                s1 * 2
-            }
-            {
-                \time 6/8
-                s1 * 3/4
+                \time 7/8
+                s1 * 7/8
             }
             {
                 \time 5/8
                 s1 * 5/8
-            }
-            {
-                \time 4/4
-                s1 * 2
-            }
-            {
-                \time 3/4
-                s1 * 3/4
-            }
-            {
-                \time 5/8
-                s1 * 25/8
             }
             {
                 \time 4/4
                 s1 * 1
+            }
+            {
+                \time 5/8
+                s1 * 5/8
             }
             {
                 \time 6/8
@@ -156,52 +176,40 @@
                 s1 * 3/2
             }
             {
+                \time 4/4
+                s1 * 1
+            }
+            {
                 \time 5/8
-                s1 * 5/8
+                s1 * 15/8
+            }
+            {
+                \time 6/8
+                s1 * 3/4
             }
             {
                 \time 7/8
                 s1 * 7/8
             }
             {
-                \time 6/8
-                s1 * 3/4
-            }
-            {
                 \time 5/8
                 s1 * 5/8
-            }
-            {
-                \time 6/8
-                s1 * 3/4
-            }
-            {
-                \time 5/8
-                s1 * 5/8
-            }
-            {
-                \time 6/8
-                s1 * 3/4
             }
             {
                 \time 4/4
-                s1 * 2
+                s1 * 1
+            }
+            {
+                \time 7/8
+                s1 * 7/8
             }
             {
                 \time 5/8
                 s1 * 5/4
             }
             {
-                \time 6/8
-                s1 * 3/4
-            }
-            {
-                \time 5/8
-                s1 * 5/8
-            }
-            {
-                \time 7/8
-                s1 * 7/8
+                \time 4/4
+                s1 * 2
             }
             {
                 \time 5/8
@@ -389,71 +397,49 @@
                             }
                             % [A 1 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 1 Vocalization Voice] Measure 179
                             {
                                 r4.
-                                r8
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
-                            }
-                            % [A 1 Vocalization Voice] Measure 180
-                            {
-                                c'8 \repeatTie
+                                c'4 \ppp \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
                                 <> \)
-                                <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                r4
-                                r4
-                            }
-                            % [A 1 Vocalization Voice] Measure 181
+                            % [A 1 Vocalization Voice] Measure 180
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 5/8
+                            }
+                            % [A 1 Vocalization Voice] Measure 181
+                            {
+                                R1 * 7/8
+                            }
+                            % [A 1 Vocalization Voice] Measure 182
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -498,8 +484,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
+                            }
+                            % [A 1 Vocalization Voice] Measure 184
+                            {
+                                c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -507,19 +497,20 @@
                         {
                             {
                                 r8
+                                r4
                             }
-                            % [A 1 Vocalization Voice] Measure 184
+                            % [A 1 Vocalization Voice] Measure 185
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 1 Vocalization Voice] Measure 186
                             {
-                                r8
+                                r2
                             }
                         }
                         {
@@ -543,32 +534,35 @@
                         }
                         {
                             {
-                                r2
+                                r4
                             }
                             % [A 1 Vocalization Voice] Measure 187
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
-                            }
-                            % [A 1 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [A 1 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [A 1 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [A 1 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
+                            % [A 1 Vocalization Voice] Measure 192
+                            {
+                                r2..
+                            }
                         }
                         {
-                            % [A 1 Vocalization Voice] Measure 193
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -604,90 +598,30 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                            }
+                            % [A 1 Vocalization Voice] Measure 193
+                            {
+                                c'4. \repeatTie
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 194
                             {
-                                c'2 \ppp \repeatTie
+                                c'4. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r2
+                                r4.
                             }
-                        }
-                        {
                             % [A 1 Vocalization Voice] Measure 195
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
-                                <> \)
-                                <> \stopTextSpan
+                                r8
                             }
                         }
                         {
-                            {
-                                r2
-                            }
-                            % [A 1 Vocalization Voice] Measure 196
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 3/4
-                            }
-                            % [A 1 Vocalization Voice] Measure 197
-                            {
-                                R1 * 5/8
-                            }
-                            % [A 1 Vocalization Voice] Measure 198
-                            {
-                                R1 * 2
-                            }
-                            % [A 1 Vocalization Voice] Measure 200
-                            {
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [A 1 Vocalization Voice] Measure 201
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -723,11 +657,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [A 1 Vocalization Voice] Measure 202
-                            {
+                                c'4 \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -735,25 +665,37 @@
                         }
                         {
                             {
-                                r8
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 203
+                            % [A 1 Vocalization Voice] Measure 196
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 1
+                            }
+                            % [A 1 Vocalization Voice] Measure 197
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 1 Vocalization Voice] Measure 198
+                            {
+                                R1 * 3/4
+                            }
+                            % [A 1 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 206
+                            % [A 1 Vocalization Voice] Measure 201
                             {
-                                r2
+                                r4
                             }
                         }
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -787,7 +729,81 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
+                            }
+                            % [A 1 Vocalization Voice] Measure 202
+                            {
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [A 1 Vocalization Voice] Measure 203
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                            }
+                            % [A 1 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 1 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [A 1 Vocalization Voice] Measure 206
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'4 \( \startTextSpan \<
+                                c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -875,18 +891,18 @@
                             }
                             % [A 1 Vocalization Voice] Measure 214
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [A 1 Vocalization Voice] Measure 215
                             {
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 1 Vocalization Voice] Measure 216
                             {
                                 r4.
-                                r4
+                                r8
                             }
                         }
                         {
@@ -943,22 +959,19 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
-                            }
-                            % [A 1 Vocalization Voice] Measure 219
-                            {
-                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 220
+                            % [A 1 Vocalization Voice] Measure 219
                             {
+                                r4.
+                                r4
                                 r8
                             }
                         }
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -971,12 +984,39 @@
                                                                 "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'8 \ppp \( \startTextSpan
+                            }
+                            % [A 1 Vocalization Voice] Measure 220
+                            {
+                                c'8 \repeatTie
                                 <> \)
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4.
+                                r4
+                                r4
                             }
                             % [A 1 Vocalization Voice] Measure 221
                             {
@@ -989,7 +1029,7 @@
                             }
                             % [A 1 Vocalization Voice] Measure 222
                             {
-                                r2
+                                r4.
                                 r8
                             }
                         }
@@ -1029,7 +1069,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 223
                             {
@@ -1093,33 +1134,32 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
-                                c'4. \repeatTie
+                                c'2. \( \startTextSpan \<
                             }
                             % [A 1 Vocalization Voice] Measure 226
                             {
-                                c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                                r2
+                            }
                             % [A 1 Vocalization Voice] Measure 227
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 228
-                            {
-                                r4.
-                            }
                         }
                         {
+                            % [A 1 Vocalization Voice] Measure 228
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
@@ -1139,12 +1179,9 @@
                             }
                         }
                         {
-                            % [A 1 Vocalization Voice] Measure 229
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
+                                r8
+                                r4
                                 \bar "|."
                             }
                         }
@@ -1561,7 +1598,6 @@
                         }
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -1603,23 +1639,19 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
+                                g'8 :64 \p \( \startTextSpan
                             }
                             % [A 1 Percussion Voice] Measure 178
                             {
-                                g'2.. :32 \repeatTie
-                            }
-                            % [A 1 Percussion Voice] Measure 179
-                            {
-                                g'8 :64 \p \repeatTie
+                                g'1 :32 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [A 1 Percussion Voice] Measure 179
                             {
-                                r4
-                                r8
+                                r4.
                             }
                         }
                         {
@@ -1631,14 +1663,11 @@
                         }
                         {
                             {
-                                r16
-                            }
-                            % [A 1 Percussion Voice] Measure 180
-                            {
-                                r8
+                                r8.
                             }
                         }
                         {
+                            % [A 1 Percussion Voice] Measure 180
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1674,7 +1703,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \startTextSpan \<
+                                g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -1683,7 +1712,7 @@
                         {
                             % [A 1 Percussion Voice] Measure 181
                             {
-                                r4.
+                                r4
                             }
                         }
                         {
@@ -1758,8 +1787,12 @@
                         }
                         {
                             {
-                                r8.
-                                r4.
+                                r16
+                                r4
+                            }
+                            % [A 1 Percussion Voice] Measure 184
+                            {
+                                r4
                             }
                         }
                         {
@@ -1807,23 +1840,20 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 184
-                            {
-                                g'4. :32 \repeatTie
                                 g'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 185
                             {
+                                g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [A 1 Percussion Voice] Measure 186
                             {
-                                r8
-                                r8
+                                r4
                             }
                         }
                         {
@@ -1846,7 +1876,6 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 186
                             {
                                 r8
                             }
@@ -1860,10 +1889,11 @@
                         }
                         {
                             {
-                                r8.
+                                r4..
                             }
                         }
                         {
+                            % [A 1 Percussion Voice] Measure 187
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1899,22 +1929,22 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 187
-                            {
-                                g4. \repeatTie
+                                g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 188
                             {
-                                g2.. \ppp \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 189
+                            {
+                                g2 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 189
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1958,20 +1988,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                g'4 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 190
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                g'2.. :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
                             }
                         }
                         {
@@ -2011,7 +2034,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \( \startTextSpan \<
+                                g1 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 192
                             {
@@ -2021,7 +2044,6 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 193
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \p \(
@@ -2031,56 +2053,26 @@
                         {
                             {
                                 r16
-                                r4
-                                r4
+                            }
+                            % [A 1 Percussion Voice] Measure 193
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
                             }
                             % [A 1 Percussion Voice] Measure 194
                             {
-                                r2
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
                             % [A 1 Percussion Voice] Measure 195
+                            {
+                                r8
+                            }
+                        }
+                        {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -2089,7 +2081,8 @@
                         }
                         {
                             {
-                                r4..
+                                r8.
+                                r4
                             }
                         }
                         {
@@ -2136,11 +2129,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2 :32 \( \startTextSpan \<
+                                g'4 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 196
                             {
-                                g'4. :32 \p \repeatTie
+                                g'2 :32 \repeatTie
+                                g'8 :64 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -2215,21 +2209,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g1 \( \startTextSpan \<
+                                g2. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 199
                             {
-                                g1 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 200
                             {
-                                g2. \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 1 Percussion Voice] Measure 201
+                            {
+                                r4
+                            }
+                        }
+                        {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \mf \(
@@ -2239,7 +2238,6 @@
                         {
                             {
                                 r16
-                                r4
                                 r4
                             }
                             % [A 1 Percussion Voice] Measure 202
@@ -2289,8 +2287,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 204
                             {
@@ -2299,15 +2296,15 @@
                             }
                             % [A 1 Percussion Voice] Measure 205
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
-                                g4 \repeatTie
-                            }
-                            % [A 1 Percussion Voice] Measure 206
-                            {
-                                g2 \repeatTie
+                                g1 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [A 1 Percussion Voice] Measure 206
+                            {
+                                r8
                             }
                         }
                         {
@@ -2319,7 +2316,8 @@
                         }
                         {
                             {
-                                r4..
+                                r8.
+                                r4
                             }
                         }
                         {
@@ -2485,17 +2483,17 @@
                             % [A 1 Percussion Voice] Measure 214
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie \>
                             }
                             % [A 1 Percussion Voice] Measure 215
                             {
-                                g2.. \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 216
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -2563,15 +2561,10 @@
                             % [A 1 Percussion Voice] Measure 219
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \repeatTie
+                                g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [A 1 Percussion Voice] Measure 220
-                            {
-                                r8
                             }
                         }
                         {
@@ -2583,12 +2576,14 @@
                         }
                         {
                             {
-                                r8.
-                                r4.
+                                r16
+                            }
+                            % [A 1 Percussion Voice] Measure 220
+                            {
+                                r8
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 221
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2624,11 +2619,16 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g1 \( \startTextSpan \<
+                                g4 \( \startTextSpan \<
+                                g4 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 221
+                            {
+                                g1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 222
                             {
-                                g2 \repeatTie
+                                g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -2714,22 +2714,17 @@
                         }
                         {
                             {
-                                r16
-                                r4.
+                                r8.
+                                r2
                             }
                             % [A 1 Percussion Voice] Measure 226
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r4.
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 227
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -2763,18 +2758,19 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \ppp \( \startTextSpan
+                                g8 \( \startTextSpan \<
+                                g2 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 227
+                            {
+                                g4. \repeatTie
+                                g4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 1 Percussion Voice] Measure 228
-                            {
-                                r4.
-                            }
-                        }
-                        {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \p \(
@@ -2783,14 +2779,9 @@
                         }
                         {
                             {
-                                r8.
-                            }
-                            % [A 1 Percussion Voice] Measure 229
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
+                                r16
+                                r4
+                                r4
                                 \bar "|."
                             }
                         }
@@ -3024,14 +3015,17 @@
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [A 2 Vocalization Voice] Measure 179
                             {
                                 r4.
-                                r8
                             }
                         }
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -3065,17 +3059,18 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                             }
                             % [A 2 Vocalization Voice] Measure 180
                             {
-                                c'4. \repeatTie
+                                c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
+                                r8
                                 r4
                             }
                             % [A 2 Vocalization Voice] Measure 181
@@ -3083,7 +3078,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -3133,7 +3128,12 @@
                             }
                             % [A 2 Vocalization Voice] Measure 183
                             {
-                                c'2. \ppp \repeatTie
+                                c'4. \repeatTie
+                                c'4 \repeatTie
+                            }
+                            % [A 2 Vocalization Voice] Measure 184
+                            {
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -3141,13 +3141,11 @@
                         {
                             {
                                 r4
-                            }
-                            % [A 2 Vocalization Voice] Measure 184
-                            {
                                 r4
                             }
                         }
                         {
+                            % [A 2 Vocalization Voice] Measure 185
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -3183,11 +3181,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [A 2 Vocalization Voice] Measure 185
-                            {
+                                c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -3195,115 +3189,34 @@
                         }
                         {
                             {
-                                r4
-                                r4
+                                r8
                             }
                             % [A 2 Vocalization Voice] Measure 186
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [A 2 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [A 2 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [A 2 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [A 2 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [A 2 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 2 Vocalization Voice] Measure 193
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [A 2 Vocalization Voice] Measure 194
-                            {
-                                c'8 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2..
-                            }
-                            % [A 2 Vocalization Voice] Measure 195
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                            }
-                            % [A 2 Vocalization Voice] Measure 196
-                            {
-                                R1 * 3/4
-                            }
-                            % [A 2 Vocalization Voice] Measure 197
-                            {
-                                R1 * 5/8
-                            }
-                            % [A 2 Vocalization Voice] Measure 198
-                            {
-                                R1 * 2
-                            }
-                            % [A 2 Vocalization Voice] Measure 200
-                            {
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [A 2 Vocalization Voice] Measure 201
                             {
                                 r8
                             }
@@ -3351,16 +3264,108 @@
                             }
                         }
                         {
-                            % [A 2 Vocalization Voice] Measure 202
+                            % [A 2 Vocalization Voice] Measure 194
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/2
+                                R1 * 3/4
+                            }
+                            % [A 2 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
+                            }
+                            % [A 2 Vocalization Voice] Measure 196
+                            {
+                                R1 * 1
+                            }
+                            % [A 2 Vocalization Voice] Measure 197
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 2 Vocalization Voice] Measure 198
+                            {
+                                R1 * 3/4
+                            }
+                            % [A 2 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [A 2 Vocalization Voice] Measure 201
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'4 \( \startTextSpan \<
+                            }
+                            % [A 2 Vocalization Voice] Measure 202
+                            {
+                                c'4 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                            % [A 2 Vocalization Voice] Measure 203
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                            }
+                            % [A 2 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 2 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [A 2 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [A 2 Vocalization Voice] Measure 207
                             {
@@ -3437,17 +3442,15 @@
                             }
                             % [A 2 Vocalization Voice] Measure 214
                             {
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 215
-                            {
-                                r4.
-                            }
                         }
                         {
+                            % [A 2 Vocalization Voice] Measure 215
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -3481,22 +3484,22 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
+                                c'4. \( \startTextSpan \<
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [A 2 Vocalization Voice] Measure 216
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
-                            }
-                            % [A 2 Vocalization Voice] Measure 217
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
@@ -3570,26 +3573,26 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [A 2 Vocalization Voice] Measure 220
-                            {
-                                c'4 \ppp \repeatTie
+                                c'2 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                r8
-                                r4.
-                            }
-                            % [A 2 Vocalization Voice] Measure 221
+                            % [A 2 Vocalization Voice] Measure 220
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 5/8
+                            }
+                            % [A 2 Vocalization Voice] Measure 221
+                            {
+                                R1 * 1
+                            }
+                            % [A 2 Vocalization Voice] Measure 222
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -3654,17 +3657,9 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
-                            }
-                            % [A 2 Vocalization Voice] Measure 226
-                            {
-                                R1 * 5/8
+                                R1 * 2
                             }
                             % [A 2 Vocalization Voice] Measure 227
-                            {
-                                R1 * 7/8
-                            }
-                            % [A 2 Vocalization Voice] Measure 228
                             {
                                 R1 * 5/4
                                 \bar "|."
@@ -4166,16 +4161,126 @@
                             }
                             % [A 2 Percussion Voice] Measure 178
                             {
+                                r2..
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'8 :64 \p \( \startTextSpan
+                            }
+                            % [A 2 Percussion Voice] Measure 179
+                            {
+                                g'4. :32 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \ppp \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                            }
+                            % [A 2 Percussion Voice] Measure 180
+                            {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 179
+                            % [A 2 Percussion Voice] Measure 181
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4. \( \startTextSpan \<
+                                g8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4219,7 +4324,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \( \startTextSpan \<
+                                g'8 :64 \( \startTextSpan \<
+                                g'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 182
+                            {
+                                g'2 :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -4228,15 +4338,16 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \ppp \(
+                                c'16 -\staccato \mf \(
                                 <> \)
                             }
                         }
                         {
                             {
                                 r16
+                                r4
                             }
-                            % [A 2 Percussion Voice] Measure 180
+                            % [A 2 Percussion Voice] Measure 183
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4245,9 +4356,70 @@
                                 \stopStaff
                                 \startStaff
                             }
+                            % [A 2 Percussion Voice] Measure 184
+                            {
+                                r8
+                            }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 181
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4 \( \startTextSpan \<
+                                g4 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [A 2 Percussion Voice] Measure 185
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [A 2 Percussion Voice] Measure 186
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4335,152 +4507,6 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 182
-                            {
-                                g'2 :32 \repeatTie
-                                g'8 :64 \p \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \mf \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            % [A 2 Percussion Voice] Measure 183
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [A 2 Percussion Voice] Measure 184
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            % [A 2 Percussion Voice] Measure 185
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \startTextSpan \<
-                                g4 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [A 2 Percussion Voice] Measure 186
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
                             % [A 2 Percussion Voice] Measure 187
                             {
                                 g'4. :32 \repeatTie
@@ -4488,121 +4514,19 @@
                             }
                             % [A 2 Percussion Voice] Measure 188
                             {
-                                g'8 :64 \p \repeatTie
+                                g'4. :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \startTextSpan \<
-                                g2 \repeatTie
+                                r4
                             }
+                        }
+                        {
                             % [A 2 Percussion Voice] Measure 189
                             {
-                                g4. \repeatTie
-                                g4 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [A 2 Percussion Voice] Measure 190
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
-                            % [A 2 Percussion Voice] Measure 191
-                            {
-                                g'2.. :32 \p \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [A 2 Percussion Voice] Measure 192
-                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -4637,7 +4561,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
+                                g2. \( \startTextSpan \<
+                            }
+                            % [A 2 Percussion Voice] Measure 190
+                            {
+                                g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -4690,32 +4618,57 @@
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
-                            % [A 2 Percussion Voice] Measure 193
+                            % [A 2 Percussion Voice] Measure 191
                             {
-                                g'4 :32 \p \repeatTie
+                                g'1 :32 \p \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [A 2 Percussion Voice] Measure 192
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g2 \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \ppp \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            % [A 2 Percussion Voice] Measure 194
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -4757,11 +4710,50 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
+                                g'2 :32 \( \startTextSpan \<
+                            }
+                            % [A 2 Percussion Voice] Measure 193
+                            {
+                                g'8 :64 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \ppp \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r4
+                            }
+                        }
+                        {
+                            % [A 2 Percussion Voice] Measure 194
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'4 :32 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                <> \)
                             }
                         }
                         {
@@ -4801,16 +4793,16 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \( \startTextSpan \<
-                                g2 \repeatTie
+                                g4. \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 195
                             {
-                                g1 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 196
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2. \ppp \repeatTie \>
+                                g1 \ppp \repeatTie \>
                             }
                             % [A 2 Percussion Voice] Measure 197
                             {
@@ -4870,6 +4862,12 @@
                         }
                         {
                             {
+                                r4.
+                            }
+                        }
+                        {
+                            % [A 2 Percussion Voice] Measure 199
+                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -4904,16 +4902,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g2 \repeatTie
-                            }
-                            % [A 2 Percussion Voice] Measure 199
-                            {
-                                g1 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 200
                             {
-                                g2. \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -4921,7 +4914,7 @@
                         {
                             % [A 2 Percussion Voice] Measure 201
                             {
-                                r8
+                                r4.
                             }
                         }
                         {
@@ -4934,11 +4927,19 @@
                         {
                             {
                                 r8.
-                                r4
+                            }
+                            % [A 2 Percussion Voice] Measure 202
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 202
+                            % [A 2 Percussion Voice] Measure 203
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4974,36 +4975,30 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
-                            }
-                            % [A 2 Percussion Voice] Measure 203
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 204
                             {
-                                g4. \ppp \repeatTie
+                                g4. \repeatTie
                                 g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 205
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 206
                             {
-                                g1 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 207
                             {
-                                g2. \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g2. \repeatTie \>
                             }
                             % [A 2 Percussion Voice] Measure 208
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g2.. \repeatTie \>
+                                g2.. \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 209
                             {
@@ -5104,19 +5099,13 @@
                             }
                             % [A 2 Percussion Voice] Measure 214
                             {
-                                g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g1 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 2 Percussion Voice] Measure 215
-                            {
-                                r4.
-                            }
-                        }
-                        {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -5125,7 +5114,8 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                                 r4
                             }
                         }
@@ -5166,7 +5156,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g4. \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 217
                             {
@@ -5209,14 +5200,11 @@
                         {
                             {
                                 r8.
-                                r4
-                            }
-                            % [A 2 Percussion Voice] Measure 220
-                            {
-                                r4
+                                r2
                             }
                         }
                         {
+                            % [A 2 Percussion Voice] Measure 220
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -5252,8 +5240,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g4. \repeatTie
+                                g4. \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 221
                             {
@@ -5261,7 +5249,8 @@
                             }
                             % [A 2 Percussion Voice] Measure 222
                             {
-                                g2. \ppp \repeatTie
+                                g4. \repeatTie
+                                g4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -5375,33 +5364,29 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g1 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 226
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 228
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 229
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8 \!
+                                r8 \!
                                 \bar "|."
                             }
                         }
@@ -5585,8 +5570,8 @@
                             }
                             % [A 3 Vocalization Voice] Measure 178
                             {
-                                r4.
-                                r4
+                                r2
+                                r8
                             }
                         }
                         {
@@ -5625,17 +5610,20 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'4. \( \startTextSpan \<
                             }
                             % [A 3 Vocalization Voice] Measure 179
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [A 3 Vocalization Voice] Measure 180
                             {
                                 \stopStaff
@@ -5645,7 +5633,7 @@
                             }
                             % [A 3 Vocalization Voice] Measure 181
                             {
-                                R1 * 1
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -5700,8 +5688,7 @@
                         }
                         {
                             {
-                                r8
-                                r2
+                                r4
                             }
                             % [A 3 Vocalization Voice] Measure 184
                             {
@@ -5712,29 +5699,29 @@
                             }
                             % [A 3 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [A 3 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [A 3 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [A 3 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [A 3 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [A 3 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 3 Vocalization Voice] Measure 193
                             {
-                                r4.
+                                r4
                             }
                         }
                         {
@@ -5773,29 +5760,31 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [A 3 Vocalization Voice] Measure 194
                             {
-                                c'4 \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r2.
+                                r4
+                                r4.
                             }
                             % [A 3 Vocalization Voice] Measure 195
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                             }
                             % [A 3 Vocalization Voice] Measure 196
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [A 3 Vocalization Voice] Measure 197
                             {
@@ -5803,20 +5792,21 @@
                             }
                             % [A 3 Vocalization Voice] Measure 198
                             {
-                                R1 * 2
-                            }
-                            % [A 3 Vocalization Voice] Measure 200
-                            {
                                 R1 * 3/4
-                                \stopStaff
-                                \startStaff
+                            }
+                            % [A 3 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
                             }
                             % [A 3 Vocalization Voice] Measure 201
                             {
-                                r4.
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
+                            % [A 3 Vocalization Voice] Measure 202
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -5852,11 +5842,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
-                            }
-                            % [A 3 Vocalization Voice] Measure 202
-                            {
-                                c'4 \ppp \repeatTie
+                                c'4. \( \startTextSpan \<
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -5864,18 +5851,25 @@
                         {
                             {
                                 r8
-                                r4
                             }
                             % [A 3 Vocalization Voice] Measure 203
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [A 3 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 3 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [A 3 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [A 3 Vocalization Voice] Measure 207
                             {
@@ -5952,17 +5946,17 @@
                             }
                             % [A 3 Vocalization Voice] Measure 214
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [A 3 Vocalization Voice] Measure 215
                             {
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 3 Vocalization Voice] Measure 216
                             {
-                                r4.
+                                r4
                             }
                         }
                         {
@@ -6001,7 +5995,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [A 3 Vocalization Voice] Measure 217
                             {
@@ -6024,17 +6019,15 @@
                             }
                             % [A 3 Vocalization Voice] Measure 219
                             {
-                                R1 * 5/8
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 220
-                            {
-                                r4
-                            }
                         }
                         {
+                            % [A 3 Vocalization Voice] Measure 220
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6068,19 +6061,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
-                                c'4. \repeatTie
+                                c'4. \( \startTextSpan \<
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [A 3 Vocalization Voice] Measure 221
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 1
+                            }
+                            % [A 3 Vocalization Voice] Measure 222
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -6162,22 +6162,21 @@
                             }
                         }
                         {
+                            {
+                                r4
+                            }
                             % [A 3 Vocalization Voice] Measure 226
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 227
-                            {
-                                r4.
-                                r4
-                            }
                         }
                         {
+                            % [A 3 Vocalization Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -6213,23 +6212,20 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'4. \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [A 3 Vocalization Voice] Measure 228
                             {
-                                c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 229
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
+                                r8
+                                r4
                                 \bar "|."
                             }
                         }
@@ -6574,8 +6570,8 @@
                             }
                             % [A 3 Percussion Voice] Measure 178
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -6589,20 +6585,16 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                             % [A 3 Percussion Voice] Measure 179
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r4.
+                                r8
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 180
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -6646,17 +6638,18 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                g'8 :64 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 181
+                            % [A 3 Percussion Voice] Measure 180
                             {
-                                g'8 :64 \p \repeatTie
+                                g'4. :32 \repeatTie
+                                g'4 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [A 3 Percussion Voice] Measure 181
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -6761,8 +6754,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                g'4 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 184
                             {
@@ -6771,12 +6763,14 @@
                             }
                             % [A 3 Percussion Voice] Measure 185
                             {
+                                g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [A 3 Percussion Voice] Measure 186
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
@@ -6820,12 +6814,6 @@
                         }
                         {
                             {
-                                r8
-                            }
-                        }
-                        {
-                            % [A 3 Percussion Voice] Measure 186
-                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -6860,9 +6848,14 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \( \startTextSpan \<
+                                g2. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 187
+                            {
+                                g4. \repeatTie
+                                g4 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 188
                             {
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
@@ -6871,14 +6864,8 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 188
+                            % [A 3 Percussion Voice] Measure 189
                             {
-                                r4.
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6920,25 +6907,14 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [A 3 Percussion Voice] Measure 189
-                            {
-                                g'4 :32 \p \repeatTie
+                                g'2. :32 \p \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                r8
-                                r4
-                            }
-                        }
-                        {
                             % [A 3 Percussion Voice] Measure 190
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6972,14 +6948,18 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g2.. \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 3 Percussion Voice] Measure 191
+                            {
+                                r8
+                            }
+                        }
+                        {
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -7067,8 +7047,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \ppp \( \startTextSpan
-                                g2 \repeatTie
+                                g2. \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -7076,7 +7055,7 @@
                         {
                             % [A 3 Percussion Voice] Measure 193
                             {
-                                r4.
+                                r4
                             }
                         }
                         {
@@ -7088,11 +7067,12 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                             % [A 3 Percussion Voice] Measure 194
                             {
-                                r4
+                                r8
                             }
                         }
                         {
@@ -7139,23 +7119,23 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2. :32 \( \startTextSpan \<
+                                g'4 :32 \( \startTextSpan \<
+                                g'4. :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 195
                             {
-                                g'1 :32 \repeatTie
+                                g'2.. :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 196
                             {
-                                g'4 :32 \p \repeatTie
+                                g'2 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
-                                r4
+                                r4.
                             }
                         }
                         {
@@ -7243,27 +7223,27 @@
                             }
                             % [A 3 Percussion Voice] Measure 198
                             {
-                                g1 \repeatTie
+                                g2. \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 199
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g1 \ppp \repeatTie \>
+                                g2.. \ppp \repeatTie \>
                             }
                             % [A 3 Percussion Voice] Measure 200
                             {
-                                g2. \repeatTie
+                                g2.. \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 201
+                            {
+                                g4. \repeatTie
+                                g4 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 201
-                            {
-                                r4. \!
-                            }
-                        }
-                        {
+                            % [A 3 Percussion Voice] Measure 202
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -7272,16 +7252,9 @@
                         }
                         {
                             {
-                                r8.
-                            }
-                            % [A 3 Percussion Voice] Measure 202
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r16
+                                r4
+                                r4
                             }
                         }
                         {
@@ -7321,8 +7294,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 204
                             {
@@ -7331,12 +7303,12 @@
                             }
                             % [A 3 Percussion Voice] Measure 205
                             {
-                                g4. \ppp \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 206
                             {
-                                g1 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 207
                             {
@@ -7449,12 +7421,12 @@
                             % [A 3 Percussion Voice] Measure 214
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie \>
                             }
                             % [A 3 Percussion Voice] Measure 215
                             {
-                                g2.. \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -7462,7 +7434,7 @@
                         {
                             % [A 3 Percussion Voice] Measure 216
                             {
-                                r4. \!
+                                r4 \!
                             }
                         }
                         {
@@ -7528,19 +7500,13 @@
                             }
                             % [A 3 Percussion Voice] Measure 219
                             {
-                                g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 3 Percussion Voice] Measure 220
-                            {
-                                r4
-                            }
-                        }
-                        {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -7550,7 +7516,8 @@
                         {
                             {
                                 r16
-                                r4.
+                                r4
+                                r4
                             }
                         }
                         {
@@ -7594,7 +7561,9 @@
                             }
                             % [A 3 Percussion Voice] Measure 222
                             {
-                                g2.. \ppp \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
+                                g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -7686,15 +7655,13 @@
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4.
+                                r8.
+                                r2.
                             }
                         }
                         {
                             % [A 3 Percussion Voice] Measure 226
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -7728,18 +7695,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
-                            }
-                            % [A 3 Percussion Voice] Measure 227
-                            {
-                                g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g1 \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [A 3 Percussion Voice] Measure 227
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -7748,14 +7710,16 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
+                                r4
                             }
                             % [A 3 Percussion Voice] Measure 228
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                                 \bar "|."
                             }
                         }
@@ -7941,7 +7905,7 @@
                             }
                             % [A 4 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [A 4 Vocalization Voice] Measure 179
                             {
@@ -7949,7 +7913,11 @@
                             }
                             % [A 4 Vocalization Voice] Measure 181
                             {
-                                R1 * 2
+                                R1 * 7/8
+                            }
+                            % [A 4 Vocalization Voice] Measure 182
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -7991,9 +7959,10 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \( \startTextSpan \<
-                                c'8 \repeatTie
+                                c'4. \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
+                            % [A 4 Vocalization Voice] Measure 184
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
@@ -8001,42 +7970,45 @@
                             }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 184
+                            {
+                                r4
+                            }
+                            % [A 4 Vocalization Voice] Measure 185
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [A 4 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [A 4 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [A 4 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [A 4 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [A 4 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [A 4 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
-                            }
-                            % [A 4 Vocalization Voice] Measure 193
-                            {
-                                R1 * 5/8
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
+                            % [A 4 Vocalization Voice] Measure 193
+                            {
+                                r4.
+                                r8
+                            }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 194
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -8071,25 +8043,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2.. \ppp \( \startTextSpan
+                                c'8 \ppp \( \startTextSpan
+                            }
+                            % [A 4 Vocalization Voice] Measure 194
+                            {
+                                c'2. \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                r8
-                            }
                             % [A 4 Vocalization Voice] Measure 195
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                             }
                             % [A 4 Vocalization Voice] Measure 196
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [A 4 Vocalization Voice] Measure 197
                             {
@@ -8097,13 +8070,16 @@
                             }
                             % [A 4 Vocalization Voice] Measure 198
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
+                            % [A 4 Vocalization Voice] Measure 199
+                            {
+                                r4
+                            }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 199
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -8139,10 +8115,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'1 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
                             }
                             % [A 4 Vocalization Voice] Measure 200
                             {
+                                c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -8150,10 +8128,12 @@
                         }
                         {
                             {
-                                r4.
+                                r8
+                                r4
                             }
                         }
                         {
+                            % [A 4 Vocalization Voice] Measure 201
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -8189,27 +8169,39 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'4. \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 201
+                            % [A 4 Vocalization Voice] Measure 202
                             {
-                                c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 202
+                            {
+                                r8
+                                r4
+                            }
+                            % [A 4 Vocalization Voice] Measure 203
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/2
+                                R1 * 7/8
+                            }
+                            % [A 4 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 4 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [A 4 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [A 4 Vocalization Voice] Measure 207
                             {
@@ -8284,17 +8276,18 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/2
-                            }
-                            % [A 4 Vocalization Voice] Measure 214
-                            {
-                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
+                            % [A 4 Vocalization Voice] Measure 214
+                            {
+                                r2
+                                r8
+                            }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 215
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -8328,22 +8321,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2.. \ppp \( \startTextSpan
+                                c'4. \( \startTextSpan \<
+                            }
+                            % [A 4 Vocalization Voice] Measure 215
+                            {
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [A 4 Vocalization Voice] Measure 216
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
-                            }
-                            % [A 4 Vocalization Voice] Measure 217
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
@@ -8423,16 +8420,23 @@
                             }
                         }
                         {
+                            {
+                                r4
+                            }
                             % [A 4 Vocalization Voice] Measure 220
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                             }
                             % [A 4 Vocalization Voice] Measure 221
                             {
-                                R1 * 2
+                                R1 * 1
+                            }
+                            % [A 4 Vocalization Voice] Measure 222
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -8494,17 +8498,9 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
-                            }
-                            % [A 4 Vocalization Voice] Measure 226
-                            {
-                                R1 * 5/8
+                                R1 * 2
                             }
                             % [A 4 Vocalization Voice] Measure 227
-                            {
-                                R1 * 7/8
-                            }
-                            % [A 4 Vocalization Voice] Measure 228
                             {
                                 R1 * 5/4
                                 \bar "|."
@@ -8986,15 +8982,19 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                g'2. :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 179
                             {
                                 g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
+                                g'8 :64 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                         }
                         {
@@ -9039,7 +9039,7 @@
                             }
                             % [A 4 Percussion Voice] Measure 181
                             {
-                                g1 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 182
                             {
@@ -9058,11 +9058,13 @@
                         }
                         {
                             {
-                                r8.
-                                r4.
+                                r16
+                                r4
+                                r4
                             }
                         }
                         {
+                            % [A 4 Percussion Voice] Measure 184
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \( [
@@ -9074,24 +9076,60 @@
                         {
                             {
                                 r4
+                                r4
                             }
-                            % [A 4 Percussion Voice] Measure 184
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
+                        }
+                        {
                             % [A 4 Percussion Voice] Measure 185
                             {
-                                r4.
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4. \( \startTextSpan \<
+                                g4 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [A 4 Percussion Voice] Measure 186
+                            {
+                                r8
                             }
                         }
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -9125,11 +9163,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( \startTextSpan \>
-                            }
-                            % [A 4 Percussion Voice] Measure 186
-                            {
-                                g'8 :64 \repeatTie
+                                g'4. :32 -\accent \fp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -9170,8 +9204,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \! \startTextSpan \<
-                                g2 \repeatTie
+                                g2 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 187
                             {
@@ -9181,18 +9214,23 @@
                             % [A 4 Percussion Voice] Measure 188
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 189
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2. \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 4 Percussion Voice] Measure 190
+                            {
+                                r4. \!
+                            }
+                        }
+                        {
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -9236,12 +9274,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \( \! \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                g'2 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 191
                             {
-                                g'2.. :32 \repeatTie
+                                g'1 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 192
                             {
@@ -9286,19 +9323,17 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g2 \repeatTie
+                                g2. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 193
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 194
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \mf \(
@@ -9307,12 +9342,20 @@
                         }
                         {
                             {
-                                r8.
-                                r2
-                                r8
+                                r16
+                            }
+                            % [A 4 Percussion Voice] Measure 194
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
+                            % [A 4 Percussion Voice] Measure 195
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -9355,18 +9398,9 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
-                            }
-                            % [A 4 Percussion Voice] Measure 195
-                            {
-                                g'2. :32 \repeatTie
+                                g'2.. :32 \p \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
                             }
                         }
                         {
@@ -9406,7 +9440,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g1 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 197
                             {
@@ -9502,12 +9536,12 @@
                             }
                         }
                         {
+                            % [A 4 Percussion Voice] Measure 199
                             {
                                 r4
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 199
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \mf \( [
@@ -9521,15 +9555,21 @@
                         }
                         {
                             {
-                                r16
-                                r2.
+                                r8.
+                                r4
                             }
                             % [A 4 Percussion Voice] Measure 200
                             {
-                                r2
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
+                            % [A 4 Percussion Voice] Measure 201
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \p \(
@@ -9538,9 +9578,11 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
+                                r4
                             }
-                            % [A 4 Percussion Voice] Measure 201
+                            % [A 4 Percussion Voice] Measure 202
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -9551,7 +9593,7 @@
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 202
+                            % [A 4 Percussion Voice] Measure 203
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -9587,32 +9629,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
-                            }
-                            % [A 4 Percussion Voice] Measure 203
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 204
                             {
-                                g4. \ppp \repeatTie
+                                g4. \repeatTie
                                 g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 205
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 206
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g1 \repeatTie \>
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 207
                             {
-                                g2. \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g2. \repeatTie \>
                             }
                             % [A 4 Percussion Voice] Measure 208
                             {
@@ -9715,14 +9751,13 @@
                             }
                             % [A 4 Percussion Voice] Measure 214
                             {
-                                g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g2 \repeatTie
+                                g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 215
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \mf \(
@@ -9733,7 +9768,15 @@
                             {
                                 r16
                                 r4
-                                r2
+                            }
+                            % [A 4 Percussion Voice] Measure 215
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -9773,7 +9816,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g4. \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 217
                             {
@@ -9816,6 +9860,7 @@
                         {
                             {
                                 r8.
+                                r4
                             }
                         }
                         {
@@ -9855,7 +9900,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g4. \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 221
                             {
@@ -9863,7 +9909,7 @@
                             }
                             % [A 4 Percussion Voice] Measure 222
                             {
-                                g1 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -9949,33 +9995,29 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g1 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 226
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 228
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 229
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8 \!
+                                r8 \!
                                 \bar "|."
                             }
                         }
@@ -10060,7 +10102,7 @@
                             }
                             % [T 1 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [T 1 Vocalization Voice] Measure 179
                             {
@@ -10068,31 +10110,35 @@
                             }
                             % [T 1 Vocalization Voice] Measure 181
                             {
-                                R1 * 3
+                                R1 * 7/8
                             }
-                            % [T 1 Vocalization Voice] Measure 184
+                            % [T 1 Vocalization Voice] Measure 182
                             {
-                                R1 * 5/4
+                                R1 * 1
+                            }
+                            % [T 1 Vocalization Voice] Measure 183
+                            {
+                                R1 * 15/8
                             }
                             % [T 1 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [T 1 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [T 1 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [T 1 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [T 1 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [T 1 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                             }
                             % [T 1 Vocalization Voice] Measure 193
                             {
@@ -10100,11 +10146,15 @@
                             }
                             % [T 1 Vocalization Voice] Measure 194
                             {
-                                R1 * 2
+                                R1 * 3/4
+                            }
+                            % [T 1 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [T 1 Vocalization Voice] Measure 196
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 1 Vocalization Voice] Measure 197
                             {
@@ -10112,19 +10162,31 @@
                             }
                             % [T 1 Vocalization Voice] Measure 198
                             {
-                                R1 * 2
-                            }
-                            % [T 1 Vocalization Voice] Measure 200
-                            {
                                 R1 * 3/4
+                            }
+                            % [T 1 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
                             }
                             % [T 1 Vocalization Voice] Measure 201
                             {
-                                R1 * 25/8
+                                R1 * 5/4
+                            }
+                            % [T 1 Vocalization Voice] Measure 203
+                            {
+                                R1 * 7/8
+                            }
+                            % [T 1 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [T 1 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [T 1 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [T 1 Vocalization Voice] Measure 207
                             {
@@ -10249,16 +10311,7 @@
                         {
                             % [T 1 Vocalization Voice] Measure 214
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 1 Vocalization Voice] Measure 215
-                            {
-                                r8
+                                r2.
                             }
                         }
                         {
@@ -10298,18 +10351,23 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
-                                c'2 \repeatTie
+                            }
+                            % [T 1 Vocalization Voice] Measure 215
+                            {
+                                c'4. \repeatTie
+                                c'4 \repeatTie
                             }
                             % [T 1 Vocalization Voice] Measure 216
                             {
-                                c'4. \ppp \repeatTie
+                                c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
+                                r8
+                                r8
                             }
                         }
                         {
@@ -10364,9 +10422,6 @@
                             {
                                 c'4. \repeatTie
                                 c'4 \repeatTie
-                            }
-                            % [T 1 Vocalization Voice] Measure 220
-                            {
                                 c'8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -10374,12 +10429,21 @@
                         }
                         {
                             {
-                                r4 \!
-                                r4.
+                                r8 \!
+                            }
+                            % [T 1 Vocalization Voice] Measure 220
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 1 Vocalization Voice] Measure 221
                             {
-                                r2.
+                                r2
+                                r8
                             }
                         }
                         {
@@ -10418,11 +10482,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'4. \( \startTextSpan \<
                             }
                             % [T 1 Vocalization Voice] Measure 222
                             {
-                                c'2 \ppp \repeatTie
+                                c'4. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -10481,30 +10545,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
-                                c'4. \repeatTie
+                                c'2. \( \startTextSpan \<
                             }
                             % [T 1 Vocalization Voice] Measure 226
                             {
-                                c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                                r2
+                            }
                             % [T 1 Vocalization Voice] Measure 227
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 7/8
-                                \stopStaff
-                                \startStaff
+                                r4
                             }
                         }
                         {
-                            % [T 1 Vocalization Voice] Measure 228
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -10540,7 +10600,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
+                            }
+                            % [T 1 Vocalization Voice] Measure 228
+                            {
                                 c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -10548,14 +10612,8 @@
                         }
                         {
                             {
-                                r8
-                            }
-                            % [T 1 Vocalization Voice] Measure 229
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
+                                r4
+                                r4
                                 \bar "|."
                             }
                         }
@@ -10588,186 +10646,1246 @@
                         {
                             % [T 1 Percussion Voice] Measure 167
                             {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 \( \startTextSpan
+                                b'2 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 168
+                            {
+                                b'2.. \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 169
+                            {
+                                cs'4.
+                                cs'4 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 170
+                            {
+                                cs'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                            % [T 1 Percussion Voice] Measure 171
+                            {
+                                r2
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'2 \( \startTextSpan
+                            }
+                            % [T 1 Percussion Voice] Measure 172
+                            {
+                                b'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                            % [T 1 Percussion Voice] Measure 173
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f''8 \( \startTextSpan
+                                f''2 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 174
+                            {
+                                f''4. \repeatTie
+                                f''8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 \( \startTextSpan
+                            }
+                            % [T 1 Percussion Voice] Measure 175
+                            {
+                                c''4. \repeatTie
+                                c''4 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 176
+                            {
+                                b'2..
+                            }
+                            % [T 1 Percussion Voice] Measure 177
+                            {
+                                b'4. \repeatTie
+                                b'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 178
+                            {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
-                            }
-                            % [T 1 Percussion Voice] Measure 168
-                            {
-                                R1 * 7/8
-                            }
-                            % [T 1 Percussion Voice] Measure 169
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 170
-                            {
-                                R1 * 7/8
-                            }
-                            % [T 1 Percussion Voice] Measure 171
-                            {
-                                R1 * 1
-                            }
-                            % [T 1 Percussion Voice] Measure 172
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 173
-                            {
-                                R1 * 1
-                            }
-                            % [T 1 Percussion Voice] Measure 174
-                            {
-                                R1 * 7/8
-                            }
-                            % [T 1 Percussion Voice] Measure 175
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 176
-                            {
-                                R1 * 7/8
-                            }
-                            % [T 1 Percussion Voice] Measure 177
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 178
-                            {
-                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 1 Percussion Voice] Measure 179
                             {
-                                R1 * 5/4
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'4 \( \startTextSpan
+                            }
+                            % [T 1 Percussion Voice] Measure 180
+                            {
+                                a'4. \repeatTie
+                                a'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [T 1 Percussion Voice] Measure 181
                             {
-                                R1 * 3
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                            }
+                            % [T 1 Percussion Voice] Measure 182
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 183
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'4. \( \startTextSpan
+                                b'4 \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 184
                             {
-                                R1 * 5/4
+                                b'4. \repeatTie
+                                b'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [T 1 Percussion Voice] Measure 185
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 1 Percussion Voice] Measure 186
                             {
-                                R1 * 7/8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2.. \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 187
                             {
-                                R1 * 5/8
+                                a'4. \repeatTie
+                                a'4 \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 188
                             {
-                                R1 * 7/8
+                                b'4.
+                                b'4 \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 189
                             {
-                                R1 * 5/4
+                                b'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                            % [T 1 Percussion Voice] Measure 190
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 191
                             {
-                                R1 * 7/4
+                                a'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'4 \( \startTextSpan
+                            }
+                            % [T 1 Percussion Voice] Measure 192
+                            {
+                                b'2.. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [T 1 Percussion Voice] Measure 193
                             {
-                                R1 * 5/8
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 194
                             {
-                                R1 * 2
+                                d''2. \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 195
+                            {
+                                fs'2..
                             }
                             % [T 1 Percussion Voice] Measure 196
                             {
-                                R1 * 3/4
+                                fs'2 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                             % [T 1 Percussion Voice] Measure 197
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 1 Percussion Voice] Measure 198
                             {
-                                R1 * 2
+                                r8
                             }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 \( \startTextSpan
+                                a'2 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 199
+                            {
+                                a'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 200
                             {
-                                R1 * 3/4
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                g'2.. \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 201
                             {
-                                R1 * 25/8
+                                g'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef'8 \( \startTextSpan
+                            }
+                            % [T 1 Percussion Voice] Measure 202
+                            {
+                                ef'4. \repeatTie
+                                ef'4 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 203
+                            {
+                                c''2..
+                            }
+                            % [T 1 Percussion Voice] Measure 204
+                            {
+                                c''4. \repeatTie
+                                c''4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 205
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 1 Percussion Voice] Measure 206
                             {
-                                R1 * 1
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f''4 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 207
                             {
-                                R1 * 3/4
+                                f''4. \repeatTie
+                                f''8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 1 Percussion Voice] Measure 208
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 7/8
                             }
                             % [T 1 Percussion Voice] Measure 209
                             {
-                                R1 * 15/8
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 1 Percussion Voice] Measure 210
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 \( \startTextSpan
+                                a'4 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 211
+                            {
+                                a'4. \repeatTie
+                                a'4 \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 212
                             {
-                                R1 * 3/2
+                                d'8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                            % [T 1 Percussion Voice] Measure 213
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 214
                             {
-                                R1 * 5/8
+                                a'1 \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 215
                             {
-                                R1 * 7/8
+                                c'4.
+                                c'4 \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 216
                             {
-                                R1 * 3/4
+                                c'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 1 Percussion Voice] Measure 217
                             {
-                                R1 * 5/8
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 218
                             {
-                                R1 * 3/4
+                                d''4. \repeatTie
+                                d''4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [T 1 Percussion Voice] Measure 219
                             {
-                                R1 * 5/8
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 220
                             {
-                                R1 * 3/4
+                                a'4. \repeatTie
+                                a'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 221
                             {
-                                R1 * 2
+                                r2
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'4. \( \startTextSpan
+                            }
+                            % [T 1 Percussion Voice] Measure 222
+                            {
+                                fs'2.. \repeatTie
                             }
                             % [T 1 Percussion Voice] Measure 223
                             {
-                                R1 * 5/4
+                                af'4.
+                                af'4 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 224
+                            {
+                                af'4. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 1 Percussion Voice] Measure 225
                             {
-                                R1 * 3/4
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 226
                             {
-                                R1 * 5/8
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'2. \( \startTextSpan
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 1 Percussion Voice] Measure 227
                             {
-                                R1 * 7/8
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 \( \startTextSpan
                             }
                             % [T 1 Percussion Voice] Measure 228
                             {
-                                R1 * 5/4
+                                d'4. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 \bar "|."
                             }
                         }
@@ -10850,7 +11968,7 @@
                             }
                             % [T 2 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [T 2 Vocalization Voice] Measure 179
                             {
@@ -10858,31 +11976,35 @@
                             }
                             % [T 2 Vocalization Voice] Measure 181
                             {
-                                R1 * 3
+                                R1 * 7/8
                             }
-                            % [T 2 Vocalization Voice] Measure 184
+                            % [T 2 Vocalization Voice] Measure 182
                             {
-                                R1 * 5/4
+                                R1 * 1
+                            }
+                            % [T 2 Vocalization Voice] Measure 183
+                            {
+                                R1 * 15/8
                             }
                             % [T 2 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [T 2 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [T 2 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [T 2 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [T 2 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [T 2 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                             }
                             % [T 2 Vocalization Voice] Measure 193
                             {
@@ -10890,11 +12012,15 @@
                             }
                             % [T 2 Vocalization Voice] Measure 194
                             {
-                                R1 * 2
+                                R1 * 3/4
+                            }
+                            % [T 2 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [T 2 Vocalization Voice] Measure 196
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 2 Vocalization Voice] Measure 197
                             {
@@ -10902,19 +12028,31 @@
                             }
                             % [T 2 Vocalization Voice] Measure 198
                             {
-                                R1 * 2
-                            }
-                            % [T 2 Vocalization Voice] Measure 200
-                            {
                                 R1 * 3/4
+                            }
+                            % [T 2 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
                             }
                             % [T 2 Vocalization Voice] Measure 201
                             {
-                                R1 * 25/8
+                                R1 * 5/4
+                            }
+                            % [T 2 Vocalization Voice] Measure 203
+                            {
+                                R1 * 7/8
+                            }
+                            % [T 2 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [T 2 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [T 2 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [T 2 Vocalization Voice] Measure 207
                             {
@@ -11084,24 +12222,25 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
-                                c'4 \repeatTie
+                                c'2. \( \startTextSpan \<
                             }
                             % [T 2 Vocalization Voice] Measure 215
                             {
-                                c'2.. \repeatTie
-                            }
-                            % [T 2 Vocalization Voice] Measure 216
-                            {
-                                c'8 \ppp \repeatTie
+                                c'4. \repeatTie
+                                c'4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [T 2 Vocalization Voice] Measure 216
                             {
-                                r4
-                                r4.
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -11157,18 +12296,21 @@
                             }
                         }
                         {
+                            {
+                                r4
+                            }
                             % [T 2 Vocalization Voice] Measure 220
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [T 2 Vocalization Voice] Measure 221
                             {
-                                r2
+                                r4.
                             }
                         }
                         {
@@ -11207,18 +12349,20 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 222
                             {
-                                c'4 \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r2.
+                                r4
+                                r2
                             }
                         }
                         {
@@ -11275,7 +12419,8 @@
                         }
                         {
                             {
-                                r4
+                                r8
+                                r8
                             }
                         }
                         {
@@ -11314,31 +12459,25 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 226
                             {
-                                c'4. \repeatTie
-                                c'4 \repeatTie
+                                c'1 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 227
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                c'2.. \ppp \repeatTie \>
-                            }
-                            % [T 2 Vocalization Voice] Measure 228
-                            {
-                                c'8 \repeatTie
+                                c'4. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4 \!
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 229
+                            % [T 2 Vocalization Voice] Measure 228
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11376,186 +12515,1221 @@
                         {
                             % [T 2 Percussion Voice] Measure 167
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
+                                r2
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'4. \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 168
                             {
-                                R1 * 7/8
+                                d'2.. \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 169
                             {
-                                R1 * 5/8
+                                e''4.
+                                e''8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [T 2 Percussion Voice] Measure 170
                             {
-                                R1 * 7/8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                bf'4 \( \startTextSpan
+                                bf'2 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 171
                             {
-                                R1 * 1
+                                bf'2.. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [T 2 Percussion Voice] Measure 172
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 2 Percussion Voice] Measure 173
                             {
-                                R1 * 1
+                                r2
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                cs'4. \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 174
                             {
-                                R1 * 7/8
+                                cs'4. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                             % [T 2 Percussion Voice] Measure 175
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/8
                             }
                             % [T 2 Percussion Voice] Measure 176
                             {
                                 R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 177
                             {
-                                R1 * 5/8
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'4. \( \startTextSpan
+                                b'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 178
                             {
-                                R1 * 7/8
+                                b'1 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 179
                             {
-                                R1 * 5/4
+                                a'8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 180
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'4 \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 181
                             {
-                                R1 * 3
+                                b'2.. \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 182
+                            {
+                                a'2
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                            % [T 2 Percussion Voice] Measure 183
+                            {
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 184
                             {
-                                R1 * 5/4
+                                b'4. \repeatTie
+                                b'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 185
+                            {
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 186
                             {
-                                R1 * 7/8
+                                a'1 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 187
                             {
-                                R1 * 5/8
+                                b'4.
+                                b'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 188
                             {
-                                R1 * 7/8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 189
                             {
-                                R1 * 5/4
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2. \( \startTextSpan
                             }
+                            % [T 2 Percussion Voice] Measure 190
+                            {
+                                a'2.. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 191
                             {
-                                R1 * 7/4
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
+                            % [T 2 Percussion Voice] Measure 192
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'2. \( \startTextSpan
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 193
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 2 Percussion Voice] Measure 194
                             {
-                                R1 * 2
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                g'4 \( \startTextSpan
+                                g'4. \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 195
+                            {
+                                g'2.. \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 196
                             {
-                                R1 * 3/4
+                                ef'4
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2 \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 197
                             {
-                                R1 * 5/8
+                                a'4. \repeatTie
+                                a'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 198
                             {
-                                R1 * 2
+                                fs'2
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 199
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 2 Percussion Voice] Measure 200
                             {
-                                R1 * 3/4
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef''8 \( \startTextSpan
+                                ef''2 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 201
                             {
-                                R1 * 25/8
+                                ef''8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 202
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [T 2 Percussion Voice] Measure 203
+                            {
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 204
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'4. \( \startTextSpan
+                                f'4 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 205
+                            {
+                                f'1 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 206
                             {
-                                R1 * 1
+                                ef''8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 2 Percussion Voice] Measure 207
                             {
-                                R1 * 3/4
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'4. \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 208
                             {
-                                R1 * 7/8
+                                f'2.. \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 209
                             {
-                                R1 * 15/8
+                                c''4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 210
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 2 Percussion Voice] Measure 211
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'4 \( \startTextSpan
+                                d'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 212
                             {
-                                R1 * 3/2
+                                d'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 213
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''2. \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 214
                             {
-                                R1 * 5/8
+                                c''1 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 215
                             {
-                                R1 * 7/8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 216
                             {
-                                R1 * 3/4
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''4. \( \startTextSpan
+                                d''4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 217
                             {
-                                R1 * 5/8
+                                d''4. \repeatTie
+                                d''4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 218
                             {
-                                R1 * 3/4
+                                a'4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4.
                             }
                             % [T 2 Percussion Voice] Measure 219
                             {
-                                R1 * 5/8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 220
                             {
-                                R1 * 3/4
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c'4. \( \startTextSpan
+                                c'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 221
                             {
-                                R1 * 2
+                                c'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 \( \startTextSpan
+                            }
+                            % [T 2 Percussion Voice] Measure 222
+                            {
+                                d'2.. \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 223
                             {
-                                R1 * 5/4
+                                f'4.
+                                f'4 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 224
+                            {
+                                f'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e''4 \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 225
                             {
-                                R1 * 3/4
+                                e''1 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 226
                             {
-                                R1 * 5/8
+                                f'4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
                             }
                             % [T 2 Percussion Voice] Measure 227
                             {
-                                R1 * 7/8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 2 Percussion Voice] Measure 228
                             {
-                                R1 * 5/4
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e''4 \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 \bar "|."
                             }
                         }
@@ -11638,7 +13812,7 @@
                             }
                             % [T 3 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [T 3 Vocalization Voice] Measure 179
                             {
@@ -11646,31 +13820,35 @@
                             }
                             % [T 3 Vocalization Voice] Measure 181
                             {
-                                R1 * 3
+                                R1 * 7/8
                             }
-                            % [T 3 Vocalization Voice] Measure 184
+                            % [T 3 Vocalization Voice] Measure 182
                             {
-                                R1 * 5/4
+                                R1 * 1
+                            }
+                            % [T 3 Vocalization Voice] Measure 183
+                            {
+                                R1 * 15/8
                             }
                             % [T 3 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [T 3 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [T 3 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [T 3 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [T 3 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [T 3 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                             }
                             % [T 3 Vocalization Voice] Measure 193
                             {
@@ -11678,11 +13856,15 @@
                             }
                             % [T 3 Vocalization Voice] Measure 194
                             {
-                                R1 * 2
+                                R1 * 3/4
+                            }
+                            % [T 3 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [T 3 Vocalization Voice] Measure 196
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 3 Vocalization Voice] Measure 197
                             {
@@ -11690,19 +13872,31 @@
                             }
                             % [T 3 Vocalization Voice] Measure 198
                             {
-                                R1 * 2
-                            }
-                            % [T 3 Vocalization Voice] Measure 200
-                            {
                                 R1 * 3/4
+                            }
+                            % [T 3 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
                             }
                             % [T 3 Vocalization Voice] Measure 201
                             {
-                                R1 * 25/8
+                                R1 * 5/4
+                            }
+                            % [T 3 Vocalization Voice] Measure 203
+                            {
+                                R1 * 7/8
+                            }
+                            % [T 3 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [T 3 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [T 3 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -11830,17 +14024,17 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
-                            }
-                            % [T 3 Vocalization Voice] Measure 215
-                            {
-                                R1 * 7/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
+                            % [T 3 Vocalization Voice] Measure 215
+                            {
+                                r4.
+                                r8
+                            }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 216
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -11876,7 +14070,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                            }
+                            % [T 3 Vocalization Voice] Measure 216
+                            {
+                                c'4. \repeatTie
+                                c'4 \repeatTie
                             }
                             % [T 3 Vocalization Voice] Measure 217
                             {
@@ -11938,28 +14137,26 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
-                                c'4 \repeatTie
+                                c'2 \repeatTie
                             }
                             % [T 3 Vocalization Voice] Measure 220
                             {
-                                c'2. \ppp \repeatTie
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [T 3 Vocalization Voice] Measure 221
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
+                                r2..
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 222
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -11995,7 +14192,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'1 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                            }
+                            % [T 3 Vocalization Voice] Measure 222
+                            {
+                                c'2.. \repeatTie
                             }
                             % [T 3 Vocalization Voice] Measure 223
                             {
@@ -12054,22 +14255,19 @@
                             }
                             % [T 3 Vocalization Voice] Measure 225
                             {
-                                c'2. \repeatTie
+                                c'1 \repeatTie
                             }
                             % [T 3 Vocalization Voice] Measure 226
                             {
-                                c'4. \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
-                            }
-                            % [T 3 Vocalization Voice] Measure 227
-                            {
-                                r4.
+                                r8
+                                r2
                             }
                         }
                         {
@@ -12108,23 +14306,22 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                             }
-                            % [T 3 Vocalization Voice] Measure 228
+                            % [T 3 Vocalization Voice] Measure 227
                             {
                                 c'4. \repeatTie
                                 c'4 \repeatTie
                             }
-                            % [T 3 Vocalization Voice] Measure 229
+                            % [T 3 Vocalization Voice] Measure 228
                             {
-                                c'8 \ppp \repeatTie
+                                c'4. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
                                 r4
                                 \bar "|."
                             }
@@ -12158,186 +14355,1246 @@
                         {
                             % [T 3 Percussion Voice] Measure 167
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'2. \( \startTextSpan
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 168
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 7/8
                             }
                             % [T 3 Percussion Voice] Measure 169
                             {
                                 R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 170
                             {
-                                R1 * 7/8
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 \( \startTextSpan
+                                c''2 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 171
                             {
-                                R1 * 1
+                                c''1 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 172
                             {
-                                R1 * 5/8
+                                d'8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 173
                             {
-                                R1 * 1
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 \( \startTextSpan
+                                b'2 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 174
                             {
-                                R1 * 7/8
+                                b'2.. \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 175
                             {
-                                R1 * 5/8
+                                a'8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 176
                             {
-                                R1 * 7/8
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 \( \startTextSpan
+                                b'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 177
                             {
-                                R1 * 5/8
+                                b'4. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 178
                             {
-                                R1 * 7/8
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2. \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 179
                             {
-                                R1 * 5/4
+                                a'4. \repeatTie
+                                a'4 \repeatTie
+                            }
+                            % [T 3 Percussion Voice] Measure 180
+                            {
+                                b'4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 181
                             {
-                                R1 * 3
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'2 \( \startTextSpan
+                            }
+                            % [T 3 Percussion Voice] Measure 182
+                            {
+                                a'1 \repeatTie
+                            }
+                            % [T 3 Percussion Voice] Measure 183
+                            {
+                                b'8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 184
                             {
-                                R1 * 5/4
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 3 Percussion Voice] Measure 185
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'4 \( \startTextSpan
+                                a'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 186
                             {
-                                R1 * 7/8
+                                a'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
+                        }
+                        {
+                            {
+                                r2.
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 187
                             {
-                                R1 * 5/8
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'4. \( \startTextSpan
+                                b'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 188
                             {
-                                R1 * 7/8
+                                b'4. \repeatTie
+                                b'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 189
                             {
-                                R1 * 5/4
+                                a'2
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 190
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'2.. \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 191
                             {
-                                R1 * 7/4
+                                b'2. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 3 Percussion Voice] Measure 192
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 193
                             {
-                                R1 * 5/8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                af'4 \( \startTextSpan
+                                af'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 194
                             {
-                                R1 * 2
+                                af'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4.
+                            }
+                            % [T 3 Percussion Voice] Measure 195
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 196
                             {
-                                R1 * 3/4
+                                r2
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                g'4. \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 197
                             {
-                                R1 * 5/8
+                                g'4. \repeatTie
+                                g'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 198
                             {
-                                R1 * 2
+                                ef''2.
+                                <> \)
+                                <> \stopTextSpan
                             }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 199
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 200
                             {
-                                R1 * 3/4
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'2.. \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 201
                             {
-                                R1 * 25/8
+                                fs'4. \repeatTie
+                                fs'4 \repeatTie
+                            }
+                            % [T 3 Percussion Voice] Measure 202
+                            {
+                                f''8
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [T 3 Percussion Voice] Measure 203
+                            {
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef'8 \( \startTextSpan
+                                ef'4 \repeatTie
+                            }
+                            % [T 3 Percussion Voice] Measure 204
+                            {
+                                ef'4. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 3 Percussion Voice] Measure 205
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c'2. \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 206
                             {
-                                R1 * 1
+                                c'4. \repeatTie
+                                c'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 207
                             {
-                                R1 * 3/4
+                                ef''4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4.
                             }
                             % [T 3 Percussion Voice] Measure 208
                             {
-                                R1 * 7/8
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 \( \startTextSpan
+                                a'2 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 209
                             {
-                                R1 * 15/8
+                                a'4. \repeatTie
+                                a'4 \repeatTie
+                            }
+                            % [T 3 Percussion Voice] Measure 210
+                            {
+                                d''4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 3 Percussion Voice] Measure 211
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 212
                             {
-                                R1 * 3/2
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'4. \( \startTextSpan
+                            }
+                            % [T 3 Percussion Voice] Measure 213
+                            {
+                                a'4. \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4.
                             }
                             % [T 3 Percussion Voice] Measure 214
                             {
-                                R1 * 5/8
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c'8 \( \startTextSpan
+                                c'2 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 215
                             {
-                                R1 * 7/8
+                                c'4. \repeatTie
+                                c'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 216
                             {
-                                R1 * 3/4
+                                a'4.
+                                a'8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [T 3 Percussion Voice] Measure 217
                             {
-                                R1 * 5/8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c'4 \( \startTextSpan
+                                c'4 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 218
                             {
-                                R1 * 3/4
+                                c'2. \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 219
                             {
-                                R1 * 5/8
+                                d'4.
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                             % [T 3 Percussion Voice] Measure 220
                             {
-                                R1 * 3/4
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 221
                             {
-                                R1 * 2
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef'2. \( \startTextSpan
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 222
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
                             }
                             % [T 3 Percussion Voice] Measure 223
                             {
-                                R1 * 5/4
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 3 Percussion Voice] Measure 224
+                            {
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 225
                             {
-                                R1 * 3/4
+                                d''1 \repeatTie
                             }
                             % [T 3 Percussion Voice] Measure 226
                             {
-                                R1 * 5/8
+                                e''2
+                                e''8 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4.
                             }
                             % [T 3 Percussion Voice] Measure 227
                             {
-                                R1 * 7/8
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                af'8 \( \startTextSpan
                             }
                             % [T 3 Percussion Voice] Measure 228
                             {
-                                R1 * 5/4
+                                af'4 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
                                 \bar "|."
                             }
                         }
@@ -12531,7 +15788,7 @@
                             }
                             % [B 1 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [B 1 Vocalization Voice] Measure 179
                             {
@@ -12539,7 +15796,11 @@
                             }
                             % [B 1 Vocalization Voice] Measure 181
                             {
-                                R1 * 2
+                                R1 * 7/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 182
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -12584,162 +15845,15 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [B 1 Vocalization Voice] Measure 184
                             {
-                                c'4. \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 185
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 186
-                            {
-                                R1 * 7/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 187
-                            {
-                                R1 * 5/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 189
-                            {
-                                R1 * 5/4
-                            }
-                            % [B 1 Vocalization Voice] Measure 191
-                            {
-                                R1 * 7/4
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [B 1 Vocalization Voice] Measure 193
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'4. \repeatTie
                                 c'4 \repeatTie
                             }
-                            % [B 1 Vocalization Voice] Measure 194
-                            {
-                                c'4 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2.
-                            }
-                            % [B 1 Vocalization Voice] Measure 195
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                            }
-                            % [B 1 Vocalization Voice] Measure 196
-                            {
-                                R1 * 3/4
-                            }
-                            % [B 1 Vocalization Voice] Measure 197
-                            {
-                                R1 * 5/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 198
-                            {
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [B 1 Vocalization Voice] Measure 199
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'1 \( \startTextSpan \<
-                            }
-                            % [B 1 Vocalization Voice] Measure 200
+                            % [B 1 Vocalization Voice] Measure 185
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
@@ -12748,12 +15862,40 @@
                         }
                         {
                             {
-                                r8
-                                r2
+                                r4
+                                r4
+                            }
+                            % [B 1 Vocalization Voice] Measure 186
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                            }
+                            % [B 1 Vocalization Voice] Measure 187
+                            {
+                                R1 * 5/4
+                            }
+                            % [B 1 Vocalization Voice] Measure 189
+                            {
+                                R1 * 3/4
+                            }
+                            % [B 1 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 191
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 1 Vocalization Voice] Measure 192
+                            {
+                                r2..
                             }
                         }
                         {
-                            % [B 1 Vocalization Voice] Measure 201
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -12789,12 +15931,94 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                            }
+                            % [B 1 Vocalization Voice] Measure 193
+                            {
+                                c'4. \repeatTie
                                 c'4 \repeatTie
                             }
-                            % [B 1 Vocalization Voice] Measure 202
+                            % [B 1 Vocalization Voice] Measure 194
                             {
-                                c'4 \ppp \repeatTie
+                                c'8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4.
+                            }
+                            % [B 1 Vocalization Voice] Measure 195
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 196
+                            {
+                                R1 * 1
+                            }
+                            % [B 1 Vocalization Voice] Measure 197
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 198
+                            {
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 1 Vocalization Voice] Measure 199
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
+                            }
+                            % [B 1 Vocalization Voice] Measure 200
+                            {
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -12804,16 +16028,80 @@
                                 r8
                                 r4
                             }
+                            % [B 1 Vocalization Voice] Measure 201
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
+                            }
+                            % [B 1 Vocalization Voice] Measure 202
+                            {
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
                             % [B 1 Vocalization Voice] Measure 203
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [B 1 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [B 1 Vocalization Voice] Measure 207
                             {
@@ -12898,19 +16186,11 @@
                             }
                             % [B 1 Vocalization Voice] Measure 214
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [B 1 Vocalization Voice] Measure 215
                             {
-                                R1 * 7/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 216
-                            {
-                                R1 * 3/4
-                            }
-                            % [B 1 Vocalization Voice] Measure 217
-                            {
-                                R1 * 5/8
+                                R1 * 15/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -12967,21 +16247,22 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 7/8
                             }
                             % [B 1 Vocalization Voice] Measure 220
                             {
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 1 Vocalization Voice] Measure 221
                             {
-                                r4
+                                r8
                             }
                         }
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -13015,18 +16296,23 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \ppp \( \startTextSpan
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [B 1 Vocalization Voice] Measure 222
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                             }
                             % [B 1 Vocalization Voice] Measure 223
                             {
@@ -13086,117 +16372,71 @@
                         }
                         {
                             {
-                                r8
-                                r4.
+                                r2.
                             }
                             % [B 1 Vocalization Voice] Measure 226
                             {
-                                r4.
-                                r8
+                                r4
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                c'4 \ppp \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                             % [B 1 Vocalization Voice] Measure 227
                             {
-                                c'8 \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                                r2
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [B 1 Vocalization Voice] Measure 228
                             {
-                                r4.
                                 r8
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
-                            }
-                            % [B 1 Vocalization Voice] Measure 229
-                            {
-                                c'8 \repeatTie
+                                c'4 \ppp \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
                                 <> \)
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
                                 r4
                                 \bar "|."
                             }
@@ -13666,19 +16906,18 @@
                             }
                             % [B 1 Percussion Voice] Measure 178
                             {
-                                g'2.. :32 \repeatTie
+                                g'1 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 179
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                g'4. :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
+                                r4
                             }
                         }
                         {
@@ -13723,7 +16962,7 @@
                             }
                             % [B 1 Percussion Voice] Measure 181
                             {
-                                g1 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 182
                             {
@@ -13794,8 +17033,8 @@
                         }
                         {
                             {
-                                r8.
-                                r2
+                                r16
+                                r4
                             }
                             % [B 1 Percussion Voice] Measure 184
                             {
@@ -13806,9 +17045,12 @@
                                 \stopStaff
                                 \startStaff
                             }
+                            % [B 1 Percussion Voice] Measure 185
+                            {
+                                r4.
+                            }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 185
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
@@ -13829,180 +17071,12 @@
                         }
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \startTextSpan \<
-                                g4 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
+                                r8
                             }
                         }
                         {
                             % [B 1 Percussion Voice] Measure 186
                             {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 187
-                            {
-                                g'4 :32 \p \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4
-                            }
-                            % [B 1 Percussion Voice] Measure 188
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 189
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 190
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 1 Percussion Voice] Measure 191
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -14036,30 +17110,70 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 192
-                            {
-                                g2.. \ppp \repeatTie
+                                g2 \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 193
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'2 :32 \( \startTextSpan \<
+                            }
+                            % [B 1 Percussion Voice] Measure 187
+                            {
+                                g'4. :32 \repeatTie
+                                g'8 :64 \p \repeatTie
                                 <> \)
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8
                             }
-                            % [B 1 Percussion Voice] Measure 194
+                            % [B 1 Percussion Voice] Measure 188
                             {
                                 r4.
                             }
@@ -14108,12 +17222,20 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                g'4 :32 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 195
+                            % [B 1 Percussion Voice] Measure 189
                             {
-                                g'2 :32 \p \repeatTie
+                                g'2. :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 190
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                g'2.. :32 \p \repeatTie \>
+                            }
+                            % [B 1 Percussion Voice] Measure 191
+                            {
+                                g'8 :64
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -14154,11 +17276,138 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
+                                g2.. \( \! \startTextSpan \<
                             }
+                            % [B 1 Percussion Voice] Measure 192
+                            {
+                                g2.. \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                            % [B 1 Percussion Voice] Measure 193
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 1 Percussion Voice] Measure 194
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'8 :64 \( \startTextSpan \<
+                                g'4. :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 195
+                            {
+                                g'4. :32 \repeatTie
+                                g'4 :32 \p \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        {
                             % [B 1 Percussion Voice] Measure 196
                             {
-                                g2. \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g1 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 197
                             {
@@ -14229,12 +17478,12 @@
                             }
                         }
                         {
+                            % [B 1 Percussion Voice] Measure 199
                             {
                                 r4
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 199
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \( [
@@ -14245,20 +17494,23 @@
                         }
                         {
                             {
-                                r2..
+                                r2
                             }
                             % [B 1 Percussion Voice] Measure 200
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
+                            % [B 1 Percussion Voice] Measure 201
+                            {
+                                r4
+                            }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 201
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -14268,7 +17520,6 @@
                         {
                             {
                                 r16
-                                r4
                                 r4
                             }
                             % [B 1 Percussion Voice] Measure 202
@@ -14318,8 +17569,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 204
                             {
@@ -14328,12 +17578,12 @@
                             }
                             % [B 1 Percussion Voice] Measure 205
                             {
-                                g4. \ppp \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 206
                             {
-                                g1 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 207
                             {
@@ -14425,17 +17675,18 @@
                             }
                             % [B 1 Percussion Voice] Measure 214
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 215
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 216
                             {
-                                g2. \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 217
                             {
@@ -14497,12 +17748,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 220
                             {
-                                g2. \ppp \repeatTie
+                                g4. \repeatTie
+                                g4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -14510,7 +17761,7 @@
                         {
                             % [B 1 Percussion Voice] Measure 221
                             {
-                                r4
+                                r8
                             }
                         }
                         {
@@ -14522,8 +17773,8 @@
                         }
                         {
                             {
-                                r8.
-                                r2
+                                r16
+                                r2.
                             }
                         }
                         {
@@ -14563,7 +17814,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
+                                g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -14660,7 +17911,6 @@
                         }
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -14694,15 +17944,15 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g4. \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 226
-                            {
-                                g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g2. \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 1 Percussion Voice] Measure 226
+                            {
+                                r4
                             }
                         }
                         {
@@ -14714,11 +17964,7 @@
                         }
                         {
                             {
-                                r16
-                            }
-                            % [B 1 Percussion Voice] Measure 227
-                            {
-                                r8
+                                r8.
                             }
                         }
                         {
@@ -14757,15 +18003,20 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \startTextSpan \<
-                                g2 \repeatTie
+                                g2 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 228
+                            % [B 1 Percussion Voice] Measure 227
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 1 Percussion Voice] Measure 228
+                            {
+                                r8
                             }
                         }
                         {
@@ -14777,14 +18028,8 @@
                         }
                         {
                             {
-                                r16
-                            }
-                            % [B 1 Percussion Voice] Measure 229
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
+                                r8.
+                                r4
                                 \bar "|."
                             }
                         }
@@ -14970,7 +18215,7 @@
                             }
                             % [B 2 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [B 2 Vocalization Voice] Measure 179
                             {
@@ -14978,7 +18223,7 @@
                             }
                             % [B 2 Vocalization Voice] Measure 181
                             {
-                                R1 * 1
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -15035,10 +18280,12 @@
                         }
                         {
                             {
-                                r4.
+                                r8
+                                r4
                             }
                         }
                         {
+                            % [B 2 Vocalization Voice] Measure 184
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -15079,164 +18326,39 @@
                             }
                         }
                         {
-                            % [B 2 Vocalization Voice] Measure 184
+                            {
+                                r4
+                            }
+                            % [B 2 Vocalization Voice] Measure 185
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [B 2 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [B 2 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [B 2 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [B 2 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [B 2 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [B 2 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 2 Vocalization Voice] Measure 193
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [B 2 Vocalization Voice] Measure 194
-                            {
-                                c'2 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                            % [B 2 Vocalization Voice] Measure 195
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                            }
-                            % [B 2 Vocalization Voice] Measure 196
-                            {
-                                R1 * 3/4
-                            }
-                            % [B 2 Vocalization Voice] Measure 197
-                            {
-                                R1 * 5/8
-                            }
-                            % [B 2 Vocalization Voice] Measure 198
-                            {
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [B 2 Vocalization Voice] Measure 199
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'1 \( \startTextSpan \<
-                            }
-                            % [B 2 Vocalization Voice] Measure 200
-                            {
-                                c'8 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                            % [B 2 Vocalization Voice] Measure 201
                             {
                                 r8
                             }
@@ -15280,7 +18402,7 @@
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [B 2 Vocalization Voice] Measure 202
+                            % [B 2 Vocalization Voice] Measure 194
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
@@ -15289,18 +18411,156 @@
                         }
                         {
                             {
+                                r4.
+                            }
+                            % [B 2 Vocalization Voice] Measure 195
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                            }
+                            % [B 2 Vocalization Voice] Measure 196
+                            {
+                                R1 * 1
+                            }
+                            % [B 2 Vocalization Voice] Measure 197
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 2 Vocalization Voice] Measure 198
+                            {
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 2 Vocalization Voice] Measure 199
+                            {
                                 r4
                             }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
+                            }
+                            % [B 2 Vocalization Voice] Measure 200
+                            {
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                            % [B 2 Vocalization Voice] Measure 201
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'4 \( \startTextSpan \<
+                            }
+                            % [B 2 Vocalization Voice] Measure 202
+                            {
+                                c'4. \repeatTie
+                                c'4 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
                             % [B 2 Vocalization Voice] Measure 203
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 2 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 2 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [B 2 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [B 2 Vocalization Voice] Measure 207
                             {
@@ -15384,13 +18644,12 @@
                             }
                             % [B 2 Vocalization Voice] Measure 214
                             {
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 2 Vocalization Voice] Measure 215
                             {
-                                r4.
                                 r4
                             }
                         }
@@ -15430,12 +18689,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [B 2 Vocalization Voice] Measure 216
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -15461,7 +18721,6 @@
                         {
                             % [B 2 Vocalization Voice] Measure 219
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -15495,12 +18754,58 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
-                                c'4 \repeatTie
+                                c'2.. \ppp \( \startTextSpan
+                                <> \)
+                                <> \stopTextSpan
                             }
+                        }
+                        {
                             % [B 2 Vocalization Voice] Measure 220
                             {
-                                c'4 \ppp \repeatTie
+                                r4.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'8 \ppp \( \startTextSpan
+                            }
+                            % [B 2 Vocalization Voice] Measure 221
+                            {
+                                c'4. \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -15508,52 +18813,6 @@
                         {
                             {
                                 r8
-                                r4.
-                            }
-                        }
-                        {
-                            % [B 2 Vocalization Voice] Measure 221
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
                                 r2
                             }
                             % [B 2 Vocalization Voice] Measure 222
@@ -15561,7 +18820,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                             }
                             % [B 2 Vocalization Voice] Measure 223
                             {
@@ -15592,21 +18851,16 @@
                         }
                         {
                             {
-                                r8
-                                r4.
+                                r2.
                             }
                             % [B 2 Vocalization Voice] Measure 226
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [B 2 Vocalization Voice] Measure 227
-                            {
-                                R1 * 7/8
-                            }
-                            % [B 2 Vocalization Voice] Measure 228
                             {
                                 R1 * 5/4
                                 \bar "|."
@@ -16085,23 +19339,16 @@
                             % [B 2 Percussion Voice] Measure 178
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g'2.. :32 \p \repeatTie \>
+                                g'1 :32 \p \repeatTie \>
                             }
                             % [B 2 Percussion Voice] Measure 179
                             {
-                                g'4 :32
+                                g'8 :64
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                r8 \!
-                                r4
-                            }
-                        }
-                        {
-                            % [B 2 Percussion Voice] Measure 180
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -16137,12 +19384,17 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
+                                g4 \( \! \startTextSpan \<
+                                g4 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 180
+                            {
+                                g4. \repeatTie
                                 g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 181
                             {
-                                g1 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -16212,11 +19464,16 @@
                             }
                             % [B 2 Percussion Voice] Measure 183
                             {
-                                r2
-                                r8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
+                            % [B 2 Percussion Voice] Measure 184
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \p \(
@@ -16227,10 +19484,148 @@
                             {
                                 r16
                                 r4
-                            }
-                            % [B 2 Percussion Voice] Measure 184
-                            {
                                 r4
+                            }
+                        }
+                        {
+                            % [B 2 Percussion Voice] Measure 185
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'4. :32 \( \startTextSpan \<
+                                g'8 :64 \p \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                maracas
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                maracas
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
+                                g'8 :64 -\accent \fp \( \startTextSpan
+                            }
+                            % [B 2 Percussion Voice] Measure 186
+                            {
+                                g'4 :32 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g2. \( \startTextSpan \<
+                            }
+                            % [B 2 Percussion Voice] Measure 187
+                            {
+                                g4. \repeatTie
+                                g8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -16278,16 +19673,33 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
+                            }
+                            % [B 2 Percussion Voice] Measure 188
+                            {
+                                g'4. :32 \repeatTie
                                 g'4 :32 \repeatTie
                             }
-                            % [B 2 Percussion Voice] Measure 185
+                            % [B 2 Percussion Voice] Measure 189
                             {
-                                g'8 :64 \p \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g'2. :32 \p \repeatTie \>
+                            }
+                            % [B 2 Percussion Voice] Measure 190
+                            {
+                                g'4. :32
+                                g'8 :64 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8 \!
+                                r4
+                            }
+                        }
+                        {
+                            % [B 2 Percussion Voice] Measure 191
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -16300,7 +19712,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                maracas
+                                                                "wine glass"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16313,7 +19725,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                maracas
+                                                                "wine glass"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16322,20 +19734,46 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( \startTextSpan \>
-                                g'8 :64 \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g1 \( \startTextSpan \<
+                            }
+                            % [B 2 Percussion Voice] Measure 192
+                            {
+                                g1 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [B 2 Percussion Voice] Measure 193
                             {
-                                r8 \!
+                                r8
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 186
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \mf \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r4
+                            }
+                            % [B 2 Percussion Voice] Measure 194
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [B 2 Percussion Voice] Measure 195
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -16376,191 +19814,9 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 187
+                            % [B 2 Percussion Voice] Measure 196
                             {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 188
-                            {
-                                g'2.. :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 189
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \p \repeatTie \>
-                                g'4 :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 190
-                            {
-                                g'8 :64
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \! \startTextSpan \<
-                                g4 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 191
-                            {
-                                g2.. \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 192
-                            {
-                                g2.. \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 2 Percussion Voice] Measure 193
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \mf \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            % [B 2 Percussion Voice] Measure 194
-                            {
-                                r2
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
-                            }
-                            % [B 2 Percussion Voice] Measure 195
-                            {
-                                g2.. \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
+                                r8
                             }
                         }
                         {
@@ -16607,9 +19863,6 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( \startTextSpan
-                            }
-                            % [B 2 Percussion Voice] Measure 196
-                            {
                                 g'4. :32 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -16713,11 +19966,9 @@
                             }
                         }
                         {
-                            {
-                                r4
-                            }
                             % [B 2 Percussion Voice] Measure 199
                             {
+                                r4
                                 r16
                             }
                         }
@@ -16730,20 +19981,20 @@
                         }
                         {
                             {
-                                r2..
+                                r2
                             }
                             % [B 2 Percussion Voice] Measure 200
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 2 Percussion Voice] Measure 201
                             {
-                                r8
+                                r4.
                             }
                         }
                         {
@@ -16756,7 +20007,6 @@
                         {
                             {
                                 r8.
-                                r4
                             }
                             % [B 2 Percussion Voice] Measure 202
                             {
@@ -16805,8 +20055,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 204
                             {
@@ -16815,12 +20064,12 @@
                             }
                             % [B 2 Percussion Voice] Measure 205
                             {
-                                g4. \ppp \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 206
                             {
-                                g1 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 207
                             {
@@ -16914,16 +20163,15 @@
                             }
                             % [B 2 Percussion Voice] Measure 214
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
-                                g4 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 215
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 2 Percussion Voice] Measure 215
+                            {
+                                r4
                             }
                         }
                         {
@@ -16935,14 +20183,15 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                             % [B 2 Percussion Voice] Measure 216
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -17006,15 +20255,13 @@
                             {
                                 r16
                                 r4
-                                r4
-                            }
-                            % [B 2 Percussion Voice] Measure 220
-                            {
-                                r4
+                                r2
                             }
                         }
                         {
+                            % [B 2 Percussion Voice] Measure 220
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -17048,14 +20295,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \ppp \( \startTextSpan
-                                g4. \repeatTie
+                                g4. \( \startTextSpan \<
+                                g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 221
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -17064,7 +20310,11 @@
                         }
                         {
                             {
-                                r4..
+                                r16
+                            }
+                            % [B 2 Percussion Voice] Measure 221
+                            {
+                                r4.
                             }
                         }
                         {
@@ -17103,11 +20353,12 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
+                                g8 \( \startTextSpan \<
+                                g2 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 222
                             {
-                                g1 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -17251,34 +20502,29 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g4. \repeatTie
+                                g2. \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 226
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 228
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 229
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8 \!
+                                r8 \!
                                 \bar "|."
                             }
                         }
@@ -17507,7 +20753,7 @@
                             }
                             % [B 3 Vocalization Voice] Measure 178
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [B 3 Vocalization Voice] Measure 179
                             {
@@ -17517,13 +20763,12 @@
                             }
                             % [B 3 Vocalization Voice] Measure 180
                             {
-                                r4.
+                                r4
                             }
                         }
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -17536,16 +20781,43 @@
                                                                 "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'8 \ppp \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ]
                                 <> \)
+                                <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [B 3 Vocalization Voice] Measure 181
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -17594,9 +20866,10 @@
                             }
                             % [B 3 Vocalization Voice] Measure 183
                             {
-                                c'2 \repeatTie
-                                c'8 \repeatTie
+                                c'4. \repeatTie
+                                c'4 \repeatTie
                             }
+                            % [B 3 Vocalization Voice] Measure 184
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
@@ -17604,38 +20877,41 @@
                             }
                         }
                         {
-                            % [B 3 Vocalization Voice] Measure 184
+                            {
+                                r4
+                            }
+                            % [B 3 Vocalization Voice] Measure 185
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [B 3 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [B 3 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [B 3 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [B 3 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [B 3 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [B 3 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 3 Vocalization Voice] Measure 193
                             {
-                                r4.
+                                r4
                             }
                         }
                         {
@@ -17674,81 +20950,10 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 194
-                            {
-                                c'4 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2.
-                            }
-                            % [B 3 Vocalization Voice] Measure 195
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                            }
-                            % [B 3 Vocalization Voice] Measure 196
-                            {
-                                R1 * 3/4
-                            }
-                            % [B 3 Vocalization Voice] Measure 197
-                            {
-                                R1 * 5/8
-                            }
-                            % [B 3 Vocalization Voice] Measure 198
-                            {
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [B 3 Vocalization Voice] Measure 199
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'1 \( \startTextSpan \<
-                            }
-                            % [B 3 Vocalization Voice] Measure 200
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
@@ -17757,12 +20962,33 @@
                         }
                         {
                             {
-                                r8
-                                r2
-                            }
-                            % [B 3 Vocalization Voice] Measure 201
-                            {
+                                r4
                                 r4.
+                            }
+                            % [B 3 Vocalization Voice] Measure 195
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 7/8
+                            }
+                            % [B 3 Vocalization Voice] Measure 196
+                            {
+                                R1 * 1
+                            }
+                            % [B 3 Vocalization Voice] Measure 197
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 3 Vocalization Voice] Measure 198
+                            {
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 3 Vocalization Voice] Measure 199
+                            {
+                                r4
                             }
                         }
                         {
@@ -17801,11 +21027,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
                             }
-                            % [B 3 Vocalization Voice] Measure 202
+                            % [B 3 Vocalization Voice] Measure 200
                             {
-                                c'4 \ppp \repeatTie
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -17815,16 +21043,81 @@
                                 r8
                                 r4
                             }
+                            % [B 3 Vocalization Voice] Measure 201
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [B 3 Vocalization Voice] Measure 202
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'4. \( \startTextSpan \<
+                                c'8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
                             % [B 3 Vocalization Voice] Measure 203
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 3 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 3 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [B 3 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [B 3 Vocalization Voice] Measure 207
                             {
@@ -17874,13 +21167,12 @@
                             }
                             % [B 3 Vocalization Voice] Measure 214
                             {
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 3 Vocalization Voice] Measure 215
                             {
-                                r4.
                                 r4
                             }
                         }
@@ -17920,12 +21212,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 216
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -17989,22 +21282,30 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
-                                c'4 \repeatTie
+                                c'2 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 220
                             {
-                                c'2. \ppp \repeatTie
+                                c'4. \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                r8
+                            }
                             % [B 3 Vocalization Voice] Measure 221
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 1
+                            }
+                            % [B 3 Vocalization Voice] Measure 222
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -18103,31 +21404,23 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
+                                c'2 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 226
                             {
-                                c'4. \ppp \repeatTie
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
+                                r2..
                             }
                             % [B 3 Vocalization Voice] Measure 227
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 7/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [B 3 Vocalization Voice] Measure 228
-                            {
-                                r8
+                                r4.
                             }
                         }
                         {
@@ -18150,10 +21443,7 @@
                             }
                         }
                         {
-                            {
-                                r4
-                            }
-                            % [B 3 Vocalization Voice] Measure 229
+                            % [B 3 Vocalization Voice] Measure 228
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18584,7 +21874,7 @@
                             % [B 3 Percussion Voice] Measure 178
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g1 \ppp \repeatTie \>
                             }
                             % [B 3 Percussion Voice] Measure 179
                             {
@@ -18597,7 +21887,7 @@
                         {
                             % [B 3 Percussion Voice] Measure 180
                             {
-                                r4. \!
+                                r4 \!
                             }
                         }
                         {
@@ -18609,7 +21899,8 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                         }
                         {
@@ -18649,7 +21940,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
+                                g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
@@ -18699,7 +21990,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \( \startTextSpan \<
+                                g'8 :64 \( \startTextSpan \<
+                                g'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 182
                             {
@@ -18721,11 +22013,16 @@
                             }
                             % [B 3 Percussion Voice] Measure 183
                             {
-                                r2
-                                r8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
+                            % [B 3 Percussion Voice] Measure 184
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \p \( [
@@ -18737,10 +22034,11 @@
                         {
                             {
                                 r4
+                                r4
                             }
-                            % [B 3 Percussion Voice] Measure 184
+                            % [B 3 Percussion Voice] Measure 185
                             {
-                                r4.
+                                r8
                             }
                         }
                         {
@@ -18765,49 +22063,11 @@
                         {
                             {
                                 r8
+                                r4
                             }
-                        }
-                        {
-                            % [B 3 Percussion Voice] Measure 185
+                            % [B 3 Percussion Voice] Measure 186
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
+                                r4
                             }
                         }
                         {
@@ -18854,22 +22114,28 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 3 Percussion Voice] Measure 186
-                            {
-                                g'2.. :32 \repeatTie
+                                g'2. :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 187
                             {
                                 g'4. :32 \repeatTie
+                                g'4 :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 188
+                            {
                                 g'4 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 188
+                            {
+                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [B 3 Percussion Voice] Measure 189
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -18905,193 +22171,17 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \( \startTextSpan \<
-                            }
-                            % [B 3 Percussion Voice] Measure 189
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2. \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 190
                             {
-                                g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \( \startTextSpan \<
-                            }
                             % [B 3 Percussion Voice] Measure 191
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            % [B 3 Percussion Voice] Measure 192
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
-                                g8 \ppp \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
-                            }
-                            % [B 3 Percussion Voice] Measure 193
-                            {
-                                g'4. :32 \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \ppp \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                            }
-                            % [B 3 Percussion Voice] Measure 194
-                            {
-                                r4
-                            }
-                        }
-                        {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -19140,7 +22230,12 @@
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 195
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            % [B 3 Percussion Voice] Measure 192
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -19175,15 +22270,179 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g1 \ppp \( \startTextSpan
+                                g2. \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'4 :32 \( \startTextSpan \<
+                            }
+                            % [B 3 Percussion Voice] Measure 193
+                            {
+                                g'4 :32 \p \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \ppp \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                            }
+                            % [B 3 Percussion Voice] Measure 194
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'4 :32 \( \startTextSpan \<
+                                g'4. :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 195
+                            {
+                                g'8 :64 \p \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4 \( \startTextSpan \<
+                                g2 \repeatTie
+                            }
                             % [B 3 Percussion Voice] Measure 196
                             {
-                                r4
+                                g2 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -19229,8 +22488,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
-                                g'4 :32 \repeatTie
+                                g'4. :32 \p \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -19305,12 +22563,12 @@
                             }
                         }
                         {
+                            % [B 3 Percussion Voice] Measure 199
                             {
                                 r4
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 199
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -19319,24 +22577,64 @@
                         }
                         {
                             {
-                                r8.
-                                r2.
+                                r16
+                                r2
                             }
                             % [B 3 Percussion Voice] Measure 200
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
+                        }
+                        {
                             % [B 3 Percussion Voice] Measure 201
                             {
-                                r4.
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4. \( \startTextSpan \<
+                                g4 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
                             }
                         }
                         {
+                            % [B 3 Percussion Voice] Measure 202
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \mf \(
@@ -19345,16 +22643,9 @@
                         }
                         {
                             {
-                                r8.
-                            }
-                            % [B 3 Percussion Voice] Measure 202
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r16
+                                r4
+                                r4
                             }
                         }
                         {
@@ -19394,8 +22685,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
+                                g2.. \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 204
                             {
@@ -19404,12 +22694,12 @@
                             }
                             % [B 3 Percussion Voice] Measure 205
                             {
-                                g4. \ppp \repeatTie
-                                g4 \repeatTie
+                                g1 \ppp \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 206
                             {
-                                g1 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 207
                             {
@@ -19520,15 +22810,15 @@
                             }
                             % [B 3 Percussion Voice] Measure 214
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
-                            }
-                            % [B 3 Percussion Voice] Measure 215
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 3 Percussion Voice] Measure 215
+                            {
+                                r4 \!
                             }
                         }
                         {
@@ -19540,14 +22830,15 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                             % [B 3 Percussion Voice] Measure 216
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -19615,14 +22906,14 @@
                         {
                             {
                                 r16
-                                r4
+                                r2
                             }
                             % [B 3 Percussion Voice] Measure 220
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -19668,7 +22959,7 @@
                             }
                             % [B 3 Percussion Voice] Measure 222
                             {
-                                g1 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -19747,20 +23038,14 @@
                         {
                             {
                                 r16
-                                r4
+                                r2
                             }
                             % [B 3 Percussion Voice] Measure 226
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r8
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 227
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -19801,9 +23086,9 @@
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 228
+                            % [B 3 Percussion Voice] Measure 227
                             {
-                                r8
+                                r4.
                             }
                         }
                         {
@@ -19816,14 +23101,54 @@
                         {
                             {
                                 r8.
-                                r4
                             }
-                            % [B 3 Percussion Voice] Measure 229
+                        }
+                        {
+                            % [B 3 Percussion Voice] Measure 228
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4. \( \startTextSpan \<
+                                g8 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                                 \bar "|."
                             }
                         }
@@ -20012,6 +23337,69 @@
                         {
                             % [B 4 Vocalization Voice] Measure 178
                             {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'2 \ppp \( \startTextSpan
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                            % [B 4 Vocalization Voice] Measure 179
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/4
+                            }
+                            % [B 4 Vocalization Voice] Measure 181
+                            {
+                                R1 * 7/8
+                            }
+                            % [B 4 Vocalization Voice] Measure 182
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [B 4 Vocalization Voice] Measure 183
+                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -20055,66 +23443,6 @@
                         {
                             {
                                 r8
-                                r4
-                            }
-                            % [B 4 Vocalization Voice] Measure 179
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/4
-                            }
-                            % [B 4 Vocalization Voice] Measure 181
-                            {
-                                R1 * 2
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [B 4 Vocalization Voice] Measure 183
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2
                             }
                             % [B 4 Vocalization Voice] Measure 184
                             {
@@ -20125,33 +23453,33 @@
                             }
                             % [B 4 Vocalization Voice] Measure 186
                             {
-                                R1 * 7/8
+                                R1 * 1
                             }
                             % [B 4 Vocalization Voice] Measure 187
                             {
-                                R1 * 5/8
-                            }
-                            % [B 4 Vocalization Voice] Measure 188
-                            {
-                                R1 * 7/8
+                                R1 * 5/4
                             }
                             % [B 4 Vocalization Voice] Measure 189
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                            }
+                            % [B 4 Vocalization Voice] Measure 190
+                            {
+                                R1 * 7/8
                             }
                             % [B 4 Vocalization Voice] Measure 191
                             {
-                                R1 * 7/4
-                            }
-                            % [B 4 Vocalization Voice] Measure 193
-                            {
-                                R1 * 5/8
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
+                            % [B 4 Vocalization Voice] Measure 193
+                            {
+                                r4.
+                                r8
+                            }
                         }
                         {
-                            % [B 4 Vocalization Voice] Measure 194
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -20186,25 +23514,29 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
+                                c'8 \ppp \( \startTextSpan
+                            }
+                            % [B 4 Vocalization Voice] Measure 194
+                            {
+                                c'4. \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r2
+                                r4.
                             }
                             % [B 4 Vocalization Voice] Measure 195
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 7/8
                             }
                             % [B 4 Vocalization Voice] Measure 196
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [B 4 Vocalization Voice] Measure 197
                             {
@@ -20212,16 +23544,17 @@
                             }
                             % [B 4 Vocalization Voice] Measure 198
                             {
-                                R1 * 2
+                                R1 * 3/4
+                            }
+                            % [B 4 Vocalization Voice] Measure 199
+                            {
+                                R1 * 7/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 200
-                            {
-                                r2
-                            }
                         }
                         {
+                            % [B 4 Vocalization Voice] Measure 201
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -20257,11 +23590,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
-                            }
-                            % [B 4 Vocalization Voice] Measure 201
-                            {
-                                c'4 \ppp \repeatTie
+                                c'4. \( \startTextSpan \<
+                                c'8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -20269,18 +23599,29 @@
                         {
                             {
                                 r8
-                                r4
                             }
                             % [B 4 Vocalization Voice] Measure 202
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/2
+                                R1 * 5/8
+                            }
+                            % [B 4 Vocalization Voice] Measure 203
+                            {
+                                R1 * 7/8
+                            }
+                            % [B 4 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/8
+                            }
+                            % [B 4 Vocalization Voice] Measure 205
+                            {
+                                R1 * 1
                             }
                             % [B 4 Vocalization Voice] Measure 206
                             {
-                                R1 * 1
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -20368,7 +23709,6 @@
                         {
                             % [B 4 Vocalization Voice] Measure 214
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -20402,12 +23742,7 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [B 4 Vocalization Voice] Measure 215
-                            {
-                                c'8 \ppp \repeatTie
+                                c'2. \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -20415,14 +23750,13 @@
                         {
                             {
                                 r4
-                                r2
                             }
-                            % [B 4 Vocalization Voice] Measure 216
+                            % [B 4 Vocalization Voice] Measure 215
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
@@ -20483,7 +23817,6 @@
                         {
                             % [B 4 Vocalization Voice] Measure 219
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -20517,27 +23850,26 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
-                                c'4 \repeatTie
-                            }
-                            % [B 4 Vocalization Voice] Measure 220
-                            {
-                                c'4 \ppp \repeatTie
+                                c'2.. \ppp \( \startTextSpan
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            {
-                                r8
-                                r4.
-                            }
-                            % [B 4 Vocalization Voice] Measure 221
+                            % [B 4 Vocalization Voice] Measure 220
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 5/8
+                            }
+                            % [B 4 Vocalization Voice] Measure 221
+                            {
+                                R1 * 1
+                            }
+                            % [B 4 Vocalization Voice] Measure 222
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -20602,17 +23934,9 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
-                            }
-                            % [B 4 Vocalization Voice] Measure 226
-                            {
-                                R1 * 5/8
+                                R1 * 2
                             }
                             % [B 4 Vocalization Voice] Measure 227
-                            {
-                                R1 * 7/8
-                            }
-                            % [B 4 Vocalization Voice] Measure 228
                             {
                                 R1 * 5/4
                                 \bar "|."
@@ -21056,6 +24380,127 @@
                         }
                         {
                             {
+                                r4..
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                \center-column
+                                                                    {
+                                                                        maracas
+                                                                        rolled
+                                                                    }
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                g'2 :32 \( \startTextSpan \<
+                            }
+                            % [B 4 Percussion Voice] Measure 179
+                            {
+                                g'4. :32 \repeatTie
+                                g'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 180
+                            {
+                                g'8 :64 \p \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                g4 \( \startTextSpan \<
+                                g4 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 181
+                            {
+                                g2.. \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 182
+                            {
+                                g1 \ppp \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 4 Percussion Voice] Measure 183
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                c'16 -\staccato \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
                                 r16
                                 r4
                                 r8
@@ -21106,28 +24551,64 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
                             }
-                            % [B 4 Percussion Voice] Measure 179
+                            % [B 4 Percussion Voice] Measure 184
                             {
                                 g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
-                            }
-                            % [B 4 Percussion Voice] Measure 180
-                            {
                                 g'4 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [B 4 Percussion Voice] Measure 185
                             {
-                                r8
                                 r4
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 181
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                maracas
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                maracas
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
+                                g'8 :64 -\accent \fp \( \startTextSpan
+                                g'4 :32 \repeatTie
+                                <> \)
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 4 Percussion Voice] Measure 186
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -21165,24 +24646,28 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 182
+                            % [B 4 Percussion Voice] Measure 187
                             {
-                                g1 \ppp \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 188
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 189
+                            {
+                                g2. \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 183
+                            % [B 4 Percussion Voice] Measure 190
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4..
+                                r4. \!
                             }
                         }
                         {
@@ -21231,177 +24716,9 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 184
-                            {
-                                g'4 :32 \p \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
-                            }
-                            % [B 4 Percussion Voice] Measure 185
-                            {
-                                g'4 :32 \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4
-                            }
-                        }
-                        {
-                            % [B 4 Percussion Voice] Measure 186
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wine glass"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 187
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
-                            }
-                            % [B 4 Percussion Voice] Measure 188
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
-                            }
-                            % [B 4 Percussion Voice] Measure 189
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 4 Percussion Voice] Measure 190
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \( \! \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
                             % [B 4 Percussion Voice] Measure 191
                             {
-                                g'2.. :32 \repeatTie
+                                g'1 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 192
                             {
@@ -21446,19 +24763,17 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g2 \repeatTie
+                                g2. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 193
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g8 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 194
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \ppp \(
@@ -21467,7 +24782,11 @@
                         }
                         {
                             {
-                                r4..
+                                r16
+                            }
+                            % [B 4 Percussion Voice] Measure 194
+                            {
+                                r4.
                             }
                         }
                         {
@@ -21514,17 +24833,20 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2 :32 \( \startTextSpan \<
+                                g'4. :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 195
                             {
-                                g'1 :32 \p \repeatTie
+                                g'2.. :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 196
+                            {
+                                g'4 :32 \p \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 196
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -21627,20 +24949,21 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g1 \( \startTextSpan \<
+                                g2. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 199
                             {
-                                g1 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 200
                             {
-                                g2 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [B 4 Percussion Voice] Measure 201
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'16 -\staccato \mf \(
@@ -21649,16 +24972,9 @@
                         }
                         {
                             {
-                                r8.
-                            }
-                            % [B 4 Percussion Voice] Measure 201
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r16
+                                r4
+                                r4
                             }
                         }
                         {
@@ -21703,8 +25019,7 @@
                             }
                             % [B 4 Percussion Voice] Measure 203
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 204
                             {
@@ -21714,12 +25029,12 @@
                             }
                             % [B 4 Percussion Voice] Measure 205
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 206
                             {
-                                g1 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -21911,16 +25226,12 @@
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
-                            }
-                            % [B 4 Percussion Voice] Measure 215
-                            {
-                                r8
+                                r8.
+                                r2.
                             }
                         }
                         {
+                            % [B 4 Percussion Voice] Measure 215
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -21956,12 +25267,13 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4 \( \startTextSpan \<
-                                g2 \repeatTie
+                                g4. \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 216
                             {
-                                g2. \ppp \repeatTie
+                                g4. \repeatTie
+                                g4 \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -22038,14 +25350,11 @@
                             {
                                 r16
                                 r4
-                                r4
-                            }
-                            % [B 4 Percussion Voice] Measure 220
-                            {
-                                r4
+                                r2
                             }
                         }
                         {
+                            % [B 4 Percussion Voice] Measure 220
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -22081,8 +25390,8 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \( \startTextSpan \<
-                                g4. \repeatTie
+                                g4. \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 221
                             {
@@ -22090,7 +25399,7 @@
                             }
                             % [B 4 Percussion Voice] Measure 222
                             {
-                                g1 \ppp \repeatTie
+                                g2.. \ppp \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
@@ -22174,33 +25483,29 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \( \startTextSpan \<
+                                g1 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 226
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g4. \ppp \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 228
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 <> \stopTextSpan
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 229
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8 \!
+                                r8 \!
                                 \bar "|."
                             }
                         }
