@@ -7,6 +7,23 @@ from abjad.tools import selectortools
 from abjad.tools import spannertools
 
 
+def make_text_markup(text):
+    markup = markuptools.Markup.concat([
+        markuptools.Markup(r'\vstrut'),
+        markuptools.Markup(text),
+        ])
+    markup = markup.smaller().italic().pad_around(0.5).whiteout().box()
+    markup = markuptools.Markup(markup, 'up')
+    return markup
+
+
+def make_text_spanner(text):
+    markup_contents = make_text_markup(text).contents
+    markup = markuptools.Markup(markup_contents)
+    text_spanner = consort.ComplexTextSpanner(markup=markup)
+    return text_spanner
+
+
 class UnpitchedPercussion(object):
 
     SNARE_DRUM = pitchtools.NamedPitch('B4')
@@ -33,24 +50,6 @@ class UnpitchedPercussion(object):
     GLASS = pitchtools.NamedPitch('G3')
 
 
-chords = tuple(
-    pitchtools.PitchSegment(_) for _ in (
-        "d  c' f'  a'",
-        "df bf e'  a'",
-        "c  g  bf  ef' a'",
-        "b, gf a   d'  af'",
-        "c  g  b   e'  a'",
-        "f  bf ef' g'  c''",
-        "e  a  d'  fs' b'",
-        "ef af df' f'  bf'",
-        "d  g  c'  e'  a'",
-        "d  b  d'  f'  a'",
-        "d  f  c'  d'  g'",
-        "d  f  b   d'  g'",
-        )
-    )
-
-
 laissez_vibrer = consort.AttachmentExpression(
     attachments=[
         [
@@ -72,23 +71,6 @@ laissez_vibrer = consort.AttachmentExpression(
     )
 
 
-def make_text_markup(text):
-    markup = markuptools.Markup.concat([
-        markuptools.Markup(r'\vstrut'),
-        markuptools.Markup(text),
-        ])
-    markup = markup.smaller().italic().pad_around(0.5).whiteout().box()
-    markup = markuptools.Markup(markup, 'up')
-    return markup
-
-
-def make_text_spanner(text):
-    markup_contents = make_text_markup(text).contents
-    markup = markuptools.Markup(markup_contents)
-    text_spanner = consort.ComplexTextSpanner(markup=markup)
-    return text_spanner
-
-
 percussion_staff = consort.AttachmentExpression(
     attachments=[
         [
@@ -105,29 +87,39 @@ percussion_staff = consort.AttachmentExpression(
     )
 
 
-pitch_specifier = consort.PitchSpecifier(
-    pitch_segments=[
-        pitchtools.PitchClassSegment([0, 3, 2, 5, 11, 1]),
-        pitchtools.PitchClassSegment([11, 9]),
-        pitchtools.PitchClassSegment([2, 4, 5, 8]),
-        pitchtools.PitchClassSegment([0, 3, 5]),
-        pitchtools.PitchClassSegment([2, 4, 5, 8]),
-        ],
-    ratio=[1, 2, 1, 2, 1],
+pitch_handler = consort.PitchClassPitchHandler(
+    leap_constraint=6,
+    pitch_specifier=consort.PitchSpecifier(
+        pitch_segments=[
+            pitchtools.PitchClassSegment([0, 3, 2, 5, 11, 1]),
+            pitchtools.PitchClassSegment([11, 9]),
+            pitchtools.PitchClassSegment([2, 4, 5, 8]),
+            pitchtools.PitchClassSegment([0, 3, 5]),
+            pitchtools.PitchClassSegment([2, 4, 5, 8]),
+            ],
+        ratio=[1, 2, 1, 2, 1],
+        ),
+    pitch_operation_specifier=consort.PitchOperationSpecifier(
+        pitch_operations=[
+            pitchtools.Rotation(1),
+            None,
+            pitchtools.PitchOperation([
+                pitchtools.Transposition(1),
+                pitchtools.Inversion(),
+                ]),
+            None,
+            pitchtools.Rotation(-1),
+            pitchtools.Retrogression(),
+            ],
+        ratio=(1, 3, 1, 1, 2, 1),
+        ),
     )
 
 
-pitch_operation_specifier = consort.PitchOperationSpecifier(
-    pitch_operations=[
-        pitchtools.Rotation(1),
-        None,
-        pitchtools.PitchOperation([
-            pitchtools.Transposition(1),
-            pitchtools.Inversion(),
-            ]),
-        None,
-        pitchtools.Rotation(-1),
-        pitchtools.Retrogression(),
+chordal_register_handler = consort.RegisterHandler(
+    logical_tie_expressions=[
+        consort.ChordExpression(chord_expr=[-3, 0, 5, 6]),
+        consort.ChordExpression(chord_expr=[-3, 0, 1, 5]),
+        consort.ChordExpression(chord_expr=[-2, 0, 1, 5]),
         ],
-    ratio=(1, 3, 1, 1, 2, 1),
     )
