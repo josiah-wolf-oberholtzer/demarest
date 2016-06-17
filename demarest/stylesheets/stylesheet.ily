@@ -80,7 +80,7 @@
 }
 
 \layout {
-    \accidentalStyle modern-cautionary
+    \accidentalStyle neo-modern-cautionary
     ragged-bottom = ##f
     ragged-last = ##f
     ragged-right = ##t

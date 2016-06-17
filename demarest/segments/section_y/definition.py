@@ -184,3 +184,24 @@ segment_maker.add_setting(
     b_3_voice=music_specifiers,
     b_4_voice=music_specifiers,
     )
+
+### PITCHED PERCUSSION ###
+
+color = consort.Color.from_x11('Lavender').rotate_hue(-0.1).scale_luminance(-1)
+timespan_maker = abjad.new(
+    demarest.materials.sparse_timespan_maker,
+    #playing_groupings=[1, 2, 2, 1, 1, 1, 2],
+    silence_talea__denominator=2,
+    fuse_groups=True,
+    )
+segment_maker.add_setting(
+    color=color,
+    timespan_maker=timespan_maker,
+    timespan_identifier=[1, -1, 1, -1, 2],
+    t_1_percussion=abjad.new(
+        demarest.materials.pitched_shimmer,
+        ),
+    t_2_percussion=abjad.new(
+        demarest.materials.pitched_shimmer,
+        ),
+    )

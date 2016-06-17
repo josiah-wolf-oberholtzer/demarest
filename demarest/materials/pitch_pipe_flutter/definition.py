@@ -13,16 +13,6 @@ accents = consort.AttachmentExpression(
     selector=selectortools.select_pitched_runs()[0],
     )
 
-breathing = consort.AttachmentExpression(
-    attachments=[
-        indicatortools.Articulation('upbow'),
-        indicatortools.Articulation('downbow'),
-        ],
-    selector=selectortools.Selector()
-        .by_leaves()
-        .by_logical_tie(pitched=True)[0]
-    )
-
 performance_instruction = abbreviations.make_text_spanner('pitch pipe')
 
 swells = consort.DynamicExpression(
@@ -34,7 +24,6 @@ swells = consort.DynamicExpression(
 
 pitch_pipe_flutter = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        breathing=breathing,
         performance_instruction=performance_instruction,
         swells=swells,
         ),
@@ -44,7 +33,7 @@ pitch_pipe_flutter = consort.MusicSpecifier(
             left_counts=[0, 0, 1],
             outer_divisions_only=True,
             ),
-        denominators=[16, 16, 8, 8],
+        denominators=[8],
         division_masks=[
             rhythmmakertools.SustainMask(
                 pattern=patterntools.Pattern(

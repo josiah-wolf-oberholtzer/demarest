@@ -1,9 +1,9 @@
-% 2016-06-16 20:30
+% 2016-06-16 23:03
 
 % package "abjad" @ 458a077 [josiah/demarest] (2016-06-11 12:39:40)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ cbef6b5 [master] (2016-06-14 23:09:27)
-% package "demarest" @ ce46d2c [master] (2016-06-16 20:18:43)
+% package "consort" @ 1d0a168 [master] (2016-06-16 22:37:58)
+% package "demarest" @ b7f4014 [master] (2016-06-16 22:36:08)
 
 \version "2.19.41"
 \language "english"
@@ -294,6 +294,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -302,6 +305,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -369,6 +375,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -381,6 +390,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -408,6 +420,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -423,6 +440,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -483,6 +503,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -491,6 +514,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -515,6 +541,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -530,6 +561,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -597,6 +631,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -609,6 +646,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -656,10 +696,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -728,6 +774,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -737,6 +786,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -801,10 +853,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -866,6 +924,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -874,6 +935,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -939,6 +1003,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -946,6 +1013,9 @@
                             {
                                 c'4. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1003,6 +1073,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -1010,6 +1083,9 @@
                             {
                                 c'8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1068,6 +1144,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -1077,6 +1156,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1133,6 +1215,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2. \( \startTextSpan \<
                             }
@@ -1140,6 +1225,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1161,6 +1249,11 @@
                         {
                             % [A 1 Vocalization Voice] Measure 228
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -1176,6 +1269,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1267,6 +1363,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'1 :32 \( \startTextSpan \<
                             }
@@ -1274,6 +1373,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1312,10 +1414,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g2 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1381,6 +1489,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
@@ -1389,6 +1500,9 @@
                             {
                                 g'2 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1426,9 +1540,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1440,6 +1560,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -1455,6 +1580,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1509,6 +1637,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2.. :32 \( \startTextSpan \<
                             }
@@ -1516,6 +1647,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1585,6 +1719,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                             }
@@ -1593,6 +1730,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1638,6 +1778,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( \startTextSpan
                             }
@@ -1645,6 +1788,9 @@
                             {
                                 g'1 :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1702,10 +1848,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1758,6 +1910,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
@@ -1770,6 +1925,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1838,6 +1996,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -1847,6 +2008,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1858,6 +2022,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -1873,6 +2042,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1928,6 +2100,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -1941,6 +2116,9 @@
                             {
                                 g2 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1987,6 +2165,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -1994,6 +2175,9 @@
                             {
                                 g'2.. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2033,6 +2217,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -2040,6 +2227,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2128,6 +2318,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -2136,6 +2329,9 @@
                                 g'2 :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2150,6 +2346,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -2165,6 +2366,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2208,6 +2412,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -2219,6 +2426,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2286,6 +2496,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -2298,6 +2511,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2356,6 +2572,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -2368,6 +2587,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2405,6 +2627,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                             }
@@ -2412,6 +2637,9 @@
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2473,6 +2701,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -2495,6 +2726,9 @@
                                 g4. \repeatTie
                                 g8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2555,6 +2789,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -2564,6 +2801,9 @@
                                 g4 \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2618,6 +2858,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g4 \repeatTie
@@ -2631,6 +2874,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2692,10 +2938,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2757,6 +3009,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \( \startTextSpan \<
                                 g2 \repeatTie
@@ -2766,6 +3021,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2868,6 +3126,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -2876,6 +3137,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2944,10 +3208,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3004,6 +3274,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -3011,6 +3284,9 @@
                             {
                                 c'2.. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3058,6 +3334,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -3065,6 +3344,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3123,6 +3405,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                             }
@@ -3135,6 +3420,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3180,10 +3468,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3256,10 +3550,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3333,6 +3633,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -3340,6 +3643,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3421,6 +3727,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -3429,6 +3738,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3483,10 +3795,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3510,6 +3828,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -3525,6 +3848,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3571,10 +3897,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'2 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3636,6 +3968,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -3645,6 +3980,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3752,6 +4090,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \( \startTextSpan \<
                             }
@@ -3760,6 +4101,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3823,9 +4167,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3873,6 +4223,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'1 :32 \( \startTextSpan \<
                             }
@@ -3880,6 +4233,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3926,9 +4282,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4. :32 -\accent \fp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3973,11 +4335,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4023,6 +4391,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( \startTextSpan
                             }
@@ -4030,6 +4401,9 @@
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4089,6 +4463,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                             }
@@ -4097,6 +4474,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4141,10 +4521,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4206,6 +4592,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( \startTextSpan
                             }
@@ -4213,6 +4602,9 @@
                             {
                                 g'4. :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4273,10 +4665,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4323,6 +4721,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -4332,6 +4733,9 @@
                                 g'2 :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4396,10 +4800,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4454,10 +4864,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4504,6 +4920,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
@@ -4516,6 +4935,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4560,6 +4982,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -4568,6 +4993,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4614,6 +5042,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -4622,6 +5053,9 @@
                             {
                                 g'1 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4660,9 +5094,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4709,6 +5149,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                             }
@@ -4716,6 +5159,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4735,6 +5181,11 @@
                         {
                             % [A 2 Percussion Voice] Measure 194
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \p \( ^ \markup {
                                     \box
@@ -4754,6 +5205,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4791,6 +5245,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \( \startTextSpan \<
                                 g4. \repeatTie
@@ -4809,6 +5266,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4852,11 +5312,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 g'8 :64 \repeatTie ]
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4901,6 +5367,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -4908,6 +5377,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4974,6 +5446,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -5005,12 +5480,20 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 2 Percussion Voice] Measure 210
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -5026,6 +5509,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5090,6 +5576,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -5101,6 +5590,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5155,6 +5647,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -5164,6 +5659,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5239,6 +5737,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -5252,6 +5753,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5290,6 +5794,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( \startTextSpan \>
                             }
@@ -5297,6 +5804,9 @@
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5363,6 +5873,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -5381,6 +5894,9 @@
                                 g4. \repeatTie
                                 g8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5473,6 +5989,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -5481,6 +6000,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5544,9 +6066,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5609,6 +6137,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                             }
@@ -5617,6 +6148,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5676,6 +6210,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -5683,6 +6220,9 @@
                             {
                                 c'4. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5759,6 +6299,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -5767,6 +6310,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5841,10 +6387,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5921,6 +6473,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -5929,6 +6484,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5994,6 +6552,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -6003,6 +6564,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6060,10 +6624,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6088,6 +6658,11 @@
                         {
                             % [A 3 Vocalization Voice] Measure 223
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -6103,6 +6678,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6155,9 +6733,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6211,6 +6795,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -6219,6 +6806,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6316,6 +6906,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
@@ -6328,6 +6921,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6388,6 +6984,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -6396,6 +6995,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6407,6 +7009,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( ^ \markup {
                                     \box
@@ -6426,10 +7033,18 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -6445,6 +7060,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6490,6 +7108,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
@@ -6497,6 +7118,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6554,6 +7178,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -6573,6 +7200,9 @@
                                 g2 \repeatTie
                                 g8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6637,6 +7267,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                             }
@@ -6645,6 +7278,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6684,6 +7320,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -6691,6 +7330,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6753,6 +7395,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -6766,12 +7411,20 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [A 3 Percussion Voice] Measure 186
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -6787,10 +7440,18 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( ^ \markup {
                                     \box
@@ -6810,6 +7471,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6847,6 +7511,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -6860,6 +7527,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6906,9 +7576,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \p \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6947,9 +7623,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7002,6 +7684,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2.. :32 \( \startTextSpan \<
                             }
@@ -7009,6 +7694,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7046,9 +7734,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7118,6 +7812,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4. :32 \repeatTie
@@ -7130,6 +7827,9 @@
                             {
                                 g'2 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7172,6 +7872,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                             }
@@ -7179,6 +7882,9 @@
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7217,6 +7923,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g4 \repeatTie
@@ -7239,6 +7948,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7293,6 +8005,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -7319,6 +8034,9 @@
                             {
                                 g2.. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7352,6 +8070,11 @@
                         {
                             % [A 3 Percussion Voice] Measure 211
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -7367,6 +8090,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7411,6 +8137,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -7428,6 +8157,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7495,6 +8227,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -7502,6 +8237,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7556,6 +8294,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -7565,11 +8306,19 @@
                                 g4 \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -7585,6 +8334,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7638,10 +8390,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7694,9 +8452,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7803,6 +8567,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -7810,6 +8577,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7880,6 +8650,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -7888,6 +8661,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7958,6 +8734,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -7966,6 +8745,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8042,6 +8824,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -8049,6 +8834,9 @@
                             {
                                 c'2. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8114,6 +8902,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -8123,6 +8914,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8168,6 +8962,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -8176,6 +8973,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8254,6 +9054,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -8262,6 +9065,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8320,6 +9126,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                             }
@@ -8328,6 +9137,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8384,10 +9196,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8402,6 +9220,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -8417,6 +9240,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8477,6 +9303,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -8485,6 +9314,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8580,10 +9412,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8630,6 +9468,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
@@ -8638,6 +9479,9 @@
                                 g'4. :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8703,6 +9547,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -8710,6 +9557,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8757,6 +9607,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -8765,6 +9618,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8802,9 +9658,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4. :32 -\accent \fp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8843,6 +9705,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                             }
@@ -8851,6 +9716,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8919,6 +9787,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2.. :32 \( \startTextSpan \<
                             }
@@ -8926,6 +9797,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8981,6 +9855,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \( \startTextSpan \<
                             }
@@ -8989,6 +9866,9 @@
                                 g'4. :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9033,6 +9913,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -9045,6 +9928,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9115,10 +10001,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9162,9 +10054,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4. :32 -\accent \fp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9203,6 +10101,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                             }
@@ -9221,6 +10122,9 @@
                             {
                                 g2. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9273,6 +10177,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                             }
@@ -9284,6 +10191,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9322,6 +10232,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -9330,6 +10243,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9397,9 +10313,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2.. :32 \p \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9439,6 +10361,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -9447,6 +10372,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9484,6 +10412,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                             }
@@ -9491,6 +10422,9 @@
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9528,10 +10462,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \ppp \( \startTextSpan
                                 g2 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9628,6 +10568,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -9654,6 +10597,9 @@
                             {
                                 g2.. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9665,6 +10611,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -9680,6 +10631,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9742,6 +10696,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -9754,6 +10711,9 @@
                                 g2 \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9815,6 +10775,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -9824,6 +10787,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9899,6 +10865,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -9911,6 +10880,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9935,6 +10907,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -9950,6 +10927,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9994,6 +10974,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -10012,6 +10995,9 @@
                                 g4. \repeatTie
                                 g8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10231,6 +11217,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2.. \( \startTextSpan \<
                             }
@@ -10249,6 +11238,9 @@
                             {
                                 c'8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10302,9 +11294,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10349,6 +11347,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -10361,6 +11362,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10405,6 +11409,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -10424,6 +11431,9 @@
                                 c'4 \repeatTie
                                 c'8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10481,6 +11491,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                             }
@@ -10488,6 +11501,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10544,6 +11560,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2. \( \startTextSpan \<
                             }
@@ -10551,6 +11570,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10599,6 +11621,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -10607,6 +11632,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10651,56 +11679,102 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'8 \( \startTextSpan
-                                b'2 \repeatTie
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 168
                             {
-                                b'2.. \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                cs'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 169
                             {
-                                cs'4.
-                                cs'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                bf'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 170
                             {
-                                cs'8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -10715,51 +11789,53 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'2 \( \startTextSpan
-                            }
-                            % [T 1 Percussion Voice] Measure 172
-                            {
-                                b'4 \repeatTie
+                                c''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r8
+                                r4.
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 172
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 1 Percussion Voice] Measure 173
@@ -10769,111 +11845,151 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                f''8 \( \startTextSpan
-                                f''2 \repeatTie
+                                f''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 174
                             {
-                                f''4. \repeatTie
-                                f''8 \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c''8 \( \startTextSpan
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 1 Percussion Voice] Measure 175
                             {
-                                c''4. \repeatTie
-                                c''4 \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 176
-                            {
-                                b'2..
-                            }
-                            % [T 1 Percussion Voice] Measure 177
-                            {
-                                b'4. \repeatTie
-                                b'4 \repeatTie
+                                b'8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 176
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 177
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
                             % [T 1 Percussion Voice] Measure 178
                             {
                                 \stopStaff
@@ -10890,52 +12006,54 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'4 \( \startTextSpan
-                            }
-                            % [T 1 Percussion Voice] Measure 180
-                            {
-                                a'4. \repeatTie
-                                a'8 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r8
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 180
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 1 Percussion Voice] Measure 181
                             {
@@ -10954,53 +12072,55 @@
                         {
                             % [T 1 Percussion Voice] Measure 183
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'4. \( \startTextSpan
-                                b'4 \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 184
-                            {
-                                b'4. \repeatTie
-                                b'8 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r8
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 184
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 1 Percussion Voice] Measure 185
                             {
@@ -11018,56 +12138,102 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2.. \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2.
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 187
                             {
-                                a'4. \repeatTie
-                                a'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 188
                             {
-                                b'4.
-                                b'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 189
                             {
-                                b'8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -11082,100 +12248,106 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2 \( \startTextSpan
-                            }
-                            % [T 1 Percussion Voice] Measure 191
-                            {
-                                a'4 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'4 \( \startTextSpan
-                            }
-                            % [T 1 Percussion Voice] Measure 192
-                            {
-                                b'2.. \repeatTie
-                                <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 191
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                        }
+                        {
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 192
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 1 Percussion Voice] Measure 193
                             {
@@ -11185,59 +12357,96 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d''8 \( \startTextSpan
+                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 1 Percussion Voice] Measure 194
                             {
-                                d''2. \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 195
-                            {
-                                fs'2..
-                            }
-                            % [T 1 Percussion Voice] Measure 196
-                            {
-                                fs'2 \repeatTie
+                                g'8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                                r4.
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 195
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r2
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 196
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 1 Percussion Voice] Measure 197
                             {
@@ -11255,47 +12464,48 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'8 \( \startTextSpan
-                                a'2 \repeatTie
+                                ef''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 199
                             {
-                                a'8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -11307,109 +12517,151 @@
                         {
                             % [T 1 Percussion Voice] Measure 200
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                g'2.. \( \startTextSpan
+                                g'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 201
                             {
-                                g'4 \repeatTie
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                ef'8 \( \startTextSpan
+                                af'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 1 Percussion Voice] Measure 202
                             {
-                                ef'4. \repeatTie
-                                ef'4 \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 203
-                            {
-                                c''2..
-                            }
-                            % [T 1 Percussion Voice] Measure 204
-                            {
-                                c''4. \repeatTie
-                                c''4 \repeatTie
+                                ef'8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 203
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 204
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
                             % [T 1 Percussion Voice] Measure 205
                             {
                                 \stopStaff
@@ -11426,52 +12678,54 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                f''4 \( \startTextSpan
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 207
                             {
-                                f''4. \repeatTie
-                                f''8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r4
+                                r4.
                             }
                             % [T 1 Percussion Voice] Measure 208
                             {
@@ -11493,52 +12747,75 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'8 \( \startTextSpan
-                                a'4 \repeatTie
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 211
                             {
-                                a'4. \repeatTie
-                                a'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 212
                             {
-                                d'8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -11553,55 +12830,101 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2 \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 214
                             {
-                                a'1 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 215
                             {
-                                c'4.
-                                c'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 1 Percussion Voice] Measure 216
                             {
-                                c'8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -11617,52 +12940,43 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d''8 \( \startTextSpan
+                                d'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 1 Percussion Voice] Measure 218
                             {
-                                d''4. \repeatTie
-                                d''4 \repeatTie
+                                a'8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r8
+                                r4
+                                r4.
                             }
                             % [T 1 Percussion Voice] Measure 219
                             {
@@ -11671,50 +12985,56 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2 \( \startTextSpan
-                            }
-                            % [T 1 Percussion Voice] Measure 220
-                            {
-                                a'4. \repeatTie
-                                a'4 \repeatTie
+                                c'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 220
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
                             % [T 1 Percussion Voice] Measure 221
                             {
                                 r2
@@ -11723,59 +13043,107 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                fs'4. \( \startTextSpan
-                            }
-                            % [T 1 Percussion Voice] Measure 222
-                            {
-                                fs'2.. \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 223
-                            {
-                                af'4.
-                                af'4 \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 224
-                            {
-                                af'4. \repeatTie
+                                ef''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 222
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 223
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                af'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 224
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 1 Percussion Voice] Measure 225
@@ -11791,47 +13159,27 @@
                         {
                             % [T 1 Percussion Voice] Measure 226
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                f'2. \( \startTextSpan
+                                af'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r4
+                                r2..
                             }
                             % [T 1 Percussion Voice] Measure 227
                             {
@@ -11841,50 +13189,42 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d'8 \( \startTextSpan
+                                d'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 1 Percussion Voice] Measure 228
                             {
-                                d'4. \repeatTie
+                                f''8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
                                 r4
                                 \bar "|."
                             }
@@ -12100,6 +13440,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -12119,6 +13462,9 @@
                             {
                                 c'8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12167,6 +13513,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -12174,6 +13523,9 @@
                             {
                                 c'2 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12221,6 +13573,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2. \( \startTextSpan \<
                             }
@@ -12229,6 +13584,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12279,6 +13637,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -12292,6 +13653,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12348,6 +13712,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -12356,6 +13723,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12401,6 +13771,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -12414,6 +13787,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12458,6 +13834,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -12470,6 +13849,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12521,56 +13903,81 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d'4. \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 168
-                            {
-                                d'2.. \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 169
-                            {
-                                e''4.
-                                e''8 \repeatTie
+                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 168
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 169
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 2 Percussion Voice] Measure 170
                             {
@@ -12579,52 +13986,54 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                bf'4 \( \startTextSpan
-                                bf'2 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 171
-                            {
-                                bf'2.. \repeatTie
+                                d'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r8
+                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 171
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 2 Percussion Voice] Measure 172
                             {
@@ -12643,50 +14052,53 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                cs'4. \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 174
-                            {
-                                cs'4. \repeatTie
+                                cs'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 174
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r2
                             }
                             % [T 2 Percussion Voice] Measure 175
@@ -12706,51 +14118,75 @@
                         {
                             % [T 2 Percussion Voice] Measure 177
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'4. \( \startTextSpan
-                                b'4 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 178
                             {
-                                b'1 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 179
                             {
-                                a'8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -12765,55 +14201,80 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'4 \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 181
-                            {
-                                b'2.. \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 182
-                            {
-                                a'2
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 181
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 182
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 2 Percussion Voice] Measure 183
                             {
@@ -12823,50 +14284,44 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'8 \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 2 Percussion Voice] Measure 184
                             {
-                                b'4. \repeatTie
-                                b'4 \repeatTie
+                                b'8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r4
+                                r4
+                            }
                             % [T 2 Percussion Voice] Measure 185
                             {
                                 r4.
@@ -12875,54 +14330,70 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'8 \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 2 Percussion Voice] Measure 186
                             {
-                                a'1 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 187
-                            {
-                                b'4.
-                                b'4 \repeatTie
+                                b'8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r2..
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 187
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
                             % [T 2 Percussion Voice] Measure 188
                             {
                                 \stopStaff
@@ -12936,49 +14407,56 @@
                         {
                             % [T 2 Percussion Voice] Measure 189
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2. \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 190
-                            {
-                                a'2.. \repeatTie
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r8
+                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 190
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
                             % [T 2 Percussion Voice] Measure 191
                             {
                                 \stopStaff
@@ -12995,45 +14473,29 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'2. \( \startTextSpan
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r8
+                                r2
+                            }
                             % [T 2 Percussion Voice] Measure 193
                             {
                                 \stopStaff
@@ -13050,110 +14512,160 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                g'4 \( \startTextSpan
-                                g'4. \repeatTie
+                                ef'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r8
+                                r4.
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 195
                             {
-                                g'2.. \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                g'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 196
                             {
-                                ef'4
-                                <> \)
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2 \( \startTextSpan
+                                ef'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 197
                             {
-                                a'4. \repeatTie
-                                a'4 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 198
-                            {
-                                fs'2
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 198
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
                             }
                             % [T 2 Percussion Voice] Measure 199
                             {
@@ -13171,47 +14683,48 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                ef''8 \( \startTextSpan
-                                ef''2 \repeatTie
+                                fs'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 201
                             {
-                                ef''8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -13236,51 +14749,75 @@
                         {
                             % [T 2 Percussion Voice] Measure 204
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                f'4. \( \startTextSpan
-                                f'4 \repeatTie
+                                c''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 205
                             {
-                                f'1 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 206
                             {
-                                ef''8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -13295,54 +14832,80 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                f'4. \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 208
-                            {
-                                f'2.. \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 209
-                            {
-                                c''4.
+                                c'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 208
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 209
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 2 Percussion Voice] Measure 210
@@ -13361,100 +14924,109 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d'4 \( \startTextSpan
-                                d'4 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 212
-                            {
-                                d'4 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 212
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
                                 r2
                             }
                         }
                         {
                             % [T 2 Percussion Voice] Measure 213
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c''2. \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 214
-                            {
-                                c''1 \repeatTie
+                                c''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r8
+                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 214
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
                             % [T 2 Percussion Voice] Measure 215
                             {
                                 \stopStaff
@@ -13468,56 +15040,81 @@
                         {
                             % [T 2 Percussion Voice] Measure 216
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d''4. \( \startTextSpan
-                                d''4 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 217
-                            {
-                                d''4. \repeatTie
-                                d''4 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 218
-                            {
-                                a'4.
+                                c'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 217
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 218
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4.
                             }
                             % [T 2 Percussion Voice] Measure 219
@@ -13533,47 +15130,49 @@
                         {
                             % [T 2 Percussion Voice] Measure 220
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c'4. \( \startTextSpan
-                                c'4 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 221
                             {
-                                c'8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -13585,55 +15184,91 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d'8 \( \startTextSpan
+                                ef''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 2 Percussion Voice] Measure 222
                             {
-                                d'2.. \repeatTie
+                                c''8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 223
                             {
-                                f'4.
-                                f'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 224
                             {
-                                f'8 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -13643,56 +15278,79 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                e''4 \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 225
-                            {
-                                e''1 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 226
-                            {
-                                f'4.
+                                af'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r8
-                                r2
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 225
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 226
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 2 Percussion Voice] Measure 227
                             {
@@ -13710,25 +15368,27 @@
                         }
                         {
                             {
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                e''4 \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
+                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
                                 r4
                                 \bar "|."
                             }
@@ -13940,6 +15600,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                             }
@@ -13947,6 +15610,9 @@
                             {
                                 c'2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14000,6 +15666,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -14012,6 +15681,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14069,6 +15741,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -14082,6 +15757,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14135,6 +15813,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -14144,6 +15825,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14191,6 +15875,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -14203,6 +15890,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14250,6 +15940,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -14261,6 +15954,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14305,6 +16001,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -14317,6 +16016,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14355,47 +16057,27 @@
                         {
                             % [T 3 Percussion Voice] Measure 167
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'2. \( \startTextSpan
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r4
+                                r2..
                             }
                             % [T 3 Percussion Voice] Measure 168
                             {
@@ -14417,51 +16099,74 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c''8 \( \startTextSpan
-                                c''2 \repeatTie
+                                cs''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 171
                             {
-                                c''1 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                bf'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 172
                             {
-                                d'8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -14476,51 +16181,75 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'8 \( \startTextSpan
-                                b'2 \repeatTie
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 174
                             {
-                                b'2.. \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 175
                             {
-                                a'8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -14536,51 +16265,53 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'8 \( \startTextSpan
-                                b'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 177
-                            {
-                                b'4. \repeatTie
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 177
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 3 Percussion Voice] Measure 178
@@ -14590,55 +16321,81 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2. \( \startTextSpan
-                            }
-                            % [T 3 Percussion Voice] Measure 179
-                            {
-                                a'4. \repeatTie
-                                a'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 180
-                            {
-                                b'4.
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
+                                r2
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 179
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 180
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 3 Percussion Voice] Measure 181
@@ -14648,50 +16405,75 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'2 \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 182
                             {
-                                a'1 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 183
                             {
-                                b'8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -14715,158 +16497,188 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'4 \( \startTextSpan
-                                a'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 186
-                            {
-                                a'4 \repeatTie
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r2.
+                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 186
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                         }
                         {
                             % [T 3 Percussion Voice] Measure 187
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'4. \( \startTextSpan
-                                b'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 188
-                            {
-                                b'4. \repeatTie
-                                b'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 189
-                            {
-                                a'2
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 188
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 189
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
                             }
                         }
                         {
                             % [T 3 Percussion Voice] Measure 190
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                b'2.. \( \startTextSpan
-                            }
-                            % [T 3 Percussion Voice] Measure 191
-                            {
-                                b'2. \repeatTie
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r4
+                                r2
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 191
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                b'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 3 Percussion Voice] Measure 192
                             {
@@ -14884,52 +16696,54 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                af'4 \( \startTextSpan
-                                af'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 194
-                            {
-                                af'4 \repeatTie
+                                af'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
                                 r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 194
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                fs'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4.
                             }
                             % [T 3 Percussion Voice] Measure 195
@@ -14949,54 +16763,82 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                g'4. \( \startTextSpan
-                            }
-                            % [T 3 Percussion Voice] Measure 197
-                            {
-                                g'4. \repeatTie
-                                g'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 198
-                            {
-                                ef''2.
+                                g'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 197
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                ef''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 198
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                g'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
                             % [T 3 Percussion Voice] Measure 199
                             {
                                 \stopStaff
@@ -15010,51 +16852,76 @@
                         {
                             % [T 3 Percussion Voice] Measure 200
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                fs'2.. \( \startTextSpan
+                                fs'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r2
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 201
                             {
-                                fs'4. \repeatTie
-                                fs'4 \repeatTie
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
                             }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 202
                             {
-                                f''8
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
@@ -15070,51 +16937,53 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                ef'8 \( \startTextSpan
-                                ef'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 204
-                            {
-                                ef'4. \repeatTie
+                                ef''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 204
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 3 Percussion Voice] Measure 205
@@ -15124,55 +16993,81 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c'2. \( \startTextSpan
-                            }
-                            % [T 3 Percussion Voice] Measure 206
-                            {
-                                c'4. \repeatTie
-                                c'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 207
-                            {
-                                ef''4.
+                                c'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
+                                r2
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 206
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                f''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 207
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                c''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4.
                             }
                             % [T 3 Percussion Voice] Measure 208
@@ -15182,56 +17077,80 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'8 \( \startTextSpan
-                                a'2 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 209
-                            {
-                                a'4. \repeatTie
-                                a'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 210
-                            {
-                                d''4.
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r2
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 209
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 210
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r4
                             }
                             % [T 3 Percussion Voice] Measure 211
@@ -15250,51 +17169,54 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                a'4. \( \startTextSpan
-                            }
-                            % [T 3 Percussion Voice] Measure 213
-                            {
-                                a'4. \repeatTie
+                                c'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r4.
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 213
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
                             }
                             % [T 3 Percussion Voice] Measure 214
                             {
@@ -15303,58 +17225,81 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c'8 \( \startTextSpan
-                                c'2 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 215
-                            {
-                                c'4. \repeatTie
-                                c'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 216
-                            {
-                                a'4.
-                                a'8 \repeatTie
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r8
+                                r2
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 215
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 216
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 217
                             {
@@ -15363,55 +17308,81 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                c'4 \( \startTextSpan
-                                c'4 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 218
-                            {
-                                c'2. \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 219
-                            {
-                                d'4.
+                                c'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 218
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                d''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4.
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 219
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4
                                 r2
                             }
                             % [T 3 Percussion Voice] Measure 220
@@ -15430,45 +17401,29 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                ef'2. \( \startTextSpan
+                                c'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
+                            {
+                                r8
+                                r2
+                            }
                             % [T 3 Percussion Voice] Measure 222
                             {
                                 \stopStaff
@@ -15490,56 +17445,68 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                d''8 \( \startTextSpan
+                                f'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 3 Percussion Voice] Measure 225
                             {
-                                d''1 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 226
-                            {
-                                e''2
-                                e''8 \repeatTie
+                                d''8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r4.
+                                r2..
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 226
+                            {
+                                \clef "treble"
+                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                e''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                             % [T 3 Percussion Voice] Measure 227
                             {
@@ -15549,51 +17516,42 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
-                                af'8 \( \startTextSpan
+                                af'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                             }
                             % [T 3 Percussion Voice] Measure 228
                             {
-                                af'4 \repeatTie
+                                e''8 -\tenuto \laissezVibrer
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
                                 <> \)
-                                <> \stopTextSpan
+                                \clef "percussion"
                             }
                         }
                         {
                             {
-                                r8
+                                r4
                                 r4
                                 \bar "|."
                             }
@@ -15681,6 +17639,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -15689,6 +17650,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15759,6 +17723,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -15771,6 +17738,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15844,6 +17814,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -15857,6 +17830,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15930,6 +17906,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -15942,6 +17921,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16011,6 +17993,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -16020,6 +18005,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16068,6 +18056,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -16077,6 +18068,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16157,6 +18151,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -16170,6 +18167,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16231,10 +18231,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16295,11 +18301,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16360,6 +18372,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -16367,6 +18382,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16381,6 +18399,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -16396,6 +18419,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -16418,6 +18444,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -16433,6 +18464,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -16523,6 +18557,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'1 :32 \( \startTextSpan \<
                             }
@@ -16531,6 +18568,9 @@
                                 g'4. :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16598,6 +18638,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -16606,6 +18649,9 @@
                                 g2 \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16652,6 +18698,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
@@ -16664,6 +18713,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16674,6 +18726,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -16689,6 +18746,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -16725,10 +18785,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \ppp \( \startTextSpan
                                 g2 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16781,11 +18847,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16849,10 +18921,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g2 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16900,6 +18978,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -16912,6 +18993,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16956,6 +19040,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -16968,6 +19055,9 @@
                             {
                                 g2. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17014,6 +19104,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -17021,6 +19114,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17052,6 +19148,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -17067,6 +19168,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17109,9 +19213,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17158,6 +19268,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                             }
@@ -17166,6 +19279,9 @@
                                 g'4. :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17221,6 +19337,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -17237,6 +19356,9 @@
                             {
                                 g'8 :64
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17275,6 +19397,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \! \startTextSpan \<
                             }
@@ -17282,6 +19407,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17353,6 +19481,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4. :32 \repeatTie
@@ -17362,6 +19493,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17406,6 +19540,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -17414,12 +19551,20 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [B 1 Percussion Voice] Measure 198
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -17435,6 +19580,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17471,9 +19619,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17568,6 +19722,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -17599,6 +19756,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17670,6 +19830,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -17693,6 +19856,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17747,6 +19913,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -17755,6 +19924,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17813,15 +19985,26 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -17837,6 +20020,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17880,10 +20066,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17943,9 +20135,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18002,6 +20200,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                             }
@@ -18010,6 +20211,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18114,6 +20318,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -18125,6 +20332,9 @@
                                 c'4 \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18194,10 +20404,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18268,6 +20484,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                             }
@@ -18275,6 +20494,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18319,9 +20541,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18398,6 +20626,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -18406,6 +20637,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18474,6 +20708,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -18483,6 +20720,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18531,6 +20771,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -18539,6 +20782,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18616,6 +20862,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -18628,6 +20877,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18688,6 +20940,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -18697,6 +20952,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18753,9 +21011,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2.. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18800,6 +21064,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -18807,6 +21074,9 @@
                             {
                                 c'4. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18832,6 +21102,11 @@
                         {
                             % [B 2 Vocalization Voice] Measure 225
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -18847,6 +21122,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -18952,9 +21230,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \p \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -18994,10 +21278,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19071,6 +21361,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -19083,6 +21376,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19120,6 +21416,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                             }
@@ -19127,6 +21426,9 @@
                             {
                                 g'4 :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19173,6 +21475,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \( \startTextSpan \<
                             }
@@ -19180,6 +21485,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19217,9 +21525,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19278,10 +21592,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19328,6 +21648,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -19345,6 +21668,9 @@
                             {
                                 g'8 :64
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19383,6 +21709,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \! \startTextSpan \<
                                 g4 \repeatTie
@@ -19396,6 +21725,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19443,10 +21775,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19531,10 +21869,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19572,6 +21916,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                             }
@@ -19579,6 +21926,9 @@
                             {
                                 g'4 :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19617,6 +21967,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -19625,6 +21978,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19671,6 +22027,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                             }
@@ -19689,6 +22048,9 @@
                                 g'4. :32
                                 g'8 :64 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19734,6 +22096,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -19741,6 +22106,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19807,9 +22175,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19861,10 +22235,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \p \( \startTextSpan
                                 g'4. :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19911,11 +22291,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 g'8 :64 \repeatTie ]
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -19959,9 +22345,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20054,6 +22446,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -20085,6 +22480,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20154,6 +22552,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                             }
@@ -20165,6 +22566,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20232,6 +22636,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -20240,6 +22647,9 @@
                             {
                                 g2. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20294,10 +22704,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20352,6 +22768,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \( \startTextSpan \<
                                 g2 \repeatTie
@@ -20360,6 +22779,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20403,10 +22825,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                                 g'4 :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20446,10 +22874,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20501,6 +22935,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -20519,6 +22956,9 @@
                                 g4. \repeatTie
                                 g8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20608,6 +23048,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -20615,6 +23058,9 @@
                             {
                                 c'8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20658,6 +23104,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -20666,6 +23115,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20729,9 +23181,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20800,11 +23258,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20861,6 +23325,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                             }
@@ -20873,6 +23340,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -20949,6 +23419,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -20957,6 +23430,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21026,6 +23502,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -21035,6 +23514,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21089,10 +23571,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21136,6 +23624,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -21151,6 +23644,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -21211,6 +23707,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -21220,6 +23719,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21280,6 +23782,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -21289,6 +23794,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21346,10 +23854,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21403,6 +23917,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
@@ -21411,6 +23928,9 @@
                             {
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21425,6 +23945,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -21440,6 +23965,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -21539,6 +24067,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
@@ -21548,6 +24079,9 @@
                                 g'4. :32 \repeatTie
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21632,6 +24166,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -21639,6 +24176,9 @@
                             {
                                 g'2.. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21683,16 +24223,27 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [B 3 Percussion Voice] Measure 173
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -21708,6 +24259,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -21744,9 +24298,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21816,6 +24376,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -21824,6 +24387,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21862,6 +24428,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \( \startTextSpan \<
                                 g2 \repeatTie
@@ -21881,6 +24450,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21939,10 +24511,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -21989,6 +24567,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -21997,6 +24578,9 @@
                             {
                                 g'2.. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22043,6 +24627,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( ^ \markup {
                                     \box
@@ -22058,6 +24647,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -22113,6 +24705,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \( \startTextSpan \<
                             }
@@ -22125,6 +24720,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22170,6 +24768,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -22177,6 +24778,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22223,9 +24827,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2. :32 \p \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22269,9 +24879,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22318,6 +24934,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -22325,6 +24944,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22388,6 +25010,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4. :32 \repeatTie
@@ -22396,6 +25021,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22434,6 +25062,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g2 \repeatTie
@@ -22442,6 +25073,9 @@
                             {
                                 g2 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22487,9 +25121,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \p \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22504,6 +25144,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -22519,6 +25164,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -22556,9 +25204,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22626,10 +25280,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22684,6 +25344,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -22710,6 +25373,9 @@
                             {
                                 g2.. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22737,6 +25403,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -22752,6 +25423,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -22795,6 +25469,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -22812,6 +25489,9 @@
                             {
                                 g1 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22879,6 +25559,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -22887,6 +25570,9 @@
                             {
                                 g2. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -22954,6 +25640,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -22961,6 +25650,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23015,10 +25707,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23079,9 +25777,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23139,10 +25843,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23232,6 +25942,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -23240,6 +25953,9 @@
                                 c'4. \repeatTie
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23306,6 +26022,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \( \startTextSpan \<
                             }
@@ -23313,6 +26032,9 @@
                             {
                                 c'4. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23369,9 +26091,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2 \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23433,10 +26161,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23513,6 +26247,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \ppp \( \startTextSpan
                             }
@@ -23520,6 +26257,9 @@
                             {
                                 c'4. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23589,10 +26329,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23632,6 +26378,11 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -23647,6 +26398,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -23670,6 +26424,11 @@
                         {
                             % [B 4 Vocalization Voice] Measure 210
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4 \ppp \( ^ \markup {
                                     \box
@@ -23685,6 +26444,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -23741,9 +26503,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23797,6 +26565,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -23805,6 +26576,9 @@
                             {
                                 c'4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23849,9 +26623,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'2.. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -23913,6 +26693,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
@@ -23922,6 +26705,9 @@
                                 c'4. \repeatTie
                                 c'8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24016,10 +26802,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2 \( \startTextSpan \<
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24066,6 +26858,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
@@ -24074,6 +26869,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24134,6 +26932,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -24141,6 +26942,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24193,6 +26997,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
@@ -24201,6 +27008,9 @@
                             {
                                 g'2 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24243,9 +27053,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4. :32 -\accent \fp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24285,10 +27101,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24351,6 +27173,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4 :32 \( \startTextSpan \<
                             }
@@ -24362,6 +27187,9 @@
                             {
                                 g'4. :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24426,6 +27254,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                             }
@@ -24438,6 +27269,9 @@
                             {
                                 g'8 :64 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24476,6 +27310,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4 \( \startTextSpan \<
                                 g4 \repeatTie
@@ -24488,6 +27325,9 @@
                             {
                                 g1 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24549,6 +27389,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'8 :64 \( \startTextSpan \<
                             }
@@ -24557,6 +27400,9 @@
                                 g'4. :32 \repeatTie
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24600,10 +27446,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan
                                 g'4 :32 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24643,6 +27495,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -24661,6 +27516,9 @@
                             {
                                 g2. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24713,6 +27571,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'2 :32 \( \startTextSpan \<
                             }
@@ -24724,6 +27585,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24762,6 +27626,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -24770,6 +27637,9 @@
                                 g4. \repeatTie
                                 g8 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24832,6 +27702,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
                                 g'4. :32 \( \startTextSpan \<
                             }
@@ -24843,6 +27716,9 @@
                             {
                                 g'4 :32 \p \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -24880,15 +27756,26 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \ppp \( \startTextSpan
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [B 4 Percussion Voice] Measure 197
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -24904,6 +27791,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -24948,6 +27838,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2. \( \startTextSpan \<
                             }
@@ -24959,6 +27852,9 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25013,6 +27909,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -25036,6 +27935,9 @@
                                 g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25094,6 +27996,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g2.. \( \startTextSpan \<
                             }
@@ -25102,6 +28007,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25152,11 +28060,17 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'8 :64 -\accent \fp \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 g'8 :64 \repeatTie ]
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25201,6 +28115,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -25213,6 +28130,9 @@
                             {
                                 g2. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25266,6 +28186,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -25275,6 +28198,9 @@
                                 g4. \repeatTie
                                 g4 \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25331,10 +28257,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g8 \ppp \( \startTextSpan
                                 g4. \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -25389,6 +28321,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
@@ -25401,12 +28336,20 @@
                             {
                                 g2.. \ppp \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             % [B 4 Percussion Voice] Measure 223
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
                                 g'4 :32 -\accent \fp \( ^ \markup {
                                     \box
@@ -25422,6 +28365,9 @@
                                                             }
                                     }
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -25482,6 +28428,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
                                 g1 \( \startTextSpan \<
                             }
@@ -25500,6 +28449,9 @@
                                 g4. \repeatTie
                                 g8 \repeatTie
                                 <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }

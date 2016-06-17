@@ -2,6 +2,7 @@
 import consort
 from abjad import override
 from abjad.tools import indicatortools
+from abjad.tools import instrumenttools
 from abjad.tools import markuptools
 from abjad.tools import pitchtools
 from abjad.tools import selectortools
@@ -26,6 +27,21 @@ def make_text_spanner(text):
     override(text_spanner).text_spanner.dash_fraction = 0.333
     override(text_spanner).text_spanner.dash_period = 2.0
     return text_spanner
+
+
+def make_instrument_markup(markup):
+    return (
+        markuptools.Markup(markup)
+            .italic()
+            .small()
+            .pad_around(0.5)
+            .bracket()
+            .pad_around(0.5)
+        )
+
+
+def make_instrument_column_markup(pieces):
+    return make_instrument_markup(markuptools.Markup.right_column(pieces))
 
 
 class UnpitchedPercussion(object):
@@ -125,3 +141,24 @@ chordal_register_handler = consort.RegisterHandler(
         consort.ChordExpression(chord_expr=[-2, 0, 1, 5]),
         ],
     )
+
+
+### TRIO A ###
+
+crotales = instrumenttools.Instrument()
+
+marimba = instrumenttools.Instrument()
+
+trio_a_percussion = instrumenttools.Instrument()
+
+### TRIO B ###
+
+vibraphone = instrumenttools.Instrument()
+
+trio_b_percussion = instrumenttools.Instrument()
+
+### TRIO C ###
+
+tubular_bells = instrumenttools.Instrument()
+
+trio_c_percussion = instrumenttools.Instrument()
