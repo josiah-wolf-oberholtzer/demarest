@@ -9,6 +9,7 @@ from demarest.materials import abbreviations
 
 pitched_shimmer = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
+        clef_spanner=consort.ClefSpanner('treble'),
         dynamic_expressions=consort.DynamicExpression(
             division_period=2,
             dynamic_tokens='ppp p ppp mf',
@@ -24,7 +25,7 @@ pitched_shimmer = consort.MusicSpecifier(
     pitch_handler=abbreviations.pitch_handler,
     register_handler=abbreviations.chordal_register_handler,
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-        denominators=[8],
+        denominators=[4, 8],
         division_masks=[
             rhythmmakertools.SustainMask(
                 patterntools.Pattern(indices=[0, -1]),
@@ -35,7 +36,7 @@ pitched_shimmer = consort.MusicSpecifier(
             ],
         extra_counts_per_division=[0, 0, 1, 0, 0, 1, 2],
         tie_specifier=rhythmmakertools.TieSpecifier(
-            tie_across_divisions=[True, False],
+            tie_across_divisions=True,
             ),
         ),
     )

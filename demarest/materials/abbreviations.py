@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import consort
+from abjad import override
 from abjad.tools import indicatortools
 from abjad.tools import markuptools
 from abjad.tools import pitchtools
@@ -21,6 +22,9 @@ def make_text_spanner(text):
     markup_contents = make_text_markup(text).contents
     markup = markuptools.Markup(markup_contents)
     text_spanner = consort.ComplexTextSpanner(markup=markup)
+    override(text_spanner).text_spanner.style = "dashed-line"
+    override(text_spanner).text_spanner.dash_fraction = 0.333
+    override(text_spanner).text_spanner.dash_period = 2.0
     return text_spanner
 
 
@@ -54,9 +58,9 @@ laissez_vibrer = consort.AttachmentExpression(
     attachments=[
         [
             indicatortools.LaissezVibrer(),
-            markuptools.Markup('L.V', 'up')
+            markuptools.Markup('LV', 'up')
                 .caps()
-                .tiny()
+                .fontsize(-4)
                 .pad_around(0.5)
                 .box()
                 .pad_around(0.5)
@@ -64,10 +68,7 @@ laissez_vibrer = consort.AttachmentExpression(
         ],
     selector=selectortools.Selector()
         .by_logical_tie(pitched=True)
-        .by_contiguity()
-        .by_length('==', 1)
-        .by_leaves()
-        [0]
+        [-1]
     )
 
 
