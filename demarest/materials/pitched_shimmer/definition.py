@@ -21,22 +21,8 @@ pitched_shimmer = consort.MusicSpecifier(
             ),
         ),
     color='purple',
-    pitch_handler=consort.AbsolutePitchHandler(
-        logical_tie_expressions=[
-            consort.ChordExpression(
-                chord_expr=_,
-                ) for _ in abbreviations.chords
-            ],
-        pitch_specifier=consort.PitchSpecifier(
-            pitch_segments=(
-                'D3',
-                'F3',
-                'G2',
-                ),
-            ratio=(1, 1, 1),
-            ),
-        pitch_operation_specifier=abbreviations.pitch_operation_specifier,
-        ),
+    pitch_handler=abbreviations.pitch_handler,
+    register_handler=abbreviations.chordal_register_handler,
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=[8],
         division_masks=[

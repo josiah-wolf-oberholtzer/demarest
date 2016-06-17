@@ -188,11 +188,7 @@ music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         bowed=demarest.abbreviations.make_text_spanner('bowed'),
         ),
-    pitch_handler=consort.PitchClassPitchHandler(
-        pitch_specifier=demarest.abbreviations.pitch_specifier,
-        pitch_operation_specifier=demarest.abbreviations.pitch_operation_specifier,
-        forbid_repetitions=True,
-        ),
+    pitch_handler=demarest.abbreviations.pitch_handler,
     register_handler=consort.RegisterHandler(),
     rhythm_maker=abjad.rhythmmakertools.NoteRhythmMaker(
         tie_specifier=abjad.rhythmmakertools.TieSpecifier(

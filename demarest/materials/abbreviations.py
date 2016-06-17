@@ -88,6 +88,7 @@ percussion_staff = consort.AttachmentExpression(
 
 
 pitch_handler = consort.PitchClassPitchHandler(
+    forbid_repetitions=True,
     leap_constraint=6,
     pitch_specifier=consort.PitchSpecifier(
         pitch_segments=[
