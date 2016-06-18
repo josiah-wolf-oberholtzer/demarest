@@ -1,9 +1,9 @@
-% 2016-06-16 23:03
+% 2016-06-18 01:13
 
-% package "abjad" @ 458a077 [josiah/demarest] (2016-06-11 12:39:40)
+% package "abjad" @ 5367392 [josiah/demarest] (2016-06-17 21:43:11)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 1d0a168 [master] (2016-06-16 22:37:58)
-% package "demarest" @ b7f4014 [master] (2016-06-16 22:36:08)
+% package "consort" @ a5f1091 [master] (2016-06-17 23:16:55)
+% package "demarest" @ 466cfd6 [master] (2016-06-16 23:59:52)
 
 \version "2.19.41"
 \language "english"
@@ -11647,28 +11647,35 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 1 Percussion Staff" {
+                \context PercussionStaff = "T 1 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                percussion
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                perc.
+                                            }
+                    }
+                } {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
                     \bar "||"
                     \context Voice = "T 1 Percussion Voice" {
                         {
@@ -13870,28 +13877,35 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 2 Percussion Staff" {
+                \context PercussionStaff = "T 2 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                percussion
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                perc.
+                                            }
+                    }
+                } {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
                     \bar "||"
                     \context Voice = "T 2 Percussion Voice" {
                         {
@@ -16030,28 +16044,35 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 3 Percussion Staff" {
+                \context PercussionStaff = "T 3 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                percussion
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                perc.
+                                            }
+                    }
+                } {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
                     \bar "||"
                     \context Voice = "T 3 Percussion Voice" {
                         {

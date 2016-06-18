@@ -2,7 +2,6 @@
 import consort
 from abjad import override
 from abjad.tools import indicatortools
-from abjad.tools import instrumenttools
 from abjad.tools import markuptools
 from abjad.tools import pitchtools
 from abjad.tools import selectortools
@@ -145,20 +144,66 @@ chordal_register_handler = consort.RegisterHandler(
 
 ### TRIO A ###
 
-crotales = instrumenttools.Instrument()
+crotales = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('ct.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_markup('crotales'),
+    pitch_range=pitchtools.PitchRange("[C5, C7]"),
+    short_instrument_name_markup=make_instrument_markup('ct.'),
+    )
 
-marimba = instrumenttools.Instrument()
+marimba = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('mb.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_markup('marimba'),
+    pitch_range=pitchtools.PitchRange("[F2, C7]"),
+    short_instrument_name_markup=make_instrument_markup('mb.'),
+    )
 
-trio_a_percussion = instrumenttools.Instrument()
+trio_a_percussion = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('perc.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_column_markup(
+        ['percussion']),
+    short_instrument_name_markup=make_instrument_column_markup(
+        ['perc.']),
+    )
 
 ### TRIO B ###
 
-vibraphone = instrumenttools.Instrument()
+vibraphone = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('vb.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_markup('vibraphone'),
+    pitch_range=pitchtools.PitchRange("[F3, F5]"),
+    short_instrument_name_markup=make_instrument_markup('vb.'),
+    )
 
-trio_b_percussion = instrumenttools.Instrument()
+trio_b_percussion = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('perc.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_column_markup(
+        ['percussion']),
+    short_instrument_name_markup=make_instrument_column_markup(
+        ['perc.']),
+    )
 
 ### TRIO C ###
 
-tubular_bells = instrumenttools.Instrument()
+tubular_bells = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('t.b.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_column_markup(
+        ['tubular', 'bells']),
+    pitch_range=pitchtools.PitchRange("[F3, F5]"),
+    short_instrument_name_markup=make_instrument_markup('t.b.'),
+    )
 
-trio_c_percussion = instrumenttools.Instrument()
+trio_c_percussion = consort.Instrument(
+    instrument_change_markup=markuptools.Markup('perc.')
+        .pad_around(0.5).box(),
+    instrument_name_markup=make_instrument_column_markup(
+        ['percussion']),
+    short_instrument_name_markup=make_instrument_column_markup(
+        ['perc.']),
+    )

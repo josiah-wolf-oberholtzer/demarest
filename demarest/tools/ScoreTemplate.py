@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+from abjad import attach
 import consort
 from abjad.tools import instrumenttools
 from abjad.tools import markuptools
@@ -80,6 +81,7 @@ class ScoreTemplate(consort.ScoreTemplate):
     ### SPECIAL METHODS ###
 
     def __call__(self):
+        from demarest import abbreviations
 
         time_signature_context = scoretools.Context(
             context_name='TimeSignatureContext',
@@ -98,12 +100,17 @@ class ScoreTemplate(consort.ScoreTemplate):
             context_name='SectionStaffGroup',
             )
 
+        trio_a = self._make_performer('T', '1')
+        attach(abbreviations.trio_a_percussion, trio_a[1])
+
+        trio_b = self._make_performer('T', '2')
+        attach(abbreviations.trio_b_percussion, trio_b[1])
+
+        trio_c = self._make_performer('T', '3')
+        attach(abbreviations.trio_c_percussion, trio_c[1])
+
         trio = scoretools.StaffGroup(
-            [
-                self._make_performer('T', '1'),
-                self._make_performer('T', '2'),
-                self._make_performer('T', '3'),
-                ],
+            [trio_a, trio_b, trio_c],
             name='Trio',
             context_name='SectionStaffGroup',
             )
@@ -151,17 +158,13 @@ class ScoreTemplate(consort.ScoreTemplate):
         return staff_group
 
     def _make_percussion_staff(self, group, index, chorus=False):
+        instrument = None
         if chorus:
             instrument = instrumenttools.Percussion(
                 instrument_name_markup=self._make_column_markup(
                     ['shaker', 'maraca', 'castanet', 'wine glass']),
                 short_instrument_name_markup=self._make_column_markup(
                     ['sh.', 'mc.', 'cst.', 'w.g.']),
-                )
-        else:
-            instrument = instrumenttools.Percussion(
-                instrument_name_markup=self._make_markup('perc.'),
-                short_instrument_name_markup=self._make_markup('perc.'),
                 )
         percussion_staff = self._make_staff(
             '{} {} Percussion'.format(group, index),
