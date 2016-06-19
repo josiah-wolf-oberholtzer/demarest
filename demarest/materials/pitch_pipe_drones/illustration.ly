@@ -1,6 +1,6 @@
-% 2016-05-15 01:34
+% 2016-06-18 22:53
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -42,8 +42,21 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -63,11 +76,18 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'4. -\upbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4. \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
+                            % DYNAMIC: ppp
                             c'4 \ppp \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -79,7 +99,13 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            c'8 -\downbow \ppp ^ \markup {
+                            % DYNAMIC: ppp
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'8 \parenthesizeDynamic \ppp ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -92,6 +118,9 @@
                                                             "pitch pipe"
                                                         }
                                 }
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -102,8 +131,21 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -123,7 +165,10 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'4. -\upbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4. \startTextSpan \<
                             c'8 \repeatTie
                         }
                         {
@@ -132,7 +177,11 @@
                         }
                         % [Violin 1 Voice] Measure 5
                         {
+                            % DYNAMIC: ppp
                             c'4 \ppp \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -147,7 +196,20 @@
                     }
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            % DYNAMIC: ppp
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -167,11 +229,17 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'8 -\downbow \ppp \startTextSpan
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'8 \parenthesizeDynamic \ppp \startTextSpan
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             c'4 \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -208,8 +276,21 @@
                     }
                     {
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -229,18 +310,25 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'8 -\upbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'8 \startTextSpan \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
                             c'4 \repeatTie
                         }
                         {
+                            % DYNAMIC: ppp
                             c'8 \ppp \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
                             c'4 \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -252,7 +340,13 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            c'4 -\downbow \ppp ^ \markup {
+                            % DYNAMIC: ppp
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4 \ppp ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -265,6 +359,9 @@
                                                             "pitch pipe"
                                                         }
                                 }
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -275,8 +372,21 @@
                     }
                     {
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -296,13 +406,17 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'8 -\upbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'8 \startTextSpan \<
                         }
                         {
                             c'4 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
+                            % DYNAMIC: ppp
                             c'4 \ppp \repeatTie
                         }
                         {
@@ -315,7 +429,11 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
+                            % DYNAMIC: niente
                             c'8 \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -352,8 +470,21 @@
                     }
                     {
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -373,13 +504,17 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'4 -\downbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4 \startTextSpan \<
                         }
                         % [Viola Voice] Measure 2
                         {
                             c'8 \repeatTie
                         }
                         {
+                            % DYNAMIC: ppp
                             \once \override Hairpin.circled-tip = ##t
                             c'8 \ppp \repeatTie \>
                         }
@@ -388,7 +523,11 @@
                         }
                         % [Viola Voice] Measure 3
                         {
+                            % DYNAMIC: niente
                             c'8 \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -403,8 +542,21 @@
                     }
                     {
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -424,7 +576,10 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'8 -\upbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'8 \startTextSpan \<
                             c'4 \repeatTie
                         }
                         {
@@ -432,6 +587,7 @@
                         }
                         % [Viola Voice] Measure 5
                         {
+                            % DYNAMIC: ppp
                             \once \override Hairpin.circled-tip = ##t
                             c'8 \ppp \repeatTie \>
                         }
@@ -440,7 +596,11 @@
                         }
                         % [Viola Voice] Measure 6
                         {
+                            % DYNAMIC: niente
                             c'4 \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -479,8 +639,21 @@
                     {
                         % [Cello Voice] Measure 1
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -500,11 +673,18 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'4. -\downbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4. \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
+                            % DYNAMIC: ppp
                             c'4 \ppp \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -516,8 +696,21 @@
                     {
                         % [Cello Voice] Measure 3
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -537,11 +730,18 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'4. -\upbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4. \startTextSpan \<
                         }
                         % [Cello Voice] Measure 4
                         {
+                            % DYNAMIC: ppp
                             c'8 \ppp \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -552,8 +752,21 @@
                     }
                     {
                         {
+                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            "pitch pipe"
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -573,17 +786,24 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            c'4 -\downbow \startTextSpan \<
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'4 \startTextSpan \<
                         }
                         {
                             c'4 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
+                            % DYNAMIC: ppp
                             c'8 \ppp \repeatTie
                         }
                         {
                             c'4 \repeatTie
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -601,7 +821,13 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            c'8 -\upbow \ppp ^ \markup {
+                            % DYNAMIC: ppp
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'8 \ppp ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -614,6 +840,9 @@
                                                             "pitch pipe"
                                                         }
                                 }
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {

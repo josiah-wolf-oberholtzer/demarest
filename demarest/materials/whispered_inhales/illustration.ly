@@ -1,4 +1,4 @@
-% 2016-06-07 21:00
+% 2016-06-18 22:53
 
 \version "2.19.41"
 \language "english"
@@ -43,7 +43,19 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -64,6 +76,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4. \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -101,6 +116,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -112,7 +130,12 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'8 -\accent \fp
                                 ^ \markup {
                                     \box
@@ -150,6 +173,9 @@
                                                         }
                                 }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -161,7 +187,19 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -182,6 +220,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4. \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -233,6 +274,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -248,7 +292,19 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -269,6 +325,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'8 \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -306,6 +365,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -343,7 +405,19 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -364,6 +438,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'8 \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -426,6 +503,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -437,7 +517,12 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4 -\accent \fp
                                 ^ \markup {
                                     \box
@@ -475,6 +560,9 @@
                                                         }
                                 }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -486,7 +574,19 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -507,6 +607,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'8 \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -594,6 +697,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -631,7 +737,19 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -652,6 +770,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4 \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -726,6 +847,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -741,7 +865,19 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -762,6 +898,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'8 \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -837,6 +976,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -876,7 +1018,19 @@
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -897,6 +1051,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4. \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -934,6 +1091,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -946,7 +1106,19 @@
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -967,6 +1139,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4. \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -1004,6 +1179,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -1015,7 +1193,19 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -1036,6 +1226,9 @@
                                 }
                             \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'4 \startTextSpan \<
                                 ^ \markup {
                                     \box
@@ -1097,6 +1290,9 @@
                                                 }
                                     }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -1114,7 +1310,12 @@
                     {
                         % [Cello Voice] Measure 7
                         {
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
                             \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             c'8 -\accent \fp
                                 ^ \markup {
                                     \box
@@ -1152,6 +1353,9 @@
                                                         }
                                 }
                             \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {

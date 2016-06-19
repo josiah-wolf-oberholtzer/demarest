@@ -1,4 +1,4 @@
-% 2016-06-16 22:43
+% 2016-06-18 22:53
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,8 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            <b' d''>16 -\accent -\accent -\staccato -\staccato \f \f \> [
+                            % DYNAMIC: f
+                            <b' d''>16 \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
@@ -56,11 +57,12 @@
                             \set stemRightBeamCount = 2
                             r16
                             \set stemLeftBeamCount = 2
-                            <e' a'>16 -\accent -\accent -\staccato -\staccato ]
+                            <e' a'>16 ]
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            <ds'' fs''>4 :32 \mf \mf
+                            % DYNAMIC: mf
+                            <ef'' gf''>4 :32 \mf
                         }
                     }
                     {
@@ -74,6 +76,7 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             a'16 -\accent -\staccato \f
                         }
                     }
@@ -85,7 +88,8 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            <b' d''>4. :32 -\accent -\accent \f \f \>
+                            % DYNAMIC: f
+                            <b' d''>4. :32 \parenthesizeDynamic \f \>
                             <b' d''>8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
@@ -99,7 +103,7 @@
                             a'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            <f' af'>16 -\staccato -\staccato
+                            <f' af'>16
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             r8
@@ -114,10 +118,11 @@
                             f''16 -\accent -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' f'>16 -\staccato -\staccato
+                            <c' f'>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
                             a'16 -\accent -\staccato \mf ]
                         }
@@ -133,6 +138,7 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             c''16 -\accent -\staccato \f
                         }
                     }
@@ -144,7 +150,8 @@
                     {
                         % [Violin 1 Voice] Measure 7
                         {
-                            <ds'' fs''>4 :32 -\accent -\accent \f \f
+                            % DYNAMIC: f
+                            <ef'' gf''>4 :32 \parenthesizeDynamic \f
                         }
                     }
                     {
@@ -181,11 +188,12 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             bf'16 -\accent -\staccato \f \>
                         }
                         % [Violin 2 Voice] Measure 2
                         \times 4/5 {
-                            <d' g'>16 -\staccato -\staccato [
+                            <d' g'>16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             cs'16 -\staccato
@@ -199,11 +207,13 @@
                             a'16 -\staccato ]
                         }
                         {
-                            <b' d''>8 :64 \mp \mp \<
+                            % DYNAMIC: mp
+                            <b' d''>8 :64 \mp \<
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            <a' c''>16 -\staccato -\staccato [
+                            <a' c''>16 [
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
                             b'16 -\staccato \mf ]
                         }
@@ -216,16 +226,18 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         \times 4/5 {
+                            % DYNAMIC: f
                             a'16 -\accent -\staccato \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             b'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a' c''>16 -\staccato -\staccato
+                            <a' c''>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
                             b'16 -\accent -\staccato \mf ]
                         }
@@ -238,7 +250,8 @@
                     }
                     {
                         {
-                            <g' c''>16 -\accent -\accent -\staccato -\staccato \f \f \< [
+                            % DYNAMIC: f
+                            <g' c''>16 \f \< [
                             \set stemLeftBeamCount = 2
                             ef'16 -\staccato ]
                         }
@@ -247,10 +260,11 @@
                         }
                         % [Violin 2 Voice] Measure 5
                         \times 4/5 {
+                            % DYNAMIC: fff
                             c''16 -\staccato \fff \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f' af'>16 -\staccato -\staccato
+                            <f' af'>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
                             a'16 -\staccato
@@ -258,6 +272,7 @@
                             r8 ]
                         }
                         {
+                            % DYNAMIC: mf
                             c''16 -\accent -\staccato \mf
                         }
                     }
@@ -269,7 +284,8 @@
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            <d'' f''>4. :32 -\accent -\accent \f \f \>
+                            % DYNAMIC: f
+                            <d'' f''>4. :32 \f \>
                         }
                         % [Violin 2 Voice] Measure 7
                         \times 2/3 {
@@ -277,8 +293,9 @@
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             af'16 -\accent -\staccato
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
-                            <f'' af''>16 -\staccato -\staccato \mf \mf ]
+                            <f'' af''>16 \mf ]
                         }
                     }
                     {
@@ -314,6 +331,7 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             \clef "treble"
                             e''16 -\accent -\staccato \f \> [
                             \set stemLeftBeamCount = 2
@@ -323,7 +341,7 @@
                             \set stemRightBeamCount = 2
                             cs''16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            <c'' f''>16 -\staccato -\staccato ]
+                            <c'' f''>16 ]
                         }
                         % [Viola Voice] Measure 2
                         \times 2/3 {
@@ -335,7 +353,8 @@
                             a'16 -\staccato ]
                         }
                         {
-                            <b' d''>8 :64 \mf \mf
+                            % DYNAMIC: mf
+                            <b' d''>8 :64 \mf
                             \clef "alto"
                         }
                     }
@@ -346,6 +365,7 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             \clef "treble"
                             a'16 -\accent -\staccato \f \>
                         }
@@ -355,6 +375,7 @@
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             b'16 -\accent -\staccato
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
                             a'16 -\staccato \mf ]
                             \clef "alto"
@@ -371,8 +392,9 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             \clef "treble"
-                            <gs' b'>8 :64 -\accent -\accent \f \f \>
+                            <gs' b'>8 :64 \f \>
                             <gs' b'>4 :32 \repeatTie
                         }
                         \times 2/3 {
@@ -386,6 +408,7 @@
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f''16 -\accent -\staccato
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
                             ef'16 -\staccato \mf ]
                             \clef "alto"
@@ -399,6 +422,7 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             \clef "treble"
                             f''16 -\accent -\staccato \f
                         }
@@ -415,8 +439,9 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             \clef "treble"
-                            a'16 -\accent -\staccato \f [
+                            a'16 -\accent -\staccato \parenthesizeDynamic \f [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -461,8 +486,9 @@
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/4 {
+                            % DYNAMIC: f
                             \clef "treble"
-                            <b' d''>16 -\accent -\accent -\staccato -\staccato \f \f \> [
+                            <b' d''>16 \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             d'16 -\staccato
@@ -474,7 +500,7 @@
                             bf'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b' e''>16 -\staccato -\staccato
+                            <b' e''>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
                             d'16 -\staccato
@@ -483,7 +509,8 @@
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <f'' af''>4 :32 -\accent -\accent \mf \mf
+                            % DYNAMIC: mf
+                            <f'' af''>4 :32 \mf
                             \clef "bass"
                         }
                     }
@@ -495,6 +522,7 @@
                     {
                         % [Cello Voice] Measure 3
                         {
+                            % DYNAMIC: f
                             \clef "treble"
                             a'16 -\accent -\staccato \f \> [
                             \set stemLeftBeamCount = 2
@@ -502,10 +530,11 @@
                             r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b' e''>16 -\accent -\accent -\staccato -\staccato
+                            <b' e''>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             a'16 -\staccato
+                            % DYNAMIC: mf
                             \set stemLeftBeamCount = 2
                             b'16 -\staccato \mf ]
                             \clef "bass"
@@ -521,6 +550,7 @@
                         \times 2/3 {
                             \clef "treble"
                             r16 [
+                            % DYNAMIC: f
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             a'16 -\accent -\staccato \f
@@ -536,8 +566,10 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
+                            % BAILING...
                             \clef "treble"
-                            <g' bf'>4 :32 -\accent -\accent \f \f
+                            <g' bf'>4 :32
                             \clef "bass"
                         }
                     }
@@ -548,8 +580,10 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
+                            % BAILING...
                             \clef "treble"
-                            f''16 -\accent -\staccato \f \> [
+                            f''16 -\accent -\staccato \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
@@ -558,6 +592,7 @@
                         }
                         % [Cello Voice] Measure 5
                         {
+                            % DYNAMIC: mf
                             ef'16 -\staccato \mf
                             \clef "bass"
                         }
@@ -569,8 +604,9 @@
                     }
                     {
                         {
+                            % DYNAMIC: f
                             \clef "treble"
-                            <d' f'>4 :32 -\accent -\accent \f \f
+                            <d' f'>4 :32 \f
                             \clef "bass"
                         }
                     }
@@ -588,6 +624,7 @@
                     {
                         % [Cello Voice] Measure 7
                         {
+                            % DYNAMIC: f
                             \clef "treble"
                             fs'16 -\accent -\staccato \f [
                             \set stemLeftBeamCount = 2

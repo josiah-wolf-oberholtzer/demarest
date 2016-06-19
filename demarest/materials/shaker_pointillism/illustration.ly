@@ -1,4 +1,4 @@
-% 2016-05-23 21:09
+% 2016-06-18 22:53
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,20 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            % DYNAMIC: ppp
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            maracas
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -62,7 +75,13 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp \startTextSpan
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -74,7 +93,14 @@
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -86,7 +112,14 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -98,7 +131,14 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -110,7 +150,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -122,7 +169,14 @@
                     {
                         % [Violin 1 Voice] Measure 5
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -137,7 +191,14 @@
                     }
                     {
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -148,7 +209,14 @@
                     {
                         % [Violin 1 Voice] Measure 7
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -186,7 +254,20 @@
                     }
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            % DYNAMIC: p
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            maracas
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -206,7 +287,13 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            g'16 -\staccato \ppp \startTextSpan
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p \startTextSpan
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -217,7 +304,14 @@
                     {
                         % [Violin 2 Voice] Measure 2
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -227,7 +321,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -238,7 +339,14 @@
                     {
                         % [Violin 2 Voice] Measure 3
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -250,7 +358,14 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -262,7 +377,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -272,7 +394,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -283,7 +412,14 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -293,7 +429,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -304,7 +447,14 @@
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -316,7 +466,14 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -354,7 +511,20 @@
                     }
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            % DYNAMIC: mf
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            maracas
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -374,7 +544,13 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            g'16 -\staccato \ppp \startTextSpan
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf \startTextSpan
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -385,7 +561,14 @@
                     {
                         % [Viola Voice] Measure 2
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -395,7 +578,14 @@
                     }
                     {
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -405,7 +595,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -416,7 +613,14 @@
                     {
                         % [Viola Voice] Measure 3
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -431,7 +635,14 @@
                     }
                     {
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -442,7 +653,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -453,7 +671,14 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -463,7 +688,14 @@
                     }
                     {
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -474,7 +706,14 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -514,7 +753,20 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            % DYNAMIC: p
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            maracas
+                                                        }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \whiteout
@@ -534,7 +786,13 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            g'16 -\staccato \ppp \startTextSpan
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p \startTextSpan
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -546,7 +804,14 @@
                     {
                         % [Cello Voice] Measure 2
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -558,7 +823,14 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -570,7 +842,14 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -581,7 +860,14 @@
                     }
                     {
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -591,7 +877,14 @@
                     }
                     {
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -602,7 +895,14 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: p
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \p
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -612,7 +912,14 @@
                     }
                     {
                         {
+                            % DYNAMIC: ppp
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             g'16 -\staccato \ppp
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -632,7 +939,14 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            g'16 -\staccato \ppp
+                            % DYNAMIC: mf
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            g'16 -\staccato \mf
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }

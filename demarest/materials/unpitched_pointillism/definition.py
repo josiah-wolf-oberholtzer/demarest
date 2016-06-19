@@ -5,7 +5,7 @@ from abjad.tools import rhythmmakertools
 from abjad.tools import selectortools
 
 
-percussion_pointillism = consort.MusicSpecifier(
+unpitched_pointillism = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamics=consort.DynamicExpression(
             division_period=2,

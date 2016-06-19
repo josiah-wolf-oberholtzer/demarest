@@ -45,3 +45,13 @@ colorSpan =
       \once\override PhrasingSlur.Y-offset = #0
       \once\override PhrasingSlur.shorten-pair = #'(-.95 . -1.65)
     #})
+    
+parenthesizeDynamic =
+#(define-event-function (parser location dyn) (ly:event?)
+    (make-dynamic-script
+        #{ \markup \concat {
+            \normal-text \italic \fontsize #2 (
+            \pad-x #0.2 #(ly:music-property dyn 'text)
+            \normal-text \italic \fontsize #2 )
+        }
+        #}))

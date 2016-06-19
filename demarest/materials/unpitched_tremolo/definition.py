@@ -6,7 +6,7 @@ from abjad.tools import selectortools
 from abjad.tools import spannertools
 
 
-percussion_tremolo = consort.MusicSpecifier(
+unpitched_tremolo = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expressions=consort.DynamicExpression(
             division_period=2,
