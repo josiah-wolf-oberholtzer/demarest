@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 14:21
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,6 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -186,7 +185,6 @@
                                                     f-
                                                 }
                                     }
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
@@ -212,8 +210,7 @@
                     }
                     {
                         % [Violin 1 Voice] Measure 3
-                        {
-                            % DYNAMIC: p
+                        \times 2/3 {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -261,6 +258,18 @@
                                                 }
                                     }
                             \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
                                     \whiteout
@@ -289,7 +298,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -409,8 +417,21 @@
                                                 }
                                     }
                         }
-                        {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/7 {
                             c'16 -\staccato [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -516,7 +537,6 @@
                                                     sh-
                                                 }
                                     }
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
@@ -546,7 +566,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -642,7 +661,6 @@
                                                     ch-
                                                 }
                                     }
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
@@ -693,8 +711,7 @@
                         }
                     }
                     {
-                        {
-                            % DYNAMIC: niente
+                        \times 2/3 {
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -733,6 +750,18 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             c'16 -\staccato \startTextSpan \< [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -803,7 +832,6 @@
                                     }
                         }
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
@@ -828,7 +856,7 @@
                                     }
                         }
                         % [Violin 2 Voice] Measure 3
-                        {
+                        \times 4/5 {
                             c'16 -\staccato [
                                 _ \markup {
                                     \whiteout
@@ -863,7 +891,18 @@
                                                     t-
                                                 }
                                     }
-                            % DYNAMIC: niente
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    t-
+                                                }
+                                    }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
@@ -893,7 +932,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -978,7 +1016,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -1086,9 +1123,20 @@
                                     }
                         }
                         % [Violin 2 Voice] Measure 5
-                        {
-                            % DYNAMIC: p
+                        \times 4/5 {
                             c'16 -\staccato \p [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1231,7 +1279,7 @@
                                     }
                         }
                         % [Violin 2 Voice] Measure 7
-                        {
+                        \times 2/3 {
                             c'16 -\staccato [
                                 _ \markup {
                                     \whiteout
@@ -1242,7 +1290,18 @@
                                                     sh-
                                                 }
                                     }
-                            % DYNAMIC: niente
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
@@ -1293,8 +1352,7 @@
                         }
                     }
                     {
-                        {
-                            % DYNAMIC: niente
+                        \times 4/5 {
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -1333,6 +1391,18 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             c'16 -\staccato \startTextSpan \< [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1403,7 +1473,6 @@
                                     }
                         }
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
@@ -1427,8 +1496,20 @@
                                                 }
                                     }
                         }
-                        {
+                        \times 2/3 {
                             c'16 -\staccato [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    s-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1462,7 +1543,6 @@
                                                     s-
                                                 }
                                     }
-                            % DYNAMIC: niente
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
@@ -1493,7 +1573,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -1589,8 +1668,20 @@
                                                 }
                                     }
                         }
-                        {
+                        \times 4/5 {
                             c'16 -\staccato [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1638,7 +1729,6 @@
                         }
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
@@ -1710,7 +1800,7 @@
                                     }
                         }
                         % [Viola Voice] Measure 6
-                        {
+                        \times 4/5 {
                             c'16 -\staccato [
                                 _ \markup {
                                     \whiteout
@@ -1745,7 +1835,18 @@
                                                     f-
                                                 }
                                     }
-                            % DYNAMIC: niente
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
+                                    }
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
@@ -1799,7 +1900,6 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -1943,7 +2043,6 @@
                                                     s-
                                                 }
                                     }
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
@@ -1969,8 +2068,8 @@
                     }
                     {
                         % [Cello Voice] Measure 3
-                        {
-                            % DYNAMIC: niente
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/7 {
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -2009,6 +2108,18 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             c'16 -\staccato \startTextSpan \< [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -2090,7 +2201,6 @@
                                                     sh-
                                                 }
                                     }
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                                 _ \markup {
@@ -2117,7 +2227,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -2189,8 +2298,20 @@
                                                 }
                                     }
                         }
-                        {
+                        \times 4/5 {
                             c'16 -\staccato [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -2238,7 +2359,6 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             c'16 -\staccato \p \> [
                                 _ \markup {
@@ -2297,7 +2417,6 @@
                                                     ch-
                                                 }
                                     }
-                            % DYNAMIC: niente
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
@@ -2330,7 +2449,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: p
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout

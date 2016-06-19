@@ -20,16 +20,17 @@ whispers:
 
 shakers:
 - `shaker_agitato`
-- `shaker_pointillism`
+- + `shaker_pointillism`
+- `shaker_repetitions`
 - `shaker_shimmer`
 
 guiro:
-- `guiro_pointillism`
+- + `guiro_pointillism`
 - `guiro_repetitions`
 - `guiro_shimmer`
 
 castanets:
-- `castanet_pointillism`
+- + `castanet_pointillism`
 - `castanet_repetitions`
 
 special effects:
