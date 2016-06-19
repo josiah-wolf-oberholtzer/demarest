@@ -10,36 +10,36 @@ timespan makers:
 ## Chorus
 
 pitch pipes:
-- `pitch_pipe_drones`
+- + `pitch_pipe_drone`
 - `pitch_pipe_flutter`
 
 whispers:
 - `whispered_inhales`
 - `whispered_pointillism`
-- `whispered_repetitions`
+- + `whispered_repetitions`
 
 shakers:
-- `shaker_agitato`
+- + `shaker_agitato`
 - + `shaker_pointillism`
-- `shaker_repetitions`
+- + `shaker_repetitions`
 - `shaker_shimmer`
 
 guiro:
 - + `guiro_pointillism`
-- `guiro_repetitions`
+- + `guiro_repetitions`
 - `guiro_shimmer`
 
 castanets:
 - + `castanet_pointillism`
-- `castanet_repetitions`
+- + `castanet_repetitions`
 
 special effects:
-- `wine_glass_drones`
+- + `wine_glass_drone`
 
 ## Trio
 
 pitched percussion:
-- `pitched_agitato`
+- + `pitched_agitato`
 - `pitched_shimmer`
 - `pitched_tranquilo`
 

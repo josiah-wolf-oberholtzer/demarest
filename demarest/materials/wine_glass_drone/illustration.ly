@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 15:11
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,6 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -54,7 +53,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -67,7 +66,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -83,8 +82,7 @@
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            % DYNAMIC: ppp
-                            c'4 \ppp \repeatTie
+                            c'4 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -99,13 +97,12 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: ppp
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \parenthesizeDynamic \ppp ^ \markup {
+                            c'8 \parenthesizeDynamic \p ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -115,7 +112,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \revert TextSpanner.dash-fraction
@@ -131,7 +128,6 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -143,7 +139,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -156,7 +152,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -177,8 +173,7 @@
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
-                            c'4 \ppp \repeatTie
+                            c'4 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -196,7 +191,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -207,7 +201,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -220,7 +214,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -232,7 +226,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \parenthesizeDynamic \ppp \startTextSpan
+                            c'8 \parenthesizeDynamic \p \startTextSpan
                         }
                         % [Violin 1 Voice] Measure 7
                         {
@@ -276,7 +270,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -288,7 +281,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -301,7 +294,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -320,8 +313,7 @@
                             c'4 \repeatTie
                         }
                         {
-                            % DYNAMIC: ppp
-                            c'8 \ppp \repeatTie
+                            c'8 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
@@ -340,13 +332,12 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: ppp
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 \ppp ^ \markup {
+                            c'4 \p ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -356,7 +347,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \revert TextSpanner.dash-fraction
@@ -372,7 +363,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -384,7 +374,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -397,7 +387,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -416,8 +406,7 @@
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
-                            c'4 \ppp \repeatTie
+                            c'4 \p \repeatTie
                         }
                         {
                             c'8 \repeatTie
@@ -429,7 +418,6 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            % DYNAMIC: niente
                             c'8 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -470,7 +458,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -482,7 +469,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -495,7 +482,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -514,16 +501,14 @@
                             c'8 \repeatTie
                         }
                         {
-                            % DYNAMIC: ppp
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \ppp \repeatTie \>
+                            c'8 \p \repeatTie \>
                         }
                         {
                             c'8 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            % DYNAMIC: niente
                             c'8 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -542,7 +527,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -554,7 +538,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -567,7 +551,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -587,16 +571,14 @@
                         }
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \ppp \repeatTie \>
+                            c'8 \p \repeatTie \>
                         }
                         {
                             c'4 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: niente
                             c'4 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -639,7 +621,6 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -651,7 +632,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -664,7 +645,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -680,8 +661,7 @@
                         }
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: ppp
-                            c'4 \ppp \repeatTie
+                            c'4 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -696,7 +676,6 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -708,7 +687,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -721,7 +700,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -737,8 +716,7 @@
                         }
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: ppp
-                            c'8 \ppp \repeatTie
+                            c'8 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -752,7 +730,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -764,7 +741,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -777,7 +754,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -796,8 +773,7 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
-                            c'8 \ppp \repeatTie
+                            c'8 \p \repeatTie
                         }
                         {
                             c'4 \repeatTie
@@ -821,13 +797,12 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: ppp
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \ppp ^ \markup {
+                            c'8 \p ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -837,7 +812,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "pitch pipe"
+                                                            "wine glass"
                                                         }
                                 }
                             \revert TextSpanner.dash-fraction

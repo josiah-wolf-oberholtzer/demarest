@@ -19,7 +19,7 @@ segment_maker = demarest.SegmentMaker(
 ### GLASS ###
 
 color = consort.Color.from_x11('Lavender').rotate_hue(0.75)
-music_specifiers = demarest.materials.wine_glass_drones
+music_specifiers = demarest.materials.wine_glass_drone
 segment_maker.add_setting(
     color=color,
     timespan_maker=consort.FloodedTimespanMaker(
@@ -97,7 +97,7 @@ segment_maker.add_setting(
 
 color = consort.Color.from_x11('Lavender').rotate_hue(0.5)
 music_specifiers = consort.CompositeMusicSpecifier(
-    primary_music_specifier=demarest.materials.pitch_pipe_drones,
+    primary_music_specifier=demarest.materials.pitch_pipe_drone,
     secondary_music_specifier=abjad.new(
         demarest.materials.percussion_pointillism,
         rhythm_maker__incise_specifier__outer_divisions_only=True,
@@ -127,7 +127,7 @@ segment_maker.add_setting(
     b_4=music_specifiers,
     )
 music_specifiers = consort.CompositeMusicSpecifier(
-    primary_music_specifier=demarest.materials.pitch_pipe_drones,
+    primary_music_specifier=demarest.materials.pitch_pipe_drone,
     secondary_music_specifier=abjad.new(
         demarest.materials.percussion_pointillism,
         rhythm_maker__incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
@@ -166,7 +166,7 @@ segment_maker.add_setting(
     b_3=music_specifiers,
     b_4=music_specifiers,
     )
-music_specifiers = demarest.materials.pitch_pipe_drones
+music_specifiers = demarest.materials.pitch_pipe_drone
 segment_maker.add_setting(
     color=color,
     timespan_identifier=[-2, 1],

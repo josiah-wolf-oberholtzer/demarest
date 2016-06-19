@@ -134,7 +134,7 @@ segment_maker.add_setting(
 
 color = consort.Color.from_x11('Lavender').rotate_hue(0.75)
 music_specifiers = consort.CompositeMusicSpecifier(
-    primary_music_specifier=demarest.materials.pitch_pipe_drones,
+    primary_music_specifier=demarest.materials.pitch_pipe_drone,
     secondary_music_specifier=demarest.materials.percussion_pointillism,
     )
 timespan_maker = abjad.new(

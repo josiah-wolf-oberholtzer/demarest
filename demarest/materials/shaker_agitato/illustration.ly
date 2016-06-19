@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 14:42
 
 \version "2.19.41"
 \language "english"
@@ -42,53 +42,12 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4. :32 -\accent \fp \startTextSpan \>
+                            g'4. :32 -\accent \fp \>
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            % DYNAMIC: niente
                             g'4 :32 \repeatTie
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -99,28 +58,9 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: fp
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'8 :64 -\accent \fp ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
+                            g'16 -\staccato \fp [
+                            \set stemLeftBeamCount = 2
+                            g'16 -\staccato ]
                         }
                     }
                     {
@@ -131,44 +71,8 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4. :32 -\accent \parenthesizeDynamic \fp \startTextSpan \>
+                            g'4. :32 -\accent \parenthesizeDynamic \fp \>
                             g'8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
@@ -188,12 +92,7 @@
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            % DYNAMIC: niente
                             g'4 :32 -\accent
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -207,51 +106,11 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'8 :64 -\accent \fp \startTextSpan
+                            g'8 :64 -\accent \fp
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             g'4 :32 \repeatTie
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -287,60 +146,19 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'8 :64 -\accent \fp \startTextSpan \>
+                            g'8 :64 -\accent \fp \>
                         }
                         % [Violin 2 Voice] Measure 2
                         {
                             g'4 :32 \repeatTie
                         }
                         {
-                            % DYNAMIC: niente
                             g'8 :64 -\accent
                         }
                         % [Violin 2 Voice] Measure 3
                         {
                             g'4 :32 \repeatTie \!
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -351,76 +169,27 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: fp
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4 :32 -\accent \fp ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
+                            \once \override Hairpin.circled-tip = ##t
+                            g'16 -\staccato \fp \> [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            g'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            g'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            g'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r8
+                            r8 \!
                             r8
                         }
                     }
                     {
                         {
-                            % DYNAMIC: fp
-                            % BAILING...
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'8 :64 -\accent \startTextSpan \<
+                            g'8 :64 -\accent \fp \<
                         }
                         \times 2/3 {
                             g'8 :64 \repeatTie [
@@ -432,7 +201,6 @@
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: mf
                             g'8 :64 -\accent \mf \> [
                             \set stemLeftBeamCount = 1
                             g'8 :64 -\accent ]
@@ -443,7 +211,6 @@
                         % [Violin 2 Voice] Measure 6
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/4 {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             g'8 :64 -\accent \p \> [
                             \set stemLeftBeamCount = 1
@@ -457,12 +224,7 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            % DYNAMIC: niente
                             g'8 :64 \repeatTie
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -498,50 +260,13 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4 :32 -\accent \fp \startTextSpan
+                            g'4 :32 -\accent \fp
                         }
                         % [Viola Voice] Measure 2
                         {
                             g'8 :64 \repeatTie
                         }
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             g'8 :64 -\accent \p \>
                         }
@@ -550,12 +275,7 @@
                         }
                         % [Viola Voice] Measure 3
                         {
-                            % DYNAMIC: niente
                             g'8 :64 -\accent
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -569,43 +289,7 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'8 :64 -\accent \fp \startTextSpan \<
+                            g'8 :64 -\accent \fp \<
                             g'4 :32 \repeatTie
                         }
                         {
@@ -613,7 +297,6 @@
                         }
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: mf
                             \once \override Hairpin.circled-tip = ##t
                             g'8 :64 -\accent \mf \>
                         }
@@ -627,12 +310,7 @@
                         }
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: niente
                             g'4 :32 -\accent
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -670,53 +348,12 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4. :32 -\accent \fp \startTextSpan \>
+                            g'4. :32 -\accent \fp \>
                         }
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: niente
                             g'4 :32 \repeatTie
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -727,53 +364,12 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4. :32 -\accent \fp \startTextSpan \>
+                            g'4. :32 -\accent \fp \>
                         }
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: niente
                             g'8 :64 \repeatTie
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -783,44 +379,8 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'4 :32 -\accent \fp \startTextSpan \>
+                            g'4 :32 -\accent \fp \>
                         }
                         {
                             g'8 :64 \repeatTie [
@@ -829,15 +389,10 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: niente
                             g'8 :64 -\accent
                         }
                         {
                             g'4 :32 \repeatTie \!
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -854,28 +409,9 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: fp
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            g'8 :64 -\accent \fp ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            maracas
-                                                        }
-                                }
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
+                            g'16 -\staccato \fp [
+                            \set stemLeftBeamCount = 2
+                            g'16 -\staccato ]
                         }
                     }
                     {
