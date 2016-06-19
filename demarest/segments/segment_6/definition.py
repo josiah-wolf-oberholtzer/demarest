@@ -42,13 +42,13 @@ segment_maker.add_setting(
 ### GLASS ###
 
 segment_maker.add_setting(
-    chorus_a_1=demarest.materials.glass_drones,
-    chorus_a_2=demarest.materials.glass_drones,
-    chorus_a_3=demarest.materials.glass_drones,
-    chorus_a_4=demarest.materials.glass_drones,
-    chorus_b_1=demarest.materials.glass_drones,
-    chorus_b_2=demarest.materials.glass_drones,
-    chorus_b_3=demarest.materials.glass_drones,
-    chorus_b_4=demarest.materials.glass_drones,
+    chorus_a_1=demarest.materials.wine_glass_drones,
+    chorus_a_2=demarest.materials.wine_glass_drones,
+    chorus_a_3=demarest.materials.wine_glass_drones,
+    chorus_a_4=demarest.materials.wine_glass_drones,
+    chorus_b_1=demarest.materials.wine_glass_drones,
+    chorus_b_2=demarest.materials.wine_glass_drones,
+    chorus_b_3=demarest.materials.wine_glass_drones,
+    chorus_b_4=demarest.materials.wine_glass_drones,
     color=consort.Color.from_x11('Lavender').rotate_hue(0.45),
     )

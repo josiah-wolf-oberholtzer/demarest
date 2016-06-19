@@ -19,7 +19,7 @@ segment_maker = demarest.SegmentMaker(
 ### GLASS ###
 
 color = consort.Color.from_x11('Lavender').rotate_hue(0.75)
-music_specifiers = demarest.materials.glass_drones
+music_specifiers = demarest.materials.wine_glass_drones
 segment_maker.add_setting(
     color=color,
     timespan_maker=consort.FloodedTimespanMaker(
@@ -47,7 +47,7 @@ timespan_maker = abjad.new(
     playing_groupings=[3, 4, 5],
     silence_talea__denominator=4,
     )
-music_specifiers = demarest.materials.shaker_simmering
+music_specifiers = demarest.materials.shaker_shimmer
 segment_maker.add_setting(
     color=color,
     timespan_maker=timespan_maker,
@@ -72,7 +72,7 @@ timespan_maker = consort.CascadingTimespanMaker(
     silence_talea=abjad.rhythmmakertools.Talea([1], 8),
     repeat=False,
     )
-music_specifiers = demarest.materials.shaker_rattling
+music_specifiers = demarest.materials.shaker_agitato
 segment_maker.add_setting(
     color=color,
     timespan_maker=timespan_maker,

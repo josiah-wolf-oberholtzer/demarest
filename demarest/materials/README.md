@@ -19,8 +19,8 @@ whispers:
 - `whispered_repetitions`
 
 shakers:
-- `shaker_pointillism`
 - `shaker_agitato`
+- `shaker_pointillism`
 - `shaker_shimmer`
 
 guiro:
@@ -33,7 +33,7 @@ castanets:
 - `castanet_repetitions`
 
 special effects:
-- `glass_drones`
+- `wine_glass_drones`
 
 ## Trio
 
@@ -43,10 +43,10 @@ pitched percussion:
 - `pitched_tranquilo`
 
 unpitched percussion:
-- `percussion_pointillism`
-- `percussion_tremolo`
-- `percussion_drone`
-- `percussion_tranquilo`
+- `unpitched_pointillism`
+- `unpitched_tremolo`
+- `unpitched_drone`
+- `unpitched_tranquilo`
 
 fanfares:
 - `toms_fanfare`

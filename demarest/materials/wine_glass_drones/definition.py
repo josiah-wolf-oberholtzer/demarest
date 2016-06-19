@@ -12,7 +12,7 @@ swells = consort.DynamicExpression(
     stop_dynamic_tokens='niente',
     )
 
-glass_drones = consort.MusicSpecifier(
+wine_glass_drones = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         performance_instruction=performance_instruction,
         swells=swells,

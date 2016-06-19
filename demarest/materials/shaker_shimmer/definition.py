@@ -8,7 +8,7 @@ from demarest.materials import abbreviations
 
 performance_instruction = abbreviations.make_text_spanner('whispered')
 
-shaker_simmering = consort.MusicSpecifier(
+shaker_shimmer = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamics=consort.DynamicExpression(
             division_period=2,
