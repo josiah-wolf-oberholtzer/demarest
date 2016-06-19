@@ -22,7 +22,7 @@ shakers:
 - + `shaker_agitato`
 - + `shaker_pointillism`
 - + `shaker_repetitions`
-- `shaker_shimmer`
+- + `shaker_drone`
 
 guiro:
 - + `guiro_pointillism`

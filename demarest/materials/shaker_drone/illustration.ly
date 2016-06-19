@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 15:49
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,6 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -54,11 +53,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -71,11 +66,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -91,7 +82,6 @@
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            % DYNAMIC: p
                             g'4 :32 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -107,7 +97,6 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: p
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
@@ -123,11 +112,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \revert TextSpanner.dash-fraction
@@ -143,7 +128,6 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -155,11 +139,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -172,11 +152,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -197,7 +173,6 @@
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             g'4 :32 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -216,7 +191,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -227,11 +201,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -244,11 +214,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -304,7 +270,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -316,11 +281,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -333,11 +294,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -356,12 +313,11 @@
                             g'4 :32 \repeatTie
                         }
                         {
-                            % DYNAMIC: p
                             g'8 :64 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            g'4 :32
+                            g'4 :32 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -376,7 +332,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: p
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
@@ -392,11 +347,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \revert TextSpanner.dash-fraction
@@ -412,7 +363,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -424,11 +374,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -441,11 +387,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -464,11 +406,10 @@
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             g'4 :32 \p \repeatTie
                         }
                         {
-                            g'8 :64
+                            g'8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
@@ -477,7 +418,6 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            % DYNAMIC: niente
                             g'8 :64 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -518,7 +458,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -530,11 +469,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -547,11 +482,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -570,16 +501,14 @@
                             g'8 :64 \repeatTie
                         }
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             g'8 :64 \p \repeatTie \>
                         }
                         {
-                            g'8 :64
+                            g'8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            % DYNAMIC: niente
                             g'8 :64 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -598,7 +527,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -610,11 +538,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -627,11 +551,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -651,16 +571,14 @@
                         }
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             \once \override Hairpin.circled-tip = ##t
                             g'8 :64 \p \repeatTie \>
                         }
                         {
-                            g'4 :32
+                            g'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: niente
                             g'4 :32 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -703,7 +621,6 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -715,11 +632,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -732,11 +645,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -752,7 +661,6 @@
                         }
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: p
                             g'4 :32 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -768,7 +676,6 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -780,11 +687,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -797,11 +700,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -817,7 +716,6 @@
                         }
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: p
                             g'8 :64 \p \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -832,7 +730,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -844,11 +741,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -861,11 +754,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -884,11 +773,10 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             g'8 :64 \p \repeatTie
                         }
                         {
-                            g'4 :32
+                            g'4 :32 \repeatTie
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -909,7 +797,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: p
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
@@ -925,11 +812,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            \center-column
-                                                                {
-                                                                    maracas
-                                                                    rolled
-                                                                }
+                                                            rolled
                                                         }
                                 }
                             \revert TextSpanner.dash-fraction

@@ -9,14 +9,11 @@ from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
 
-performance_instruction = abbreviations.make_text_spanner('wh.')
+performance_instruction = abbreviations.make_text_spanner('wh. (inhale)')
 override(performance_instruction).note_head.style = 'cross'
-
-inhale_instruction = consort.AttachmentExpression(
-    attachments=abbreviations.make_text_markup('inhale'),
-    selector=selectortools.Selector()
-        .by_leaves()
-        [0],
+performance_instruction = consort.AttachmentExpression(
+    attachments=performance_instruction,
+    selector=selectortools.select_pitched_runs(),
     )
 
 sibilances = [
@@ -36,40 +33,33 @@ sibilances = consort.AttachmentExpression(
     use_only_first_attachment=True,
     )
 
-accents = consort.AttachmentExpression(
-    attachments=indicatortools.Articulation('accent'),
-    selector=selectortools.Selector()
-        .by_leaves()
-        .by_logical_tie(pitched=True)
-        .rest()
-        [0],
-    )
-
-swells = consort.AttachmentExpression(
-    attachments=spannertools.Hairpin('niente < p'),
-    selector=selectortools.select_pitched_runs()
-        .by_length('>', 1)
-    )
-
-forte_piano = consort.AttachmentExpression(
-    attachments=[
-        [
-            indicatortools.Dynamic('fp'),
-            indicatortools.Articulation('accent'),
-            ],
-        ],
-    selector=selectortools.select_pitched_runs()
-        .by_length('<', 2)
-    )
-
 whispered_inhales = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        inhale_instruction=inhale_instruction,
+        accents=consort.AttachmentExpression(
+            attachments=indicatortools.Articulation('accent'),
+            selector=selectortools.Selector()
+                .by_leaves()
+                .by_logical_tie(pitched=True)
+                .rest()
+                [0],
+            ),
+        forte_piano=consort.AttachmentExpression(
+            attachments=[
+                [
+                    indicatortools.Dynamic('fp'),
+                    indicatortools.Articulation('accent'),
+                    ],
+                ],
+            selector=selectortools.select_pitched_runs()
+                .by_length('<', 2)
+            ),
         performance_instruction=performance_instruction,
         sibilances=sibilances,
-        swells=swells,
-        accents=accents,
-        forte_piano=forte_piano,
+        swells=consort.AttachmentExpression(
+            attachments=spannertools.Hairpin('niente < p'),
+            selector=selectortools.select_pitched_runs()
+                .by_length('>', 1)
+            ),
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(),
     )

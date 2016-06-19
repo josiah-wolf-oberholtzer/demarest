@@ -1,51 +1,43 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad import override
-from abjad.tools import rhythmmakertools
-from abjad.tools import indicatortools
-from abjad.tools import markuptools
-from abjad.tools import selectortools
 from demarest.materials import abbreviations
+from demarest.materials.unpitched_pointillism.definition import \
+    unpitched_pointillism
 
 
 performance_instruction = abbreviations.make_text_spanner('wh.')
-override(performance_instruction).note_head.style = 'cross'
+#abjad.override(performance_instruction).note_head.style = 'cross'
 
 sibilances = [
-    markuptools.Markup.concat([
-        markuptools.Markup(r'\vstrut'),
-        markuptools.Markup(x),
+    abjad.Markup.concat([
+        abjad.Markup(r'\vstrut'),
+        abjad.Markup(x),
         ]).italic().whiteout()
     for x in ['f-', 's-', 'sh-', 'ch-', 't-', 'ch-', 'sh-', 's-']
     ]
-sibilances = [markuptools.Markup(x, 'down') for x in sibilances]
+sibilances = [abjad.Markup(x, 'down') for x in sibilances]
 sibilances = consort.AttachmentExpression(
     attachments=sibilances,
-    selector=selectortools.select_pitched_runs(),
+    selector=abjad.selectortools.select_pitched_runs(),
     use_only_first_attachment=True,
     )
 
-swells = consort.DynamicExpression(
-    division_period=2,
-    dynamic_tokens='p',
-    start_dynamic_tokens='niente',
-    stop_dynamic_tokens='niente',
-    )
-
-staccati = consort.AttachmentExpression(
-    attachments=indicatortools.Articulation('staccato'),
-    selector=selectortools.select_pitched_runs(),
-    )
-
-whispered_pointillism = consort.MusicSpecifier(
-    attachment_handler=consort.AttachmentHandler(
-        performance_instruction=performance_instruction,
-        sibilances=sibilances,
-        swells=swells,
-        staccati=staccati,
+whispered_pointillism = abjad.new(
+    unpitched_pointillism,
+    attachment_handler__dynamics=consort.DynamicExpression(
+        division_period=2,
+        dynamic_tokens='p',
+        start_dynamic_tokens='niente',
+        stop_dynamic_tokens='niente',
         ),
-    rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
-        incise_specifier=rhythmmakertools.InciseSpecifier(
+    attachment_handler__performance_instruction=consort.AttachmentExpression(
+        attachments=performance_instruction,
+        selector=abjad.selectortools.select_pitched_runs(),
+        ),
+    attachment_handler__sibilances=sibilances,
+    rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
+        incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,
             prefix_counts=[1],
             prefix_talea=[1],

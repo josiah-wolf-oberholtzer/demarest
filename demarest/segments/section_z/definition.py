@@ -47,7 +47,7 @@ timespan_maker = abjad.new(
     playing_groupings=[3, 4, 5],
     silence_talea__denominator=4,
     )
-music_specifiers = demarest.materials.shaker_shimmer
+music_specifiers = demarest.materials.shaker_drone
 segment_maker.add_setting(
     color=color,
     timespan_maker=timespan_maker,

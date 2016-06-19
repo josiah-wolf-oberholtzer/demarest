@@ -1,42 +1,36 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad import Rest
-from abjad.tools import indicatortools
-from abjad.tools import patterntools
-from abjad.tools import rhythmmakertools
-from abjad.tools import selectortools
 from demarest.materials import abbreviations
 
 
-accents = consort.AttachmentExpression(
-    attachments=indicatortools.Articulation('accent'),
-    selector=selectortools.select_pitched_runs()[0],
-    )
-
-performance_instruction = abbreviations.make_text_spanner('pitch pipe')
-
-swells = consort.DynamicExpression(
-    division_period=2,
-    dynamic_tokens='mf',
-    start_dynamic_tokens='fp',
-    stop_dynamic_tokens='niente',
-    )
-
 pitch_pipe_flutter = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        performance_instruction=performance_instruction,
-        swells=swells,
+        accents=consort.AttachmentExpression(
+            attachments=abjad.Articulation('accent'),
+            selector=abjad.selectortools.select_pitched_runs()[0],
+            ),
+        dynamics=consort.DynamicExpression(
+            division_period=2,
+            dynamic_tokens='mf',
+            start_dynamic_tokens='fp',
+            stop_dynamic_tokens='niente',
+            ),
+        performance_instruction=consort.AttachmentExpression(
+            attachments=abbreviations.make_text_spanner('pitch pipe'),
+            selector=abjad.selectortools.select_pitched_runs(),
+            ),
         ),
-    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-        burnish_specifier=rhythmmakertools.BurnishSpecifier(
-            left_classes=[Rest],
+    rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
+        burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
+            left_classes=[abjad.Rest],
             left_counts=[0, 0, 1],
             outer_divisions_only=True,
             ),
         denominators=[8],
         division_masks=[
-            rhythmmakertools.SustainMask(
-                pattern=patterntools.Pattern(
+            abjad.rhythmmakertools.SustainMask(
+                pattern=abjad.patterntools.Pattern(
                     indices=[1, 5, 6],
                     period=9,
                     ),

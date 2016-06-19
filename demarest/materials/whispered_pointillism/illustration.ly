@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 16:08
 
 \version "2.19.41"
 \language "english"
@@ -42,24 +42,7 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    f-
-                                                }
-                                    }
-                                ^ \markup {
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -72,7 +55,38 @@
                                                             wh.
                                                         }
                                 }
-                            \revert NoteHead.style
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'16 -\staccato \p \startTextSpan
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
+                                    }
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -87,10 +101,6 @@
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -104,20 +114,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -132,10 +128,6 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -149,20 +141,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -177,10 +155,6 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -194,20 +168,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -222,11 +182,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -240,20 +195,6 @@
                                                     t-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -268,10 +209,6 @@
                     {
                         % [Violin 1 Voice] Measure 5
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -285,20 +222,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -316,10 +239,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -333,20 +252,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -360,10 +265,6 @@
                     {
                         % [Violin 1 Voice] Measure 7
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -377,23 +278,10 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -430,24 +318,7 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    f-
-                                                }
-                                    }
-                                ^ \markup {
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -460,7 +331,38 @@
                                                             wh.
                                                         }
                                 }
-                            \revert NoteHead.style
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'16 -\staccato \p \startTextSpan
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
+                                    }
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -474,10 +376,6 @@
                     {
                         % [Violin 2 Voice] Measure 2
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -491,20 +389,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -517,11 +401,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -535,20 +414,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -562,10 +427,6 @@
                     {
                         % [Violin 2 Voice] Measure 3
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -579,20 +440,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -607,10 +454,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -624,20 +467,6 @@
                                                     t-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -652,11 +481,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -670,20 +494,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -696,11 +506,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -714,20 +519,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -741,10 +532,6 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -758,20 +545,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -784,11 +557,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -802,20 +570,6 @@
                                                     f-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -829,10 +583,6 @@
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -846,20 +596,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -874,10 +610,6 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -891,23 +623,10 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -944,24 +663,7 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    ch-
-                                                }
-                                    }
-                                ^ \markup {
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -974,7 +676,38 @@
                                                             wh.
                                                         }
                                 }
-                            \revert NoteHead.style
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'16 -\staccato \p \startTextSpan
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
+                                    }
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -988,10 +721,6 @@
                     {
                         % [Viola Voice] Measure 2
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1005,20 +734,6 @@
                                                     t-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1031,11 +746,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1049,20 +759,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1075,11 +771,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1093,20 +784,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1120,10 +797,6 @@
                     {
                         % [Viola Voice] Measure 3
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1137,20 +810,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1168,10 +827,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1185,20 +840,6 @@
                                                     f-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1212,11 +853,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1230,20 +866,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1257,10 +879,6 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1274,20 +892,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1300,11 +904,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1318,20 +917,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1345,10 +930,6 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1362,23 +943,10 @@
                                                     t-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -1417,24 +985,7 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    ch-
-                                                }
-                                    }
-                                ^ \markup {
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -1447,7 +998,38 @@
                                                             wh.
                                                         }
                                 }
-                            \revert NoteHead.style
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            wh.
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            c'16 -\staccato \p \startTextSpan
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    ch-
+                                                }
+                                    }
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1462,10 +1044,6 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1479,20 +1057,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1507,10 +1071,6 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1524,20 +1084,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1552,10 +1098,6 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1569,20 +1111,6 @@
                                                     f-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1596,11 +1124,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1614,20 +1137,6 @@
                                                     s-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1640,11 +1149,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1658,20 +1162,6 @@
                                                     sh-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1685,10 +1175,6 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: p
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1702,20 +1188,6 @@
                                                     ch-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1728,11 +1200,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
-                            % BAILING...
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1746,23 +1213,10 @@
                                                     t-
                                                 }
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -1782,10 +1236,8 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: p
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
-                            \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1812,7 +1264,6 @@
                                                             wh.
                                                         }
                                 }
-                            \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
