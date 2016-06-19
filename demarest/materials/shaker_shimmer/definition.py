@@ -1,12 +1,9 @@
 # -*- encoding: utf-8 -*-
 import consort
-from abjad.tools import markuptools
 from abjad.tools import rhythmmakertools
 from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
-
-performance_instruction = abbreviations.make_text_spanner('whispered')
 
 shaker_shimmer = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
@@ -15,9 +12,6 @@ shaker_shimmer = consort.MusicSpecifier(
             dynamic_tokens='p',
             start_dynamic_tokens='niente',
             stop_dynamic_tokens='niente',
-            ),
-        performance_instruction=abbreviations.make_text_spanner(
-            markuptools.Markup.center_column(['maracas', 'rolled']),
             ),
         tremoli=spannertools.StemTremoloSpanner,
         ),
