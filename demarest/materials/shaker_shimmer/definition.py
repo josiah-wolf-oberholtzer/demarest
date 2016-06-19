@@ -16,7 +16,7 @@ shaker_shimmer = consort.MusicSpecifier(
         tremoli=spannertools.StemTremoloSpanner,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=abbreviations.UnpitchedPercussion.MARACA,
+        pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(
         tie_specifier=rhythmmakertools.TieSpecifier(

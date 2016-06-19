@@ -1,8 +1,6 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad.tools import indicatortools
-from abjad.tools import rhythmmakertools
-from abjad.tools import selectortools
 
 
 unpitched_pointillism = consort.MusicSpecifier(
@@ -12,16 +10,16 @@ unpitched_pointillism = consort.MusicSpecifier(
             dynamic_tokens='ppp p mf',
             ),
         staccati=consort.AttachmentExpression(
-            attachments=indicatortools.Articulation('.'),
-            selector=selectortools.Selector()
+            attachments=abjad.indicatortools.Articulation('.'),
+            selector=abjad.select()
                 .by_leaves()
                 .by_logical_tie(pitched=True)
                 [0],
             ),
         ),
-    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier="C4"),
-    rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
-        incise_specifier=rhythmmakertools.InciseSpecifier(
+    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier='C4'),
+    rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
+        incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,
             prefix_talea=[1, 1, -1, 1],
             prefix_counts=[2, 3, 2],

@@ -28,7 +28,7 @@ shaker_agitato = consort.MusicSpecifier(
         tremoli=spannertools.StemTremoloSpanner,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=abbreviations.UnpitchedPercussion.MARACA,
+        pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=rhythmmakertools.BurnishSpecifier(

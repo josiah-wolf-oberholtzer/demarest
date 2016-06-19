@@ -1,4 +1,4 @@
-% 2016-06-19 00:51
+% 2016-06-19 13:37
 
 \version "2.19.41"
 \language "english"
@@ -42,31 +42,36 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
                             r4
                         }
-                    }
-                    {
                         % [Violin 1 Voice] Measure 2
                         {
-                            d'16 -\staccato \mf
+                            r16
                         }
                     }
                     {
                         {
-                            r16
-                            r4
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
+                        }
+                    }
+                    {
+                        {
+                            r8.
                         }
                     }
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato \parenthesizeDynamic \p
                         }
                     }
                     {
@@ -74,41 +79,48 @@
                             r16
                             r4
                         }
-                    }
-                    {
                         % [Violin 1 Voice] Measure 4
                         {
-                            d'16 -\staccato \ppp
+                            r16
                         }
                     }
                     {
                         {
-                            r16
+                            d'16 -\staccato \parenthesizeDynamic \p
+                        }
+                    }
+                    {
+                        {
                             r4
                             r8
                         }
                     }
                     {
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
                             r4
                         }
-                    }
-                    {
                         % [Violin 1 Voice] Measure 5
                         {
-                            d'16 -\staccato \p
+                            r16
                         }
                     }
                     {
                         {
-                            r16
-                            r4
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
+                        }
+                    }
+                    {
+                        {
+                            r8.
                         }
                         % [Violin 1 Voice] Measure 6
                         {
@@ -117,24 +129,23 @@
                     }
                     {
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
-                    }
-                    {
-                        {
-                            r16
-                        }
-                    }
-                    {
                         % [Violin 1 Voice] Measure 7
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            r16
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
-                            r4
+                            r8.
                             \bar "|."
                         }
                     }
@@ -165,28 +176,25 @@
                     }
                     {
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
-                    }
-                    {
-                        {
-                            r16
-                        }
-                    }
-                    {
                         % [Violin 2 Voice] Measure 2
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r8.
+                            r8
                         }
                     }
                     {
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato \parenthesizeDynamic \p
                         }
                     }
                     {
@@ -197,62 +205,63 @@
                     {
                         % [Violin 2 Voice] Measure 3
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            d'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
-                            r4
+                            r8.
                         }
                     }
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \parenthesizeDynamic \p
                         }
                     }
                     {
                         {
                             r16
                             r4
-                            r8
-                        }
-                    }
-                    {
-                        {
-                            d'16 -\staccato \mf
-                        }
-                    }
-                    {
-                        {
-                            r16
-                        }
-                    }
-                    {
-                        {
-                            d'16 -\staccato \p
-                        }
-                    }
-                    {
-                        {
                             r8.
+                        }
+                    }
+                    {
+                        {
+                            d'16 -\staccato
+                        }
+                        {
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
+                        }
+                    }
+                    {
+                        {
+                            r8
                         }
                     }
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r8.
+                            r8
                         }
                     }
                     {
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato
                         }
                     }
                     {
@@ -263,24 +272,30 @@
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            d'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
-                            r4
+                            r8.
                         }
-                    }
-                    {
                         % [Violin 2 Voice] Measure 7
                         {
-                            d'16 -\staccato \ppp
+                            r16
                         }
                     }
                     {
                         {
-                            r16
+                            d'16 -\staccato \parenthesizeDynamic \p
+                        }
+                    }
+                    {
+                        {
                             r4
                             \bar "|."
                         }
@@ -312,18 +327,31 @@
                     }
                     {
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato \p [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            d'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r8.
+                            r16
                         }
-                    }
-                    {
                         % [Viola Voice] Measure 2
                         {
-                            d'16 -\staccato \p
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            d'16 -\staccato \parenthesizeDynamic \p
+                        }
+                        {
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
@@ -333,28 +361,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato
                         }
-                    }
-                    {
-                        {
-                            r16
-                        }
-                    }
-                    {
-                        {
-                            d'16 -\staccato \mf
-                        }
-                    }
-                    {
-                        {
-                            r16
-                        }
-                    }
-                    {
                         % [Viola Voice] Measure 3
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato
                         }
                     }
                     {
@@ -369,50 +380,49 @@
                     }
                     {
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
                             r4
+                            r16
                         }
                     }
                     {
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato
                         }
                     }
                     {
                         {
-                            r8.
+                            r8
                         }
                     }
                     {
                         % [Viola Voice] Measure 5
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
+                        }
+                        {
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
-                        }
-                    }
-                    {
-                        {
-                            d'16 -\staccato \ppp
-                        }
-                    }
-                    {
-                        {
-                            r8.
+                            r8
                         }
                     }
                     {
                         % [Viola Voice] Measure 6
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato \parenthesizeDynamic \p
                         }
                     }
                     {
@@ -463,42 +473,28 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            d'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
-                            r4
+                            r8.
                         }
-                    }
-                    {
                         % [Cello Voice] Measure 3
                         {
-                            d'16 -\staccato \mf
-                        }
-                    }
-                    {
-                        {
                             r16
-                            r4
-                        }
-                    }
-                    {
-                        % [Cello Voice] Measure 4
-                        {
-                            d'16 -\staccato \p
                         }
                     }
                     {
                         {
-                            r16
-                            r4
-                        }
-                    }
-                    {
-                        {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
@@ -507,8 +503,32 @@
                         }
                     }
                     {
+                        % [Cello Voice] Measure 4
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato \parenthesizeDynamic \p
+                        }
+                    }
+                    {
+                        {
+                            r16
+                            r4
+                        }
+                    }
+                    {
+                        {
+                            d'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    {
+                        {
+                            d'16 -\staccato
                         }
                     }
                     {
@@ -519,7 +539,9 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            d'16 -\staccato \p
+                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
@@ -529,12 +551,12 @@
                     }
                     {
                         {
-                            d'16 -\staccato \ppp
+                            d'16 -\staccato
                         }
                     }
                     {
                         {
-                            r8.
+                            r8
                         }
                         % [Cello Voice] Measure 6
                         {
@@ -549,12 +571,13 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            d'16 -\staccato \mf
+                            d'16 -\staccato \p [
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                     }
                     {
                         {
-                            r16
                             r4
                             \bar "|."
                         }

@@ -63,7 +63,7 @@ class UnpitchedPercussion(object):
     # BAMBOO_WIND_CHIMES = pitchtools.NamedPitch('F4')
     # THUNDER_SHEET = pitchtools.NamedPitch('C4')
 
-    MARACA = pitchtools.NamedPitch('G4')
+    SHAKER = pitchtools.NamedPitch('G4')
     CASTANET = pitchtools.NamedPitch('D4')
     GUIRO = pitchtools.NamedPitch('B3')
     GLASS = pitchtools.NamedPitch('G3')
