@@ -12,6 +12,9 @@ castanet_pointillism = abjad.new(
         division_period=2,
         dynamic_tokens='p',
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(0)
+        .rotate_hue(-0.3),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.CASTANET,
         ),

@@ -1,4 +1,4 @@
-% 2016-06-19 17:55
+% 2016-06-19 23:59
 
 \version "2.19.41"
 \language "english"
@@ -43,11 +43,13 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4. \( \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
                             c'4 \p \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -58,7 +60,9 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            c'8 \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'8 \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -70,7 +74,8 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4. \( \<
                             c'8 \repeatTie
                         }
                         {
@@ -80,6 +85,7 @@
                         % [Violin 1 Voice] Measure 5
                         {
                             c'4 \p \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -93,11 +99,13 @@
                     }
                     {
                         {
-                            c'8 \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'8 \parenthesizeDynamic \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             c'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -134,7 +142,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'8 \( \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -146,6 +155,7 @@
                         % [Violin 2 Voice] Measure 3
                         {
                             c'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -156,7 +166,9 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            c'4 \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4 \p \(
+                            <> \)
                         }
                     }
                     {
@@ -168,7 +180,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'8 \( \<
                         }
                         {
                             c'4 \repeatTie
@@ -188,6 +201,7 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             c'8 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -224,7 +238,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4 \( \<
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -240,6 +255,7 @@
                         % [Viola Voice] Measure 3
                         {
                             c'8 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -254,7 +270,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'8 \( \<
                             c'4 \repeatTie
                         }
                         {
@@ -271,6 +288,7 @@
                         % [Viola Voice] Measure 6
                         {
                             c'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -309,11 +327,13 @@
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4. \( \<
                         }
                         % [Cello Voice] Measure 2
                         {
                             c'4 \p \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -325,11 +345,13 @@
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4. \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
                             c'8 \p \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -340,7 +362,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'4 \( \<
                         }
                         {
                             c'4 \repeatTie
@@ -351,6 +374,7 @@
                         }
                         {
                             c'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -367,7 +391,9 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            c'8 \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                            c'8 \p \(
+                            <> \)
                         }
                     }
                     {

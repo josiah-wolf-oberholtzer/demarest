@@ -58,7 +58,9 @@ pitched_agitato = consort.MusicSpecifier(
                 .by_duration('>', (1, 16), preprolated=True)
             ),
         ),
-    color='purple',
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-2)
+        .rotate_hue(0.5),
     pitch_handler=new(
         abbreviations.pitch_handler,
         register_specifier=consort.RegisterSpecifier(

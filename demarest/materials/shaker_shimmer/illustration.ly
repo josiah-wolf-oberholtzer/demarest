@@ -1,4 +1,4 @@
-% 2016-06-19 17:54
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -43,11 +43,13 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4. :32 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'4. :32 -\accent \fp \( \>
                         }
                         % [Violin 1 Voice] Measure 2
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -58,9 +60,11 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            g'16 -\staccato \fp [
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'16 -\staccato \fp \( [
                             \set stemLeftBeamCount = 2
                             g'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -72,7 +76,8 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4. :32 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'4. :32 -\accent \fp \( \>
                             g'8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
@@ -93,6 +98,7 @@
                         % [Violin 1 Voice] Measure 5
                         {
                             g'4 :32 -\accent
+                            <> \)
                         }
                     }
                     {
@@ -106,11 +112,13 @@
                     }
                     {
                         {
-                            g'8 :64 -\accent \fp
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'8 :64 -\accent \fp \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -147,7 +155,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'8 :64 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'8 :64 -\accent \fp \( \>
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -159,6 +168,7 @@
                         % [Violin 2 Voice] Measure 3
                         {
                             g'4 :32 \repeatTie \!
+                            <> \)
                         }
                     }
                     {
@@ -170,7 +180,8 @@
                         % [Violin 2 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'16 -\staccato \fp \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'16 -\staccato \fp \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             g'16 -\staccato
@@ -179,6 +190,7 @@
                             g'16 -\staccato
                             \set stemLeftBeamCount = 2
                             g'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -189,7 +201,8 @@
                     }
                     {
                         {
-                            g'8 :64 -\accent \fp \<
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'8 :64 -\accent \fp \( \<
                         }
                         \times 2/3 {
                             g'8 :64 \repeatTie [
@@ -225,6 +238,7 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             g'8 :64 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -260,7 +274,8 @@
                     }
                     {
                         {
-                            g'4 :32 -\accent \fp
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'4 :32 -\accent \fp \(
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -276,6 +291,7 @@
                         % [Viola Voice] Measure 3
                         {
                             g'8 :64 -\accent
+                            <> \)
                         }
                     }
                     {
@@ -289,7 +305,8 @@
                     }
                     {
                         {
-                            g'8 :64 -\accent \fp \<
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'8 :64 -\accent \fp \( \<
                             g'4 :32 \repeatTie
                         }
                         {
@@ -311,6 +328,7 @@
                         % [Viola Voice] Measure 6
                         {
                             g'4 :32 -\accent
+                            <> \)
                         }
                     }
                     {
@@ -349,11 +367,13 @@
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4. :32 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'4. :32 -\accent \fp \( \>
                         }
                         % [Cello Voice] Measure 2
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -365,11 +385,13 @@
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4. :32 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'4. :32 -\accent \fp \( \>
                         }
                         % [Cello Voice] Measure 4
                         {
                             g'8 :64 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -380,7 +402,8 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4 :32 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'4 :32 -\accent \fp \( \>
                         }
                         {
                             g'8 :64 \repeatTie [
@@ -393,6 +416,7 @@
                         }
                         {
                             g'4 :32 \repeatTie \!
+                            <> \)
                         }
                     }
                     {
@@ -409,9 +433,11 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            g'16 -\staccato \fp [
+                            \colorSpan #-4 #4 #(rgb-color 0.87 0.349 0.453)
+                            g'16 -\staccato \fp \( [
                             \set stemLeftBeamCount = 2
                             g'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {

@@ -1,4 +1,4 @@
-% 2016-06-19 17:54
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -42,11 +42,13 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            a'4. \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4. \f \(
                         }
                         % [Violin 1 Voice] Measure 2
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -57,7 +59,9 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            a'8 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'8 \f \(
+                            <> \)
                         }
                     }
                     {
@@ -68,7 +72,8 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            a'4. \parenthesizeDynamic \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4. \parenthesizeDynamic \f \(
                             a'8 \repeatTie
                         }
                         {
@@ -78,6 +83,7 @@
                         % [Violin 1 Voice] Measure 5
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -91,11 +97,13 @@
                     }
                     {
                         {
-                            a'8 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'8 \f \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -131,7 +139,8 @@
                     }
                     {
                         {
-                            a'8 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'8 \f \(
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -143,6 +152,7 @@
                         % [Violin 2 Voice] Measure 3
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -153,7 +163,9 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            a'4 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4 \f \(
+                            <> \)
                         }
                     }
                     {
@@ -164,7 +176,8 @@
                     }
                     {
                         {
-                            a'8
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'8 \(
                         }
                         {
                             a'4 \repeatTie
@@ -183,6 +196,7 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             a'8 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -218,7 +232,8 @@
                     }
                     {
                         {
-                            a'4 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4 \f \(
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -233,6 +248,7 @@
                         % [Viola Voice] Measure 3
                         {
                             a'8 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -246,7 +262,8 @@
                     }
                     {
                         {
-                            a'8 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'8 \f \(
                             a'4 \repeatTie
                         }
                         {
@@ -262,6 +279,7 @@
                         % [Viola Voice] Measure 6
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -299,11 +317,13 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            a'4. \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4. \f \(
                         }
                         % [Cello Voice] Measure 2
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -314,11 +334,13 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            a'4. \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4. \f \(
                         }
                         % [Cello Voice] Measure 4
                         {
                             a'8 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -328,7 +350,8 @@
                     }
                     {
                         {
-                            a'4 \parenthesizeDynamic \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'4 \parenthesizeDynamic \f \(
                         }
                         {
                             a'4 \repeatTie
@@ -339,6 +362,7 @@
                         }
                         {
                             a'4 \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -355,7 +379,9 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            a'8 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a'8 \f \(
+                            <> \)
                         }
                     }
                     {

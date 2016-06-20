@@ -36,6 +36,9 @@ whispered_pointillism = abjad.new(
         selector=abjad.selectortools.select_pitched_runs(),
         ),
     attachment_handler__sibilances=sibilances,
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-1)
+        .rotate_hue(0.0),
     rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,

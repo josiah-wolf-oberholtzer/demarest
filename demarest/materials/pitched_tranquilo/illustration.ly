@@ -1,4 +1,4 @@
-% 2016-06-19 17:54
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,8 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            b'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -54,6 +55,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -64,7 +66,8 @@
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            cs''8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            cs''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -76,6 +79,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -86,7 +90,8 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            a'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -98,6 +103,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -108,7 +114,8 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            b'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            b'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -120,6 +127,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -130,7 +138,8 @@
                     }
                     {
                         {
-                            a'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -142,6 +151,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -152,7 +162,8 @@
                     {
                         % [Violin 1 Voice] Measure 5
                         {
-                            ef'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            ef'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -164,6 +175,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -177,7 +189,8 @@
                     }
                     {
                         {
-                            d'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -204,6 +217,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -239,7 +253,8 @@
                     }
                     {
                         {
-                            cs'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            cs'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -266,6 +281,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -275,7 +291,8 @@
                     }
                     {
                         {
-                            a'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -302,6 +319,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -312,7 +330,8 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            a'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -324,6 +343,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -334,7 +354,8 @@
                     }
                     {
                         {
-                            g'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            g'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -360,6 +381,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -370,7 +392,8 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            c''8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            c''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -382,6 +405,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -391,7 +415,8 @@
                     }
                     {
                         {
-                            d'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -418,6 +443,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -428,7 +454,8 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         {
-                            d''8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            d''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -440,6 +467,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                         }
                     }
                     {
@@ -476,7 +504,8 @@
                     {
                         {
                             \clef "treble"
-                            d'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -488,6 +517,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -500,7 +530,8 @@
                         % [Viola Voice] Measure 2
                         {
                             \clef "treble"
-                            c''8 -\tenuto \laissezVibrer \ppp \<
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            c''8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -555,6 +586,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -570,7 +602,8 @@
                     {
                         {
                             \clef "treble"
-                            f''8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            f''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -582,6 +615,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -593,7 +627,8 @@
                     {
                         {
                             \clef "treble"
-                            af'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            af'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -605,6 +640,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -617,7 +653,8 @@
                         % [Viola Voice] Measure 5
                         {
                             \clef "treble"
-                            c'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            c'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -643,6 +680,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -655,7 +693,8 @@
                         % [Viola Voice] Measure 6
                         {
                             \clef "treble"
-                            c'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            c'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -667,6 +706,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -706,7 +746,8 @@
                         % [Cello Voice] Measure 1
                         {
                             \clef "treble"
-                            b'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -718,6 +759,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -730,7 +772,8 @@
                         % [Cello Voice] Measure 2
                         {
                             \clef "treble"
-                            ef'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            ef'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -742,6 +785,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -754,7 +798,8 @@
                         % [Cello Voice] Measure 3
                         {
                             \clef "treble"
-                            b'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -766,6 +811,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -778,7 +824,8 @@
                         % [Cello Voice] Measure 4
                         {
                             \clef "treble"
-                            a'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -790,6 +837,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -801,7 +849,8 @@
                     {
                         {
                             \clef "treble"
-                            ef'8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            ef'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -813,6 +862,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -824,7 +874,8 @@
                     {
                         {
                             \clef "treble"
-                            d'8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            d'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -836,6 +887,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -848,7 +900,8 @@
                         % [Cello Voice] Measure 5
                         {
                             \clef "treble"
-                            ef''8 -\tenuto \laissezVibrer \p
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            ef''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -874,6 +927,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -895,7 +949,8 @@
                         % [Cello Voice] Measure 7
                         {
                             \clef "treble"
-                            ef''8 -\tenuto \laissezVibrer \ppp
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            ef''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -907,6 +962,7 @@
                                                     \caps
                                                         LV
                                     }
+                            <> \)
                             \clef "bass"
                         }
                     }

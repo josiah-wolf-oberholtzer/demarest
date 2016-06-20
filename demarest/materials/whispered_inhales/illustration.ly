@@ -1,4 +1,4 @@
-% 2016-06-19 17:55
+% 2016-06-19 23:59
 
 \version "2.19.41"
 \language "english"
@@ -79,7 +79,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4. \( \startTextSpan \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -102,6 +103,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -120,7 +122,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'8 -\accent \fp \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -130,6 +133,7 @@
                                                     h-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -149,7 +153,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4. \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -186,6 +191,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -208,7 +214,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'8 \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -231,6 +238,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -308,7 +316,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'8 \( \startTextSpan \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -356,6 +365,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -374,7 +384,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 -\accent \fp
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4 -\accent \fp \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -384,6 +395,7 @@
                                                     h-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -403,7 +415,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'8 \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -476,6 +489,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -553,7 +567,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4 \( \startTextSpan \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -613,6 +628,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -635,7 +651,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'8 \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -696,6 +713,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -775,7 +793,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4. \( \startTextSpan \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -798,6 +817,7 @@
                                                     h-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -817,7 +837,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4. \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -840,6 +861,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -858,7 +880,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'4 \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -905,6 +928,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -932,7 +956,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                            c'8 -\accent \fp \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -955,6 +980,7 @@
                                                             "wh. (inhale)"
                                                         }
                                 }
+                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period

@@ -1,4 +1,4 @@
-% 2016-06-19 17:55
+% 2016-06-19 23:59
 
 \version "2.19.41"
 \language "english"
@@ -53,7 +53,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -66,7 +66,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -78,15 +78,16 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4. \( \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            c'4 \p \repeatTie
+                            g4 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -97,24 +98,12 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \parenthesizeDynamic \p ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g8 \parenthesizeDynamic \p \(
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -129,55 +118,24 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \startTextSpan \<
-                            c'8 \repeatTie
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4. \( \<
+                            g8 \repeatTie
                         }
                         {
-                            c'8 \repeatTie
-                            c'4 \repeatTie
+                            g8 \repeatTie
+                            g4 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            c'4 \p \repeatTie
+                            g4 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -191,46 +149,16 @@
                     }
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \parenthesizeDynamic \p \startTextSpan
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g8 \parenthesizeDynamic \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -281,7 +209,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -294,7 +222,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -306,22 +234,23 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g8 \( \startTextSpan \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
                         }
                         {
-                            c'8 \p \repeatTie
+                            g8 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -332,24 +261,12 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 \p ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4 \p \(
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -364,61 +281,31 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g8 \( \<
                         }
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            c'4 \p \repeatTie
+                            g4 \p \repeatTie
                         }
                         {
-                            c'8 \repeatTie
+                            g8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. \repeatTie \>
+                            g4. \repeatTie \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8 \repeatTie
+                            g8 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -469,7 +356,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -482,7 +369,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -494,26 +381,27 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4 \( \startTextSpan \<
                         }
                         % [Viola Voice] Measure 2
                         {
-                            c'8 \repeatTie
+                            g8 \repeatTie
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \p \repeatTie \>
+                            g8 \p \repeatTie \>
                         }
                         {
-                            c'8 \repeatTie
+                            g8 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 \repeatTie
+                            g8 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -528,58 +416,28 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \startTextSpan \<
-                            c'4 \repeatTie
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g8 \( \<
+                            g4 \repeatTie
                         }
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \p \repeatTie \>
+                            g8 \p \repeatTie \>
                         }
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -632,7 +490,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -645,7 +503,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -657,15 +515,16 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4. \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            c'4 \p \repeatTie
+                            g4 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -677,50 +536,19 @@
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4. \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4. \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
-                            c'8 \p \repeatTie
+                            g8 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -731,52 +559,22 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            "wine glass"
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'4 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g4 \( \<
                         }
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            c'8 \p \repeatTie
+                            g8 \p \repeatTie
                         }
                         {
-                            c'4 \repeatTie
+                            g4 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -802,7 +600,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 \p ^ \markup {
+                            \colorSpan #-4 #4 #(rgb-color 0.349 0.349 0.87)
+                            g8 \p \( ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -812,9 +611,10 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wine glass"
+                                                            circle
                                                         }
                                 }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style

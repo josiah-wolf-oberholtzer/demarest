@@ -27,6 +27,9 @@ unpitched_shimmer = consort.MusicSpecifier(
             selector=selectortools.select_pitched_runs(),
             ),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-2)
+        .rotate_hue(-0.6),
     pitch_handler=consort.AbsolutePitchHandler(pitch_specifier="C4"),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=[4, 8],

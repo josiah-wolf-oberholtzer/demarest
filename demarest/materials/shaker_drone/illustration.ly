@@ -1,4 +1,4 @@
-% 2016-06-19 17:54
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -78,11 +78,13 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4. :32 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4. :32 \( \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
                             g'4 :32 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -99,7 +101,9 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'8 :64 \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'8 :64 \parenthesizeDynamic \p \(
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -117,7 +121,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4. :32 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4. :32 \( \<
                             g'8 :64 \repeatTie
                         }
                         {
@@ -127,6 +132,7 @@
                         % [Violin 1 Voice] Measure 5
                         {
                             g'4 :32 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -146,11 +152,13 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'8 :64 \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'8 :64 \parenthesizeDynamic \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -226,7 +234,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'8 :64 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'8 :64 \( \startTextSpan \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -238,6 +247,7 @@
                         % [Violin 2 Voice] Measure 3
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -254,7 +264,9 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4 :32 \p
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4 :32 \p \(
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -272,7 +284,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'8 :64 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'8 :64 \( \<
                         }
                         {
                             g'4 :32 \repeatTie
@@ -292,6 +305,7 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             g'8 :64 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -367,7 +381,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4 :32 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4 :32 \( \startTextSpan \<
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -383,6 +398,7 @@
                         % [Viola Voice] Measure 3
                         {
                             g'8 :64 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -403,7 +419,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'8 :64 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'8 :64 \( \<
                             g'4 :32 \repeatTie
                         }
                         {
@@ -420,6 +437,7 @@
                         % [Viola Voice] Measure 6
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -497,11 +515,13 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4. :32 \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4. :32 \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
                             g'4 :32 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -519,11 +539,13 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4. :32 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4. :32 \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
                             g'8 :64 \p \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -540,7 +562,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'4 :32 \<
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'4 :32 \( \<
                         }
                         {
                             g'4 :32 \repeatTie
@@ -551,6 +574,7 @@
                         }
                         {
                             g'4 :32 \repeatTie
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -576,7 +600,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            g'8 :64 \p ^ \markup {
+                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                            g'8 :64 \p \( ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -589,6 +614,7 @@
                                                             rolled
                                                         }
                                 }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style

@@ -1,4 +1,4 @@
-% 2016-06-19 17:54
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -42,9 +42,11 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            d'16 -\staccato \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -58,9 +60,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -71,7 +75,9 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -86,7 +92,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -97,9 +105,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -113,9 +123,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -129,7 +141,8 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
                         }
@@ -141,6 +154,7 @@
                             r16
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -176,7 +190,8 @@
                     }
                     {
                         {
-                            d'16 -\staccato \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
                         }
@@ -185,6 +200,7 @@
                             d'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -194,7 +210,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -205,12 +223,14 @@
                     {
                         % [Violin 2 Voice] Measure 3
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             d'16 -\staccato
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -221,7 +241,9 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -233,12 +255,14 @@
                     }
                     {
                         {
-                            d'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \(
                         }
                         {
                             d'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -249,9 +273,11 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -261,7 +287,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \(
+                            <> \)
                         }
                     }
                     {
@@ -272,12 +300,14 @@
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             d'16 -\staccato
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -291,7 +321,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -327,12 +359,14 @@
                     }
                     {
                         {
-                            d'16 -\staccato \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             d'16 -\staccato
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -346,12 +380,14 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
                         }
                         {
                             d'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -361,11 +397,13 @@
                     }
                     {
                         {
-                            d'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \(
                         }
                         % [Viola Voice] Measure 3
                         {
                             d'16 -\staccato
+                            <> \)
                         }
                     }
                     {
@@ -380,9 +418,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -393,7 +433,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \(
+                            <> \)
                         }
                     }
                     {
@@ -404,7 +446,8 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
                         }
@@ -412,6 +455,7 @@
                             d'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -422,7 +466,9 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -461,7 +507,9 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            d'16 -\staccato \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \p \(
+                            <> \)
                         }
                     }
                     {
@@ -473,12 +521,14 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             d'16 -\staccato
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -492,9 +542,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -505,7 +557,9 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \(
+                            <> \)
                         }
                     }
                     {
@@ -516,9 +570,11 @@
                     }
                     {
                         {
-                            d'16 -\staccato [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -528,7 +584,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \(
+                            <> \)
                         }
                     }
                     {
@@ -539,9 +597,11 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            d'16 -\staccato \parenthesizeDynamic \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -551,7 +611,9 @@
                     }
                     {
                         {
-                            d'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \(
+                            <> \)
                         }
                     }
                     {
@@ -571,9 +633,11 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            d'16 -\staccato \p [
+                            \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                            d'16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             d'16 -\staccato ]
+                            <> \)
                         }
                     }
                     {

@@ -14,6 +14,9 @@ unpitched_tranquilo = consort.MusicSpecifier(
         laissez_vibrer=abbreviations.laissez_vibrer,
         legato=indicatortools.Articulation('-'),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-1)
+        .rotate_hue(-0.6),
     pitch_handler=consort.AbsolutePitchHandler(),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=rhythmmakertools.InciseSpecifier(

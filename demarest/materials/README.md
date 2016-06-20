@@ -9,51 +9,52 @@ timespan makers:
 
 ## Chorus
 
-pitch pipes:
-- + `pitch_pipe_drone`
-- + `pitch_pipe_flutter`
+pitch pipes:                [0.15]
+- + `pitch_pipe_drone`      0
+- + `pitch_pipe_flutter`    1 
 
-whispers:
-- + `whispered_inhales`
-- + `whispered_pointillism`
-- + `whispered_repetitions`
+whispers:                   [0.0]
+- + `whispered_inhales`     0
+- + `whispered_pointillism` 1
+- + `whispered_repetitions` 2
 
-shakers:
-- + `shaker_drone`
-- + `shaker_pointillism`
-- + `shaker_repetitions`
-- + `shaker_shimmer`
+shakers:                    [0.3]
+- + `shaker_drone`          0
+- + `shaker_pointillism`    1
+- + `shaker_repetitions`    2
+- + `shaker_shimmer`        3
 
-guiro:
-- + `guiro_pointillism`
-- + `guiro_repetitions`
-- + `guiro_shimmer`
+guiro:                      [-0.15]
+- + `guiro_pointillism`     1
+- + `guiro_repetitions`     2
+- + `guiro_shimmer`         0
 
-castanets:
-- + `castanet_pointillism`
-- + `castanet_repetitions`
+castanets:                  [-0.3]
+- + `castanet_pointillism`  0
+- + `castanet_repetitions`  1
 
-special effects:
-- + `wine_glass_drone`
+special effects:            [0.0]
+- + `wine_glass_drone`      3
 
 ## Trio
 
-pitched percussion:
-- + `pitched_agitato`
-- + `pitched_shimmer`
-- + `pitched_tranquilo`
+pitched percussion:         [0.5]
+- + `pitched_agitato`       2
+- + `pitched_shimmer`       0
+- + `pitched_tranquilo`     1
 
-unpitched percussion:
-- + `unpitched_pointillism`
-- + `unpitched_shimmer`
-- + `unpitched_drone`
-- + `unpitched_tranquilo`
+unpitched percussion:       [-0.6]
+- + `unpitched_drone`       0
+- + `unpitched_pointillism` 2
+- + `unpitched_repetitions` 3
+- + `unpitched_shimmer`     2
+- + `unpitched_tranquilo`   1
 
-fanfares:
-- + `toms_fanfare`
-- + `woodblock_fanfare`
-- + `snare_drone`
-- + `ratchet_drone`
+fanfares:                   [0.6]
+- + `toms_fanfare`          3
+- + `woodblock_fanfare`     2
+- + `snare_drone`           0
+- + `ratchet_drone`         1
 
 ## Trio setup
 

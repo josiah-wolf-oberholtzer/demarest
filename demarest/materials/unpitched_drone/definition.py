@@ -12,6 +12,9 @@ unpitched_drone = consort.MusicSpecifier(
             stop_dynamic_tokens='niente',
             ),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(0)
+        .rotate_hue(-0.6),
     rhythm_maker=abjad.rhythmmakertools.NoteRhythmMaker(
         tie_specifier=abjad.rhythmmakertools.TieSpecifier(
             tie_across_divisions=True,

@@ -14,6 +14,9 @@ snare_drone = abjad.new(
         start_dynamic_tokens='niente',
         stop_dynamic_tokens='niente',
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(0)
+        .rotate_hue(0.6),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SNARE,
         ),

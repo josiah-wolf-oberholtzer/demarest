@@ -1,4 +1,4 @@
-% 2016-06-19 17:55
+% 2016-06-19 23:59
 
 \version "2.19.41"
 \language "english"
@@ -77,7 +77,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p \startTextSpan
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -87,6 +88,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -104,7 +106,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -114,6 +117,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -131,7 +135,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -141,6 +146,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -158,7 +164,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -168,6 +175,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -185,7 +193,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -195,6 +204,7 @@
                                                     t-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -212,7 +222,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -222,6 +233,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -242,7 +254,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -252,6 +265,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -268,7 +282,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -278,6 +293,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -353,7 +369,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p \startTextSpan
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -363,6 +380,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -379,7 +397,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -389,6 +408,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -404,7 +424,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -414,6 +435,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -430,7 +452,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -440,6 +463,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -457,7 +481,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -467,6 +492,7 @@
                                                     t-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -484,7 +510,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -494,6 +521,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -509,7 +537,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -519,6 +548,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -535,7 +565,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -545,6 +576,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -560,7 +592,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -570,6 +603,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -586,7 +620,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -596,6 +631,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -613,7 +649,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -623,6 +660,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -698,7 +736,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p \startTextSpan
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -708,6 +747,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -724,7 +764,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -734,6 +775,7 @@
                                                     t-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -749,7 +791,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -759,6 +802,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -774,7 +818,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -784,6 +829,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -800,7 +846,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -810,6 +857,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -830,7 +878,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -840,6 +889,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -856,7 +906,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -866,6 +917,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -882,7 +934,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -892,6 +945,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -907,7 +961,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -917,6 +972,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -933,7 +989,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -943,6 +1000,7 @@
                                                     t-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1020,7 +1078,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p \startTextSpan
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1030,6 +1089,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1047,7 +1107,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1057,6 +1118,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1074,7 +1136,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1084,6 +1147,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1101,7 +1165,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1111,6 +1176,7 @@
                                                     f-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1127,7 +1193,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1137,6 +1204,7 @@
                                                     s-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1152,7 +1220,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1162,6 +1231,7 @@
                                                     sh-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1178,7 +1248,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \parenthesizeDynamic \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1188,6 +1259,7 @@
                                                     ch-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1203,7 +1275,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1213,6 +1286,7 @@
                                                     t-
                                                 }
                                     }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -1241,7 +1315,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'16 -\staccato \p
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            c'16 -\staccato \p \(
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1264,6 +1339,7 @@
                                                             wh.
                                                         }
                                 }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style

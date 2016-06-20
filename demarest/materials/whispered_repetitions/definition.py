@@ -26,4 +26,7 @@ whispered_repetitions = abjad.new(
     unpitched_repetitions,
     attachment_handler__performance_instruction=performance_instruction,
     attachment_handler__sibilances=sibilances,
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-2)
+        .rotate_hue(0.0),
     )

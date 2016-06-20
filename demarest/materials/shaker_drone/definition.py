@@ -12,6 +12,9 @@ shaker_drone = abjad.new(
         selector=abjad.selectortools.select_pitched_runs(),
         ),
     attachment_handler__tremoli=abjad.spannertools.StemTremoloSpanner,
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(0)
+        .rotate_hue(0.3),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
         ),

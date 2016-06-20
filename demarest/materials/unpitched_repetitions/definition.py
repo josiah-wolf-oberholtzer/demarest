@@ -19,6 +19,9 @@ unpitched_repetitions = consort.MusicSpecifier(
             selector=selectortools.select_pitched_runs(),
             ),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-3)
+        .rotate_hue(-0.6),
     pitch_handler=consort.AbsolutePitchHandler(),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=rhythmmakertools.BurnishSpecifier(

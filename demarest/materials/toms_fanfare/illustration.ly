@@ -1,4 +1,4 @@
-% 2016-06-19 17:55
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -43,7 +43,8 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \clef "percussion"
-                            <g b>16 -\accent -\accent \f \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <g b>16 -\accent -\accent \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             d'16
@@ -73,6 +74,7 @@
                             g16
                             \set stemLeftBeamCount = 2
                             <g b>16 -\accent -\accent \mf ]
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -85,7 +87,9 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \clef "percussion"
-                            <d' f'>8 :64 \f
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <d' f'>8 :64 \f \(
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -98,7 +102,8 @@
                         % [Violin 1 Voice] Measure 4
                         \times 8/9 {
                             \clef "percussion"
-                            b16 \parenthesizeDynamic \f \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            b16 \parenthesizeDynamic \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             b16
@@ -138,6 +143,7 @@
                             g16
                             \set stemLeftBeamCount = 2
                             <b d'>16 -\accent -\accent \mf ]
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -153,7 +159,8 @@
                     {
                         {
                             \clef "percussion"
-                            <g b>8 :64 \f \>
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <g b>8 :64 \f \( \>
                         }
                         % [Violin 1 Voice] Measure 7
                         \times 4/5 {
@@ -169,6 +176,7 @@
                             <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             d'16 \mf ]
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -206,7 +214,8 @@
                     {
                         \times 2/3 {
                             \clef "percussion"
-                            <d' f'>16 -\accent -\accent \f \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <d' f'>16 -\accent -\accent \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             g16
@@ -228,6 +237,7 @@
                         % [Violin 2 Voice] Measure 3
                         {
                             <g b>4 :32
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -240,7 +250,8 @@
                         % [Violin 2 Voice] Measure 4
                         {
                             \clef "percussion"
-                            d'16 \f \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            d'16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             <b d'>16 -\accent -\accent
@@ -249,6 +260,7 @@
                             b16
                             \set stemLeftBeamCount = 2
                             g16 \mf ]
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -261,7 +273,8 @@
                     {
                         {
                             \clef "percussion"
-                            <g b>8 :64 \f \>
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <g b>8 :64 \f \( \>
                         }
                         {
                             b16 [
@@ -317,6 +330,7 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             <d' f'>8 :64 \mf
+                            <> \)
                             \clef "treble"
                         }
                     }
@@ -354,7 +368,8 @@
                     {
                         \times 4/5 {
                             \clef "percussion"
-                            <d' f'>16 -\accent -\accent \f \< [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <d' f'>16 -\accent -\accent \f \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             g16
@@ -387,6 +402,7 @@
                         % [Viola Voice] Measure 3
                         {
                             <g b>8 :64 \mf
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -402,7 +418,8 @@
                     {
                         {
                             \clef "percussion"
-                            <b d'>8 :64 \f \>
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <b d'>8 :64 \f \( \>
                             <b d'>4 :32 \repeatTie
                         }
                         \times 4/5 {
@@ -448,6 +465,7 @@
                             g16
                             \set stemLeftBeamCount = 2
                             b16 \mf ]
+                            <> \)
                             \clef "alto"
                         }
                     }
@@ -488,7 +506,8 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             \clef "percussion"
-                            f'16 \f \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            f'16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             b16
@@ -510,6 +529,7 @@
                         % [Cello Voice] Measure 2
                         {
                             <g b>4 :32 \mf
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -522,7 +542,8 @@
                         % [Cello Voice] Measure 3
                         {
                             \clef "percussion"
-                            g16 \f \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            g16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f'16
@@ -546,6 +567,7 @@
                             f'16
                             \set stemLeftBeamCount = 2
                             g16 \mf ]
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -557,7 +579,8 @@
                     {
                         {
                             \clef "percussion"
-                            <b d'>4 :32 \f \>
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            <b d'>4 :32 \f \( \>
                         }
                         {
                             <b d'>16 -\accent -\accent [
@@ -581,6 +604,7 @@
                         }
                         {
                             <d' f'>4 :32
+                            <> \)
                             \clef "bass"
                         }
                     }
@@ -599,12 +623,14 @@
                         % [Cello Voice] Measure 7
                         \times 2/3 {
                             \clef "percussion"
-                            f'16 \f [
+                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            f'16 \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             b16
                             \set stemLeftBeamCount = 2
                             g16 ]
+                            <> \)
                             \clef "bass"
                         }
                     }

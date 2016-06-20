@@ -61,5 +61,8 @@ whispered_inhales = consort.MusicSpecifier(
                 .by_length('>', 1)
             ),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(0)
+        .rotate_hue(0.0),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(),
     )

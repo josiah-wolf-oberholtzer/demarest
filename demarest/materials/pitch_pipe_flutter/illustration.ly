@@ -1,4 +1,4 @@
-% 2016-06-19 17:54
+% 2016-06-19 23:58
 
 \version "2.19.41"
 \language "english"
@@ -78,7 +78,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \startTextSpan \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \startTextSpan \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             c'8 -\tenuto
@@ -88,6 +89,7 @@
                         % [Violin 1 Voice] Measure 2
                         {
                             c'4 -\tenuto
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -104,7 +106,9 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \(
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -125,7 +129,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             c'8 -\tenuto
@@ -149,6 +154,7 @@
                             c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             c'8 -\tenuto ]
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -169,13 +175,15 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \>
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             c'8 -\tenuto ]
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -250,7 +258,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \startTextSpan \<
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \startTextSpan \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -270,6 +279,7 @@
                             c'8 -\tenuto
                             \set stemLeftBeamCount = 1
                             c'8 -\tenuto ]
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -283,7 +293,8 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         \times 2/3 {
-                            r8 [
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            r8 \( [
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -292,6 +303,7 @@
                             c'8 -\accent \fp
                             \set stemLeftBeamCount = 1
                             c'8 -\tenuto ]
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -308,7 +320,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \<
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \<
                         }
                         \times 2/3 {
                             c'8 -\tenuto [
@@ -338,6 +351,7 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             c'8 -\tenuto
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -412,7 +426,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \startTextSpan \< [
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \startTextSpan \< [
                             \set stemLeftBeamCount = 1
                             c'8 -\tenuto ]
                         }
@@ -430,6 +445,7 @@
                         % [Viola Voice] Measure 3
                         {
                             c'8 -\tenuto
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -449,7 +465,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \<
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \<
                             c'4 \repeatTie
                         }
                         {
@@ -475,6 +492,7 @@
                             c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             c'8 -\tenuto ]
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -553,7 +571,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \startTextSpan \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \startTextSpan \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             c'8 -\tenuto
@@ -566,6 +585,7 @@
                         % [Cello Voice] Measure 2
                         {
                             c'4 -\tenuto
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -583,7 +603,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             c'8 -\tenuto
@@ -593,6 +614,7 @@
                         % [Cello Voice] Measure 4
                         {
                             c'8 -\tenuto
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -610,7 +632,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp \>
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( \>
                         }
                         {
                             c'8 -\tenuto [
@@ -623,6 +646,7 @@
                         }
                         {
                             c'4 -\tenuto \!
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -648,7 +672,8 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \fp ^ \markup {
+                            \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                            c'8 -\accent \fp \( ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -661,6 +686,7 @@
                                                             "pitch pipe"
                                                         }
                                 }
+                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style

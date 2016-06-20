@@ -28,6 +28,9 @@ pitch_pipe_flutter = consort.MusicSpecifier(
                 [0],
             ),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(1)
+        .rotate_hue(0.15),
     rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
             left_classes=[abjad.Rest],

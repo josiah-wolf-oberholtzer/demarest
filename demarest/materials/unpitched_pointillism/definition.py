@@ -17,6 +17,9 @@ unpitched_pointillism = consort.MusicSpecifier(
                 [0],
             ),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-2)
+        .rotate_hue(-0.6),
     pitch_handler=consort.AbsolutePitchHandler(pitch_specifier='C4'),
     rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=abjad.rhythmmakertools.InciseSpecifier(

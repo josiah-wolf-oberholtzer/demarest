@@ -43,6 +43,9 @@ shaker_shimmer = consort.MusicSpecifier(
                 .by_contiguity(),
             )
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(-3)
+        .rotate_hue(0.3),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
         ),

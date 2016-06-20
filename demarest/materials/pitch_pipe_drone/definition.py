@@ -11,4 +11,7 @@ pitch_pipe_drone = abjad.new(
         attachments=abbreviations.make_text_spanner('pitch pipe'),
         selector=abjad.selectortools.select_pitched_runs(),
         ),
+    color=consort.Color.from_x11('Lavender')
+        .scale_luminance(0)
+        .rotate_hue(0.15),
     )
