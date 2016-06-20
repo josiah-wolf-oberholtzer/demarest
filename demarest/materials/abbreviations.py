@@ -61,7 +61,7 @@ class UnpitchedPercussion(object):
 
     BASS_DRUM = pitchtools.NamedPitch('D3')
     CASTANET = pitchtools.NamedPitch('D4')
-    GLASS = pitchtools.NamedPitch('G3')
+    WINE_GLASS = pitchtools.NamedPitch('G3')
     GUIRO = pitchtools.NamedPitch('B3')
     RATCHET = pitchtools.NamedPitch('A4')
     SHAKER = pitchtools.NamedPitch('G4')
