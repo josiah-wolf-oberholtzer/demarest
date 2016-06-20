@@ -1,4 +1,4 @@
-% 2016-06-19 14:42
+% 2016-06-19 17:54
 
 \version "2.19.41"
 \language "english"
@@ -72,7 +72,7 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4. :32 -\accent \parenthesizeDynamic \fp \>
+                            g'4. :32 -\accent \fp \>
                             g'8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
@@ -268,7 +268,7 @@
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'8 :64 -\accent \p \>
+                            g'8 :64 -\accent \parenthesizeDynamic \p \>
                         }
                         {
                             g'8 :64 \repeatTie

@@ -22,12 +22,12 @@ shakers:
 - + `shaker_drone`
 - + `shaker_pointillism`
 - + `shaker_repetitions`
-- `shaker_shimmer`
+- + `shaker_shimmer`
 
 guiro:
 - + `guiro_pointillism`
 - + `guiro_repetitions`
-- `guiro_shimmer`
+- + `guiro_shimmer`
 
 castanets:
 - + `castanet_pointillism`
@@ -52,7 +52,8 @@ unpitched percussion:
 fanfares:
 - + `toms_fanfare`
 - + `woodblock_fanfare`
-- `snare_fanfare`
+- + `snare_drone`
+- + `ratchet_drone`
 
 ## Trio setup
 

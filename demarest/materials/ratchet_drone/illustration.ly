@@ -42,12 +42,11 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4. :32 \<
+                            a'4. \f
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            b4 :32 \p \repeatTie
+                            a'4 \repeatTie
                         }
                     }
                     {
@@ -58,7 +57,7 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            b8 :64 \parenthesizeDynamic \p
+                            a'8 \f
                         }
                     }
                     {
@@ -69,28 +68,16 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4. :32 \<
-                            b8 :64 \repeatTie
+                            a'4. \parenthesizeDynamic \f
+                            a'8 \repeatTie
                         }
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 3/5 {
-                            b8 :64 \repeatTie [
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            b8 :64 -\espressivo
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            b8 :64 -\espressivo
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            b8 :64 -\espressivo
-                            \set stemLeftBeamCount = 1
-                            b8 :64 -\espressivo ]
+                        {
+                            a'8 \repeatTie
+                            a'4 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            b4 :32 -\espressivo \p
+                            a'4 \repeatTie
                         }
                     }
                     {
@@ -104,11 +91,11 @@
                     }
                     {
                         {
-                            b8 :64 \parenthesizeDynamic \p
+                            a'8 \f
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            b4 :32 \repeatTie
+                            a'4 \repeatTie
                         }
                     }
                     {
@@ -144,19 +131,18 @@
                     }
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b8 :64 \<
+                            a'8 \f
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            b4 :32 \repeatTie
+                            a'4 \repeatTie
                         }
                         {
-                            b8 :64 -\espressivo \p
+                            a'8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            b4 :32 \repeatTie
+                            a'4 \repeatTie
                         }
                     }
                     {
@@ -167,7 +153,7 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            b4 :32 \p
+                            a'4 \f
                         }
                     }
                     {
@@ -178,37 +164,30 @@
                     }
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b8 :64 \<
+                            a'8
                         }
-                        \times 2/3 {
-                            b8 :64 \repeatTie [
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            b8 :64 -\espressivo
-                            \set stemLeftBeamCount = 1
-                            b8 :64 -\espressivo ]
+                        {
+                            a'4 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            b4 :32 -\espressivo \p
+                            a'4 \repeatTie
                         }
                         {
-                            b8 :64 \repeatTie
+                            a'8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4. :32 -\espressivo \>
+                            a'4. \repeatTie
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            b8 :64 \repeatTie
+                            a'8 \repeatTie
                         }
                     }
                     {
                         {
-                            r4 \!
+                            r4
                             \bar "|."
                         }
                     }
@@ -239,28 +218,26 @@
                     }
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4 :32 \<
+                            a'4 \f
                         }
                         % [Viola Voice] Measure 2
                         {
-                            b8 :64 \repeatTie
+                            a'8 \repeatTie
                         }
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b8 :64 -\espressivo \p \>
+                            a'8 \repeatTie
                         }
                         {
-                            b8 :64 \repeatTie
+                            a'8 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            b8 :64 -\espressivo
+                            a'8 \repeatTie
                         }
                     }
                     {
                         {
-                            r4 \!
+                            r4
                         }
                         % [Viola Voice] Measure 4
                         {
@@ -269,34 +246,27 @@
                     }
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b8 :64 \<
-                            b4 :32 \repeatTie
+                            a'8 \f
+                            a'4 \repeatTie
                         }
                         {
-                            b4 :32 \repeatTie
+                            a'4 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b8 :64 -\espressivo \p \>
+                            a'8 \repeatTie
                         }
-                        \times 2/3 {
-                            b8 :64 \repeatTie [
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            b8 :64 -\espressivo
-                            \set stemLeftBeamCount = 1
-                            b8 :64 -\espressivo ]
+                        {
+                            a'4 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            b4 :32 -\espressivo
+                            a'4 \repeatTie
                         }
                     }
                     {
                         {
-                            r8 \!
+                            r8
                         }
                         % [Viola Voice] Measure 7
                         {
@@ -329,12 +299,11 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4. :32 \<
+                            a'4. \f
                         }
                         % [Cello Voice] Measure 2
                         {
-                            b4 :32 \p \repeatTie
+                            a'4 \repeatTie
                         }
                     }
                     {
@@ -345,12 +314,11 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4. :32 \<
+                            a'4. \f
                         }
                         % [Cello Voice] Measure 4
                         {
-                            b8 :64 \p \repeatTie
+                            a'8 \repeatTie
                         }
                     }
                     {
@@ -360,18 +328,17 @@
                     }
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b4 :32 \<
+                            a'4 \parenthesizeDynamic \f
                         }
                         {
-                            b4 :32 \repeatTie
+                            a'4 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            b8 :64 -\espressivo \p
+                            a'8 \repeatTie
                         }
                         {
-                            b4 :32 \repeatTie
+                            a'4 \repeatTie
                         }
                     }
                     {
@@ -388,7 +355,7 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            b8 :64 \p
+                            a'8 \f
                         }
                     }
                     {

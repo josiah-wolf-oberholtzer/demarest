@@ -65,7 +65,7 @@ class UnpitchedPercussion(object):
     GUIRO = pitchtools.NamedPitch('B3')
     RATCHET = pitchtools.NamedPitch('A4')
     SHAKER = pitchtools.NamedPitch('G4')
-    SNARE_DRUM = pitchtools.NamedPitch('B4')
+    SNARE = pitchtools.NamedPitch('B4')
     TAM_TAM = pitchtools.NamedPitch('E3')
 
 
