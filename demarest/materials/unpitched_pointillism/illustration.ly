@@ -1,5 +1,3 @@
-% 2016-06-19 23:59
-
 \version "2.19.41"
 \language "english"
 
