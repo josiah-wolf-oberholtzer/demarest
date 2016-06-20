@@ -18,7 +18,6 @@ segment_maker = demarest.SegmentMaker(
 
 ### WHISPERING ###
 
-color = consort.Color.from_x11('Lavender')
 music_specifiers = consort.MusicSpecifierSequence(
     application_rate='division',
     music_specifiers=[
@@ -33,7 +32,6 @@ timespan_maker = abjad.new(
     fuse_groups=True,
     )
 segment_maker.add_setting(
-    color=color,
     timespan_identifier=[
         -2, 1, -2, 2, -3,
         2, -1, 2, -2, 3,
@@ -46,7 +44,6 @@ segment_maker.add_setting(
     a_4_voice=music_specifiers,
     )
 segment_maker.add_setting(
-    color=color,
     timespan_identifier=[
         -1, 2, -2, 4, -1,
         1, -2, 2, -3, 2,
@@ -59,7 +56,6 @@ segment_maker.add_setting(
     b_4_voice=music_specifiers,
     )
 segment_maker.add_setting(
-    color=color,
     timespan_identifier=[
         -2, 1, -2, 1,
         -2, 1, -2, 1,

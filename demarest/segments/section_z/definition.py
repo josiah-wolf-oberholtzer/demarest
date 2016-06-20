@@ -18,10 +18,8 @@ segment_maker = demarest.SegmentMaker(
 
 ### GLASS ###
 
-color = consort.Color.from_x11('Lavender').rotate_hue(0.75)
 music_specifiers = demarest.materials.wine_glass_drone
 segment_maker.add_setting(
-    color=color,
     timespan_maker=consort.FloodedTimespanMaker(
         timespan_specifier=consort.TimespanSpecifier(
             minimum_duration=abjad.Duration(1, 2),
@@ -39,8 +37,6 @@ segment_maker.add_setting(
 
 ### SHAKER ROLLING ###
 
-color = consort.Color.from_x11('Lavender').rotate_hue(0.35)
-color = color.scale_luminance(-1)
 timespan_maker = abjad.new(
     demarest.materials.sparse_timespan_maker,
     fuse_groups=True,
@@ -49,7 +45,6 @@ timespan_maker = abjad.new(
     )
 music_specifiers = demarest.materials.shaker_drone
 segment_maker.add_setting(
-    color=color,
     timespan_maker=timespan_maker,
     timespan_identifier=[1, -1],
     a_1_percussion=music_specifiers,
@@ -64,7 +59,6 @@ segment_maker.add_setting(
 
 ### SHAKER CASCADE ###
 
-color = consort.Color.from_x11('Lavender').rotate_hue(0.35)
 timespan_maker = consort.CascadingTimespanMaker(
     cascade_pattern=[-3, 1],
     playing_talea=abjad.rhythmmakertools.Talea([1, 1, 2], 8),
@@ -74,7 +68,6 @@ timespan_maker = consort.CascadingTimespanMaker(
     )
 music_specifiers = demarest.materials.shaker_shimmer
 segment_maker.add_setting(
-    color=color,
     timespan_maker=timespan_maker,
     timespan_identifier=[
         -1, 1,
@@ -95,7 +88,6 @@ segment_maker.add_setting(
 
 ### PITCH PIPES ###
 
-color = consort.Color.from_x11('Lavender').rotate_hue(0.5)
 music_specifiers = consort.CompositeMusicSpecifier(
     primary_music_specifier=demarest.materials.pitch_pipe_drone,
     secondary_music_specifier=abjad.new(
@@ -109,7 +101,6 @@ timespan_maker = abjad.new(
     padding=abjad.Duration(1, 4),
     )
 segment_maker.add_setting(
-    color=color,
     timespan_maker=timespan_maker,
     timespan_identifier=[
         -1, 1, -5,
@@ -146,7 +137,6 @@ timespan_maker = abjad.new(
     fuse_groups=True,
     )
 segment_maker.add_setting(
-    color=color,
     timespan_identifier=[
         -1, 1, -2, 3, -1, 2,
         -3, 2, -2, 3,
@@ -168,7 +158,6 @@ segment_maker.add_setting(
     )
 music_specifiers = demarest.materials.pitch_pipe_drone
 segment_maker.add_setting(
-    color=color,
     timespan_identifier=[-2, 1],
     timespan_maker=abjad.new(
         timespan_maker,
@@ -183,7 +172,6 @@ segment_maker.add_setting(
 
 ### PITCHED PERCUSSION ###
 
-color = consort.Color.from_x11('Lavender').rotate_hue(-0.1).scale_luminance(-1)
 timespan_maker = abjad.new(
     demarest.materials.sparse_timespan_maker,
     playing_groupings=[1, 2, 2, 1, 1, 1, 2],
@@ -191,7 +179,6 @@ timespan_maker = abjad.new(
     fuse_groups=True,
     )
 segment_maker.add_setting(
-    color=color,
     timespan_maker=abjad.new(
         timespan_maker,
         seed=2,
