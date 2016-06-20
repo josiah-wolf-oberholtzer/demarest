@@ -15,31 +15,27 @@ Percussion = abbreviations.UnpitchedPercussion
 
 toms_fanfare = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        accents=consort.AttachmentExpression(
-            attachments=indicatortools.Articulation('accent'),
-            selector=selectortools.select_pitched_runs()[0],
-            ),
         clef_spanner=consort.ClefSpanner('percussion'),
         chords=consort.AttachmentExpression(
             attachments=[
-                consort.ChordExpression(
-                    chord_expr=[
-                        Percussion.TOM_1,
-                        Percussion.TOM_2,
-                        ],
-                    ),
-                consort.ChordExpression(
-                    chord_expr=[
-                        Percussion.TOM_2,
-                        Percussion.TOM_3,
-                        ],
-                    ),
-                consort.ChordExpression(
-                    chord_expr=[
-                        Percussion.TOM_3,
-                        Percussion.TOM_4,
-                        ],
-                    ),
+                [
+                    indicatortools.Articulation('accent'),
+                    consort.ChordExpression(
+                        chord_expr=[Percussion.TOM_1, Percussion.TOM_2],
+                        ),
+                    ],
+                [
+                    indicatortools.Articulation('accent'),
+                    consort.ChordExpression(
+                        chord_expr=[Percussion.TOM_2, Percussion.TOM_3],
+                        ),
+                    ],
+                [
+                    indicatortools.Articulation('accent'),
+                    consort.ChordExpression(
+                        chord_expr=[Percussion.TOM_3, Percussion.TOM_4],
+                        ),
+                    ],
                 ],
             is_destructive=True,
             selector=selectortools.Selector()
@@ -58,18 +54,25 @@ toms_fanfare = consort.MusicSpecifier(
             start_dynamic_tokens='f',
             stop_dynamic_tokens='mf',
             ),
-        staccati=consort.AttachmentExpression(
-            attachments=indicatortools.Articulation('staccato'),
-            selector=selectortools.Selector()
-                .by_logical_tie(pitched=True)
-                .by_duration('==', (1, 16), preprolated=True)
-                [0]
-            ),
         tremolo_chords=consort.AttachmentExpression(
             attachments=[
                 [
                     spannertools.StemTremoloSpanner(),
-                    consort.ChordExpression(chord_expr=[0, 3]),
+                    consort.ChordExpression(
+                        chord_expr=[Percussion.TOM_1, Percussion.TOM_2],
+                        ),
+                    ],
+                [
+                    spannertools.StemTremoloSpanner(),
+                    consort.ChordExpression(
+                        chord_expr=[Percussion.TOM_2, Percussion.TOM_3],
+                        ),
+                    ],
+                [
+                    spannertools.StemTremoloSpanner(),
+                    consort.ChordExpression(
+                        chord_expr=[Percussion.TOM_3, Percussion.TOM_4],
+                        ),
                     ],
                 ],
             is_destructive=True,

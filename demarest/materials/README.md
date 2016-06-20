@@ -11,11 +11,11 @@ timespan makers:
 
 pitch pipes:
 - + `pitch_pipe_drone`
-- `pitch_pipe_flutter`
+- + `pitch_pipe_flutter`
 
 whispers:
-- `whispered_inhales`
-- `whispered_pointillism`
+- + `whispered_inhales`
+- + `whispered_pointillism`
 - + `whispered_repetitions`
 
 shakers:
@@ -50,7 +50,7 @@ unpitched percussion:
 - `unpitched_tranquilo`
 
 fanfares:
-- `toms_fanfare`
+- + `toms_fanfare`
 - `woodblock_fanfare`
 - `snare_fanfare`
 

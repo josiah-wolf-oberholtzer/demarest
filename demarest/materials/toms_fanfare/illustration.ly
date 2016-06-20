@@ -1,4 +1,4 @@
-% 2016-06-19 00:21
+% 2016-06-19 17:01
 
 \version "2.19.41"
 \language "english"
@@ -43,36 +43,36 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \clef "percussion"
-                            <g b>16 \f \> [
+                            <g b>16 -\accent -\accent \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            f'16 ]
                         }
                         % [Violin 1 Voice] Measure 2
                         \times 4/5 {
-                            f'16 -\staccato [
+                            f'16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <d' f'>16
+                            <d' f'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            <g b>16 \mf ]
+                            <g b>16 -\accent -\accent \mf ]
                             \clef "treble"
                         }
                     }
@@ -85,7 +85,7 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \clef "percussion"
-                            <f' af'>8 :64 \f
+                            <d' f'>8 :64 \f
                             \clef "treble"
                         }
                     }
@@ -98,46 +98,46 @@
                         % [Violin 1 Voice] Measure 4
                         \times 8/9 {
                             \clef "percussion"
-                            b16 -\accent -\staccato \parenthesizeDynamic \f \> [
+                            b16 \parenthesizeDynamic \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <d' f'>16
+                            <d' f'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
-                            d'16 -\staccato ]
+                            d'16 ]
                         }
                         {
-                            <g bf>8 :64
-                            <g bf>4 :32 \repeatTie
+                            <b d'>8 :64
+                            <b d'>4 :32 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            <g b>16 [
+                            <g b>16 -\accent -\accent [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            <b d'>16 \mf ]
+                            <b d'>16 -\accent -\accent \mf ]
                             \clef "treble"
                         }
                     }
@@ -153,22 +153,22 @@
                     {
                         {
                             \clef "percussion"
-                            <g bf>8 :64 \f \>
+                            <g b>8 :64 \f \>
                         }
                         % [Violin 1 Voice] Measure 7
                         \times 4/5 {
-                            d'16 -\staccato [
+                            d'16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16
+                            <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
-                            d'16 -\staccato \mf ]
+                            d'16 \mf ]
                             \clef "treble"
                         }
                     }
@@ -206,28 +206,28 @@
                     {
                         \times 2/3 {
                             \clef "percussion"
-                            <d' f'>16 \f \> [
+                            <d' f'>16 -\accent -\accent \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            g16 -\staccato ]
+                            g16 ]
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            <b d'>4 :32
+                            <d' f'>4 :32
                         }
                         \times 2/3 {
-                            d'16 -\staccato \mf [
+                            d'16 \mf [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16
+                            <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
-                            d'16 -\staccato ]
+                            d'16 ]
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            <b d'>4 :32
+                            <g b>4 :32
                             \clef "treble"
                         }
                     }
@@ -240,15 +240,15 @@
                         % [Violin 2 Voice] Measure 4
                         {
                             \clef "percussion"
-                            d'16 -\accent -\staccato \f \> [
+                            d'16 \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
-                            g16 -\staccato \mf ]
+                            g16 \mf ]
                             \clef "treble"
                         }
                     }
@@ -261,62 +261,62 @@
                     {
                         {
                             \clef "percussion"
-                            <f' af'>8 :64 \f \>
+                            <g b>8 :64 \f \>
                         }
                         {
-                            b16 -\staccato [
+                            b16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16
+                            <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
-                            g16 -\staccato ]
+                            g16 ]
                         }
                         % [Violin 2 Voice] Measure 5
                         \times 4/5 {
-                            g16 -\staccato \mf \> [
+                            g16 \mf \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
-                            b16 -\staccato ]
+                            b16 ]
                         }
                         {
-                            <d' f'>8 :64
+                            <b d'>8 :64
                         }
                         % [Violin 2 Voice] Measure 6
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            <d' f'>16 \mp \< [
+                            <d' f'>16 -\accent -\accent \mp \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16
+                            <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
-                            b16 -\staccato ]
+                            b16 ]
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            <g bf>8 :64 \mf
+                            <d' f'>8 :64 \mf
                             \clef "treble"
                         }
                     }
@@ -354,39 +354,39 @@
                     {
                         \times 4/5 {
                             \clef "percussion"
-                            <d' f'>16 \f \< [
+                            <d' f'>16 -\accent -\accent \f \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16
+                            <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
-                            d'16 -\staccato ]
+                            d'16 ]
                         }
                         % [Viola Voice] Measure 2
                         {
                             <d' f'>8 :64
                         }
                         {
-                            d'16 -\staccato \fff \> [
+                            d'16 \fff \> [
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            f'16 ]
                         }
                         \times 2/3 {
-                            <b d'>16 [
+                            <b d'>16 -\accent -\accent [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
-                            g16 -\staccato ]
+                            g16 ]
                         }
                         % [Viola Voice] Measure 3
                         {
-                            <d' f'>8 :64 \mf
+                            <g b>8 :64 \mf
                             \clef "alto"
                         }
                     }
@@ -406,48 +406,48 @@
                             <b d'>4 :32 \repeatTie
                         }
                         \times 4/5 {
-                            d'16 -\staccato [
+                            d'16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
-                            <d' f'>16 ]
+                            <d' f'>16 -\accent -\accent ]
                         }
                         % [Viola Voice] Measure 5
                         {
-                            <f' af'>8 :64 \mp \<
+                            <d' f'>8 :64 \mp \<
                         }
                         {
-                            f'16 -\staccato [
+                            f'16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            <g b>16 ]
+                            <g b>16 -\accent -\accent ]
                         }
                         % [Viola Voice] Measure 6
                         \times 4/5 {
-                            d'16 -\staccato [
+                            d'16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            b16 -\staccato \mf ]
+                            b16 \mf ]
                             \clef "alto"
                         }
                     }
@@ -488,28 +488,28 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             \clef "percussion"
-                            f'16 -\accent -\staccato \f \> [
+                            f'16 \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16
+                            <g b>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16
+                            <b d'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
-                            b16 -\staccato ]
+                            b16 ]
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <g bf>4 :32 \mf
+                            <g b>4 :32 \mf
                             \clef "bass"
                         }
                     }
@@ -522,30 +522,30 @@
                         % [Cello Voice] Measure 3
                         {
                             \clef "percussion"
-                            g16 -\accent -\staccato \f \> [
+                            g16 \f \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <d' f'>16
+                            <d' f'>16 -\accent -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16 -\staccato
+                            g16
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            f'16 ]
                         }
                         % [Cello Voice] Measure 4
                         \times 2/3 {
-                            <g b>16 [
+                            <g b>16 -\accent -\accent [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            f'16
                             \set stemLeftBeamCount = 2
-                            g16 -\staccato \mf ]
+                            g16 \mf ]
                             \clef "bass"
                         }
                     }
@@ -557,30 +557,30 @@
                     {
                         {
                             \clef "percussion"
-                            <f' af'>4 :32 \f \>
+                            <b d'>4 :32 \f \>
                         }
                         {
-                            <b d'>16 [
+                            <b d'>16 -\accent -\accent [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            f'16 ]
                         }
                         % [Cello Voice] Measure 5
                         \times 2/3 {
-                            <d' f'>16 \mf [
+                            <d' f'>16 -\accent -\accent \mf [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
+                            d'16
                             \set stemLeftBeamCount = 2
-                            b16 -\staccato ]
+                            b16 ]
                         }
                         {
-                            <b d'>4 :32
+                            <d' f'>4 :32
                             \clef "bass"
                         }
                     }
@@ -599,12 +599,12 @@
                         % [Cello Voice] Measure 7
                         \times 2/3 {
                             \clef "percussion"
-                            f'16 -\accent -\staccato \f [
+                            f'16 \f [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16 -\staccato
+                            b16
                             \set stemLeftBeamCount = 2
-                            g16 -\staccato ]
+                            g16 ]
                             \clef "bass"
                         }
                     }

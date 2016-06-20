@@ -45,28 +45,28 @@ def make_instrument_column_markup(pieces):
 
 class UnpitchedPercussion(object):
 
-    SNARE_DRUM = pitchtools.NamedPitch('B4')
     WOOD_BLOCK_5 = pitchtools.NamedPitch('G4')
     WOOD_BLOCK_4 = pitchtools.NamedPitch('E4')
     WOOD_BLOCK_3 = pitchtools.NamedPitch('C4')
     WOOD_BLOCK_2 = pitchtools.NamedPitch('A3')
     WOOD_BLOCK_1 = pitchtools.NamedPitch('F3')
-    BASS_DRUM = pitchtools.NamedPitch('D3')
 
-    RATCHET = pitchtools.NamedPitch('A4')
     TOM_4 = pitchtools.NamedPitch('F4')
     TOM_3 = pitchtools.NamedPitch('D4')
     TOM_2 = pitchtools.NamedPitch('B3')
     TOM_1 = pitchtools.NamedPitch('G3')
-    TAM_TAM = pitchtools.NamedPitch('E3')
 
     # BAMBOO_WIND_CHIMES = pitchtools.NamedPitch('F4')
     # THUNDER_SHEET = pitchtools.NamedPitch('C4')
 
-    SHAKER = pitchtools.NamedPitch('G4')
+    BASS_DRUM = pitchtools.NamedPitch('D3')
     CASTANET = pitchtools.NamedPitch('D4')
-    GUIRO = pitchtools.NamedPitch('B3')
     GLASS = pitchtools.NamedPitch('G3')
+    GUIRO = pitchtools.NamedPitch('B3')
+    RATCHET = pitchtools.NamedPitch('A4')
+    SHAKER = pitchtools.NamedPitch('G4')
+    SNARE_DRUM = pitchtools.NamedPitch('B4')
+    TAM_TAM = pitchtools.NamedPitch('E3')
 
 
 laissez_vibrer = consort.AttachmentExpression(

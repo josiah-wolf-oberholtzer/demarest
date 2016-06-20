@@ -20,6 +20,13 @@ pitch_pipe_flutter = consort.MusicSpecifier(
             attachments=abbreviations.make_text_spanner('pitch pipe'),
             selector=abjad.selectortools.select_pitched_runs(),
             ),
+        tenuti=consort.AttachmentExpression(
+            attachments=abjad.Articulation('tenuto'),
+            selector=abjad.selectortools.select_pitched_runs()
+                .by_logical_tie()
+                .rest()
+                [0],
+            ),
         ),
     rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(

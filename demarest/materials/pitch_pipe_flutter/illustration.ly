@@ -1,4 +1,4 @@
-% 2016-06-19 16:14
+% 2016-06-19 16:34
 
 \version "2.19.41"
 \language "english"
@@ -81,13 +81,13 @@
                             c'8 -\accent \fp \startTextSpan \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            c'4
+                            c'4 -\tenuto
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -125,30 +125,30 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \parenthesizeDynamic \fp \> [
+                            c'8 -\accent \fp \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/4 {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -173,9 +173,9 @@
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -254,22 +254,22 @@
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \mf \>
+                            c'8 -\tenuto \mf \>
                         }
                         % [Violin 2 Voice] Measure 3
                         \times 2/3 {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -291,7 +291,7 @@
                             \set stemRightBeamCount = 1
                             c'8 -\accent \fp
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -308,36 +308,36 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            c'8 -\accent \<
+                            c'8 -\accent \fp \<
                         }
                         \times 2/3 {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            c'4 \mf
+                            c'4 -\tenuto \mf
                         }
                         {
-                            c'8
+                            c'8 -\tenuto
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \> [
+                            c'8 -\tenuto \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8
+                            c'8 -\tenuto
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -414,22 +414,22 @@
                             \override TextSpanner.style = #'dashed-line
                             c'8 -\accent \fp \startTextSpan \< [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Viola Voice] Measure 2
                         {
-                            c'8
+                            c'8 -\tenuto
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \mf \>
+                            c'8 -\tenuto \mf \>
                         }
                         {
-                            c'8
+                            c'8 -\tenuto
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8
+                            c'8 -\tenuto
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -453,28 +453,28 @@
                             c'4 \repeatTie
                         }
                         {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \mf \>
+                            c'8 -\tenuto \mf \>
                         }
                         \times 2/3 {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -556,16 +556,16 @@
                             c'8 -\accent \fp \startTextSpan \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Cello Voice] Measure 2
                         {
-                            c'4
+                            c'4 -\tenuto
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -586,13 +586,13 @@
                             c'8 -\accent \fp \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8
+                            c'8 -\tenuto
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Cello Voice] Measure 4
                         {
-                            c'8
+                            c'8 -\tenuto
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -613,16 +613,16 @@
                             c'8 -\accent \fp \>
                         }
                         {
-                            c'8 [
+                            c'8 -\tenuto [
                             \set stemLeftBeamCount = 1
-                            c'8 ]
+                            c'8 -\tenuto ]
                         }
                         % [Cello Voice] Measure 5
                         {
-                            c'8
+                            c'8 -\tenuto
                         }
                         {
-                            c'4 \!
+                            c'4 -\tenuto \!
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
