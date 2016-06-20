@@ -1,29 +1,14 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad.tools import indicatortools
-from abjad.tools import rhythmmakertools
 from demarest.materials import abbreviations
+from demarest.materials.unpitched_tranquilo.definition \
+    import unpitched_tranquilo
 
 
-pitched_tranquilo = consort.MusicSpecifier(
-    attachment_handler=consort.AttachmentHandler(
-        clef_spanner=consort.ClefSpanner('treble'),
-        dynamic_expressions=consort.DynamicExpression(
-            division_period=2,
-            dynamic_tokens='p ppp',
-            ),
-        laissez_vibrer=abbreviations.laissez_vibrer,
-        legato=indicatortools.Articulation('-'),
-        ),
-    color='purple',
+pitched_tranquilo = abjad.new(
+    unpitched_tranquilo,
+    attachment_handler__clef_spanner=consort.ClefSpanner('treble'),
     pitch_handler=abbreviations.pitch_handler,
     register_handler=consort.RegisterHandler(),
-    rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
-        incise_specifier=rhythmmakertools.InciseSpecifier(
-            fill_with_notes=False,
-            prefix_talea=[1],
-            prefix_counts=[1],
-            talea_denominator=8,
-            ),
-        ),
     )

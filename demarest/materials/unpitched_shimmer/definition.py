@@ -1,18 +1,26 @@
 # -*- encoding: utf-8 -*-
 import consort
+from abjad.tools import indicatortools
 from abjad.tools import patterntools
 from abjad.tools import rhythmmakertools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
 
 
-unpitched_tremolo = consort.MusicSpecifier(
+unpitched_shimmer = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expressions=consort.DynamicExpression(
+        dynamics=consort.DynamicExpression(
             division_period=2,
             dynamic_tokens='ppp p ppp mf',
             start_dynamic_tokens='fp niente',
             stop_dynamic_tokens='niente f',
+            ),
+        espressivo=consort.AttachmentExpression(
+            attachments=indicatortools.Articulation('espressivo'),
+            selector=selectortools.select_pitched_runs()
+                .by_logical_tie()
+                .rest()
+                [0]
             ),
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
@@ -21,7 +29,7 @@ unpitched_tremolo = consort.MusicSpecifier(
         ),
     pitch_handler=consort.AbsolutePitchHandler(pitch_specifier="C4"),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-        denominators=[8],
+        denominators=[4, 8],
         division_masks=[
             rhythmmakertools.SustainMask(
                 patterntools.Pattern(indices=[0, -1]),

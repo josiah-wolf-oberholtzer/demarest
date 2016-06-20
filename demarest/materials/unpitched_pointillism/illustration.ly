@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 17:17
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,6 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -59,7 +58,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -73,7 +71,6 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                     }
@@ -89,7 +86,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp
                         }
                     }
@@ -101,7 +97,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -118,7 +113,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -135,7 +129,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp \< [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -146,7 +139,6 @@
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                         }
@@ -184,7 +176,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf \> [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -192,7 +183,6 @@
                         % [Violin 2 Voice] Measure 2
                         {
                             c'16 -\staccato [
-                            % DYNAMIC: ppp
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \ppp ]
                         }
@@ -204,7 +194,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                     }
@@ -216,7 +205,6 @@
                     {
                         % [Violin 2 Voice] Measure 3
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -233,7 +221,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf
                         }
                     }
@@ -246,7 +233,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                         {
@@ -263,7 +249,6 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -276,7 +261,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf
                         }
                     }
@@ -288,7 +272,6 @@
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -308,7 +291,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp
                         }
                     }
@@ -345,7 +327,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -365,7 +346,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                         {
@@ -381,7 +361,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp
                         }
                         % [Viola Voice] Measure 3
@@ -401,7 +380,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -415,7 +393,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                     }
@@ -427,14 +404,12 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp \< [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
                         {
                             c'16 -\staccato [
-                            % DYNAMIC: p
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato \p ]
                         }
@@ -447,7 +422,6 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf
                         }
                     }
@@ -487,7 +461,6 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                     }
@@ -500,7 +473,6 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -520,7 +492,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -534,7 +505,6 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p
                         }
                     }
@@ -546,7 +516,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -559,7 +528,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf
                         }
                     }
@@ -571,7 +539,6 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             c'16 -\staccato \p [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
@@ -584,7 +551,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             c'16 -\staccato \ppp
                         }
                     }
@@ -605,7 +571,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: mf
                             c'16 -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]

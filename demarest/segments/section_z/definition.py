@@ -72,7 +72,7 @@ timespan_maker = consort.CascadingTimespanMaker(
     silence_talea=abjad.rhythmmakertools.Talea([1], 8),
     repeat=False,
     )
-music_specifiers = demarest.materials.shaker_agitato
+music_specifiers = demarest.materials.shaker_shimmer
 segment_maker.add_setting(
     color=color,
     timespan_maker=timespan_maker,

@@ -1,42 +1,14 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad.tools import patterntools
-from abjad.tools import rhythmmakertools
-from abjad.tools import selectortools
-from abjad.tools import spannertools
 from demarest.materials import abbreviations
+from demarest.materials.unpitched_shimmer.definition \
+    import unpitched_shimmer
 
 
-pitched_shimmer = consort.MusicSpecifier(
-    attachment_handler=consort.AttachmentHandler(
-        clef_spanner=consort.ClefSpanner('treble'),
-        dynamic_expressions=consort.DynamicExpression(
-            division_period=2,
-            dynamic_tokens='ppp p ppp mf',
-            start_dynamic_tokens='fp niente',
-            stop_dynamic_tokens='niente f',
-            ),
-        stem_tremolo_spanner=consort.AttachmentExpression(
-            attachments=spannertools.StemTremoloSpanner(),
-            selector=selectortools.select_pitched_runs(),
-            ),
-        ),
-    color='purple',
+pitched_shimmer = abjad.new(
+    unpitched_shimmer,
+    attachment_handler__clef_spanner=consort.ClefSpanner('treble'),
     pitch_handler=abbreviations.pitch_handler,
     register_handler=abbreviations.chordal_register_handler,
-    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-        denominators=[4, 8],
-        division_masks=[
-            rhythmmakertools.SustainMask(
-                patterntools.Pattern(indices=[0, -1]),
-                ),
-            rhythmmakertools.SustainMask(
-                patterntools.Pattern(indices=[1], period=4),
-                ),
-            ],
-        extra_counts_per_division=[0, 0, 1, 0, 0, 1, 2],
-        tie_specifier=rhythmmakertools.TieSpecifier(
-            tie_across_divisions=True,
-            ),
-        ),
     )

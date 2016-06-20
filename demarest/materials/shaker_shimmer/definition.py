@@ -9,7 +9,7 @@ from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
 
-shaker_agitato = consort.MusicSpecifier(
+shaker_shimmer = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         accents=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('>'),

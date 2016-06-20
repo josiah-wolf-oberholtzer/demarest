@@ -135,9 +135,12 @@ pitch_handler = consort.PitchClassPitchHandler(
 
 chordal_register_handler = consort.RegisterHandler(
     logical_tie_expressions=[
-        consort.ChordExpression(chord_expr=[-3, 0, 5, 6]),
-        consort.ChordExpression(chord_expr=[-3, 0, 1, 5]),
-        consort.ChordExpression(chord_expr=[-2, 0, 1, 5]),
+        consort.ChordExpression(chord_expr=[0, 3]),
+        consort.ChordExpression(chord_expr=[0, 3]),
+        consort.ChordExpression(chord_expr=[0, 5]),
+        #consort.ChordExpression(chord_expr=[-3, 0, 5, 6]),
+        #consort.ChordExpression(chord_expr=[-3, 0, 1, 5]),
+        #consort.ChordExpression(chord_expr=[-2, 0, 1, 5]),
         ],
     )
 

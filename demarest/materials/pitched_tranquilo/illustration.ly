@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 17:23
 
 \version "2.19.41"
 \language "english"
@@ -42,7 +42,6 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: p
                             b'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -65,7 +64,6 @@
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            % DYNAMIC: ppp
                             cs''8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -88,7 +86,6 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: p
                             a'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -111,7 +108,6 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            % DYNAMIC: ppp
                             b'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -134,7 +130,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             a'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -157,7 +152,6 @@
                     {
                         % [Violin 1 Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
                             ef'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -183,7 +177,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             d'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -246,7 +239,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             cs'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -283,7 +275,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             a'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -321,7 +312,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: ppp
                             a'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -344,7 +334,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             g'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -381,7 +370,6 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
                             c''8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -403,7 +391,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             d'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -441,7 +428,6 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         {
-                            % DYNAMIC: ppp
                             d''8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
                                     \pad-around
@@ -489,7 +475,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             d'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -514,7 +499,6 @@
                     {
                         % [Viola Voice] Measure 2
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             c''8 -\tenuto \laissezVibrer \ppp \<
                                 ^ \markup {
@@ -544,7 +528,6 @@
                                     }
                         }
                         {
-                            % DYNAMIC: p
                             a'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
@@ -586,7 +569,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             f''8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -610,7 +592,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             af'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
@@ -635,7 +616,6 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             c'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -674,7 +654,6 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             c'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
@@ -726,7 +705,6 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             b'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -751,7 +729,6 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             ef'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
@@ -776,7 +753,6 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             b'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -801,7 +777,6 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             a'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
@@ -825,7 +800,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             ef'8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -849,7 +823,6 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             d'8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {
@@ -874,7 +847,6 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: p
                             \clef "treble"
                             ef''8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
@@ -922,7 +894,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: ppp
                             \clef "treble"
                             ef''8 -\tenuto \laissezVibrer \ppp
                                 ^ \markup {

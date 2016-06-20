@@ -48,7 +48,7 @@ toms_fanfare = consort.MusicSpecifier(
                         ),
                     ),
             ),
-        dynamic_expressions=consort.DynamicExpression(
+        dynamics=consort.DynamicExpression(
             division_period=2,
             dynamic_tokens='mf mp fff',
             start_dynamic_tokens='f',

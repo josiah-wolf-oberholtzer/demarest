@@ -19,10 +19,10 @@ whispers:
 - + `whispered_repetitions`
 
 shakers:
-- + `shaker_agitato`
+- + `shaker_drone`
 - + `shaker_pointillism`
 - + `shaker_repetitions`
-- + `shaker_drone`
+- `shaker_shimmer`
 
 guiro:
 - + `guiro_pointillism`
@@ -40,18 +40,18 @@ special effects:
 
 pitched percussion:
 - + `pitched_agitato`
-- `pitched_shimmer`
-- `pitched_tranquilo`
+- + `pitched_shimmer`
+- + `pitched_tranquilo`
 
 unpitched percussion:
-- `unpitched_pointillism`
-- `unpitched_tremolo`
-- `unpitched_drone`
-- `unpitched_tranquilo`
+- + `unpitched_pointillism`
+- + `unpitched_shimmer`
+- + `unpitched_drone`
+- + `unpitched_tranquilo`
 
 fanfares:
 - + `toms_fanfare`
-- `woodblock_fanfare`
+- + `woodblock_fanfare`
 - `snare_fanfare`
 
 ## Trio setup

@@ -1,4 +1,4 @@
-% 2016-06-18 22:53
+% 2016-06-19 17:31
 
 \version "2.19.41"
 \language "english"
@@ -42,14 +42,12 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            <af' b' e'' f''>4. :32 \fp \>
+                            <b' d''>4. :32 \fp \>
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            % DYNAMIC: niente
-                            <af' b' e'' f''>4 :32 \repeatTie
+                            <b' d''>4 :32 \repeatTie
                         }
                     }
                     {
@@ -60,8 +58,7 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            % DYNAMIC: ppp
-                            <fs' a' bf' d''>8 :64 \ppp
+                            <a' c''>8 :64 \ppp
                         }
                     }
                     {
@@ -72,30 +69,28 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            <a' b' c'' e''>4. :32 \fp \>
-                            <a' b' c'' e''>8 :64 \repeatTie
+                            <b' e''>4. :32 \fp \>
+                            <b' e''>8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            <a' b' c'' e''>8 :64 \repeatTie [
+                            <b' e''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <c' ds' gs' a'>8 :64
+                            <fs' a'>8 :64 -\espressivo
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <b' d'' ef'' g''>8 :64
+                            <gs' b'>8 :64 -\espressivo
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <ef' f' gf' bf'>8 :64
+                            <f' bf'>8 :64 -\espressivo
                             \set stemLeftBeamCount = 1
-                            <c' ds' gs' a'>8 :64 ]
+                            <ef' gf'>8 :64 -\espressivo ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            % DYNAMIC: niente
-                            <c' ds' gs' a'>4 :32 \repeatTie
+                            <f'' af''>4 :32 -\espressivo
                         }
                     }
                     {
@@ -109,12 +104,11 @@
                     }
                     {
                         {
-                            % DYNAMIC: ppp
-                            <b d' ef' g'>8 :64 \ppp
+                            <d'' g''>8 :64 \ppp
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            <b d' ef' g'>4 :32 \repeatTie
+                            <d'' g''>4 :32 \repeatTie
                         }
                     }
                     {
@@ -150,21 +144,19 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
                             \once \override Hairpin.circled-tip = ##t
-                            <as cs' fs' g'>8 :64 \fp \>
+                            <cs' e'>8 :64 \fp \>
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            <as cs' fs' g'>4 :32 \repeatTie
+                            <cs' e'>4 :32 \repeatTie
                         }
                         {
-                            % DYNAMIC: niente
-                            <as cs' fs' g'>8 :64 \repeatTie
+                            <a' c''>8 :64 -\espressivo
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            <as cs' fs' g'>4 :32 \repeatTie \!
+                            <a' c''>4 :32 \repeatTie \!
                         }
                     }
                     {
@@ -175,8 +167,7 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            % DYNAMIC: ppp
-                            <fs' a' bf' d''>4 :32 \ppp
+                            <b' e''>4 :32 \ppp
                         }
                     }
                     {
@@ -187,35 +178,31 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
-                            <e' fs' g' b'>8 :64 \fp \>
+                            <g' bf'>8 :64 \fp \>
                         }
                         \times 2/3 {
-                            <e' fs' g' b'>8 :64 \repeatTie [
+                            <g' bf'>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <c'' ds'' gs'' a''>8 :64
+                            <ef' gf'>8 :64 -\espressivo
                             \set stemLeftBeamCount = 1
-                            <a' c'' df'' f''>8 :64 ]
+                            <c'' f''>8 :64 -\espressivo ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
-                            <a' c'' df'' f''>4 :32 \ppp \repeatTie \<
+                            <ef' gf'>4 :32 -\espressivo \ppp \<
                         }
                         {
-                            <a' c'' df'' f''>8 :64 \repeatTie
+                            <ef' gf'>8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            % DYNAMIC: mf
                             \once \override Hairpin.circled-tip = ##t
-                            <a' c'' df'' f''>4. :32 \mf \repeatTie \>
+                            <a' c''>4. :32 -\espressivo \mf \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            % DYNAMIC: niente
-                            <a' c'' df'' f''>8 :64 \repeatTie
+                            <a' c''>8 :64 \repeatTie
                         }
                     }
                     {
@@ -251,26 +238,23 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            <b d' g' af'>4 :32 \<
+                            <d' f'>4 :32 \<
                         }
                         % [Viola Voice] Measure 2
                         {
-                            <b d' g' af'>8 :64 \repeatTie
+                            <d' f'>8 :64 \repeatTie
                         }
                         {
-                            % DYNAMIC: p
-                            <b d' g' af'>8 :64 \p \repeatTie \<
+                            <b' d''>8 :64 -\espressivo \p \<
                         }
                         {
-                            <b d' g' af'>8 :64 \repeatTie
+                            <b' d''>8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            % DYNAMIC: f
-                            <b d' g' af'>8 :64 \f \repeatTie
+                            <a' d''>8 :64 -\espressivo \f
                             \clef "alto"
                         }
                     }
@@ -285,32 +269,29 @@
                     }
                     {
                         {
-                            % DYNAMIC: fp
                             \clef "treble"
-                            <cs' e' f' a'>8 :64 \fp \>
-                            <cs' e' f' a'>4 :32 \repeatTie
+                            <gs' b'>8 :64 \fp \>
+                            <gs' b'>4 :32 \repeatTie
                         }
                         {
-                            <cs' e' f' a'>4 :32 \repeatTie
+                            <gs' b'>4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
-                            % DYNAMIC: ppp
                             \once \override Hairpin.circled-tip = ##t
-                            <cs' e' f' a'>8 :64 \ppp \repeatTie \>
+                            <ef'' gf''>8 :64 -\espressivo \ppp \>
                         }
                         \times 2/3 {
-                            <cs' e' f' a'>8 :64 \repeatTie [
+                            <ef'' gf''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <g' a' bf' d''>8 :64
+                            <c' f'>8 :64 -\espressivo
                             \set stemLeftBeamCount = 1
-                            <a' c'' f'' gf''>8 :64 ]
+                            <d' f'>8 :64 -\espressivo ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            % DYNAMIC: niente
-                            <a' c'' f'' gf''>4 :32 \repeatTie
+                            <c' ef'>4 :32 -\espressivo
                             \clef "alto"
                         }
                     }
@@ -349,15 +330,13 @@
                     {
                         % [Cello Voice] Measure 1
                         {
-                            % DYNAMIC: niente
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            <af' b' e'' f''>4. :32 \<
+                            <b' d''>4. :32 \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            % DYNAMIC: f
-                            <af' b' e'' f''>4 :32 \f \repeatTie
+                            <b' d''>4 :32 \f \repeatTie
                             \clef "bass"
                         }
                     }
@@ -369,15 +348,13 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            % DYNAMIC: fp
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            <fs' a' bf' d''>4. :32 \fp \>
+                            <a' c''>4. :32 \fp \>
                         }
                         % [Cello Voice] Measure 4
                         {
-                            % DYNAMIC: niente
-                            <fs' a' bf' d''>8 :64 \repeatTie
+                            <a' c''>8 :64 \repeatTie
                             \clef "bass"
                         }
                     }
@@ -388,21 +365,19 @@
                     }
                     {
                         {
-                            % DYNAMIC: niente
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            <f' g' af' c''>4 :32 \<
+                            <g' c''>4 :32 \<
                         }
                         {
-                            <f' g' af' c''>4 :32 \repeatTie
+                            <g' c''>4 :32 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            % DYNAMIC: f
-                            <f' g' af' c''>8 :64 \f \repeatTie
+                            <f'' af''>8 :64 -\espressivo \f
                         }
                         {
-                            <f' g' af' c''>4 :32 \repeatTie
+                            <f'' af''>4 :32 \repeatTie
                             \clef "bass"
                         }
                     }
@@ -420,9 +395,8 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            % DYNAMIC: fp
                             \clef "treble"
-                            <b' d'' g'' af''>8 :64 \fp
+                            <ef'' gf''>8 :64 \fp
                             \clef "bass"
                         }
                     }
