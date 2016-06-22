@@ -37,11 +37,12 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <g b>16 -\accent -\accent \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -81,11 +82,12 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <d' f'>8 :64 \f \(
                             <> \)
                             \clef "treble"
@@ -96,11 +98,12 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 1 Voice] Measure 4
                         \times 8/9 {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             b16 \parenthesizeDynamic \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -154,10 +157,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <g b>8 :64 \f \( \>
                         }
                         % [Violin 1 Voice] Measure 7
@@ -209,10 +213,11 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "toms_fanfare"
                     {
                         \times 2/3 {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <d' f'>16 -\accent -\accent \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -244,11 +249,12 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             d'16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -268,10 +274,11 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "toms_fanfare"
                     {
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <g b>8 :64 \f \( \>
                         }
                         {
@@ -363,10 +370,11 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "toms_fanfare"
                     {
                         \times 4/5 {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <d' f'>16 -\accent -\accent \f \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -413,10 +421,11 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "toms_fanfare"
                     {
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <b d'>8 :64 \f \( \>
                             <b d'>4 :32 \repeatTie
                         }
@@ -499,12 +508,13 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             f'16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -536,11 +546,12 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         % [Cello Voice] Measure 3
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             g16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -574,10 +585,11 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <b d'>4 :32 \f \( \>
                         }
                         {
@@ -617,11 +629,12 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         % [Cello Voice] Measure 7
                         \times 2/3 {
                             \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.558 0.87 0.349)
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             f'16 \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2

@@ -37,11 +37,12 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "guiro_repetitions"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -77,10 +78,11 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_repetitions"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -92,10 +94,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_repetitions"
                     {
                         % [Violin 1 Voice] Measure 4
                         \times 8/9 {
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             r16 \( [
                             \once \override Hairpin.circled-tip = ##t
                             \set stemLeftBeamCount = 2
@@ -169,10 +172,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -225,10 +229,11 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_repetitions"
                     {
                         \times 2/3 {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -286,9 +291,10 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_repetitions"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -304,10 +310,11 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -405,10 +412,11 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "guiro_repetitions"
                     {
                         \times 4/6 {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -462,10 +470,11 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "guiro_repetitions"
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             r16 \( [
                             \once \override Hairpin.circled-tip = ##t
                             \set stemLeftBeamCount = 2
@@ -570,11 +579,12 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "guiro_repetitions"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -613,12 +623,13 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "guiro_repetitions"
                     {
                         % [Cello Voice] Measure 3
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -652,10 +663,11 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "guiro_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -711,10 +723,11 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "guiro_repetitions"
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.898 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                             b16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]

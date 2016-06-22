@@ -91,7 +91,7 @@ segment_maker.add_setting(
 music_specifiers = consort.CompositeMusicSpecifier(
     primary_music_specifier=demarest.materials.pitch_pipe_drone,
     secondary_music_specifier=abjad.new(
-        demarest.materials.percussion_pointillism,
+        demarest.materials.unpitched_pointillism,
         rhythm_maker__incise_specifier__outer_divisions_only=True,
         ),
     )
@@ -120,7 +120,7 @@ segment_maker.add_setting(
 music_specifiers = consort.CompositeMusicSpecifier(
     primary_music_specifier=demarest.materials.pitch_pipe_drone,
     secondary_music_specifier=abjad.new(
-        demarest.materials.percussion_pointillism,
+        demarest.materials.unpitched_pointillism,
         rhythm_maker__incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,
             outer_divisions_only=True,

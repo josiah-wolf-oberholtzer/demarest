@@ -37,8 +37,9 @@ whispered_pointillism = abjad.new(
         ),
     attachment_handler__sibilances=sibilances,
     color=consort.Color.from_x11('Lavender')
-        .scale_luminance(-1)
+        .scale_luminance(-0.5)
         .rotate_hue(0.0),
+    comment='whispered_pointillism',
     rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,

@@ -37,11 +37,12 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "unpitched_shimmer"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4. :32 \fp \( \>
                         }
                         % [Violin 1 Voice] Measure 2
@@ -55,10 +56,11 @@
                             r8 \!
                         }
                     }
+                    % [Violin 1 Voice] Material: "unpitched_shimmer"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'8 :64 \ppp \(
                             <> \)
                         }
@@ -68,11 +70,12 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "unpitched_shimmer"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4. :32 \fp \( \>
                             c'8 :64 \repeatTie
                         }
@@ -106,9 +109,10 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "unpitched_shimmer"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'8 :64 \ppp \(
                         }
                         % [Violin 1 Voice] Measure 7
@@ -148,10 +152,11 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "unpitched_shimmer"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'8 :64 \fp \( \>
                         }
                         % [Violin 2 Voice] Measure 2
@@ -172,10 +177,11 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "unpitched_shimmer"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4 :32 \ppp \(
                             <> \)
                         }
@@ -186,9 +192,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "unpitched_shimmer"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'8 :64 \fp \( \>
                         }
                         \times 2/3 {
@@ -248,10 +255,11 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "unpitched_shimmer"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4 :32 \( \<
                         }
                         % [Viola Voice] Measure 2
@@ -279,9 +287,10 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "unpitched_shimmer"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'8 :64 \fp \( \>
                             c'4 :32 \repeatTie
                         }
@@ -339,11 +348,12 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "unpitched_shimmer"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4. :32 \( \<
                         }
                         % [Cello Voice] Measure 2
@@ -357,11 +367,12 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "unpitched_shimmer"
                     {
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4. :32 \fp \( \>
                         }
                         % [Cello Voice] Measure 4
@@ -375,10 +386,11 @@
                             r4 \!
                         }
                     }
+                    % [Cello Voice] Material: "unpitched_shimmer"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'4 :32 \( \<
                         }
                         {
@@ -404,10 +416,11 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "unpitched_shimmer"
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.927 0.752 0.635)
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                             c'8 :64 \fp \(
                             <> \)
                         }

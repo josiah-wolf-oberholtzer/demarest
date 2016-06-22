@@ -15,6 +15,7 @@ shaker_drone = abjad.new(
     color=consort.Color.from_x11('Lavender')
         .scale_luminance(0)
         .rotate_hue(0.3),
+    comment='shaker_drone',
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
         ),

@@ -14,4 +14,5 @@ pitch_pipe_drone = abjad.new(
     color=consort.Color.from_x11('Lavender')
         .scale_luminance(0)
         .rotate_hue(0.15),
+    comment='pitch_pipe_drone',
     )

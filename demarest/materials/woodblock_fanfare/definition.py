@@ -118,8 +118,9 @@ woodblock_fanfare = consort.MusicSpecifier(
             ),
         ),
     color=consort.Color.from_x11('Lavender')
-        .scale_luminance(-2)
+        .scale_luminance(-1)
         .rotate_hue(0.6),
+    comment='wood_block_fanfare',
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
             items=[

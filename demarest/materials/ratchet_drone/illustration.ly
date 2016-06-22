@@ -37,10 +37,11 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "ratchet_drone"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4. \f \(
                         }
                         % [Violin 1 Voice] Measure 2
@@ -54,10 +55,11 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "ratchet_drone"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'8 \f \(
                             <> \)
                         }
@@ -67,10 +69,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "ratchet_drone"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4. \parenthesizeDynamic \f \(
                             a'8 \repeatTie
                         }
@@ -93,9 +96,10 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "ratchet_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'8 \f \(
                         }
                         % [Violin 1 Voice] Measure 7
@@ -135,9 +139,10 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "ratchet_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'8 \f \(
                         }
                         % [Violin 2 Voice] Measure 2
@@ -158,10 +163,11 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "ratchet_drone"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4 \f \(
                             <> \)
                         }
@@ -172,9 +178,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "ratchet_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'8 \(
                         }
                         {
@@ -228,9 +235,10 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "ratchet_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4 \f \(
                         }
                         % [Viola Voice] Measure 2
@@ -258,9 +266,10 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "ratchet_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'8 \f \(
                             a'4 \repeatTie
                         }
@@ -312,10 +321,11 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "ratchet_drone"
                     {
                         % [Cello Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4. \f \(
                         }
                         % [Cello Voice] Measure 2
@@ -329,10 +339,11 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "ratchet_drone"
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4. \f \(
                         }
                         % [Cello Voice] Measure 4
@@ -346,9 +357,10 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "ratchet_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4 \parenthesizeDynamic \f \(
                         }
                         {
@@ -374,10 +386,11 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "ratchet_drone"
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'8 \f \(
                             <> \)
                         }

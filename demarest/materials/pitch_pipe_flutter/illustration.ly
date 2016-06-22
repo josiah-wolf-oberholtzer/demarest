@@ -37,6 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "pitch_pipe_flutter"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -98,6 +99,7 @@
                             r8 \!
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitch_pipe_flutter"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -121,6 +123,7 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -167,6 +170,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -219,6 +223,7 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -288,6 +293,7 @@
                             r8 \!
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitch_pipe_flutter"
                     {
                         % [Violin 2 Voice] Measure 4
                         \times 2/3 {
@@ -313,6 +319,7 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
@@ -387,6 +394,7 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -458,6 +466,7 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
@@ -529,6 +538,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "pitch_pipe_flutter"
                     {
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
@@ -594,6 +604,7 @@
                             r8 \!
                         }
                     }
+                    % [Cello Voice] Material: "pitch_pipe_flutter"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -624,6 +635,7 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "pitch_pipe_flutter"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -662,6 +674,7 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "pitch_pipe_flutter"
                     {
                         % [Cello Voice] Measure 7
                         {

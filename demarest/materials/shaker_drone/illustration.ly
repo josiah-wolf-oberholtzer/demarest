@@ -37,6 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "shaker_drone"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -93,6 +94,7 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "shaker_drone"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -112,6 +114,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "shaker_drone"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
@@ -145,6 +148,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "shaker_drone"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
@@ -194,6 +198,7 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "shaker_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -256,6 +261,7 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "shaker_drone"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
@@ -276,6 +282,7 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "shaker_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -341,6 +348,7 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "shaker_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -411,6 +419,7 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "shaker_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -474,6 +483,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "shaker_drone"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -530,6 +540,7 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "shaker_drone"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -554,6 +565,7 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "shaker_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -590,6 +602,7 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "shaker_drone"
                     {
                         % [Cello Voice] Measure 7
                         {

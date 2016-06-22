@@ -37,10 +37,11 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -56,9 +57,10 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -70,10 +72,11 @@
                             r8.
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                             <> \)
                         }
@@ -88,9 +91,10 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \(
                             <> \)
                         }
@@ -101,9 +105,10 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -119,9 +124,10 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -137,9 +143,10 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( \< [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -186,9 +193,10 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( \> [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -206,9 +214,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                             <> \)
                         }
@@ -218,10 +227,11 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         % [Violin 2 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -236,10 +246,11 @@
                             r8.
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \(
                             <> \)
                         }
@@ -251,9 +262,10 @@
                             r8.
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                         }
                         {
@@ -268,10 +280,11 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -283,9 +296,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \(
                             <> \)
                         }
@@ -295,10 +309,11 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         % [Violin 2 Voice] Measure 6
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -317,9 +332,10 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \(
                             <> \)
                         }
@@ -355,9 +371,10 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -376,9 +393,10 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                         }
                         {
@@ -393,9 +411,10 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \(
                         }
                         % [Viola Voice] Measure 3
@@ -414,9 +433,10 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -429,9 +449,10 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                             <> \)
                         }
@@ -441,10 +462,11 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         % [Viola Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( \< [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -461,10 +483,11 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "guiro_pointillism"
                     {
                         % [Viola Voice] Measure 6
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \(
                             <> \)
                         }
@@ -502,10 +525,11 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         % [Cello Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                             <> \)
                         }
@@ -516,10 +540,11 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         % [Cello Voice] Measure 2
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -538,9 +563,10 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -552,10 +578,11 @@
                             r8.
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         % [Cello Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \(
                             <> \)
                         }
@@ -566,9 +593,10 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -580,9 +608,10 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \(
                             <> \)
                         }
@@ -592,10 +621,11 @@
                             r8.
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         % [Cello Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]
@@ -607,9 +637,10 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \ppp \(
                             <> \)
                         }
@@ -628,10 +659,11 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "guiro_pointillism"
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                             b16 -\staccato \mf \( [
                             \set stemLeftBeamCount = 2
                             b16 -\staccato ]

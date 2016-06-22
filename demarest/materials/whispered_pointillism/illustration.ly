@@ -37,6 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -75,7 +76,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
@@ -98,13 +99,14 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 1 Voice] Measure 2
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -127,13 +129,14 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -156,13 +159,14 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -186,12 +190,13 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -214,13 +219,14 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 1 Voice] Measure 5
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -247,12 +253,13 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -274,13 +281,14 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 1 Voice] Measure 7
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -330,6 +338,7 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -367,7 +376,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
@@ -389,13 +398,14 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 2 Voice] Measure 2
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -417,12 +427,13 @@
                             r8.
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -444,13 +455,14 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 2 Voice] Measure 3
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -473,13 +485,14 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -503,12 +516,13 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -530,12 +544,13 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -557,13 +572,14 @@
                             r8.
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 2 Voice] Measure 5
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -585,12 +601,13 @@
                             r8.
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -612,13 +629,14 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 2 Voice] Measure 6
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -641,13 +659,14 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_pointillism"
                     {
                         % [Violin 2 Voice] Measure 7
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -697,6 +716,7 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -734,7 +754,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
@@ -756,13 +776,14 @@
                             r8.
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         % [Viola Voice] Measure 2
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -784,12 +805,13 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -811,12 +833,13 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -838,13 +861,14 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         % [Viola Voice] Measure 3
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -871,12 +895,13 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -899,12 +924,13 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -926,13 +952,14 @@
                             r8.
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         % [Viola Voice] Measure 5
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -954,12 +981,13 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -981,13 +1009,14 @@
                             r8.
                         }
                     }
+                    % [Viola Voice] Material: "whispered_pointillism"
                     {
                         % [Viola Voice] Measure 6
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -1038,6 +1067,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -1076,7 +1106,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \p \( \startTextSpan
                                 _ \markup {
                                     \whiteout
@@ -1099,13 +1129,14 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         % [Cello Voice] Measure 2
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -1128,13 +1159,14 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         % [Cello Voice] Measure 3
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -1157,13 +1189,14 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         % [Cello Voice] Measure 4
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -1186,12 +1219,13 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -1213,12 +1247,13 @@
                             r8.
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -1240,13 +1275,14 @@
                             r8.
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         % [Cello Voice] Measure 5
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \parenthesizeDynamic \p \(
                                 _ \markup {
                                     \whiteout
@@ -1268,12 +1304,13 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         {
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \(
                                 _ \markup {
                                     \whiteout
@@ -1305,6 +1342,7 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "whispered_pointillism"
                     {
                         % [Cello Voice] Measure 7
                         {
@@ -1313,7 +1351,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
+                            \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                             c'16 -\staccato \p \(
                                 _ \markup {
                                     \whiteout

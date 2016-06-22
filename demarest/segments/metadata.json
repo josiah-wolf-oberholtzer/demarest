@@ -1,9 +1,9 @@
 {
     "segments": [
         "section_x",
+        "cut_1",
         "section_y",
-        "section_z",
-        "percussion_tremolo",
-        "percussion_pointillism"
+        "cut_2",
+        "section_z"
     ]
 }

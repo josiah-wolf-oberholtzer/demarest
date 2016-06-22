@@ -9,7 +9,7 @@ import demarest
 segment_maker = demarest.SegmentMaker(
     annotate_colors=True,
     annotate_phrasing=False,
-    desired_duration_in_seconds=180,
+    desired_duration_in_seconds=181,
     permitted_time_signatures=[
         (3, 4), (4, 4), (6, 8), (7, 8), (5, 8),
         ],
@@ -128,7 +128,7 @@ segment_maker.add_setting(
 
 music_specifiers = consort.CompositeMusicSpecifier(
     primary_music_specifier=demarest.materials.pitch_pipe_drone,
-    secondary_music_specifier=demarest.materials.percussion_pointillism,
+    secondary_music_specifier=demarest.materials.unpitched_pointillism,
     )
 timespan_maker = abjad.new(
     demarest.materials.semitutti_timespan_maker,

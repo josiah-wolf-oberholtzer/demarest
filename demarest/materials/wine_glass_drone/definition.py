@@ -12,8 +12,9 @@ wine_glass_drone = abjad.new(
         selector=abjad.selectortools.select_pitched_runs(),
         ),
     color=consort.Color.from_x11('Lavender')
-        .scale_luminance(-3)
+        .scale_luminance(-1.5)
         .rotate_hue(0.0),
+    comment='wine_glass_drone',
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.WINE_GLASS,
         ),

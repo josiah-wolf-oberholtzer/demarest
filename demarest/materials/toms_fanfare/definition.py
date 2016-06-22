@@ -82,8 +82,9 @@ toms_fanfare = consort.MusicSpecifier(
             ),
         ),
     color=consort.Color.from_x11('Lavender')
-        .scale_luminance(-3)
+        .scale_luminance(-1.5)
         .rotate_hue(0.6),
+    comment='toms_fanfare',
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
             items=[

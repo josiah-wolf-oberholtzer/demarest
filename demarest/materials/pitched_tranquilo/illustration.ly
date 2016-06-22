@@ -37,10 +37,11 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -61,10 +62,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             cs''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -85,10 +87,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -109,10 +112,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -134,9 +138,10 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -157,10 +162,11 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -185,9 +191,10 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -249,9 +256,10 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             cs'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -287,9 +295,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -325,10 +334,11 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             a'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -350,9 +360,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             g'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -387,10 +398,11 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -411,9 +423,10 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -449,10 +462,11 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -499,10 +513,11 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "pitched_tranquilo"
                     {
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -524,11 +539,12 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "pitched_tranquilo"
                     {
                         % [Viola Voice] Measure 2
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c''8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
                                     \pad-around
@@ -597,10 +613,11 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "pitched_tranquilo"
                     {
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             f''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -622,10 +639,11 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "pitched_tranquilo"
                     {
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             af'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -647,11 +665,12 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "pitched_tranquilo"
                     {
                         % [Viola Voice] Measure 5
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -687,11 +706,12 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "pitched_tranquilo"
                     {
                         % [Viola Voice] Measure 6
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -740,11 +760,12 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -766,11 +787,12 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 2
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -792,11 +814,12 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 3
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -818,11 +841,12 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 4
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             a'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -844,10 +868,11 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -869,10 +894,11 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -894,11 +920,12 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 5
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -943,11 +970,12 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 7
                         {
                             \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around

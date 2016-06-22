@@ -1,9 +1,7 @@
-% 2016-06-11 15:34
-
-% package "abjad" @ 458a077 [josiah/demarest] (2016-06-11 12:39:40)
+% package "abjad" @ bfda186 [josiah/demarest] (2016-06-19 18:29:37)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 004088b [master] (2016-06-10 22:28:16)
-% package "demarest" @ e431efc [master] (2016-06-11 15:12:47)
+% package "consort" @ 1027c13 [master] (2016-06-20 00:08:47)
+% package "demarest" @ 7966778 [master] (2016-06-20 00:33:30)
 
 \version "2.19.41"
 \language "english"
@@ -241,6 +239,7 @@
                                 r4.
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -254,7 +253,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -267,7 +266,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -277,21 +276,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -316,7 +305,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -329,57 +320,16 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -392,6 +342,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -426,6 +379,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -439,7 +393,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -452,7 +406,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -462,21 +416,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -503,6 +447,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -524,6 +471,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -537,7 +485,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -550,7 +498,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -560,21 +508,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -588,6 +526,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -629,6 +570,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -642,7 +584,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -655,7 +597,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -665,21 +607,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -692,6 +624,9 @@
                                 c'2 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -710,6 +645,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -723,7 +659,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -736,7 +672,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -746,21 +682,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -786,6 +712,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -794,11 +723,46 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -808,21 +772,10 @@
                                                         f-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -830,12 +783,15 @@
                                 r8.
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 1 Vocalization Voice] Measure 29
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -845,21 +801,11 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -881,6 +827,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 1 Vocalization Voice] Measure 32
                             {
@@ -895,7 +842,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -908,7 +855,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -918,21 +865,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -945,7 +882,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -953,57 +892,16 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 1 Vocalization Voice] Measure 33
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'1 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'1 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1015,6 +913,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1033,11 +934,16 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 1 Vocalization Voice] Measure 36
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -1062,7 +968,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1089,6 +997,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1102,7 +1011,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1115,7 +1024,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1125,21 +1034,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1164,6 +1063,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1186,6 +1088,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1199,7 +1102,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1212,7 +1115,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1222,21 +1125,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1250,6 +1143,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1271,11 +1167,16 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 1 Vocalization Voice] Measure 48
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -1300,7 +1201,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1343,6 +1246,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1356,7 +1260,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1369,7 +1273,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1379,21 +1283,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1406,6 +1300,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1431,6 +1328,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1444,7 +1342,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1457,7 +1355,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1467,21 +1365,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1495,6 +1383,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1509,134 +1400,7 @@
                                 r8
                             }
                         }
-                        {
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        t-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            % [A 1 Vocalization Voice] Measure 65
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        ch-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r2.
-                            }
-                            % [A 1 Vocalization Voice] Measure 66
-                            {
-                                r4.
-                            }
-                        }
-                        {
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            % [A 1 Vocalization Voice] Measure 67
-                            {
-                                r2
-                            }
-                        }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1671,22 +1435,138 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        t-
+                                                    }
                                         }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                        }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [A 1 Vocalization Voice] Measure 65
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        ch-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r2.
+                            }
+                            % [A 1 Vocalization Voice] Measure 66
+                            {
+                                r4.
+                            }
+                        }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            % [A 1 Vocalization Voice] Measure 67
+                            {
+                                r2
+                            }
+                        }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1698,6 +1578,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -1708,11 +1591,46 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1722,21 +1640,10 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1745,12 +1652,15 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 1 Vocalization Voice] Measure 69
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1760,21 +1670,10 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1784,12 +1683,15 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 1 Vocalization Voice] Measure 70
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1799,21 +1701,11 @@
                                                         f-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1844,7 +1736,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -1854,7 +1752,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "A 1 Percussion Voice" {
                         {
@@ -2088,6 +1992,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2101,7 +2006,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2114,7 +2019,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2124,21 +2029,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2177,6 +2072,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2215,6 +2113,7 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2228,7 +2127,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2241,7 +2140,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2251,21 +2150,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2290,7 +2179,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2299,8 +2190,41 @@
                                 r2
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 2 Vocalization Voice] Measure 15
+                            {
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2. -\accent \fp \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [A 2 Vocalization Voice] Measure 16
+                            {
+                                r4
+                            }
+                        }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
+                        {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -2334,47 +2258,11 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [A 2 Vocalization Voice] Measure 16
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2384,21 +2272,10 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2407,12 +2284,15 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 2 Vocalization Voice] Measure 17
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2422,21 +2302,11 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2471,6 +2341,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2484,7 +2355,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2497,7 +2368,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2507,21 +2378,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2547,6 +2408,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2568,6 +2432,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2581,7 +2446,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2594,7 +2459,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2604,21 +2469,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2632,6 +2487,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2661,6 +2519,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2674,7 +2533,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2687,7 +2546,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2697,21 +2556,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2725,6 +2574,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2747,25 +2599,18 @@
                                 \startStaff
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 2 Vocalization Voice] Measure 35
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2785,11 +2630,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2814,6 +2662,7 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2827,7 +2676,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2840,7 +2689,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2850,21 +2699,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2878,7 +2717,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2890,56 +2731,15 @@
                                 r2
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'2 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -2951,6 +2751,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -2969,10 +2772,15 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -2997,7 +2805,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3010,6 +2820,7 @@
                                 r2
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3023,7 +2834,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3036,7 +2847,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3046,21 +2857,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3086,6 +2887,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3124,6 +2928,7 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3137,7 +2942,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3150,7 +2955,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3160,21 +2965,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3200,6 +2995,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3221,24 +3019,17 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3258,11 +3049,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3275,83 +3069,9 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        t-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            % [A 2 Vocalization Voice] Measure 65
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        ch-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -3384,22 +3104,104 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        t-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                        }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [A 2 Vocalization Voice] Measure 65
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        ch-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r8
+                            }
+                        }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3412,6 +3214,9 @@
                                 c'4. \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3434,6 +3239,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3447,7 +3253,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3460,7 +3266,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3470,21 +3276,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3498,6 +3294,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3523,11 +3322,46 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3537,21 +3371,10 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3560,12 +3383,15 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 2 Vocalization Voice] Measure 71
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3575,21 +3401,11 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3611,7 +3427,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -3621,7 +3443,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "A 2 Percussion Voice" {
                         {
@@ -3858,6 +3686,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3871,7 +3700,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3884,7 +3713,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3894,21 +3723,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3934,6 +3753,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3968,6 +3790,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3981,7 +3804,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3994,7 +3817,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4004,21 +3827,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4044,6 +3857,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4062,6 +3878,7 @@
                                 r2
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4075,7 +3892,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4088,7 +3905,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4098,21 +3915,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4137,6 +3944,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4176,6 +3986,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4189,7 +4000,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4202,7 +4013,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4212,21 +4023,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4251,6 +4052,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4269,6 +4073,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 3 Vocalization Voice] Measure 28
                             {
@@ -4282,7 +4087,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4295,7 +4100,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4305,21 +4110,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4331,6 +4126,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4356,63 +4154,9 @@
                                 r4.
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            % [A 3 Vocalization Voice] Measure 33
-                            {
-                                r2
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -4423,7 +4167,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4436,7 +4180,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4446,21 +4190,47 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
                                         }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [A 3 Vocalization Voice] Measure 33
+                            {
+                                r2
+                                r8
+                            }
+                        }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4486,6 +4256,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4516,6 +4289,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4529,7 +4303,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4542,7 +4316,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4552,21 +4326,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4591,7 +4355,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4600,57 +4366,16 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4689,6 +4414,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4701,10 +4429,15 @@
                                 r2.
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -4729,7 +4462,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4750,24 +4485,17 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4787,11 +4515,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4829,6 +4560,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4842,7 +4574,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4855,7 +4587,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4865,21 +4597,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4904,6 +4626,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -4918,6 +4643,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 3 Vocalization Voice] Measure 62
                             {
@@ -4932,7 +4658,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4945,7 +4671,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4955,21 +4681,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4996,6 +4712,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5014,11 +4733,16 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 3 Vocalization Voice] Measure 65
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -5043,7 +4767,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5052,24 +4778,17 @@
                                 r2
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5089,11 +4808,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5107,6 +4829,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 3 Vocalization Voice] Measure 67
                             {
@@ -5120,7 +4843,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5133,7 +4856,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5143,21 +4866,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5169,6 +4882,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5181,11 +4897,16 @@
                                 r2.
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5209,7 +4930,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5230,6 +4953,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5243,7 +4967,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5256,7 +4980,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5266,21 +4990,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5306,6 +5020,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5327,7 +5044,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -5337,7 +5060,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "A 3 Percussion Voice" {
                         {
@@ -5570,6 +5299,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5583,7 +5313,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5596,7 +5326,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5606,21 +5336,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5633,6 +5353,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5667,6 +5390,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 4 Vocalization Voice] Measure 13
                             {
@@ -5681,7 +5405,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5694,7 +5418,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5704,21 +5428,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5731,6 +5445,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5753,24 +5470,17 @@
                                 r4.
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5790,11 +5500,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5828,6 +5541,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 4 Vocalization Voice] Measure 25
                             {
@@ -5842,7 +5556,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5855,7 +5569,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5865,21 +5579,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5892,6 +5596,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5906,6 +5613,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5919,7 +5627,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5932,7 +5640,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5942,21 +5650,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5995,6 +5693,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6022,6 +5723,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6035,7 +5737,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6048,7 +5750,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6058,21 +5760,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6097,7 +5789,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6110,57 +5804,16 @@
                                 r4.
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6185,6 +5838,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6206,59 +5862,10 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 4 Vocalization Voice] Measure 42
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6269,7 +5876,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6282,7 +5889,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6292,21 +5899,42 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
                                         }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6331,6 +5959,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6344,97 +5975,9 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        ch-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            % [A 4 Vocalization Voice] Measure 45
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        t-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r2
-                            }
-                            % [A 4 Vocalization Voice] Measure 46
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                            }
-                            % [A 4 Vocalization Voice] Measure 47
-                            {
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [A 4 Vocalization Voice] Measure 48
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6467,22 +6010,118 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        ch-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                        }
+                        % [A 4 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [A 4 Vocalization Voice] Measure 45
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        t-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r2
+                            }
+                            % [A 4 Vocalization Voice] Measure 46
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                            }
+                            % [A 4 Vocalization Voice] Measure 47
+                            {
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            % [A 4 Vocalization Voice] Measure 48
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6495,6 +6134,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6529,6 +6171,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [A 4 Vocalization Voice] Measure 60
                             {
@@ -6543,7 +6186,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6556,7 +6199,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6566,21 +6209,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6605,7 +6238,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6614,57 +6249,16 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6704,6 +6298,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6722,11 +6319,16 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 4 Vocalization Voice] Measure 65
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -6751,7 +6353,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6774,6 +6378,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6787,7 +6392,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6800,7 +6405,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6810,21 +6415,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6838,7 +6433,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6850,57 +6447,16 @@
                                 r2.
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -6925,6 +6481,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6943,11 +6502,16 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [A 4 Vocalization Voice] Measure 71
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -6972,7 +6536,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6994,7 +6560,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -7004,7 +6576,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "A 4 Percussion Voice" {
                         {
@@ -7247,6 +6825,7 @@
                                 r4.
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7260,7 +6839,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7273,7 +6852,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7283,21 +6862,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7310,6 +6879,9 @@
                                 c'2 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7328,6 +6900,7 @@
                                 r8
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7341,7 +6914,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7354,7 +6927,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7364,21 +6937,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7391,6 +6954,9 @@
                                 c'2 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7425,6 +6991,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 1 Vocalization Voice] Measure 20
                             {
@@ -7439,7 +7006,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7452,7 +7019,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7462,21 +7029,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7489,7 +7046,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7498,57 +7057,16 @@
                                 r4
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'2 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7573,6 +7091,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7610,6 +7131,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 1 Vocalization Voice] Measure 32
                             {
@@ -7624,7 +7146,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7637,7 +7159,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7647,21 +7169,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7686,6 +7198,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7703,25 +7218,18 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 1 Vocalization Voice] Measure 35
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7741,11 +7249,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7770,6 +7281,7 @@
                                 r2.
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7783,7 +7295,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7796,7 +7308,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7806,21 +7318,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7845,6 +7347,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -7880,24 +7385,17 @@
                                 r4
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7917,11 +7415,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7939,6 +7440,7 @@
                                 r4
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -7951,7 +7453,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7964,7 +7466,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7974,21 +7476,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8000,6 +7492,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8042,6 +7537,7 @@
                                 r2
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -8054,7 +7550,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8067,7 +7563,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8077,21 +7573,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8103,6 +7589,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8117,25 +7606,18 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 1 Vocalization Voice] Measure 69
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8155,11 +7637,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8172,11 +7657,16 @@
                                 r8
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8200,7 +7690,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8220,28 +7712,35 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 1 Percussion Staff" {
+                \context PercussionStaff = "T 1 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                percussion
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                perc.
+                                            }
+                    }
+                } {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
                     \context Voice = "T 1 Percussion Voice" {
                         {
                             % [T 1 Percussion Voice] Measure 1
@@ -8477,6 +7976,7 @@
                                 r2
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -8490,7 +7990,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8503,7 +8003,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8513,21 +8013,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8552,7 +8042,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8560,25 +8052,16 @@
                                 r4
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 2 Vocalization Voice] Measure 10
                             {
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8588,21 +8071,12 @@
                                                         h-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8648,6 +8122,7 @@
                                 r4
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -8661,7 +8136,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8674,7 +8149,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8684,21 +8159,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8724,6 +8189,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8741,25 +8209,18 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 2 Vocalization Voice] Measure 23
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8779,11 +8240,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8820,24 +8284,17 @@
                                 r8
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8857,11 +8314,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8883,6 +8343,7 @@
                                 r8
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -8896,7 +8357,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8909,7 +8370,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8919,21 +8380,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8958,6 +8409,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8980,25 +8434,18 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 2 Vocalization Voice] Measure 44
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9018,11 +8465,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9052,6 +8502,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 2 Vocalization Voice] Measure 56
                             {
@@ -9066,7 +8517,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9079,7 +8530,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9089,21 +8540,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9116,6 +8557,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9134,25 +8578,18 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 2 Vocalization Voice] Measure 58
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9172,11 +8609,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9184,12 +8624,17 @@
                                 r2
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [T 2 Vocalization Voice] Measure 59
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9213,7 +8658,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9256,6 +8703,7 @@
                                 r2.
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -9269,7 +8717,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9282,7 +8730,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9292,21 +8740,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9332,7 +8770,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9344,57 +8784,16 @@
                                 r4
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9434,6 +8833,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9445,28 +8847,35 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 2 Percussion Staff" {
+                \context PercussionStaff = "T 2 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                percussion
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                perc.
+                                            }
+                    }
+                } {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
                     \context Voice = "T 2 Percussion Voice" {
                         {
                             % [T 2 Percussion Voice] Measure 1
@@ -9702,25 +9111,18 @@
                                 \startStaff
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 3 Vocalization Voice] Measure 9
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9740,11 +9142,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9761,6 +9166,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [T 3 Vocalization Voice] Measure 11
                             {
@@ -9774,7 +9180,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9787,7 +9193,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9797,21 +9203,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9823,6 +9219,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9864,6 +9263,7 @@
                                 r4.
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -9877,7 +9277,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9890,7 +9290,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9900,21 +9300,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9939,6 +9329,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9981,63 +9374,9 @@
                                 r4.
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            % [T 3 Vocalization Voice] Measure 33
-                            {
-                                r2
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -10048,7 +9387,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10061,7 +9400,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10071,21 +9410,47 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
                                         }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 3 Vocalization Voice] Measure 33
+                            {
+                                r2
+                                r8
+                            }
+                        }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4. \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10110,6 +9475,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10140,6 +9508,7 @@
                                 r4.
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10153,7 +9522,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10166,7 +9535,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10176,21 +9545,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10203,6 +9562,9 @@
                                 c'4. \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10228,24 +9590,17 @@
                                 r2
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10265,11 +9620,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -10294,6 +9652,7 @@
                                 r4
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10307,7 +9666,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10320,7 +9679,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10330,21 +9689,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10371,7 +9720,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -10383,57 +9734,16 @@
                                 r2
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10458,6 +9768,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10499,6 +9812,7 @@
                                 r2..
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10512,7 +9826,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10525,7 +9839,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10535,21 +9849,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10574,6 +9878,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10596,6 +9903,7 @@
                                 r8
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10609,7 +9917,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10622,7 +9930,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10632,21 +9940,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -10671,6 +9969,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -10682,28 +9983,35 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 3 Percussion Staff" {
+                \context PercussionStaff = "T 3 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                percussion
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                perc.
+                                            }
+                    }
+                } {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        perc.
-                    }
                     \context Voice = "T 3 Percussion Voice" {
                         {
                             % [T 3 Percussion Voice] Measure 1
@@ -10937,6 +10245,7 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10950,7 +10259,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10963,7 +10272,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10973,21 +10282,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11013,6 +10312,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -11034,24 +10336,17 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11071,11 +10366,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11113,6 +10411,7 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11126,7 +10425,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11139,7 +10438,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -11149,21 +10448,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11188,7 +10477,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11200,9 +10491,54 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                            }
+                            % [B 1 Vocalization Voice] Measure 16
+                            {
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -11235,59 +10571,11 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                            }
-                            % [B 1 Vocalization Voice] Measure 16
-                            {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11297,21 +10585,10 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11319,12 +10596,15 @@
                                 r8.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 1 Vocalization Voice] Measure 17
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11334,21 +10614,10 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11358,12 +10627,15 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 1 Vocalization Voice] Measure 18
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11373,21 +10645,11 @@
                                                         ch-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -11400,24 +10662,17 @@
                                 r2
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11437,11 +10692,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11470,6 +10728,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11483,7 +10742,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11496,7 +10755,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -11506,21 +10765,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11546,7 +10795,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11555,57 +10806,16 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11632,6 +10842,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -11658,6 +10871,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11671,7 +10885,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11684,7 +10898,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -11694,21 +10908,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11734,6 +10938,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -11755,24 +10962,17 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11792,11 +10992,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11821,6 +11024,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11834,7 +11038,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11847,7 +11051,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -11857,21 +11061,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11897,6 +11091,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -11919,24 +11116,17 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11956,11 +11146,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -11998,63 +11191,9 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 61
-                            {
-                                r4.
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -12065,7 +11204,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -12078,7 +11217,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -12088,21 +11227,47 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
                                         }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [B 1 Vocalization Voice] Measure 61
+                            {
+                                r4.
+                                r4
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12127,6 +11292,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12141,10 +11309,15 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -12169,7 +11342,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -12194,6 +11369,7 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -12207,7 +11383,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -12220,7 +11396,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -12230,21 +11406,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12269,7 +11435,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -12281,24 +11449,15 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12308,21 +11467,12 @@
                                                         f-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -12330,12 +11480,17 @@
                                 r2
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 1 Vocalization Voice] Measure 69
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12359,7 +11514,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -12374,6 +11531,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -12387,7 +11545,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -12400,7 +11558,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -12410,21 +11568,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12449,6 +11597,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12470,7 +11621,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -12480,7 +11637,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "B 1 Percussion Voice" {
                         {
@@ -12714,6 +11877,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -12727,7 +11891,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -12740,7 +11904,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -12750,21 +11914,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12789,7 +11943,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -12798,58 +11954,17 @@
                                 r2
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 2 Vocalization Voice] Measure 5
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'4. \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12875,6 +11990,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -12883,11 +12001,46 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12897,21 +12050,10 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -12919,12 +12061,15 @@
                                 r8.
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 2 Vocalization Voice] Measure 7
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12934,21 +12079,11 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -12984,24 +12119,17 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13021,11 +12149,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13047,24 +12178,17 @@
                                 r2
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13084,11 +12208,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13106,11 +12233,46 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13120,21 +12282,10 @@
                                                         f-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13143,12 +12294,15 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 2 Vocalization Voice] Measure 18
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13158,21 +12312,11 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -13185,6 +12329,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -13197,7 +12342,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13210,7 +12355,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13220,21 +12365,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13246,7 +12381,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13258,57 +12395,16 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13334,6 +12430,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -13356,6 +12455,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -13369,7 +12469,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13382,7 +12482,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13392,21 +12492,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13432,6 +12522,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -13461,24 +12554,17 @@
                                 r4.
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13498,11 +12584,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13527,6 +12616,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -13540,7 +12630,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13553,7 +12643,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13563,21 +12653,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13591,6 +12671,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -13617,6 +12700,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -13630,7 +12714,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13643,7 +12727,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13653,21 +12737,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13692,7 +12766,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13705,56 +12781,15 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'2 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13766,6 +12801,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -13787,10 +12825,15 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -13815,7 +12858,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13854,34 +12899,10 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -13891,11 +12912,48 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13905,9 +12963,57 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 \repeatTie
+                            }
+                            % [B 2 Vocalization Voice] Measure 61
+                            {
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                        }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [B 2 Vocalization Voice] Measure 62
+                            {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -13940,62 +13046,11 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                c'4 \repeatTie
-                            }
-                            % [B 2 Vocalization Voice] Measure 61
-                            {
-                                c'4 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                        }
-                        {
-                            % [B 2 Vocalization Voice] Measure 62
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14005,21 +13060,10 @@
                                                         ch-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -14029,12 +13073,15 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 2 Vocalization Voice] Measure 63
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14044,21 +13091,11 @@
                                                         t-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -14085,6 +13122,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 2 Vocalization Voice] Measure 67
                             {
@@ -14099,7 +13137,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14112,7 +13150,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14122,21 +13160,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'1 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14161,6 +13189,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14179,6 +13210,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 2 Vocalization Voice] Measure 70
                             {
@@ -14192,7 +13224,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14205,7 +13237,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14215,21 +13247,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14241,6 +13263,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14270,7 +13295,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -14280,7 +13311,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "B 2 Percussion Voice" {
                         {
@@ -14509,6 +13546,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 3
                             {
@@ -14522,7 +13560,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14535,7 +13573,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14545,21 +13583,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2.. -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14571,6 +13599,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14590,6 +13621,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -14603,7 +13635,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14616,7 +13648,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14626,21 +13658,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14665,6 +13687,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14702,6 +13727,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 13
                             {
@@ -14716,7 +13742,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14729,7 +13755,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14739,21 +13765,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14779,7 +13795,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -14788,57 +13806,16 @@
                                 r2
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 15
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. -\accent \fp \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'2. -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14850,6 +13827,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -14864,11 +13844,16 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 3 Vocalization Voice] Measure 18
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -14893,7 +13878,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -14902,59 +13889,10 @@
                                 r2.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 19
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -14965,7 +13903,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14978,7 +13916,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14988,21 +13926,42 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
                                         }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15027,6 +13986,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15053,6 +14015,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 25
                             {
@@ -15067,7 +14030,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15080,7 +14043,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15090,21 +14053,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15129,6 +14082,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15160,59 +14116,9 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            % [B 3 Vocalization Voice] Measure 33
-                            {
-                                r2..
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -15223,7 +14129,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15236,7 +14142,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15246,21 +14152,43 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
                                         }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            % [B 3 Vocalization Voice] Measure 33
+                            {
+                                r2..
+                            }
+                        }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15286,6 +14214,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15315,6 +14246,7 @@
                                 r2..
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -15328,7 +14260,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15341,7 +14273,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15351,21 +14283,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15390,19 +14312,67 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            % [B 3 Vocalization Voice] Measure 45
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2. \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                            }
+                            % [B 3 Vocalization Voice] Measure 46
+                            {
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
-                                r4
+                                r8
+                                r2
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 45
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -15435,60 +14405,11 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                            }
-                            % [B 3 Vocalization Voice] Measure 46
-                            {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                        }
-                        {
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15498,21 +14419,10 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -15520,12 +14430,15 @@
                                 r8.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 3 Vocalization Voice] Measure 47
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15535,21 +14448,10 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -15559,12 +14461,15 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 3 Vocalization Voice] Measure 48
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15574,21 +14479,11 @@
                                                         f-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -15627,6 +14522,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 60
                             {
@@ -15641,7 +14537,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15654,7 +14550,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15664,21 +14560,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15703,6 +14589,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15721,25 +14610,18 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 3 Vocalization Voice] Measure 63
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15759,11 +14641,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -15793,6 +14678,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -15806,7 +14692,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15819,7 +14705,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15829,21 +14715,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15856,7 +14732,9 @@
                                 c'4. \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
-                                <> \stopTextSpan
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -15868,57 +14746,16 @@
                                 r4.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15932,6 +14769,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -15941,11 +14781,46 @@
                                 r8
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15955,21 +14830,10 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -15977,12 +14841,15 @@
                                 r16
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 3 Vocalization Voice] Measure 69
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15992,21 +14859,11 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -16037,7 +14894,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -16047,7 +14910,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "B 3 Percussion Voice" {
                         {
@@ -16280,6 +15149,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -16293,7 +15163,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16306,7 +15176,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16316,21 +15186,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16343,6 +15203,9 @@
                                 c'2 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16366,6 +15229,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -16379,7 +15243,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16392,7 +15256,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16402,21 +15266,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16441,6 +15295,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16479,6 +15336,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -16492,7 +15350,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16505,7 +15363,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16515,21 +15373,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16542,6 +15390,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16560,6 +15411,7 @@
                                 r2
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -16573,7 +15425,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16586,7 +15438,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16596,21 +15448,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16636,6 +15478,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16658,161 +15503,9 @@
                                 r4.
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        ch-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r2
-                            }
-                        }
-                        {
-                            % [B 4 Vocalization Voice] Measure 20
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        t-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                                r4
-                            }
-                            % [B 4 Vocalization Voice] Measure 21
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            % [B 4 Vocalization Voice] Measure 22
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                            }
-                        }
-                        {
-                            {
-                                r2.
-                            }
-                            % [B 4 Vocalization Voice] Measure 23
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                            }
-                            % [B 4 Vocalization Voice] Measure 24
-                            {
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [B 4 Vocalization Voice] Measure 25
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -16845,22 +15538,178 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        ch-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r2
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [B 4 Vocalization Voice] Measure 20
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        t-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                            % [B 4 Vocalization Voice] Measure 21
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            % [B 4 Vocalization Voice] Measure 22
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r2.
+                            }
+                            % [B 4 Vocalization Voice] Measure 23
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                            }
+                            % [B 4 Vocalization Voice] Measure 24
+                            {
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 4 Vocalization Voice] Measure 25
+                            {
+                                r4
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16887,6 +15736,9 @@
                                 c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16909,6 +15761,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 4 Vocalization Voice] Measure 32
                             {
@@ -16923,7 +15776,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16936,7 +15789,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16946,21 +15799,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16973,6 +15816,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -16987,6 +15833,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17000,7 +15847,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17013,7 +15860,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17023,21 +15870,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17063,6 +15900,9 @@
                                 c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17075,10 +15915,15 @@
                                 r4.
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
                                 c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
@@ -17103,7 +15948,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17129,6 +15976,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17142,7 +15990,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17155,7 +16003,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17165,21 +16013,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17205,6 +16043,9 @@
                                         }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17222,25 +16063,18 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             % [B 4 Vocalization Voice] Measure 47
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17260,11 +16094,14 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17277,11 +16114,16 @@
                                 r4.
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17305,7 +16147,9 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17346,34 +16190,10 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -17383,11 +16203,48 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17399,9 +16256,44 @@
                                 r4
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -17434,22 +16326,11 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17459,48 +16340,10 @@
                                                         s-
                                                     }
                                         }
-                                \set stemLeftBeamCount = 1
-                                c'8 \repeatTie ] \p
                                 <> \)
-                                \revert NoteHead.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -17508,12 +16351,15 @@
                                 r16
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             % [B 4 Vocalization Voice] Measure 62
                             {
-                                \override NoteHead.style = #'cross
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'16 -\staccato \p \(
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17523,21 +16369,11 @@
                                                         f-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 <> \)
-                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -17572,6 +16408,7 @@
                                 r4.
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17585,7 +16422,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17598,7 +16435,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17608,21 +16445,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17635,6 +16462,9 @@
                                 c'4. \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17656,6 +16486,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17669,7 +16500,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17682,7 +16513,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17692,21 +16523,11 @@
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
                                 c'8 \( \startTextSpan [ \<
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    inhale
-                                                                }
-                                        }
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17720,6 +16541,9 @@
                                 c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -17749,7 +16573,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                shaker
+                                                maraca
+                                                castanet
+                                                "wine glass"
+                                            }
                     }
                     \set Staff.shortInstrumentName = \markup {
                     \pad-around
@@ -17759,7 +16589,13 @@
                                 #0.5
                                 \small
                                     \italic
-                                        perc.
+                                        \right-column
+                                            {
+                                                sh.
+                                                mc.
+                                                cst.
+                                                w.g.
+                                            }
                     }
                     \context Voice = "B 4 Percussion Voice" {
                         {

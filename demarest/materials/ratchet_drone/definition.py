@@ -12,8 +12,9 @@ ratchet_drone = abjad.new(
         dynamic_tokens='f',
         ),
     color=consort.Color.from_x11('Lavender')
-        .scale_luminance(-1)
+        .scale_luminance(-0.5)
         .rotate_hue(0.6),
+    comment='ratchet_drone',
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.RATCHET,
         ),

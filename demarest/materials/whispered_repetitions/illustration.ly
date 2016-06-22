@@ -37,6 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "whispered_repetitions"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -77,7 +78,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -208,6 +209,7 @@
                             r8
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_repetitions"
                     {
                         % [Violin 1 Voice] Measure 3
                         \times 2/3 {
@@ -247,7 +249,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan [
                                 _ \markup {
                                     \whiteout
@@ -298,6 +300,7 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -337,7 +340,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -568,6 +571,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "whispered_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -607,7 +611,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -716,6 +720,7 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_repetitions"
                     {
                         \times 2/3 {
                             \once \override Hairpin.circled-tip = ##t
@@ -755,7 +760,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -938,6 +943,7 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_repetitions"
                     {
                         {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -976,7 +982,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \p \( \startTextSpan [
                                 _ \markup {
                                     \whiteout
@@ -1024,6 +1030,7 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "whispered_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -1063,7 +1070,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -1363,6 +1370,7 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "whispered_repetitions"
                     {
                         \times 4/5 {
                             \once \override Hairpin.circled-tip = ##t
@@ -1402,7 +1410,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -1585,6 +1593,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "whispered_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -1624,7 +1633,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -1913,6 +1922,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "whispered_repetitions"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -1953,7 +1963,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -2084,6 +2094,7 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "whispered_repetitions"
                     {
                         % [Cello Voice] Measure 3
                         \tweak text #tuplet-number::calc-fraction-text
@@ -2125,7 +2136,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -2245,6 +2256,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "whispered_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -2284,7 +2296,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
                                 _ \markup {
                                     \whiteout
@@ -2468,6 +2480,7 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "whispered_repetitions"
                     {
                         % [Cello Voice] Measure 7
                         {
@@ -2507,7 +2520,7 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.635 0.635 0.927)
+                            \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \p \( \startTextSpan [
                                 _ \markup {
                                     \whiteout

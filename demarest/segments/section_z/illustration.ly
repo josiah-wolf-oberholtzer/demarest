@@ -1,9 +1,7 @@
-% 2016-06-18 01:13
-
-% package "abjad" @ 5367392 [josiah/demarest] (2016-06-17 21:43:11)
+% package "abjad" @ bfda186 [josiah/demarest] (2016-06-19 18:29:37)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ a5f1091 [master] (2016-06-17 23:16:55)
-% package "demarest" @ 466cfd6 [master] (2016-06-16 23:59:52)
+% package "consort" @ 1027c13 [master] (2016-06-20 00:08:47)
+% package "demarest" @ 7966778 [master] (2016-06-20 00:33:30)
 
 \version "2.19.41"
 \language "english"
@@ -258,6 +256,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 1 Vocalization Voice] Measure 169
                             {
@@ -297,13 +296,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 170
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -340,6 +339,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -378,7 +378,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [A 1 Vocalization Voice] Measure 175
@@ -388,7 +388,7 @@
                             }
                             % [A 1 Vocalization Voice] Measure 176
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -418,6 +418,7 @@
                                 r4.
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -425,8 +426,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -468,6 +469,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -506,13 +508,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 184
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -539,6 +541,7 @@
                                 r2
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -546,8 +549,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -596,6 +599,7 @@
                                 r2..
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -634,7 +638,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [A 1 Vocalization Voice] Measure 193
@@ -644,12 +648,11 @@
                             }
                             % [A 1 Vocalization Voice] Measure 194
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -661,47 +664,16 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -739,6 +711,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -777,14 +750,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 202
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -818,6 +791,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -856,9 +830,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -889,6 +863,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -927,13 +902,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 211
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -969,6 +944,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1006,8 +982,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [A 1 Vocalization Voice] Measure 217
                             {
@@ -1039,6 +1015,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1076,8 +1053,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [A 1 Vocalization Voice] Measure 220
                             {
@@ -1109,6 +1086,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1147,14 +1125,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 223
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1180,6 +1158,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1218,12 +1197,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2. \( \startTextSpan \<
                             }
                             % [A 1 Vocalization Voice] Measure 226
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1246,6 +1225,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 1 Vocalization Voice] Measure 228
                             {
@@ -1254,8 +1234,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1319,6 +1299,7 @@
                     }
                     \bar "||"
                     \context Voice = "A 1 Percussion Voice" {
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 1 Percussion Voice] Measure 167
                             {
@@ -1333,11 +1314,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1350,11 +1327,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1366,7 +1339,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 168
@@ -1379,6 +1352,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1392,7 +1366,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1405,7 +1379,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1417,9 +1391,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
-                                g2 \ppp \repeatTie
+                                g2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1427,10 +1401,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 169
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -1446,6 +1421,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1459,11 +1435,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1476,11 +1448,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1492,7 +1460,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
                             }
@@ -1506,6 +1474,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1518,7 +1487,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1531,7 +1500,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1543,8 +1512,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1558,31 +1527,14 @@
                                 r4.
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1594,6 +1546,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1607,11 +1560,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1624,11 +1573,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1640,7 +1585,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2.. :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 174
@@ -1659,9 +1604,10 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -1684,6 +1630,7 @@
                                 r4.
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1697,7 +1644,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1710,7 +1657,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1722,13 +1669,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 177
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1736,6 +1683,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1748,11 +1696,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1765,11 +1709,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1781,8 +1721,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'8 :64 \( \startTextSpan
                             }
                             % [A 1 Percussion Voice] Measure 178
                             {
@@ -1800,9 +1740,10 @@
                                 r4.
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -1812,6 +1753,7 @@
                                 r8.
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 180
                             {
@@ -1826,7 +1768,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1839,7 +1781,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1851,9 +1793,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1867,6 +1809,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1880,11 +1823,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1897,11 +1836,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1913,7 +1848,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
                             }
@@ -1936,9 +1871,10 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -1953,6 +1889,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1966,11 +1903,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1983,11 +1916,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1999,7 +1928,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -2020,31 +1949,14 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2052,9 +1964,10 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -2064,6 +1977,7 @@
                                 r4..
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 187
                             {
@@ -2078,7 +1992,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2091,7 +2005,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2103,7 +2017,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -2114,7 +2028,7 @@
                             }
                             % [A 1 Percussion Voice] Measure 189
                             {
-                                g2 \ppp \repeatTie
+                                g2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2122,6 +2036,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2135,11 +2050,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2152,11 +2063,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2168,7 +2075,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 190
@@ -2181,6 +2088,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 191
                             {
@@ -2195,7 +2103,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2208,7 +2116,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2220,12 +2128,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 192
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2233,10 +2141,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -2262,9 +2171,10 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -2275,6 +2185,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2288,11 +2199,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2305,11 +2212,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2321,7 +2224,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 196
@@ -2344,38 +2247,29 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
-                                r4
+                                r4 \!
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 198
                             {
@@ -2390,7 +2284,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2403,7 +2297,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2415,7 +2309,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 199
@@ -2424,7 +2318,7 @@
                             }
                             % [A 1 Percussion Voice] Measure 200
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2438,9 +2332,10 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -2460,6 +2355,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 203
                             {
@@ -2474,7 +2370,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2487,7 +2383,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2499,7 +2395,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 204
@@ -2509,7 +2405,7 @@
                             }
                             % [A 1 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2523,10 +2419,11 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -2536,6 +2433,7 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 207
                             {
@@ -2550,7 +2448,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2563,7 +2461,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2575,7 +2473,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 208
@@ -2585,7 +2483,7 @@
                             % [A 1 Percussion Voice] Measure 209
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2593,59 +2491,22 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'8 :64 -\accent \fp \(
                             }
                             % [A 1 Percussion Voice] Measure 210
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -2665,6 +2526,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 212
                             {
@@ -2679,7 +2541,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2692,7 +2554,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2704,7 +2566,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 213
@@ -2714,7 +2576,7 @@
                             % [A 1 Percussion Voice] Measure 214
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g1 \ppp \repeatTie \>
+                                g1 \p \repeatTie \>
                             }
                             % [A 1 Percussion Voice] Measure 215
                             {
@@ -2732,9 +2594,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -2753,6 +2616,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 218
                             {
@@ -2767,7 +2631,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2780,7 +2644,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2792,14 +2656,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 219
                             {
                                 g4. \repeatTie
                                 g4 \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2807,10 +2671,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -2823,6 +2688,7 @@
                                 r8
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2836,7 +2702,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2849,7 +2715,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2861,7 +2727,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -2872,7 +2738,7 @@
                             % [A 1 Percussion Voice] Measure 222
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2880,9 +2746,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -2902,6 +2769,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 1 Percussion Voice] Measure 224
                             {
@@ -2916,7 +2784,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2929,7 +2797,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2941,9 +2809,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2957,9 +2825,10 @@
                                 r4
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -2974,6 +2843,7 @@
                                 r4.
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -2987,7 +2857,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3000,7 +2870,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3012,14 +2882,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g8 \( \startTextSpan \<
                                 g2 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 227
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3027,11 +2897,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 228
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -3091,6 +2962,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3129,13 +3001,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 2 Vocalization Voice] Measure 170
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3173,6 +3045,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3211,9 +3084,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3240,6 +3113,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -3277,8 +3151,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [A 2 Vocalization Voice] Measure 178
                             {
@@ -3287,7 +3161,6 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3299,50 +3172,19 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [A 2 Vocalization Voice] Measure 180
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3370,6 +3212,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3408,7 +3251,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
                             % [A 2 Vocalization Voice] Measure 183
@@ -3418,12 +3261,11 @@
                             }
                             % [A 2 Vocalization Voice] Measure 184
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3432,48 +3274,17 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 2 Vocalization Voice] Measure 185
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4. \( \<
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3515,6 +3326,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3553,9 +3365,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3598,6 +3410,7 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3636,12 +3449,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [A 2 Vocalization Voice] Measure 202
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3692,6 +3505,7 @@
                                 r4.
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3730,13 +3544,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [A 2 Vocalization Voice] Measure 211
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3759,6 +3573,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 2 Vocalization Voice] Measure 215
                             {
@@ -3798,9 +3613,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3826,45 +3641,9 @@
                                 r8
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r4.
-                            }
-                            % [A 2 Vocalization Voice] Measure 219
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -3900,9 +3679,33 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
-                                c'2 \ppp \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( \startTextSpan
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [A 2 Vocalization Voice] Measure 219
+                            {
+                                r8
+                            }
+                        }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
+                                c'2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3933,6 +3736,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3971,14 +3775,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 2 Vocalization Voice] Measure 224
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4047,6 +3851,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4060,11 +3865,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4077,11 +3878,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4093,7 +3890,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2. :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 168
@@ -4116,9 +3913,10 @@
                                 r8
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -4133,6 +3931,7 @@
                                 r4.
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4145,7 +3944,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4158,7 +3957,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4170,8 +3969,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4179,6 +3978,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 2 Percussion Voice] Measure 171
                             {
@@ -4193,11 +3993,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4210,11 +4006,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4226,7 +4018,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 172
@@ -4248,57 +4040,35 @@
                                 r4.
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4. :32 -\accent \fp \( \startTextSpan
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
+                                r4 \!
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 174
                             {
@@ -4313,7 +4083,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4326,7 +4096,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4338,10 +4108,10 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4349,6 +4119,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4361,11 +4132,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4378,11 +4145,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4394,8 +4157,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'8 :64 \( \startTextSpan
                             }
                             % [A 2 Percussion Voice] Measure 175
                             {
@@ -4407,9 +4170,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -4420,6 +4184,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4433,11 +4198,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4450,11 +4211,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4466,7 +4223,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 176
@@ -4485,6 +4242,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 177
                             {
@@ -4499,7 +4257,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4512,7 +4270,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4524,9 +4282,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4534,10 +4292,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -4550,6 +4309,7 @@
                                 r2..
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4562,11 +4322,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4579,11 +4335,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4595,8 +4347,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan
                             }
                             % [A 2 Percussion Voice] Measure 179
                             {
@@ -4608,9 +4360,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -4629,6 +4382,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 181
                             {
@@ -4643,7 +4397,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4656,7 +4410,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4668,9 +4422,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4678,6 +4432,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4691,11 +4446,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4708,11 +4459,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4724,7 +4471,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -4739,9 +4486,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -4765,6 +4513,7 @@
                                 r8
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4778,7 +4527,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4791,7 +4540,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4803,9 +4552,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4813,11 +4562,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 2 Percussion Voice] Measure 185
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -4828,6 +4578,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 186
                             {
@@ -4842,7 +4593,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4855,7 +4606,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4867,9 +4618,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2 \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4877,6 +4628,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -4890,11 +4642,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4907,11 +4655,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4923,7 +4667,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 187
@@ -4946,6 +4690,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 189
                             {
@@ -4960,7 +4705,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4973,7 +4718,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4985,13 +4730,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 190
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4999,6 +4744,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5012,11 +4758,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5029,11 +4771,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5045,7 +4783,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -5059,6 +4797,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 192
                             {
@@ -5072,7 +4811,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5085,7 +4824,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5097,8 +4836,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5106,6 +4845,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5119,11 +4859,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5136,11 +4872,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5152,7 +4884,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 193
@@ -5165,9 +4897,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -5178,6 +4911,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 2 Percussion Voice] Measure 194
                             {
@@ -5186,7 +4920,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \p \( ^ \markup {
                                     \box
                                         \whiteout
@@ -5197,11 +4931,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 <> \)
@@ -5210,6 +4940,7 @@
                                 \revert TextSpanner.style
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5223,7 +4954,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5236,7 +4967,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5248,7 +4979,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g8 \( \startTextSpan \<
                                 g4. \repeatTie
                             }
@@ -5259,7 +4990,7 @@
                             % [A 2 Percussion Voice] Measure 196
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g1 \ppp \repeatTie \>
+                                g1 \p \repeatTie \>
                             }
                             % [A 2 Percussion Voice] Measure 197
                             {
@@ -5278,59 +5009,29 @@
                                 r8 \!
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4.
+                                r4. \!
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 199
                             {
@@ -5345,7 +5046,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5358,7 +5059,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5370,12 +5071,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 200
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5389,9 +5090,10 @@
                                 r4.
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -5410,6 +5112,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 203
                             {
@@ -5424,7 +5127,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5437,7 +5140,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5449,7 +5152,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 204
@@ -5459,7 +5162,7 @@
                             }
                             % [A 2 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 206
                             {
@@ -5486,42 +5189,33 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [A 2 Percussion Voice] Measure 210
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
-                                r8
+                                r8 \!
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -5540,6 +5234,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 212
                             {
@@ -5554,7 +5249,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5567,7 +5262,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5579,7 +5274,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 213
@@ -5588,7 +5283,7 @@
                             }
                             % [A 2 Percussion Voice] Measure 214
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5596,10 +5291,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 2 Percussion Voice] Measure 215
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -5611,6 +5307,7 @@
                                 r4
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 216
                             {
@@ -5625,7 +5322,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5638,7 +5335,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5650,14 +5347,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 217
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5671,9 +5368,10 @@
                                 r8
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -5688,9 +5386,10 @@
                                 r8
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -5701,6 +5400,7 @@
                                 r2
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 220
                             {
@@ -5715,7 +5415,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5728,7 +5428,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5740,7 +5440,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -5751,7 +5451,7 @@
                             % [A 2 Percussion Voice] Measure 222
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5759,55 +5459,17 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( \startTextSpan \>
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'4 :32 -\accent \fp \( \>
                             }
                             % [A 2 Percussion Voice] Measure 223
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -5815,9 +5477,10 @@
                                 r8 \!
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -5837,6 +5500,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 2 Percussion Voice] Measure 225
                             {
@@ -5851,7 +5515,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5864,7 +5528,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5876,7 +5540,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 226
@@ -5886,7 +5550,7 @@
                             % [A 2 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 228
@@ -5954,6 +5618,7 @@
                                 r4.
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5992,13 +5657,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [A 3 Vocalization Voice] Measure 170
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6032,6 +5697,7 @@
                                 r4.
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -6069,8 +5735,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6102,6 +5768,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6140,13 +5807,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
                             % [A 3 Vocalization Voice] Measure 179
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6176,6 +5843,7 @@
                                 r2..
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -6213,8 +5881,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [A 3 Vocalization Voice] Measure 183
                             {
@@ -6264,6 +5932,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6302,13 +5971,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 3 Vocalization Voice] Measure 194
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6351,6 +6020,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 3 Vocalization Voice] Measure 202
                             {
@@ -6390,9 +6060,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6438,6 +6108,7 @@
                                 r4.
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6476,13 +6147,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [A 3 Vocalization Voice] Measure 210
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6517,6 +6188,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6555,14 +6227,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 3 Vocalization Voice] Measure 217
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6588,6 +6260,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 3 Vocalization Voice] Measure 220
                             {
@@ -6627,9 +6300,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6655,6 +6328,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 3 Vocalization Voice] Measure 223
                             {
@@ -6663,8 +6337,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -6698,6 +6372,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 3 Vocalization Voice] Measure 225
                             {
@@ -6736,8 +6411,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6759,6 +6434,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 3 Vocalization Voice] Measure 227
                             {
@@ -6798,13 +6474,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 3 Vocalization Voice] Measure 228
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6863,6 +6539,7 @@
                                 r4.
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6876,11 +6553,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6893,11 +6566,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6909,7 +6578,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
                             }
@@ -6927,9 +6596,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -6948,6 +6618,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 171
                             {
@@ -6962,7 +6633,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6975,7 +6646,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6987,13 +6658,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 172
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7007,6 +6678,7 @@
                                 r4.
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -7014,8 +6686,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'8 :64 \parenthesizeDynamic \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -7025,11 +6697,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 <> \)
@@ -7038,33 +6706,17 @@
                                 \revert TextSpanner.style
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7078,11 +6730,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7095,11 +6743,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7111,7 +6755,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 174
@@ -7129,10 +6773,11 @@
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -7142,6 +6787,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 175
                             {
@@ -7156,7 +6802,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7169,7 +6815,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7181,7 +6827,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -7192,7 +6838,7 @@
                             % [A 3 Percussion Voice] Measure 177
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 178
@@ -7206,9 +6852,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -7224,6 +6871,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7237,11 +6885,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7254,11 +6898,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7270,7 +6910,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 180
@@ -7284,6 +6924,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 181
                             {
@@ -7298,7 +6939,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7311,7 +6952,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7323,12 +6964,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 182
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7336,9 +6977,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -7352,6 +6994,7 @@
                                 r4.
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7365,11 +7008,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7382,11 +7021,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7398,7 +7033,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 184
@@ -7417,34 +7052,18 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [A 3 Percussion Voice] Measure 186
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -7452,8 +7071,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'8 :64 \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -7463,11 +7082,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 <> \)
@@ -7476,6 +7091,7 @@
                                 \revert TextSpanner.style
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7489,7 +7105,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7502,7 +7118,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7514,7 +7130,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 187
@@ -7525,7 +7141,7 @@
                             % [A 3 Percussion Voice] Measure 188
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7533,6 +7149,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 3 Percussion Voice] Measure 189
                             {
@@ -7546,11 +7163,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7563,11 +7176,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7579,8 +7188,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2. :32 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'2. :32 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7588,6 +7197,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 190
                             {
@@ -7601,7 +7211,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7614,7 +7224,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7626,8 +7236,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2.. \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7641,6 +7251,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7654,11 +7265,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7671,11 +7278,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7687,7 +7290,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2.. :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 192
@@ -7700,6 +7303,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -7712,7 +7316,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7725,7 +7329,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7737,8 +7341,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2. \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7752,10 +7356,11 @@
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -7769,6 +7374,7 @@
                                 r8
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7782,11 +7388,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7799,11 +7401,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7815,7 +7413,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4. :32 \repeatTie
                             }
@@ -7838,56 +7436,19 @@
                                 r4.
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'8 :64 -\accent \fp \(
                             }
                             % [A 3 Percussion Voice] Measure 197
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7901,7 +7462,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7914,7 +7475,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7926,7 +7487,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -7937,7 +7498,7 @@
                             % [A 3 Percussion Voice] Measure 199
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \ppp \repeatTie \>
+                                g2.. \p \repeatTie \>
                             }
                             % [A 3 Percussion Voice] Measure 200
                             {
@@ -7954,10 +7515,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 202
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -7969,6 +7531,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 203
                             {
@@ -7983,7 +7546,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -7996,7 +7559,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8008,7 +7571,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 204
@@ -8018,7 +7581,7 @@
                             }
                             % [A 3 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 206
                             {
@@ -8046,9 +7609,10 @@
                                 r4. \!
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -8067,40 +7631,31 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [A 3 Percussion Voice] Measure 211
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
-                                r8
+                                r8 \!
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 212
                             {
@@ -8115,7 +7670,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8128,7 +7683,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8140,7 +7695,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 213
@@ -8150,7 +7705,7 @@
                             % [A 3 Percussion Voice] Measure 214
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g1 \ppp \repeatTie \>
+                                g1 \p \repeatTie \>
                             }
                             % [A 3 Percussion Voice] Measure 215
                             {
@@ -8169,9 +7724,10 @@
                                 r4 \!
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -8191,6 +7747,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 218
                             {
@@ -8205,7 +7762,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8218,7 +7775,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8230,12 +7787,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 219
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8243,10 +7800,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 220
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -8258,6 +7816,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 221
                             {
@@ -8272,7 +7831,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8285,7 +7844,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8297,14 +7856,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 222
                             {
                                 g4. \repeatTie
                                 g4 \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8312,37 +7871,21 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 223
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -8354,6 +7897,7 @@
                                 r4
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 224
                             {
@@ -8368,7 +7912,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8381,7 +7925,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8393,9 +7937,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8403,11 +7947,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 225
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -8417,6 +7962,7 @@
                                 r2.
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 3 Percussion Voice] Measure 226
                             {
@@ -8430,7 +7976,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8443,7 +7989,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8455,8 +8001,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g1 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g1 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8464,10 +8010,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 227
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -8532,6 +8079,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -8570,12 +8118,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [A 4 Vocalization Voice] Measure 169
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8615,6 +8163,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -8653,13 +8202,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [A 4 Vocalization Voice] Measure 175
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8698,6 +8247,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 4 Vocalization Voice] Measure 183
                             {
@@ -8737,13 +8287,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 4 Vocalization Voice] Measure 184
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8790,6 +8340,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -8827,8 +8378,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [A 4 Vocalization Voice] Measure 194
                             {
@@ -8867,6 +8418,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -8905,19 +8457,18 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [A 4 Vocalization Voice] Measure 200
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8926,52 +8477,21 @@
                                 r4
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 4 Vocalization Voice] Measure 201
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4. \( \<
                                 c'4 \repeatTie
                             }
                             % [A 4 Vocalization Voice] Measure 202
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9018,6 +8538,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 4 Vocalization Voice] Measure 210
                             {
@@ -9057,13 +8578,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 4 Vocalization Voice] Measure 211
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9091,6 +8612,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -9129,13 +8651,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
                             % [A 4 Vocalization Voice] Measure 215
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9161,6 +8683,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -9199,14 +8722,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -9218,31 +8740,19 @@
                                 r4.
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \parenthesizeDynamic \p \(
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -9267,6 +8777,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [A 4 Vocalization Voice] Measure 223
                             {
@@ -9306,13 +8817,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 4 Vocalization Voice] Measure 224
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9376,6 +8887,7 @@
                     }
                     \bar "||"
                     \context Voice = "A 4 Percussion Voice" {
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 167
                             {
@@ -9390,7 +8902,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9403,7 +8915,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9415,9 +8927,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2 \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9425,6 +8937,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -9438,11 +8951,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9455,11 +8964,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9471,7 +8976,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 168
@@ -9490,9 +8995,10 @@
                                 r8
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -9511,6 +9017,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 170
                             {
@@ -9525,7 +9032,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9538,7 +9045,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9550,12 +9057,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 171
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9563,6 +9070,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 4 Percussion Voice] Measure 172
                             {
@@ -9577,11 +9085,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9594,11 +9098,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9610,7 +9110,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -9624,52 +9124,30 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4. :32 -\accent \fp \( \startTextSpan
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -9683,7 +9161,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9696,7 +9174,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9708,13 +9186,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \( \! \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 174
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9722,10 +9200,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -9743,6 +9222,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 4 Percussion Voice] Measure 176
                             {
@@ -9757,11 +9237,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9774,11 +9250,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9790,7 +9262,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2.. :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 177
@@ -9800,7 +9272,6 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -9812,54 +9283,15 @@
                                 r4
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2. :32 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'2. :32 \( \<
                             }
                             % [A 4 Percussion Voice] Measure 179
                             {
@@ -9877,6 +9309,7 @@
                                 r8
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 180
                             {
@@ -9891,7 +9324,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9904,7 +9337,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9916,7 +9349,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -9926,7 +9359,7 @@
                             }
                             % [A 4 Percussion Voice] Measure 182
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9934,10 +9367,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 183
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -9949,11 +9383,12 @@
                                 r4
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 184
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \ppp \( [
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                                 <> \)
@@ -9965,6 +9400,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 185
                             {
@@ -9979,7 +9415,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9992,7 +9428,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10004,9 +9440,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10020,52 +9456,30 @@
                                 r8
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4. :32 -\accent \fp \( \startTextSpan
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10079,7 +9493,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10092,7 +9506,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10104,8 +9518,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \( \! \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 187
                             {
@@ -10115,7 +9529,7 @@
                             % [A 4 Percussion Voice] Measure 188
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 189
@@ -10134,6 +9548,7 @@
                                 r4. \!
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10147,11 +9562,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10164,11 +9575,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10180,7 +9587,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 191
@@ -10197,6 +9604,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -10210,7 +9618,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10223,7 +9631,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10235,13 +9643,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 193
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10249,9 +9657,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -10270,6 +9679,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
                             % [A 4 Percussion Voice] Measure 195
                             {
@@ -10283,11 +9693,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10300,11 +9706,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10316,7 +9718,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2.. :32 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -10325,6 +9727,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 196
                             {
@@ -10339,7 +9742,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10352,7 +9755,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10364,13 +9767,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 197
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10378,56 +9781,19 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'8 :64 -\accent \fp \(
                             }
                             % [A 4 Percussion Voice] Measure 198
                             {
                                 g'8 :64 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -10440,7 +9806,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10453,7 +9819,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10465,8 +9831,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g8 \parenthesizeDynamic \p \( \startTextSpan
                                 g2 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -10481,9 +9847,10 @@
                                 r4
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -10508,10 +9875,11 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 201
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -10532,6 +9900,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 203
                             {
@@ -10546,7 +9915,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10559,7 +9928,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10571,7 +9940,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 204
@@ -10581,7 +9950,7 @@
                             }
                             % [A 4 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 206
                             {
@@ -10609,37 +9978,28 @@
                                 r4. \!
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 210
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -10660,6 +10020,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 212
                             {
@@ -10674,7 +10035,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10687,7 +10048,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10699,7 +10060,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 213
@@ -10709,7 +10070,7 @@
                             % [A 4 Percussion Voice] Measure 214
                             {
                                 g2 \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10717,9 +10078,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -10739,6 +10101,7 @@
                                 \startStaff
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 216
                             {
@@ -10753,7 +10116,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10766,7 +10129,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10778,14 +10141,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 217
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10799,10 +10162,11 @@
                                 r8
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -10816,9 +10180,10 @@
                                 r4.
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -10829,6 +10194,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 220
                             {
@@ -10843,7 +10209,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10856,7 +10222,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10868,7 +10234,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -10878,7 +10244,7 @@
                             }
                             % [A 4 Percussion Voice] Measure 222
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10886,10 +10252,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 223
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -10905,31 +10272,14 @@
                                 r8
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -10938,6 +10288,7 @@
                                 r4
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [A 4 Percussion Voice] Measure 225
                             {
@@ -10952,7 +10303,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -10965,7 +10316,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -10977,7 +10328,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 226
@@ -10987,7 +10338,7 @@
                             % [A 4 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 228
@@ -11181,6 +10532,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [T 1 Vocalization Voice] Measure 208
                             {
@@ -11220,7 +10572,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
                             }
                             % [T 1 Vocalization Voice] Measure 209
@@ -11231,7 +10583,7 @@
                             % [T 1 Vocalization Voice] Measure 210
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                c'4. \ppp \repeatTie \>
+                                c'4. \p \repeatTie \>
                                 c'4 \repeatTie
                             }
                             % [T 1 Vocalization Voice] Measure 211
@@ -11259,6 +10611,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [T 1 Vocalization Voice] Measure 213
                             {
@@ -11297,13 +10650,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -11312,46 +10664,15 @@
                                 r2.
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [T 1 Vocalization Voice] Measure 215
                             {
@@ -11360,12 +10681,11 @@
                             }
                             % [T 1 Vocalization Voice] Measure 216
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -11374,46 +10694,15 @@
                                 r8
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \( \<
                             }
                             % [T 1 Vocalization Voice] Measure 217
                             {
@@ -11423,7 +10712,7 @@
                             % [T 1 Vocalization Voice] Measure 218
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                c'2. \ppp \repeatTie \>
+                                c'2. \p \repeatTie \>
                             }
                             % [T 1 Vocalization Voice] Measure 219
                             {
@@ -11456,6 +10745,7 @@
                                 r8
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11494,12 +10784,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
                             % [T 1 Vocalization Voice] Measure 222
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -11525,6 +10815,7 @@
                                 r4
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11563,17 +10854,16 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2. \( \startTextSpan \<
                             }
                             % [T 1 Vocalization Voice] Measure 226
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -11586,51 +10876,20 @@
                                 r4
                             }
                         }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \( \<
                                 c'4 \repeatTie
                             }
                             % [T 1 Vocalization Voice] Measure 228
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -11684,10 +10943,11 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -11709,11 +10969,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 168
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cs'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -11736,11 +10997,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 169
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 bf'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -11763,11 +11025,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 170
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -11794,10 +11057,11 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -11819,11 +11083,12 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 172
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -11850,10 +11115,11 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -11875,11 +11141,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 174
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -11903,10 +11170,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -11944,11 +11212,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 176
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -11971,11 +11240,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 177
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12011,10 +11281,11 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12036,11 +11307,12 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 180
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12076,11 +11348,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 183
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12103,11 +11376,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 184
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12143,10 +11417,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12168,11 +11443,12 @@
                                 r2.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 187
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12195,11 +11471,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 188
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12222,11 +11499,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 189
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12253,10 +11531,11 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12279,11 +11558,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 191
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12306,10 +11586,11 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12331,11 +11612,12 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 192
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12362,10 +11644,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12403,11 +11686,12 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 195
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12430,11 +11714,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 196
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12469,10 +11754,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12494,11 +11780,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 199
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12521,11 +11808,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 200
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 g'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12548,11 +11836,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 201
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 af'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12575,10 +11864,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12616,11 +11906,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 203
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12643,11 +11934,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 204
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12683,10 +11975,11 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12708,11 +12001,12 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 207
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12752,10 +12046,11 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12777,11 +12072,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 211
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12804,11 +12100,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 212
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12835,10 +12132,11 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12860,11 +12158,12 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 214
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12886,11 +12185,12 @@
                                 r2..
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 215
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12913,11 +12213,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 216
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -12945,10 +12246,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -12990,10 +12292,11 @@
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -13016,11 +12319,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 220
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -13048,10 +12352,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -13073,11 +12378,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 222
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -13100,11 +12406,12 @@
                                 r2
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 223
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 af'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -13127,11 +12434,12 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 224
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 e''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -13163,11 +12471,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 1 Percussion Voice] Measure 226
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 af'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -13194,10 +12503,11 @@
                                 r8
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -13412,6 +12722,7 @@
                                 r4
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -13450,7 +12761,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
@@ -13462,7 +12773,7 @@
                             % [T 2 Vocalization Voice] Measure 210
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                c'4. \ppp \repeatTie \>
+                                c'4. \p \repeatTie \>
                                 c'4 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 211
@@ -13472,7 +12783,6 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -13485,55 +12795,23 @@
                                 r2
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [T 2 Vocalization Voice] Measure 213
                             {
-                                c'2 \ppp \repeatTie
+                                c'2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -13545,51 +12823,20 @@
                                 r4
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2. \( \<
                             }
                             % [T 2 Vocalization Voice] Measure 215
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13608,6 +12855,7 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [T 2 Vocalization Voice] Measure 217
                             {
@@ -13647,7 +12895,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
@@ -13658,7 +12906,7 @@
                             % [T 2 Vocalization Voice] Measure 219
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13684,6 +12932,7 @@
                                 r4.
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -13722,18 +12971,17 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 222
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -13742,47 +12990,16 @@
                                 r2
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [T 2 Vocalization Voice] Measure 223
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4. \( \<
                                 c'4 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 224
@@ -13792,12 +13009,11 @@
                             }
                             % [T 2 Vocalization Voice] Measure 225
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -13806,46 +13022,15 @@
                                 r8
                             }
                         }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \( \<
                                 c'2 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 226
@@ -13854,7 +13039,7 @@
                             }
                             % [T 2 Vocalization Voice] Measure 227
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13915,10 +13100,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -13940,11 +13126,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 168
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 e''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -13967,11 +13154,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 169
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -13998,10 +13186,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14024,11 +13213,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 171
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 e'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14064,10 +13254,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cs'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14089,11 +13280,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 174
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14129,11 +13321,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 177
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14156,11 +13349,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 178
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14182,11 +13376,12 @@
                                 r2..
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 179
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14213,10 +13408,11 @@
                                 r4.
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14238,11 +13434,12 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 181
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14265,11 +13462,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 182
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14296,10 +13494,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14342,10 +13541,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14382,11 +13582,12 @@
                                 r2..
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 187
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14418,11 +13619,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 189
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14445,11 +13647,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 190
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14485,10 +13688,11 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14524,10 +13728,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14550,11 +13755,12 @@
                                 r4.
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 195
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 g'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14577,11 +13783,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 196
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14603,10 +13810,11 @@
                                 r4.
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14628,11 +13836,12 @@
                                 r4.
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 197
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14655,11 +13864,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 198
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14695,10 +13905,11 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14720,11 +13931,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 201
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14760,11 +13972,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 204
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14787,11 +14000,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 205
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14813,11 +14027,12 @@
                                 r2..
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 206
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14844,10 +14059,11 @@
                                 r4.
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14869,11 +14085,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 208
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14896,11 +14113,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 209
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14936,10 +14154,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -14962,11 +14181,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 212
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -14989,11 +14209,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 213
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15016,11 +14237,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 214
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15051,11 +14273,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 216
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15078,11 +14301,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 217
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15105,11 +14329,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 218
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15141,11 +14366,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 220
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15168,11 +14394,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 221
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15196,10 +14423,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15237,11 +14465,12 @@
                                 r2
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 223
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15264,11 +14493,12 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 224
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15290,10 +14520,11 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 af'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15315,11 +14546,12 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 225
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 e''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15341,11 +14573,12 @@
                                 r2..
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 2 Percussion Voice] Measure 226
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -15380,10 +14613,11 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -15579,6 +14813,7 @@
                                 r4.
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -15617,12 +14852,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
                             % [T 3 Vocalization Voice] Measure 208
                             {
-                                c'2.. \ppp \repeatTie
+                                c'2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -15645,6 +14880,7 @@
                                 r8
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -15683,7 +14919,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
@@ -15693,7 +14929,7 @@
                             }
                             % [T 3 Vocalization Voice] Measure 213
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -15720,6 +14956,7 @@
                                 r8
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -15758,7 +14995,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [T 3 Vocalization Voice] Measure 216
@@ -15769,7 +15006,7 @@
                             % [T 3 Vocalization Voice] Measure 217
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -15792,6 +15029,7 @@
                                 r8
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -15830,19 +15068,18 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [T 3 Vocalization Voice] Measure 220
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -15854,46 +15091,15 @@
                                 r2..
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \( \<
                             }
                             % [T 3 Vocalization Voice] Measure 222
                             {
@@ -15902,12 +15108,11 @@
                             % [T 3 Vocalization Voice] Measure 223
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -15919,46 +15124,15 @@
                                 r4.
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [T 3 Vocalization Voice] Measure 225
                             {
@@ -15966,12 +15140,11 @@
                             }
                             % [T 3 Vocalization Voice] Measure 226
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -15980,46 +15153,15 @@
                                 r2
                             }
                         }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [T 3 Vocalization Voice] Measure 227
                             {
@@ -16028,7 +15170,7 @@
                             }
                             % [T 3 Vocalization Voice] Measure 228
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -16075,11 +15217,12 @@
                     \clef "percussion"
                     \bar "||"
                     \context Voice = "T 3 Percussion Voice" {
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 167
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16118,10 +15261,11 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cs''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16143,11 +15287,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 171
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 bf'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16169,11 +15314,12 @@
                                 r2..
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 172
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16200,10 +15346,11 @@
                                 r4.
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16225,11 +15372,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 174
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16252,11 +15400,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 175
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16284,10 +15433,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16309,11 +15459,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 177
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16340,10 +15491,11 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16366,11 +15518,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 179
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16393,11 +15546,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 180
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16424,10 +15578,11 @@
                                 r4.
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16450,11 +15605,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 182
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16476,11 +15632,12 @@
                                 r2..
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 183
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16516,10 +15673,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16542,11 +15700,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 186
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16568,11 +15727,12 @@
                                 r2..
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 187
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16595,11 +15755,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 188
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16622,11 +15783,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 189
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16649,11 +15811,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 190
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16676,11 +15839,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 191
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 b'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16715,10 +15879,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 af'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16741,11 +15906,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 194
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16782,10 +15948,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 g'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16807,11 +15974,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 197
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16834,11 +16002,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 198
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 g'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16870,11 +16039,12 @@
                                 \startStaff
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 200
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 fs'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16897,11 +16067,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 201
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 e'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16924,11 +16095,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 202
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -16956,10 +16128,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 ef''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -16981,11 +16154,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 204
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17012,10 +16186,11 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17038,11 +16213,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 206
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17065,11 +16241,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 207
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17096,10 +16273,11 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17121,11 +16299,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 209
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17148,11 +16327,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 210
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17188,10 +16368,11 @@
                                 r4.
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17213,11 +16394,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 213
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17244,10 +16426,11 @@
                                 r4.
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17269,11 +16452,12 @@
                                 r2
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 215
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17296,11 +16480,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 216
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17327,10 +16512,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17353,11 +16539,12 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 218
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17380,11 +16567,12 @@
                                 r4.
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 219
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17420,10 +16608,11 @@
                                 r4
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17464,10 +16653,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17504,11 +16694,12 @@
                                 r2..
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 226
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 e''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
@@ -17535,10 +16726,11 @@
                                 r8
                             }
                         }
+                        % [T 3 Percussion Voice] Material: "pitched_tranquilo"
                         {
                             {
                                 \clef "treble"
-                                \colorSpan #-4 #4 #(rgb-color 0.8059999999999997 0.8991199999999999 0.9612000000000002)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 af'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
@@ -17625,6 +16817,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17663,13 +16856,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [B 1 Vocalization Voice] Measure 169
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -17709,6 +16902,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17747,7 +16941,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [B 1 Vocalization Voice] Measure 175
@@ -17757,7 +16951,7 @@
                             }
                             % [B 1 Vocalization Voice] Measure 176
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -17800,6 +16994,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17838,7 +17033,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
@@ -17849,7 +17044,7 @@
                             }
                             % [B 1 Vocalization Voice] Measure 185
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -17892,6 +17087,7 @@
                                 r2..
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -17930,7 +17126,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [B 1 Vocalization Voice] Measure 193
@@ -17940,7 +17136,7 @@
                             }
                             % [B 1 Vocalization Voice] Measure 194
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -17979,6 +17175,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18017,19 +17214,18 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [B 1 Vocalization Voice] Measure 200
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -18042,52 +17238,21 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \( \<
                                 c'4 \repeatTie
                             }
                             % [B 1 Vocalization Voice] Measure 202
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18137,6 +17302,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18175,7 +17341,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
@@ -18186,7 +17352,7 @@
                             }
                             % [B 1 Vocalization Voice] Measure 212
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18216,6 +17382,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 1 Vocalization Voice] Measure 218
                             {
@@ -18255,9 +17422,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18287,6 +17454,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18325,10 +17493,10 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18358,6 +17526,7 @@
                                 r4.
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18396,17 +17565,16 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [B 1 Vocalization Voice] Measure 225
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -18418,31 +17586,19 @@
                                 r4
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \parenthesizeDynamic \p \(
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -18463,6 +17619,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -18470,8 +17627,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -18534,6 +17691,7 @@
                     }
                     \bar "||"
                     \context Voice = "B 1 Percussion Voice" {
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             % [B 1 Percussion Voice] Measure 167
                             {
@@ -18548,11 +17706,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18565,11 +17719,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -18581,7 +17731,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 168
@@ -18601,18 +17751,20 @@
                                 r8.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 169
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -18623,6 +17775,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 170
                             {
@@ -18637,7 +17790,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18650,7 +17803,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -18662,13 +17815,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 171
                             {
                                 g2 \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18676,6 +17829,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18689,11 +17843,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18706,11 +17856,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -18722,7 +17868,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 172
@@ -18745,33 +17891,17 @@
                                 r8
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -18784,7 +17914,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18797,7 +17927,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -18809,8 +17939,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g8 \( \startTextSpan
                                 g2 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -18825,6 +17955,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18838,11 +17969,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18855,11 +17982,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -18871,7 +17994,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                                 g'8 :64 \p \repeatTie
@@ -18882,9 +18005,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -18907,6 +18031,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18920,7 +18045,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18933,7 +18058,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -18945,9 +18070,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
-                                g2 \ppp \repeatTie
+                                g2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18955,6 +18080,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             % [B 1 Percussion Voice] Measure 177
                             {
@@ -18969,11 +18095,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -18986,11 +18108,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19002,7 +18120,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -19025,6 +18143,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 180
                             {
@@ -19039,7 +18158,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19052,7 +18171,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19064,7 +18183,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -19074,7 +18193,7 @@
                             }
                             % [B 1 Percussion Voice] Measure 182
                             {
-                                g2. \ppp \repeatTie
+                                g2. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19082,6 +18201,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -19095,11 +18215,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19112,11 +18228,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19128,7 +18240,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 183
@@ -19141,9 +18253,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -19167,31 +18280,14 @@
                                 r4.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -19199,6 +18295,7 @@
                                 r8
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 186
                             {
@@ -19212,7 +18309,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19225,7 +18322,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19237,8 +18334,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19246,6 +18343,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -19259,11 +18357,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19276,11 +18370,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19292,7 +18382,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 187
@@ -19303,7 +18393,6 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -19315,54 +18404,15 @@
                                 r4.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4 :32 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'4 :32 \( \<
                             }
                             % [B 1 Percussion Voice] Measure 189
                             {
@@ -19375,7 +18425,7 @@
                             }
                             % [B 1 Percussion Voice] Measure 191
                             {
-                                g'8 :64
+                                g'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19383,6 +18433,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -19396,7 +18447,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19409,7 +18460,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19421,12 +18472,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \! \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 192
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19434,10 +18485,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -19459,6 +18511,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -19472,11 +18525,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19489,11 +18538,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19505,7 +18550,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4. :32 \repeatTie
                             }
@@ -19525,6 +18570,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 196
                             {
@@ -19539,7 +18585,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19552,7 +18598,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19564,13 +18610,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 197
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19578,34 +18624,25 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [B 1 Percussion Voice] Measure 198
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -19618,7 +18655,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19631,7 +18668,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19643,8 +18680,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19658,9 +18695,10 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
@@ -19685,9 +18723,10 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -19707,6 +18746,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 203
                             {
@@ -19721,7 +18761,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19734,7 +18774,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19746,7 +18786,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 204
@@ -19756,7 +18796,7 @@
                             }
                             % [B 1 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 206
                             {
@@ -19789,9 +18829,10 @@
                                 r8 \!
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -19815,6 +18856,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 213
                             {
@@ -19829,7 +18871,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19842,7 +18884,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19854,7 +18896,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 214
@@ -19864,7 +18906,7 @@
                             % [B 1 Percussion Voice] Measure 215
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 216
@@ -19883,10 +18925,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 218
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -19898,6 +18941,7 @@
                                 r4.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 219
                             {
@@ -19912,7 +18956,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19925,7 +18969,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -19937,13 +18981,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 220
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19957,9 +19001,10 @@
                                 r8
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -19970,6 +19015,7 @@
                                 r2.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 222
                             {
@@ -19984,7 +19030,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -19997,7 +19043,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -20009,9 +19055,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20019,31 +19065,14 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -20051,6 +19080,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 1 Percussion Voice] Measure 223
                             {
@@ -20065,7 +19095,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -20078,7 +19108,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -20090,9 +19120,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20106,9 +19136,10 @@
                                 r4.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -20122,6 +19153,7 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -20134,7 +19166,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -20147,7 +19179,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -20159,8 +19191,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20174,10 +19206,11 @@
                                 r4
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -20186,6 +19219,7 @@
                                 r8.
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20199,7 +19233,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -20212,7 +19246,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -20224,13 +19258,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 227
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20244,9 +19278,10 @@
                                 r8
                             }
                         }
+                        % [B 1 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -20304,6 +19339,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20342,7 +19378,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [B 2 Vocalization Voice] Measure 169
@@ -20351,7 +19387,7 @@
                             }
                             {
                                 c'4 \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20390,6 +19426,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20428,9 +19465,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20470,6 +19507,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20508,17 +19546,16 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
                             % [B 2 Vocalization Voice] Measure 183
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -20527,46 +19564,15 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 2 Vocalization Voice] Measure 184
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4. \parenthesizeDynamic \p \(
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20612,6 +19618,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20650,13 +19657,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [B 2 Vocalization Voice] Measure 194
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20694,6 +19701,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20732,19 +19740,18 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [B 2 Vocalization Voice] Measure 200
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -20757,51 +19764,20 @@
                                 r4.
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [B 2 Vocalization Voice] Measure 202
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20848,6 +19824,7 @@
                                 r4.
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20886,7 +19863,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [B 2 Vocalization Voice] Measure 211
@@ -20896,7 +19873,7 @@
                             }
                             % [B 2 Vocalization Voice] Measure 212
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20926,6 +19903,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20964,14 +19942,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [B 2 Vocalization Voice] Measure 216
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20997,6 +19975,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 2 Vocalization Voice] Measure 219
                             {
@@ -21035,13 +20014,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2.. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2.. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -21051,45 +20029,14 @@
                                 r8
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \parenthesizeDynamic \p \(
                             }
                             % [B 2 Vocalization Voice] Measure 221
                             {
@@ -21120,6 +20067,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 2 Vocalization Voice] Measure 225
                             {
@@ -21128,8 +20076,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -21209,6 +20157,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -21221,11 +20170,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21238,11 +20183,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21254,7 +20195,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2. :32 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -21263,6 +20204,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 168
                             {
@@ -21277,7 +20219,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21290,7 +20232,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21302,9 +20244,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21318,9 +20260,10 @@
                                 r8
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
@@ -21333,10 +20276,11 @@
                                 r8
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \mf \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \mf \(
                                 <> \)
                             }
                         }
@@ -21346,6 +20290,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 170
                             {
@@ -21360,7 +20305,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21373,7 +20318,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21385,7 +20330,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 171
@@ -21395,7 +20340,7 @@
                             % [B 2 Percussion Voice] Measure 172
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21403,56 +20348,19 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'8 :64 -\accent \fp \(
                             }
                             % [B 2 Percussion Voice] Measure 173
                             {
                                 g'4 :32 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -21466,11 +20374,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21483,11 +20387,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21499,7 +20399,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2. :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 174
@@ -21512,6 +20412,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -21524,7 +20425,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21537,7 +20438,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21549,8 +20450,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21564,10 +20465,11 @@
                                 r8
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -21577,6 +20479,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 176
                             {
@@ -21591,7 +20494,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21604,7 +20507,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21616,9 +20519,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21626,6 +20529,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -21639,11 +20543,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21656,11 +20556,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21672,7 +20568,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 177
@@ -21687,7 +20583,7 @@
                             }
                             % [B 2 Percussion Voice] Measure 179
                             {
-                                g'8 :64
+                                g'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21695,6 +20591,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -21708,7 +20605,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21721,7 +20618,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21733,7 +20630,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \! \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -21744,7 +20641,7 @@
                             }
                             % [B 2 Percussion Voice] Measure 181
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21752,6 +20649,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             % [B 2 Percussion Voice] Measure 182
                             {
@@ -21766,11 +20664,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21783,11 +20677,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21799,7 +20689,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2 :32 \( \startTextSpan \<
                                 g'8 :64 \p \repeatTie
                                 <> \)
@@ -21809,9 +20699,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -21831,10 +20722,11 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 184
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -21846,6 +20738,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             % [B 2 Percussion Voice] Measure 185
                             {
@@ -21860,11 +20753,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21877,11 +20766,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21893,7 +20778,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                                 g'8 :64 \p \repeatTie
                                 <> \)
@@ -21903,56 +20788,19 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'8 :64 -\accent \fp \(
                             }
                             % [B 2 Percussion Voice] Measure 186
                             {
                                 g'4 :32 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -21966,7 +20814,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -21979,7 +20827,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21991,13 +20839,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 187
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22005,6 +20853,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22018,11 +20867,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22035,11 +20880,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22051,7 +20892,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 188
@@ -22066,7 +20907,7 @@
                             }
                             % [B 2 Percussion Voice] Measure 190
                             {
-                                g'4. :32
+                                g'4. :32 \repeatTie
                                 g'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -22081,6 +20922,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 191
                             {
@@ -22095,7 +20937,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22108,7 +20950,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22120,12 +20962,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 192
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22139,9 +20981,10 @@
                                 r8
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -22161,6 +21004,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 195
                             {
@@ -22174,7 +21018,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22187,7 +21031,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22199,8 +21043,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2.. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22214,6 +21058,7 @@
                                 r8
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -22226,11 +21071,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22243,11 +21084,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22259,8 +21096,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'8 :64 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan
                                 g'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -22278,59 +21115,29 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
+                                r8 \!
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 198
                             {
@@ -22344,7 +21151,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22357,7 +21164,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22369,8 +21176,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22385,9 +21192,10 @@
                                 r16
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -22410,9 +21218,10 @@
                                 r4.
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -22431,6 +21240,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 203
                             {
@@ -22445,7 +21255,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22458,7 +21268,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22470,7 +21280,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 204
@@ -22480,7 +21290,7 @@
                             }
                             % [B 2 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 206
                             {
@@ -22513,9 +21323,10 @@
                                 r4. \!
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -22538,6 +21349,7 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22551,7 +21363,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22564,7 +21376,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22576,7 +21388,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 213
@@ -22585,7 +21397,7 @@
                             }
                             % [B 2 Percussion Voice] Measure 214
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22599,9 +21411,10 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -22621,6 +21434,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 217
                             {
@@ -22635,7 +21449,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22648,7 +21462,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22660,13 +21474,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 218
                             {
-                                g2. \ppp \repeatTie
+                                g2. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22674,11 +21488,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 219
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -22689,6 +21504,7 @@
                                 r2
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 220
                             {
@@ -22703,7 +21519,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22716,7 +21532,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22728,9 +21544,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22738,9 +21554,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -22754,6 +21571,7 @@
                                 r4.
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22767,7 +21585,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22780,7 +21598,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22792,13 +21610,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g8 \( \startTextSpan \<
                                 g2 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 222
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22812,53 +21630,30 @@
                                 r4
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 2 Percussion Voice] Measure 224
                             {
@@ -22873,7 +21668,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22886,7 +21681,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22898,9 +21693,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g4. \( \! \startTextSpan \<
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -22908,10 +21703,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 225
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -22921,6 +21717,7 @@
                                 r8.
                             }
                         }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22934,7 +21731,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -22947,7 +21744,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -22959,7 +21756,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 226
@@ -22969,7 +21766,7 @@
                             % [B 2 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 228
@@ -23035,6 +21832,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -23072,8 +21870,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [B 3 Vocalization Voice] Measure 169
                             {
@@ -23082,7 +21880,6 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -23090,51 +21887,20 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
                             }
                             % [B 3 Vocalization Voice] Measure 170
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23168,6 +21934,7 @@
                                 r4.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -23205,8 +21972,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23245,6 +22012,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -23282,8 +22050,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan [
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
@@ -23311,6 +22079,7 @@
                                 r2..
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23349,7 +22118,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
                             % [B 3 Vocalization Voice] Measure 183
@@ -23359,7 +22128,7 @@
                             }
                             % [B 3 Vocalization Voice] Measure 184
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23405,6 +22174,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23443,13 +22213,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 194
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23488,6 +22258,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23526,14 +22297,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 200
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23556,6 +22327,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 3 Vocalization Voice] Measure 202
                             {
@@ -23595,9 +22367,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23643,6 +22415,7 @@
                                 r4.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -23650,8 +22423,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -23693,6 +22466,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23731,14 +22505,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 216
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23768,6 +22542,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23806,14 +22581,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 220
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23839,6 +22614,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 3 Vocalization Voice] Measure 223
                             {
@@ -23878,9 +22654,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23903,6 +22679,7 @@
                                 r4.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23941,18 +22718,17 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
                             % [B 3 Vocalization Voice] Measure 226
                             {
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -23964,31 +22740,19 @@
                                 r4.
                             }
                         }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \parenthesizeDynamic \p \(
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -24045,6 +22809,7 @@
                                 r4.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24058,11 +22823,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24075,11 +22836,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24091,7 +22848,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'2 :32 \repeatTie
                             }
@@ -24112,9 +22869,10 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
@@ -24127,9 +22885,10 @@
                                 r4.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -24144,6 +22903,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24157,11 +22917,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24174,11 +22930,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24190,7 +22942,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 171
@@ -24208,6 +22960,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 172
                             {
@@ -24222,7 +22975,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24235,7 +22988,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24247,9 +23000,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24257,34 +23010,18 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [B 3 Percussion Voice] Measure 173
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -24297,7 +23034,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24310,7 +23047,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24322,8 +23059,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2.. \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24337,9 +23074,10 @@
                                 r4.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -24354,6 +23092,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24367,11 +23106,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24384,11 +23119,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24400,7 +23131,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -24414,6 +23145,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24427,7 +23159,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24440,7 +23172,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24452,7 +23184,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g8 \( \startTextSpan \<
                                 g2 \repeatTie
                             }
@@ -24464,7 +23196,7 @@
                             % [B 3 Percussion Voice] Measure 178
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g1 \ppp \repeatTie \>
+                                g1 \p \repeatTie \>
                             }
                             % [B 3 Percussion Voice] Measure 179
                             {
@@ -24483,9 +23215,10 @@
                                 r4 \!
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -24496,6 +23229,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 181
                             {
@@ -24510,7 +23244,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24523,7 +23257,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24535,9 +23269,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24545,6 +23279,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24558,11 +23293,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24575,11 +23306,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24591,7 +23318,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -24605,10 +23332,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -24626,10 +23354,11 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 184
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
@@ -24646,31 +23375,14 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -24683,6 +23395,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24696,11 +23409,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24713,11 +23422,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24729,7 +23434,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2. :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 187
@@ -24753,6 +23458,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 189
                             {
@@ -24767,7 +23473,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24780,7 +23486,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24792,12 +23498,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 190
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24805,6 +23511,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             % [B 3 Percussion Voice] Measure 191
                             {
@@ -24818,11 +23525,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24835,11 +23538,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24851,8 +23550,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'2. :32 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'2. :32 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24865,6 +23564,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 192
                             {
@@ -24878,7 +23578,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24891,7 +23591,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24903,8 +23603,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2. \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24912,6 +23612,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24925,11 +23626,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -24942,11 +23639,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -24958,7 +23651,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 193
@@ -24971,9 +23664,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -24988,6 +23682,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -25001,11 +23696,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25018,11 +23709,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25034,7 +23721,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                                 g'4. :32 \repeatTie
                             }
@@ -25048,6 +23735,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -25061,7 +23749,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25074,7 +23762,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25086,13 +23774,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
                                 g2 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 196
                             {
-                                g2 \ppp \repeatTie
+                                g2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25100,6 +23788,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -25112,11 +23801,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25129,11 +23814,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25145,8 +23826,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
-                                g'4. :32 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                g'4. :32 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25163,33 +23844,24 @@
                                 r4.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 198
                             {
@@ -25203,7 +23875,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25216,7 +23888,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25228,8 +23900,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25243,9 +23915,10 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -25265,6 +23938,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 201
                             {
@@ -25279,7 +23953,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25292,7 +23966,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25304,9 +23978,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25314,10 +23988,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 202
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -25329,6 +24004,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 203
                             {
@@ -25343,7 +24019,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25356,7 +24032,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25368,7 +24044,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 204
@@ -25378,7 +24054,7 @@
                             }
                             % [B 3 Percussion Voice] Measure 205
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 206
                             {
@@ -25406,9 +24082,10 @@
                                 r4. \!
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -25422,38 +24099,29 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
-                                r4
+                                r4 \!
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 211
                             {
@@ -25468,7 +24136,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25481,7 +24149,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25493,7 +24161,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -25504,7 +24172,7 @@
                             % [B 3 Percussion Voice] Measure 213
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2. \ppp \repeatTie \>
+                                g2. \p \repeatTie \>
                             }
                             % [B 3 Percussion Voice] Measure 214
                             {
@@ -25522,9 +24190,10 @@
                                 r4 \!
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -25544,6 +24213,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 217
                             {
@@ -25558,7 +24228,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25571,7 +24241,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25583,13 +24253,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 218
                             {
-                                g2. \ppp \repeatTie
+                                g2. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25603,9 +24273,10 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -25625,6 +24296,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 221
                             {
@@ -25639,7 +24311,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25652,7 +24324,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25664,12 +24336,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 222
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25677,11 +24349,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 223
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -25692,6 +24365,7 @@
                                 r4
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 224
                             {
@@ -25706,7 +24380,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25719,7 +24393,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25731,9 +24405,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25747,9 +24421,10 @@
                                 r4.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -25764,6 +24439,7 @@
                                 r8
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -25776,7 +24452,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25789,7 +24465,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25801,8 +24477,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2.. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2.. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25816,9 +24492,10 @@
                                 r4.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -25828,6 +24505,7 @@
                                 r8.
                             }
                         }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 3 Percussion Voice] Measure 228
                             {
@@ -25842,7 +24520,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -25855,7 +24533,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -25867,9 +24545,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -25928,6 +24606,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -25966,13 +24645,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [B 4 Vocalization Voice] Measure 169
                             {
                                 c'4. \repeatTie
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26008,6 +24687,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -26046,12 +24726,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
                             % [B 4 Vocalization Voice] Measure 175
                             {
-                                c'4. \ppp \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26077,6 +24757,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 178
                             {
@@ -26115,8 +24796,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26146,6 +24827,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 183
                             {
@@ -26185,9 +24867,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26234,6 +24916,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -26271,8 +24954,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan
                             }
                             % [B 4 Vocalization Voice] Measure 194
                             {
@@ -26314,6 +24997,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 201
                             {
@@ -26353,9 +25037,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26397,6 +25081,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
@@ -26404,8 +25089,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -26442,6 +25127,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 210
                             {
@@ -26450,8 +25136,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'4 \ppp \( ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -26489,6 +25175,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 214
                             {
@@ -26527,8 +25214,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2. \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26550,6 +25237,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 217
                             {
@@ -26589,18 +25277,17 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [B 4 Vocalization Voice] Measure 218
                             {
-                                c'4 \ppp \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -26609,46 +25296,15 @@
                                 r4.
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             % [B 4 Vocalization Voice] Measure 219
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'2.. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2.. \parenthesizeDynamic \p \(
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26679,6 +25335,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -26717,14 +25374,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [B 4 Vocalization Voice] Measure 224
                             {
                                 c'4. \repeatTie
-                                c'8 \ppp \repeatTie
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26787,6 +25444,7 @@
                     }
                     \bar "||"
                     \context Voice = "B 4 Percussion Voice" {
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 167
                             {
@@ -26801,7 +25459,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -26814,7 +25472,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -26826,9 +25484,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2 \( \startTextSpan \<
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26836,6 +25494,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -26849,11 +25508,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -26866,11 +25521,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -26882,7 +25533,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 168
@@ -26896,10 +25547,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -26917,6 +25569,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 170
                             {
@@ -26931,7 +25584,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -26944,7 +25597,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -26956,12 +25609,12 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 171
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26975,6 +25628,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -26988,11 +25642,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27005,11 +25655,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27021,7 +25667,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                                 g'4 :32 \repeatTie
                             }
@@ -27040,52 +25686,30 @@
                                 r8
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4. :32 -\accent \fp \( \startTextSpan
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 174
                             {
@@ -27100,7 +25724,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27113,7 +25737,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27125,9 +25749,9 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g4. \( \startTextSpan \<
-                                g4 \ppp \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g4. \( \! \startTextSpan \<
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27135,9 +25759,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -27151,6 +25776,7 @@
                                 r4.
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27164,11 +25790,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27181,11 +25803,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27197,7 +25815,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 176
@@ -27219,10 +25837,11 @@
                                 r4
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 178
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -27232,6 +25851,7 @@
                                 r4..
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27245,11 +25865,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27262,11 +25878,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27278,7 +25890,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 179
@@ -27296,6 +25908,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27309,7 +25922,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27322,7 +25935,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27334,7 +25947,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4 \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -27344,7 +25957,7 @@
                             }
                             % [B 4 Percussion Voice] Measure 182
                             {
-                                g1 \ppp \repeatTie
+                                g1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27352,11 +25965,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 183
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -27367,6 +25981,7 @@
                                 r8
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27380,11 +25995,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27397,11 +26008,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27413,7 +26020,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'8 :64 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 184
@@ -27433,53 +26040,30 @@
                                 r4
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 186
                             {
@@ -27494,7 +26078,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27507,7 +26091,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27519,8 +26103,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g1 \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g1 \( \! \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 187
                             {
@@ -27530,7 +26114,7 @@
                             % [B 4 Percussion Voice] Measure 188
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 189
@@ -27549,6 +26133,7 @@
                                 r4. \!
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27562,11 +26147,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27579,11 +26160,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27595,7 +26172,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'2 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 191
@@ -27612,6 +26189,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27625,7 +26203,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27638,7 +26216,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27650,13 +26228,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 193
                             {
                                 g4. \repeatTie
-                                g8 \ppp \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27664,9 +26242,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -27680,6 +26259,7 @@
                                 r4.
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_drone"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -27693,11 +26273,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27710,11 +26286,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                \center-column
-                                                                    {
-                                                                        maracas
-                                                                        rolled
-                                                                    }
+                                                                rolled
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27726,7 +26298,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9612000000000002 0.8215199999999997 0.8059999999999997)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'4. :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 195
@@ -27743,6 +26315,7 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -27755,7 +26328,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27768,7 +26341,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27780,8 +26353,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g2. \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2. \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27789,40 +26362,31 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [B 4 Percussion Voice] Measure 197
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
-                                r8
+                                r8 \!
                                 r4
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 198
                             {
@@ -27837,7 +26401,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27850,7 +26414,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27862,7 +26426,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 199
@@ -27871,7 +26435,7 @@
                             }
                             % [B 4 Percussion Voice] Measure 200
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27879,10 +26443,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 201
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -27894,6 +26459,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 202
                             {
@@ -27908,7 +26474,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -27921,7 +26487,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -27933,7 +26499,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -27944,7 +26510,7 @@
                             % [B 4 Percussion Voice] Measure 204
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 205
@@ -27968,9 +26534,10 @@
                                 r8 \!
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \p \(
                                 <> \)
                             }
@@ -27981,6 +26548,7 @@
                                 r4.
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 208
                             {
@@ -27995,7 +26563,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -28008,7 +26576,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -28020,13 +26588,13 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g2.. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 209
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28034,10 +26602,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 210
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -28047,59 +26616,29 @@
                                 r8.
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'8 :64 -\accent \fp \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
+                                r8 \!
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 211
                             {
@@ -28114,7 +26653,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -28127,7 +26666,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -28139,7 +26678,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -28149,7 +26688,7 @@
                             }
                             % [B 4 Percussion Voice] Measure 213
                             {
-                                g2. \ppp \repeatTie
+                                g2. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28157,10 +26696,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 214
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -28171,6 +26711,7 @@
                                 r2.
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 215
                             {
@@ -28185,7 +26726,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -28198,7 +26739,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -28210,14 +26751,14 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 216
                             {
                                 g4. \repeatTie
-                                g4 \ppp \repeatTie
+                                g4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28225,11 +26766,12 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 217
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
-                                c'16 -\staccato \p \(
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -28244,6 +26786,7 @@
                                 r4
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -28256,7 +26799,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -28269,7 +26812,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -28281,8 +26824,8 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
-                                g8 \ppp \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g8 \parenthesizeDynamic \p \( \startTextSpan
                                 g4. \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -28291,10 +26834,11 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 219
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \ppp \(
                                 <> \)
                             }
@@ -28306,6 +26850,7 @@
                                 r2
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 220
                             {
@@ -28320,7 +26865,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -28333,7 +26878,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -28345,7 +26890,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
@@ -28355,7 +26900,7 @@
                             }
                             % [B 4 Percussion Voice] Measure 222
                             {
-                                g2.. \ppp \repeatTie
+                                g2.. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28363,37 +26908,28 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "shaker_shimmer"
                         {
                             % [B 4 Percussion Voice] Measure 223
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.9079999999999998 0.8999999999999998)
-                                g'4 :32 -\accent \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                maracas
-                                                            }
-                                    }
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
+                                g'16 -\staccato \fp \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "unpitched_pointillism"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9800000000000001 0.98 0.8999999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
                                 c'16 -\staccato \mf \(
                                 <> \)
                             }
@@ -28413,6 +26949,7 @@
                                 \startStaff
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
                             % [B 4 Percussion Voice] Measure 225
                             {
@@ -28427,7 +26964,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -28440,7 +26977,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wine glass"
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -28452,7 +26989,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.8999999999999998 0.9800000000000001 0.9399999999999998)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 g1 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 226
@@ -28462,7 +26999,7 @@
                             % [B 4 Percussion Voice] Measure 227
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \ppp \repeatTie \>
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 228
