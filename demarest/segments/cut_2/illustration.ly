@@ -924,7 +924,7 @@
                 } {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
-                        % [T 3 Percussion Voice] Material: "toms_fanfare"
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             % [T 3 Percussion Voice] Measure 167
                             \tweak text #tuplet-number::calc-fraction-text
@@ -956,7 +956,7 @@
                                 r4.
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "toms_fanfare"
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             % [T 3 Percussion Voice] Measure 168
                             {
@@ -997,7 +997,7 @@
                                 r4.
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "toms_fanfare"
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)

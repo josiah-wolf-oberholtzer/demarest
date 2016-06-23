@@ -44,10 +44,10 @@ pitched percussion:         [0.5]
 - + `pitched_tranquilo`     1           -           -           -
 
 fanfares:                   [0.6]
-- + `toms_fanfare`          3           -           -           -
-- + `woodblock_fanfare`     2           -           -           -
-- + `snare_drone`           0           -           -           -
-- + `ratchet_drone`         1           -           -           -
+- + `trio_c_toms_fanfare`          3           -           -           -
+- + `trio_a_woodblock_fanfare`     2           -           -           -
+- + `trio_b_snare_drone`           0           -           -           -
+- + `trio_b_ratchet_done`         1           -           -           -
 
 unpitched percussion:       [-0.6]
 - + `unpitched_drone`       0           -           -           -
@@ -65,9 +65,9 @@ unpitched percussion:       [-0.6]
 
 - B:
     - Vibraphone
-    - Tam
-    - Snare
     - Ratchet
+    - Snare
+    - Tam
 
 - C:
     - Tubular bells

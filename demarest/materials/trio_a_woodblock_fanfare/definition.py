@@ -13,7 +13,7 @@ from demarest.materials import abbreviations
 Percussion = abbreviations.UnpitchedPercussion
 
 
-toms_fanfare = consort.MusicSpecifier(
+trio_a_woodblock_fanfare = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         clef_spanner=consort.ClefSpanner('percussion'),
         chords=consort.AttachmentExpression(
@@ -21,19 +21,37 @@ toms_fanfare = consort.MusicSpecifier(
                 [
                     indicatortools.Articulation('accent'),
                     consort.ChordExpression(
-                        chord_expr=[Percussion.TOM_1, Percussion.TOM_2],
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_1,
+                            Percussion.WOOD_BLOCK_2,
+                            ],
                         ),
                     ],
                 [
                     indicatortools.Articulation('accent'),
                     consort.ChordExpression(
-                        chord_expr=[Percussion.TOM_2, Percussion.TOM_3],
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_2,
+                            Percussion.WOOD_BLOCK_3,
+                            ],
                         ),
                     ],
                 [
                     indicatortools.Articulation('accent'),
                     consort.ChordExpression(
-                        chord_expr=[Percussion.TOM_3, Percussion.TOM_4],
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_3,
+                            Percussion.WOOD_BLOCK_4,
+                            ],
+                        ),
+                    ],
+                [
+                    indicatortools.Articulation('accent'),
+                    consort.ChordExpression(
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_4,
+                            Percussion.WOOD_BLOCK_5,
+                            ],
                         ),
                     ],
                 ],
@@ -59,19 +77,37 @@ toms_fanfare = consort.MusicSpecifier(
                 [
                     spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
-                        chord_expr=[Percussion.TOM_1, Percussion.TOM_2],
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_1,
+                            Percussion.WOOD_BLOCK_2,
+                            ],
                         ),
                     ],
                 [
                     spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
-                        chord_expr=[Percussion.TOM_2, Percussion.TOM_3],
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_2,
+                            Percussion.WOOD_BLOCK_3,
+                            ],
                         ),
                     ],
                 [
                     spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
-                        chord_expr=[Percussion.TOM_3, Percussion.TOM_4],
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_3,
+                            Percussion.WOOD_BLOCK_4,
+                            ],
+                        ),
+                    ],
+                [
+                    spannertools.StemTremoloSpanner(),
+                    consort.ChordExpression(
+                        chord_expr=[
+                            Percussion.WOOD_BLOCK_4,
+                            Percussion.WOOD_BLOCK_5,
+                            ],
                         ),
                     ],
                 ],
@@ -82,16 +118,18 @@ toms_fanfare = consort.MusicSpecifier(
             ),
         ),
     color=consort.Color.from_x11('Lavender')
-        .scale_luminance(-1.5)
+        .scale_luminance(-1)
         .rotate_hue(0.6),
-    comment='toms_fanfare',
+    comment='trio_a_woodblock_fanfare',
+    instrument=abbreviations.trio_a_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
             items=[
-                Percussion.TOM_1,
-                Percussion.TOM_4,
-                Percussion.TOM_2,
-                Percussion.TOM_3,
+                Percussion.WOOD_BLOCK_1,
+                Percussion.WOOD_BLOCK_4,
+                Percussion.WOOD_BLOCK_2,
+                Percussion.WOOD_BLOCK_3,
+                Percussion.WOOD_BLOCK_5,
                 ],
             ),
         ),

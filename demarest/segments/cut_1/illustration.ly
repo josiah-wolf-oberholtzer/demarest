@@ -846,7 +846,7 @@
                                 \startStaff
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "toms_fanfare"
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             % [T 3 Percussion Voice] Measure 73
                             \tweak text #tuplet-number::calc-fraction-text

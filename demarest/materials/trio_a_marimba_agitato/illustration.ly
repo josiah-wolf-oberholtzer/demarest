@@ -37,60 +37,46 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <g b>16 -\accent -\accent \f \( \> [
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <b' d''>16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16
+                            r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16
+                            cs'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
+                            c''16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            r16
                             \set stemLeftBeamCount = 2
-                            f'16 ]
+                            <e' a'>16 ]
                         }
                         % [Violin 1 Voice] Measure 2
-                        \times 4/5 {
-                            f'16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <d' f'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \set stemLeftBeamCount = 2
-                            <g b>16 -\accent -\accent \mf ]
+                        {
+                            <ef'' gf''>4 :32 \mf
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
                         {
                             r8
                         }
-                    }
-                    % [Violin 1 Voice] Material: "toms_fanfare"
-                    {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <d' f'>8 :64 \f \(
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'16 -\accent -\staccato \f \(
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -98,54 +84,46 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 1 Voice] Measure 4
-                        \times 8/9 {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            b16 \parenthesizeDynamic \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <d' f'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b16
-                            \set stemLeftBeamCount = 2
-                            d'16 ]
-                        }
                         {
-                            <b d'>8 :64
-                            <b d'>4 :32 \repeatTie
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <b' d''>4. :32 \parenthesizeDynamic \f \( \>
+                            <b' d''>8 :64 \repeatTie
+                        }
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 3/4 {
+                            r16 [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            fs'16 -\accent -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            a'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 1
+                            <f' af'>16
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 1
+                            r8
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 2
+                            ef'16 -\accent -\staccato
+                            \set stemLeftBeamCount = 2
+                            r16 ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            <g b>16 -\accent -\accent [
+                            f''16 -\accent -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16
+                            <c' f'>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            r16
                             \set stemLeftBeamCount = 2
-                            <b d'>16 -\accent -\accent \mf ]
+                            a'16 -\accent -\staccato \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -157,29 +135,24 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <g b>8 :64 \f \( \>
-                        }
-                        % [Violin 1 Voice] Measure 7
-                        \times 4/5 {
-                            d'16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <g b>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            d'16 \mf ]
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            c''16 -\accent -\staccato \f \(
                             <> \)
-                            \clef "treble"
+                        }
+                    }
+                    {
+                        {
+                            r16
+                        }
+                    }
+                    {
+                        % [Violin 1 Voice] Measure 7
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <ef'' gf''>4 :32 \parenthesizeDynamic \f \(
+                            <> \)
                         }
                     }
                     {
@@ -211,61 +184,62 @@
                         % [Violin 2 Voice] Measure 1
                         {
                             r4
+                            r16
                         }
                     }
-                    % [Violin 2 Voice] Material: "toms_fanfare"
                     {
-                        \times 2/3 {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <d' f'>16 -\accent -\accent \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \set stemLeftBeamCount = 2
-                            g16 ]
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            bf'16 -\accent -\staccato \f \( \>
                         }
                         % [Violin 2 Voice] Measure 2
-                        {
-                            <d' f'>4 :32
-                        }
-                        \times 2/3 {
-                            d'16 \mf [
+                        \times 4/5 {
+                            <d' g'>16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16 -\accent -\accent
+                            cs'16 -\staccato
                             \set stemLeftBeamCount = 2
-                            d'16 ]
+                            \set stemRightBeamCount = 2
+                            r16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            b'16 -\accent -\staccato
+                            \set stemLeftBeamCount = 2
+                            a'16 -\staccato ]
+                        }
+                        {
+                            <b' d''>8 :64 \mp \<
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            <g b>4 :32
+                            <a' c''>16 [
+                            \set stemLeftBeamCount = 2
+                            b'16 -\staccato \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
                         {
-                            r8
+                            r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "toms_fanfare"
                     {
                         % [Violin 2 Voice] Measure 4
-                        {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            d'16 \f \( \> [
+                        \times 4/5 {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'16 -\accent -\staccato \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
+                            b'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16
+                            <a' c''>16
                             \set stemLeftBeamCount = 2
-                            g16 \mf ]
+                            \set stemRightBeamCount = 2
+                            r16
+                            \set stemLeftBeamCount = 2
+                            b'16 -\accent -\staccato \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -274,69 +248,53 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <g b>8 :64 \f \( \>
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <g' c''>16 \f \( \< [
+                            \set stemLeftBeamCount = 2
+                            ef'16 -\staccato ]
                         }
                         {
-                            b16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <g b>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            g16 ]
+                            <e'' g''>4 :32
                         }
                         % [Violin 2 Voice] Measure 5
                         \times 4/5 {
-                            g16 \mf \> [
+                            c''16 -\staccato \fff \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            <f' af'>16
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'16
-                            \set stemLeftBeamCount = 2
-                            b16 ]
+                            \set stemRightBeamCount = 1
+                            a'16 -\staccato
+                            \set stemLeftBeamCount = 1
+                            r8 ]
                         }
                         {
-                            <b d'>8 :64
+                            c''16 -\accent -\staccato \mf
+                            <> \)
                         }
+                    }
+                    {
+                        {
+                            r16
+                        }
+                    }
+                    {
                         % [Violin 2 Voice] Measure 6
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
-                            <d' f'>16 -\accent -\accent \mp \< [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <g b>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f'16
-                            \set stemLeftBeamCount = 2
-                            b16 ]
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <d'' f''>4. :32 \f \( \>
                         }
                         % [Violin 2 Voice] Measure 7
-                        {
-                            <d' f'>8 :64 \mf
+                        \times 2/3 {
+                            r16 [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            af'16 -\accent -\staccato
+                            \set stemLeftBeamCount = 2
+                            <f'' af''>16 \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -370,44 +328,54 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "toms_fanfare"
                     {
-                        \times 4/5 {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <d' f'>16 -\accent -\accent \f \( \< [
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            e''16 -\accent -\staccato \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16
+                            cs''16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <g b>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            d'16 ]
+                            <c'' f''>16 ]
                         }
                         % [Viola Voice] Measure 2
-                        {
-                            <d' f'>8 :64
-                        }
-                        {
-                            d'16 \fff \> [
-                            \set stemLeftBeamCount = 2
-                            f'16 ]
-                        }
                         \times 2/3 {
-                            <b d'>16 -\accent -\accent [
+                            r16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16
+                            b'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            g16 ]
+                            a'16 -\staccato ]
+                        }
+                        {
+                            <b' d''>8 :64 \mf
+                            <> \)
+                            \clef "alto"
+                        }
+                    }
+                    {
+                        {
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'16 -\accent -\staccato \f \( \>
                         }
                         % [Viola Voice] Measure 3
-                        {
-                            <g b>8 :64 \mf
+                        \times 2/3 {
+                            r16 [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            b'16 -\accent -\staccato
+                            \set stemLeftBeamCount = 2
+                            a'16 -\staccato \mf ]
                             <> \)
                             \clef "alto"
                         }
@@ -421,57 +389,64 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <b d'>8 :64 \f \( \>
-                            <b d'>4 :32 \repeatTie
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <gs' b'>8 :64 \f \( \>
+                            <gs' b'>4 :32 \repeatTie
                         }
-                        \times 4/5 {
-                            d'16 [
+                        \times 2/3 {
+                            r8 [
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 2
+                            c'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
+                            r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            f''16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'16
-                            \set stemLeftBeamCount = 2
-                            <d' f'>16 -\accent -\accent ]
+                            ef'16 -\staccato \mf ]
+                            <> \)
+                            \clef "alto"
                         }
+                    }
+                    {
                         % [Viola Voice] Measure 5
                         {
-                            <d' f'>8 :64 \mp \<
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            f''16 -\accent -\staccato \f \(
                         }
                         {
-                            f'16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \set stemLeftBeamCount = 2
-                            <g b>16 -\accent -\accent ]
+                            <c'' ef''>4 :32
+                            <> \)
+                            \clef "alto"
                         }
+                    }
+                    {
                         % [Viola Voice] Measure 6
-                        \times 4/5 {
-                            d'16 [
+                        {
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'16 -\accent -\staccato \parenthesizeDynamic \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \set stemLeftBeamCount = 2
-                            b16 \mf ]
+                            d'16 -\staccato ]
                             <> \)
                             \clef "alto"
                         }
@@ -508,35 +483,34 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            f'16 \f \( \> [
+                        \times 3/4 {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <b' d''>16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16
+                            d'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <g b>16 -\accent -\accent
+                            r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16
+                            bf'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16
+                            <b' e''>16
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <b d'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            b16 ]
+                            \set stemRightBeamCount = 1
+                            d'16 -\staccato
+                            \set stemLeftBeamCount = 1
+                            r8 ]
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <g b>4 :32 \mf
+                            <f'' af''>4 :32 \mf
                             <> \)
                             \clef "bass"
                         }
@@ -546,36 +520,43 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            g16 \f \( \> [
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            a'16 -\accent -\staccato \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16
+                            r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b16
+                            <b' e''>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <d' f'>16 -\accent -\accent
+                            a'16 -\staccato
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g16
-                            \set stemLeftBeamCount = 2
-                            f'16 ]
+                            b'16 -\staccato \mf ]
+                            <> \)
+                            \clef "bass"
                         }
+                    }
+                    {
+                        {
+                            r16
+                        }
+                    }
+                    {
                         % [Cello Voice] Measure 4
                         \times 2/3 {
-                            <g b>16 -\accent -\accent [
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            r16 \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16
+                            a'16 -\accent -\staccato \f
                             \set stemLeftBeamCount = 2
-                            g16 \mf ]
+                            r16 ]
                             <> \)
                             \clef "bass"
                         }
@@ -585,35 +566,48 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <b d'>4 :32 \f \( \>
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <g' bf'>4 :32 \(
+                            <> \)
+                            \clef "bass"
                         }
+                    }
+                    {
                         {
-                            <b d'>16 -\accent -\accent [
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            f''16 -\accent -\staccato \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16
+                            r16
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b16
-                            \set stemLeftBeamCount = 2
-                            f'16 ]
+                            c''16 -\accent -\staccato ]
                         }
                         % [Cello Voice] Measure 5
-                        \times 2/3 {
-                            <d' f'>16 -\accent -\accent \mf [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            d'16
-                            \set stemLeftBeamCount = 2
-                            b16 ]
-                        }
                         {
-                            <d' f'>4 :32
+                            ef'16 -\staccato \mf
+                            <> \)
+                            \clef "bass"
+                        }
+                    }
+                    {
+                        {
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <d' f'>4 :32 \f \(
                             <> \)
                             \clef "bass"
                         }
@@ -629,18 +623,14 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "toms_fanfare"
                     {
                         % [Cello Voice] Measure 7
-                        \times 2/3 {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            f'16 \f \( [
+                        {
+                            \clef "treble"
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            fs'16 -\accent -\staccato \f \( [
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b16
-                            \set stemLeftBeamCount = 2
-                            g16 ]
+                            af'16 -\staccato ]
                             <> \)
                             \clef "bass"
                         }

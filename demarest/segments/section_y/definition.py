@@ -123,9 +123,9 @@ trio_a_marimba_agitato = abjad.new(
     instrument=demarest.materials.abbreviations.marimba,
     )
 
-trio_a_woodblock_fanfare = demarest.materials.woodblock_fanfare
+trio_a_woodblock_fanfare = demarest.materials.trio_a_woodblock_fanfare
 
-trio_b_ratchet_drone = demarest.materials.ratchet_drone
+trio_b_ratchet_drone = demarest.materials.trio_b_ratchet_done
 
 trio_b_vibraphone_shimmer = abjad.new(
     demarest.materials.pitched_shimmer,
@@ -137,9 +137,9 @@ trio_b_vibraphone_agitato = abjad.new(
     instrument=demarest.materials.abbreviations.vibraphone,
     )
 
-trio_b_ratchet_drone = demarest.materials.ratchet_drone
+trio_b_ratchet_drone = demarest.materials.trio_b_ratchet_done
 
-trio_b_snare_drone = demarest.materials.snare_drone
+trio_b_snare_drone = demarest.materials.trio_b_snare_drone
 
 trio_c_bass_drum_pointillism = abjad.new(
     demarest.materials.unpitched_pointillism,
@@ -147,7 +147,7 @@ trio_c_bass_drum_pointillism = abjad.new(
     pitch_handle__pitch_specifier=percussion.BASS_DRUM,
     )
 
-trio_c_toms_fanfare = demarest.materials.toms_fanfare
+trio_c_toms_fanfare = demarest.materials.trio_c_toms_fanfare
 
 ### TRIO MELANGES ###
 

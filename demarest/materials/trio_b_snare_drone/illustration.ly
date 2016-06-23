@@ -37,16 +37,17 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "ratchet_drone"
+                    % [Violin 1 Voice] Material: "trio_b_snare_drone"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \f \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4. :32 \( \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \p \repeatTie
                             <> \)
                         }
                     }
@@ -55,12 +56,12 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "ratchet_drone"
+                    % [Violin 1 Voice] Material: "trio_b_snare_drone"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'8 :64 \mf \(
                             <> \)
                         }
                     }
@@ -69,21 +70,22 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "ratchet_drone"
+                    % [Violin 1 Voice] Material: "trio_b_snare_drone"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \parenthesizeDynamic \f \(
-                            a'8 \repeatTie
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4. :32 \( \<
+                            b'8 :64 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
-                            a'4 \repeatTie
+                            b'8 :64 \repeatTie
+                            b'4 :32 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \mf \repeatTie
                             <> \)
                         }
                     }
@@ -96,15 +98,15 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "ratchet_drone"
+                    % [Violin 1 Voice] Material: "trio_b_snare_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'8 :64 \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -139,22 +141,23 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "ratchet_drone"
+                    % [Violin 2 Voice] Material: "trio_b_snare_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'8 :64 \( \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -163,12 +166,12 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "ratchet_drone"
+                    % [Violin 2 Voice] Material: "trio_b_snare_drone"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \f \(
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4 :32 \mf \(
                             <> \)
                         }
                     }
@@ -178,35 +181,37 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "ratchet_drone"
+                    % [Violin 2 Voice] Material: "trio_b_snare_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'8 :64 \( \<
                         }
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \mf \repeatTie \<
                         }
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            a'4. \repeatTie
+                            \once \override Hairpin.circled-tip = ##t
+                            b'4. :32 \f \repeatTie \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \repeatTie
                             <> \)
                         }
                     }
                     {
                         {
-                            r4
+                            r4 \!
                             \bar "|."
                         }
                     }
@@ -235,63 +240,67 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "ratchet_drone"
+                    % [Viola Voice] Material: "trio_b_snare_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \f \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4 :32 \( \<
                         }
                         % [Viola Voice] Measure 2
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
+                            \once \override Hairpin.circled-tip = ##t
+                            b'8 :64 \mp \repeatTie \>
                         }
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \repeatTie
                             <> \)
                         }
                     }
                     {
                         {
-                            r4
+                            r4 \!
                         }
                         % [Viola Voice] Measure 4
                         {
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "ratchet_drone"
+                    % [Viola Voice] Material: "trio_b_snare_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
-                            a'4 \repeatTie
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'8 :64 \( \<
+                            b'4 :32 \repeatTie
                         }
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
-                            a'8 \repeatTie
+                            \once \override Hairpin.circled-tip = ##t
+                            b'8 :64 \p \repeatTie \>
                         }
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                             <> \)
                         }
                     }
                     {
                         {
-                            r8
+                            r8 \!
                         }
                         % [Viola Voice] Measure 7
                         {
@@ -321,16 +330,17 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "ratchet_drone"
+                    % [Cello Voice] Material: "trio_b_snare_drone"
                     {
                         % [Cello Voice] Measure 1
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \f \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4. :32 \( \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \f \repeatTie
                             <> \)
                         }
                     }
@@ -339,16 +349,17 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "ratchet_drone"
+                    % [Cello Voice] Material: "trio_b_snare_drone"
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \f \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4. :32 \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \mf \repeatTie
                             <> \)
                         }
                     }
@@ -357,21 +368,22 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "ratchet_drone"
+                    % [Cello Voice] Material: "trio_b_snare_drone"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \parenthesizeDynamic \f \(
+                            \once \override Hairpin.circled-tip = ##t
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'4 :32 \( \<
                         }
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            a'8 \repeatTie
+                            b'8 :64 \mp \repeatTie
                         }
                         {
-                            a'4 \repeatTie
+                            b'4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -386,12 +398,12 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "ratchet_drone"
+                    % [Cello Voice] Material: "trio_b_snare_drone"
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            b'8 :64 \f \(
                             <> \)
                         }
                     }

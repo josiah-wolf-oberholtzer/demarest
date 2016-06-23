@@ -112,7 +112,7 @@ trio_a_crotales_tranquilo = abjad.new(
     instrument=demarest.materials.abbreviations.crotales,
     )
 
-trio_b_ratchet_drone = demarest.materials.ratchet_drone
+trio_b_ratchet_drone = demarest.materials.trio_b_ratchet_done
 
 trio_b_tam_tam_drone = abjad.new(
     demarest.materials.unpitched_drone,
@@ -149,7 +149,7 @@ trio_c_tubular_bell_tranquilo = abjad.new(
     instrument=demarest.materials.abbreviations.tubular_bells,
     )
 
-trio_c_toms_fanfare = demarest.materials.toms_fanfare
+trio_c_toms_fanfare = demarest.materials.trio_c_toms_fanfare
 
 ### TRIO MELANGES ###
 

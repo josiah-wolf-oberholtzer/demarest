@@ -33,7 +33,7 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_identifier=[1, -1, 2, -1, 3],
     t_3_percussion=abjad.new(
-        demarest.materials.toms_fanfare,
+        demarest.materials.trio_c_toms_fanfare,
         seed=6,
         ),
     )
