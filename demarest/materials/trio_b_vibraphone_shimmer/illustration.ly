@@ -37,7 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "pitched_shimmer"
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -56,7 +56,7 @@
                             r8 \!
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_shimmer"
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -70,7 +70,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_shimmer"
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
@@ -96,7 +96,7 @@
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            <f'' af''>4 :32 -\espressivo
+                            <d'' f''>4 :32 -\espressivo
                             <> \)
                         }
                     }
@@ -109,15 +109,15 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_shimmer"
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <d'' g''>8 :64 \ppp \(
+                            <a' d''>8 :64 \ppp \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            <d'' g''>4 :32 \repeatTie
+                            <a' d''>4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -152,7 +152,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_shimmer"
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -177,7 +177,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_shimmer"
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
@@ -192,7 +192,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_shimmer"
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
@@ -255,7 +255,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "pitched_shimmer"
+                    % [Viola Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         {
                             \clef "treble"
@@ -289,7 +289,7 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "pitched_shimmer"
+                    % [Viola Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         {
                             \clef "treble"
@@ -303,10 +303,10 @@
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <ef'' gf''>8 :64 -\espressivo \ppp \>
+                            <c'' ef''>8 :64 -\espressivo \ppp \>
                         }
                         \times 2/3 {
-                            <ef'' gf''>8 :64 \repeatTie [
+                            <c'' ef''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             <c' f'>8 :64 -\espressivo
@@ -352,7 +352,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "pitched_shimmer"
+                    % [Cello Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -373,7 +373,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "pitched_shimmer"
+                    % [Cello Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -394,7 +394,7 @@
                             r4 \!
                         }
                     }
-                    % [Cello Voice] Material: "pitched_shimmer"
+                    % [Cello Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         {
                             \clef "treble"
@@ -407,10 +407,10 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            <f'' af''>8 :64 -\espressivo \f
+                            <d'' f''>8 :64 -\espressivo \f
                         }
                         {
-                            <f'' af''>4 :32 \repeatTie
+                            <d'' f''>4 :32 \repeatTie
                             <> \)
                             \clef "bass"
                         }
@@ -426,13 +426,13 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "pitched_shimmer"
+                    % [Cello Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Cello Voice] Measure 7
                         {
                             \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <ef'' gf''>8 :64 \fp \(
+                            <c'' ef''>8 :64 \fp \(
                             <> \)
                             \clef "bass"
                         }

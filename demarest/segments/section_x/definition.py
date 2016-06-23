@@ -2,10 +2,7 @@
 import abjad
 import consort
 import demarest
-from demarest.abbrevations import (
-    make_text_spanner,
-    percussion,
-    )
+from demarest import materials
 
 ### XX SECTION XX ###
 
@@ -14,7 +11,7 @@ segment_maker = demarest.SegmentMaker(
     annotate_phrasing=False,
     desired_duration_in_seconds=180,
     permitted_time_signatures=[
-        (3, 4), (4, 4), (6, 8), (7, 8), (5, 8),
+        (3, 4), (4, 4), (6, 8), (7, 8), (5, 8), (5, 4),
         ],
     tempo=abjad.Tempo((1, 4), 72),
     )
@@ -30,8 +27,8 @@ cascading_timespan_maker = consort.CascadingTimespanMaker(
     )
 
 droning_timespan_maker = abjad.new(
-    demarest.materials.sparse_timespan_maker,
-    playing_groupings=[4, 5],
+    materials.sparse_timespan_maker,
+    playing_groupings=[5, 6],
     fuse_groups=True,
     )
 
@@ -44,9 +41,10 @@ snaking_timespan_maker = consort.CascadingTimespanMaker(
     )
 
 sparse_timespan_maker = abjad.new(
-    demarest.materials.sparse_timespan_maker,
+    materials.sparse_timespan_maker,
     playing_groupings=[1, 1, 2, 1, 2, 3],
     fuse_groups=True,
+    padding=abjad.Duration(1, 8),
     )
 
 ### TIMESPAN IDENTIFIERS ###
@@ -61,25 +59,16 @@ rare_timespan_identifier = abjad.sequencetools.Sequence(
 
 ### MUSIC SPECIFIERS ###
 
-castanet_pointillism = demarest.materials.castanet_pointillism
-
-guiro_pointillism = demarest.materials.guiro_pointillism
-
-guiro_repetitions = demarest.materials.guiro_repetitions
-
-guiro_shimmer = demarest.materials.guiro_shimmer
-
-shaker_drone = demarest.materials.shaker_drone
-
-shaker_pointillism = demarest.materials.shaker_pointillism
-
-shaker_repetitions = demarest.materials.shaker_repetitions
-
-whispered_inhales = demarest.materials.whispered_inhales
-
-whispered_pointillism = demarest.materials.whispered_pointillism
-
-whispered_repetitions = demarest.materials.whispered_repetitions
+castanet_pointillism = materials.castanet_pointillism
+guiro_pointillism = materials.guiro_pointillism
+guiro_repetitions = materials.guiro_repetitions
+guiro_shimmer = materials.guiro_shimmer
+shaker_drone = materials.shaker_drone
+shaker_pointillism = materials.shaker_pointillism
+shaker_repetitions = materials.shaker_repetitions
+whispered_inhales = materials.whispered_inhales
+whispered_pointillism = materials.whispered_pointillism
+whispered_repetitions = materials.whispered_repetitions
 
 ### MELANGES ###
 
@@ -103,55 +92,90 @@ whispered_melange = consort.MusicSpecifierSequence(
 
 ### TRIO MUSIC SPECIFIERS ###
 
-trio_a_marimba_shimmer = abjad.new(
-    demarest.materials.pitched_shimmer,
-    instrument=demarest.abbreviations.vibraphone,
-    )
-
-trio_a_woodblock_fanfare = demarest.materials.trio_a_woodblock_fanfare
-
-trio_b_ratchet_drone = demarest.materials.trio_b_ratchet_done
-
-trio_b_snare_drone = demarest.materials.trio_b_snare_drone
-
-trio_b_vibraphone_shimmer = abjad.new(
-    demarest.materials.pitched_shimmer,
-    instrument=demarest.abbreviations.vibraphone,
-    )
-
-trio_b_tam_tam_drone = abjad.new(
-    demarest.materials.unpitched_drone,
-    attachment_handler__performance_instruction=make_text_spanner(
-        'superball'),
-    instrument=demarest.abbreviations.trio_b_percussion,
-    pitch_handle__pitch_specifier=percussion.TAM,
-    )
-
-trio_c_toms_fanfare = demarest.materials.trio_c_toms_fanfare
-
-trio_c_tubular_bell_tranquilo = abjad.new(
-    demarest.materials.pitched_tranquilo,
-    instrument=demarest.materials.abbreviations.tubular_bells,
-    )
+trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
+trio_a_woodblock_fanfare = materials.trio_a_woodblock_fanfare
+trio_b_ratchet_drone = materials.trio_b_ratchet_done
+trio_b_snare_drone = materials.trio_b_snare_drone
+trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
+trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
+trio_c_toms_fanfare = materials.trio_c_toms_fanfare
+trio_c_tubular_bell_tranquilo = materials.trio_c_tubular_bells_tranquilo
 
 ### TRIO MELANGES ###
 
-trio_a_melange = consort.MusicSpecifierSequence(
-    application_rate='division',
-    music_specifiers=[
-        ],
+#trio_a_melange = consort.MusicSpecifierSequence(
+#    application_rate='division',
+#    music_specifiers=[
+#        ],
+#    )
+
+#trio_b_melange = consort.MusicSpecifierSequence(
+#    application_rate='division',
+#    music_specifiers=[
+#        ],
+#    )
+
+#trio_c_melange = consort.MusicSpecifierSequence(
+#    application_rate='division',
+#    music_specifiers=[
+#        ],
+#    )
+
+### BACKGROUND MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    a_1_percussion=shaker_drone,
+    a_2_percussion=shaker_drone,
+    a_3_percussion=shaker_drone,
+    a_4_percussion=shaker_drone,
+    b_1_percussion=shaker_drone,
+    b_2_percussion=shaker_drone,
+    b_3_percussion=shaker_drone,
+    b_4_percussion=shaker_drone,
     )
 
-trio_b_melange = consort.MusicSpecifierSequence(
-    application_rate='division',
-    music_specifiers=[
-        ],
+### MELANGE MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(0),
+    timespan_identifier=common_timespan_identifier.rotate(0),
+    a_1_percussion=percussion_melange,
+    a_2_percussion=percussion_melange,
+    a_3_percussion=percussion_melange,
+    a_4_percussion=percussion_melange,
     )
 
-trio_c_melange = consort.MusicSpecifierSequence(
-    application_rate='division',
-    music_specifiers=[
-        ],
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(1),
+    timespan_identifier=common_timespan_identifier.rotate(1),
+    b_1_percussion=percussion_melange,
+    b_2_percussion=percussion_melange,
+    b_3_percussion=percussion_melange,
+    b_4_percussion=percussion_melange,
     )
 
-### MUSIC SETTINGS ###
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(2),
+    timespan_identifier=common_timespan_identifier.rotate(2),
+    a_1_voice=whispered_melange,
+    a_2_voice=whispered_melange,
+    a_3_voice=whispered_melange,
+    a_4_voice=whispered_melange,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(3),
+    timespan_identifier=common_timespan_identifier.rotate(3),
+    b_1_voice=whispered_melange,
+    b_2_voice=whispered_melange,
+    b_3_voice=whispered_melange,
+    b_4_voice=whispered_melange,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(4),
+    timespan_identifier=common_timespan_identifier.rotate(4),
+    t_1_voice=whispered_melange,
+    t_2_voice=whispered_melange,
+    t_3_voice=whispered_melange,
+    )

@@ -514,6 +514,32 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             \clef "percussion"
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             f'16 \f \( \> [
                             \set stemLeftBeamCount = 2

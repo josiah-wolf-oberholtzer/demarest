@@ -41,6 +41,32 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4. \f \(
                         }
@@ -142,8 +168,39 @@
                     % [Violin 2 Voice] Material: "trio_b_ratchet_done"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            a'8 \f \( ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -238,8 +295,39 @@
                     % [Viola Voice] Material: "trio_b_ratchet_done"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \f \(
+                            a'4 \f \( ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -325,6 +413,32 @@
                     {
                         % [Cello Voice] Measure 1
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                             a'4. \f \(
                         }

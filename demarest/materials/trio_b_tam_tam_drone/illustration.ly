@@ -37,18 +37,83 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "unpitched_drone"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \<
+                            c'4. \( \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
                             c'4 \p \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -56,13 +121,33 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_drone"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \parenthesizeDynamic \p \(
+                            c'8 \parenthesizeDynamic \p \( ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -70,13 +155,48 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_drone"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \<
+                            c'4. \( \startTextSpan \<
                             c'8 \repeatTie
                         }
                         {
@@ -87,6 +207,10 @@
                         {
                             c'4 \p \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -98,16 +222,55 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_drone"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \parenthesizeDynamic \p \(
+                            c'8 \parenthesizeDynamic \p \( \startTextSpan
                         }
                         % [Violin 1 Voice] Measure 7
                         {
                             c'4 \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -141,12 +304,78 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_drone"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \( \<
+                            c'8 \( \startTextSpan \< ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -159,6 +388,10 @@
                         {
                             c'4 \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -166,13 +399,33 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_drone"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 \p \(
+                            c'4 \p \( ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -181,12 +434,47 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_drone"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \( \<
+                            c'8 \( \startTextSpan \<
                         }
                         {
                             c'4 \repeatTie
@@ -207,6 +495,10 @@
                         {
                             c'8 \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -240,12 +532,78 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_drone"
+                    % [Viola Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 \( \<
+                            c'4 \( \startTextSpan \< ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -262,6 +620,10 @@
                         {
                             c'8 \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -273,12 +635,47 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_drone"
+                    % [Viola Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \( \<
+                            c'8 \( \startTextSpan \<
                             c'4 \repeatTie
                         }
                         {
@@ -296,6 +693,10 @@
                         {
                             c'4 \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -330,18 +731,83 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "unpitched_drone"
+                    % [Cello Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \<
+                            c'4. \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
                             c'4 \p \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -349,18 +815,57 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_drone"
+                    % [Cello Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \<
+                            c'4. \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 4
                         {
                             c'8 \p \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -368,12 +873,47 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_drone"
+                    % [Cello Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 \( \<
+                            c'4 \( \startTextSpan \<
                         }
                         {
                             c'4 \repeatTie
@@ -385,6 +925,10 @@
                         {
                             c'4 \repeatTie
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -398,13 +942,33 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_drone"
+                    % [Cello Voice] Material: "trio_b_tam_tam_drone"
                     {
                         % [Cello Voice] Measure 7
                         {
+                            \once \override TextScript.parent-alignment-X = #left
+                            \once \override TextScript.self-alignment-X = #left
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \p \(
+                            c'8 \p \( ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            superball
+                                                        }
+                                }
                             <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                         }
                     }
                     {

@@ -31,12 +31,12 @@
         96
     ],
     "end_time_signature": [
-        5,
-        8
+        3,
+        4
     ],
-    "first_bar_number": 72,
+    "first_bar_number": 75,
     "is_repeated": null,
-    "measure_count": 95,
-    "segment_count": 3,
-    "segment_number": 2
+    "measure_count": 103,
+    "segment_count": 5,
+    "segment_number": 3
 }

@@ -37,10 +37,34 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            tubular
+                                                            bells
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    t.b.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -62,7 +86,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 2
                         {
@@ -87,7 +111,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -112,7 +136,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
@@ -138,7 +162,7 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
@@ -162,7 +186,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 5
                         {
@@ -191,7 +215,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "pitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
@@ -256,9 +280,33 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            tubular
+                                                            bells
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    t.b.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             cs'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
@@ -272,6 +320,12 @@
                                                     \caps
                                                         LV
                                     }
+                                ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        t.b.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -295,7 +349,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
@@ -334,7 +388,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
@@ -360,7 +414,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
@@ -398,7 +452,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 5
                         {
@@ -423,7 +477,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
@@ -462,7 +516,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "pitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 7
                         {
@@ -513,10 +567,34 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "pitched_tranquilo"
+                    % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \clef "treble"
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            tubular
+                                                            bells
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    t.b.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -530,6 +608,12 @@
                                                     \caps
                                                         LV
                                     }
+                                ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        t.b.
+                                }
                             <> \)
                             \clef "alto"
                         }
@@ -539,7 +623,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "pitched_tranquilo"
+                    % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Viola Voice] Measure 2
                         {
@@ -613,7 +697,7 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "pitched_tranquilo"
+                    % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \clef "treble"
@@ -639,7 +723,7 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "pitched_tranquilo"
+                    % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \clef "treble"
@@ -665,7 +749,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "pitched_tranquilo"
+                    % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Viola Voice] Measure 5
                         {
@@ -706,7 +790,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "pitched_tranquilo"
+                    % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Viola Voice] Measure 6
                         {
@@ -760,11 +844,35 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \clef "treble"
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            tubular
+                                                            bells
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    t.b.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -787,7 +895,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Cello Voice] Measure 2
                         {
@@ -814,7 +922,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -841,7 +949,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Cello Voice] Measure 4
                         {
@@ -868,7 +976,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \clef "treble"
@@ -894,7 +1002,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
                             \clef "treble"
@@ -920,7 +1028,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Cello Voice] Measure 5
                         {
@@ -970,7 +1078,7 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "pitched_tranquilo"
+                    % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         % [Cello Voice] Measure 7
                         {

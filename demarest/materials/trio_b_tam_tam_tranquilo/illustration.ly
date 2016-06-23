@@ -37,12 +37,38 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -62,12 +88,12 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -87,12 +113,12 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -112,12 +138,12 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -138,11 +164,11 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -162,12 +188,12 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -191,11 +217,11 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -210,7 +236,7 @@
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -256,11 +282,37 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -272,10 +324,16 @@
                                                     \caps
                                                         LV
                                     }
+                                ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -295,11 +353,11 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -314,7 +372,7 @@
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -334,12 +392,12 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -360,11 +418,11 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -378,7 +436,7 @@
                                     }
                         }
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -398,12 +456,12 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -423,11 +481,11 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -442,7 +500,7 @@
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -462,12 +520,12 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "unpitched_tranquilo"
+                    % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 2 Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -513,11 +571,37 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_tranquilo"
+                    % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -529,6 +613,12 @@
                                                     \caps
                                                         LV
                                     }
+                                ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                             <> \)
                         }
                     }
@@ -537,12 +627,12 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_tranquilo"
+                    % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Viola Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \( \<
+                            e8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -556,7 +646,7 @@
                                     }
                         }
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -570,7 +660,7 @@
                                     }
                         }
                         {
-                            c'8 -\tenuto \laissezVibrer \p
+                            e8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -585,7 +675,7 @@
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -609,11 +699,11 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_tranquilo"
+                    % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -633,11 +723,11 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_tranquilo"
+                    % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -657,12 +747,12 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_tranquilo"
+                    % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Viola Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -676,7 +766,7 @@
                                     }
                         }
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -696,12 +786,12 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "unpitched_tranquilo"
+                    % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Viola Voice] Measure 6
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -748,12 +838,38 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 1
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -773,12 +889,12 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -798,12 +914,12 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -823,12 +939,12 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -848,11 +964,11 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -872,11 +988,11 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -896,12 +1012,12 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \(
+                            e8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -915,7 +1031,7 @@
                                     }
                         }
                         {
-                            c'8 -\tenuto \laissezVibrer
+                            e8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -944,12 +1060,12 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "unpitched_tranquilo"
+                    % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            c'8 -\tenuto \laissezVibrer \ppp \(
+                            e8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5

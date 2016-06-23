@@ -42,6 +42,32 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                             b'4. :32 \( \<
                         }
@@ -145,8 +171,39 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            b'8 :64 \( \<
+                            b'8 :64 \( \< ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -244,8 +301,39 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            b'4 :32 \( \<
+                            b'4 :32 \( \< ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        perc.
+                                }
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -335,6 +423,32 @@
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                             b'4. :32 \( \<
                         }

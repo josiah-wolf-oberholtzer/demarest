@@ -37,6 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -59,7 +60,11 @@
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            <ef'' gf''>4 :32 \mf
+                            <
+                                ef''
+                                \tweak color #red
+                                gf''
+                            >4 :32 \mf
                             <> \)
                         }
                     }
@@ -72,6 +77,7 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
@@ -84,6 +90,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
@@ -135,6 +142,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
@@ -147,11 +155,16 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Violin 1 Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <ef'' gf''>4 :32 \parenthesizeDynamic \f \(
+                            <
+                                ef''
+                                \tweak color #red
+                                gf''
+                            >4 :32 \parenthesizeDynamic \f \(
                             <> \)
                         }
                     }
@@ -187,10 +200,36 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    vibraphone
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    vb.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            bf'16 -\accent -\staccato \f \( \>
+                            bf'16 -\accent -\staccato \f \( \> ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        vb.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         \times 4/5 {
@@ -223,6 +262,7 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Violin 2 Voice] Measure 4
                         \times 4/5 {
@@ -248,6 +288,7 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
@@ -256,7 +297,11 @@
                             ef'16 -\staccato ]
                         }
                         {
-                            <e'' g''>4 :32
+                            <
+                                e''
+                                \tweak color #red
+                                g''
+                            >4 :32
                         }
                         % [Violin 2 Voice] Measure 5
                         \times 4/5 {
@@ -280,6 +325,7 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Violin 2 Voice] Measure 6
                         {
@@ -293,7 +339,11 @@
                             \set stemRightBeamCount = 2
                             af'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            <f'' af''>16 \mf ]
+                            <
+                                f''
+                                \tweak color #red
+                                af''
+                            >16 \mf ]
                             <> \)
                         }
                     }
@@ -328,11 +378,37 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    vibraphone
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    vb.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            e''16 -\accent -\staccato \f \( \> [
+                            e''16 -\accent -\staccato \f \( \> [ ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        vb.
+                                }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
@@ -362,6 +438,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -389,6 +466,7 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -419,6 +497,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -437,6 +516,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -483,6 +563,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
@@ -510,7 +591,11 @@
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <f'' af''>4 :32 \mf
+                            <
+                                f''
+                                \tweak color #red
+                                af''
+                            >4 :32 \mf
                             <> \)
                             \clef "bass"
                         }
@@ -520,6 +605,7 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -546,6 +632,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Cello Voice] Measure 4
                         \times 2/3 {
@@ -566,6 +653,7 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -580,6 +668,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -603,6 +692,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \clef "treble"
@@ -623,6 +713,7 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Cello Voice] Measure 7
                         {

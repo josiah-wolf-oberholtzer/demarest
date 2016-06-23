@@ -2,10 +2,7 @@
 import abjad
 import consort
 import demarest
-from demarest.abbrevations import (
-    make_text_spanner,
-    percussion,
-    )
+from demarest import materials
 
 
 ### ZZ SECTION ZZ ###
@@ -31,7 +28,7 @@ cascading_timespan_maker = consort.CascadingTimespanMaker(
     )
 
 droning_timespan_maker = abjad.new(
-    demarest.materials.sparse_timespan_maker,
+    materials.sparse_timespan_maker,
     playing_groupings=[4, 5],
     fuse_groups=True,
     )
@@ -45,48 +42,43 @@ snaking_timespan_maker = consort.CascadingTimespanMaker(
     )
 
 sparse_timespan_maker = abjad.new(
-    demarest.materials.sparse_timespan_maker,
+    materials.sparse_timespan_maker,
     playing_groupings=[1, 1, 2, 1, 2, 3],
     fuse_groups=True,
+    padding=abjad.Duration(1, 4),
     )
 
 ### TIMESPAN IDENTIFIERS ###
 
 common_timespan_identifier = abjad.sequencetools.Sequence(
-    [1, -1, 2, -2, 3, 1, -1, 1, -2, 3]
+    [1, -2, 1, -1, 3, 1, -1, 2, -2, 3]
     )
 
 rare_timespan_identifier = abjad.sequencetools.Sequence(
-    [-4, 1, -3, 1, -5, 1, -2],
+    [-5, 1, -3, 1, -4, 1, -2],
     )
 
 ### MUSIC SPECIFIERS ###
 
-castanet_pointillism = demarest.materials.castanet_pointillism
-
-castanet_repetitions = demarest.materials.castanet_repetitions
-
-guiro_shimmer = demarest.materials.guiro_shimmer
-
-pitch_pipe_drone = demarest.materials.pitch_pipe_drone
-
-pitch_pipe_flutter = demarest.materials.pitch_pipe_flutter
-
-shaker_drone = demarest.materials.shaker_drone
-
-shaker_pointillism = demarest.materials.shaker_pointillism
-
-whispered_pointillism = demarest.materials.whispered_pointillism
-
-wine_glass_drone = demarest.materials.wine_glass_drone
+castanet_pointillism = materials.castanet_pointillism
+castanet_repetitions = materials.castanet_repetitions
+guiro_shimmer = materials.guiro_shimmer
+pitch_pipe_drone = materials.pitch_pipe_drone
+pitch_pipe_flutter = materials.pitch_pipe_flutter
+shaker_drone = materials.shaker_drone
+shaker_pointillism = materials.shaker_pointillism
+whispered_pointillism = materials.whispered_pointillism
+wine_glass_drone = materials.wine_glass_drone
 
 ### MELANGES ###
 
 percussion_melange = consort.MusicSpecifierSequence(
     application_rate='division',
     music_specifiers=[
+        castanet_pointillism,
         shaker_pointillism,
         castanet_repetitions,
+        castanet_pointillism,
         guiro_shimmer,
         ],
     )
@@ -102,73 +94,92 @@ pitch_pipe_melange = consort.MusicSpecifierSequence(
 
 ### TRIO MUSIC SPECIFIERS ###
 
-trio_a_marimba_shimmer = abjad.new(
-    demarest.materials.pitched_shimmer,
-    instrument=demarest.materials.abbreviations.marimba,
-    )
-
-trio_a_crotales_tranquilo = abjad.new(
-    demarest.materials.pitched_tranquilo,
-    instrument=demarest.materials.abbreviations.crotales,
-    )
-
-trio_b_ratchet_drone = demarest.materials.trio_b_ratchet_done
-
-trio_b_tam_tam_drone = abjad.new(
-    demarest.materials.unpitched_drone,
-    attachment_handler__performance_instruction=make_text_spanner(
-        'superball'),
-    instrument=demarest.abbreviations.trio_b_percussion,
-    pitch_handle__pitch_specifier=percussion.TAM,
-    )
-
-trio_b_tam_tam_tranquilo = abjad.new(
-    demarest.materials.unpitched_tranquilo,
-    instrument=demarest.abbreviations.trio_b_percussion,
-    pitch_handle__pitch_specifier=percussion.TAM,
-    )
-
-trio_b_vibraphone_shimmer = abjad.new(
-    demarest.materials.pitched_shimmer,
-    instrument=demarest.materials.abbreviations.vibraphone,
-    )
-
-trio_b_vibraphone_tranquilo = abjad.new(
-    demarest.materials.pitched_tranquilo,
-    instrument=demarest.materials.abbreviations.vibraphone,
-    )
-
-trio_b_bass_drum_tranquilo = abjad.new(
-    demarest.materials.unpitched_tranquilo,
-    instrument=demarest.abbreviations.trio_b_percussion,
-    pitch_handle__pitch_specifier=percussion.BASS_DRUM,
-    )
-
-trio_c_tubular_bell_tranquilo = abjad.new(
-    demarest.materials.pitched_tranquilo,
-    instrument=demarest.materials.abbreviations.tubular_bells,
-    )
-
-trio_c_toms_fanfare = demarest.materials.trio_c_toms_fanfare
+trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
+trio_a_crotales_tranquilo = materials.trio_a_crotales_tranquilo
+trio_b_ratchet_drone = materials.trio_b_ratchet_done
+trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
+trio_b_tam_tam_tranquilo = materials.trio_b_tam_tam_tranquilo
+trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
+trio_b_vibraphone_tranquilo = materials.trio_b_vibraphone_tranquilo
+#trio_c_bass_drum_tranquilo = materials.trio_b_bass_drum_tranquilo
+trio_c_tubular_bells_tranquilo = materials.trio_c_tubular_bells_tranquilo
+trio_c_toms_fanfare = materials.trio_c_toms_fanfare
 
 ### TRIO MELANGES ###
 
-trio_a_melange = consort.MusicSpecifierSequence(
-    application_rate='division',
-    music_specifiers=[
-        ],
+#trio_a_melange = consort.MusicSpecifierSequence(
+#    application_rate='division',
+#    music_specifiers=[
+#        ],
+#    )
+
+#trio_b_melange = consort.MusicSpecifierSequence(
+#    application_rate='division',
+#    music_specifiers=[
+#        ],
+#    )
+
+#trio_c_melange = consort.MusicSpecifierSequence(
+#    application_rate='division',
+#    music_specifiers=[
+#        ],
+#    )
+
+### BACKGROUND MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    a_1_percussion=wine_glass_drone,
+    a_2_percussion=wine_glass_drone,
+    a_3_percussion=wine_glass_drone,
+    a_4_percussion=wine_glass_drone,
+    b_1_percussion=wine_glass_drone,
+    b_2_percussion=wine_glass_drone,
+    b_3_percussion=wine_glass_drone,
+    b_4_percussion=wine_glass_drone,
     )
 
-trio_b_melange = consort.MusicSpecifierSequence(
-    application_rate='division',
-    music_specifiers=[
-        ],
+### MELANGE MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(0),
+    timespan_identifier=common_timespan_identifier.rotate(0),
+    a_1_percussion=percussion_melange,
+    a_2_percussion=percussion_melange,
+    a_3_percussion=percussion_melange,
+    a_4_percussion=percussion_melange,
     )
 
-trio_c_melange = consort.MusicSpecifierSequence(
-    application_rate='division',
-    music_specifiers=[
-        ],
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(1),
+    timespan_identifier=common_timespan_identifier.rotate(1),
+    b_1_percussion=percussion_melange,
+    b_2_percussion=percussion_melange,
+    b_3_percussion=percussion_melange,
+    b_4_percussion=percussion_melange,
     )
 
-### MUSIC SETTINGS ###
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(2),
+    timespan_identifier=common_timespan_identifier.rotate(2),
+    a_1_voice=pitch_pipe_melange,
+    a_2_voice=pitch_pipe_melange,
+    a_3_voice=pitch_pipe_melange,
+    a_4_voice=pitch_pipe_melange,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(3),
+    timespan_identifier=common_timespan_identifier.rotate(3),
+    b_1_voice=pitch_pipe_melange,
+    b_2_voice=pitch_pipe_melange,
+    b_3_voice=pitch_pipe_melange,
+    b_4_voice=pitch_pipe_melange,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(4),
+    timespan_identifier=common_timespan_identifier.rotate(4),
+    t_1_voice=pitch_pipe_melange,
+    t_2_voice=pitch_pipe_melange,
+    t_3_voice=pitch_pipe_melange,
+    )

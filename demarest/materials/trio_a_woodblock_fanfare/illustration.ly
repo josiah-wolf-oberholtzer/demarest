@@ -37,7 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "wood_block_fanfare"
+                    % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -82,7 +82,7 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "wood_block_fanfare"
+                    % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -98,7 +98,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "wood_block_fanfare"
+                    % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Violin 1 Voice] Measure 4
                         \times 8/9 {
@@ -157,7 +157,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "wood_block_fanfare"
+                    % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
                             \clef "percussion"
@@ -213,7 +213,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "wood_block_fanfare"
+                    % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         \times 2/3 {
                             \clef "percussion"
@@ -249,7 +249,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "wood_block_fanfare"
+                    % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
@@ -274,7 +274,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "wood_block_fanfare"
+                    % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
                             \clef "percussion"
@@ -370,7 +370,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "wood_block_fanfare"
+                    % [Viola Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         \times 4/5 {
                             \clef "percussion"
@@ -421,7 +421,7 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "wood_block_fanfare"
+                    % [Viola Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
                             \clef "percussion"
@@ -508,12 +508,38 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "wood_block_fanfare"
+                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             \clef "percussion"
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            percussion
+                                                        }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            perc.
+                                                        }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                             e'16 \f \( \> [
                             \set stemLeftBeamCount = 2
@@ -546,7 +572,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "wood_block_fanfare"
+                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -585,7 +611,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "wood_block_fanfare"
+                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
                             \clef "percussion"
@@ -629,7 +655,7 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "wood_block_fanfare"
+                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Cello Voice] Measure 7
                         \times 2/3 {

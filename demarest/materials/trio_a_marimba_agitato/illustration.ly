@@ -37,6 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
+                    % [Violin 1 Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -72,6 +73,7 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
@@ -84,6 +86,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
@@ -135,6 +138,7 @@
                             r4
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
@@ -147,6 +151,7 @@
                             r16
                         }
                     }
+                    % [Violin 1 Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Violin 1 Voice] Measure 7
                         {
@@ -187,10 +192,36 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    marimba
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    mb.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            bf'16 -\accent -\staccato \f \( \>
+                            bf'16 -\accent -\staccato \f \( \> ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        mb.
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         \times 4/5 {
@@ -223,6 +254,7 @@
                             r4
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Violin 2 Voice] Measure 4
                         \times 4/5 {
@@ -248,6 +280,7 @@
                             r8
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
@@ -280,6 +313,7 @@
                             r16
                         }
                     }
+                    % [Violin 2 Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Violin 2 Voice] Measure 6
                         {
@@ -328,11 +362,37 @@
                             r8
                         }
                     }
+                    % [Viola Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
+                            \set Staff.instrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    marimba
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    mb.
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            e''16 -\accent -\staccato \f \( \> [
+                            e''16 -\accent -\staccato \f \( \> [ ^ \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        mb.
+                                }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
@@ -362,6 +422,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -389,6 +450,7 @@
                             r4
                         }
                     }
+                    % [Viola Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -419,6 +481,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -437,6 +500,7 @@
                             r16
                         }
                     }
+                    % [Viola Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -483,6 +547,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Cello Voice] Measure 1
                         \tweak text #tuplet-number::calc-fraction-text
@@ -520,6 +585,7 @@
                             r8
                         }
                     }
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -546,6 +612,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Cello Voice] Measure 4
                         \times 2/3 {
@@ -566,6 +633,7 @@
                             r4
                         }
                     }
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -580,6 +648,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -603,6 +672,7 @@
                             r16
                         }
                     }
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         {
                             \clef "treble"
@@ -623,6 +693,7 @@
                             \startStaff
                         }
                     }
+                    % [Cello Voice] Material: "trio_a_marimba_agitato"
                     {
                         % [Cello Voice] Measure 7
                         {
