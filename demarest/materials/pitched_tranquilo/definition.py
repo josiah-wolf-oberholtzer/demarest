@@ -13,6 +13,7 @@ pitched_tranquilo = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(0.5),
     comment='pitched_tranquilo',
+    label=['pitched_tranquilo'],
     pitch_handler=abbreviations.pitch_handler,
     register_handler=consort.RegisterHandler(),
     )

@@ -15,6 +15,7 @@ wine_glass_drone = abjad.new(
         .scale_luminance(-1.5)
         .rotate_hue(0.0),
     comment='wine_glass_drone',
+    label=['wine_glass_drone'],
     minimum_phrase_duration=abjad.Duration(1),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.WINE_GLASS,

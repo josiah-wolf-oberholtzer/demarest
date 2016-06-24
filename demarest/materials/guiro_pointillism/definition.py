@@ -12,6 +12,7 @@ guiro_pointillism = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(-0.15),
     comment='guiro_pointillism',
+    labels=['guiro_pointillism'],
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.GUIRO,
         ),

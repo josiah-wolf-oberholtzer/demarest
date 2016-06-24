@@ -45,28 +45,26 @@ def make_instrument_column_markup(pieces):
 
 class UnpitchedPercussion(object):
 
+    SHAKER = pitchtools.NamedPitch('F4')
+    CASTANET = pitchtools.NamedPitch('D4')
+    GUIRO = pitchtools.NamedPitch('B3')
+    WINE_GLASS = pitchtools.NamedPitch('G3')
+
     WOOD_BLOCK_5 = pitchtools.NamedPitch('G4')
     WOOD_BLOCK_4 = pitchtools.NamedPitch('E4')
     WOOD_BLOCK_3 = pitchtools.NamedPitch('C4')
     WOOD_BLOCK_2 = pitchtools.NamedPitch('A3')
     WOOD_BLOCK_1 = pitchtools.NamedPitch('F3')
 
-    TOM_4 = pitchtools.NamedPitch('F4')
-    TOM_3 = pitchtools.NamedPitch('D4')
-    TOM_2 = pitchtools.NamedPitch('B3')
-    TOM_1 = pitchtools.NamedPitch('G3')
+    RATCHET = pitchtools.NamedPitch('E4')
+    SNARE = pitchtools.NamedPitch('C4')
+    TAM_TAM = pitchtools.NamedPitch('A3')
 
-    # BAMBOO_WIND_CHIMES = pitchtools.NamedPitch('F4')
-    # THUNDER_SHEET = pitchtools.NamedPitch('C4')
-
-    BASS_DRUM = pitchtools.NamedPitch('D3')
-    CASTANET = pitchtools.NamedPitch('D4')
-    WINE_GLASS = pitchtools.NamedPitch('G3')
-    GUIRO = pitchtools.NamedPitch('B3')
-    RATCHET = pitchtools.NamedPitch('A4')
-    SHAKER = pitchtools.NamedPitch('G4')
-    SNARE = pitchtools.NamedPitch('B4')
-    TAM_TAM = pitchtools.NamedPitch('E3')
+    TOM_4 = pitchtools.NamedPitch('G4')
+    TOM_3 = pitchtools.NamedPitch('E4')
+    TOM_2 = pitchtools.NamedPitch('C4')
+    TOM_1 = pitchtools.NamedPitch('A3')
+    BASS_DRUM = pitchtools.NamedPitch('F3')
 
 
 laissez_vibrer = consort.AttachmentExpression(
@@ -178,9 +176,9 @@ trio_a_percussion = consort.Instrument(
     instrument_change_markup=markuptools.Markup('perc.')
         .pad_around(0.5).box(),
     instrument_name_markup=make_instrument_column_markup(
-        ['percussion']),
+        ['five', 'wood', 'blocks']),
     short_instrument_name_markup=make_instrument_column_markup(
-        ['perc.']),
+        ['w.b.']),
     )
 
 ### TRIO B ###
@@ -197,9 +195,9 @@ trio_b_percussion = consort.Instrument(
     instrument_change_markup=markuptools.Markup('perc.')
         .pad_around(0.5).box(),
     instrument_name_markup=make_instrument_column_markup(
-        ['percussion']),
+        ['ratchet', 'snare', 'tam-tam']),
     short_instrument_name_markup=make_instrument_column_markup(
-        ['perc.']),
+        ['r.', 'sn.', 't.t.']),
     )
 
 ### TRIO C ###
@@ -217,7 +215,7 @@ trio_c_percussion = consort.Instrument(
     instrument_change_markup=markuptools.Markup('perc.')
         .pad_around(0.5).box(),
     instrument_name_markup=make_instrument_column_markup(
-        ['percussion']),
+        ['four', 'toms', 'and', 'bass drum']),
     short_instrument_name_markup=make_instrument_column_markup(
-        ['perc.']),
+        ['toms', '&', 'b.d.']),
     )

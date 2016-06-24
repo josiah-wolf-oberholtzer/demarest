@@ -162,9 +162,9 @@ class ScoreTemplate(consort.ScoreTemplate):
         if chorus:
             instrument = instrumenttools.Percussion(
                 instrument_name_markup=self._make_column_markup(
-                    ['shaker', 'maraca', 'castanet', 'wine glass']),
+                    ['shaker', 'castanet', 'guiro', 'wine glass']),
                 short_instrument_name_markup=self._make_column_markup(
-                    ['sh.', 'mc.', 'cst.', 'w.g.']),
+                    ['sh.', 'cst.', 'g.', 'w.g.']),
                 )
         percussion_staff = self._make_staff(
             '{} {} Percussion'.format(group, index),

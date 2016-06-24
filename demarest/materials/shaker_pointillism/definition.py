@@ -12,6 +12,7 @@ shaker_pointillism = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(0.3),
     comment='shaker_pointillism',
+    label=['shaker_pointillism'],
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
         ),

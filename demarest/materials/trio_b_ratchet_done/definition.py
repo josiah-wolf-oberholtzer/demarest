@@ -15,6 +15,7 @@ trio_b_ratchet_done = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(0.6),
     comment='trio_b_ratchet_done',
+    label=['trio_b_ratchet_done'],
     instrument=abbreviations.trio_b_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.RATCHET,

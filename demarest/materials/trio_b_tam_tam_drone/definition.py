@@ -10,6 +10,7 @@ trio_b_tam_tam_drone = abjad.new(
     attachment_handler__performance_instruction=abbreviations.make_text_spanner(
         'superball'),
     comment='trio_b_tam_tam_drone',
+    label=['trio_b_tam_tam_drone'],
     instrument=abbreviations.trio_b_percussion,
     pitch_handler__pitch_specifier=abbreviations.UnpitchedPercussion.TAM_TAM,
     )

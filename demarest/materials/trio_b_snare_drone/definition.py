@@ -18,6 +18,7 @@ trio_b_snare_drone = abjad.new(
         .scale_luminance(0)
         .rotate_hue(0.6),
     comment='trio_b_snare_drone',
+    label=['trio_b_snare_drone'],
     instrument=abbreviations.trio_b_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SNARE,

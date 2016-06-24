@@ -23,6 +23,7 @@ unpitched_repetitions = consort.MusicSpecifier(
         .scale_luminance(-1.5)
         .rotate_hue(-0.6),
     comment='unpitched_repetitions',
+    label=['unpitched_repetitions'],
     pitch_handler=consort.AbsolutePitchHandler(),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=rhythmmakertools.BurnishSpecifier(

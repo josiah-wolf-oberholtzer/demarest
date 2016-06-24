@@ -8,5 +8,6 @@ from demarest.materials.pitched_agitato.definition \
 trio_a_marimba_agitato = abjad.new(
     pitched_agitato,
     comment='trio_a_marimba_agitato',
+    label=['trio_a_marimba_agitato'],
     instrument=abbreviations.marimba,
     )

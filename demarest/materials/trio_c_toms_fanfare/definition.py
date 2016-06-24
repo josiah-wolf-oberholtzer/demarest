@@ -1,12 +1,6 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad.tools import durationtools
-from abjad.tools import indicatortools
-from abjad.tools import patterntools
-from abjad.tools import pitchtools
-from abjad.tools import rhythmmakertools
-from abjad.tools import selectortools
-from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
 
@@ -19,30 +13,30 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
         chords=consort.AttachmentExpression(
             attachments=[
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[Percussion.TOM_1, Percussion.TOM_2],
                         ),
                     ],
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[Percussion.TOM_2, Percussion.TOM_3],
                         ),
                     ],
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[Percussion.TOM_3, Percussion.TOM_4],
                         ),
                     ],
                 ],
             is_destructive=True,
-            selector=selectortools.Selector()
+            selector=abjad.select()
                 .by_logical_tie(pitched=True)
                 .by_duration('==', (1, 16), preprolated=True)
                 .by_pattern(
-                    patterntools.Pattern(
+                    abjad.patterntools.Pattern(
                         indices=[0, 3],
                         period=7,
                         ),
@@ -57,26 +51,26 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
         tremolo_chords=consort.AttachmentExpression(
             attachments=[
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[Percussion.TOM_1, Percussion.TOM_2],
                         ),
                     ],
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[Percussion.TOM_2, Percussion.TOM_3],
                         ),
                     ],
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[Percussion.TOM_3, Percussion.TOM_4],
                         ),
                     ],
                 ],
             is_destructive=True,
-            selector=selectortools.Selector()
+            selector=abjad.select()
                 .by_logical_tie(pitched=True)
                 .by_duration('>', (1, 16), preprolated=True)
             ),
@@ -85,9 +79,10 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
         .scale_luminance(-1.5)
         .rotate_hue(0.6),
     comment='trio_c_toms_fanfare',
+    label=['trio_c_toms_fanfare'],
     instrument=abbreviations.trio_c_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=pitchtools.PitchSegment(
+        pitch_specifier=abjad.pitchtools.PitchSegment(
             items=[
                 Percussion.TOM_1,
                 Percussion.TOM_4,
@@ -96,15 +91,15 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
                 ],
             ),
         ),
-    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
+    rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=[16, 16, 4, 16, 4],
-        beam_specifier=rhythmmakertools.BeamSpecifier(
+        beam_specifier=abjad.rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
             ),
-        duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
+        duration_spelling_specifier=abjad.rhythmmakertools.DurationSpellingSpecifier(
             decrease_durations_monotonically=True,
-            forbidden_written_duration=durationtools.Duration(1, 2),
+            forbidden_written_duration=abjad.Duration(1, 2),
             ),
         extra_counts_per_division=[0, 1, 0, 1, 2],
         )

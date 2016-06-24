@@ -16,6 +16,7 @@ castanet_pointillism = abjad.new(
         .scale_luminance(0)
         .rotate_hue(-0.3),
     comment='castanet_pointillism',
+    labels=['castanet_pointillism'],
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.CASTANET,
         ),

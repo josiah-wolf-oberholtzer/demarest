@@ -215,3 +215,15 @@ segment_maker.add_setting(
     b_3_voice=pitch_pipe_drone,
     b_4_voice=pitch_pipe_drone,
     )
+
+### TRIO PERCUSSION MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    timespan_identifier=rare_timespan_identifier.rotate(1),
+    t_b_percussion=trio_b_snare_drone,
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=rare_timespan_identifier.rotate(3),
+    t_b_percussion=trio_b_ratchet_drone,
+    )

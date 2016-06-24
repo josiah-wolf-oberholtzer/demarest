@@ -30,4 +30,5 @@ whispered_repetitions = abjad.new(
         .scale_luminance(-1)
         .rotate_hue(0.0),
     comment='whispered_repetitions',
+    label=['whispered_repetitions'],
     )

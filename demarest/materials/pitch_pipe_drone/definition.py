@@ -15,4 +15,5 @@ pitch_pipe_drone = abjad.new(
         .scale_luminance(0)
         .rotate_hue(0.15),
     comment='pitch_pipe_drone',
+    label=['pitch_pipe_drone'],
     )

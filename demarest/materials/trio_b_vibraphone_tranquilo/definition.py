@@ -10,5 +10,6 @@ trio_b_vibraphone_tranquilo = abjad.new(
     pitched_tranquilo,
     attachment_handler__performance_instruction=make_text_spanner('bowed'),
     comment='trio_b_vibraphone_tranquilo',
+    label=['trio_b_vibraphone_tranquilo'],
     instrument=abbreviations.vibraphone,
     )
