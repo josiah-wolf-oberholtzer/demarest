@@ -194,3 +194,47 @@ segment_maker.add_setting(
     t_2_voice=whispered_melange,
     t_3_voice=whispered_melange,
     )
+
+### CASCADING MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    timespan_maker=cascading_timespan_maker,
+    timespan_identifier=rare_timespan_identifier,
+    a_1_voice=whispered_repetitions,
+    a_2_voice=whispered_repetitions,
+    a_3_voice=whispered_repetitions,
+    a_4_voice=whispered_repetitions,
+    t_1_voice=whispered_repetitions,
+    t_2_voice=whispered_repetitions,
+    t_3_voice=whispered_repetitions,
+    b_1_voice=whispered_repetitions,
+    b_2_voice=whispered_repetitions,
+    b_3_voice=whispered_repetitions,
+    b_4_voice=whispered_repetitions,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=snaking_timespan_maker,
+    timespan_identifier=rare_timespan_identifier.rotate(2),
+    a_1_percussion=guiro_repetitions,
+    a_2_percussion=guiro_repetitions,
+    a_3_percussion=guiro_repetitions,
+    a_4_percussion=guiro_repetitions,
+    b_1_percussion=guiro_repetitions,
+    b_2_percussion=guiro_repetitions,
+    b_3_percussion=guiro_repetitions,
+    b_4_percussion=guiro_repetitions,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=snaking_timespan_maker.rotate(1),
+    timespan_identifier=rare_timespan_identifier.rotate(4),
+    a_1_percussion=shaker_repetitions,
+    a_2_percussion=shaker_repetitions,
+    a_3_percussion=shaker_repetitions,
+    a_4_percussion=shaker_repetitions,
+    b_1_percussion=shaker_repetitions,
+    b_2_percussion=shaker_repetitions,
+    b_3_percussion=shaker_repetitions,
+    b_4_percussion=shaker_repetitions,
+    )

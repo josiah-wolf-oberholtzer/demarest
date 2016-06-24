@@ -183,3 +183,18 @@ segment_maker.add_setting(
     t_2_voice=pitch_pipe_melange,
     t_3_voice=pitch_pipe_melange,
     )
+
+### CASCADING MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    timespan_maker=snaking_timespan_maker,
+    timespan_identifier=rare_timespan_identifier,
+    a_1_percussion=castanet_repetitions,
+    a_2_percussion=castanet_repetitions,
+    a_3_percussion=castanet_repetitions,
+    a_4_percussion=castanet_repetitions,
+    b_1_percussion=castanet_repetitions,
+    b_2_percussion=castanet_repetitions,
+    b_3_percussion=castanet_repetitions,
+    b_4_percussion=castanet_repetitions,
+    )

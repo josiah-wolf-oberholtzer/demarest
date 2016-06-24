@@ -4,6 +4,7 @@ import consort
 import demarest
 from demarest import materials
 
+
 ### XX SECTION XX ###
 
 segment_maker = demarest.SegmentMaker(
@@ -54,7 +55,7 @@ common_timespan_identifier = abjad.sequencetools.Sequence(
     )
 
 rare_timespan_identifier = abjad.sequencetools.Sequence(
-    [-4, 1, -3, 1, -5, 1, -2],
+    [-3, 1, -4, 1, -5, 1, -2],
     )
 
 ### MUSIC SPECIFIERS ###
@@ -63,6 +64,7 @@ castanet_pointillism = materials.castanet_pointillism
 guiro_pointillism = materials.guiro_pointillism
 guiro_repetitions = materials.guiro_repetitions
 guiro_shimmer = materials.guiro_shimmer
+pitch_pipe_drone = materials.pitch_pipe_drone
 shaker_drone = materials.shaker_drone
 shaker_pointillism = materials.shaker_pointillism
 shaker_repetitions = materials.shaker_repetitions
@@ -178,4 +180,38 @@ segment_maker.add_setting(
     t_1_voice=whispered_melange,
     t_2_voice=whispered_melange,
     t_3_voice=whispered_melange,
+    )
+
+### CASCADING MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    timespan_maker=cascading_timespan_maker,
+    timespan_identifier=rare_timespan_identifier,
+    a_1_percussion=shaker_repetitions,
+    a_2_percussion=shaker_repetitions,
+    a_3_percussion=shaker_repetitions,
+    a_4_percussion=shaker_repetitions,
+    b_1_percussion=shaker_repetitions,
+    b_2_percussion=shaker_repetitions,
+    b_3_percussion=shaker_repetitions,
+    b_4_percussion=shaker_repetitions,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=abjad.new(
+        cascading_timespan_maker,
+        padding=abjad.Duration(1, 4),
+        ),
+    timespan_identifier=rare_timespan_identifier.rotate(2),
+    a_1_voice=pitch_pipe_drone,
+    a_2_voice=pitch_pipe_drone,
+    a_3_voice=pitch_pipe_drone,
+    a_4_voice=pitch_pipe_drone,
+    t_1_voice=pitch_pipe_drone,
+    t_2_voice=pitch_pipe_drone,
+    t_3_voice=pitch_pipe_drone,
+    b_1_voice=pitch_pipe_drone,
+    b_2_voice=pitch_pipe_drone,
+    b_3_voice=pitch_pipe_drone,
+    b_4_voice=pitch_pipe_drone,
     )

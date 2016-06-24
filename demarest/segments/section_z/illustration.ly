@@ -1,7 +1,7 @@
-% package "abjad" @ bfda186 [josiah/demarest] (2016-06-19 18:29:37)
+% package "abjad" @ eccf6ef [josiah/demarest] (2016-06-23 00:51:28)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ 47c934f [master] (2016-06-22 22:25:57)
-% package "demarest" @ abb68eb [master] (2016-06-22 22:07:48)
+% package "demarest" @ 65c5d75 [master] (2016-06-23 00:47:48)
 
 \version "2.19.41"
 \language "english"
@@ -86,16 +86,8 @@
                 s1 * 2
             }
             {
-                \time 3/4
-                s1 * 3/4
-            }
-            {
                 \time 5/8
-                s1 * 5/8
-            }
-            {
-                \time 3/4
-                s1 * 3/4
+                s1 * 15/8
             }
             {
                 \time 7/8
@@ -103,7 +95,11 @@
             }
             {
                 \time 5/8
-                s1 * 15/8
+                s1 * 5/4
+            }
+            {
+                \time 7/8
+                s1 * 7/8
             }
             {
                 \time 4/4
@@ -126,24 +122,24 @@
                 s1 * 3/4
             }
             {
-                \time 5/8
-                s1 * 15/8
+                \time 7/8
+                s1 * 7/8
             }
             {
-                \time 3/4
-                s1 * 3/4
+                \time 5/8
+                s1 * 5/4
             }
             {
                 \time 4/4
                 s1 * 1
             }
             {
-                \time 7/8
-                s1 * 7/8
+                \time 3/4
+                s1 * 3/4
             }
             {
                 \time 5/8
-                s1 * 5/8
+                s1 * 5/4
             }
             {
                 \time 4/4
@@ -515,13 +511,13 @@
                             }
                             % [A 1 Vocalization Voice] Measure 189
                             {
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 1 Vocalization Voice] Measure 190
                             {
-                                r8
+                                r4
                             }
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -564,12 +560,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [A 1 Vocalization Voice] Measure 191
                             {
-                                c'8 \p \repeatTie
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -579,11 +575,11 @@
                         {
                             {
                                 r8
-                                r2
+                                r4
                             }
                             % [A 1 Vocalization Voice] Measure 192
                             {
-                                r8
+                                r4.
                             }
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -594,8 +590,10 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \<
-                                c'4 \repeatTie
+                                c'2 \( \<
+                            }
+                            % [A 1 Vocalization Voice] Measure 193
+                            {
                                 c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -606,14 +604,19 @@
                         }
                         {
                             {
-                                r8
+                                r4
+                                r4
                             }
-                            % [A 1 Vocalization Voice] Measure 193
+                            % [A 1 Vocalization Voice] Measure 194
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 5/8
+                            }
+                            % [A 1 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [A 1 Vocalization Voice] Measure 196
                             {
@@ -712,7 +715,7 @@
                         {
                             {
                                 r8
-                                r4
+                                r2
                             }
                             % [A 1 Vocalization Voice] Measure 204
                             {
@@ -723,18 +726,17 @@
                             }
                             % [A 1 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [A 1 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 1 Vocalization Voice] Measure 208
                             {
                                 r4.
-                                r4
                             }
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -1642,7 +1644,7 @@
                             }
                             % [A 1 Percussion Voice] Measure 189
                             {
-                                g4. \repeatTie
+                                g4 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1650,40 +1652,10 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
                         {
                             {
-                                r8 \!
-                                r8.
-                            }
-                        }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
-                            }
-                            % [A 1 Percussion Voice] Measure 190
-                            {
-                                d'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4
-                                r4
-                            }
-                            % [A 1 Percussion Voice] Measure 191
-                            {
-                                r16
-                            }
-                        }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
@@ -1692,8 +1664,42 @@
                         }
                         {
                             {
+                                r4
+                            }
+                            % [A 1 Percussion Voice] Measure 190
+                            {
                                 r16
-                                r2
+                            }
+                        }
+                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            % [A 1 Percussion Voice] Measure 191
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
                             }
                             % [A 1 Percussion Voice] Measure 192
                             {
@@ -1706,6 +1712,7 @@
                             }
                             % [A 1 Percussion Voice] Measure 193
                             {
+                                r4
                                 r16
                             }
                         }
@@ -1720,37 +1727,40 @@
                         {
                             {
                                 r4
-                                r4
                             }
                             % [A 1 Percussion Voice] Measure 194
                             {
-                                r4.
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [A 1 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            \times 4/6 {
-                                \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                d'16 -\staccato \( \< [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                            }
                             % [A 1 Percussion Voice] Measure 195
-                            {
-                                d'16 -\staccato [
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 14/15 {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                r16 \( [
+                                \once \override Hairpin.circled-tip = ##t
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato \<
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -1940,6 +1950,7 @@
                         {
                             {
                                 r8
+                                r4
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_pointillism"
@@ -1947,24 +1958,35 @@
                             % [A 1 Percussion Voice] Measure 204
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                g'16 -\staccato \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r16
                                 r4
+                                r4
+                            }
+                            % [A 1 Percussion Voice] Measure 205
+                            {
+                                r4.
+                                r8
+                            }
+                        }
+                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
                             }
                         }
                         % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 1 Percussion Voice] Measure 205
+                            % [A 1 Percussion Voice] Measure 206
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2003,21 +2025,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g4. \( \startTextSpan \<
-                                g4 \repeatTie
-                            }
-                            % [A 1 Percussion Voice] Measure 206
-                            {
-                                g2. \repeatTie
+                                g1 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 207
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g1 \p \repeatTie \>
-                            }
-                            % [A 1 Percussion Voice] Measure 208
-                            {
-                                g8 \repeatTie
+                                g2 \repeatTie
+                                g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2027,14 +2040,18 @@
                         }
                         {
                             {
-                                r4 \!
+                                r8
+                            }
+                            % [A 1 Percussion Voice] Measure 208
+                            {
+                                r8
                             }
                         }
                         % [A 1 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -2107,12 +2124,12 @@
                         % [A 1 Percussion Voice] Material: "castanet_repetitions"
                         {
                             \times 4/5 {
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                r16 \( [
                                 \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16 -\staccato \<
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -2230,23 +2247,40 @@
                                 r8.
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \<
                             }
                             % [A 1 Percussion Voice] Measure 224
-                            {
+                            \times 2/3 {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4
+                                r16
+                            }
+                        }
+                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
                                 r4
                             }
                         }
@@ -2255,7 +2289,7 @@
                             % [A 1 Percussion Voice] Measure 225
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -2744,11 +2778,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \<
+                                c'8 \( \<
+                                c'4 \repeatTie
                             }
                             % [A 2 Vocalization Voice] Measure 190
                             {
-                                c'4 \p \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2757,23 +2792,23 @@
                         }
                         {
                             {
-                                r8
-                                r8
+                                r4
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
+                            % [A 2 Vocalization Voice] Measure 191
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \<
+                                c'4. \( \<
+                                c'4 \repeatTie
                             }
-                            % [A 2 Vocalization Voice] Measure 191
+                            % [A 2 Vocalization Voice] Measure 192
                             {
-                                c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -2784,18 +2819,19 @@
                         }
                         {
                             {
-                                r8
+                                r4
+                                r2
                             }
-                            % [A 2 Vocalization Voice] Measure 192
+                            % [A 2 Vocalization Voice] Measure 193
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7/8
+                                R1 * 5/4
                             }
-                            % [A 2 Vocalization Voice] Measure 193
+                            % [A 2 Vocalization Voice] Measure 195
                             {
-                                R1 * 15/8
+                                R1 * 7/8
                             }
                             % [A 2 Vocalization Voice] Measure 196
                             {
@@ -2880,28 +2916,15 @@
                             }
                             % [A 2 Vocalization Voice] Measure 203
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [A 2 Vocalization Voice] Measure 204
-                            {
+                                r4.
+                                r4
                                 r8
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -2914,14 +2937,44 @@
                                                                 "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \parenthesizeDynamic \p \( \startTextSpan
+                            }
+                            % [A 2 Vocalization Voice] Measure 204
+                            {
+                                c'8 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
+                                r4
                                 r4
                             }
                             % [A 2 Vocalization Voice] Measure 205
@@ -2933,18 +2986,17 @@
                             }
                             % [A 2 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [A 2 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 2 Vocalization Voice] Measure 208
                             {
                                 r4.
-                                r4
                                 r8
                             }
                         }
@@ -3758,8 +3810,8 @@
                             }
                             % [A 2 Percussion Voice] Measure 189
                             {
-                                g2 \repeatTie
-                                g8 \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3768,33 +3820,49 @@
                             }
                         }
                         {
-                            {
-                                r8 \!
-                            }
                             % [A 2 Percussion Voice] Measure 190
                             {
-                                r8.
+                                r4 \!
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/8 {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         {
+                            % [A 2 Percussion Voice] Measure 191
                             {
-                                r16
-                                r4
+                                r8
                             }
                         }
                         % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 2 Percussion Voice] Measure 191
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -3833,12 +3901,15 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2. \( \startTextSpan \<
+                                g4 \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 192
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 193
+                            {
                                 g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -3849,18 +3920,14 @@
                         }
                         {
                             {
-                                r8
-                            }
-                            % [A 2 Percussion Voice] Measure 193
-                            {
-                                r8
+                                r4
                             }
                         }
                         % [A 2 Percussion Voice] Material: "shaker_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \parenthesizeDynamic \p \( [
+                                g'16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -3869,7 +3936,6 @@
                         {
                             {
                                 r8
-                                r4
                             }
                             % [A 2 Percussion Voice] Measure 194
                             {
@@ -3880,18 +3946,21 @@
                                 \stopStaff
                                 \startStaff
                             }
+                            % [A 2 Percussion Voice] Measure 195
+                            {
+                                r4
+                            }
                         }
                         % [A 2 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            % [A 2 Percussion Voice] Measure 195
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 10/11 {
-                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                d'16 -\staccato \( \< [
+                                r16 \( [
+                                \once \override Hairpin.circled-tip = ##t
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                d'16 -\staccato \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -3920,8 +3989,14 @@
                                 d'16 -\staccato ]
                             }
                             % [A 2 Percussion Voice] Measure 196
-                            {
+                            \times 4/6 {
                                 d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -3940,6 +4015,7 @@
                             % [A 2 Percussion Voice] Measure 197
                             {
                                 r4
+                                r16
                             }
                         }
                         % [A 2 Percussion Voice] Material: "castanet_pointillism"
@@ -3954,7 +4030,8 @@
                         }
                         {
                             {
-                                r4.
+                                r16
+                                r4
                             }
                         }
                         % [A 2 Percussion Voice] Material: "castanet_pointillism"
@@ -4044,10 +4121,39 @@
                         {
                             {
                                 r4
+                                r2
+                            }
+                            % [A 2 Percussion Voice] Measure 204
+                            {
+                                r4
+                            }
+                        }
+                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
                             }
                         }
                         % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
+                            % [A 2 Percussion Voice] Measure 205
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4086,30 +4192,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g4 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 204
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
-                            }
-                            % [A 2 Percussion Voice] Measure 205
-                            {
-                                g4. \p \repeatTie
+                                g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 206
                             {
-                                g2. \repeatTie
+                                g1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 207
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g1 \repeatTie \>
+                                g2. \p \repeatTie \>
                             }
                             % [A 2 Percussion Voice] Measure 208
                             {
-                                g4. \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4128,16 +4225,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
+                                r8
                             }
                             % [A 2 Percussion Voice] Measure 209
                             {
@@ -4239,12 +4333,11 @@
                             % [A 2 Percussion Voice] Measure 213
                             {
                                 r4.
-                                r16
                             }
                         }
                         % [A 2 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
+                            \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
@@ -4252,14 +4345,17 @@
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                            }
-                            % [A 2 Percussion Voice] Measure 214
-                            \times 2/3 {
-                                d'16 -\staccato [
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            % [A 2 Percussion Voice] Measure 214
+                            {
+                                d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato \p ]
                                 <> \)
@@ -4362,7 +4458,46 @@
                             {
                                 r4 \!
                             }
+                        }
+                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        {
                             % [A 2 Percussion Voice] Measure 224
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r8.
+                            }
+                        }
+                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \<
+                            }
+                            % [A 2 Percussion Voice] Measure 225
+                            \times 2/3 {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
+                            }
+                        }
+                        {
                             {
                                 r16
                             }
@@ -4371,30 +4506,12 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4
-                                r4
-                            }
-                        }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            % [A 2 Percussion Voice] Measure 225
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r8
                                 r2
                             }
                         }
@@ -4912,7 +5029,8 @@
                             }
                             % [A 3 Vocalization Voice] Measure 189
                             {
-                                r2
+                                r4.
+                                r8
                             }
                         }
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -4923,12 +5041,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \<
+                                c'8 \( \<
                             }
                             % [A 3 Vocalization Voice] Measure 190
                             {
                                 c'4. \repeatTie
-                                c'4 \p \repeatTie
+                                c'4 \repeatTie
+                            }
+                            % [A 3 Vocalization Voice] Measure 191
+                            {
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4937,20 +5059,24 @@
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 191
+                            {
+                                r4
+                                r4
+                            }
+                            % [A 3 Vocalization Voice] Measure 192
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
-                            }
-                            % [A 3 Vocalization Voice] Measure 192
-                            {
                                 R1 * 7/8
                             }
                             % [A 3 Vocalization Voice] Measure 193
                             {
-                                R1 * 15/8
+                                R1 * 5/4
+                            }
+                            % [A 3 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [A 3 Vocalization Voice] Measure 196
                             {
@@ -5037,19 +5163,23 @@
                             }
                             % [A 3 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [A 3 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [A 3 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [A 3 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [A 3 Vocalization Voice] Measure 208
                             {
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -5980,8 +6110,7 @@
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
                             }
                             % [A 3 Percussion Voice] Measure 190
                             {
@@ -5999,11 +6128,40 @@
                         {
                             {
                                 r4
-                                r4
                             }
+                        }
+                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
                             % [A 3 Percussion Voice] Measure 191
                             {
-                                r2
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [A 3 Percussion Voice] Measure 192
+                            {
                                 r16
                             }
                         }
@@ -6011,34 +6169,35 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \parenthesizeDynamic \p \(
+                                g'16 -\staccato \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
+                                r4
+                                r2
                             }
-                            % [A 3 Percussion Voice] Measure 192
+                            % [A 3 Percussion Voice] Measure 193
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
-                            }
-                            % [A 3 Percussion Voice] Measure 193
-                            {
-                                r4.
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
+                            % [A 3 Percussion Voice] Measure 194
+                            \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -6051,33 +6210,26 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 194
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r8
+                                r4
                             }
                             % [A 3 Percussion Voice] Measure 195
                             {
-                                r8
+                                r4.
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
+                                r8.
                                 r4
                             }
                             % [A 3 Percussion Voice] Measure 196
@@ -6109,31 +6261,14 @@
                             % [A 3 Percussion Voice] Measure 198
                             {
                                 r4
-                            }
-                        }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
                                 r16
-                                r4
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 199
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -6142,18 +6277,32 @@
                         {
                             {
                                 r8.
-                                r4
-                            }
-                            % [A 3 Percussion Voice] Measure 200
-                            {
-                                r16
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [A 3 Percussion Voice] Measure 199
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                        }
+                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            % [A 3 Percussion Voice] Measure 200
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -6165,7 +6314,6 @@
                             % [A 3 Percussion Voice] Measure 201
                             {
                                 r4
-                                r16
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
@@ -6180,8 +6328,7 @@
                         }
                         {
                             {
-                                r8.
-                                r4
+                                r2
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
@@ -6244,32 +6391,91 @@
                             }
                             % [A 3 Percussion Voice] Measure 203
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 204
                             {
-                                g4. \p \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 205
                             {
-                                g4. \repeatTie
                                 g4 \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16 \!
+                            }
+                        }
+                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \p \(
+                                <> \)
+                            }
+                        }
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g4 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 206
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g2. \repeatTie \>
+                                g1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 207
                             {
-                                g1 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g2. \p \repeatTie \>
                             }
                             % [A 3 Percussion Voice] Measure 208
                             {
-                                g4. \repeatTie
-                                g8 \repeatTie
+                                g4 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6290,17 +6496,28 @@
                                 d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
+                                <> \)
                             }
+                        }
+                        {
                             % [A 3 Percussion Voice] Measure 209
                             {
-                                d'16 -\staccato
+                                r16
+                            }
+                        }
+                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
                                 r4
                             }
                         }
@@ -6309,18 +6526,13 @@
                             % [A 3 Percussion Voice] Measure 210
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
+                                r8.
                                 r2.
                             }
                             % [A 3 Percussion Voice] Measure 211
@@ -6383,13 +6595,10 @@
                         % [A 3 Percussion Voice] Material: "castanet_repetitions"
                         {
                             % [A 3 Percussion Voice] Measure 214
-                            \times 4/5 {
+                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -6417,13 +6626,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4
+                                r8.
                                 r8
                             }
                         }
@@ -6503,7 +6715,6 @@
                             }
                             % [A 3 Percussion Voice] Measure 223
                             {
-                                g4. \repeatTie
                                 g4 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -6512,28 +6723,50 @@
                                 <> \stopTextSpan
                             }
                         }
+                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
                         {
+                            \times 4/6 {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \! \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
                             % [A 3 Percussion Voice] Measure 224
                             {
-                                r4 \!
+                                r4
+                                r16
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r4
                             }
                             % [A 3 Percussion Voice] Measure 225
                             {
@@ -6639,20 +6872,28 @@
                         {
                             {
                                 r8
-                                r8.
+                                r8
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
+                            \times 2/3 {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                d'16 -\staccato \( \<
+                                r16 \( [
+                                \once \override Hairpin.circled-tip = ##t
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato \<
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                             }
                             % [A 3 Percussion Voice] Measure 230
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 10/11 {
+                            \times 10/12 {
                                 d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -6722,18 +6963,23 @@
                             % [A 3 Percussion Voice] Measure 232
                             {
                                 r4.
-                                r8.
+                                r8
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                             }
                             % [A 3 Percussion Voice] Measure 233
                             {
                                 d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -6741,7 +6987,7 @@
                         }
                         {
                             {
-                                r4
+                                r8.
                                 r4
                             }
                             % [A 3 Percussion Voice] Measure 234
@@ -7072,27 +7318,63 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             % [A 4 Vocalization Voice] Measure 189
                             {
-                                r2 \!
-                                r8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8 \!
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
+                            % [A 4 Vocalization Voice] Measure 190
                             {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \(
-                            }
-                            % [A 4 Vocalization Voice] Measure 190
-                            {
-                                c'4. \repeatTie
+                                c'4. \( \startTextSpan \<
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7102,20 +7384,21 @@
                         }
                         {
                             {
-                                r4
+                                r8
                             }
                             % [A 4 Vocalization Voice] Measure 191
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 4 Vocalization Voice] Measure 192
                             {
                                 r4.
+                                r4
                             }
                         }
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -7158,11 +7441,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                             }
                             % [A 4 Vocalization Voice] Measure 193
                             {
-                                c'8 \p \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7173,14 +7456,17 @@
                         {
                             {
                                 r4
-                                r4
                             }
                             % [A 4 Vocalization Voice] Measure 194
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
+                            }
+                            % [A 4 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [A 4 Vocalization Voice] Measure 196
                             {
@@ -7268,26 +7554,31 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [A 4 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [A 4 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [A 4 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [A 4 Vocalization Voice] Measure 208
                             {
-                                r4.
+                                r8
                             }
                         }
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -7324,7 +7615,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \p \( \startTextSpan
+                                c'4 \( \startTextSpan \<
+                                c'4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8001,16 +8293,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r4
                                 r4
                             }
                             % [A 4 Percussion Voice] Measure 174
@@ -8110,14 +8399,13 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
                         {
                             {
+                                r16
                                 r4
                             }
                         }
@@ -8233,7 +8521,8 @@
                         }
                         {
                             {
-                                r4 \!
+                                r8 \!
+                                r8.
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
@@ -8244,17 +8533,35 @@
                                 <> \)
                             }
                         }
+                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
                         {
+                            % [A 4 Percussion Voice] Measure 190
                             {
-                                r8.
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 190
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                d'16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -8262,13 +8569,15 @@
                         }
                         {
                             {
-                                r4
-                                r4
+                                r8
+                            }
+                            % [A 4 Percussion Voice] Measure 191
+                            {
+                                r8
                             }
                         }
                         % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 4 Percussion Voice] Measure 191
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -8307,12 +8616,15 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2. \( \startTextSpan \<
+                                g4 \( \startTextSpan \<
+                                g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 192
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 193
+                            {
                                 g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -8323,11 +8635,8 @@
                         }
                         {
                             {
-                                r8
-                            }
-                            % [A 4 Percussion Voice] Measure 193
-                            {
-                                r8.
+                                r4
+                                r16
                             }
                         }
                         % [A 4 Percussion Voice] Material: "shaker_pointillism"
@@ -8341,7 +8650,6 @@
                         {
                             {
                                 r8
-                                r4
                             }
                         }
                         % [A 4 Percussion Voice] Material: "shaker_pointillism"
@@ -8360,14 +8668,22 @@
                                 r4
                                 r4
                             }
+                        }
+                        % [A 4 Percussion Voice] Material: "shaker_pointillism"
+                        {
                             % [A 4 Percussion Voice] Measure 195
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
+                                g'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                g'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r2
                             }
                             % [A 4 Percussion Voice] Measure 196
                             {
@@ -8376,10 +8692,13 @@
                         }
                         % [A 4 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
+                            \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -8398,14 +8717,16 @@
                             }
                             % [A 4 Percussion Voice] Measure 197
                             {
-                                r4..
+                                r4.
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -8445,23 +8766,19 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
-                                r4
+                                r16
+                                r2
                             }
                             % [A 4 Percussion Voice] Measure 201
                             {
                                 r4.
+                                r16
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
@@ -8476,7 +8793,7 @@
                         }
                         {
                             {
-                                r8
+                                r16
                                 r4
                             }
                             % [A 4 Percussion Voice] Measure 202
@@ -8529,33 +8846,17 @@
                             }
                             % [A 4 Percussion Voice] Measure 203
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                g2.. \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 204
                             {
-                                g4. \p \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g4. \p \repeatTie \>
                                 g4 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 205
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
-                            }
-                            % [A 4 Percussion Voice] Measure 206
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                g2. \repeatTie \>
-                            }
-                            % [A 4 Percussion Voice] Measure 207
-                            {
-                                g1 \repeatTie
-                            }
-                            % [A 4 Percussion Voice] Measure 208
-                            {
-                                g4. \repeatTie
-                                g4 \repeatTie
-                                g8 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -8565,7 +8866,92 @@
                         }
                         {
                             {
-                                r8 \!
+                                r16 \!
+                            }
+                        }
+                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            % [A 4 Percussion Voice] Measure 206
+                            \times 2/3 {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
+                            }
+                        }
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g2.. \( \startTextSpan \<
+                            }
+                            % [A 4 Percussion Voice] Measure 207
+                            {
+                                g2. \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 208
+                            {
+                                g4. \repeatTie
+                                g8 \p \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [A 4 Percussion Voice] Measure 209
                             {
@@ -8576,13 +8962,15 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r8
                                 r4
                             }
                             % [A 4 Percussion Voice] Measure 210
@@ -8600,7 +8988,7 @@
                             % [A 4 Percussion Voice] Measure 211
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \( [
+                                g'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16 -\staccato
@@ -8640,7 +9028,6 @@
                         {
                             {
                                 r4
-                                r16
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
@@ -8655,22 +9042,26 @@
                         }
                         {
                             {
+                                r8
+                            }
+                            % [A 4 Percussion Voice] Measure 214
+                            {
                                 r16
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 214
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
                                 r4
                             }
                             % [A 4 Percussion Voice] Measure 215
@@ -8771,13 +9162,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4
+                                r8.
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
@@ -8785,15 +9179,43 @@
                             % [A 4 Percussion Voice] Measure 224
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8
+                            }
+                        }
+                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            \times 4/6 {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                             % [A 4 Percussion Voice] Measure 225
                             {
@@ -8804,7 +9226,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( [
+                                g'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -8857,15 +9279,16 @@
                                 r8
                                 r2
                             }
+                            % [A 4 Percussion Voice] Measure 228
+                            {
+                                r16
+                            }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 228
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -8906,17 +9329,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
+                                r4.
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
@@ -8926,25 +9345,27 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
+                                r8.
                                 r4
-                                r4
-                            }
-                            % [A 4 Percussion Voice] Measure 233
-                            {
-                                r16
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [A 4 Percussion Voice] Measure 233
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -8959,7 +9380,7 @@
                             % [A 4 Percussion Voice] Measure 234
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \(
+                                g'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -9213,7 +9634,8 @@
                             }
                             % [T 1 Vocalization Voice] Measure 189
                             {
-                                r2
+                                r4.
+                                r8
                             }
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -9256,7 +9678,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
                             }
                             % [T 1 Vocalization Voice] Measure 190
                             {
@@ -9265,7 +9687,7 @@
                             }
                             % [T 1 Vocalization Voice] Measure 191
                             {
-                                c'4 \p \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9275,7 +9697,7 @@
                         }
                         {
                             {
-                                r2
+                                r4
                             }
                             % [T 1 Vocalization Voice] Measure 192
                             {
@@ -9286,18 +9708,15 @@
                                 \stopStaff
                                 \startStaff
                             }
+                            % [T 1 Vocalization Voice] Measure 193
+                            {
+                                r4
+                            }
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 1 Vocalization Voice] Measure 193
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -9310,23 +9729,53 @@
                                                                 "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ]
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
                                 r8
-                                r4
                             }
                             % [T 1 Vocalization Voice] Measure 194
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
+                            }
+                            % [T 1 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -9512,23 +9961,23 @@
                             }
                             % [T 1 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [T 1 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [T 1 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 1 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [T 1 Vocalization Voice] Measure 208
                             {
-                                R1 * 7/8
-                            }
-                            % [T 1 Vocalization Voice] Measure 209
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 1 Vocalization Voice] Measure 210
                             {
@@ -10122,15 +10571,7 @@
                             }
                             % [T 1 Percussion Voice] Measure 189
                             {
-                                R1 * 3/4
-                            }
-                            % [T 1 Percussion Voice] Measure 190
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 191
-                            {
-                                R1 * 3/4
+                                R1 * 15/8
                             }
                             % [T 1 Percussion Voice] Measure 192
                             {
@@ -10138,7 +10579,11 @@
                             }
                             % [T 1 Percussion Voice] Measure 193
                             {
-                                R1 * 15/8
+                                R1 * 5/4
+                            }
+                            % [T 1 Percussion Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [T 1 Percussion Voice] Measure 196
                             {
@@ -10162,23 +10607,23 @@
                             }
                             % [T 1 Percussion Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [T 1 Percussion Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [T 1 Percussion Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 1 Percussion Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [T 1 Percussion Voice] Measure 208
                             {
-                                R1 * 7/8
-                            }
-                            % [T 1 Percussion Voice] Measure 209
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 1 Percussion Voice] Measure 210
                             {
@@ -10512,17 +10957,17 @@
                             % [T 2 Vocalization Voice] Measure 187
                             {
                                 R1 * 2
-                                \stopStaff
-                                \startStaff
                             }
                             % [T 2 Vocalization Voice] Measure 189
                             {
-                                r2
-                                r8
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
+                            % [T 2 Vocalization Voice] Measure 190
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -10561,43 +11006,10 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                            }
-                            % [T 2 Vocalization Voice] Measure 190
-                            {
-                                c'4. \repeatTie
+                                c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 191
-                            {
-                                c'8 \p \repeatTie
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4.
-                            }
-                        }
-                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \<
-                            }
-                            % [T 2 Vocalization Voice] Measure 192
-                            {
-                                c'2.. \repeatTie
-                            }
-                            % [T 2 Vocalization Voice] Measure 193
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -10611,9 +11023,40 @@
                                 r8
                                 r4
                             }
+                            % [T 2 Vocalization Voice] Measure 192
+                            {
+                                r8
+                            }
+                        }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
+                                c'2 \repeatTie
+                            }
+                            % [T 2 Vocalization Voice] Measure 193
+                            {
+                                c'4. \repeatTie
+                                c'8 \p \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
                             % [T 2 Vocalization Voice] Measure 194
                             {
-                                r4
+                                r4.
+                                r8
                             }
                         }
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_flutter"
@@ -10624,16 +11067,20 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( \>
+                            }
+                            % [T 2 Vocalization Voice] Measure 195
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 3/4 {
+                                c'8 -\tenuto [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
-                            }
-                            % [T 2 Vocalization Voice] Measure 195
-                            {
-                                c'8 -\tenuto
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10642,8 +11089,7 @@
                         }
                         {
                             {
-                                r4 \!
-                                r4
+                                r2 \!
                             }
                             % [T 2 Vocalization Voice] Measure 196
                             {
@@ -10806,23 +11252,23 @@
                             }
                             % [T 2 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [T 2 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [T 2 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 2 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [T 2 Vocalization Voice] Measure 208
                             {
-                                R1 * 7/8
-                            }
-                            % [T 2 Vocalization Voice] Measure 209
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 2 Vocalization Voice] Measure 210
                             {
@@ -11415,15 +11861,7 @@
                             }
                             % [T 2 Percussion Voice] Measure 189
                             {
-                                R1 * 3/4
-                            }
-                            % [T 2 Percussion Voice] Measure 190
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 2 Percussion Voice] Measure 191
-                            {
-                                R1 * 3/4
+                                R1 * 15/8
                             }
                             % [T 2 Percussion Voice] Measure 192
                             {
@@ -11431,7 +11869,11 @@
                             }
                             % [T 2 Percussion Voice] Measure 193
                             {
-                                R1 * 15/8
+                                R1 * 5/4
+                            }
+                            % [T 2 Percussion Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [T 2 Percussion Voice] Measure 196
                             {
@@ -11455,23 +11897,23 @@
                             }
                             % [T 2 Percussion Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [T 2 Percussion Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [T 2 Percussion Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 2 Percussion Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [T 2 Percussion Voice] Measure 208
                             {
-                                R1 * 7/8
-                            }
-                            % [T 2 Percussion Voice] Measure 209
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 2 Percussion Voice] Measure 210
                             {
@@ -11807,25 +12249,19 @@
                             }
                             % [T 3 Vocalization Voice] Measure 189
                             {
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [T 3 Vocalization Voice] Measure 190
                             {
-                                r8
+                                r4
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -11838,28 +12274,56 @@
                                                                 "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ]
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
+                                r8
                             }
                             % [T 3 Vocalization Voice] Measure 191
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
                             % [T 3 Vocalization Voice] Measure 192
                             {
                                 r4.
+                                r4
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -11902,11 +12366,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                             }
                             % [T 3 Vocalization Voice] Measure 193
                             {
-                                c'8 \p \repeatTie
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -11917,14 +12381,17 @@
                         {
                             {
                                 r4
-                                r4
                             }
                             % [T 3 Vocalization Voice] Measure 194
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
+                            }
+                            % [T 3 Vocalization Voice] Measure 195
+                            {
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -12121,17 +12588,17 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Vocalization Voice] Measure 203
                             {
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                r4.
+                                r4
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 3 Vocalization Voice] Measure 204
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -12159,32 +12626,24 @@
                             }
                         }
                         {
-                            {
-                                r8
-                                r4
-                            }
-                            % [T 3 Vocalization Voice] Measure 205
+                            % [T 3 Vocalization Voice] Measure 204
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 3 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [T 3 Vocalization Voice] Measure 208
                             {
-                                R1 * 7/8
-                            }
-                            % [T 3 Vocalization Voice] Measure 209
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Vocalization Voice] Measure 210
                             {
@@ -12785,15 +13244,7 @@
                             }
                             % [T 3 Percussion Voice] Measure 189
                             {
-                                R1 * 3/4
-                            }
-                            % [T 3 Percussion Voice] Measure 190
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 3 Percussion Voice] Measure 191
-                            {
-                                R1 * 3/4
+                                R1 * 15/8
                             }
                             % [T 3 Percussion Voice] Measure 192
                             {
@@ -12801,7 +13252,11 @@
                             }
                             % [T 3 Percussion Voice] Measure 193
                             {
-                                R1 * 15/8
+                                R1 * 5/4
+                            }
+                            % [T 3 Percussion Voice] Measure 195
+                            {
+                                R1 * 7/8
                             }
                             % [T 3 Percussion Voice] Measure 196
                             {
@@ -12825,23 +13280,23 @@
                             }
                             % [T 3 Percussion Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [T 3 Percussion Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [T 3 Percussion Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [T 3 Percussion Voice] Measure 208
                             {
-                                R1 * 7/8
-                            }
-                            % [T 3 Percussion Voice] Measure 209
-                            {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 210
                             {
@@ -13236,6 +13691,7 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -13244,52 +13700,17 @@
                             }
                             % [B 1 Vocalization Voice] Measure 189
                             {
-                                r2
-                                r8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \(
-                            }
                             % [B 1 Vocalization Voice] Measure 190
-                            {
-                                c'8 -\tenuto
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 191
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [B 1 Vocalization Voice] Measure 192
-                            {
-                                r4.
-                                r4
-                                r8
-                            }
-                        }
-                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
-                        {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -13326,12 +13747,62 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
+                                c'8 -\accent \fp \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\tenuto ]
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                            % [B 1 Vocalization Voice] Measure 191
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 192
+                            {
+                                R1 * 7/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [B 1 Vocalization Voice] Measure 193
                             {
-                                c'8 \repeatTie
+                                r8
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13341,26 +13812,60 @@
                         {
                             {
                                 r4
-                                r4
                             }
                             % [B 1 Vocalization Voice] Measure 194
                             {
-                                r4.
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
+                            % [B 1 Vocalization Voice] Measure 195
                             {
                                 \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \<
-                            }
-                            % [B 1 Vocalization Voice] Measure 195
-                            {
-                                c'4 \p \repeatTie
+                                c'4. \( \startTextSpan \<
+                                c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13438,22 +13943,25 @@
                             }
                             % [B 1 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [B 1 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [B 1 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 1 Vocalization Voice] Measure 208
                             {
                                 r4.
-                                r4
                                 r8
                             }
                         }
@@ -13967,14 +14475,15 @@
                             % [B 1 Percussion Voice] Measure 171
                             {
                                 r4
-                                r16
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -13992,7 +14501,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \parenthesizeDynamic \p \( [
+                                g'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -14008,7 +14517,7 @@
                             % [B 1 Percussion Voice] Measure 173
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \(
+                                g'16 -\staccato \mf \(
                                 <> \)
                             }
                         }
@@ -14024,7 +14533,7 @@
                             % [B 1 Percussion Voice] Measure 174
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \( [
+                                g'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -14072,14 +14581,13 @@
                             % [B 1 Percussion Voice] Measure 177
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
+                                r16
                                 r4
                                 r4
                             }
@@ -14091,16 +14599,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r4
                                 r8
                             }
                         }
@@ -14130,16 +14635,14 @@
                             }
                             % [B 1 Percussion Voice] Measure 181
                             {
-                                r4.
+                                r4..
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -14162,25 +14665,30 @@
                             % [B 1 Percussion Voice] Measure 183
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
                                 r2
+                            }
+                            % [B 1 Percussion Voice] Measure 184
+                            {
+                                r16
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 184
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -14247,29 +14755,97 @@
                             }
                             % [B 1 Percussion Voice] Measure 188
                             {
-                                g1 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g1 \repeatTie \>
                             }
                             % [B 1 Percussion Voice] Measure 189
-                            {
-                                g2. \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 190
                             {
                                 g4. \repeatTie
                                 g4 \repeatTie
                             }
+                            % [B 1 Percussion Voice] Measure 190
+                            {
+                                g8 \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            \times 2/3 {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g8 \( \startTextSpan \<
+                                g4 \repeatTie
+                            }
                             % [B 1 Percussion Voice] Measure 191
                             {
-                                g2. \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 192
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g2.. \repeatTie \>
+                                g2.. \p \repeatTie \>
                             }
                             % [B 1 Percussion Voice] Measure 193
                             {
                                 g4. \repeatTie
+                                g4 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 194
+                            {
                                 g8 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -14280,33 +14856,14 @@
                         }
                         {
                             {
-                                r8 \!
-                            }
-                            % [B 1 Percussion Voice] Measure 194
-                            {
-                                r8.
+                                r4 \!
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4
-                            }
-                        }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            % [B 1 Percussion Voice] Measure 195
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -14314,8 +14871,25 @@
                         }
                         {
                             {
+                                r8
+                            }
+                            % [B 1 Percussion Voice] Measure 195
+                            {
+                                r16
+                            }
+                        }
+                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
                                 r4
-                                r4
+                                r2
                             }
                             % [B 1 Percussion Voice] Measure 196
                             {
@@ -14326,7 +14900,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \parenthesizeDynamic \p \( [
+                                g'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -14417,18 +14991,14 @@
                             % [B 1 Percussion Voice] Measure 201
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                                 r2
                             }
                         }
@@ -14437,7 +15007,7 @@
                             % [B 1 Percussion Voice] Measure 202
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( [
+                                g'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -14457,7 +15027,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \( [
+                                g'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -14466,7 +15036,7 @@
                         {
                             {
                                 r8.
-                                r4
+                                r2
                             }
                             % [B 1 Percussion Voice] Measure 204
                             {
@@ -14479,15 +15049,18 @@
                             }
                             % [B 1 Percussion Voice] Measure 205
                             {
-                                r4.
+                                r16
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            \times 4/5 {
+                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                d'16 -\staccato \( \< [
+                                d'16 -\staccato \( \<
+                            }
+                            \times 4/5 {
+                                d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -14503,13 +15076,13 @@
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 206
                             {
                                 r4
                             }
                         }
                         % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
+                            % [B 1 Percussion Voice] Measure 206
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -14548,11 +15121,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2 \( \startTextSpan \<
+                                g1 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 207
                             {
-                                g1 \p \repeatTie
+                                g2 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14561,9 +15134,12 @@
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 208
                             {
                                 r4
+                            }
+                            % [B 1 Percussion Voice] Measure 208
+                            {
+                                r16
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
@@ -14578,7 +15154,8 @@
                         }
                         {
                             {
-                                r2
+                                r8.
+                                r4
                             }
                             % [B 1 Percussion Voice] Measure 209
                             {
@@ -14667,24 +15244,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4..
-                            }
-                        }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            % [B 1 Percussion Voice] Measure 213
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -14692,7 +15252,22 @@
                         }
                         {
                             {
-                                r8.
+                                r4.
+                            }
+                        }
+                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            % [B 1 Percussion Voice] Measure 213
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
                                 r4
                             }
                             % [B 1 Percussion Voice] Measure 214
@@ -14776,7 +15351,6 @@
                             % [B 1 Percussion Voice] Measure 220
                             {
                                 r4 \!
-                                r16
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
@@ -14791,7 +15365,7 @@
                         }
                         {
                             {
-                                r16
+                                r8
                                 r2
                             }
                         }
@@ -14862,7 +15436,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \( [
+                                g'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -14877,17 +15451,7 @@
                             }
                             % [B 1 Percussion Voice] Measure 224
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [B 1 Percussion Voice] Measure 225
-                            {
-                                r4
-                                r16
+                                r4.
                             }
                         }
                         % [B 1 Percussion Voice] Material: "castanet_repetitions"
@@ -14896,6 +15460,38 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
+                            }
+                        }
+                        {
+                            % [B 1 Percussion Voice] Measure 225
+                            {
+                                r4
+                            }
+                        }
+                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            \times 8/10 {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -15328,17 +15924,13 @@
                         }
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \times 5/6 {
+                            \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'8 -\accent \fp \( \> [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -15361,6 +15953,9 @@
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\tenuto
+                                \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -15370,21 +15965,62 @@
                             }
                         }
                         {
-                            {
-                                r8 \!
-                            }
                             % [B 2 Vocalization Voice] Measure 191
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3/4
+                                R1 * 5/8 \!
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 2 Vocalization Voice] Measure 192
                             {
                                 r4.
+                                r4
+                            }
+                        }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            % [B 2 Vocalization Voice] Measure 193
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 2 Vocalization Voice] Measure 194
+                            {
+                                r8
                             }
                         }
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -15437,33 +16073,8 @@
                             {
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 193
+                            % [B 2 Vocalization Voice] Measure 195
                             {
-                                r4.
-                                r8
-                            }
-                        }
-                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
-                        {
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \parenthesizeDynamic \p \(
-                            }
-                            % [B 2 Vocalization Voice] Measure 194
-                            {
-                                c'8 \repeatTie
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r4
                                 r8
                             }
                         }
@@ -15475,11 +16086,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \>
-                            }
-                            % [B 2 Vocalization Voice] Measure 195
-                            \times 2/3 {
-                                c'8 -\tenuto [
+                                c'8 -\accent \fp \( \> [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -15621,19 +16228,23 @@
                             }
                             % [B 2 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 2 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [B 2 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [B 2 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                             }
                             % [B 2 Vocalization Voice] Measure 208
                             {
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -16063,13 +16674,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
+                                r16
                             }
                             % [B 2 Percussion Voice] Measure 172
                             {
@@ -16143,7 +16757,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \(
+                                g'16 -\staccato \mf \(
                                 <> \)
                             }
                         }
@@ -16165,10 +16779,14 @@
                         % [B 2 Percussion Voice] Material: "castanet_repetitions"
                         {
                             % [B 2 Percussion Voice] Measure 176
-                            {
-                                \once \override Hairpin.circled-tip = ##t
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 14/15 {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                d'16 -\staccato \( \< [
+                                r16 \( [
+                                \once \override Hairpin.circled-tip = ##t
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -16223,15 +16841,14 @@
                             % [B 2 Percussion Voice] Measure 178
                             {
                                 r4.
+                                r16
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -16239,13 +16856,10 @@
                             {
                                 r8
                             }
-                            % [B 2 Percussion Voice] Measure 179
-                            {
-                                r16
-                            }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [B 2 Percussion Voice] Measure 179
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -16256,7 +16870,7 @@
                         }
                         {
                             {
-                                r8.
+                                r4
                                 r4
                             }
                             % [B 2 Percussion Voice] Measure 180
@@ -16289,16 +16903,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
+                                r8
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
@@ -16308,26 +16919,30 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4
+                                r8.
                                 r4
                             }
                             % [B 2 Percussion Voice] Measure 183
                             {
                                 r4
-                                r16
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -16398,26 +17013,100 @@
                             }
                             % [B 2 Percussion Voice] Measure 188
                             {
-                                g1 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g1 \repeatTie \>
                             }
                             % [B 2 Percussion Voice] Measure 189
                             {
-                                g2. \repeatTie
+                                g4. \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
-                            % [B 2 Percussion Voice] Measure 190
+                        }
+                        % [B 2 Percussion Voice] Material: "castanet_repetitions"
+                        {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g4. \repeatTie \>
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \! \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            % [B 2 Percussion Voice] Measure 190
+                            \times 2/3 {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
+                            }
+                        }
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g4 \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 191
                             {
-                                g2. \repeatTie
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 192
                             {
-                                g4. \repeatTie
-                                g4 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g2.. \p \repeatTie \>
+                            }
+                            % [B 2 Percussion Voice] Measure 193
+                            {
                                 g8 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -16428,27 +17117,20 @@
                         }
                         {
                             {
-                                r8 \!
-                            }
-                            % [B 2 Percussion Voice] Measure 193
-                            {
-                                r8
+                                r4 \!
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
-                                r4
+                                r8.
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
@@ -16458,16 +17140,17 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r4
+                                r4
+                            }
+                            % [B 2 Percussion Voice] Measure 195
+                            {
                                 r8
                             }
                         }
@@ -16475,25 +17158,16 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \( \> [
+                                g'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
-                            }
-                            % [B 2 Percussion Voice] Measure 195
-                            {
-                                g'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato \ppp ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
-                                r4
+                                r8
+                                r2
                             }
                             % [B 2 Percussion Voice] Measure 196
                             {
@@ -16571,15 +17245,14 @@
                             % [B 2 Percussion Voice] Measure 201
                             {
                                 r4 \!
+                                r16
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -16602,7 +17275,7 @@
                             % [B 2 Percussion Voice] Measure 203
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \( [
+                                g'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -16611,7 +17284,7 @@
                         {
                             {
                                 r4
-                                r4
+                                r2
                             }
                         }
                         % [B 2 Percussion Voice] Material: "shaker_pointillism"
@@ -16619,7 +17292,7 @@
                             % [B 2 Percussion Voice] Measure 204
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( [
+                                g'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -16632,12 +17305,13 @@
                             }
                             % [B 2 Percussion Voice] Measure 205
                             {
-                                r4.
+                                r8
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            \times 4/6 {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
@@ -16654,10 +17328,19 @@
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                             }
                             % [B 2 Percussion Voice] Measure 206
-                            {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/11 {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -16686,15 +17369,6 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                            }
-                            % [B 2 Percussion Voice] Measure 207
-                            {
-                                d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato \p ]
                                 <> \)
@@ -16702,28 +17376,37 @@
                         }
                         {
                             {
-                                r8
-                                r2
+                                r4.
+                            }
+                            % [B 2 Percussion Voice] Measure 207
+                            {
+                                r4
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                             % [B 2 Percussion Voice] Measure 208
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7/8
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -16744,6 +17427,24 @@
                             % [B 2 Percussion Voice] Measure 210
                             {
                                 r2.
+                            }
+                        }
+                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [B 2 Percussion Voice] Measure 211
+                            {
                                 r16
                             }
                         }
@@ -16752,22 +17453,6 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                        }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            % [B 2 Percussion Voice] Measure 211
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -16785,18 +17470,14 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                             }
                             % [B 2 Percussion Voice] Measure 213
                             {
@@ -16813,7 +17494,7 @@
                             % [B 2 Percussion Voice] Measure 215
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \(
+                                g'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -16899,6 +17580,7 @@
                         {
                             {
                                 r4 \!
+                                r16
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
@@ -16913,7 +17595,8 @@
                         }
                         {
                             {
-                                r4.
+                                r16
+                                r4
                             }
                             % [B 2 Percussion Voice] Measure 221
                             {
@@ -16933,7 +17616,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \(
+                                g'16 -\staccato \ppp \(
                                 <> \)
                             }
                         }
@@ -16945,20 +17628,15 @@
                             % [B 2 Percussion Voice] Measure 223
                             {
                                 r4.
+                                r16
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            \times 4/5 {
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                r16 \( [
+                            {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato \<
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -16966,8 +17644,7 @@
                                 d'16 -\staccato ]
                             }
                             % [B 2 Percussion Voice] Measure 224
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \times 10/12 {
+                            \times 4/5 {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -16979,14 +17656,11 @@
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                d'16 -\staccato ]
+                            }
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                d'16 -\staccato \p \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -17003,7 +17677,8 @@
                                 d'16 -\staccato ]
                             }
                             % [B 2 Percussion Voice] Measure 225
-                            {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/11 {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -17030,13 +17705,16 @@
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato \p ]
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4.
+                                r4. \!
                             }
                             % [B 2 Percussion Voice] Measure 226
                             {
@@ -17047,13 +17725,14 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
                                 r4
                             }
                             % [B 2 Percussion Voice] Measure 227
@@ -17495,24 +18174,21 @@
                         }
                         {
                             {
-                                r2
+                                r8
+                                r4
                             }
                             % [B 3 Vocalization Voice] Measure 190
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
-                            }
-                            % [B 3 Vocalization Voice] Measure 191
-                            {
-                                R1 * 3/4
+                                R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 3 Vocalization Voice] Measure 192
                             {
-                                r8
+                                r4.
                             }
                         }
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_flutter"
@@ -17563,6 +18239,13 @@
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
+                                c'8 -\tenuto ]
+                            }
+                            % [B 3 Vocalization Voice] Measure 193
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 3/4 {
+                                c'8 -\tenuto [
+                                \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
@@ -17570,40 +18253,69 @@
                                 c'8 -\tenuto
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
-                            }
-                            % [B 3 Vocalization Voice] Measure 193
-                            {
-                                c'8 -\tenuto
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
                                 r4 \!
-                                r4
                             }
                             % [B 3 Vocalization Voice] Measure 194
                             {
-                                r4.
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
+                            % [B 3 Vocalization Voice] Measure 195
                             {
                                 \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \<
-                            }
-                            % [B 3 Vocalization Voice] Measure 195
-                            {
-                                c'4. \repeatTie
-                                c'4 \repeatTie
+                                c'2.. \( \startTextSpan \<
                             }
                             % [B 3 Vocalization Voice] Measure 196
                             {
@@ -17665,21 +18377,25 @@
                             }
                             % [B 3 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 3 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [B 3 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [B 3 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 3 Vocalization Voice] Measure 208
                             {
-                                r4.
+                                r8
                             }
                         }
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -18124,13 +18840,10 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Percussion Voice] Measure 172
-                            {
-                                r16
-                            }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [B 3 Percussion Voice] Measure 172
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \p \( [
@@ -18141,8 +18854,7 @@
                         }
                         {
                             {
-                                r16
-                                r2.
+                                r2..
                             }
                             % [B 3 Percussion Voice] Measure 173
                             {
@@ -18162,7 +18874,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( [
+                                g'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16 -\staccato
@@ -18192,11 +18904,8 @@
                                 d'16 -\staccato ]
                             }
                             % [B 3 Percussion Voice] Measure 176
-                            \times 2/3 {
+                            {
                                 d'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato \p ]
                                 <> \)
@@ -18213,13 +18922,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
+                                r16
                                 r4
                             }
                         }
@@ -18228,13 +18940,14 @@
                             % [B 3 Percussion Voice] Measure 177
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
                                 r4
                                 r4
                             }
@@ -18329,24 +19042,6 @@
                             % [B 3 Percussion Voice] Measure 182
                             {
                                 r4
-                            }
-                        }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            % [B 3 Percussion Voice] Measure 183
-                            {
                                 r16
                             }
                         }
@@ -18355,6 +19050,22 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            % [B 3 Percussion Voice] Measure 183
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -18373,7 +19084,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \( [
+                                g'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -18389,7 +19100,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \(
+                                g'16 -\staccato \ppp \(
                                 <> \)
                             }
                         }
@@ -18448,7 +19159,8 @@
                             }
                             % [B 3 Percussion Voice] Measure 187
                             {
-                                g1 \p \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g1 \p \repeatTie \>
                             }
                             % [B 3 Percussion Voice] Measure 188
                             {
@@ -18456,25 +19168,82 @@
                             }
                             % [B 3 Percussion Voice] Measure 189
                             {
-                                g2. \repeatTie
+                                g4. \repeatTie
+                                g8 \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
+                        }
+                        % [B 3 Percussion Voice] Material: "castanet_repetitions"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
+                        {
                             % [B 3 Percussion Voice] Measure 190
                             {
-                                g4. \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g4. \( \startTextSpan \<
                                 g4 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 191
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g2. \repeatTie \>
+                                g4. \repeatTie
+                                g4 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 192
                             {
-                                g2.. \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g2.. \p \repeatTie \>
                             }
                             % [B 3 Percussion Voice] Measure 193
                             {
-                                g8 \repeatTie
+                                g4. \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18489,9 +19258,27 @@
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [B 3 Percussion Voice] Measure 194
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            % [B 3 Percussion Voice] Measure 195
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -18502,28 +19289,8 @@
                         }
                         {
                             {
-                                r16
-                            }
-                        }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            % [B 3 Percussion Voice] Measure 194
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4
-                                r4
-                            }
-                            % [B 3 Percussion Voice] Measure 195
-                            {
-                                r4
+                                r8.
+                                r8
                             }
                         }
                         % [B 3 Percussion Voice] Material: "wine_glass_drone"
@@ -18605,14 +19372,15 @@
                         {
                             {
                                 r4 \!
-                                r16
                             }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -18627,7 +19395,7 @@
                             % [B 3 Percussion Voice] Measure 202
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \(
+                                g'16 -\staccato \mf \(
                                 <> \)
                             }
                         }
@@ -18642,22 +19410,36 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 7/8
                                 \stopStaff
                                 \startStaff
+                            }
+                            % [B 3 Percussion Voice] Measure 204
+                            {
+                                r4.
                             }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            % [B 3 Percussion Voice] Measure 205
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \times 10/11 {
-                                \once \override Hairpin.circled-tip = ##t
+                            \times 2/3 {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                d'16 -\staccato \( \< [
+                                r16 \( [
+                                \once \override Hairpin.circled-tip = ##t
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                d'16 -\staccato \<
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            % [B 3 Percussion Voice] Measure 205
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                d'16 -\staccato \p \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -18707,26 +19489,13 @@
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato \p ]
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 207
                             {
-                                r4
+                                r4 \!
                             }
                         }
                         % [B 3 Percussion Voice] Material: "wine_glass_drone"
@@ -18769,12 +19538,15 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2. \( \startTextSpan \<
+                                g4 \( \startTextSpan \<
+                            }
+                            % [B 3 Percussion Voice] Measure 207
+                            {
+                                g2. \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 208
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
                                 g8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -18796,15 +19568,13 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
+                                r8.
                                 r4
                             }
                             % [B 3 Percussion Voice] Measure 210
@@ -18833,16 +19603,14 @@
                             % [B 3 Percussion Voice] Measure 212
                             {
                                 r2
-                                r8
+                                r8.
                             }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                             }
                             % [B 3 Percussion Voice] Measure 213
                             {
@@ -18943,23 +19711,23 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \(
+                                d'16 -\staccato \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
+                            % [B 3 Percussion Voice] Measure 220
                             {
                                 r16
                             }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 220
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -18977,7 +19745,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \( [
+                                g'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -18993,7 +19761,7 @@
                             % [B 3 Percussion Voice] Measure 222
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \(
+                                g'16 -\staccato \ppp \(
                                 <> \)
                             }
                         }
@@ -19006,7 +19774,6 @@
                             % [B 3 Percussion Voice] Measure 223
                             {
                                 r4.
-                                r16
                             }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_repetitions"
@@ -19019,11 +19786,25 @@
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                             }
                             % [B 3 Percussion Voice] Measure 224
-                            \times 4/5 {
+                            \times 2/3 {
                                 d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            \times 4/6 {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -19041,20 +19822,29 @@
                         {
                             {
                                 r8
-                                r8.
                             }
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \(
-                            }
-                            % [B 3 Percussion Voice] Measure 225
-                            {
-                                d'16 -\staccato [
+                                d'16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            % [B 3 Percussion Voice] Measure 225
+                            {
+                                r16
+                            }
+                        }
+                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -19072,7 +19862,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \p \(
+                                b8 :64 \parenthesizeDynamic \p \(
                             }
                             % [B 3 Percussion Voice] Measure 227
                             {
@@ -19487,7 +20277,8 @@
                         {
                             % [B 4 Vocalization Voice] Measure 189
                             {
-                                r2
+                                r4.
+                                r8
                             }
                         }
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_flutter"
@@ -19497,9 +20288,41 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( [
-                                \set stemLeftBeamCount = 1
-                                c'8 -\tenuto ]
+                                c'8 -\accent \fp \(
+                            }
+                            % [B 4 Vocalization Voice] Measure 190
+                            {
+                                c'8 -\tenuto
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [B 4 Vocalization Voice] Measure 191
+                            {
+                                r8
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \<
+                                c'4 \repeatTie
+                            }
+                            % [B 4 Vocalization Voice] Measure 192
+                            {
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19508,7 +20331,10 @@
                             }
                         }
                         {
-                            % [B 4 Vocalization Voice] Measure 190
+                            {
+                                r2
+                            }
+                            % [B 4 Vocalization Voice] Measure 193
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -19517,10 +20343,13 @@
                                 \stopStaff
                                 \startStaff
                             }
+                            % [B 4 Vocalization Voice] Measure 194
+                            {
+                                r8
+                            }
                         }
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 4 Vocalization Voice] Measure 191
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -19559,94 +20388,22 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
+                                c'4 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 192
+                            % [B 4 Vocalization Voice] Measure 195
                             {
                                 c'8 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
                                 r4
                                 r2
-                            }
-                            % [B 4 Vocalization Voice] Measure 193
-                            {
-                                r4.
-                                r8
-                            }
-                        }
-                        % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                            }
-                            % [B 4 Vocalization Voice] Measure 194
-                            {
-                                c'4. \repeatTie
-                                c'8 \p \repeatTie
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            % [B 4 Vocalization Voice] Measure 195
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
                             }
                             % [B 4 Vocalization Voice] Measure 196
                             {
@@ -19657,43 +20414,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \startTextSpan \> [
+                                c'8 -\accent \fp \( \> [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -19809,22 +20534,25 @@
                             }
                             % [B 4 Vocalization Voice] Measure 203
                             {
-                                R1 * 15/8
+                                R1 * 7/8
+                            }
+                            % [B 4 Vocalization Voice] Measure 204
+                            {
+                                R1 * 5/4
                             }
                             % [B 4 Vocalization Voice] Measure 206
                             {
-                                R1 * 3/4
+                                R1 * 1
                             }
                             % [B 4 Vocalization Voice] Measure 207
                             {
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                             % [B 4 Vocalization Voice] Measure 208
                             {
                                 r4.
-                                r4
                             }
                         }
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -20344,18 +21072,14 @@
                             % [B 4 Percussion Voice] Measure 171
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
                                 r4
                             }
                             % [B 4 Percussion Voice] Measure 172
@@ -20429,7 +21153,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( [
+                                g'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -20446,7 +21170,7 @@
                             % [B 4 Percussion Voice] Measure 175
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \(
+                                g'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -20463,10 +21187,13 @@
                         }
                         % [B 4 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
+                            \times 8/9 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -20530,6 +21257,7 @@
                             % [B 4 Percussion Voice] Measure 179
                             {
                                 r4
+                                r16
                             }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
@@ -20544,7 +21272,7 @@
                         }
                         {
                             {
-                                r4
+                                r8.
                             }
                             % [B 4 Percussion Voice] Measure 180
                             {
@@ -20574,36 +21302,51 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4..
+                                r4.
                             }
                             % [B 4 Percussion Voice] Measure 182
                             {
                                 r4.
-                                r8.
+                                r8
                             }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
                             }
+                        }
+                        {
                             % [B 4 Percussion Voice] Measure 183
                             {
-                                d'16 -\staccato
+                                r16
+                            }
+                        }
+                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
                                 r2
                             }
                             % [B 4 Percussion Voice] Measure 184
@@ -20615,7 +21358,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \( [
+                                g'16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -20634,7 +21377,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( [
+                                g'16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -20704,25 +21447,14 @@
                             }
                             % [B 4 Percussion Voice] Measure 189
                             {
-                                g2. \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                g4. \repeatTie \>
+                                g4 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 190
                             {
                                 g4. \repeatTie
-                                g4 \repeatTie
-                            }
-                            % [B 4 Percussion Voice] Measure 191
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                g2. \repeatTie \>
-                            }
-                            % [B 4 Percussion Voice] Measure 192
-                            {
-                                g2.. \repeatTie
-                            }
-                            % [B 4 Percussion Voice] Measure 193
-                            {
-                                g4 \repeatTie
+                                g8 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -20732,34 +21464,35 @@
                         }
                         {
                             {
-                                r8 \!
-                                r8
+                                r16 \!
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "castanet_repetitions"
                         {
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \<
+                            }
+                            % [B 4 Percussion Voice] Measure 191
+                            \times 4/5 {
+                                d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                            }
-                            % [B 4 Percussion Voice] Measure 194
-                            {
+                                \set stemRightBeamCount = 2
                                 d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
                                 <> \)
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                                r4
                             }
                         }
                         % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 4 Percussion Voice] Measure 195
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -20798,8 +21531,98 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g4. \( \startTextSpan \<
+                                g8 \( \startTextSpan \<
                                 g4 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 192
+                            {
+                                g2.. \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 193
+                            {
+                                g4. \repeatTie
+                                g8 \p \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [B 4 Percussion Voice] Measure 194
+                            {
+                                r8
+                            }
+                        }
+                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                            }
+                            % [B 4 Percussion Voice] Measure 195
+                            {
+                                r4
+                            }
+                        }
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                g8 \( \startTextSpan \<
+                                g2 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 196
                             {
@@ -20837,15 +21660,14 @@
                         {
                             {
                                 r4 \!
+                                r16
                             }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -20871,7 +21693,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \mf \( [
+                                g'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -20883,35 +21705,30 @@
                         {
                             {
                                 r8.
+                                r4
                             }
-                        }
-                        % [B 4 Percussion Voice] Material: "shaker_pointillism"
-                        {
                             % [B 4 Percussion Voice] Measure 204
                             {
-                                \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4
-                                r4
+                                r4.
                             }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            % [B 4 Percussion Voice] Measure 205
-                            \times 4/6 {
+                            {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 d'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                d'16 -\staccato ]
+                            }
+                            {
+                                d'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
+                            }
+                            % [B 4 Percussion Voice] Measure 205
+                            \times 4/5 {
+                                d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -20931,19 +21748,13 @@
                                 r8
                                 r4
                             }
-                            % [B 4 Percussion Voice] Measure 206
-                            {
-                                r4
-                            }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [B 4 Percussion Voice] Measure 206
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -20951,30 +21762,26 @@
                         }
                         {
                             {
-                                r16
-                                r4
+                                r2..
                             }
                             % [B 4 Percussion Voice] Measure 207
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
-                            }
-                            % [B 4 Percussion Voice] Measure 208
-                            {
-                                r4
                             }
                         }
                         % [B 4 Percussion Voice] Material: "guiro_shimmer"
                         {
+                            % [B 4 Percussion Voice] Measure 208
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \( \<
-                                b2 :32 \repeatTie
+                                b4. :32 \( \<
+                                b4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 209
                             \tweak text #tuplet-number::calc-fraction-text
@@ -20992,16 +21799,15 @@
                             {
                                 r2.
                             }
-                            % [B 4 Percussion Voice] Measure 211
-                            {
-                                r16
-                            }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [B 4 Percussion Voice] Measure 211
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -21016,15 +21822,13 @@
                             % [B 4 Percussion Voice] Measure 212
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4.
+                                r4..
                             }
                         }
                         % [B 4 Percussion Voice] Material: "wine_glass_drone"
@@ -21179,16 +21983,14 @@
                             }
                             % [B 4 Percussion Voice] Measure 220
                             {
-                                r8
+                                r8.
                             }
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                d'16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -21271,9 +22073,27 @@
                                 <> \)
                             }
                         }
+                        % [B 4 Percussion Voice] Material: "castanet_repetitions"
                         {
-                            {
-                                r4
+                            \times 4/6 {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                d'16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato \p ]
+                                <> \)
                             }
                         }
                         % [B 4 Percussion Voice] Material: "shaker_pointillism"
@@ -21281,10 +22101,7 @@
                             % [B 4 Percussion Voice] Measure 224
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \p \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
+                                g'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                                 <> \)
@@ -21292,7 +22109,7 @@
                         }
                         {
                             {
-                                r8.
+                                r4
                                 r4
                             }
                         }
