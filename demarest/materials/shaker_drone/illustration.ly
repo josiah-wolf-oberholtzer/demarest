@@ -87,31 +87,21 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
                         {
                             r8
                         }
-                    }
-                    % [Violin 1 Voice] Material: "shaker_drone"
-                    {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'8 :64 \parenthesizeDynamic \p \(
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     % [Violin 1 Voice] Material: "shaker_drone"
@@ -119,11 +109,43 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            rolled
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            rolled
+                                                        }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4. :32 \( \<
+                            g'4. :32 \( \startTextSpan \<
                             g'8 :64 \repeatTie
                         }
                         {
@@ -597,43 +619,7 @@
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
-                            R1 * 3/8
-                            \stopStaff
-                            \startStaff
-                        }
-                    }
-                    % [Cello Voice] Material: "shaker_drone"
-                    {
-                        % [Cello Voice] Measure 7
-                        {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'8 :64 \p \( ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            rolled
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
+                            R1 * 3/4
                             \bar "|."
                         }
                     }

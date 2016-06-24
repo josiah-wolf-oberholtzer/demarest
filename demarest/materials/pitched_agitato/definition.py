@@ -73,9 +73,21 @@ pitched_agitato = consort.MusicSpecifier(
                 .descending(width=12)
                 .align()
             ),
-        register_spread=6,
+        register_spread=0,
         ),
-    register_handler=consort.RegisterHandler(),
+    register_handler=consort.RegisterHandler(
+        register_specifier=consort.RegisterSpecifier(
+            base_pitch='G3',
+            phrase_inflections=consort.RegisterInflection
+                .zigzag(12)
+                .reverse()
+                .align(),
+            segment_inflections=consort.RegisterInflection
+                .descending(width=12)
+                .align()
+            ),
+        register_spread=0,
+        ),
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
         extra_counts_per_division=[0, 0, 1, 2, 0, 1],
         division_masks=[

@@ -37,9 +37,20 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "wine_glass_drone"
                     {
                         % [Violin 1 Voice] Measure 1
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 9/8
+                            \stopStaff
+                            \startStaff
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "wine_glass_drone"
+                    {
+                        % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -79,51 +90,6 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             g4. \( \startTextSpan \<
-                        }
-                        % [Violin 1 Voice] Measure 2
-                        {
-                            g4 \p \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "wine_glass_drone"
-                    {
-                        % [Violin 1 Voice] Measure 3
-                        {
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \parenthesizeDynamic \p \(
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "wine_glass_drone"
-                    {
-                        % [Violin 1 Voice] Measure 4
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4. \( \<
                             g8 \repeatTie
                         }
                         {
@@ -137,6 +103,7 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -145,31 +112,10 @@
                         }
                         % [Violin 1 Voice] Measure 6
                         {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "wine_glass_drone"
-                    {
-                        {
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \parenthesizeDynamic \p \(
-                        }
-                        % [Violin 1 Voice] Measure 7
-                        {
-                            g4 \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
-                        }
-                    }
-                    {
-                        {
-                            r8
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/4
                             \bar "|."
                         }
                     }
@@ -195,7 +141,17 @@
                     {
                         % [Violin 2 Voice] Measure 1
                         {
-                            r4
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 9/8
+                            \stopStaff
+                            \startStaff
+                        }
+                        % [Violin 2 Voice] Measure 4
+                        {
+                            r4.
+                            r8
                         }
                     }
                     % [Violin 2 Voice] Material: "wine_glass_drone"
@@ -239,58 +195,6 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             g8 \( \startTextSpan \<
-                        }
-                        % [Violin 2 Voice] Measure 2
-                        {
-                            g4 \repeatTie
-                        }
-                        {
-                            g8 \p \repeatTie
-                        }
-                        % [Violin 2 Voice] Measure 3
-                        {
-                            g4 \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Violin 2 Voice] Material: "wine_glass_drone"
-                    {
-                        % [Violin 2 Voice] Measure 4
-                        {
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4 \p \(
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r8
-                            r8
-                        }
-                    }
-                    % [Violin 2 Voice] Material: "wine_glass_drone"
-                    {
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \( \<
                         }
                         {
                             g4 \repeatTie
@@ -345,7 +249,16 @@
                     {
                         % [Viola Voice] Measure 1
                         {
-                            r8
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 9/8
+                            \stopStaff
+                            \startStaff
+                        }
+                        % [Viola Voice] Measure 4
+                        {
+                            r4
                         }
                     }
                     % [Viola Voice] Material: "wine_glass_drone"
@@ -388,46 +301,7 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4 \( \startTextSpan \<
-                        }
-                        % [Viola Voice] Measure 2
-                        {
-                            g8 \repeatTie
-                        }
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            g8 \p \repeatTie \>
-                        }
-                        {
-                            g8 \repeatTie
-                        }
-                        % [Viola Voice] Measure 3
-                        {
-                            g8 \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4 \!
-                        }
-                        % [Viola Voice] Measure 4
-                        {
-                            r4
-                        }
-                    }
-                    % [Viola Voice] Material: "wine_glass_drone"
-                    {
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \( \<
+                            g8 \( \startTextSpan \<
                             g4 \repeatTie
                         }
                         {
@@ -483,157 +357,21 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "wine_glass_drone"
                     {
                         % [Cello Voice] Measure 1
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            circle
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            circle
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4. \( \startTextSpan \<
-                        }
-                        % [Cello Voice] Measure 2
-                        {
-                            g4 \p \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Cello Voice] Material: "wine_glass_drone"
-                    {
-                        % [Cello Voice] Measure 3
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4. \( \<
-                        }
-                        % [Cello Voice] Measure 4
-                        {
-                            g8 \p \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Cello Voice] Material: "wine_glass_drone"
-                    {
-                        {
-                            \once \override Hairpin.circled-tip = ##t
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4 \( \<
-                        }
-                        {
-                            g4 \repeatTie
-                        }
-                        % [Cello Voice] Measure 5
-                        {
-                            g8 \p \repeatTie
-                        }
-                        {
-                            g4 \repeatTie
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
-                        }
-                    }
-                    {
-                        % [Cello Voice] Measure 6
                         {
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
-                            R1 * 3/8
-                            \stopStaff
-                            \startStaff
+                            R1 * 9/8
                         }
-                    }
-                    % [Cello Voice] Material: "wine_glass_drone"
-                    {
-                        % [Cello Voice] Measure 7
+                        % [Cello Voice] Measure 4
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \p \( ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            circle
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
+                            R1 * 7/8
                         }
-                    }
-                    {
+                        % [Cello Voice] Measure 5
                         {
-                            r4
+                            R1 * 9/8
                             \bar "|."
                         }
                     }

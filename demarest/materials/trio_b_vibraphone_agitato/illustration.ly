@@ -60,11 +60,7 @@
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            <
-                                ef''
-                                \tweak color #red
-                                gf''
-                            >4 :32 \mf
+                            <ef'' gf''>4 :32 \mf
                             <> \)
                         }
                     }
@@ -160,11 +156,7 @@
                         % [Violin 1 Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <
-                                ef''
-                                \tweak color #red
-                                gf''
-                            >4 :32 \parenthesizeDynamic \f \(
+                            <ef'' gf''>4 :32 \parenthesizeDynamic \f \(
                             <> \)
                         }
                     }
@@ -297,11 +289,7 @@
                             ef'16 -\staccato ]
                         }
                         {
-                            <
-                                e''
-                                \tweak color #red
-                                g''
-                            >4 :32
+                            <e'' g''>4 :32
                         }
                         % [Violin 2 Voice] Measure 5
                         \times 4/5 {
@@ -339,11 +327,7 @@
                             \set stemRightBeamCount = 2
                             af'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            <
-                                f''
-                                \tweak color #red
-                                af''
-                            >16 \mf ]
+                            <f'' af''>16 \mf ]
                             <> \)
                         }
                     }
@@ -591,11 +575,7 @@
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <
-                                f''
-                                \tweak color #red
-                                af''
-                            >4 :32 \mf
+                            <f'' af''>4 :32 \mf
                             <> \)
                             \clef "bass"
                         }

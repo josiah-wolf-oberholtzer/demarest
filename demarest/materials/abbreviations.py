@@ -142,6 +142,17 @@ chordal_register_handler = consort.RegisterHandler(
         #consort.ChordExpression(chord_expr=[-3, 0, 1, 5]),
         #consort.ChordExpression(chord_expr=[-2, 0, 1, 5]),
         ],
+    register_specifier=consort.RegisterSpecifier(
+        base_pitch='G3',
+        phrase_inflections=consort.RegisterInflection
+            .zigzag(12)
+            .reverse()
+            .align(),
+        segment_inflections=consort.RegisterInflection
+            .descending(width=12)
+            .align()
+        ),
+    register_spread=6,
     )
 
 
@@ -178,7 +189,7 @@ vibraphone = consort.Instrument(
     instrument_change_markup=markuptools.Markup('vb.')
         .pad_around(0.5).box(),
     instrument_name_markup=make_instrument_markup('vibraphone'),
-    pitch_range=pitchtools.PitchRange("[F3, F5]"),
+    pitch_range=pitchtools.PitchRange("[F3, F6]"),
     short_instrument_name_markup=make_instrument_markup('vb.'),
     )
 
