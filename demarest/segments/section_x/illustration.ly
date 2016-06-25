@@ -1,7 +1,7 @@
 % package "abjad" @ eccf6ef [josiah/demarest] (2016-06-23 00:51:28)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ 47c934f [master] (2016-06-22 22:25:57)
-% package "demarest" @ 65c5d75 [master] (2016-06-23 00:47:48)
+% package "demarest" @ 07085ee [master] (2016-06-24 14:01:43)
 
 \version "2.19.41"
 \language "english"
@@ -43,11 +43,19 @@
             }
             {
                 \time 5/8
-                s1 * 5/4
+                s1 * 15/8
             }
             {
-                \time 5/4
-                s1 * 5/4
+                \time 3/4
+                s1 * 3/4
+            }
+            {
+                \time 5/8
+                s1 * 5/8
+            }
+            {
+                \time 4/4
+                s1 * 1
             }
             {
                 \time 5/8
@@ -58,16 +66,8 @@
                 s1 * 5/4
             }
             {
-                \time 5/8
-                s1 * 5/8
-            }
-            {
-                \time 5/4
-                s1 * 5/4
-            }
-            {
-                \time 5/8
-                s1 * 5/8
+                \time 3/4
+                s1 * 3/4
             }
             {
                 \time 5/4
@@ -195,7 +195,7 @@
             }
             {
                 \time 5/8
-                s1 * 5/4
+                s1 * 5/8
             }
             {
                 \time 5/4
@@ -205,32 +205,16 @@
                 \time 5/8
                 s1 * 5/4
             }
+            {
+                \time 4/4
+                s1 * 1
+            }
         }
         \context SectionStaffGroup = "Chorus A" <<
             \tag #'a-1
             \context PerformerStaffGroup = "A 1 Staff Group" <<
                 \context VocalizationStaff = "A 1 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "A 1 Vocalization Voice" {
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
@@ -488,23 +472,7 @@
                         % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -517,37 +485,6 @@
                                                                 wh.
                                                             }
                                     }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r2
-                                r2
-                            }
-                        }
-                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            % [A 1 Vocalization Voice] Measure 14
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \whiteout
@@ -558,7 +495,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                wh.
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -567,96 +504,41 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                c'4 \repeatTie
-                            }
-                            % [A 1 Vocalization Voice] Measure 15
-                            {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
+                                                        f-
                                                     }
                                         }
                                 <> \)
-                                \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
-                                r2
-                                r2
-                            }
-                            % [A 1 Vocalization Voice] Measure 16
-                            {
+                                r8.
                                 r4
                             }
                         }
-                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
+                        % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
+                            % [A 1 Vocalization Voice] Measure 14
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan [ \<
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -666,8 +548,84 @@
                                                         s-
                                                     }
                                         }
-                                \set stemLeftBeamCount = 1
-                                c'8 \repeatTie ] \p
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r4.
+                            }
+                        }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                            }
+                            % [A 1 Vocalization Voice] Measure 15
+                            {
+                                c'4. -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -677,26 +635,78 @@
                             }
                         }
                         {
+                            % [A 1 Vocalization Voice] Measure 16
                             {
-                                r8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [A 1 Vocalization Voice] Measure 17
+                            {
+                                r4.
+                            }
+                        }
+                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            % [A 1 Vocalization Voice] Measure 18
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [A 1 Vocalization Voice] Measure 18
+                            % [A 1 Vocalization Voice] Measure 19
                             {
-                                R1 * 5/8
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                         }
                         % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 1 Vocalization Voice] Measure 19
+                            % [A 1 Vocalization Voice] Measure 20
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -711,7 +721,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -792,7 +802,7 @@
                                                     }
                                         }
                             }
-                            % [A 1 Vocalization Voice] Measure 20
+                            % [A 1 Vocalization Voice] Measure 21
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -816,7 +826,7 @@
                                 r8
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 21
+                            % [A 1 Vocalization Voice] Measure 22
                             {
                                 r4.
                             }
@@ -841,7 +851,7 @@
                                                     }
                                         }
                             }
-                            % [A 1 Vocalization Voice] Measure 22
+                            % [A 1 Vocalization Voice] Measure 23
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -865,20 +875,20 @@
                             {
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 23
+                            % [A 1 Vocalization Voice] Measure 24
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
                             }
-                            % [A 1 Vocalization Voice] Measure 24
+                            % [A 1 Vocalization Voice] Measure 25
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 25
+                            % [A 1 Vocalization Voice] Measure 26
                             {
                                 r8
                             }
@@ -926,7 +936,7 @@
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [A 1 Vocalization Voice] Measure 26
+                            % [A 1 Vocalization Voice] Measure 27
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -941,7 +951,7 @@
                                 r8
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 27
+                            % [A 1 Vocalization Voice] Measure 28
                             {
                                 r2.
                                 r8
@@ -999,7 +1009,7 @@
                                                     }
                                         }
                             }
-                            % [A 1 Vocalization Voice] Measure 28
+                            % [A 1 Vocalization Voice] Measure 29
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -1044,7 +1054,7 @@
                                                     }
                                         }
                             }
-                            % [A 1 Vocalization Voice] Measure 29
+                            % [A 1 Vocalization Voice] Measure 30
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -1058,7 +1068,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 1 Vocalization Voice] Measure 30
+                            % [A 1 Vocalization Voice] Measure 31
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -1082,7 +1092,7 @@
                             {
                                 r2.
                             }
-                            % [A 1 Vocalization Voice] Measure 31
+                            % [A 1 Vocalization Voice] Measure 32
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1094,7 +1104,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 1 Vocalization Voice] Measure 32
+                            % [A 1 Vocalization Voice] Measure 33
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -1109,7 +1119,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -1137,7 +1147,7 @@
                                 r2
                                 r2
                             }
-                            % [A 1 Vocalization Voice] Measure 33
+                            % [A 1 Vocalization Voice] Measure 34
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1146,7 +1156,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 34
+                            % [A 1 Vocalization Voice] Measure 35
                             {
                                 r4.
                             }
@@ -1217,34 +1227,34 @@
                                 r8
                                 r2
                             }
-                            % [A 1 Vocalization Voice] Measure 35
+                            % [A 1 Vocalization Voice] Measure 36
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 1 Vocalization Voice] Measure 36
-                            {
-                                R1 * 5/4
-                            }
                             % [A 1 Vocalization Voice] Measure 37
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 1 Vocalization Voice] Measure 38
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [A 1 Vocalization Voice] Measure 39
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 1 Vocalization Voice] Measure 40
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [A 1 Vocalization Voice] Measure 41
+                            {
+                                R1 * 1
+                            }
+                            % [A 1 Vocalization Voice] Measure 42
                             {
                                 R1 * 5/4
                                 \stopStaff
@@ -1253,7 +1263,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 1 Vocalization Voice] Measure 42
+                            % [A 1 Vocalization Voice] Measure 43
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -1317,7 +1327,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 1 Vocalization Voice] Measure 43
+                            % [A 1 Vocalization Voice] Measure 44
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1359,7 +1369,7 @@
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [A 1 Vocalization Voice] Measure 44
+                            % [A 1 Vocalization Voice] Measure 45
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -1374,7 +1384,7 @@
                                 r8
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 45
+                            % [A 1 Vocalization Voice] Measure 46
                             {
                                 r2
                                 r8
@@ -1445,7 +1455,7 @@
                             {
                                 r4.
                             }
-                            % [A 1 Vocalization Voice] Measure 46
+                            % [A 1 Vocalization Voice] Measure 47
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1454,7 +1464,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 47
+                            % [A 1 Vocalization Voice] Measure 48
                             {
                                 r2.
                                 r4
@@ -1476,7 +1486,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                     ^ \markup {
@@ -1502,7 +1512,7 @@
                             {
                                 r8.
                             }
-                            % [A 1 Vocalization Voice] Measure 48
+                            % [A 1 Vocalization Voice] Measure 49
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1511,7 +1521,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 49
+                            % [A 1 Vocalization Voice] Measure 50
                             {
                                 r4
                             }
@@ -1577,7 +1587,7 @@
                             {
                                 r2
                             }
-                            % [A 1 Vocalization Voice] Measure 50
+                            % [A 1 Vocalization Voice] Measure 51
                             {
                                 r2
                             }
@@ -1615,7 +1625,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 1 Vocalization Voice] Measure 51
+                            % [A 1 Vocalization Voice] Measure 52
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -1660,7 +1670,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -1678,7 +1688,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 1 Vocalization Voice] Measure 52
+                            % [A 1 Vocalization Voice] Measure 53
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -1691,7 +1701,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -1707,7 +1717,7 @@
                                 r4
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 53
+                            % [A 1 Vocalization Voice] Measure 54
                             {
                                 r4
                             }
@@ -1765,7 +1775,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 1 Vocalization Voice] Measure 54
+                            % [A 1 Vocalization Voice] Measure 55
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -1790,7 +1800,7 @@
                                 r8
                                 r2
                             }
-                            % [A 1 Vocalization Voice] Measure 55
+                            % [A 1 Vocalization Voice] Measure 56
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1799,7 +1809,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 56
+                            % [A 1 Vocalization Voice] Measure 57
                             {
                                 r2.
                             }
@@ -1848,28 +1858,28 @@
                             {
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 57
+                            % [A 1 Vocalization Voice] Measure 58
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 1 Vocalization Voice] Measure 58
+                            % [A 1 Vocalization Voice] Measure 59
                             {
                                 R1 * 5/4
                             }
-                            % [A 1 Vocalization Voice] Measure 59
+                            % [A 1 Vocalization Voice] Measure 60
                             {
                                 R1 * 3/4
                             }
-                            % [A 1 Vocalization Voice] Measure 60
+                            % [A 1 Vocalization Voice] Measure 61
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 61
+                            % [A 1 Vocalization Voice] Measure 62
                             {
                                 r4.
                             }
@@ -1877,6 +1887,7 @@
                         % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -1914,7 +1925,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \( \startTextSpan
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1924,6 +1935,8 @@
                                                         s-
                                                     }
                                         }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -1932,10 +1945,13 @@
                             }
                         }
                         {
-                            % [A 1 Vocalization Voice] Measure 62
                             {
-                                r2.
                                 r8
+                                r2
+                            }
+                            % [A 1 Vocalization Voice] Measure 63
+                            {
+                                r4
                             }
                         }
                         % [A 1 Vocalization Voice] Material: "whispered_inhales"
@@ -1947,7 +1963,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1957,8 +1973,9 @@
                                                         f-
                                                     }
                                         }
+                                c'4 \repeatTie
                             }
-                            % [A 1 Vocalization Voice] Measure 63
+                            % [A 1 Vocalization Voice] Measure 64
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -1983,12 +2000,12 @@
                                 r4
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 64
+                            % [A 1 Vocalization Voice] Measure 65
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -1997,38 +2014,6 @@
                 }
                 \context PercussionStaff = "A 1 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "guiro_shimmer"
                         {
@@ -2053,7 +2038,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( ^ \markup {
+                                f'4 :32 \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -2134,7 +2119,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \parenthesizeDynamic \p \( \startTextSpan
+                                f'4. :32 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2220,27 +2205,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 7
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 8
                             {
-                                g'4 :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2310,8 +2295,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2388,12 +2373,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 12
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2406,15 +2391,15 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -2439,8 +2424,7 @@
                         }
                         {
                             {
-                                r16
-                                r8
+                                r8.
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
@@ -2483,8 +2467,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                            }
+                            % [A 1 Percussion Voice] Measure 14
+                            {
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2502,20 +2489,22 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b4 :32 \( \<
+                                b4. :32 \( \<
                             }
-                            % [A 1 Percussion Voice] Measure 14
+                            % [A 1 Percussion Voice] Measure 15
                             {
                                 b4. :32 \repeatTie
-                                b4 :32 \p \repeatTie
+                                b8 :64 \p \repeatTie
                                 <> \)
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 15
                             {
-                                r4
-                                r16
+                                r8
+                            }
+                            % [A 1 Percussion Voice] Measure 16
+                            {
+                                r8.
                             }
                         }
                         % [A 1 Percussion Voice] Material: "castanet_pointillism"
@@ -2528,8 +2517,7 @@
                         }
                         {
                             {
-                                r4.
-                                r8
+                                r2
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
@@ -2572,47 +2560,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 16
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 17
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 19
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 20
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 21
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 22
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 23
                             {
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 24
+                            {
+                                f'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2632,14 +2619,14 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \( \<
                             }
-                            % [A 1 Percussion Voice] Measure 24
+                            % [A 1 Percussion Voice] Measure 25
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 5/6 {
                                 b4 :32 \repeatTie
                                 b4 :32 -\espressivo
                                 b4 :32 -\espressivo
                             }
-                            % [A 1 Percussion Voice] Measure 25
+                            % [A 1 Percussion Voice] Measure 26
                             {
                                 b4. :32 -\espressivo \p
                                 <> \)
@@ -2690,16 +2677,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 26
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 27
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 28
+                            {
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2766,7 +2753,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan
+                                f'2 :32 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2775,7 +2762,7 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 28
+                            % [A 1 Percussion Voice] Measure 29
                             {
                                 r8.
                             }
@@ -2796,7 +2783,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 29
+                            % [A 1 Percussion Voice] Measure 30
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                                 b16 -\staccato \mf \( [
@@ -2813,7 +2800,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [A 1 Percussion Voice] Measure 30
+                            % [A 1 Percussion Voice] Measure 31
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b2. :32 \p \(
@@ -2865,16 +2852,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 31
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 32
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 33
+                            {
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2893,51 +2880,51 @@
                             \times 12/14 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 1 Percussion Voice] Measure 33
+                            % [A 1 Percussion Voice] Measure 34
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2976,12 +2963,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [A 1 Percussion Voice] Measure 34
+                            % [A 1 Percussion Voice] Measure 35
                             {
-                                g'2. :32 \p \repeatTie
+                                f'2. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3011,7 +2998,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 1 Percussion Voice] Measure 35
+                            % [A 1 Percussion Voice] Measure 36
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -3050,8 +3037,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3066,7 +3053,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [A 1 Percussion Voice] Measure 36
+                            % [A 1 Percussion Voice] Measure 37
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
@@ -3119,7 +3106,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan
+                                f'2 :32 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3128,7 +3115,7 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 37
+                            % [A 1 Percussion Voice] Measure 38
                             {
                                 r8
                             }
@@ -3151,7 +3138,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 38
+                            % [A 1 Percussion Voice] Measure 39
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -3205,23 +3192,23 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [A 1 Percussion Voice] Measure 39
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 40
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 41
                             {
-                                g'2. :32 \repeatTie
-                                g'8 :64 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'1 :32 \p \repeatTie \>
+                            }
+                            % [A 1 Percussion Voice] Measure 42
+                            {
+                                f'2. :32 \repeatTie
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3241,7 +3228,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \( \<
                             }
-                            % [A 1 Percussion Voice] Measure 42
+                            % [A 1 Percussion Voice] Measure 43
                             {
                                 b4. :32 \p \repeatTie
                                 <> \)
@@ -3254,7 +3241,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 43
+                            % [A 1 Percussion Voice] Measure 44
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -3270,7 +3257,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 44
+                            % [A 1 Percussion Voice] Measure 45
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -3325,48 +3312,48 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 45
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 46
                             {
-                                g'4. :32 \p \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 47
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 48
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 49
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 50
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 51
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 53
+                            {
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3375,7 +3362,7 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 53
+                            % [A 1 Percussion Voice] Measure 54
                             {
                                 r8 \!
                             }
@@ -3392,22 +3379,22 @@
                         }
                         % [A 1 Percussion Voice] Material: "shaker_repetitions"
                         {
-                            % [A 1 Percussion Voice] Measure 54
+                            % [A 1 Percussion Voice] Measure 55
                             \times 4/5 {
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
                                 r16 \( [
                                 \once \override Hairpin.circled-tip = ##t
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato \<
+                                f'16 -\staccato \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3426,7 +3413,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 1 Percussion Voice] Measure 55
+                            % [A 1 Percussion Voice] Measure 56
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -3465,12 +3452,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [A 1 Percussion Voice] Measure 56
+                            % [A 1 Percussion Voice] Measure 57
                             {
-                                g'2 :32 \p \repeatTie
+                                f'2 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3536,17 +3523,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 1 Percussion Voice] Measure 57
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 58
                             {
-                                g'2. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 59
+                            {
+                                f'2. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3573,7 +3560,7 @@
                             {
                                 r8
                             }
-                            % [A 1 Percussion Voice] Measure 59
+                            % [A 1 Percussion Voice] Measure 60
                             {
                                 r8
                             }
@@ -3617,8 +3604,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \p \( \startTextSpan
-                                g'2 :32 \repeatTie
+                                f'8 :64 \p \( \startTextSpan
+                                f'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3627,7 +3614,7 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 60
+                            % [A 1 Percussion Voice] Measure 61
                             {
                                 r8
                             }
@@ -3643,7 +3630,7 @@
                             }
                         }
                         {
-                            % [A 1 Percussion Voice] Measure 61
+                            % [A 1 Percussion Voice] Measure 62
                             {
                                 r8
                             }
@@ -3688,12 +3675,9 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
-                            % [A 1 Percussion Voice] Measure 62
-                            {
-                                g'4 :32 \p \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3721,7 +3705,11 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                            }
+                            % [A 1 Percussion Voice] Measure 63
+                            {
+                                r8
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
@@ -3733,7 +3721,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( ^ \markup {
+                                f'4 :32 \parenthesizeDynamic \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -3772,7 +3760,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 63
+                            % [A 1 Percussion Voice] Measure 64
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                                 b16 -\staccato \p \( [
@@ -3789,7 +3777,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 64
+                            % [A 1 Percussion Voice] Measure 65
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
                                 b16 -\staccato \ppp \(
@@ -3798,9 +3786,8 @@
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8.
+                                r2.
                             }
                         }
                     }
@@ -3810,26 +3797,6 @@
             \context PerformerStaffGroup = "A 2 Staff Group" <<
                 \context VocalizationStaff = "A 2 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "A 2 Vocalization Voice" {
                         {
                             % [A 2 Vocalization Voice] Measure 1
@@ -4061,7 +4028,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -4085,9 +4052,13 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                                r4
+                                r4
+                            }
+                            % [A 2 Vocalization Voice] Measure 14
+                            {
                                 r2
-                                r4.
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_inhales"
@@ -4131,7 +4102,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4142,9 +4113,9 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 14
+                            % [A 2 Vocalization Voice] Measure 15
                             {
-                                c'4. -\accent
+                                c'4. -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4154,7 +4125,6 @@
                                                         s-
                                                     }
                                         }
-                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -4164,11 +4134,11 @@
                         }
                         {
                             {
-                                r8
+                                r4
                             }
-                            % [A 2 Vocalization Voice] Measure 15
+                            % [A 2 Vocalization Voice] Measure 16
                             {
-                                r2
+                                r4.
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_inhales"
@@ -4180,7 +4150,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \<
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4192,9 +4162,9 @@
                                         }
                                 c'2 \repeatTie
                             }
-                            % [A 2 Vocalization Voice] Measure 16
+                            % [A 2 Vocalization Voice] Measure 17
                             {
-                                c'4 -\accent \p
+                                c'4. -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4214,13 +4184,12 @@
                         }
                         {
                             {
-                                r8
                                 r4
                             }
-                            % [A 2 Vocalization Voice] Measure 17
+                            % [A 2 Vocalization Voice] Measure 18
                             {
                                 r2.
-                                r8
+                                r4
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_pointillism"
@@ -4239,7 +4208,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -4263,22 +4232,21 @@
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
                             }
-                            % [A 2 Vocalization Voice] Measure 18
+                            % [A 2 Vocalization Voice] Measure 19
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 2 Vocalization Voice] Measure 19
+                            % [A 2 Vocalization Voice] Measure 20
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4349,7 +4317,7 @@
                             }
                         }
                         {
-                            % [A 2 Vocalization Voice] Measure 20
+                            % [A 2 Vocalization Voice] Measure 21
                             {
                                 r4
                             }
@@ -4387,7 +4355,7 @@
                             {
                                 r8
                             }
-                            % [A 2 Vocalization Voice] Measure 21
+                            % [A 2 Vocalization Voice] Measure 22
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4396,7 +4364,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 23
+                            % [A 2 Vocalization Voice] Measure 24
                             {
                                 r4
                             }
@@ -4443,7 +4411,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \startTextSpan \<
                             }
-                            % [A 2 Vocalization Voice] Measure 24
+                            % [A 2 Vocalization Voice] Measure 25
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -4459,7 +4427,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 2 Vocalization Voice] Measure 25
+                            % [A 2 Vocalization Voice] Measure 26
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -4477,7 +4445,7 @@
                             {
                                 r4
                             }
-                            % [A 2 Vocalization Voice] Measure 26
+                            % [A 2 Vocalization Voice] Measure 27
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4486,7 +4454,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 27
+                            % [A 2 Vocalization Voice] Measure 28
                             {
                                 r2.
                                 r4.
@@ -4544,7 +4512,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 28
+                            % [A 2 Vocalization Voice] Measure 29
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -4568,7 +4536,7 @@
                                 r4
                                 r4
                             }
-                            % [A 2 Vocalization Voice] Measure 29
+                            % [A 2 Vocalization Voice] Measure 30
                             {
                                 r4.
                             }
@@ -4593,7 +4561,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 30
+                            % [A 2 Vocalization Voice] Measure 31
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -4618,7 +4586,7 @@
                                 r8
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 31
+                            % [A 2 Vocalization Voice] Measure 32
                             {
                                 r4.
                             }
@@ -4669,7 +4637,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -4685,7 +4653,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 2 Vocalization Voice] Measure 32
+                            % [A 2 Vocalization Voice] Measure 33
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -4698,7 +4666,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -4766,7 +4734,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 33
+                            % [A 2 Vocalization Voice] Measure 34
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -4789,7 +4757,7 @@
                             {
                                 r4
                             }
-                            % [A 2 Vocalization Voice] Measure 34
+                            % [A 2 Vocalization Voice] Measure 35
                             {
                                 r4.
                             }
@@ -4823,40 +4791,40 @@
                             }
                         }
                         {
-                            % [A 2 Vocalization Voice] Measure 35
+                            % [A 2 Vocalization Voice] Measure 36
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 2 Vocalization Voice] Measure 36
-                            {
-                                R1 * 5/4
-                            }
                             % [A 2 Vocalization Voice] Measure 37
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 2 Vocalization Voice] Measure 38
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [A 2 Vocalization Voice] Measure 39
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 2 Vocalization Voice] Measure 40
                             {
-                                R1 * 1
+                                R1 * 5/8
                             }
                             % [A 2 Vocalization Voice] Measure 41
+                            {
+                                R1 * 1
+                            }
+                            % [A 2 Vocalization Voice] Measure 42
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 42
+                            % [A 2 Vocalization Voice] Measure 43
                             {
                                 r8
                             }
@@ -4914,7 +4882,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 2 Vocalization Voice] Measure 43
+                            % [A 2 Vocalization Voice] Measure 44
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -4968,7 +4936,7 @@
                             }
                         }
                         {
-                            % [A 2 Vocalization Voice] Measure 44
+                            % [A 2 Vocalization Voice] Measure 45
                             {
                                 r4.
                             }
@@ -5025,7 +4993,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 45
+                            % [A 2 Vocalization Voice] Measure 46
                             {
                                 c'2. -\accent
                                     _ \markup {
@@ -5050,7 +5018,7 @@
                             {
                                 r4.
                             }
-                            % [A 2 Vocalization Voice] Measure 46
+                            % [A 2 Vocalization Voice] Measure 47
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -5059,7 +5027,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 47
+                            % [A 2 Vocalization Voice] Measure 48
                             {
                                 r4
                             }
@@ -5080,7 +5048,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -5110,7 +5078,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 2 Vocalization Voice] Measure 48
+                            % [A 2 Vocalization Voice] Measure 49
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -5192,7 +5160,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 49
+                            % [A 2 Vocalization Voice] Measure 50
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -5217,7 +5185,7 @@
                                 r4.
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 50
+                            % [A 2 Vocalization Voice] Measure 51
                             {
                                 r2
                             }
@@ -5238,7 +5206,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                     ^ \markup {
@@ -5265,7 +5233,7 @@
                                 r8.
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 51
+                            % [A 2 Vocalization Voice] Measure 52
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -5274,7 +5242,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 53
+                            % [A 2 Vocalization Voice] Measure 54
                             {
                                 r4.
                                 r8
@@ -5332,7 +5300,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 54
+                            % [A 2 Vocalization Voice] Measure 55
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -5356,7 +5324,7 @@
                                 r8
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 55
+                            % [A 2 Vocalization Voice] Measure 56
                             {
                                 r4
                             }
@@ -5382,7 +5350,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 2 Vocalization Voice] Measure 56
+                            % [A 2 Vocalization Voice] Measure 57
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -5408,24 +5376,24 @@
                                 r2
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 57
+                            % [A 2 Vocalization Voice] Measure 58
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 2 Vocalization Voice] Measure 58
+                            % [A 2 Vocalization Voice] Measure 59
                             {
                                 R1 * 5/4
                             }
-                            % [A 2 Vocalization Voice] Measure 59
+                            % [A 2 Vocalization Voice] Measure 60
                             {
                                 R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 60
+                            % [A 2 Vocalization Voice] Measure 61
                             {
                                 r4.
                             }
@@ -5482,7 +5450,7 @@
                                                     }
                                         }
                             }
-                            % [A 2 Vocalization Voice] Measure 61
+                            % [A 2 Vocalization Voice] Measure 62
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -5499,62 +5467,24 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
-                                r4
-                            }
-                            % [A 2 Vocalization Voice] Measure 62
-                            {
                                 r2
-                                r8
+                                r2
                             }
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
+                            % [A 2 Vocalization Voice] Measure 63
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan [ \<
+                                c'4 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5564,8 +5494,6 @@
                                                         sh-
                                                     }
                                         }
-                                \set stemLeftBeamCount = 1
-                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -5576,9 +5504,10 @@
                         }
                         {
                             {
-                                r4.
+                                r8
+                                r4
                             }
-                            % [A 2 Vocalization Voice] Measure 63
+                            % [A 2 Vocalization Voice] Measure 64
                             {
                                 r8
                             }
@@ -5622,14 +5551,14 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \p \( \startTextSpan
+                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -5646,7 +5575,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 2 Vocalization Voice] Measure 64
+                            % [A 2 Vocalization Voice] Measure 65
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -5659,7 +5588,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -5671,47 +5600,14 @@
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8.
+                                r2.
                             }
                         }
                     }
                 }
                 \context PercussionStaff = "A 2 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "A 2 Percussion Voice" {
                         {
                             % [A 2 Percussion Voice] Measure 1
@@ -5778,16 +5674,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 3
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 4
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5856,27 +5752,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
+                                f'4. :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 7
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 8
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -5949,9 +5845,9 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                                g'2 :32 \p \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
+                                f'2 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6019,16 +5915,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 12
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 13
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6041,60 +5937,61 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
                             % [A 2 Percussion Voice] Measure 14
-                            \times 4/5 {
-                                g'16 -\staccato [
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 12/13 {
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f'16 -\staccato ]
+                            }
+                            % [A 2 Percussion Voice] Measure 15
+                            {
+                                f'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -6143,52 +6040,51 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 15
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 16
                             {
-                                g'4. :32 \p \repeatTie
-                                g'4 :32 \repeatTie
+                                f'1 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 17
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 19
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 20
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 21
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 22
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 23
                             {
-                                g'2. :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 24
+                            {
+                                f'2. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6197,7 +6093,7 @@
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 24
+                            % [A 2 Percussion Voice] Measure 25
                             {
                                 r8 \!
                             }
@@ -6255,12 +6151,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
+                                f'8 :64 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 25
+                            % [A 2 Percussion Voice] Measure 26
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6272,7 +6168,7 @@
                             {
                                 r8
                             }
-                            % [A 2 Percussion Voice] Measure 26
+                            % [A 2 Percussion Voice] Measure 27
                             {
                                 r16
                             }
@@ -6295,7 +6191,7 @@
                         }
                         % [A 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 2 Percussion Voice] Measure 27
+                            % [A 2 Percussion Voice] Measure 28
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -6348,8 +6244,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6361,7 +6257,7 @@
                             {
                                 r8
                             }
-                            % [A 2 Percussion Voice] Measure 28
+                            % [A 2 Percussion Voice] Measure 29
                             {
                                 r16
                             }
@@ -6379,7 +6275,7 @@
                                 r4
                                 r4
                             }
-                            % [A 2 Percussion Voice] Measure 29
+                            % [A 2 Percussion Voice] Measure 30
                             {
                                 r8
                             }
@@ -6393,7 +6289,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \p \( ^ \markup {
+                                f'4 :32 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -6423,7 +6319,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \(
                             }
-                            % [A 2 Percussion Voice] Measure 30
+                            % [A 2 Percussion Voice] Measure 31
                             {
                                 b2 :32 \repeatTie
                                 <> \)
@@ -6473,7 +6369,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \parenthesizeDynamic \p \( \startTextSpan
+                                f'4. :32 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6482,7 +6378,7 @@
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 31
+                            % [A 2 Percussion Voice] Measure 32
                             {
                                 r8
                             }
@@ -6508,48 +6404,48 @@
                             \times 2/3 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
-                            % [A 2 Percussion Voice] Measure 32
+                            % [A 2 Percussion Voice] Measure 33
                             {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -6593,11 +6489,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 33
+                            % [A 2 Percussion Voice] Measure 34
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6621,7 +6517,7 @@
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 34
+                            % [A 2 Percussion Voice] Measure 35
                             {
                                 r16
                             }
@@ -6678,7 +6574,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \p \( \startTextSpan
+                                f'2 :32 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6708,14 +6604,14 @@
                         }
                         % [A 2 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [A 2 Percussion Voice] Measure 35
+                            % [A 2 Percussion Voice] Measure 36
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4. :32 \( \<
                                 b4 :32 \repeatTie
                             }
-                            % [A 2 Percussion Voice] Measure 36
+                            % [A 2 Percussion Voice] Measure 37
                             {
                                 b4. :32 \p \repeatTie
                                 <> \)
@@ -6782,16 +6678,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 37
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 38
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 39
+                            {
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6859,22 +6755,22 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 39
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 40
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 41
                             {
-                                g'2. :32 \repeatTie
-                                g'4. :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'1 :32 \p \repeatTie \>
+                            }
+                            % [A 2 Percussion Voice] Measure 42
+                            {
+                                f'2. :32 \repeatTie
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6889,14 +6785,14 @@
                         }
                         % [A 2 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [A 2 Percussion Voice] Measure 42
+                            % [A 2 Percussion Voice] Measure 43
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4. :32 \( \<
                                 b4 :32 \repeatTie
                             }
-                            % [A 2 Percussion Voice] Measure 43
+                            % [A 2 Percussion Voice] Measure 44
                             {
                                 b8 :64 \p \repeatTie
                                 <> \)
@@ -6947,17 +6843,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
-                            % [A 2 Percussion Voice] Measure 44
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 45
                             {
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 46
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7029,48 +6925,48 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [A 2 Percussion Voice] Measure 46
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 47
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 48
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 49
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 50
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 51
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 53
                             {
-                                g'8 :64 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 54
+                            {
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7103,59 +6999,59 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \<
-                            }
-                            % [A 2 Percussion Voice] Measure 54
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \times 12/13 {
-                                g'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato \( \<
                             }
                             % [A 2 Percussion Voice] Measure 55
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 12/13 {
+                                f'16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f'16 -\staccato ]
+                            }
+                            % [A 2 Percussion Voice] Measure 56
                             {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -7180,7 +7076,7 @@
                         }
                         % [A 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 2 Percussion Voice] Measure 56
+                            % [A 2 Percussion Voice] Measure 57
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -7236,16 +7132,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 57
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 58
                             {
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 59
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7311,8 +7207,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
-                                g'4. :32 \repeatTie
+                                f'8 :64 \( \startTextSpan
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7327,7 +7223,7 @@
                         }
                         % [A 2 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [A 2 Percussion Voice] Measure 59
+                            % [A 2 Percussion Voice] Measure 60
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \parenthesizeDynamic \p \(
@@ -7356,7 +7252,7 @@
                         }
                         % [A 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 2 Percussion Voice] Measure 60
+                            % [A 2 Percussion Voice] Measure 61
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -7413,16 +7309,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 61
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 62
                             {
-                                g'4 :32 \p \repeatTie
+                                f'2. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7432,7 +7324,8 @@
                         }
                         {
                             {
-                                r8.
+                                r8
+                                r16
                             }
                         }
                         % [A 2 Percussion Voice] Material: "guiro_pointillism"
@@ -7447,7 +7340,11 @@
                         }
                         {
                             {
-                                r8.
+                                r16
+                            }
+                            % [A 2 Percussion Voice] Measure 63
+                            {
+                                r8
                             }
                         }
                         % [A 2 Percussion Voice] Material: "shaker_drone"
@@ -7490,16 +7387,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [A 2 Percussion Voice] Measure 63
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 64
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 65
+                            {
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7509,7 +7407,8 @@
                         }
                         {
                             {
-                                r4
+                                r8
+                                r2
                             }
                         }
                     }
@@ -7519,26 +7418,6 @@
             \context PerformerStaffGroup = "A 3 Staff Group" <<
                 \context VocalizationStaff = "A 3 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "A 3 Vocalization Voice" {
                         {
                             % [A 3 Vocalization Voice] Measure 1
@@ -7811,7 +7690,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -7843,21 +7722,18 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
-                            }
-                            % [A 3 Vocalization Voice] Measure 13
-                            {
                                 R1 * 5/4
-                                \stopStaff
-                                \startStaff
                             }
                             % [A 3 Vocalization Voice] Measure 14
                             {
-                                r8
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
+                            % [A 3 Vocalization Voice] Measure 15
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -7897,7 +7773,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'4. \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7909,9 +7785,9 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 15
+                            % [A 3 Vocalization Voice] Measure 16
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7930,13 +7806,15 @@
                         }
                         {
                             {
-                                r4.
-                                r2
+                                r2.
+                            }
+                            % [A 3 Vocalization Voice] Measure 17
+                            {
+                                r8
                             }
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 3 Vocalization Voice] Measure 16
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
@@ -7944,7 +7822,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7956,9 +7834,9 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 17
+                            % [A 3 Vocalization Voice] Measure 18
                             {
-                                c'2 -\accent \p
+                                c'2 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7968,6 +7846,7 @@
                                                         sh-
                                                     }
                                         }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -7978,12 +7857,12 @@
                         }
                         {
                             {
-                                r4
+                                r8
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 18
+                            % [A 3 Vocalization Voice] Measure 19
                             {
-                                r4
+                                r4.
                             }
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_pointillism"
@@ -8002,7 +7881,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -8029,7 +7908,7 @@
                                 r16
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 19
+                            % [A 3 Vocalization Voice] Measure 20
                             {
                                 r2
                             }
@@ -8078,7 +7957,7 @@
                             {
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 20
+                            % [A 3 Vocalization Voice] Measure 21
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8087,7 +7966,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 22
+                            % [A 3 Vocalization Voice] Measure 23
                             {
                                 r4
                             }
@@ -8145,7 +8024,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 23
+                            % [A 3 Vocalization Voice] Measure 24
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -8169,7 +8048,7 @@
                             {
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 24
+                            % [A 3 Vocalization Voice] Measure 25
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8178,7 +8057,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 25
+                            % [A 3 Vocalization Voice] Measure 26
                             {
                                 r4.
                             }
@@ -8225,7 +8104,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [A 3 Vocalization Voice] Measure 26
+                            % [A 3 Vocalization Voice] Measure 27
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -8240,7 +8119,7 @@
                                 r8
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 27
+                            % [A 3 Vocalization Voice] Measure 28
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8252,7 +8131,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 3 Vocalization Voice] Measure 28
+                            % [A 3 Vocalization Voice] Measure 29
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -8304,7 +8183,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 29
+                            % [A 3 Vocalization Voice] Measure 30
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -8328,7 +8207,7 @@
                                 r4
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 30
+                            % [A 3 Vocalization Voice] Measure 31
                             {
                                 r2.
                             }
@@ -8360,7 +8239,7 @@
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 31
+                            % [A 3 Vocalization Voice] Measure 32
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8369,7 +8248,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 32
+                            % [A 3 Vocalization Voice] Measure 33
                             {
                                 r8
                             }
@@ -8390,7 +8269,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -8479,7 +8358,7 @@
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 33
+                            % [A 3 Vocalization Voice] Measure 34
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8488,7 +8367,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 34
+                            % [A 3 Vocalization Voice] Measure 35
                             {
                                 r2.
                             }
@@ -8552,36 +8431,36 @@
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 35
+                            % [A 3 Vocalization Voice] Measure 36
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 3 Vocalization Voice] Measure 36
-                            {
-                                R1 * 5/4
-                            }
                             % [A 3 Vocalization Voice] Measure 37
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 3 Vocalization Voice] Measure 38
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [A 3 Vocalization Voice] Measure 39
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 3 Vocalization Voice] Measure 40
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 3 Vocalization Voice] Measure 41
                             {
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 41
+                            % [A 3 Vocalization Voice] Measure 42
                             {
                                 r2.
                                 r4
@@ -8629,7 +8508,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [A 3 Vocalization Voice] Measure 42
+                            % [A 3 Vocalization Voice] Measure 43
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -8686,7 +8565,7 @@
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 43
+                            % [A 3 Vocalization Voice] Measure 44
                             {
                                 r4
                             }
@@ -8734,7 +8613,7 @@
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 44
+                            % [A 3 Vocalization Voice] Measure 45
                             {
                                 c'4. \repeatTie
                                 c'8 \p \repeatTie
@@ -8749,7 +8628,7 @@
                             {
                                 r8
                             }
-                            % [A 3 Vocalization Voice] Measure 45
+                            % [A 3 Vocalization Voice] Measure 46
                             {
                                 r2.
                                 r8
@@ -8807,7 +8686,7 @@
                                                     }
                                         }
                             }
-                            % [A 3 Vocalization Voice] Measure 46
+                            % [A 3 Vocalization Voice] Measure 47
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -8821,7 +8700,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 47
+                            % [A 3 Vocalization Voice] Measure 48
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -8894,35 +8773,6 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                            }
-                        }
-                        % [A 3 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            % [A 3 Vocalization Voice] Measure 48
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
                                                         sh-
                                                     }
                                         }
@@ -8934,9 +8784,7 @@
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8.
                             }
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_pointillism"
@@ -8961,6 +8809,37 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                        }
+                        % [A 3 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [A 3 Vocalization Voice] Measure 50
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        t-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8973,7 +8852,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 3 Vocalization Voice] Measure 50
+                            % [A 3 Vocalization Voice] Measure 51
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -9064,7 +8943,7 @@
                             {
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 51
+                            % [A 3 Vocalization Voice] Measure 52
                             {
                                 r4.
                             }
@@ -9115,7 +8994,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -9131,7 +9010,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 3 Vocalization Voice] Measure 52
+                            % [A 3 Vocalization Voice] Measure 53
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -9144,7 +9023,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -9213,7 +9092,7 @@
                                                     }
                                         }
                             }
-                            % [A 3 Vocalization Voice] Measure 53
+                            % [A 3 Vocalization Voice] Measure 54
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -9237,7 +9116,7 @@
                             {
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 54
+                            % [A 3 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -9249,7 +9128,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 3 Vocalization Voice] Measure 55
+                            % [A 3 Vocalization Voice] Measure 56
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -9310,7 +9189,7 @@
                             {
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 56
+                            % [A 3 Vocalization Voice] Measure 57
                             {
                                 r4
                             }
@@ -9331,7 +9210,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -9358,22 +9237,22 @@
                                 r4..
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 57
+                            % [A 3 Vocalization Voice] Measure 58
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 3 Vocalization Voice] Measure 58
+                            % [A 3 Vocalization Voice] Measure 59
                             {
                                 R1 * 5/4
                             }
-                            % [A 3 Vocalization Voice] Measure 59
+                            % [A 3 Vocalization Voice] Measure 60
                             {
                                 R1 * 3/4
                             }
-                            % [A 3 Vocalization Voice] Measure 60
+                            % [A 3 Vocalization Voice] Measure 61
                             {
                                 R1 * 5/8
                                 \stopStaff
@@ -9382,7 +9261,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 3 Vocalization Voice] Measure 61
+                            % [A 3 Vocalization Voice] Measure 62
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -9422,7 +9301,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'2. \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9432,20 +9311,7 @@
                                                         s-
                                                     }
                                         }
-                                c'4 \repeatTie
-                            }
-                            % [A 3 Vocalization Voice] Measure 62
-                            {
-                                c'4 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -9455,8 +9321,11 @@
                         }
                         {
                             {
-                                r2
-                                r8
+                                r4.
+                            }
+                            % [A 3 Vocalization Voice] Measure 63
+                            {
+                                r4
                             }
                         }
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
@@ -9468,7 +9337,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9478,8 +9347,9 @@
                                                         f-
                                                     }
                                         }
+                                c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 63
+                            % [A 3 Vocalization Voice] Measure 64
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -9493,7 +9363,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 64
+                            % [A 3 Vocalization Voice] Measure 65
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -9515,46 +9385,13 @@
                         }
                         {
                             {
-                                r4
-                                r4
+                                r2..
                             }
                         }
                     }
                 }
                 \context PercussionStaff = "A 3 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
@@ -9566,7 +9403,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \p \( ^ \markup {
+                                f'4 :32 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -9644,8 +9481,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9735,28 +9572,28 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 7
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 8
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9830,11 +9667,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 11
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9901,7 +9738,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \parenthesizeDynamic \p \( \startTextSpan
+                                f'4. :32 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9914,15 +9751,15 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -9944,21 +9781,33 @@
                         }
                         {
                             {
+                                r4
+                            }
+                            % [A 3 Percussion Voice] Measure 14
+                            {
+                                r16
+                            }
+                        }
+                        % [A 3 Percussion Voice] Material: "guiro_pointillism"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
+                                b16 -\staccato \ppp \( [
+                                \set stemLeftBeamCount = 2
+                                b16 -\staccato ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
                                 r4.
-                                r2
                             }
                         }
                         % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 3 Percussion Voice] Measure 14
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \parenthesizeDynamic \p \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -9971,10 +9820,39 @@
                                                                 rolled
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                rolled
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                f'8 :64 \p \( \startTextSpan
+                            }
+                            % [A 3 Percussion Voice] Measure 15
+                            {
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -9987,11 +9865,12 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b4 :32 \( \<
+                                b8 :64 \( \<
+                                b4 :32 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 15
+                            % [A 3 Percussion Voice] Measure 16
                             {
-                                b2 :32 \p \repeatTie
+                                b4. :32 \p \repeatTie
                                 <> \)
                             }
                         }
@@ -10040,48 +9919,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [A 3 Percussion Voice] Measure 16
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 17
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 19
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 20
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 21
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 22
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 23
                             {
-                                g'8 :64 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 24
+                            {
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10106,7 +9983,7 @@
                             {
                                 r4
                             }
-                            % [A 3 Percussion Voice] Measure 24
+                            % [A 3 Percussion Voice] Measure 25
                             {
                                 r16
                             }
@@ -10124,7 +10001,7 @@
                                 r4
                                 r4
                             }
-                            % [A 3 Percussion Voice] Measure 25
+                            % [A 3 Percussion Voice] Measure 26
                             {
                                 r8
                             }
@@ -10169,13 +10046,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 26
+                            % [A 3 Percussion Voice] Measure 27
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10184,7 +10061,7 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 27
+                            % [A 3 Percussion Voice] Measure 28
                             {
                                 r8
                             }
@@ -10193,7 +10070,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -10247,17 +10124,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [A 3 Percussion Voice] Measure 28
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 29
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 30
+                            {
+                                f'4. :32 \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10266,7 +10143,7 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 30
+                            % [A 3 Percussion Voice] Measure 31
                             {
                                 r8
                             }
@@ -10280,7 +10157,7 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 31
+                            % [A 3 Percussion Voice] Measure 32
                             {
                                 r8
                             }
@@ -10325,12 +10202,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 32
+                            % [A 3 Percussion Voice] Measure 33
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10368,27 +10245,27 @@
                             \times 6/8 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -10403,7 +10280,7 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 33
+                            % [A 3 Percussion Voice] Measure 34
                             {
                                 r16
                             }
@@ -10461,12 +10338,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 34
+                            % [A 3 Percussion Voice] Measure 35
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10484,7 +10361,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \(
+                                b16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -10534,11 +10411,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
+                                f'4. :32 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 35
+                            % [A 3 Percussion Voice] Measure 36
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10568,7 +10445,7 @@
                         }
                         % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 3 Percussion Voice] Measure 36
+                            % [A 3 Percussion Voice] Measure 37
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -10607,13 +10484,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2. :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'2. :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 37
+                            % [A 3 Percussion Voice] Measure 38
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10628,7 +10505,7 @@
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 38
+                            % [A 3 Percussion Voice] Measure 39
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -10681,22 +10558,22 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [A 3 Percussion Voice] Measure 39
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 40
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 41
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'1 :32 \p \repeatTie \>
+                            }
+                            % [A 3 Percussion Voice] Measure 42
+                            {
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10705,7 +10582,7 @@
                             }
                         }
                         {
-                            % [A 3 Percussion Voice] Measure 42
+                            % [A 3 Percussion Voice] Measure 43
                             {
                                 r8 \!
                             }
@@ -10727,7 +10604,7 @@
                         }
                         % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 3 Percussion Voice] Measure 43
+                            % [A 3 Percussion Voice] Measure 44
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -10766,54 +10643,54 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
-                            % [A 3 Percussion Voice] Measure 44
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 45
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 46
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 47
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 48
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 49
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 50
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 51
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 53
+                            {
+                                f'4. :32 \repeatTie
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10829,34 +10706,34 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato \<
+                                f'16 -\staccato \<
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
-                            % [A 3 Percussion Voice] Measure 53
+                            % [A 3 Percussion Voice] Measure 54
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 6/8 {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -10871,7 +10748,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \(
                             }
-                            % [A 3 Percussion Voice] Measure 54
+                            % [A 3 Percussion Voice] Measure 55
                             {
                                 b4 :32 \repeatTie
                                 <> \)
@@ -10922,16 +10799,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                            }
-                            % [A 3 Percussion Voice] Measure 55
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 56
                             {
-                                g'2. :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 57
+                            {
+                                f'2. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -10961,7 +10838,7 @@
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 57
+                            % [A 3 Percussion Voice] Measure 58
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -10977,7 +10854,7 @@
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 58
+                            % [A 3 Percussion Voice] Measure 59
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -11031,8 +10908,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -11049,7 +10926,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -11062,10 +10939,10 @@
                         }
                         % [A 3 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 59
+                            % [A 3 Percussion Voice] Measure 60
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -11082,10 +10959,10 @@
                         }
                         % [A 3 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 60
+                            % [A 3 Percussion Voice] Measure 61
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -11136,12 +11013,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 61
+                            % [A 3 Percussion Voice] Measure 62
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -11158,11 +11035,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \(
-                            }
-                            % [A 3 Percussion Voice] Measure 62
-                            {
-                                b8 :64 \repeatTie
+                                b4 :32 \(
                                 <> \)
                             }
                         }
@@ -11174,13 +11047,7 @@
                         % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \parenthesizeDynamic \p \( ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -11193,10 +11060,37 @@
                                                                 rolled
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                rolled
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                f'8 :64 \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                f'8 :64 \repeatTie ]
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -11206,9 +11100,10 @@
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
+                            % [A 3 Percussion Voice] Measure 63
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \( [
+                                d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                                 <> \)
@@ -11259,11 +11154,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 63
+                            % [A 3 Percussion Voice] Measure 64
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -11280,7 +11175,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -11293,10 +11188,10 @@
                         }
                         % [A 3 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 3 Percussion Voice] Measure 64
+                            % [A 3 Percussion Voice] Measure 65
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -11304,8 +11199,7 @@
                         }
                         {
                             {
-                                r4
-                                r4
+                                r2..
                             }
                         }
                     }
@@ -11315,26 +11209,6 @@
             \context PerformerStaffGroup = "A 4 Staff Group" <<
                 \context VocalizationStaff = "A 4 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "A 4 Vocalization Voice" {
                         {
                             % [A 4 Vocalization Voice] Measure 1
@@ -11551,7 +11425,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -11647,8 +11521,11 @@
                         }
                         {
                             {
-                                r4.
-                                r4.
+                                r4
+                            }
+                            % [A 4 Vocalization Voice] Measure 14
+                            {
+                                r2
                             }
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_inhales"
@@ -11660,7 +11537,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11671,7 +11548,7 @@
                                                     }
                                         }
                             }
-                            % [A 4 Vocalization Voice] Measure 14
+                            % [A 4 Vocalization Voice] Measure 15
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -11685,9 +11562,9 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 15
+                            % [A 4 Vocalization Voice] Measure 16
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11707,8 +11584,7 @@
                         }
                         {
                             {
-                                r8
-                                r8
+                                r4
                             }
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_pointillism"
@@ -11757,7 +11633,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -11768,13 +11644,12 @@
                         }
                         {
                             {
-                                r16
-                                r2
+                                r4..
                             }
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 4 Vocalization Voice] Measure 16
+                            % [A 4 Vocalization Voice] Measure 17
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -11787,7 +11662,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -11803,7 +11678,7 @@
                                 r4
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 17
+                            % [A 4 Vocalization Voice] Measure 18
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11812,56 +11687,8 @@
                                 \stopStaff
                                 \startStaff
                             }
-                        }
-                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            % [A 4 Vocalization Voice] Measure 18
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4
-                            }
                             % [A 4 Vocalization Voice] Measure 19
                             {
-                                r2
                                 r8
                             }
                         }
@@ -11906,7 +11733,45 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [A 4 Vocalization Voice] Measure 20
+                            {
+                                r2
+                                r8
+                            }
+                        }
+                        % [A 4 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11918,7 +11783,7 @@
                                         }
                                 c'2 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 20
+                            % [A 4 Vocalization Voice] Measure 21
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -11943,7 +11808,7 @@
                             {
                                 r8
                             }
-                            % [A 4 Vocalization Voice] Measure 21
+                            % [A 4 Vocalization Voice] Measure 22
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11952,7 +11817,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 22
+                            % [A 4 Vocalization Voice] Measure 23
                             {
                                 r8
                             }
@@ -12001,7 +11866,7 @@
                             {
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 23
+                            % [A 4 Vocalization Voice] Measure 24
                             {
                                 r2
                             }
@@ -12048,7 +11913,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [A 4 Vocalization Voice] Measure 24
+                            % [A 4 Vocalization Voice] Measure 25
                             {
                                 c'4. \repeatTie
                                 c'4 \p \repeatTie
@@ -12059,7 +11924,7 @@
                             }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 25
+                            % [A 4 Vocalization Voice] Measure 26
                             {
                                 r4
                             }
@@ -12081,20 +11946,20 @@
                             }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 26
+                            % [A 4 Vocalization Voice] Measure 27
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 4 Vocalization Voice] Measure 27
+                            % [A 4 Vocalization Voice] Measure 28
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 28
+                            % [A 4 Vocalization Voice] Measure 29
                             {
                                 r4
                             }
@@ -12152,7 +12017,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 29
+                            % [A 4 Vocalization Voice] Measure 30
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -12177,14 +12042,14 @@
                                 r8
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 30
+                            % [A 4 Vocalization Voice] Measure 31
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
                             }
-                            % [A 4 Vocalization Voice] Measure 31
+                            % [A 4 Vocalization Voice] Measure 32
                             {
                                 R1 * 5/8
                                 \stopStaff
@@ -12193,7 +12058,7 @@
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [A 4 Vocalization Voice] Measure 32
+                            % [A 4 Vocalization Voice] Measure 33
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -12257,7 +12122,7 @@
                                 r8
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 33
+                            % [A 4 Vocalization Voice] Measure 34
                             {
                                 r4
                             }
@@ -12308,7 +12173,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -12325,7 +12190,7 @@
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 4 Vocalization Voice] Measure 34
+                            % [A 4 Vocalization Voice] Measure 35
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -12338,7 +12203,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -12354,36 +12219,36 @@
                                 r2
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 35
+                            % [A 4 Vocalization Voice] Measure 36
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 4 Vocalization Voice] Measure 36
-                            {
-                                R1 * 5/4
-                            }
                             % [A 4 Vocalization Voice] Measure 37
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 4 Vocalization Voice] Measure 38
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [A 4 Vocalization Voice] Measure 39
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [A 4 Vocalization Voice] Measure 40
+                            {
+                                R1 * 5/8
+                            }
+                            % [A 4 Vocalization Voice] Measure 41
                             {
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 41
+                            % [A 4 Vocalization Voice] Measure 42
                             {
                                 r2.
                                 r4
@@ -12441,7 +12306,7 @@
                                                     }
                                         }
                             }
-                            % [A 4 Vocalization Voice] Measure 42
+                            % [A 4 Vocalization Voice] Measure 43
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -12466,7 +12331,7 @@
                                 r8
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 43
+                            % [A 4 Vocalization Voice] Measure 44
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -12478,7 +12343,7 @@
                         }
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 4 Vocalization Voice] Measure 44
+                            % [A 4 Vocalization Voice] Measure 45
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -12520,7 +12385,7 @@
                                 c'4. \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 45
+                            % [A 4 Vocalization Voice] Measure 46
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -12582,7 +12447,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -12598,7 +12463,7 @@
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 4 Vocalization Voice] Measure 46
+                            % [A 4 Vocalization Voice] Measure 47
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -12611,7 +12476,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -12627,7 +12492,7 @@
                                 r4
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 47
+                            % [A 4 Vocalization Voice] Measure 48
                             {
                                 r4
                             }
@@ -12685,7 +12550,7 @@
                                         }
                                 c'2 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 48
+                            % [A 4 Vocalization Voice] Measure 49
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -12710,7 +12575,7 @@
                                 r4
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 49
+                            % [A 4 Vocalization Voice] Measure 50
                             {
                                 r2.
                                 r8
@@ -12781,14 +12646,14 @@
                             {
                                 r8
                             }
-                            % [A 4 Vocalization Voice] Measure 50
+                            % [A 4 Vocalization Voice] Measure 51
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [A 4 Vocalization Voice] Measure 51
+                            % [A 4 Vocalization Voice] Measure 52
                             {
                                 R1 * 5/8
                                 \stopStaff
@@ -12797,7 +12662,7 @@
                         }
                         % [A 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [A 4 Vocalization Voice] Measure 52
+                            % [A 4 Vocalization Voice] Measure 53
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -12812,7 +12677,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -12840,7 +12705,7 @@
                                 r4
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 53
+                            % [A 4 Vocalization Voice] Measure 54
                             {
                                 r8
                             }
@@ -12898,7 +12763,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 54
+                            % [A 4 Vocalization Voice] Measure 55
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -12921,7 +12786,7 @@
                             {
                                 r4.
                             }
-                            % [A 4 Vocalization Voice] Measure 55
+                            % [A 4 Vocalization Voice] Measure 56
                             {
                                 r4
                             }
@@ -12947,7 +12812,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 56
+                            % [A 4 Vocalization Voice] Measure 57
                             {
                                 c'2. -\accent \p
                                     _ \markup {
@@ -12971,28 +12836,28 @@
                             {
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 57
+                            % [A 4 Vocalization Voice] Measure 58
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [A 4 Vocalization Voice] Measure 58
+                            % [A 4 Vocalization Voice] Measure 59
                             {
                                 R1 * 5/4
                             }
-                            % [A 4 Vocalization Voice] Measure 59
+                            % [A 4 Vocalization Voice] Measure 60
                             {
                                 R1 * 3/4
                             }
-                            % [A 4 Vocalization Voice] Measure 60
+                            % [A 4 Vocalization Voice] Measure 61
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 61
+                            % [A 4 Vocalization Voice] Measure 62
                             {
                                 r8
                             }
@@ -13038,7 +12903,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13048,33 +12913,30 @@
                                                         s-
                                                     }
                                         }
-                                c'4 \repeatTie
-                            }
-                            % [A 4 Vocalization Voice] Measure 62
-                            {
-                                c'4 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
+                                c'2 \repeatTie
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r2
-                                r2
+                                r4.
                             }
                             % [A 4 Vocalization Voice] Measure 63
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [A 4 Vocalization Voice] Measure 64
                             {
                                 r4
                             }
@@ -13083,12 +12945,44 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( [ \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -13112,12 +13006,12 @@
                             {
                                 r8
                             }
-                            % [A 4 Vocalization Voice] Measure 64
+                            % [A 4 Vocalization Voice] Measure 65
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -13126,38 +13020,6 @@
                 }
                 \context PercussionStaff = "A 4 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
@@ -13200,8 +13062,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13279,24 +13141,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 7
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13369,11 +13231,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 10
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13441,12 +13303,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 11
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13464,7 +13326,7 @@
                             % [A 4 Percussion Voice] Measure 12
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \(
+                                b16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
@@ -13478,48 +13340,48 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
                             % [A 4 Percussion Voice] Measure 13
                             \times 8/9 {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -13530,29 +13392,33 @@
                         }
                         % [A 4 Percussion Voice] Material: "guiro_shimmer"
                         {
+                            % [A 4 Percussion Voice] Measure 14
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \( \<
-                                b2 :32 \repeatTie
+                                b2. :32 \( \<
                             }
-                            % [A 4 Percussion Voice] Measure 14
+                            % [A 4 Percussion Voice] Measure 15
                             {
-                                b4 :32 \p \repeatTie
+                                b8 :64 \p \repeatTie
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
-                                r8
+                                r4
                             }
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \(
+                                d'16 -\staccato \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                d'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -13563,7 +13429,7 @@
                         }
                         % [A 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 15
+                            % [A 4 Percussion Voice] Measure 16
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -13574,7 +13440,6 @@
                         }
                         {
                             {
-                                r8
                                 r8
                             }
                         }
@@ -13618,48 +13483,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [A 4 Percussion Voice] Measure 16
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 17
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 19
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 20
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 21
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 22
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 23
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 24
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13681,7 +13544,7 @@
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 24
+                            % [A 4 Percussion Voice] Measure 25
                             {
                                 r8
                             }
@@ -13695,7 +13558,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \parenthesizeDynamic \p \( ^ \markup {
+                                f'4 :32 \parenthesizeDynamic \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -13725,7 +13588,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \(
                             }
-                            % [A 4 Percussion Voice] Measure 25
+                            % [A 4 Percussion Voice] Measure 26
                             {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -13777,8 +13640,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan
-                                g'4 :32 \repeatTie
+                                f'8 :64 \parenthesizeDynamic \p \( \startTextSpan
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13787,7 +13650,7 @@
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 26
+                            % [A 4 Percussion Voice] Measure 27
                             {
                                 r8.
                             }
@@ -13796,7 +13659,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \parenthesizeDynamic \p \(
+                                b16 -\staccato \ppp \(
                                 <> \)
                             }
                         }
@@ -13805,7 +13668,7 @@
                                 r8
                                 r4
                             }
-                            % [A 4 Percussion Voice] Measure 27
+                            % [A 4 Percussion Voice] Measure 28
                             {
                                 r8
                             }
@@ -13850,9 +13713,9 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                                g'4. :32 \p \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13867,7 +13730,7 @@
                         }
                         % [A 4 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [A 4 Percussion Voice] Measure 28
+                            % [A 4 Percussion Voice] Measure 29
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4. :32 \parenthesizeDynamic \p \(
@@ -13918,11 +13781,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
+                                f'8 :64 \( \startTextSpan
                             }
-                            % [A 4 Percussion Voice] Measure 29
+                            % [A 4 Percussion Voice] Measure 30
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -13943,7 +13806,7 @@
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                             }
-                            % [A 4 Percussion Voice] Measure 30
+                            % [A 4 Percussion Voice] Measure 31
                             {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -13959,7 +13822,7 @@
                                 r16
                                 r2.
                             }
-                            % [A 4 Percussion Voice] Measure 31
+                            % [A 4 Percussion Voice] Measure 32
                             {
                                 r4
                             }
@@ -13968,7 +13831,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b16 -\staccato
@@ -13981,7 +13844,7 @@
                             {
                                 r8.
                             }
-                            % [A 4 Percussion Voice] Measure 32
+                            % [A 4 Percussion Voice] Measure 33
                             {
                                 r16
                             }
@@ -13990,7 +13853,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \(
+                                b16 -\staccato \p \(
                                 <> \)
                             }
                         }
@@ -14000,48 +13863,48 @@
                             \times 14/15 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -14085,16 +13948,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 4 Percussion Voice] Measure 33
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 34
                             {
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 35
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14160,12 +14023,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [A 4 Percussion Voice] Measure 35
+                            % [A 4 Percussion Voice] Measure 36
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14185,7 +14048,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \( \<
                             }
-                            % [A 4 Percussion Voice] Measure 36
+                            % [A 4 Percussion Voice] Measure 37
                             {
                                 b2. :32 \repeatTie
                                 b8 :64 \p \repeatTie
@@ -14237,11 +14100,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 37
+                            % [A 4 Percussion Voice] Measure 38
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14262,7 +14125,7 @@
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                             }
-                            % [A 4 Percussion Voice] Measure 38
+                            % [A 4 Percussion Voice] Measure 39
                             {
                                 d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -14315,27 +14178,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [A 4 Percussion Voice] Measure 39
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 40
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 41
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'1 :32 \p \repeatTie \>
                             }
                             % [A 4 Percussion Voice] Measure 42
                             {
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 43
+                            {
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14355,7 +14218,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \( \<
                             }
-                            % [A 4 Percussion Voice] Measure 43
+                            % [A 4 Percussion Voice] Measure 44
                             {
                                 b4 :32 \p \repeatTie
                                 <> \)
@@ -14406,52 +14269,52 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [A 4 Percussion Voice] Measure 44
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 45
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 46
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 47
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 48
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 49
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 50
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 51
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 53
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14470,7 +14333,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \p \(
                             }
-                            % [A 4 Percussion Voice] Measure 53
+                            % [A 4 Percussion Voice] Measure 54
                             {
                                 b4. :32 \repeatTie
                                 <> \)
@@ -14520,11 +14383,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan
+                                f'8 :64 \parenthesizeDynamic \p \( \startTextSpan
                             }
-                            % [A 4 Percussion Voice] Measure 54
+                            % [A 4 Percussion Voice] Measure 55
                             {
-                                g'8 :64 \repeatTie
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14542,45 +14405,45 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
-                            % [A 4 Percussion Voice] Measure 55
+                            % [A 4 Percussion Voice] Measure 56
                             \times 4/5 {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -14597,7 +14460,7 @@
                                 r16
                                 r4
                             }
-                            % [A 4 Percussion Voice] Measure 56
+                            % [A 4 Percussion Voice] Measure 57
                             {
                                 r8
                             }
@@ -14641,8 +14504,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan
-                                g'4. :32 \repeatTie
+                                f'8 :64 \parenthesizeDynamic \p \( \startTextSpan
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14659,7 +14522,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -14669,7 +14532,7 @@
                             {
                                 r4.
                             }
-                            % [A 4 Percussion Voice] Measure 57
+                            % [A 4 Percussion Voice] Measure 58
                             {
                                 r16
                             }
@@ -14678,7 +14541,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \(
+                                b16 -\staccato \mf \(
                                 <> \)
                             }
                         }
@@ -14687,7 +14550,7 @@
                                 r4
                                 r4
                             }
-                            % [A 4 Percussion Voice] Measure 58
+                            % [A 4 Percussion Voice] Measure 59
                             {
                                 r4
                             }
@@ -14700,7 +14563,7 @@
                                 b2 :32 \( \<
                                 b2 :32 \repeatTie
                             }
-                            % [A 4 Percussion Voice] Measure 59
+                            % [A 4 Percussion Voice] Measure 60
                             {
                                 b8 :64 \p \repeatTie
                                 <> \)
@@ -14751,12 +14614,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 60
+                            % [A 4 Percussion Voice] Measure 61
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14765,7 +14628,7 @@
                             }
                         }
                         {
-                            % [A 4 Percussion Voice] Measure 61
+                            % [A 4 Percussion Voice] Measure 62
                             {
                                 r8.
                             }
@@ -14780,8 +14643,7 @@
                         }
                         {
                             {
-                                r8
-                                r8
+                                r4
                             }
                         }
                         % [A 4 Percussion Voice] Material: "shaker_drone"
@@ -14824,16 +14686,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [A 4 Percussion Voice] Measure 62
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 63
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 64
+                            {
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -14850,7 +14713,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \(
+                                b16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -14861,10 +14724,10 @@
                         }
                         % [A 4 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 64
+                            % [A 4 Percussion Voice] Measure 65
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -14872,8 +14735,7 @@
                         }
                         {
                             {
-                                r4
-                                r4
+                                r2..
                             }
                         }
                     }
@@ -14885,26 +14747,6 @@
             \context PerformerStaffGroup = "T 1 Staff Group" <<
                 \context VocalizationStaff = "T 1 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "T 1 Vocalization Voice" {
                         {
                             % [T 1 Vocalization Voice] Measure 1
@@ -15111,26 +14953,26 @@
                             }
                             % [T 1 Vocalization Voice] Measure 11
                             {
-                                R1 * 5/4
-                            }
-                            % [T 1 Vocalization Voice] Measure 13
-                            {
-                                R1 * 5/4
+                                R1 * 15/8
                             }
                             % [T 1 Vocalization Voice] Measure 14
                             {
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
+                                R1 * 3/4
                             }
                             % [T 1 Vocalization Voice] Measure 15
                             {
-                                r2.
-                                r4.
+                                R1 * 5/8
+                            }
+                            % [T 1 Vocalization Voice] Measure 16
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
+                            % [T 1 Vocalization Voice] Measure 17
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -15170,20 +15012,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                            }
-                            % [T 1 Vocalization Voice] Measure 16
-                            {
-                                c'4. -\accent
+                                c'4. \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15195,9 +15024,9 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [T 1 Vocalization Voice] Measure 17
+                            % [T 1 Vocalization Voice] Measure 18
                             {
-                                c'4. -\accent \p
+                                c'2 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15217,12 +15046,12 @@
                         }
                         {
                             {
-                                r4.
+                                r4
                                 r2
                             }
-                            % [T 1 Vocalization Voice] Measure 18
+                            % [T 1 Vocalization Voice] Measure 19
                             {
-                                r4.
+                                r2
                                 r8
                             }
                         }
@@ -15278,7 +15107,7 @@
                                                     }
                                         }
                             }
-                            % [T 1 Vocalization Voice] Measure 19
+                            % [T 1 Vocalization Voice] Measure 20
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -15304,7 +15133,7 @@
                                 r2
                                 r2
                             }
-                            % [T 1 Vocalization Voice] Measure 20
+                            % [T 1 Vocalization Voice] Measure 21
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15313,7 +15142,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 21
+                            % [T 1 Vocalization Voice] Measure 22
                             {
                                 r4
                             }
@@ -15334,7 +15163,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -15361,7 +15190,7 @@
                                 r16
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 22
+                            % [T 1 Vocalization Voice] Measure 23
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15370,7 +15199,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 23
+                            % [T 1 Vocalization Voice] Measure 24
                             {
                                 r4.
                             }
@@ -15428,7 +15257,7 @@
                             {
                                 r8
                             }
-                            % [T 1 Vocalization Voice] Measure 24
+                            % [T 1 Vocalization Voice] Measure 25
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15437,7 +15266,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 25
+                            % [T 1 Vocalization Voice] Measure 26
                             {
                                 r4
                             }
@@ -15507,7 +15336,7 @@
                             {
                                 r8
                             }
-                            % [T 1 Vocalization Voice] Measure 26
+                            % [T 1 Vocalization Voice] Measure 27
                             {
                                 r4.
                             }
@@ -15558,7 +15387,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -15574,7 +15403,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 1 Vocalization Voice] Measure 27
+                            % [T 1 Vocalization Voice] Measure 28
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -15587,7 +15416,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -15606,7 +15435,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 1 Vocalization Voice] Measure 28
+                            % [T 1 Vocalization Voice] Measure 29
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -15669,20 +15498,20 @@
                             {
                                 r8
                             }
-                            % [T 1 Vocalization Voice] Measure 29
+                            % [T 1 Vocalization Voice] Measure 30
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [T 1 Vocalization Voice] Measure 30
+                            % [T 1 Vocalization Voice] Measure 31
                             {
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 31
+                            % [T 1 Vocalization Voice] Measure 32
                             {
                                 r4
                             }
@@ -15752,22 +15581,22 @@
                             {
                                 r8
                             }
-                            % [T 1 Vocalization Voice] Measure 32
+                            % [T 1 Vocalization Voice] Measure 33
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [T 1 Vocalization Voice] Measure 33
+                            % [T 1 Vocalization Voice] Measure 34
                             {
                                 R1 * 5/8
                             }
-                            % [T 1 Vocalization Voice] Measure 34
+                            % [T 1 Vocalization Voice] Measure 35
                             {
                                 R1 * 5/4
                             }
-                            % [T 1 Vocalization Voice] Measure 35
+                            % [T 1 Vocalization Voice] Measure 36
                             {
                                 R1 * 5/8
                                 \stopStaff
@@ -15776,7 +15605,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 1 Vocalization Voice] Measure 36
+                            % [T 1 Vocalization Voice] Measure 37
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -15858,7 +15687,7 @@
                                                     }
                                         }
                             }
-                            % [T 1 Vocalization Voice] Measure 37
+                            % [T 1 Vocalization Voice] Measure 38
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -15882,7 +15711,7 @@
                             {
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 38
+                            % [T 1 Vocalization Voice] Measure 39
                             {
                                 r2.
                             }
@@ -15903,7 +15732,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -15929,7 +15758,7 @@
                             {
                                 r4..
                             }
-                            % [T 1 Vocalization Voice] Measure 39
+                            % [T 1 Vocalization Voice] Measure 40
                             {
                                 r4
                             }
@@ -15987,7 +15816,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [T 1 Vocalization Voice] Measure 40
+                            % [T 1 Vocalization Voice] Measure 41
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -16032,7 +15861,7 @@
                                                     }
                                         }
                             }
-                            % [T 1 Vocalization Voice] Measure 41
+                            % [T 1 Vocalization Voice] Measure 42
                             {
                                 c'2 -\accent
                                     _ \markup {
@@ -16061,7 +15890,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 1 Vocalization Voice] Measure 42
+                            % [T 1 Vocalization Voice] Measure 43
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -16112,7 +15941,7 @@
                             {
                                 r8
                             }
-                            % [T 1 Vocalization Voice] Measure 43
+                            % [T 1 Vocalization Voice] Measure 44
                             {
                                 r4.
                                 r8
@@ -16127,7 +15956,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
-                            % [T 1 Vocalization Voice] Measure 44
+                            % [T 1 Vocalization Voice] Measure 45
                             {
                                 c'4 \repeatTie
                                 <> \)
@@ -16142,28 +15971,28 @@
                                 r8
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 45
+                            % [T 1 Vocalization Voice] Measure 46
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [T 1 Vocalization Voice] Measure 46
+                            % [T 1 Vocalization Voice] Measure 47
                             {
                                 R1 * 5/8
                             }
-                            % [T 1 Vocalization Voice] Measure 47
+                            % [T 1 Vocalization Voice] Measure 48
                             {
                                 R1 * 5/4
                             }
-                            % [T 1 Vocalization Voice] Measure 48
+                            % [T 1 Vocalization Voice] Measure 49
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 49
+                            % [T 1 Vocalization Voice] Measure 50
                             {
                                 r4.
                             }
@@ -16231,7 +16060,7 @@
                             {
                                 r4.
                             }
-                            % [T 1 Vocalization Voice] Measure 50
+                            % [T 1 Vocalization Voice] Measure 51
                             {
                                 r2
                                 r8
@@ -16270,7 +16099,7 @@
                             {
                                 r4.
                             }
-                            % [T 1 Vocalization Voice] Measure 51
+                            % [T 1 Vocalization Voice] Measure 52
                             {
                                 r8
                             }
@@ -16291,7 +16120,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                     ^ \markup {
@@ -16318,7 +16147,7 @@
                                 r8.
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 52
+                            % [T 1 Vocalization Voice] Measure 53
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16330,7 +16159,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 1 Vocalization Voice] Measure 53
+                            % [T 1 Vocalization Voice] Measure 54
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -16382,7 +16211,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [T 1 Vocalization Voice] Measure 54
+                            % [T 1 Vocalization Voice] Measure 55
                             {
                                 c'2. -\accent
                                     _ \markup {
@@ -16395,7 +16224,7 @@
                                                     }
                                         }
                             }
-                            % [T 1 Vocalization Voice] Measure 55
+                            % [T 1 Vocalization Voice] Measure 56
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -16419,7 +16248,7 @@
                                 r4
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 56
+                            % [T 1 Vocalization Voice] Measure 57
                             {
                                 r2.
                             }
@@ -16454,7 +16283,7 @@
                             {
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 57
+                            % [T 1 Vocalization Voice] Measure 58
                             {
                                 r4.
                                 r8
@@ -16506,7 +16335,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -16522,7 +16351,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 1 Vocalization Voice] Measure 58
+                            % [T 1 Vocalization Voice] Measure 59
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -16535,7 +16364,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -16611,14 +16440,14 @@
                             }
                         }
                         {
-                            % [T 1 Vocalization Voice] Measure 59
+                            % [T 1 Vocalization Voice] Measure 60
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
                             }
-                            % [T 1 Vocalization Voice] Measure 60
+                            % [T 1 Vocalization Voice] Measure 61
                             {
                                 R1 * 5/8
                                 \stopStaff
@@ -16627,7 +16456,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 1 Vocalization Voice] Measure 61
+                            % [T 1 Vocalization Voice] Measure 62
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -16685,24 +16514,18 @@
                         }
                         {
                             {
-                                r8
-                                r4
-                            }
-                            % [T 1 Vocalization Voice] Measure 62
-                            {
-                                r8
+                                r2
                             }
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \<
+                                c'2 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -16712,7 +16535,6 @@
                                                         sh-
                                                     }
                                         }
-                                c'4. \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -16722,14 +16544,19 @@
                             }
                         }
                         {
+                            % [T 1 Vocalization Voice] Measure 63
                             {
-                                r8
-                                r2
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 1 Vocalization Voice] Measure 63
+                            % [T 1 Vocalization Voice] Measure 64
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -16744,7 +16571,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -16772,46 +16599,19 @@
                                 r4
                                 r4
                             }
-                            % [T 1 Vocalization Voice] Measure 64
+                            % [T 1 Vocalization Voice] Measure 65
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "T 1 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                percussion
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                perc.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 1 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 1 Percussion Voice" {
                         {
@@ -16844,169 +16644,871 @@
                             }
                             % [T 1 Percussion Voice] Measure 11
                             {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 13
-                            {
-                                R1 * 5/4
+                                R1 * 15/8
                             }
                             % [T 1 Percussion Voice] Measure 14
                             {
-                                R1 * 5/8
+                                R1 * 3/4
                             }
                             % [T 1 Percussion Voice] Measure 15
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 1 Percussion Voice] Measure 16
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [T 1 Percussion Voice] Measure 17
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 1 Percussion Voice] Measure 18
                             {
-                                R1 * 5/8
+                                R1 * 5/4
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 1 Percussion Voice] Measure 19
                             {
-                                R1 * 5/4
+                                r8
                             }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/11 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                e'16 \f \( \> [ ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                e'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
                             % [T 1 Percussion Voice] Measure 20
                             {
-                                R1 * 15/8
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <f a>16 -\accent -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                <a c'>16 -\accent -\accent \mf ]
+                                <> \)
                             }
-                            % [T 1 Percussion Voice] Measure 23
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
+                        {
                             {
-                                R1 * 3/4
+                                \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <b'' d'''>2 :32 \fp \( \> ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            mb.
+                                    }
+                                <b'' d'''>2 :32 \repeatTie
                             }
+                            % [T 1 Percussion Voice] Measure 21
+                            {
+                                <b'' d'''>4. :32 \repeatTie
+                                <b'' d'''>4 :32 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 22
+                            {
+                                <a' c''>4 :32 -\espressivo
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <e' g'>8 :64 \f \( ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                <e' g'>4 :32 \repeatTie
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 23
+                            \times 4/5 {
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                a16 \parenthesizeDynamic \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16
+                                \set stemLeftBeamCount = 2
+                                e'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
+                        {
+                            {
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <b'' e'''>8 :64 \ppp \( ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            mb.
+                                    }
+                                <b'' e'''>4 :32 \repeatTie
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
                             % [T 1 Percussion Voice] Measure 24
                             {
-                                R1 * 15/8
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <a c'>4 :32 \f \( \> ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                <c' e'>4 :32
+                                <e' g'>4 :32 \mf
+                                <> \)
                             }
-                            % [T 1 Percussion Voice] Measure 27
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 25
+                            \times 4/5 {
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <f a>16 -\accent -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                <a c'>16 -\accent -\accent \mf ]
+                                <> \)
+                            }
+                        }
+                        {
                             {
+                                r8
+                                r4
+                            }
+                            % [T 1 Percussion Voice] Measure 26
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/4
                             }
                             % [T 1 Percussion Voice] Measure 28
                             {
                                 R1 * 5/4
                             }
-                            % [T 1 Percussion Voice] Measure 30
+                            % [T 1 Percussion Voice] Measure 29
                             {
-                                R1 * 1
+                                R1 * 5/4
                             }
                             % [T 1 Percussion Voice] Measure 31
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [T 1 Percussion Voice] Measure 32
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 1 Percussion Voice] Measure 33
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 1 Percussion Voice] Measure 34
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 1 Percussion Voice] Measure 35
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 1 Percussion Voice] Measure 36
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 1 Percussion Voice] Measure 37
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 38
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 39
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 40
-                            {
-                                R1 * 1
-                            }
-                            % [T 1 Percussion Voice] Measure 41
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 42
-                            {
-                                R1 * 15/8
-                            }
-                            % [T 1 Percussion Voice] Measure 45
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 46
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 47
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 48
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 49
-                            {
-                                R1 * 5/2
-                            }
-                            % [T 1 Percussion Voice] Measure 51
-                            {
-                                R1 * 15/8
-                            }
-                            % [T 1 Percussion Voice] Measure 54
-                            {
-                                R1 * 3/4
-                            }
-                            % [T 1 Percussion Voice] Measure 55
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 56
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 57
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 1 Percussion Voice] Measure 58
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 59
-                            {
-                                R1 * 3/4
-                            }
-                            % [T 1 Percussion Voice] Measure 60
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 62
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 1 Percussion Voice] Measure 63
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 38
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                f16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <f a>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                g'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 39
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 7/10 {
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <c' e'>4 :32 \f \( \>
+                                <e' g'>4 :32
+                                <f a>4 :32
+                                <a c'>4 :32
+                                <c' e'>4 :32 \mf
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [T 1 Percussion Voice] Measure 40
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [T 1 Percussion Voice] Measure 41
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 1 Percussion Voice] Measure 42
+                            {
+                                r2
+                                r8
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/11 {
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <a c'>16 -\accent -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                <f a>16 -\accent -\accent \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 43
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <f a>4. :32 \f \(
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
+                        {
+                            {
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <c'' ef''>4 :32 \fp \( \> ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            mb.
+                                    }
+                            }
+                            % [T 1 Percussion Voice] Measure 44
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/7 {
+                                <c'' ef''>8 :64 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <ef'' gf''>8 :64 -\espressivo
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <f'' bf''>8 :64 -\espressivo
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <c'' ef''>8 :64 -\espressivo
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <ef'' gf''>8 :64 -\espressivo
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <f'' bf''>8 :64 -\espressivo
+                                \set stemLeftBeamCount = 1
+                                <c''' ef'''>8 :64 -\espressivo ]
+                            }
+                            % [T 1 Percussion Voice] Measure 45
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+                                \once \override Hairpin.circled-tip = ##t
+                                <d'' f''>4 :32 -\espressivo \ppp \>
+                                <a' d''>4 :32 -\espressivo
+                            }
+                            % [T 1 Percussion Voice] Measure 46
+                            {
+                                <a' d''>2. :32 \repeatTie
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2 \!
+                            }
+                            % [T 1 Percussion Voice] Measure 47
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [T 1 Percussion Voice] Measure 48
+                            {
+                                R1 * 5/4
+                            }
+                            % [T 1 Percussion Voice] Measure 49
+                            {
+                                R1 * 5/8
+                            }
+                            % [T 1 Percussion Voice] Measure 50
+                            {
+                                R1 * 5/2
+                            }
+                            % [T 1 Percussion Voice] Measure 52
+                            {
+                                R1 * 15/8
+                            }
+                            % [T 1 Percussion Voice] Measure 55
+                            {
+                                R1 * 3/4
+                            }
+                            % [T 1 Percussion Voice] Measure 56
+                            {
+                                R1 * 5/8
+                            }
+                            % [T 1 Percussion Voice] Measure 57
+                            {
+                                R1 * 5/4
+                            }
+                            % [T 1 Percussion Voice] Measure 58
+                            {
+                                R1 * 5/8
+                            }
+                            % [T 1 Percussion Voice] Measure 59
+                            {
+                                R1 * 5/4
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 60
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 12/13 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                a16 \f \( \> [ ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <f a>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                <c' e'>16 -\accent -\accent \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 61
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                f16 \f \( \> [ ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                g'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 62
+                            {
+                                r8
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
+                        {
+                            {
+                                \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <gs'' b''>8 :64 \( \< ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            mb.
+                                    }
+                                <gs'' b''>2 :32 \repeatTie
+                                <gs'' b''>2 :32 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 63
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/6 {
+                                <gs'' b''>4 :32 \repeatTie
+                                <f'' af''>4 :32 -\espressivo
+                                <e' a'>4 :32 -\espressivo
+                            }
+                            % [T 1 Percussion Voice] Measure 64
+                            {
+                                <d' f'>4. :32 -\espressivo
+                                <d' f'>8 :64 \f \repeatTie
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 65
+                            \times 4/6 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                <a c'>4 :32 \parenthesizeDynamic \f \( \> ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                <c' e'>4 :32
+                                <e' g'>4 :32
+                                <f a>4 :32
+                                <a c'>4 :32
+                                <c' e'>4 :32 \mf
+                                <> \)
                             }
                         }
                     }
@@ -17016,26 +17518,6 @@
             \context PerformerStaffGroup = "T 2 Staff Group" <<
                 \context VocalizationStaff = "T 2 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "T 2 Vocalization Voice" {
                         {
                             % [T 2 Vocalization Voice] Measure 1
@@ -17240,26 +17722,29 @@
                             }
                             % [T 2 Vocalization Voice] Measure 11
                             {
-                                R1 * 5/4
-                            }
-                            % [T 2 Vocalization Voice] Measure 13
-                            {
-                                R1 * 5/4
+                                R1 * 15/8
                             }
                             % [T 2 Vocalization Voice] Measure 14
                             {
-                                R1 * 5/8
+                                R1 * 3/4
                             }
                             % [T 2 Vocalization Voice] Measure 15
                             {
-                                R1 * 5/4
+                                R1 * 5/8
+                            }
+                            % [T 2 Vocalization Voice] Measure 16
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
+                            }
+                            % [T 2 Vocalization Voice] Measure 17
+                            {
+                                r8
                             }
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 2 Vocalization Voice] Measure 16
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -17299,7 +17784,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17311,9 +17796,9 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [T 2 Vocalization Voice] Measure 17
+                            % [T 2 Vocalization Voice] Measure 18
                             {
-                                c'4 -\accent \p
+                                c'4. -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17332,8 +17817,8 @@
                         }
                         {
                             {
-                                r2
-                                r8
+                                r4.
+                                r4
                             }
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
@@ -17345,7 +17830,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17355,22 +17840,21 @@
                                                         sh-
                                                     }
                                         }
-                            }
-                            % [T 2 Vocalization Voice] Measure 18
-                            {
-                                c'4. -\accent
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                c'4 \repeatTie
                             }
                             % [T 2 Vocalization Voice] Measure 19
+                            {
+                                c'2. -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                            }
+                            % [T 2 Vocalization Voice] Measure 20
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -17396,7 +17880,7 @@
                                 r2
                                 r2
                             }
-                            % [T 2 Vocalization Voice] Measure 20
+                            % [T 2 Vocalization Voice] Measure 21
                             {
                                 r8
                             }
@@ -17417,7 +17901,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -17444,7 +17928,7 @@
                                 r8.
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 21
+                            % [T 2 Vocalization Voice] Measure 22
                             {
                                 r4.
                                 r8
@@ -17502,7 +17986,7 @@
                                                     }
                                         }
                             }
-                            % [T 2 Vocalization Voice] Measure 22
+                            % [T 2 Vocalization Voice] Measure 23
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -17546,7 +18030,7 @@
                                                     }
                                         }
                             }
-                            % [T 2 Vocalization Voice] Measure 23
+                            % [T 2 Vocalization Voice] Measure 24
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -17573,7 +18057,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 2 Vocalization Voice] Measure 24
+                            % [T 2 Vocalization Voice] Measure 25
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -17622,7 +18106,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 25
+                            % [T 2 Vocalization Voice] Measure 26
                             {
                                 r4.
                                 r8
@@ -17638,7 +18122,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \<
                             }
-                            % [T 2 Vocalization Voice] Measure 26
+                            % [T 2 Vocalization Voice] Measure 27
                             {
                                 c'4. \repeatTie
                                 c'8 \p \repeatTie
@@ -17653,7 +18137,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Vocalization Voice] Measure 27
+                            % [T 2 Vocalization Voice] Measure 28
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17662,7 +18146,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 28
+                            % [T 2 Vocalization Voice] Measure 29
                             {
                                 r4
                             }
@@ -17732,7 +18216,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Vocalization Voice] Measure 29
+                            % [T 2 Vocalization Voice] Measure 30
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17741,7 +18225,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 30
+                            % [T 2 Vocalization Voice] Measure 31
                             {
                                 r8
                             }
@@ -17810,22 +18294,22 @@
                             {
                                 r4.
                             }
-                            % [T 2 Vocalization Voice] Measure 31
+                            % [T 2 Vocalization Voice] Measure 32
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [T 2 Vocalization Voice] Measure 32
+                            % [T 2 Vocalization Voice] Measure 33
                             {
                                 R1 * 5/4
                             }
-                            % [T 2 Vocalization Voice] Measure 33
+                            % [T 2 Vocalization Voice] Measure 34
                             {
                                 R1 * 5/8
                             }
-                            % [T 2 Vocalization Voice] Measure 34
+                            % [T 2 Vocalization Voice] Measure 35
                             {
                                 R1 * 5/4
                                 \stopStaff
@@ -17834,7 +18318,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 2 Vocalization Voice] Measure 35
+                            % [T 2 Vocalization Voice] Measure 36
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -17886,7 +18370,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [T 2 Vocalization Voice] Measure 36
+                            % [T 2 Vocalization Voice] Measure 37
                             {
                                 c'2 -\accent
                                     _ \markup {
@@ -17912,7 +18396,7 @@
                                 r8
                                 r2
                             }
-                            % [T 2 Vocalization Voice] Measure 37
+                            % [T 2 Vocalization Voice] Measure 38
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17924,7 +18408,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 2 Vocalization Voice] Measure 38
+                            % [T 2 Vocalization Voice] Measure 39
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -17989,7 +18473,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 2 Vocalization Voice] Measure 39
+                            % [T 2 Vocalization Voice] Measure 40
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -18004,7 +18488,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -18085,7 +18569,7 @@
                                                     }
                                         }
                             }
-                            % [T 2 Vocalization Voice] Measure 40
+                            % [T 2 Vocalization Voice] Measure 41
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -18109,7 +18593,7 @@
                                 r8
                                 r2
                             }
-                            % [T 2 Vocalization Voice] Measure 41
+                            % [T 2 Vocalization Voice] Measure 42
                             {
                                 r2.
                             }
@@ -18188,7 +18672,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
-                            % [T 2 Vocalization Voice] Measure 42
+                            % [T 2 Vocalization Voice] Measure 43
                             {
                                 c'4. \repeatTie
                                 c'8 \p \repeatTie
@@ -18203,32 +18687,32 @@
                             {
                                 r8
                             }
-                            % [T 2 Vocalization Voice] Measure 43
+                            % [T 2 Vocalization Voice] Measure 44
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [T 2 Vocalization Voice] Measure 45
-                            {
-                                R1 * 5/4
-                            }
                             % [T 2 Vocalization Voice] Measure 46
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 2 Vocalization Voice] Measure 47
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 2 Vocalization Voice] Measure 48
+                            {
+                                R1 * 5/4
+                            }
+                            % [T 2 Vocalization Voice] Measure 49
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 49
+                            % [T 2 Vocalization Voice] Measure 50
                             {
                                 r2
                                 r8
@@ -18298,7 +18782,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Vocalization Voice] Measure 50
+                            % [T 2 Vocalization Voice] Measure 51
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18310,7 +18794,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 2 Vocalization Voice] Measure 51
+                            % [T 2 Vocalization Voice] Measure 52
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -18354,7 +18838,7 @@
                                 r8
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 52
+                            % [T 2 Vocalization Voice] Measure 53
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18363,7 +18847,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 54
+                            % [T 2 Vocalization Voice] Measure 55
                             {
                                 r4.
                             }
@@ -18414,7 +18898,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -18431,7 +18915,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 2 Vocalization Voice] Measure 55
+                            % [T 2 Vocalization Voice] Measure 56
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -18444,7 +18928,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -18460,7 +18944,7 @@
                                 r4
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 56
+                            % [T 2 Vocalization Voice] Measure 57
                             {
                                 r4.
                             }
@@ -18518,7 +19002,7 @@
                                         }
                                 c'2 \repeatTie
                             }
-                            % [T 2 Vocalization Voice] Measure 57
+                            % [T 2 Vocalization Voice] Measure 58
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -18539,7 +19023,7 @@
                             }
                         }
                         {
-                            % [T 2 Vocalization Voice] Measure 58
+                            % [T 2 Vocalization Voice] Measure 59
                             {
                                 r2.
                                 r4
@@ -18572,7 +19056,7 @@
                             }
                         }
                         {
-                            % [T 2 Vocalization Voice] Measure 59
+                            % [T 2 Vocalization Voice] Measure 60
                             {
                                 r2
                             }
@@ -18623,7 +19107,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -18639,7 +19123,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 2 Vocalization Voice] Measure 60
+                            % [T 2 Vocalization Voice] Measure 61
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -18652,7 +19136,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -18668,7 +19152,7 @@
                                 r4
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 61
+                            % [T 2 Vocalization Voice] Measure 62
                             {
                                 r8
                             }
@@ -18714,7 +19198,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'8 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -18724,11 +19208,12 @@
                                                         s-
                                                     }
                                         }
-                                c'4 \repeatTie
+                                c'2 \repeatTie
+                                c'2 \repeatTie
                             }
-                            % [T 2 Vocalization Voice] Measure 62
+                            % [T 2 Vocalization Voice] Measure 63
                             {
-                                c'2. -\accent
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -18738,7 +19223,6 @@
                                                         s-
                                                     }
                                         }
-                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -18749,241 +19233,871 @@
                         }
                         {
                             {
-                                r4.
+                                r8
+                                r4
                             }
-                            % [T 2 Vocalization Voice] Measure 63
+                            % [T 2 Vocalization Voice] Measure 64
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
+                            }
+                            % [T 2 Vocalization Voice] Measure 65
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "T 2 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                percussion
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                perc.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 2 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 2 Percussion Voice" {
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             % [T 2 Percussion Voice] Measure 1
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'4. :32 \( \<
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 2
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 3
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4. :32 \p \repeatTie \>
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 4
+                            {
+                                c'8 :64 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8 \!
+                                r4.
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \< ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                c'2 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 5
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 6
+                            {
+                                c'2 :32 \repeatTie
+                                c'8 :64 \f \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            % [T 2 Percussion Voice] Measure 7
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'2. :32 \( \<
+                                c'2 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 8
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 9
+                            {
+                                c'8 :64 \mf \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 10
+                            {
+                                r2.
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'2 :32 \( \<
+                            }
+                            % [T 2 Percussion Voice] Measure 11
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 12
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4. :32 \mp \repeatTie \>
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 13
+                            {
+                                c'8 :64 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4 \!
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 14
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'2 :32 \( \<
+                            }
+                            % [T 2 Percussion Voice] Measure 15
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 16
+                            {
+                                c'2 :32 \p \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'4 :32 \( \<
+                            }
+                            % [T 2 Percussion Voice] Measure 17
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 18
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                c'2. :32 \f \repeatTie \>
+                                c'2 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 19
+                            {
+                                c'8 :64 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8 \!
+                                r2
+                            }
+                            % [T 2 Percussion Voice] Measure 20
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                e'2 \f \(
+                                e'2 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 21
+                            {
+                                e'4. \repeatTie
+                                e'4 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 22
+                            {
+                                e'4. \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 23
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                e'8 \f \(
+                                e'4 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 24
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 15/8
-                            }
-                            % [T 2 Percussion Voice] Measure 4
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 5
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 2 Percussion Voice] Measure 6
-                            {
-                                R1 * 5/2
-                            }
-                            % [T 2 Percussion Voice] Measure 8
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 10
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 11
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 13
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 14
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 2 Percussion Voice] Measure 15
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 16
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 2 Percussion Voice] Measure 17
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 18
-                            {
-                                R1 * 5/8
-                            }
-                            % [T 2 Percussion Voice] Measure 19
-                            {
-                                R1 * 5/4
-                            }
-                            % [T 2 Percussion Voice] Measure 20
-                            {
-                                R1 * 15/8
-                            }
-                            % [T 2 Percussion Voice] Measure 23
-                            {
                                 R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
-                            % [T 2 Percussion Voice] Measure 24
+                            % [T 2 Percussion Voice] Measure 25
                             {
-                                R1 * 15/8
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \<
+                                c'4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 26
+                            {
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 27
                             {
-                                R1 * 5/4
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4. :32 \mf \repeatTie \>
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 28
                             {
-                                R1 * 5/4
+                                c'2. :32 \repeatTie
+                                c'8 :64 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4. \!
+                            }
+                            % [T 2 Percussion Voice] Measure 29
+                            {
+                                r4.
+                                r8
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 30
                             {
-                                R1 * 1
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 31
                             {
-                                R1 * 5/8
+                                c'2 :32 \mp \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                             % [T 2 Percussion Voice] Measure 32
                             {
-                                R1 * 5/4
+                                r4.
+                                r8
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 33
                             {
-                                R1 * 5/8
+                                c'2. :32 \repeatTie
+                                c'2 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 34
                             {
-                                R1 * 5/4
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4. :32 \p \repeatTie \>
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 35
                             {
-                                R1 * 5/8
+                                c'2 :32 \repeatTie
+                                c'8 :64 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8 \!
+                                r4.
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 36
                             {
-                                R1 * 5/4
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 37
                             {
-                                R1 * 5/8
+                                c'2 :32 \f \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4.
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 38
                             {
-                                R1 * 5/4
+                                c'4. :32 \repeatTie
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 39
                             {
-                                R1 * 5/8
+                                c'2. :32 \repeatTie
+                                c'8 :64 \mf \repeatTie
+                                <> \)
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                e'4. \f \(
                             }
                             % [T 2 Percussion Voice] Measure 40
                             {
-                                R1 * 1
+                                e'4. \repeatTie
+                                e'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 41
                             {
-                                R1 * 5/4
+                                e'1 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 42
                             {
-                                R1 * 15/8
+                                e'2 \repeatTie
+                                e'8 \repeatTie
+                                <> \)
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'8 :64 \( \<
+                                c'2 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 43
+                            {
+                                c'8 :64 \mp \repeatTie
+                                <> \)
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
+                        {
+                            {
+                                \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <c''' ef'''>4 :32 \fp \( \> ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            vb.
+                                    }
+                                <c''' ef'''>4 :32 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 44
+                            {
+                                <c''' ef'''>4. :32 \repeatTie
+                                <c''' ef'''>4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 45
                             {
-                                R1 * 5/4
+                                <d' f'>4. :32 -\espressivo
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'4 :32 \( \! \< ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
                             }
                             % [T 2 Percussion Voice] Measure 46
                             {
-                                R1 * 5/8
+                                c'4. :32 \p \repeatTie
+                                <> \)
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
+                        {
+                            {
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <a'' d'''>4. :32 \ppp \( ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            vb.
+                                    }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'2 :32 \( \< ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
                             }
                             % [T 2 Percussion Voice] Measure 47
                             {
-                                R1 * 5/4
+                                c'8 :64 \f \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'4 :32 \( \< ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
                             }
                             % [T 2 Percussion Voice] Measure 48
                             {
-                                R1 * 5/8
+                                c'2. :32 \repeatTie
+                                c'2 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 49
                             {
-                                R1 * 5/2
+                                c'8 :64 \mf \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 50
+                            {
+                                r2.
+                                r8
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'4. :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 51
                             {
-                                R1 * 15/8
+                                c'2. :32 \repeatTie
+                                c'2 :32 \repeatTie
                             }
-                            % [T 2 Percussion Voice] Measure 54
+                            % [T 2 Percussion Voice] Measure 52
                             {
-                                R1 * 3/4
+                                c'4. :32 \repeatTie
+                                c'4 :32 \mp \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 53
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/4
                             }
                             % [T 2 Percussion Voice] Measure 55
                             {
-                                R1 * 5/8
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
                             % [T 2 Percussion Voice] Measure 56
                             {
-                                R1 * 5/4
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'4. :32 \( \<
+                                c'4 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 57
                             {
-                                R1 * 5/8
+                                c'2. :32 \repeatTie
+                                c'4 :32 \p \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                             % [T 2 Percussion Voice] Measure 58
                             {
-                                R1 * 5/4
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
                             % [T 2 Percussion Voice] Measure 59
                             {
-                                R1 * 3/4
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                c'2. :32 \( \<
+                                c'2 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 60
                             {
-                                R1 * 5/4
+                                c'2 :32 \repeatTie
+                                c'8 :64 \f \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [T 2 Percussion Voice] Measure 61
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 2 Percussion Voice] Measure 62
                             {
-                                R1 * 5/4
+                                r8
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                e'8 \f \(
+                                e'2 \repeatTie
+                                e'2 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 63
                             {
-                                R1 * 5/4
+                                e'4. \repeatTie
+                                e'4 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 64
+                            {
+                                e'4. \repeatTie
+                                e'8 \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [T 2 Percussion Voice] Measure 65
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -18995,26 +20109,6 @@
             \context PerformerStaffGroup = "T 3 Staff Group" <<
                 \context VocalizationStaff = "T 3 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "T 3 Vocalization Voice" {
                         {
                             % [T 3 Vocalization Voice] Measure 1
@@ -19277,25 +20371,25 @@
                             }
                             % [T 3 Vocalization Voice] Measure 11
                             {
-                                R1 * 5/4
-                            }
-                            % [T 3 Vocalization Voice] Measure 13
-                            {
-                                R1 * 5/4
+                                R1 * 15/8
                             }
                             % [T 3 Vocalization Voice] Measure 14
                             {
-                                R1 * 5/8
+                                R1 * 3/4
                             }
                             % [T 3 Vocalization Voice] Measure 15
                             {
-                                R1 * 5/4
-                                \stopStaff
-                                \startStaff
+                                R1 * 5/8
                             }
                             % [T 3 Vocalization Voice] Measure 16
                             {
-                                r4
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 3 Vocalization Voice] Measure 17
+                            {
+                                r4.
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
@@ -19339,7 +20433,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -19349,7 +20443,19 @@
                                                         sh-
                                                     }
                                         }
-                                c'4 \repeatTie \p
+                            }
+                            % [T 3 Vocalization Voice] Measure 18
+                            {
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -19359,20 +20465,21 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 17
+                            {
+                                r8
+                                r2
+                                r2
+                            }
+                            % [T 3 Vocalization Voice] Measure 19
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
-                            }
-                            % [T 3 Vocalization Voice] Measure 18
-                            {
-                                R1 * 5/8
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 19
+                            % [T 3 Vocalization Voice] Measure 20
                             {
                                 r8
                             }
@@ -19439,7 +20546,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 20
+                            % [T 3 Vocalization Voice] Measure 21
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -19448,7 +20555,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 21
+                            % [T 3 Vocalization Voice] Measure 22
                             {
                                 r4
                             }
@@ -19499,36 +20606,6 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
-                                                    }
-                                        }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                        }
-                        % [T 3 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            % [T 3 Vocalization Voice] Measure 22
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
                                                         sh-
                                                     }
                                         }
@@ -19541,7 +20618,6 @@
                         {
                             {
                                 r16
-                                r4
                                 r4
                             }
                         }
@@ -19561,6 +20637,37 @@
                                                     {
                                                         \vstrut
                                                         s-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                        }
+                        % [T 3 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [T 3 Vocalization Voice] Measure 24
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -19617,7 +20724,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan
                             }
-                            % [T 3 Vocalization Voice] Measure 24
+                            % [T 3 Vocalization Voice] Measure 25
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -19690,7 +20797,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 25
+                            % [T 3 Vocalization Voice] Measure 26
                             {
                                 r4.
                                 r8
@@ -19716,7 +20823,7 @@
                                                     }
                                         }
                             }
-                            % [T 3 Vocalization Voice] Measure 26
+                            % [T 3 Vocalization Voice] Measure 27
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -19741,7 +20848,7 @@
                                 r4
                                 r4
                             }
-                            % [T 3 Vocalization Voice] Measure 27
+                            % [T 3 Vocalization Voice] Measure 28
                             {
                                 r8
                             }
@@ -19762,7 +20869,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -19843,7 +20950,7 @@
                                                     }
                                         }
                             }
-                            % [T 3 Vocalization Voice] Measure 28
+                            % [T 3 Vocalization Voice] Measure 29
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -19868,7 +20975,7 @@
                                 r4
                                 r4
                             }
-                            % [T 3 Vocalization Voice] Measure 29
+                            % [T 3 Vocalization Voice] Measure 30
                             {
                                 r4.
                                 r8
@@ -19926,7 +21033,7 @@
                                                     }
                                         }
                             }
-                            % [T 3 Vocalization Voice] Measure 30
+                            % [T 3 Vocalization Voice] Measure 31
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -19997,7 +21104,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -20013,7 +21120,7 @@
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 3 Vocalization Voice] Measure 31
+                            % [T 3 Vocalization Voice] Measure 32
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -20026,7 +21133,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -20042,24 +21149,24 @@
                                 r4
                                 r4
                             }
-                            % [T 3 Vocalization Voice] Measure 32
+                            % [T 3 Vocalization Voice] Measure 33
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [T 3 Vocalization Voice] Measure 33
+                            % [T 3 Vocalization Voice] Measure 34
                             {
                                 R1 * 5/8
                             }
-                            % [T 3 Vocalization Voice] Measure 34
+                            % [T 3 Vocalization Voice] Measure 35
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 35
+                            % [T 3 Vocalization Voice] Measure 36
                             {
                                 r4
                             }
@@ -20129,14 +21236,14 @@
                             {
                                 r8
                             }
-                            % [T 3 Vocalization Voice] Measure 36
+                            % [T 3 Vocalization Voice] Measure 37
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [T 3 Vocalization Voice] Measure 37
+                            % [T 3 Vocalization Voice] Measure 38
                             {
                                 R1 * 5/8
                                 \stopStaff
@@ -20145,7 +21252,7 @@
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 3 Vocalization Voice] Measure 38
+                            % [T 3 Vocalization Voice] Measure 39
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -20209,7 +21316,7 @@
                                 r8
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 39
+                            % [T 3 Vocalization Voice] Measure 40
                             {
                                 r4
                             }
@@ -20260,7 +21367,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -20277,7 +21384,7 @@
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 3 Vocalization Voice] Measure 40
+                            % [T 3 Vocalization Voice] Measure 41
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -20290,7 +21397,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -20305,7 +21412,7 @@
                                 r8.
                                 r2.
                             }
-                            % [T 3 Vocalization Voice] Measure 41
+                            % [T 3 Vocalization Voice] Measure 42
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -20314,7 +21421,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 42
+                            % [T 3 Vocalization Voice] Measure 43
                             {
                                 r4
                             }
@@ -20362,7 +21469,7 @@
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [T 3 Vocalization Voice] Measure 43
+                            % [T 3 Vocalization Voice] Measure 44
                             {
                                 c'4. \repeatTie
                                 c'8 \p \repeatTie
@@ -20376,7 +21483,7 @@
                             {
                                 r8
                             }
-                            % [T 3 Vocalization Voice] Measure 44
+                            % [T 3 Vocalization Voice] Measure 45
                             {
                                 r8
                             }
@@ -20392,7 +21499,7 @@
                                 c'4 \( \<
                                 c'4 \repeatTie
                             }
-                            % [T 3 Vocalization Voice] Measure 45
+                            % [T 3 Vocalization Voice] Measure 46
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -20408,24 +21515,24 @@
                                 r8
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 46
+                            % [T 3 Vocalization Voice] Measure 47
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [T 3 Vocalization Voice] Measure 47
+                            % [T 3 Vocalization Voice] Measure 48
                             {
                                 R1 * 5/4
                             }
-                            % [T 3 Vocalization Voice] Measure 48
+                            % [T 3 Vocalization Voice] Measure 49
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 49
+                            % [T 3 Vocalization Voice] Measure 50
                             {
                                 r2.
                             }
@@ -20488,7 +21595,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 50
+                            % [T 3 Vocalization Voice] Measure 51
                             {
                                 r2
                                 r8
@@ -20526,7 +21633,7 @@
                             {
                                 r8
                             }
-                            % [T 3 Vocalization Voice] Measure 51
+                            % [T 3 Vocalization Voice] Measure 52
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -20535,7 +21642,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 52
+                            % [T 3 Vocalization Voice] Measure 53
                             {
                                 r4.
                                 r8
@@ -20587,7 +21694,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -20603,7 +21710,7 @@
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [T 3 Vocalization Voice] Measure 53
+                            % [T 3 Vocalization Voice] Measure 54
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -20616,7 +21723,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -20632,7 +21739,7 @@
                                 r4
                                 r4
                             }
-                            % [T 3 Vocalization Voice] Measure 54
+                            % [T 3 Vocalization Voice] Measure 55
                             {
                                 r4
                             }
@@ -20695,7 +21802,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 55
+                            % [T 3 Vocalization Voice] Measure 56
                             {
                                 r4
                             }
@@ -20721,7 +21828,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [T 3 Vocalization Voice] Measure 56
+                            % [T 3 Vocalization Voice] Measure 57
                             {
                                 c'2. -\accent \p
                                     _ \markup {
@@ -20745,7 +21852,7 @@
                             {
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 57
+                            % [T 3 Vocalization Voice] Measure 58
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -20754,7 +21861,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 58
+                            % [T 3 Vocalization Voice] Measure 59
                             {
                                 r4
                             }
@@ -20775,7 +21882,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -20802,20 +21909,20 @@
                                 r4..
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 59
+                            % [T 3 Vocalization Voice] Measure 60
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
                             }
-                            % [T 3 Vocalization Voice] Measure 60
+                            % [T 3 Vocalization Voice] Measure 61
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 61
+                            % [T 3 Vocalization Voice] Measure 62
                             {
                                 r4.
                             }
@@ -20823,7 +21930,6 @@
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -20861,20 +21967,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \startTextSpan \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                            }
-                            % [T 3 Vocalization Voice] Measure 62
-                            {
-                                c'8 -\accent \p
+                                c'4. -\accent \fp \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -20894,11 +21987,18 @@
                         }
                         {
                             {
-                                r8
-                                r2
                                 r2
                             }
                             % [T 3 Vocalization Voice] Measure 63
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 3 Vocalization Voice] Measure 64
                             {
                                 r8
                             }
@@ -20964,46 +22064,19 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 64
+                            % [T 3 Vocalization Voice] Measure 65
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "T 3 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                percussion
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                perc.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 3 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
                         {
@@ -21036,162 +22109,493 @@
                             }
                             % [T 3 Percussion Voice] Measure 11
                             {
-                                R1 * 5/4
-                            }
-                            % [T 3 Percussion Voice] Measure 13
-                            {
-                                R1 * 5/4
+                                R1 * 15/8
                             }
                             % [T 3 Percussion Voice] Measure 14
                             {
-                                R1 * 5/8
+                                R1 * 3/4
                             }
                             % [T 3 Percussion Voice] Measure 15
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 16
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [T 3 Percussion Voice] Measure 17
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 18
                             {
-                                R1 * 5/8
-                            }
-                            % [T 3 Percussion Voice] Measure 19
-                            {
                                 R1 * 5/4
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 19
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 12/13 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                four
+                                                                toms
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                c'16 \f \( \> [ ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                <e' g'>16 -\accent -\accent \mf ]
+                                <> \)
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 20
                             {
-                                R1 * 15/8
+                                r16
                             }
-                            % [T 3 Percussion Voice] Measure 23
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
                             {
-                                R1 * 3/4
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                four
+                                                                toms
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                e'16 \f \( [ ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            perc.
+                                    }
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                g'16 ]
+                                <> \)
                             }
+                        }
+                        {
+                            {
+                                r2
+                                r2
+                            }
+                            % [T 3 Percussion Voice] Measure 21
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 22
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <a c'>4 :32 \f \(
+                                r4
+                                <> \)
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 23
+                            \times 2/3 {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                r8 \( [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <e' g'>8 :64 \parenthesizeDynamic \f
+                                \set stemLeftBeamCount = 1
+                                <a c'>8 :64 ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
                             % [T 3 Percussion Voice] Measure 24
                             {
-                                R1 * 15/8
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                g'16 \parenthesizeDynamic \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                <a c'>16 -\accent -\accent \mf ]
+                                <> \)
                             }
-                            % [T 3 Percussion Voice] Measure 27
+                        }
+                        {
                             {
-                                R1 * 5/4
+                                r8
+                            }
+                            % [T 3 Percussion Voice] Measure 25
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 15/8
                             }
                             % [T 3 Percussion Voice] Measure 28
                             {
                                 R1 * 5/4
                             }
-                            % [T 3 Percussion Voice] Measure 30
+                            % [T 3 Percussion Voice] Measure 29
                             {
-                                R1 * 1
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 31
                             {
-                                R1 * 5/8
+                                R1 * 1
                             }
                             % [T 3 Percussion Voice] Measure 32
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 33
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 34
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 35
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 36
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 37
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 38
                             {
-                                R1 * 5/4
-                            }
-                            % [T 3 Percussion Voice] Measure 39
-                            {
                                 R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 39
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 7/8 {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                r4 \(
+                                <a c'>4 :32 \f \>
+                                <c' e'>4 :32 \mf
+                                r4
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4.
                             }
                             % [T 3 Percussion Voice] Measure 40
                             {
-                                R1 * 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 41
                             {
-                                R1 * 5/4
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 42
                             {
-                                R1 * 15/8
+                                r2
+                                r8
                             }
-                            % [T 3 Percussion Voice] Measure 45
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
                             {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <e' g'>16 -\accent -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                c'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 43
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 10/12 {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                r16 \( [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16 \f \>
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' e'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                g'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 44
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 46
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 47
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 48
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 49
                             {
+                                R1 * 5/8
+                            }
+                            % [T 3 Percussion Voice] Measure 50
+                            {
                                 R1 * 5/2
                             }
-                            % [T 3 Percussion Voice] Measure 51
+                            % [T 3 Percussion Voice] Measure 52
                             {
                                 R1 * 15/8
                             }
-                            % [T 3 Percussion Voice] Measure 54
-                            {
-                                R1 * 3/4
-                            }
                             % [T 3 Percussion Voice] Measure 55
                             {
-                                R1 * 5/8
+                                R1 * 3/4
                             }
                             % [T 3 Percussion Voice] Measure 56
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 57
                             {
-                                R1 * 5/8
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 58
                             {
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [T 3 Percussion Voice] Measure 59
                             {
-                                R1 * 3/4
+                                R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 60
                             {
-                                R1 * 5/4
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
                             }
+                            % [T 3 Percussion Voice] Measure 61
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <a c'>8 :64 \f \( [
+                                \set stemLeftBeamCount = 1
+                                <c' e'>8 :64 ]
+                                <> \)
+                            }
+                        }
+                        {
                             % [T 3 Percussion Voice] Measure 62
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 R1 * 5/4
                             }
                             % [T 3 Percussion Voice] Measure 63
@@ -21199,6 +22603,31 @@
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 65
+                            \times 4/5 {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <e' g'>16 -\accent -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <a c'>16 -\accent -\accent
+                                \set stemLeftBeamCount = 2
+                                a16 \mf ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r2.
                             }
                         }
                     }
@@ -21210,26 +22639,6 @@
             \context PerformerStaffGroup = "B 1 Staff Group" <<
                 \context VocalizationStaff = "B 1 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "B 1 Vocalization Voice" {
                         {
                             % [B 1 Vocalization Voice] Measure 1
@@ -21476,185 +22885,7 @@
                         }
                         {
                             {
-                                r8
-                                r8
-                            }
-                        }
-                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                c'2 \repeatTie
-                            }
-                            % [B 1 Vocalization Voice] Measure 14
-                            {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
                                 r4
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 15
-                            {
-                                r2.
-                                r8
-                            }
-                        }
-                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 16
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5/8
-                            }
-                            % [B 1 Vocalization Voice] Measure 17
-                            {
-                                R1 * 5/4
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            % [B 1 Vocalization Voice] Measure 18
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \( \startTextSpan
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 19
-                            {
-                                r2
                             }
                         }
                         % [B 1 Vocalization Voice] Material: "whispered_inhales"
@@ -21673,10 +22904,22 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
-                                c'4 \repeatTie \p
+                            }
+                            % [B 1 Vocalization Voice] Measure 14
+                            {
+                                c'2. -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -21686,10 +22929,7 @@
                             }
                         }
                         {
-                            {
-                                r4
-                            }
-                            % [B 1 Vocalization Voice] Measure 20
+                            % [B 1 Vocalization Voice] Measure 15
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -21698,9 +22938,9 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 21
+                            % [B 1 Vocalization Voice] Measure 16
                             {
-                                r8
+                                r2.
                             }
                         }
                         % [B 1 Vocalization Voice] Material: "whispered_pointillism"
@@ -21744,9 +22984,184 @@
                         {
                             {
                                 r8.
+                            }
+                            % [B 1 Vocalization Voice] Measure 17
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [B 1 Vocalization Voice] Measure 18
+                            {
+                                R1 * 5/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 1 Vocalization Voice] Measure 19
+                            {
+                                r8
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [B 1 Vocalization Voice] Measure 20
+                            {
+                                r2
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 \repeatTie \p
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
                                 r4
                             }
+                            % [B 1 Vocalization Voice] Measure 21
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
                             % [B 1 Vocalization Voice] Measure 22
+                            {
+                                r8
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r4
+                            }
+                            % [B 1 Vocalization Voice] Measure 23
                             {
                                 r4.
                             }
@@ -21803,7 +23218,7 @@
                                                     }
                                         }
                             }
-                            % [B 1 Vocalization Voice] Measure 23
+                            % [B 1 Vocalization Voice] Measure 24
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -21854,7 +23269,7 @@
                             }
                         }
                         {
-                            % [B 1 Vocalization Voice] Measure 24
+                            % [B 1 Vocalization Voice] Measure 25
                             {
                                 r4
                             }
@@ -21902,12 +23317,12 @@
                                 c'8 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [B 1 Vocalization Voice] Measure 25
+                            % [B 1 Vocalization Voice] Measure 26
                             {
                                 c'4. \repeatTie
                                 c'4 \repeatTie
                             }
-                            % [B 1 Vocalization Voice] Measure 26
+                            % [B 1 Vocalization Voice] Measure 27
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -21922,7 +23337,7 @@
                                 r4
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 27
+                            % [B 1 Vocalization Voice] Measure 28
                             {
                                 r4.
                             }
@@ -21993,24 +23408,24 @@
                                 r8
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 28
+                            % [B 1 Vocalization Voice] Measure 29
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 1 Vocalization Voice] Measure 30
+                            % [B 1 Vocalization Voice] Measure 31
                             {
                                 R1 * 1
                             }
-                            % [B 1 Vocalization Voice] Measure 31
+                            % [B 1 Vocalization Voice] Measure 32
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 32
+                            % [B 1 Vocalization Voice] Measure 33
                             {
                                 r4
                             }
@@ -22077,7 +23492,7 @@
                             {
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 33
+                            % [B 1 Vocalization Voice] Measure 34
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -22086,7 +23501,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 34
+                            % [B 1 Vocalization Voice] Measure 35
                             {
                                 r2.
                                 r8
@@ -22157,7 +23572,7 @@
                             {
                                 r8
                             }
-                            % [B 1 Vocalization Voice] Measure 35
+                            % [B 1 Vocalization Voice] Measure 36
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -22166,7 +23581,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 36
+                            % [B 1 Vocalization Voice] Measure 37
                             {
                                 r8
                             }
@@ -22187,7 +23602,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -22215,7 +23630,7 @@
                                 r2
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 37
+                            % [B 1 Vocalization Voice] Measure 38
                             {
                                 r4.
                             }
@@ -22261,28 +23676,28 @@
                             }
                         }
                         {
-                            % [B 1 Vocalization Voice] Measure 38
+                            % [B 1 Vocalization Voice] Measure 39
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 1 Vocalization Voice] Measure 39
+                            % [B 1 Vocalization Voice] Measure 40
                             {
                                 R1 * 5/8
                             }
-                            % [B 1 Vocalization Voice] Measure 40
+                            % [B 1 Vocalization Voice] Measure 41
                             {
                                 R1 * 1
                             }
-                            % [B 1 Vocalization Voice] Measure 41
+                            % [B 1 Vocalization Voice] Measure 42
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 42
+                            % [B 1 Vocalization Voice] Measure 43
                             {
                                 r8
                             }
@@ -22319,20 +23734,20 @@
                             {
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 43
+                            % [B 1 Vocalization Voice] Measure 44
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 1 Vocalization Voice] Measure 45
+                            % [B 1 Vocalization Voice] Measure 46
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 46
+                            % [B 1 Vocalization Voice] Measure 47
                             {
                                 r4.
                             }
@@ -22395,7 +23810,7 @@
                             }
                         }
                         {
-                            % [B 1 Vocalization Voice] Measure 47
+                            % [B 1 Vocalization Voice] Measure 48
                             {
                                 r2.
                                 r8
@@ -22421,7 +23836,7 @@
                                                     }
                                         }
                             }
-                            % [B 1 Vocalization Voice] Measure 48
+                            % [B 1 Vocalization Voice] Measure 49
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -22446,7 +23861,7 @@
                                 r4
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 49
+                            % [B 1 Vocalization Voice] Measure 50
                             {
                                 r2
                             }
@@ -22467,7 +23882,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                     ^ \markup {
@@ -22497,7 +23912,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [B 1 Vocalization Voice] Measure 50
+                            % [B 1 Vocalization Voice] Measure 51
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -22579,20 +23994,6 @@
                                                     }
                                         }
                             }
-                            % [B 1 Vocalization Voice] Measure 51
-                            {
-                                c'4. -\accent
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                c'4 \repeatTie
-                            }
                             % [B 1 Vocalization Voice] Measure 52
                             {
                                 c'4. -\accent
@@ -22608,6 +24009,20 @@
                                 c'4 \repeatTie
                             }
                             % [B 1 Vocalization Voice] Measure 53
+                            {
+                                c'4. -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 \repeatTie
+                            }
+                            % [B 1 Vocalization Voice] Measure 54
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -22632,7 +24047,7 @@
                                 r4
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 54
+                            % [B 1 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -22644,7 +24059,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 1 Vocalization Voice] Measure 55
+                            % [B 1 Vocalization Voice] Measure 56
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -22659,7 +24074,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -22687,7 +24102,7 @@
                                 r4
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 56
+                            % [B 1 Vocalization Voice] Measure 57
                             {
                                 r4.
                             }
@@ -22774,7 +24189,7 @@
                                                     }
                                         }
                             }
-                            % [B 1 Vocalization Voice] Measure 57
+                            % [B 1 Vocalization Voice] Measure 58
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -22799,7 +24214,7 @@
                                 r8
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 58
+                            % [B 1 Vocalization Voice] Measure 59
                             {
                                 r2
                                 r8
@@ -22870,7 +24285,7 @@
                             {
                                 r4.
                             }
-                            % [B 1 Vocalization Voice] Measure 59
+                            % [B 1 Vocalization Voice] Measure 60
                             {
                                 r8
                             }
@@ -22891,7 +24306,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -22918,12 +24333,12 @@
                                 r16
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 60
+                            % [B 1 Vocalization Voice] Measure 61
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [B 1 Vocalization Voice] Measure 62
                             {
@@ -22932,6 +24347,10 @@
                             % [B 1 Vocalization Voice] Measure 63
                             {
                                 R1 * 5/4
+                            }
+                            % [B 1 Vocalization Voice] Measure 65
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -22940,38 +24359,6 @@
                 }
                 \context PercussionStaff = "B 1 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "B 1 Percussion Voice" {
                         {
                             % [B 1 Percussion Voice] Measure 1
@@ -23034,8 +24421,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23126,12 +24513,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23148,7 +24535,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \(
+                                b16 -\staccato \mf \(
                             }
                             % [B 1 Percussion Voice] Measure 6
                             {
@@ -23200,7 +24587,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \p \( \startTextSpan
+                                f'2 :32 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23303,16 +24690,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 9
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 10
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23329,7 +24716,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -23380,16 +24767,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 11
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 12
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23416,15 +24803,15 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -23433,8 +24820,12 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b2 :32 \( \<
-                                b4 :32 \p \repeatTie
+                                b8 :64 \( \<
+                                b4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 14
+                            {
+                                b4. :32 \p \repeatTie
                                 <> \)
                             }
                         }
@@ -23483,16 +24874,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 14
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 15
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 16
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23515,8 +24906,8 @@
                         }
                         {
                             {
-                                r16
-                                r4
+                                r8.
+                                r8
                             }
                         }
                         % [B 1 Percussion Voice] Material: "shaker_drone"
@@ -23559,27 +24950,26 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 16
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 17
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 19
                             {
-                                g'2. :32 \repeatTie
+                                f'2. :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 20
+                            {
+                                f'2. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23599,7 +24989,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4. :32 \( \<
                             }
-                            % [B 1 Percussion Voice] Measure 20
+                            % [B 1 Percussion Voice] Measure 21
                             {
                                 b4 :32 \p \repeatTie
                                 <> \)
@@ -23650,11 +25040,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 21
+                            % [B 1 Percussion Voice] Measure 22
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23685,7 +25075,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 22
+                            % [B 1 Percussion Voice] Measure 23
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -23701,10 +25091,10 @@
                         }
                         % [B 1 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 23
+                            % [B 1 Percussion Voice] Measure 24
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \parenthesizeDynamic \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -23715,7 +25105,7 @@
                                 r8
                                 r2
                             }
-                            % [B 1 Percussion Voice] Measure 24
+                            % [B 1 Percussion Voice] Measure 25
                             {
                                 r16
                             }
@@ -23724,7 +25114,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -23775,16 +25165,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 25
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 26
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 27
+                            {
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23806,7 +25196,7 @@
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 27
+                            % [B 1 Percussion Voice] Measure 28
                             {
                                 r8
                             }
@@ -23851,29 +25241,29 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 28
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 29
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \p \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 30
                             {
-                                g'1 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \p \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 31
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'1 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 32
+                            {
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23883,25 +25273,25 @@
                         }
                         % [B 1 Percussion Voice] Material: "shaker_repetitions"
                         {
-                            % [B 1 Percussion Voice] Measure 32
+                            % [B 1 Percussion Voice] Measure 33
                             \times 4/6 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \! \< [
+                                f'16 -\staccato \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -23945,18 +25335,18 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 33
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 34
                             {
-                                g'2. :32 \repeatTie
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 35
+                            {
+                                f'2. :32 \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -23971,7 +25361,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [B 1 Percussion Voice] Measure 35
+                            % [B 1 Percussion Voice] Measure 36
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
@@ -23981,7 +25371,7 @@
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 36
+                            % [B 1 Percussion Voice] Measure 37
                             {
                                 r4
                             }
@@ -24001,7 +25391,7 @@
                                 r4.
                                 r2
                             }
-                            % [B 1 Percussion Voice] Measure 37
+                            % [B 1 Percussion Voice] Measure 38
                             {
                                 r8
                             }
@@ -24046,13 +25436,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [B 1 Percussion Voice] Measure 38
+                            % [B 1 Percussion Voice] Measure 39
                             {
-                                g'2 :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'2 :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24069,7 +25459,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -24124,16 +25514,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 39
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 40
                             {
-                                g'1 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 41
+                            {
+                                f'1 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24142,7 +25532,7 @@
                             }
                         }
                         {
-                            % [B 1 Percussion Voice] Measure 41
+                            % [B 1 Percussion Voice] Measure 42
                             {
                                 r8
                             }
@@ -24202,8 +25592,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4. :32 \p \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24218,7 +25608,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 42
+                            % [B 1 Percussion Voice] Measure 43
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -24235,7 +25625,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [B 1 Percussion Voice] Measure 43
+                            % [B 1 Percussion Voice] Measure 44
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -24274,12 +25664,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [B 1 Percussion Voice] Measure 44
+                            % [B 1 Percussion Voice] Measure 45
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24296,7 +25686,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \(
+                                b16 -\staccato \ppp \(
                                 <> \)
                             }
                         }
@@ -24304,7 +25694,7 @@
                             {
                                 r4
                             }
-                            % [B 1 Percussion Voice] Measure 45
+                            % [B 1 Percussion Voice] Measure 46
                             {
                                 r8
                             }
@@ -24348,9 +25738,9 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan [
+                                f'8 :64 \p \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
+                                f'8 :64 \repeatTie ]
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24380,14 +25770,14 @@
                         }
                         % [B 1 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [B 1 Percussion Voice] Measure 46
+                            % [B 1 Percussion Voice] Measure 47
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4. :32 \( \<
                                 b4 :32 \repeatTie
                             }
-                            % [B 1 Percussion Voice] Measure 47
+                            % [B 1 Percussion Voice] Measure 48
                             {
                                 b2 :32 \p \repeatTie
                                 <> \)
@@ -24438,13 +25828,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [B 1 Percussion Voice] Measure 48
+                            % [B 1 Percussion Voice] Measure 49
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24459,7 +25849,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 49
+                            % [B 1 Percussion Voice] Measure 50
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -24517,28 +25907,28 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 1 Percussion Voice] Measure 50
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 51
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \p \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \p \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 53
                             {
-                                g'8 :64 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 54
+                            {
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24554,33 +25944,33 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato \<
+                                f'16 -\staccato \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         % [B 1 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [B 1 Percussion Voice] Measure 54
+                            % [B 1 Percussion Voice] Measure 55
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \parenthesizeDynamic \p \(
@@ -24632,17 +26022,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 55
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 56
                             {
-                                g'2 :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 57
+                            {
+                                f'2 :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24710,46 +26100,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 1 Percussion Voice] Measure 57
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 58
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 59
                             {
-                                g'2. :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 60
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 61
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 62
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 63
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 64
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 65
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -24759,7 +26149,8 @@
                         }
                         {
                             {
-                                r4 \!
+                                r8 \!
+                                r2
                             }
                         }
                     }
@@ -24769,26 +26160,6 @@
             \context PerformerStaffGroup = "B 2 Staff Group" <<
                 \context VocalizationStaff = "B 2 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "B 2 Vocalization Voice" {
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
@@ -24948,7 +26319,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -25058,7 +26429,7 @@
                             }
                             % [B 2 Vocalization Voice] Measure 13
                             {
-                                c'2 -\accent
+                                c'4. -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -25068,7 +26439,7 @@
                                                         s-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -25077,14 +26448,14 @@
                             }
                         }
                         {
+                            % [B 2 Vocalization Voice] Measure 14
                             {
-                                r8
                                 r2
+                                r8
                             }
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [B 2 Vocalization Voice] Measure 14
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
@@ -25092,7 +26463,20 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'8 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                            }
+                            % [B 2 Vocalization Voice] Measure 15
+                            {
+                                c'4. -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -25104,9 +26488,9 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 2 Vocalization Voice] Measure 15
+                            % [B 2 Vocalization Voice] Measure 16
                             {
-                                c'2 -\accent \p
+                                c'4. -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -25126,84 +26510,30 @@
                         }
                         {
                             {
-                                r4
+                                r8
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 16
-                            {
-                                r4.
-                                r8
-                            }
-                        }
-                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \p \( \startTextSpan
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
-                        {
                             % [B 2 Vocalization Voice] Measure 17
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [B 2 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [B 2 Vocalization Voice] Measure 18
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -25213,24 +26543,35 @@
                                                         f-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
                                 r8.
                                 r2
-                                r8
+                                r4
                             }
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -25268,7 +26609,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan [ \<
+                                c'4 -\accent \fp \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -25278,8 +26619,6 @@
                                                         h-
                                                     }
                                         }
-                                \set stemLeftBeamCount = 1
-                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -25288,24 +26627,20 @@
                             }
                         }
                         {
+                            % [B 2 Vocalization Voice] Measure 19
                             {
-                                r8
-                            }
-                            % [B 2 Vocalization Voice] Measure 18
-                            {
-                                r8
+                                r4
                             }
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \<
+                                c'2 -\accent \fp \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -25315,7 +26650,6 @@
                                                         sh-
                                                     }
                                         }
-                                c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -25325,7 +26659,7 @@
                             }
                         }
                         {
-                            % [B 2 Vocalization Voice] Measure 19
+                            % [B 2 Vocalization Voice] Measure 20
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -25334,7 +26668,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 20
+                            % [B 2 Vocalization Voice] Measure 21
                             {
                                 r8
                             }
@@ -25382,20 +26716,20 @@
                                 r8.
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 21
+                            % [B 2 Vocalization Voice] Measure 22
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 2 Vocalization Voice] Measure 23
+                            % [B 2 Vocalization Voice] Measure 24
                             {
                                 R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 24
+                            % [B 2 Vocalization Voice] Measure 25
                             {
                                 r8
                             }
@@ -25443,7 +26777,7 @@
                                 c'4 \( \startTextSpan \<
                                 c'4 \repeatTie
                             }
-                            % [B 2 Vocalization Voice] Measure 25
+                            % [B 2 Vocalization Voice] Measure 26
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -25458,7 +26792,7 @@
                                 r8
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 26
+                            % [B 2 Vocalization Voice] Measure 27
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -25467,7 +26801,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 27
+                            % [B 2 Vocalization Voice] Measure 28
                             {
                                 r4
                             }
@@ -25517,24 +26851,24 @@
                                 r4
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 28
+                            % [B 2 Vocalization Voice] Measure 29
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 2 Vocalization Voice] Measure 30
+                            % [B 2 Vocalization Voice] Measure 31
                             {
                                 R1 * 1
                             }
-                            % [B 2 Vocalization Voice] Measure 31
+                            % [B 2 Vocalization Voice] Measure 32
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 32
+                            % [B 2 Vocalization Voice] Measure 33
                             {
                                 r2
                             }
@@ -25602,7 +26936,7 @@
                             {
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 33
+                            % [B 2 Vocalization Voice] Measure 34
                             {
                                 r4
                             }
@@ -25628,7 +26962,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 2 Vocalization Voice] Measure 34
+                            % [B 2 Vocalization Voice] Measure 35
                             {
                                 c'2. -\accent
                                     _ \markup {
@@ -25653,7 +26987,7 @@
                             {
                                 r8
                             }
-                            % [B 2 Vocalization Voice] Measure 35
+                            % [B 2 Vocalization Voice] Measure 36
                             {
                                 r4.
                                 r8
@@ -25721,7 +27055,7 @@
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 2 Vocalization Voice] Measure 36
+                            % [B 2 Vocalization Voice] Measure 37
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -25750,7 +27084,7 @@
                                 r2
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 37
+                            % [B 2 Vocalization Voice] Measure 38
                             {
                                 r8
                             }
@@ -25819,28 +27153,28 @@
                             {
                                 r8
                             }
-                            % [B 2 Vocalization Voice] Measure 38
+                            % [B 2 Vocalization Voice] Measure 39
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 2 Vocalization Voice] Measure 39
+                            % [B 2 Vocalization Voice] Measure 40
                             {
                                 R1 * 5/8
                             }
-                            % [B 2 Vocalization Voice] Measure 40
+                            % [B 2 Vocalization Voice] Measure 41
                             {
                                 R1 * 1
                             }
-                            % [B 2 Vocalization Voice] Measure 41
+                            % [B 2 Vocalization Voice] Measure 42
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 42
+                            % [B 2 Vocalization Voice] Measure 43
                             {
                                 r4.
                                 r8
@@ -25887,7 +27221,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( \startTextSpan
                             }
-                            % [B 2 Vocalization Voice] Measure 43
+                            % [B 2 Vocalization Voice] Measure 44
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -25902,7 +27236,7 @@
                                 r4
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 44
+                            % [B 2 Vocalization Voice] Measure 45
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -25911,7 +27245,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 45
+                            % [B 2 Vocalization Voice] Measure 46
                             {
                                 r2.
                                 r4
@@ -25969,7 +27303,7 @@
                                                     }
                                         }
                             }
-                            % [B 2 Vocalization Voice] Measure 46
+                            % [B 2 Vocalization Voice] Measure 47
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -26014,7 +27348,7 @@
                                                     }
                                         }
                             }
-                            % [B 2 Vocalization Voice] Measure 47
+                            % [B 2 Vocalization Voice] Measure 48
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -26039,7 +27373,7 @@
                                 r4.
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 48
+                            % [B 2 Vocalization Voice] Measure 49
                             {
                                 r4.
                                 r8
@@ -26107,7 +27441,7 @@
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 2 Vocalization Voice] Measure 49
+                            % [B 2 Vocalization Voice] Measure 50
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -26136,7 +27470,7 @@
                                 r2
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 50
+                            % [B 2 Vocalization Voice] Measure 51
                             {
                                 r2.
                                 r8
@@ -26194,7 +27528,7 @@
                                                     }
                                         }
                             }
-                            % [B 2 Vocalization Voice] Measure 51
+                            % [B 2 Vocalization Voice] Measure 52
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -26218,7 +27552,7 @@
                                 r4
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 52
+                            % [B 2 Vocalization Voice] Measure 53
                             {
                                 r4.
                             }
@@ -26243,7 +27577,7 @@
                                                     }
                                         }
                             }
-                            % [B 2 Vocalization Voice] Measure 53
+                            % [B 2 Vocalization Voice] Measure 54
                             {
                                 c'4. -\accent
                                     _ \markup {
@@ -26257,7 +27591,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 2 Vocalization Voice] Measure 54
+                            % [B 2 Vocalization Voice] Measure 55
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -26281,7 +27615,7 @@
                             {
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 55
+                            % [B 2 Vocalization Voice] Measure 56
                             {
                                 r4.
                                 r8
@@ -26349,7 +27683,7 @@
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 2 Vocalization Voice] Measure 56
+                            % [B 2 Vocalization Voice] Measure 57
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -26381,7 +27715,7 @@
                         }
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [B 2 Vocalization Voice] Measure 57
+                            % [B 2 Vocalization Voice] Measure 58
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -26433,7 +27767,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 2 Vocalization Voice] Measure 58
+                            % [B 2 Vocalization Voice] Measure 59
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -26478,7 +27812,7 @@
                                                     }
                                         }
                             }
-                            % [B 2 Vocalization Voice] Measure 59
+                            % [B 2 Vocalization Voice] Measure 60
                             {
                                 c'2. -\accent
                                     _ \markup {
@@ -26491,7 +27825,7 @@
                                                     }
                                         }
                             }
-                            % [B 2 Vocalization Voice] Measure 60
+                            % [B 2 Vocalization Voice] Measure 61
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -26516,20 +27850,20 @@
                                 r4
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 61
+                            % [B 2 Vocalization Voice] Measure 62
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
-                            }
-                            % [B 2 Vocalization Voice] Measure 62
-                            {
                                 R1 * 5/4
                             }
                             % [B 2 Vocalization Voice] Measure 63
                             {
                                 R1 * 5/4
+                            }
+                            % [B 2 Vocalization Voice] Measure 65
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -26538,38 +27872,6 @@
                 }
                 \context PercussionStaff = "B 2 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
@@ -26581,7 +27883,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \p \( ^ \markup {
+                                f'4 :32 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -26659,18 +27961,18 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 3
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 4
                             {
-                                g'2 :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'2 :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26739,12 +28041,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26762,7 +28064,7 @@
                             % [B 2 Percussion Voice] Measure 6
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -26815,11 +28117,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 7
                             {
-                                g'2 :32 \p \repeatTie
+                                f'2 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26856,7 +28158,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \parenthesizeDynamic \p \( ^ \markup {
+                                f'4 :32 \parenthesizeDynamic \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -26942,7 +28244,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \p \( \startTextSpan
+                                f'4. :32 \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -26959,7 +28261,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -26976,7 +28278,7 @@
                             % [B 2 Percussion Voice] Measure 11
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -27027,12 +28329,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 12
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27045,49 +28347,49 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
                             % [B 2 Percussion Voice] Measure 13
                             \tweak text #tuplet-number::calc-fraction-text
-                            \times 12/13 {
-                                g'16 -\staccato [
+                            \times 10/11 {
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato ]
+                            }
+                            % [B 2 Percussion Voice] Measure 14
+                            {
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -27130,7 +28432,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan
+                                f'4. :32 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27145,18 +28447,15 @@
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 14
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                d'16 -\staccato \(
                                 <> \)
                             }
                         }
                         {
                             {
                                 r16
-                                r4
-                                r4
                             }
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
@@ -27172,23 +28471,26 @@
                         }
                         {
                             {
-                                r8
-                                r8
+                                r4
+                                r4
+                            }
+                            % [B 2 Percussion Voice] Measure 16
+                            {
+                                r4
                             }
                         }
                         % [B 2 Percussion Voice] Material: "guiro_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \(
+                                b16 -\staccato \mf \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8.
+                                r4.
                             }
                         }
                         % [B 2 Percussion Voice] Material: "shaker_drone"
@@ -27231,27 +28533,26 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [B 2 Percussion Voice] Measure 16
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 17
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 19
                             {
-                                g'8 :64 \repeatTie
+                                f'2. :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 20
+                            {
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27317,18 +28618,18 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 20
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 21
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 22
+                            {
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27340,7 +28641,7 @@
                             {
                                 r8
                             }
-                            % [B 2 Percussion Voice] Measure 22
+                            % [B 2 Percussion Voice] Measure 23
                             {
                                 r16
                             }
@@ -27398,11 +28699,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 23
+                            % [B 2 Percussion Voice] Measure 24
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27420,7 +28721,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \(
+                                b16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -27431,10 +28732,10 @@
                         }
                         % [B 2 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 24
+                            % [B 2 Percussion Voice] Measure 25
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -27486,12 +28787,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
+                                f'8 :64 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 25
+                            % [B 2 Percussion Voice] Measure 26
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27500,7 +28801,7 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 26
+                            % [B 2 Percussion Voice] Measure 27
                             {
                                 r8
                             }
@@ -27516,7 +28817,7 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 27
+                            % [B 2 Percussion Voice] Measure 28
                             {
                                 r8
                             }
@@ -27561,33 +28862,33 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 28
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 29
                             {
-                                g'4. :32 \p \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 30
                             {
-                                g'1 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 31
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'1 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 32
                             {
-                                g'4. :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 33
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27601,24 +28902,24 @@
                             \times 6/7 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \! \< [
+                                f'16 -\staccato \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -27662,22 +28963,22 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                            }
-                            % [B 2 Percussion Voice] Measure 33
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 34
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 35
                             {
-                                g'8 :64 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 36
+                            {
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27698,7 +28999,7 @@
                                 b8 :64 \( \<
                                 b4 :32 \repeatTie
                             }
-                            % [B 2 Percussion Voice] Measure 36
+                            % [B 2 Percussion Voice] Measure 37
                             {
                                 b2 :32 \p \repeatTie
                                 <> \)
@@ -27748,8 +29049,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27773,7 +29074,7 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 37
+                            % [B 2 Percussion Voice] Measure 38
                             {
                                 r16
                             }
@@ -27794,7 +29095,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 38
+                            % [B 2 Percussion Voice] Measure 39
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -27848,12 +29149,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [B 2 Percussion Voice] Measure 39
+                            % [B 2 Percussion Voice] Measure 40
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27870,7 +29171,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b16 -\staccato
@@ -27883,7 +29184,7 @@
                             {
                                 r16
                             }
-                            % [B 2 Percussion Voice] Measure 40
+                            % [B 2 Percussion Voice] Measure 41
                             {
                                 r8
                             }
@@ -27927,8 +29228,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \p \( \startTextSpan
-                                g'4. :32 \repeatTie
+                                f'8 :64 \p \( \startTextSpan
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -27950,7 +29251,7 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 41
+                            % [B 2 Percussion Voice] Measure 42
                             {
                                 r4
                             }
@@ -28011,16 +29312,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                            }
-                            % [B 2 Percussion Voice] Measure 42
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 43
                             {
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 44
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28037,7 +29338,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -28050,7 +29351,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [B 2 Percussion Voice] Measure 44
+                            % [B 2 Percussion Voice] Measure 45
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -28089,13 +29390,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [B 2 Percussion Voice] Measure 45
+                            % [B 2 Percussion Voice] Measure 46
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \p \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28104,7 +29405,7 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 46
+                            % [B 2 Percussion Voice] Measure 47
                             {
                                 r8
                             }
@@ -28162,16 +29463,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 2 Percussion Voice] Measure 47
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 48
                             {
-                                g'4. :32 \p \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 49
+                            {
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28199,7 +29500,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 49
+                            % [B 2 Percussion Voice] Measure 50
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -28253,24 +29554,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 50
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 51
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \p \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \p \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 53
+                            {
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28279,7 +29580,7 @@
                             }
                         }
                         {
-                            % [B 2 Percussion Voice] Measure 53
+                            % [B 2 Percussion Voice] Measure 54
                             {
                                 r16 \!
                             }
@@ -28289,36 +29590,36 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         % [B 2 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [B 2 Percussion Voice] Measure 54
+                            % [B 2 Percussion Voice] Measure 55
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \parenthesizeDynamic \p \(
@@ -28370,11 +29671,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 55
+                            % [B 2 Percussion Voice] Measure 56
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28404,7 +29705,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 56
+                            % [B 2 Percussion Voice] Measure 57
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -28456,47 +29757,47 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 2 Percussion Voice] Measure 57
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 58
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 59
                             {
-                                g'2. :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 60
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 61
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 62
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 63
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 64
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 65
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -28506,7 +29807,8 @@
                         }
                         {
                             {
-                                r4 \!
+                                r8 \!
+                                r2
                             }
                         }
                     }
@@ -28516,26 +29818,6 @@
             \context PerformerStaffGroup = "B 3 Staff Group" <<
                 \context VocalizationStaff = "B 3 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "B 3 Vocalization Voice" {
                         {
                             % [B 3 Vocalization Voice] Measure 1
@@ -28843,21 +30125,25 @@
                         }
                         {
                             {
-                                r2
-                                r2
+                                r8
+                                r4
                             }
                             % [B 3 Vocalization Voice] Measure 14
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                R1 * 3/4
+                            }
+                            % [B 3 Vocalization Voice] Measure 15
+                            {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 15
+                            % [B 3 Vocalization Voice] Measure 16
                             {
-                                r4.
+                                r4
                             }
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_inhales"
@@ -28901,7 +30187,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'2. \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -28911,11 +30197,10 @@
                                                         f-
                                                     }
                                         }
-                                c'2 \repeatTie
                             }
-                            % [B 3 Vocalization Voice] Measure 16
+                            % [B 3 Vocalization Voice] Measure 17
                             {
-                                c'4 -\accent \p
+                                c'4. -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -28935,12 +30220,12 @@
                         }
                         {
                             {
-                                r8
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 17
+                            % [B 3 Vocalization Voice] Measure 18
                             {
                                 r2
+                                r8
                             }
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
@@ -29000,13 +30285,13 @@
                         }
                         {
                             {
-                                r8.
+                                r16
                                 r2
                             }
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 18
+                            % [B 3 Vocalization Voice] Measure 19
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -29031,11 +30316,10 @@
                         }
                         {
                             {
-                                r16
-                                r4
-                                r4
+                                r8.
+                                r2
                             }
-                            % [B 3 Vocalization Voice] Measure 19
+                            % [B 3 Vocalization Voice] Measure 20
                             {
                                 r2.
                             }
@@ -29101,7 +30385,7 @@
                             {
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 20
+                            % [B 3 Vocalization Voice] Measure 21
                             {
                                 r4
                             }
@@ -29139,7 +30423,7 @@
                             {
                                 r8
                             }
-                            % [B 3 Vocalization Voice] Measure 21
+                            % [B 3 Vocalization Voice] Measure 22
                             {
                                 r4.
                                 r8
@@ -29207,7 +30491,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 22
+                            % [B 3 Vocalization Voice] Measure 23
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -29236,7 +30520,7 @@
                                 r4
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 23
+                            % [B 3 Vocalization Voice] Measure 24
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -29245,7 +30529,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 24
+                            % [B 3 Vocalization Voice] Measure 25
                             {
                                 r8
                             }
@@ -29338,7 +30622,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
-                            % [B 3 Vocalization Voice] Measure 25
+                            % [B 3 Vocalization Voice] Measure 26
                             {
                                 c'4. \repeatTie
                                 c'4 \p \repeatTie
@@ -29350,7 +30634,7 @@
                             }
                         }
                         {
-                            % [B 3 Vocalization Voice] Measure 26
+                            % [B 3 Vocalization Voice] Measure 27
                             {
                                 r4
                             }
@@ -29416,24 +30700,24 @@
                             }
                         }
                         {
-                            % [B 3 Vocalization Voice] Measure 27
+                            % [B 3 Vocalization Voice] Measure 28
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 3 Vocalization Voice] Measure 28
+                            % [B 3 Vocalization Voice] Measure 29
                             {
                                 R1 * 5/4
                             }
-                            % [B 3 Vocalization Voice] Measure 30
+                            % [B 3 Vocalization Voice] Measure 31
                             {
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 31
+                            % [B 3 Vocalization Voice] Measure 32
                             {
                                 r4.
                                 r8
@@ -29491,7 +30775,7 @@
                                                     }
                                         }
                             }
-                            % [B 3 Vocalization Voice] Measure 32
+                            % [B 3 Vocalization Voice] Measure 33
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -29536,7 +30820,7 @@
                                                     }
                                         }
                             }
-                            % [B 3 Vocalization Voice] Measure 33
+                            % [B 3 Vocalization Voice] Measure 34
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -29563,7 +30847,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 34
+                            % [B 3 Vocalization Voice] Measure 35
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -29606,7 +30890,7 @@
                                 r2
                                 r2
                             }
-                            % [B 3 Vocalization Voice] Measure 35
+                            % [B 3 Vocalization Voice] Measure 36
                             {
                                 r4.
                             }
@@ -29663,7 +30947,7 @@
                                                     }
                                         }
                             }
-                            % [B 3 Vocalization Voice] Measure 36
+                            % [B 3 Vocalization Voice] Measure 37
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -29688,7 +30972,7 @@
                                 r2
                                 r2
                             }
-                            % [B 3 Vocalization Voice] Measure 37
+                            % [B 3 Vocalization Voice] Measure 38
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -29697,7 +30981,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 38
+                            % [B 3 Vocalization Voice] Measure 39
                             {
                                 r4.
                             }
@@ -29768,24 +31052,24 @@
                                 r8
                                 r2
                             }
-                            % [B 3 Vocalization Voice] Measure 39
+                            % [B 3 Vocalization Voice] Measure 40
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [B 3 Vocalization Voice] Measure 40
+                            % [B 3 Vocalization Voice] Measure 41
                             {
                                 R1 * 1
                             }
-                            % [B 3 Vocalization Voice] Measure 41
+                            % [B 3 Vocalization Voice] Measure 42
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 42
+                            % [B 3 Vocalization Voice] Measure 43
                             {
                                 r4.
                             }
@@ -29832,12 +31116,12 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [B 3 Vocalization Voice] Measure 43
+                            % [B 3 Vocalization Voice] Measure 44
                             {
                                 c'4. \repeatTie
                                 c'4 \repeatTie
                             }
-                            % [B 3 Vocalization Voice] Measure 44
+                            % [B 3 Vocalization Voice] Measure 45
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -29852,7 +31136,7 @@
                                 r8
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 45
+                            % [B 3 Vocalization Voice] Measure 46
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -29864,7 +31148,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [B 3 Vocalization Voice] Measure 46
+                            % [B 3 Vocalization Voice] Measure 47
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -29925,7 +31209,7 @@
                                 r8
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 47
+                            % [B 3 Vocalization Voice] Measure 48
                             {
                                 r8
                             }
@@ -30024,7 +31308,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 48
+                            % [B 3 Vocalization Voice] Measure 49
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -30053,7 +31337,7 @@
                                 r4
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 49
+                            % [B 3 Vocalization Voice] Measure 50
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -30065,7 +31349,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [B 3 Vocalization Voice] Measure 50
+                            % [B 3 Vocalization Voice] Measure 51
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -30147,7 +31431,7 @@
                                                     }
                                         }
                             }
-                            % [B 3 Vocalization Voice] Measure 51
+                            % [B 3 Vocalization Voice] Measure 52
                             {
                                 c'4 -\accent \p
                                     _ \markup {
@@ -30235,7 +31519,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 52
+                            % [B 3 Vocalization Voice] Measure 53
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -30266,7 +31550,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 3 Vocalization Voice] Measure 53
+                            % [B 3 Vocalization Voice] Measure 54
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -30295,7 +31579,7 @@
                                 r4
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 54
+                            % [B 3 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -30304,7 +31588,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 55
+                            % [B 3 Vocalization Voice] Measure 56
                             {
                                 r8
                             }
@@ -30370,7 +31654,7 @@
                             }
                         }
                         {
-                            % [B 3 Vocalization Voice] Measure 56
+                            % [B 3 Vocalization Voice] Measure 57
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -30379,7 +31663,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 57
+                            % [B 3 Vocalization Voice] Measure 58
                             {
                                 r8
                             }
@@ -30437,7 +31721,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 3 Vocalization Voice] Measure 58
+                            % [B 3 Vocalization Voice] Measure 59
                             {
                                 c'2 -\accent \p
                                     _ \markup {
@@ -30461,7 +31745,7 @@
                                 r4
                                 r2
                             }
-                            % [B 3 Vocalization Voice] Measure 59
+                            % [B 3 Vocalization Voice] Measure 60
                             {
                                 r2
                             }
@@ -30493,12 +31777,12 @@
                             }
                         }
                         {
-                            % [B 3 Vocalization Voice] Measure 60
+                            % [B 3 Vocalization Voice] Measure 61
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [B 3 Vocalization Voice] Measure 62
                             {
@@ -30507,6 +31791,10 @@
                             % [B 3 Vocalization Voice] Measure 63
                             {
                                 R1 * 5/4
+                            }
+                            % [B 3 Vocalization Voice] Measure 65
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -30515,38 +31803,6 @@
                 }
                 \context PercussionStaff = "B 3 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
@@ -30589,8 +31845,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -30663,13 +31919,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 4
                             {
-                                g'2 :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'2 :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -30737,11 +31993,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
+                                f'8 :64 \( \startTextSpan
                             }
                             % [B 3 Percussion Voice] Measure 5
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -30758,7 +32014,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \parenthesizeDynamic \p \(
+                                b16 -\staccato \ppp \(
                                 <> \)
                             }
                         }
@@ -30772,7 +32028,7 @@
                             % [B 3 Percussion Voice] Measure 6
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b16 -\staccato
@@ -30846,12 +32102,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 8
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -30933,17 +32189,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 10
                             {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 11
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -30960,7 +32216,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -30994,39 +32250,39 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f'16 -\staccato ]
+                            }
+                            % [B 3 Percussion Voice] Measure 14
+                            {
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -31070,11 +32326,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4. :32 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 14
+                            % [B 3 Percussion Voice] Measure 15
                             {
-                                g'4 :32 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31102,21 +32358,9 @@
                         }
                         {
                             {
-                                r16
+                                r8.
                             }
-                        }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
-                        {
-                            % [B 3 Percussion Voice] Measure 15
-                            {
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
-                                <> \)
-                            }
-                        }
-                        {
+                            % [B 3 Percussion Voice] Measure 16
                             {
                                 r8
                             }
@@ -31161,28 +32405,26 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 3 Percussion Voice] Measure 16
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2.. :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 17
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 19
                             {
-                                g'4. :32 \repeatTie
+                                f'2. :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 20
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31203,7 +32445,7 @@
                                 b4 :32 \( \<
                                 b2 :32 \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 20
+                            % [B 3 Percussion Voice] Measure 21
                             {
                                 b8 :64 \p \repeatTie
                                 <> \)
@@ -31253,9 +32495,9 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan [
+                                f'8 :64 \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
+                                f'8 :64 \repeatTie ]
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31267,7 +32509,7 @@
                             {
                                 r8
                             }
-                            % [B 3 Percussion Voice] Measure 21
+                            % [B 3 Percussion Voice] Measure 22
                             {
                                 r16
                             }
@@ -31288,7 +32530,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 22
+                            % [B 3 Percussion Voice] Measure 23
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -31305,7 +32547,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [B 3 Percussion Voice] Measure 23
+                            % [B 3 Percussion Voice] Measure 24
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -31343,7 +32585,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \parenthesizeDynamic \p \( \startTextSpan
+                                f'4. :32 \parenthesizeDynamic \p \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31360,7 +32602,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -31370,7 +32612,7 @@
                             {
                                 r8
                             }
-                            % [B 3 Percussion Voice] Measure 24
+                            % [B 3 Percussion Voice] Measure 25
                             {
                                 r8
                             }
@@ -31415,13 +32657,13 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 25
+                            % [B 3 Percussion Voice] Measure 26
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31436,7 +32678,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [B 3 Percussion Voice] Measure 26
+                            % [B 3 Percussion Voice] Measure 27
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \parenthesizeDynamic \p \(
@@ -31488,11 +32730,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 27
+                            % [B 3 Percussion Voice] Measure 28
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31561,31 +32803,31 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [B 3 Percussion Voice] Measure 28
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 29
                             {
-                                g'4. :32 \p \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 30
                             {
-                                g'1 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 31
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'1 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 32
                             {
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 33
+                            {
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31598,21 +32840,21 @@
                             \times 4/6 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \! \< [
+                                f'16 -\staccato \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -31656,23 +32898,23 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 3 Percussion Voice] Measure 33
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 34
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 35
                             {
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 36
+                            {
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31692,7 +32934,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \( \<
                             }
-                            % [B 3 Percussion Voice] Measure 36
+                            % [B 3 Percussion Voice] Measure 37
                             {
                                 b8 :64 \p \repeatTie
                                 <> \)
@@ -31743,17 +32985,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
-                            }
-                            % [B 3 Percussion Voice] Measure 37
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 38
                             {
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 39
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31784,7 +33026,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 39
+                            % [B 3 Percussion Voice] Measure 40
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -31838,12 +33080,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 40
+                            % [B 3 Percussion Voice] Measure 41
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31860,7 +33102,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -31870,7 +33112,7 @@
                             {
                                 r2
                             }
-                            % [B 3 Percussion Voice] Measure 41
+                            % [B 3 Percussion Voice] Measure 42
                             {
                                 r16
                             }
@@ -31879,7 +33121,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -31931,12 +33173,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 42
+                            % [B 3 Percussion Voice] Measure 43
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -31966,7 +33208,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [B 3 Percussion Voice] Measure 43
+                            % [B 3 Percussion Voice] Measure 44
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -31974,7 +33216,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \parenthesizeDynamic \p \( ^ \markup {
+                                f'4 :32 \parenthesizeDynamic \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -32010,7 +33252,7 @@
                             {
                                 r8.
                             }
-                            % [B 3 Percussion Voice] Measure 44
+                            % [B 3 Percussion Voice] Measure 45
                             {
                                 r8
                             }
@@ -32055,8 +33297,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4 :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -32071,10 +33313,10 @@
                         }
                         % [B 3 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 45
+                            % [B 3 Percussion Voice] Measure 46
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \parenthesizeDynamic \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -32129,12 +33371,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 46
+                            % [B 3 Percussion Voice] Measure 47
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -32156,7 +33398,7 @@
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 47
+                            % [B 3 Percussion Voice] Measure 48
                             {
                                 r8
                             }
@@ -32200,8 +33442,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \parenthesizeDynamic \p \( \startTextSpan
-                                g'2 :32 \repeatTie
+                                f'8 :64 \parenthesizeDynamic \p \( \startTextSpan
+                                f'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -32229,7 +33471,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 48
+                            % [B 3 Percussion Voice] Measure 49
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -32283,27 +33525,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [B 3 Percussion Voice] Measure 49
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 50
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 51
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 53
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -32322,7 +33564,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \p \(
                             }
-                            % [B 3 Percussion Voice] Measure 53
+                            % [B 3 Percussion Voice] Measure 54
                             {
                                 b4. :32 \repeatTie
                                 <> \)
@@ -32336,52 +33578,52 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato \<
+                                f'16 -\staccato \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
-                            % [B 3 Percussion Voice] Measure 54
+                            % [B 3 Percussion Voice] Measure 55
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 10/12 {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -32392,7 +33634,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 55
+                            % [B 3 Percussion Voice] Measure 56
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -32449,11 +33691,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
+                                f'8 :64 \( \startTextSpan
                             }
-                            % [B 3 Percussion Voice] Measure 56
+                            % [B 3 Percussion Voice] Measure 57
                             {
-                                g'8 :64 \repeatTie
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -32471,7 +33713,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \(
+                                b16 -\staccato \mf \(
                                 <> \)
                             }
                         }
@@ -32521,46 +33763,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                            }
-                            % [B 3 Percussion Voice] Measure 57
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 58
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 59
                             {
-                                g'2. :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 60
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 61
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 62
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 63
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 64
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 65
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -32570,7 +33812,8 @@
                         }
                         {
                             {
-                                r4 \!
+                                r8 \!
+                                r2
                             }
                         }
                     }
@@ -32580,26 +33823,6 @@
             \context PerformerStaffGroup = "B 4 Staff Group" <<
                 \context VocalizationStaff = "B 4 Vocalization Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        voice
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        v.
-                    }
                     \context Voice = "B 4 Vocalization Voice" {
                         {
                             % [B 4 Vocalization Voice] Measure 1
@@ -32856,7 +34079,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -32866,7 +34089,7 @@
                                                         sh-
                                                     }
                                         }
-                                c'4. \repeatTie \p
+                                c'4 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -32876,205 +34099,19 @@
                             }
                         }
                         {
-                            {
-                                r8
-                                r2
-                            }
                             % [B 4 Vocalization Voice] Measure 14
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
-                        }
-                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
-                        {
                             % [B 4 Vocalization Voice] Measure 15
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \( \startTextSpan
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
                                 r4.
-                                r4.
-                            }
-                        }
-                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \( \startTextSpan
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            % [B 4 Vocalization Voice] Measure 16
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        ch-
-                                                    }
-                                        }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                                r4
-                            }
-                        }
-                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            % [B 4 Vocalization Voice] Measure 17
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        t-
-                                                    }
-                                        }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r4.
+                                r8
                             }
                         }
                         % [B 4 Vocalization Voice] Material: "whispered_inhales"
@@ -33125,14 +34162,184 @@
                                                 \concat
                                                     {
                                                         \vstrut
+                                                        s-
+                                                    }
+                                        }
+                            }
+                            % [B 4 Vocalization Voice] Measure 16
+                            {
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2.
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [B 4 Vocalization Voice] Measure 17
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                wh.
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \p \( \startTextSpan
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_pointillism"
+                        {
+                            % [B 4 Vocalization Voice] Measure 18
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        ch-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r2
+                            }
+                        }
+                        % [B 4 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'2 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
                                                         f-
                                                     }
                                         }
-                                c'2 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 18
+                            % [B 4 Vocalization Voice] Measure 19
                             {
-                                c'4. -\accent
+                                c'2 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -33155,7 +34362,7 @@
                             {
                                 r8
                             }
-                            % [B 4 Vocalization Voice] Measure 19
+                            % [B 4 Vocalization Voice] Measure 20
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -33167,7 +34374,7 @@
                         }
                         % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [B 4 Vocalization Voice] Measure 20
+                            % [B 4 Vocalization Voice] Measure 21
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -33211,7 +34418,7 @@
                                 r8
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 21
+                            % [B 4 Vocalization Voice] Measure 22
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -33220,7 +34427,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 23
+                            % [B 4 Vocalization Voice] Measure 24
                             {
                                 r4
                             }
@@ -33277,7 +34484,7 @@
                                                     }
                                         }
                             }
-                            % [B 4 Vocalization Voice] Measure 24
+                            % [B 4 Vocalization Voice] Measure 25
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -33344,7 +34551,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [B 4 Vocalization Voice] Measure 25
+                            % [B 4 Vocalization Voice] Measure 26
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -33359,7 +34566,7 @@
                                 r4
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 26
+                            % [B 4 Vocalization Voice] Measure 27
                             {
                                 r4.
                             }
@@ -33405,7 +34612,7 @@
                             }
                         }
                         {
-                            % [B 4 Vocalization Voice] Measure 27
+                            % [B 4 Vocalization Voice] Measure 28
                             {
                                 r2
                             }
@@ -33426,7 +34633,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        t-
                                                     }
                                         }
                                     ^ \markup {
@@ -33453,24 +34660,24 @@
                                 r8.
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 28
+                            % [B 4 Vocalization Voice] Measure 29
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/4
                             }
-                            % [B 4 Vocalization Voice] Measure 30
+                            % [B 4 Vocalization Voice] Measure 31
                             {
                                 R1 * 1
                             }
-                            % [B 4 Vocalization Voice] Measure 31
+                            % [B 4 Vocalization Voice] Measure 32
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 32
+                            % [B 4 Vocalization Voice] Measure 33
                             {
                                 r8
                             }
@@ -33529,7 +34736,7 @@
                                 c'2 \repeatTie
                                 c'2 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 33
+                            % [B 4 Vocalization Voice] Measure 34
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -33552,7 +34759,7 @@
                             {
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 34
+                            % [B 4 Vocalization Voice] Measure 35
                             {
                                 r2
                                 r8
@@ -33591,7 +34798,7 @@
                             {
                                 r4.
                             }
-                            % [B 4 Vocalization Voice] Measure 35
+                            % [B 4 Vocalization Voice] Measure 36
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -33603,7 +34810,7 @@
                         }
                         % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 4 Vocalization Voice] Measure 36
+                            % [B 4 Vocalization Voice] Measure 37
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -33618,7 +34825,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -33699,7 +34906,7 @@
                                                     }
                                         }
                             }
-                            % [B 4 Vocalization Voice] Measure 37
+                            % [B 4 Vocalization Voice] Measure 38
                             {
                                 c'4. -\accent \p
                                     _ \markup {
@@ -33722,7 +34929,7 @@
                             {
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 38
+                            % [B 4 Vocalization Voice] Measure 39
                             {
                                 r4.
                             }
@@ -33761,28 +34968,28 @@
                                 r8
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 39
+                            % [B 4 Vocalization Voice] Measure 40
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [B 4 Vocalization Voice] Measure 40
+                            % [B 4 Vocalization Voice] Measure 41
                             {
                                 R1 * 1
                             }
-                            % [B 4 Vocalization Voice] Measure 41
+                            % [B 4 Vocalization Voice] Measure 42
                             {
                                 R1 * 5/4
                             }
-                            % [B 4 Vocalization Voice] Measure 42
+                            % [B 4 Vocalization Voice] Measure 43
                             {
                                 R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 43
+                            % [B 4 Vocalization Voice] Measure 44
                             {
                                 r8
                             }
@@ -33819,20 +35026,20 @@
                             {
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 44
+                            % [B 4 Vocalization Voice] Measure 45
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
                             }
-                            % [B 4 Vocalization Voice] Measure 45
+                            % [B 4 Vocalization Voice] Measure 46
                             {
                                 R1 * 5/4
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 46
+                            % [B 4 Vocalization Voice] Measure 47
                             {
                                 r8
                             }
@@ -33890,7 +35097,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 47
+                            % [B 4 Vocalization Voice] Measure 48
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -33916,7 +35123,7 @@
                                 r2
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 48
+                            % [B 4 Vocalization Voice] Measure 49
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -33925,7 +35132,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 49
+                            % [B 4 Vocalization Voice] Measure 50
                             {
                                 r4
                             }
@@ -33975,7 +35182,7 @@
                                 r4
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 50
+                            % [B 4 Vocalization Voice] Measure 51
                             {
                                 r8
                             }
@@ -33996,7 +35203,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -34024,7 +35231,7 @@
                                 r2
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 51
+                            % [B 4 Vocalization Voice] Measure 52
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -34033,7 +35240,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 52
+                            % [B 4 Vocalization Voice] Measure 53
                             {
                                 r8
                             }
@@ -34099,7 +35306,7 @@
                             {
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 53
+                            % [B 4 Vocalization Voice] Measure 54
                             {
                                 r4
                             }
@@ -34125,7 +35332,7 @@
                                         }
                                 c'4 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 54
+                            % [B 4 Vocalization Voice] Measure 55
                             {
                                 c'8 -\accent \p
                                     _ \markup {
@@ -34153,7 +35360,7 @@
                         }
                         % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 4 Vocalization Voice] Measure 55
+                            % [B 4 Vocalization Voice] Measure 56
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -34198,7 +35405,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -34216,7 +35423,7 @@
                         }
                         % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 4 Vocalization Voice] Measure 56
+                            % [B 4 Vocalization Voice] Measure 57
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -34229,7 +35436,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -34245,7 +35452,7 @@
                                 r2
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 57
+                            % [B 4 Vocalization Voice] Measure 58
                             {
                                 r4.
                             }
@@ -34308,7 +35515,7 @@
                             }
                         }
                         {
-                            % [B 4 Vocalization Voice] Measure 58
+                            % [B 4 Vocalization Voice] Measure 59
                             {
                                 r2.
                             }
@@ -34346,7 +35553,7 @@
                         }
                         % [B 4 Vocalization Voice] Material: "whispered_pointillism"
                         {
-                            % [B 4 Vocalization Voice] Measure 59
+                            % [B 4 Vocalization Voice] Measure 60
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -34361,7 +35568,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -34388,12 +35595,12 @@
                                 r8.
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 60
+                            % [B 4 Vocalization Voice] Measure 61
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/4
+                                R1 * 5/8
                             }
                             % [B 4 Vocalization Voice] Measure 62
                             {
@@ -34402,6 +35609,10 @@
                             % [B 4 Vocalization Voice] Measure 63
                             {
                                 R1 * 5/4
+                            }
+                            % [B 4 Vocalization Voice] Measure 65
+                            {
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -34410,38 +35621,6 @@
                 }
                 \context PercussionStaff = "B 4 Percussion Staff" {
                     \clef "percussion"
-                    \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                maraca
-                                                castanet
-                                                "wine glass"
-                                            }
-                    }
-                    \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                mc.
-                                                cst.
-                                                w.g.
-                                            }
-                    }
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "guiro_shimmer"
                         {
@@ -34503,12 +35682,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 3
                             {
-                                g'4 :32 \p \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -34594,12 +35773,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 5
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -34616,7 +35795,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -34637,7 +35816,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \p \( ^ \markup {
+                                f'4 :32 \parenthesizeDynamic \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -34715,7 +35894,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan
+                                f'4. :32 \( \startTextSpan
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -34784,16 +35963,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 8
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 9
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -34810,7 +35989,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -34826,7 +36005,7 @@
                             % [B 4 Percussion Voice] Measure 10
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \mf \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -34878,8 +36057,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -34949,11 +36128,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan
+                                f'8 :64 \( \startTextSpan
                             }
                             % [B 4 Percussion Voice] Measure 12
                             {
-                                g'4 :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -34984,21 +36163,21 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \< [
+                                f'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -35042,38 +36221,39 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 14
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 15
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 16
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'1 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 17
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 18
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 19
                             {
-                                g'2 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \repeatTie \>
+                            }
+                            % [B 4 Percussion Voice] Measure 20
+                            {
+                                f'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35096,7 +36276,7 @@
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 20
+                            % [B 4 Percussion Voice] Measure 21
                             {
                                 r4
                                 r16
@@ -35119,7 +36299,7 @@
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 21
+                            % [B 4 Percussion Voice] Measure 22
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \(
@@ -35171,17 +36351,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'4 :32 \repeatTie
-                            }
-                            % [B 4 Percussion Voice] Measure 22
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 23
                             {
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 24
+                            {
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35198,7 +36378,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \(
+                                b16 -\staccato \(
                                 <> \)
                             }
                         }
@@ -35209,10 +36389,10 @@
                         }
                         % [B 4 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 24
+                            % [B 4 Percussion Voice] Measure 25
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -35264,22 +36444,22 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 25
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 26
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \p \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 27
                             {
-                                g'4. :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \p \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 28
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35347,32 +36527,32 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 28
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 29
                             {
-                                g'4. :32 \p \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 30
                             {
-                                g'1 :32 \repeatTie
+                                f'4. :32 \p \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 31
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'4. :32 \repeatTie \>
-                                g'4 :32 \repeatTie
+                                f'1 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 32
                             {
-                                g'2 :32 \repeatTie
-                                g'8 :64 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 33
+                            {
+                                f'2 :32 \repeatTie
+                                f'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35386,60 +36566,60 @@
                             \times 10/11 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( \! \< [
+                                f'16 -\staccato \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                             }
-                            % [B 4 Percussion Voice] Measure 33
+                            % [B 4 Percussion Voice] Measure 34
                             {
-                                g'16 -\staccato [
+                                f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato \p ]
+                                f'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -35483,17 +36663,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 34
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 35
                             {
-                                g'4. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 36
+                            {
+                                f'4. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35508,7 +36688,7 @@
                         }
                         % [B 4 Percussion Voice] Material: "guiro_shimmer"
                         {
-                            % [B 4 Percussion Voice] Measure 36
+                            % [B 4 Percussion Voice] Measure 37
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b2 :32 \parenthesizeDynamic \p \(
@@ -35560,12 +36740,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                                g'2 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
+                                f'2 :32 \repeatTie
                             }
-                            % [B 4 Percussion Voice] Measure 37
+                            % [B 4 Percussion Voice] Measure 38
                             {
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35586,7 +36766,7 @@
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
                             }
-                            % [B 4 Percussion Voice] Measure 38
+                            % [B 4 Percussion Voice] Measure 39
                             {
                                 d'16 -\staccato
                                 <> \)
@@ -35638,8 +36818,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35657,7 +36837,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \(
+                                b16 -\staccato \mf \(
                                 <> \)
                             }
                         }
@@ -35668,10 +36848,10 @@
                         }
                         % [B 4 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 39
+                            % [B 4 Percussion Voice] Measure 40
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \mf \( [
+                                b16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -35685,10 +36865,10 @@
                         }
                         % [B 4 Percussion Voice] Material: "guiro_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 40
+                            % [B 4 Percussion Voice] Measure 41
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \p \( [
+                                b16 -\staccato \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 b16 -\staccato ]
                                 <> \)
@@ -35706,7 +36886,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b2 :32 \( \<
                             }
-                            % [B 4 Percussion Voice] Measure 41
+                            % [B 4 Percussion Voice] Measure 42
                             {
                                 b2 :32 \repeatTie
                                 b8 :64 \p \repeatTie
@@ -35758,12 +36938,12 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'2 :32 \( \startTextSpan \<
+                                f'2 :32 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 42
+                            % [B 4 Percussion Voice] Measure 43
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35772,7 +36952,7 @@
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 43
+                            % [B 4 Percussion Voice] Measure 44
                             {
                                 r8
                             }
@@ -35833,17 +37013,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'8 :64 \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 44
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'8 :64 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 45
                             {
-                                g'2. :32 \repeatTie
-                                g'8 :64 \p \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 46
+                            {
+                                f'2. :32 \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35863,7 +37043,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b4 :32 \( \<
                             }
-                            % [B 4 Percussion Voice] Measure 46
+                            % [B 4 Percussion Voice] Measure 47
                             {
                                 b8 :64 \repeatTie [
                                 \set stemLeftBeamCount = 1
@@ -35878,7 +37058,7 @@
                                 \set stemLeftBeamCount = 1
                                 b8 :64 -\espressivo ]
                             }
-                            % [B 4 Percussion Voice] Measure 47
+                            % [B 4 Percussion Voice] Measure 48
                             {
                                 b4 :32 -\espressivo \p
                                 <> \)
@@ -35929,8 +37109,8 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                                g'4. :32 \p \repeatTie
+                                f'4. :32 \( \startTextSpan \<
+                                f'4. :32 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -35945,7 +37125,7 @@
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 48
+                            % [B 4 Percussion Voice] Measure 49
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -36002,28 +37182,28 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 49
-                            {
-                                g'2. :32 \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 50
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \p \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 51
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'2. :32 \p \repeatTie \>
+                                f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 52
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 53
+                            {
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -36032,7 +37212,7 @@
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 53
+                            % [B 4 Percussion Voice] Measure 54
                             {
                                 r8 \!
                             }
@@ -36054,12 +37234,12 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                g'16 -\staccato \( [
+                                f'16 -\staccato \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16 -\staccato
+                                f'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
+                                f'16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -36069,7 +37249,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 b8 :64 \(
                             }
-                            % [B 4 Percussion Voice] Measure 54
+                            % [B 4 Percussion Voice] Measure 55
                             {
                                 b4. :32 \repeatTie
                                 <> \)
@@ -36120,11 +37300,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4 :32 \( \startTextSpan \<
+                                f'4 :32 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 55
+                            % [B 4 Percussion Voice] Measure 56
                             {
-                                g'8 :64 \p \repeatTie
+                                f'8 :64 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -36152,7 +37332,7 @@
                         }
                         % [B 4 Percussion Voice] Material: "castanet_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 56
+                            % [B 4 Percussion Voice] Measure 57
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
@@ -36208,46 +37388,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \( \startTextSpan \<
-                            }
-                            % [B 4 Percussion Voice] Measure 57
-                            {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 58
                             {
-                                g'2. :32 \p \repeatTie
-                                g'2 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 59
                             {
-                                g'2. :32 \repeatTie
+                                f'2. :32 \p \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 60
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'2. :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 61
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 62
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'2. :32 \repeatTie \>
-                                g'2 :32 \repeatTie
+                                f'2. :32 \repeatTie
+                                f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 63
                             {
-                                g'4. :32 \repeatTie
-                                g'4 :32 \repeatTie
+                                \once \override Hairpin.circled-tip = ##t
+                                f'4. :32 \repeatTie \>
+                                f'4 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 64
                             {
-                                g'4. :32 \repeatTie
+                                f'4. :32 \repeatTie
+                                f'4 :32 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 65
+                            {
+                                f'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -36257,7 +37437,8 @@
                         }
                         {
                             {
-                                r4 \!
+                                r8 \!
+                                r2
                             }
                         }
                     }

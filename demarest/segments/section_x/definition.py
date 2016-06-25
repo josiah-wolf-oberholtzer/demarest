@@ -19,6 +19,14 @@ segment_maker = demarest.SegmentMaker(
 
 ### TIMESPAN MAKERS ###
 
+boundary_timespan_maker = consort.BoundaryTimespanMaker(
+    start_anchor=Right,
+    start_groupings=[2, 3, 1, 2, 3],
+    start_talea=abjad.rhythmmakertools.Talea([3, 4, 5], 8),
+    stop_groupings=[2, 3, 2, 1],
+    stop_talea=abjad.rhythmmakertools.Talea([3, 4, 5], 8),
+    )
+
 cascading_timespan_maker = consort.CascadingTimespanMaker(
     cascade_pattern=[3, -1],
     playing_talea=abjad.rhythmmakertools.Talea([2, 3, 4], 8),
@@ -96,7 +104,7 @@ whispered_melange = consort.MusicSpecifierSequence(
 
 trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
 trio_a_woodblock_fanfare = materials.trio_a_woodblock_fanfare
-trio_b_ratchet_drone = materials.trio_b_ratchet_done
+trio_b_ratchet_drone = materials.trio_b_ratchet_drone
 trio_b_snare_drone = materials.trio_b_snare_drone
 trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
 trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
@@ -219,11 +227,32 @@ segment_maker.add_setting(
 ### TRIO PERCUSSION MUSIC SETTINGS ###
 
 segment_maker.add_setting(
-    timespan_identifier=rare_timespan_identifier.rotate(1),
-    t_b_percussion=trio_b_snare_drone,
+    timespan_maker=droning_timespan_maker,
+    t_2_percussion=trio_b_snare_drone,
     )
 
 segment_maker.add_setting(
+    timespan_maker=droning_timespan_maker,
     timespan_identifier=rare_timespan_identifier.rotate(3),
-    t_b_percussion=trio_b_ratchet_drone,
+    t_1_percussion=trio_a_marimba_shimmer,
+    t_2_percussion=trio_b_vibraphone_shimmer,
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=rare_timespan_identifier.rotate(1),
+    timespan_maker=droning_timespan_maker,
+    t_2_percussion=trio_b_ratchet_drone,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=abjad.new(
+        boundary_timespan_maker,
+        labels=['trio_b_ratchet_drone'],
+        timespan_specifier=consort.TimespanSpecifier(
+            forbid_fusing=True,
+            minimum_duration=abjad.Duration(1, 4),
+            ),
+        ),
+    t_1_percussion=abjad.new(trio_a_woodblock_fanfare, seed=1),
+    t_3_percussion=abjad.new(trio_c_toms_fanfare, seed=2),
     )
