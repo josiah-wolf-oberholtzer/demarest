@@ -16,7 +16,7 @@ unpitched_drone = consort.MusicSpecifier(
         .scale_luminance(0)
         .rotate_hue(-0.6),
     comment='unpitched_drone',
-    label=['unpitched_drone'],
+    labels=['unpitched_drone'],
     rhythm_maker=abjad.rhythmmakertools.NoteRhythmMaker(
         tie_specifier=abjad.rhythmmakertools.TieSpecifier(
             tie_across_divisions=True,

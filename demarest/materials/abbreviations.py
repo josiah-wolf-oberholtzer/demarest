@@ -56,9 +56,9 @@ class UnpitchedPercussion(object):
     WOOD_BLOCK_2 = pitchtools.NamedPitch('A3')
     WOOD_BLOCK_1 = pitchtools.NamedPitch('F3')
 
-    RATCHET = pitchtools.NamedPitch('E4')
+    RATCHET = pitchtools.NamedPitch('G4')
     SNARE = pitchtools.NamedPitch('C4')
-    TAM_TAM = pitchtools.NamedPitch('A3')
+    TAM_TAM = pitchtools.NamedPitch('F3')
 
     TOM_4 = pitchtools.NamedPitch('G4')
     TOM_3 = pitchtools.NamedPitch('E4')
@@ -157,24 +157,24 @@ chordal_register_handler = consort.RegisterHandler(
 ### TRIO A ###
 
 crotales = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('ct.')
-        .pad_around(0.5).box(),
+    instrument_name='crotales',
+    instrument_change_markup=make_text_markup('ct.'),
     instrument_name_markup=make_instrument_markup('crotales'),
     pitch_range=pitchtools.PitchRange("[C5, C7]"),
     short_instrument_name_markup=make_instrument_markup('ct.'),
     )
 
 marimba = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('mb.')
-        .pad_around(0.5).box(),
+    instrument_name='marimba',
+    instrument_change_markup=make_text_markup('mb.'),
     instrument_name_markup=make_instrument_markup('marimba'),
     pitch_range=pitchtools.PitchRange("[F2, C7]"),
     short_instrument_name_markup=make_instrument_markup('mb.'),
     )
 
 trio_a_percussion = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('perc.')
-        .pad_around(0.5).box(),
+    instrument_name='trio_a_percussion',
+    instrument_change_markup=make_text_markup('perc.'),
     instrument_name_markup=make_instrument_column_markup(
         ['five', 'wood', 'blocks']),
     short_instrument_name_markup=make_instrument_column_markup(
@@ -184,16 +184,16 @@ trio_a_percussion = consort.Instrument(
 ### TRIO B ###
 
 vibraphone = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('vb.')
-        .pad_around(0.5).box(),
+    instrument_name='vibraphone',
+    instrument_change_markup=make_text_markup('vb.'),
     instrument_name_markup=make_instrument_markup('vibraphone'),
     pitch_range=pitchtools.PitchRange("[F3, F6]"),
     short_instrument_name_markup=make_instrument_markup('vb.'),
     )
 
 trio_b_percussion = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('perc.')
-        .pad_around(0.5).box(),
+    instrument_name='trio_b_percussion',
+    instrument_change_markup=make_text_markup('perc.'),
     instrument_name_markup=make_instrument_column_markup(
         ['ratchet', 'snare', 'tam-tam']),
     short_instrument_name_markup=make_instrument_column_markup(
@@ -203,8 +203,8 @@ trio_b_percussion = consort.Instrument(
 ### TRIO C ###
 
 tubular_bells = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('t.b.')
-        .pad_around(0.5).box(),
+    instrument_name='tubular_bells',
+    instrument_change_markup=make_text_markup('t.b.'),
     instrument_name_markup=make_instrument_column_markup(
         ['tubular', 'bells']),
     pitch_range=pitchtools.PitchRange("[F3, F5]"),
@@ -212,8 +212,8 @@ tubular_bells = consort.Instrument(
     )
 
 trio_c_percussion = consort.Instrument(
-    instrument_change_markup=markuptools.Markup('perc.')
-        .pad_around(0.5).box(),
+    instrument_name='trio_c_percussion',
+    instrument_change_markup=make_text_markup('perc.'),
     instrument_name_markup=make_instrument_column_markup(
         ['four', 'toms', 'and', 'bass drum']),
     short_instrument_name_markup=make_instrument_column_markup(

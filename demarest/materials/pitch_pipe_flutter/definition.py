@@ -32,7 +32,7 @@ pitch_pipe_flutter = consort.MusicSpecifier(
         .scale_luminance(1)
         .rotate_hue(0.15),
     comment='pitch_pipe_flutter',
-    label=['pitch_pipe_flutter'],
+    labels=['pitch_pipe_flutter'],
     rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
             left_classes=[abjad.Rest],

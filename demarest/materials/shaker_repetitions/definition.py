@@ -12,7 +12,7 @@ shaker_repetitions = abjad.new(
         .scale_luminance(-1)
         .rotate_hue(0.3),
     comment='shaker_repetitions',
-    label=['shaker_repetitions'],
+    labels=['shaker_repetitions'],
     pitch_handler__pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
     rhythm_maker__extra_counts_per_division=[0, 0, 1, 0, 1, 2],
     )

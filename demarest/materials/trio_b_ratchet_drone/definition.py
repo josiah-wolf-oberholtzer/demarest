@@ -5,17 +5,19 @@ from demarest.materials import abbreviations
 from demarest.materials.unpitched_drone.definition import unpitched_drone
 
 
-trio_b_ratchet_done = abjad.new(
+trio_b_ratchet_drone = abjad.new(
     unpitched_drone,
-    attachment_handler__tremoli=None,
     attachment_handler__dynamics=consort.DynamicExpression(
         dynamic_tokens='f',
         ),
+    attachment_handler__staff_lines_spanner=abjad.spannertools.StaffLinesSpanner(
+        lines=[-4, 0, 4]),
+    attachment_handler__tremoli=None,
     color=consort.Color.from_x11('Lavender')
         .scale_luminance(-0.5)
         .rotate_hue(0.6),
-    comment='trio_b_ratchet_done',
-    label=['trio_b_ratchet_done'],
+    comment='trio_b_ratchet_drone',
+    labels=['trio_b_ratchet_drone'],
     instrument=abbreviations.trio_b_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.RATCHET,

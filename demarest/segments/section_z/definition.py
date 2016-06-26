@@ -96,7 +96,7 @@ pitch_pipe_melange = consort.MusicSpecifierSequence(
 
 trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
 trio_a_crotales_tranquilo = materials.trio_a_crotales_tranquilo
-trio_b_ratchet_drone = materials.trio_b_ratchet_done
+trio_b_ratchet_drone = materials.trio_b_ratchet_drone
 trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
 trio_b_tam_tam_tranquilo = materials.trio_b_tam_tam_tranquilo
 trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer

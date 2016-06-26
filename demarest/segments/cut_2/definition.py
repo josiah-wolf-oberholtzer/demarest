@@ -19,14 +19,14 @@ segment_maker = demarest.SegmentMaker(
 segment_maker.add_setting(
     timespan_identifier=[3, -1, 2, -1, 1],
     t_1_percussion=abjad.new(
-        demarest.materials.pitched_agitato,
+        demarest.materials.trio_a_marimba_agitato,
         seed=4,
         ),
     )
 segment_maker.add_setting(
     timespan_identifier=[-1, 3, -1, 2],
     t_2_percussion=abjad.new(
-        demarest.materials.pitched_agitato,
+        demarest.materials.trio_b_vibraphone_agitato,
         seed=5,
         ),
     )

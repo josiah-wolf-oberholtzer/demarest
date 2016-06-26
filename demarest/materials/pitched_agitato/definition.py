@@ -33,7 +33,7 @@ pitched_agitato = consort.MusicSpecifier(
             ),
         clef_spanner=consort.ClefSpanner('treble'),
         comment='pitched_agitato',
-        label=['pitched_agitato'],
+        labels=['pitched_agitato'],
         dynamics=consort.DynamicExpression(
             division_period=2,
             dynamic_tokens='mf mp fff',

@@ -121,7 +121,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
         .scale_luminance(-1)
         .rotate_hue(0.6),
     comment='trio_a_woodblock_fanfare',
-    label=['trio_a_woodblock_fanfare'],
+    labels=['trio_a_woodblock_fanfare'],
     instrument=abbreviations.trio_a_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(

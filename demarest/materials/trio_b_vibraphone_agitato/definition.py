@@ -8,6 +8,6 @@ from demarest.materials.pitched_agitato.definition \
 trio_b_vibraphone_agitato = abjad.new(
     pitched_agitato,
     comment='trio_b_vibraphone_agitato',
-    label=['trio_b_vibraphone_agitato'],
+    labels=['trio_b_vibraphone_agitato'],
     instrument=abbreviations.vibraphone,
     )

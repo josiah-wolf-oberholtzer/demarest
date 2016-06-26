@@ -16,7 +16,7 @@ shaker_drone = abjad.new(
         .scale_luminance(0)
         .rotate_hue(0.3),
     comment='shaker_drone',
-    label=['shaker_drone'],
+    labels=['shaker_drone'],
     minimum_phrase_duration=abjad.Duration(1, 4),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,

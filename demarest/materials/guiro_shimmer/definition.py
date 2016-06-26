@@ -18,7 +18,7 @@ guiro_shimmer = abjad.new(
         .scale_luminance(0)
         .rotate_hue(-0.15),
     comment='guiro_shimmer',
-    label=['guiro_shimmer'],
+    labels=['guiro_shimmer'],
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.GUIRO,
         ),

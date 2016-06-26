@@ -13,7 +13,7 @@ pitched_shimmer = abjad.new(
         .scale_luminance(0)
         .rotate_hue(0.5),
     comment='pitched_shimmer',
-    label=['pitched_shimmer'],
+    labels=['pitched_shimmer'],
     pitch_handler=abbreviations.pitch_handler,
     register_handler=abbreviations.chordal_register_handler,
     )

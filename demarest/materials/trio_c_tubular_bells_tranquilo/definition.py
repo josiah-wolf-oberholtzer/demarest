@@ -8,6 +8,6 @@ from demarest.materials.pitched_tranquilo.definition \
 trio_c_tubular_bells_tranquilo = abjad.new(
     pitched_tranquilo,
     comment='trio_c_tubular_bells_tranquilo',
-    label=['trio_c_tubular_bells_tranquilo'],
+    labels=['trio_c_tubular_bells_tranquilo'],
     instrument=abbreviations.tubular_bells,
     )

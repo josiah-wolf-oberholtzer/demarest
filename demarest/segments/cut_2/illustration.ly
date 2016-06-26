@@ -1,7 +1,7 @@
-% package "abjad" @ bfda186 [josiah/demarest] (2016-06-19 18:29:37)
+% package "abjad" @ 39106c4 [josiah/demarest] (2016-06-25 19:56:38)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 1027c13 [master] (2016-06-20 00:08:47)
-% package "demarest" @ 7966778 [master] (2016-06-20 00:33:30)
+% package "consort" @ 8b7af45 [master] (2016-06-25 19:49:07)
+% package "demarest" @ d06ec2e [master] (2016-06-25 01:12:21)
 
 \version "2.19.41"
 \language "english"
@@ -13,7 +13,7 @@
 
 \score {
     \context Score = "Demarest Score" \with {
-        currentBarNumber = #167
+        currentBarNumber = #173
     } <<
         \tag #'time
         \repeat volta 2
@@ -68,18 +68,38 @@
                     }
                     \context Voice = "A 1 Vocalization Voice" {
                         {
-                            % [A 1 Vocalization Voice] Measure 167
+                            % [A 1 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 1 Vocalization Voice] Measure 168
+                            % [A 1 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 1 Vocalization Voice] Measure 170
+                            % [A 1 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -102,8 +122,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -118,25 +138,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "A 1 Percussion Voice" {
                         {
-                            % [A 1 Percussion Voice] Measure 167
+                            % [A 1 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 1 Percussion Voice] Measure 168
+                            % [A 1 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 1 Percussion Voice] Measure 170
+                            % [A 1 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -173,18 +225,38 @@
                     }
                     \context Voice = "A 2 Vocalization Voice" {
                         {
-                            % [A 2 Vocalization Voice] Measure 167
+                            % [A 2 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 2 Vocalization Voice] Measure 168
+                            % [A 2 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 2 Vocalization Voice] Measure 170
+                            % [A 2 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -207,8 +279,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -223,25 +295,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "A 2 Percussion Voice" {
                         {
-                            % [A 2 Percussion Voice] Measure 167
+                            % [A 2 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 2 Percussion Voice] Measure 168
+                            % [A 2 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 2 Percussion Voice] Measure 170
+                            % [A 2 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -278,18 +382,38 @@
                     }
                     \context Voice = "A 3 Vocalization Voice" {
                         {
-                            % [A 3 Vocalization Voice] Measure 167
+                            % [A 3 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 3 Vocalization Voice] Measure 168
+                            % [A 3 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 3 Vocalization Voice] Measure 170
+                            % [A 3 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -312,8 +436,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -328,25 +452,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "A 3 Percussion Voice" {
                         {
-                            % [A 3 Percussion Voice] Measure 167
+                            % [A 3 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 3 Percussion Voice] Measure 168
+                            % [A 3 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 3 Percussion Voice] Measure 170
+                            % [A 3 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -383,18 +539,38 @@
                     }
                     \context Voice = "A 4 Vocalization Voice" {
                         {
-                            % [A 4 Vocalization Voice] Measure 167
+                            % [A 4 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 4 Vocalization Voice] Measure 168
+                            % [A 4 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 4 Vocalization Voice] Measure 170
+                            % [A 4 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -417,8 +593,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -433,25 +609,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "A 4 Percussion Voice" {
                         {
-                            % [A 4 Percussion Voice] Measure 167
+                            % [A 4 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [A 4 Percussion Voice] Measure 168
+                            % [A 4 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [A 4 Percussion Voice] Measure 170
+                            % [A 4 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -490,18 +698,38 @@
                     }
                     \context Voice = "T 1 Vocalization Voice" {
                         {
-                            % [T 1 Vocalization Voice] Measure 167
+                            % [T 1 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [T 1 Vocalization Voice] Measure 168
+                            % [T 1 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [T 1 Vocalization Voice] Measure 170
+                            % [T 1 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -511,44 +739,38 @@
                     }
                 }
                 \repeat volta 2
-                \context PercussionStaff = "T 1 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                percussion
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                perc.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 1 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 1 Percussion Voice" {
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_agitato"
                         {
-                            % [T 1 Percussion Voice] Measure 167
+                            % [T 1 Percussion Voice] Measure 173
                             {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <e'' g''>2. :32 \f \( \>
+                                <e''' g'''>2. :32 \f \( \>
                             }
-                            % [T 1 Percussion Voice] Measure 168
+                            % [T 1 Percussion Voice] Measure 174
                             \times 2/3 {
                                 r16 [
                                 \set stemLeftBeamCount = 2
@@ -575,16 +797,37 @@
                                 r4
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_agitato"
                         {
-                            % [T 1 Percussion Voice] Measure 169
+                            % [T 1 Percussion Voice] Measure 175
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 5/6 {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <g' c''>16 \f \( \> [
+                                <g'' c'''>16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
-                                fs'16 -\staccato
+                                fs''16 -\staccato
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 r8
@@ -608,7 +851,7 @@
                                 a'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                c''16 -\staccato
+                                c'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 <d' g'>16 \mf ]
                                 <> \)
@@ -616,16 +859,37 @@
                             }
                         }
                         {
-                            % [T 1 Percussion Voice] Measure 170
+                            % [T 1 Percussion Voice] Measure 176
                             {
                                 r4.
                             }
                         }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_agitato"
                         {
                             {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                ef'16 -\accent -\staccato \f \( \> [
+                                ef''16 -\accent -\staccato \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -634,7 +898,7 @@
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                e''16 -\accent -\staccato
+                                e'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -674,18 +938,38 @@
                     }
                     \context Voice = "T 2 Vocalization Voice" {
                         {
-                            % [T 2 Vocalization Voice] Measure 167
+                            % [T 2 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [T 2 Vocalization Voice] Measure 168
+                            % [T 2 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [T 2 Vocalization Voice] Measure 170
+                            % [T 2 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -695,47 +979,61 @@
                     }
                 }
                 \repeat volta 2
-                \context PercussionStaff = "T 2 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                percussion
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                perc.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 2 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 2 Percussion Voice" {
                         {
-                            % [T 2 Percussion Voice] Measure 167
+                            % [T 2 Percussion Voice] Measure 173
                             {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
                                 r4..
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_agitato"
                         {
                             {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                a'16 -\accent -\staccato \f \( [
+                                a''16 -\accent -\staccato \f \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b'16 -\staccato
@@ -750,19 +1048,40 @@
                                 r8
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_agitato"
                         {
-                            % [T 2 Percussion Voice] Measure 168
+                            % [T 2 Percussion Voice] Measure 174
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 10/11 {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                b'16 -\accent -\staccato \parenthesizeDynamic \f \( \> [
+                                b''16 -\accent -\staccato \parenthesizeDynamic \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a'16 -\accent -\staccato
+                                a''16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b'16 -\staccato
@@ -785,9 +1104,9 @@
                                 \set stemRightBeamCount = 2
                                 <fs' b'>16
                                 \set stemLeftBeamCount = 2
-                                ef''16 -\staccato ]
+                                ef'16 -\staccato ]
                             }
-                            % [T 2 Percussion Voice] Measure 169
+                            % [T 2 Percussion Voice] Measure 175
                             {
                                 <a' c''>4 :32 \mf
                                 <> \)
@@ -800,13 +1119,34 @@
                                 r4
                             }
                         }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_agitato"
                         {
-                            % [T 2 Percussion Voice] Measure 170
+                            % [T 2 Percussion Voice] Measure 176
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 12/13 {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <c' f'>16 \f \( \> [
+                                <c'' f''>16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d''16 -\staccato
@@ -833,7 +1173,7 @@
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d''16 -\accent -\staccato
+                                d'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 <gs' cs''>16
@@ -873,18 +1213,38 @@
                     }
                     \context Voice = "T 3 Vocalization Voice" {
                         {
-                            % [T 3 Vocalization Voice] Measure 167
+                            % [T 3 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [T 3 Vocalization Voice] Measure 168
+                            % [T 3 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [T 3 Vocalization Voice] Measure 170
+                            % [T 3 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -894,60 +1254,64 @@
                     }
                 }
                 \repeat volta 2
-                \context PercussionStaff = "T 3 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                percussion
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                perc.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 3 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
-                            % [T 3 Percussion Voice] Measure 167
+                            % [T 3 Percussion Voice] Measure 173
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                four
+                                                                toms
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                b16 \f \( \> [
+                                r16 \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <g b>16 -\accent -\accent
+                                c'16 \f \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g16
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                f'16
+                                a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <b d'>16 -\accent -\accent
+                                g'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
-                                g16 \mf ]
+                                e'16 \mf ]
                                 <> \)
                             }
                         }
@@ -958,86 +1322,95 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
-                            % [T 3 Percussion Voice] Measure 168
-                            {
+                            % [T 3 Percussion Voice] Measure 174
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                four
+                                                                toms
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                f'16 \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <d' f'>16 -\accent -\accent
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <g b>16 -\accent -\accent
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 2
-                                <b d'>16 -\accent -\accent \mf ]
+                                <e' g'>4 :32 \f \(
+                                r4
                                 <> \)
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 169
+                            % [T 3 Percussion Voice] Measure 175
                             {
                                 r4.
+                                r8
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                four
+                                                                toms
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <b d'>4 :32 \f \( \>
+                                <c' e'>8 :64 \parenthesizeDynamic \f \( \>
                             }
-                            % [T 3 Percussion Voice] Measure 170
+                            % [T 3 Percussion Voice] Measure 176
                             {
-                                g16 [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                b16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <b d'>16 -\accent -\accent
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <d' f'>16 -\accent -\accent
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                d'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <g b>16 -\accent -\accent
-                                \set stemLeftBeamCount = 2
-                                d'16 \mf ]
+                                <e' g'>4 :32
+                                <a c'>4 :32
+                                <c' e'>4 :32 \mf
                                 <> \)
                             }
                         }
@@ -1073,18 +1446,38 @@
                     }
                     \context Voice = "B 1 Vocalization Voice" {
                         {
-                            % [B 1 Vocalization Voice] Measure 167
+                            % [B 1 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 1 Vocalization Voice] Measure 168
+                            % [B 1 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 1 Vocalization Voice] Measure 170
+                            % [B 1 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1107,8 +1500,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -1123,25 +1516,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "B 1 Percussion Voice" {
                         {
-                            % [B 1 Percussion Voice] Measure 167
+                            % [B 1 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 1 Percussion Voice] Measure 168
+                            % [B 1 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 1 Percussion Voice] Measure 170
+                            % [B 1 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1178,18 +1603,38 @@
                     }
                     \context Voice = "B 2 Vocalization Voice" {
                         {
-                            % [B 2 Vocalization Voice] Measure 167
+                            % [B 2 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 2 Vocalization Voice] Measure 168
+                            % [B 2 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 2 Vocalization Voice] Measure 170
+                            % [B 2 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1212,8 +1657,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -1228,25 +1673,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "B 2 Percussion Voice" {
                         {
-                            % [B 2 Percussion Voice] Measure 167
+                            % [B 2 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 2 Percussion Voice] Measure 168
+                            % [B 2 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 2 Percussion Voice] Measure 170
+                            % [B 2 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1283,18 +1760,38 @@
                     }
                     \context Voice = "B 3 Vocalization Voice" {
                         {
-                            % [B 3 Vocalization Voice] Measure 167
+                            % [B 3 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 3 Vocalization Voice] Measure 168
+                            % [B 3 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 3 Vocalization Voice] Measure 170
+                            % [B 3 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1317,8 +1814,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -1333,25 +1830,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "B 3 Percussion Voice" {
                         {
-                            % [B 3 Percussion Voice] Measure 167
+                            % [B 3 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 3 Percussion Voice] Measure 168
+                            % [B 3 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 3 Percussion Voice] Measure 170
+                            % [B 3 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1388,18 +1917,38 @@
                     }
                     \context Voice = "B 4 Vocalization Voice" {
                         {
-                            % [B 4 Vocalization Voice] Measure 167
+                            % [B 4 Vocalization Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 4 Vocalization Voice] Measure 168
+                            % [B 4 Vocalization Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 4 Vocalization Voice] Measure 170
+                            % [B 4 Vocalization Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff
@@ -1422,8 +1971,8 @@
                                         \right-column
                                             {
                                                 shaker
-                                                maraca
                                                 castanet
+                                                guiro
                                                 "wine glass"
                                             }
                     }
@@ -1438,25 +1987,57 @@
                                         \right-column
                                             {
                                                 sh.
-                                                mc.
                                                 cst.
+                                                g.
                                                 w.g.
                                             }
                     }
                     \context Voice = "B 4 Percussion Voice" {
                         {
-                            % [B 4 Percussion Voice] Measure 167
+                            % [B 4 Percussion Voice] Measure 173
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                shaker
+                                                                castanet
+                                                                guiro
+                                                                "wine glass"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                sh.
+                                                                cst.
+                                                                g.
+                                                                w.g.
+                                                            }
+                                    }
                                 R1 * 3/4
                             }
-                            % [B 4 Percussion Voice] Measure 168
+                            % [B 4 Percussion Voice] Measure 174
                             {
                                 R1 * 5/4
                             }
-                            % [B 4 Percussion Voice] Measure 170
+                            % [B 4 Percussion Voice] Measure 176
                             {
                                 R1 * 3/4
                                 \stopStaff

@@ -65,6 +65,6 @@ whispered_inhales = consort.MusicSpecifier(
         .scale_luminance(0)
         .rotate_hue(0.0),
     comment='whispered_inhales',
-    label=['whispered_inhales'],
+    labels=['whispered_inhales'],
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(),
     )

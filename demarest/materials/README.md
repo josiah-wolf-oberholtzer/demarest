@@ -47,7 +47,7 @@ fanfares:                   [0.6]
 - + `trio_c_toms_fanfare`          3           -           -           -
 - + `trio_a_woodblock_fanfare`     2           -           -           -
 - + `trio_b_snare_drone`           0           -           -           -
-- + `trio_b_ratchet_done`         1           -           -           -
+- + `trio_b_ratchet_drone`         1           -           -           -
 
 unpitched percussion:       [-0.6]
 - + `unpitched_drone`       0           -           -           -

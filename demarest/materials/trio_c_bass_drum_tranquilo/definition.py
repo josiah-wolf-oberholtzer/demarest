@@ -8,6 +8,6 @@ from demarest.materials.unpitched_tranquilo.definition \
 trio_c_bass_drum_tranquilo = abjad.new(
     unpitched_tranquilo,
     comment='trio_c_bass_drum_tranquilo',
-    label=['trio_c_bass_drum_tranquilo'],
+    labels=['trio_c_bass_drum_tranquilo'],
     instrument=abbreviations.trio_c_percussion,
     )

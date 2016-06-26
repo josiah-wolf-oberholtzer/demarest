@@ -40,7 +40,7 @@ whispered_pointillism = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(0.0),
     comment='whispered_pointillism',
-    label=['whispered_pointillism'],
+    labels=['whispered_pointillism'],
     rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,

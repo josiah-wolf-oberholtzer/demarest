@@ -1,7 +1,7 @@
-% package "abjad" @ eccf6ef [josiah/demarest] (2016-06-23 00:51:28)
+% package "abjad" @ 39106c4 [josiah/demarest] (2016-06-25 19:56:38)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 47c934f [master] (2016-06-22 22:25:57)
-% package "demarest" @ 07085ee [master] (2016-06-24 14:01:43)
+% package "consort" @ 8b7af45 [master] (2016-06-25 19:49:07)
+% package "demarest" @ d06ec2e [master] (2016-06-25 01:12:21)
 
 \version "2.19.41"
 \language "english"
@@ -215,6 +215,26 @@
             \context PerformerStaffGroup = "A 1 Staff Group" <<
                 \context VocalizationStaff = "A 1 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "A 1 Vocalization Voice" {
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
@@ -2014,6 +2034,38 @@
                 }
                 \context PercussionStaff = "A 1 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "guiro_shimmer"
                         {
@@ -3797,6 +3849,26 @@
             \context PerformerStaffGroup = "A 2 Staff Group" <<
                 \context VocalizationStaff = "A 2 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "A 2 Vocalization Voice" {
                         {
                             % [A 2 Vocalization Voice] Measure 1
@@ -5608,6 +5680,38 @@
                 }
                 \context PercussionStaff = "A 2 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "A 2 Percussion Voice" {
                         {
                             % [A 2 Percussion Voice] Measure 1
@@ -7418,6 +7522,26 @@
             \context PerformerStaffGroup = "A 3 Staff Group" <<
                 \context VocalizationStaff = "A 3 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "A 3 Vocalization Voice" {
                         {
                             % [A 3 Vocalization Voice] Measure 1
@@ -9392,6 +9516,38 @@
                 }
                 \context PercussionStaff = "A 3 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "shaker_drone"
                         {
@@ -11209,6 +11365,26 @@
             \context PerformerStaffGroup = "A 4 Staff Group" <<
                 \context VocalizationStaff = "A 4 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "A 4 Vocalization Voice" {
                         {
                             % [A 4 Vocalization Voice] Measure 1
@@ -13020,6 +13196,38 @@
                 }
                 \context PercussionStaff = "A 4 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "shaker_drone"
                         {
@@ -14747,6 +14955,26 @@
             \context PerformerStaffGroup = "T 1 Staff Group" <<
                 \context VocalizationStaff = "T 1 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "T 1 Vocalization Voice" {
                         {
                             % [T 1 Vocalization Voice] Measure 1
@@ -16611,7 +16839,36 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 1 Percussion Staff" {
+                \context PercussionStaff = "T 1 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                five
+                                                wood
+                                                blocks
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                w.b.
+                                            }
+                    }
+                } {
                     \clef "percussion"
                     \context Voice = "T 1 Percussion Voice" {
                         {
@@ -16677,47 +16934,14 @@
                         {
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 10/11 {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                e'16 \f \( \> [ ^ \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
-                                    }
+                                e'16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -16729,7 +16953,7 @@
                                 e'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
@@ -16738,7 +16962,7 @@
                                 g'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 e'16 \mf ]
                                 <> \)
@@ -16749,7 +16973,7 @@
                             % [T 1 Percussion Voice] Measure 20
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <f a>16 -\accent -\accent \f \( \> [
+                                <f a>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
@@ -16757,7 +16981,7 @@
                                 \set stemRightBeamCount = 2
                                 g'16
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 -\accent -\accent \mf ]
+                                <a c'>16 -\accent \mf ]
                                 <> \)
                             }
                         }
@@ -16789,9 +17013,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b'' d'''>2 :32 \fp \( \> ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            mb.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                mb.
+                                                            }
                                     }
                                 <b'' d'''>2 :32 \repeatTie
                             }
@@ -16841,9 +17072,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 <e' g'>8 :64 \f \( ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
                                     }
                                 <e' g'>4 :32 \repeatTie
                                 <> \)
@@ -16860,7 +17098,7 @@
                                 c'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f16
@@ -16896,9 +17134,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b'' e'''>8 :64 \ppp \( ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            mb.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                mb.
+                                                            }
                                     }
                                 <b'' e'''>4 :32 \repeatTie
                                 <> \)
@@ -16940,9 +17185,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 <a c'>4 :32 \f \( \> ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
                                     }
                                 <c' e'>4 :32
                                 <e' g'>4 :32 \mf
@@ -16954,7 +17206,7 @@
                             % [T 1 Percussion Voice] Measure 25
                             \times 4/5 {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <f a>16 -\accent -\accent \f \( \> [
+                                <f a>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -16965,7 +17217,7 @@
                                 \set stemRightBeamCount = 2
                                 c'16
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 -\accent -\accent \mf ]
+                                <a c'>16 -\accent \mf ]
                                 <> \)
                             }
                         }
@@ -17028,7 +17280,7 @@
                                 f16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -17040,7 +17292,7 @@
                                 g'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16 -\accent -\accent
+                                <f a>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -17049,7 +17301,7 @@
                                 a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 g'16 \mf ]
                                 <> \)
@@ -17097,7 +17349,7 @@
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 10/11 {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <a c'>16 -\accent -\accent \f \( \> [
+                                <a c'>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -17106,7 +17358,7 @@
                                 a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -17118,7 +17370,7 @@
                                 e'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
@@ -17126,7 +17378,7 @@
                                 \set stemRightBeamCount = 2
                                 g'16
                                 \set stemLeftBeamCount = 2
-                                <f a>16 -\accent -\accent \mf ]
+                                <f a>16 -\accent \mf ]
                                 <> \)
                             }
                         }
@@ -17166,9 +17418,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <c'' ef''>4 :32 \fp \( \> ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            mb.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                mb.
+                                                            }
                                     }
                             }
                             % [T 1 Percussion Voice] Measure 44
@@ -17293,16 +17552,23 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 a16 \f \( \> [ ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f16
@@ -17311,7 +17577,7 @@
                                 e'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16 -\accent -\accent
+                                <f a>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
@@ -17323,7 +17589,7 @@
                                 f16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -17331,7 +17597,7 @@
                                 \set stemRightBeamCount = 2
                                 c'16
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 -\accent -\accent \mf ]
+                                <c' e'>16 -\accent \mf ]
                                 <> \)
                             }
                         }
@@ -17339,41 +17605,8 @@
                         {
                             % [T 1 Percussion Voice] Measure 61
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                f16 \f \( \> [ ^ \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
-                                    }
+                                f16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -17382,7 +17615,7 @@
                                 a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -17391,7 +17624,7 @@
                                 f16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -17437,9 +17670,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <gs'' b''>8 :64 \( \< ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            mb.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                mb.
+                                                            }
                                     }
                                 <gs'' b''>2 :32 \repeatTie
                                 <gs'' b''>2 :32 \repeatTie
@@ -17499,9 +17739,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 <a c'>4 :32 \parenthesizeDynamic \f \( \> ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
                                     }
                                 <c' e'>4 :32
                                 <e' g'>4 :32
@@ -17518,6 +17765,26 @@
             \context PerformerStaffGroup = "T 2 Staff Group" <<
                 \context VocalizationStaff = "T 2 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "T 2 Vocalization Voice" {
                         {
                             % [T 2 Vocalization Voice] Measure 1
@@ -19291,6 +19558,9 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'4. :32 \( \<
                                 c'4 :32 \repeatTie
                             }
@@ -19309,6 +19579,8 @@
                             {
                                 c'8 :64 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19321,43 +19593,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                c'8 :64 \( \< ^ \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
-                                    }
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                c'8 :64 \( \<
                                 c'2 :32 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 5
@@ -19370,6 +19610,8 @@
                                 c'2 :32 \repeatTie
                                 c'8 :64 \f \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19384,6 +19626,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'2. :32 \( \<
                                 c'2 :32 \repeatTie
                             }
@@ -19396,6 +19641,8 @@
                             {
                                 c'8 :64 \mf \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19413,6 +19660,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'2 :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 11
@@ -19430,6 +19680,8 @@
                             {
                                 c'8 :64 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19447,6 +19699,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'2 :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 15
@@ -19458,6 +19713,8 @@
                             {
                                 c'2 :32 \p \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19470,6 +19727,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'4 :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 17
@@ -19487,6 +19747,8 @@
                             {
                                 c'8 :64 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19503,18 +19765,23 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                e'2 \f \(
-                                e'2 \repeatTie
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'2 \f \(
+                                g'2 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 21
                             {
-                                e'4. \repeatTie
-                                e'4 \repeatTie
+                                g'4. \repeatTie
+                                g'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 22
                             {
-                                e'4. \repeatTie
+                                g'4. \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19530,9 +19797,14 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                e'8 \f \(
-                                e'4 \repeatTie
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'8 \f \(
+                                g'4 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19555,6 +19827,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'8 :64 \( \<
                                 c'4 :32 \repeatTie
                             }
@@ -19574,6 +19849,8 @@
                                 c'2. :32 \repeatTie
                                 c'8 :64 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19591,6 +19868,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 30
@@ -19602,6 +19882,8 @@
                             {
                                 c'2 :32 \mp \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19619,6 +19901,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 33
@@ -19637,6 +19922,8 @@
                                 c'2 :32 \repeatTie
                                 c'8 :64 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19650,6 +19937,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 36
@@ -19661,6 +19951,8 @@
                             {
                                 c'2 :32 \f \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19674,6 +19966,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 38
@@ -19686,28 +19981,35 @@
                                 c'2. :32 \repeatTie
                                 c'8 :64 \mf \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                e'4. \f \(
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'4. \f \(
                             }
                             % [T 2 Percussion Voice] Measure 40
                             {
-                                e'4. \repeatTie
-                                e'4 \repeatTie
+                                g'4. \repeatTie
+                                g'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 41
                             {
-                                e'1 \repeatTie
+                                g'1 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 42
                             {
-                                e'2 \repeatTie
-                                e'8 \repeatTie
+                                g'2 \repeatTie
+                                g'8 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
@@ -19715,6 +20017,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'8 :64 \( \<
                                 c'2 :32 \repeatTie
                             }
@@ -19722,6 +20027,8 @@
                             {
                                 c'8 :64 \mp \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
@@ -19752,9 +20059,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <c''' ef'''>4 :32 \fp \( \> ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            vb.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                vb.
+                                                            }
                                     }
                                 <c''' ef'''>4 :32 \repeatTie
                             }
@@ -19805,17 +20119,29 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'4 :32 \( \! \< ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 46
                             {
                                 c'4. :32 \p \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
@@ -19845,9 +20171,16 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a'' d'''>4. :32 \ppp \( ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            vb.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                vb.
+                                                            }
                                     }
                                 <> \)
                                 \clef "percussion"
@@ -19888,17 +20221,29 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'2 :32 \( \< ^ \markup {
                                     \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 47
                             {
                                 c'8 :64 \f \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19910,43 +20255,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                c'4 :32 \( \< ^ \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
-                                    }
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                c'4 :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 48
                             {
@@ -19957,6 +20270,8 @@
                             {
                                 c'8 :64 \mf \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -19975,6 +20290,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'4. :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 51
@@ -19987,6 +20305,8 @@
                                 c'4. :32 \repeatTie
                                 c'4 :32 \mp \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -20010,6 +20330,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'4. :32 \( \<
                                 c'4 :32 \repeatTie
                             }
@@ -20018,6 +20341,8 @@
                                 c'2. :32 \repeatTie
                                 c'4 :32 \p \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -20040,6 +20365,9 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 c'2. :32 \( \<
                                 c'2 :32 \repeatTie
                             }
@@ -20048,6 +20376,8 @@
                                 c'2 :32 \repeatTie
                                 c'8 :64 \f \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -20072,20 +20402,25 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                e'8 \f \(
-                                e'2 \repeatTie
-                                e'2 \repeatTie
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'8 \f \(
+                                g'2 \repeatTie
+                                g'2 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 63
                             {
-                                e'4. \repeatTie
-                                e'4 \repeatTie
+                                g'4. \repeatTie
+                                g'4 \repeatTie
                             }
                             % [T 2 Percussion Voice] Measure 64
                             {
-                                e'4. \repeatTie
-                                e'8 \repeatTie
+                                g'4. \repeatTie
+                                g'8 \repeatTie
                                 <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -20109,6 +20444,26 @@
             \context PerformerStaffGroup = "T 3 Staff Group" <<
                 \context VocalizationStaff = "T 3 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "T 3 Vocalization Voice" {
                         {
                             % [T 3 Vocalization Voice] Measure 1
@@ -22076,7 +22431,39 @@
                         }
                     }
                 }
-                \context PercussionStaff = "T 3 Percussion Staff" {
+                \context PercussionStaff = "T 3 Percussion Staff" \with {
+                    instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                four
+                                                toms
+                                                and
+                                                "bass drum"
+                                            }
+                    }
+                    shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                toms
+                                                &
+                                                b.d.
+                                            }
+                    }
+                } {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
                         {
@@ -22139,47 +22526,11 @@
                             % [T 3 Percussion Voice] Measure 19
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 12/13 {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                four
-                                                                toms
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \f \( \> [ ^ \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
-                                    }
+                                c'16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -22191,7 +22542,7 @@
                                 c'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -22200,7 +22551,7 @@
                                 g'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -22211,7 +22562,7 @@
                                 \set stemRightBeamCount = 2
                                 g'16
                                 \set stemLeftBeamCount = 2
-                                <e' g'>16 -\accent -\accent \mf ]
+                                <e' g'>16 -\accent \mf ]
                                 <> \)
                             }
                         }
@@ -22224,44 +22575,8 @@
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                four
-                                                                toms
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                e'16 \f \( [ ^ \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            perc.
-                                    }
+                                e'16 \f \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -22327,7 +22642,7 @@
                                 c'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -22336,7 +22651,7 @@
                                 g'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -22347,7 +22662,7 @@
                                 \set stemRightBeamCount = 2
                                 g'16
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 -\accent -\accent \mf ]
+                                <a c'>16 -\accent \mf ]
                                 <> \)
                             }
                         }
@@ -22445,7 +22760,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <e' g'>16 -\accent -\accent \f \( \> [
+                                <e' g'>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
@@ -22457,7 +22772,7 @@
                                 a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16
@@ -22466,7 +22781,7 @@
                                 e'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -22487,7 +22802,7 @@
                                 e'16 \f \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16 -\accent -\accent
+                                <c' e'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -22499,7 +22814,7 @@
                                 e'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent -\accent
+                                <e' g'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -22508,7 +22823,7 @@
                                 c'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -22610,7 +22925,7 @@
                             % [T 3 Percussion Voice] Measure 65
                             \times 4/5 {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <e' g'>16 -\accent -\accent \f \( \> [
+                                <e' g'>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -22619,7 +22934,7 @@
                                 c'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16 -\accent -\accent
+                                <a c'>16 -\accent
                                 \set stemLeftBeamCount = 2
                                 a16 \mf ]
                                 <> \)
@@ -22639,6 +22954,26 @@
             \context PerformerStaffGroup = "B 1 Staff Group" <<
                 \context VocalizationStaff = "B 1 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "B 1 Vocalization Voice" {
                         {
                             % [B 1 Vocalization Voice] Measure 1
@@ -24359,6 +24694,38 @@
                 }
                 \context PercussionStaff = "B 1 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "B 1 Percussion Voice" {
                         {
                             % [B 1 Percussion Voice] Measure 1
@@ -26160,6 +26527,26 @@
             \context PerformerStaffGroup = "B 2 Staff Group" <<
                 \context VocalizationStaff = "B 2 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "B 2 Vocalization Voice" {
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
@@ -27872,6 +28259,38 @@
                 }
                 \context PercussionStaff = "B 2 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "shaker_drone"
                         {
@@ -29818,6 +30237,26 @@
             \context PerformerStaffGroup = "B 3 Staff Group" <<
                 \context VocalizationStaff = "B 3 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "B 3 Vocalization Voice" {
                         {
                             % [B 3 Vocalization Voice] Measure 1
@@ -31803,6 +32242,38 @@
                 }
                 \context PercussionStaff = "B 3 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "shaker_drone"
                         {
@@ -33823,6 +34294,26 @@
             \context PerformerStaffGroup = "B 4 Staff Group" <<
                 \context VocalizationStaff = "B 4 Vocalization Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        voice
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        v.
+                    }
                     \context Voice = "B 4 Vocalization Voice" {
                         {
                             % [B 4 Vocalization Voice] Measure 1
@@ -35621,6 +36112,38 @@
                 }
                 \context PercussionStaff = "B 4 Percussion Staff" {
                     \clef "percussion"
+                    \set Staff.instrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                shaker
+                                                castanet
+                                                guiro
+                                                "wine glass"
+                                            }
+                    }
+                    \set Staff.shortInstrumentName = \markup {
+                    \pad-around
+                        #0.5
+                        \bracket
+                            \pad-around
+                                #0.5
+                                \small
+                                    \italic
+                                        \right-column
+                                            {
+                                                sh.
+                                                cst.
+                                                g.
+                                                w.g.
+                                            }
+                    }
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "guiro_shimmer"
                         {

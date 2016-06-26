@@ -79,8 +79,8 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
         .scale_luminance(-1.5)
         .rotate_hue(0.6),
     comment='trio_c_toms_fanfare',
-    label=['trio_c_toms_fanfare'],
     instrument=abbreviations.trio_c_percussion,
+    labels=['trio_c_toms_fanfare'],
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abjad.pitchtools.PitchSegment(
             items=[
@@ -92,10 +92,16 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
             ),
         ),
     rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
-        denominators=[16, 16, 4, 16, 4],
+        denominators=[16, 16, 4, 16, 8, 4],
         beam_specifier=abjad.rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
+            ),
+        burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
+            left_classes=[abjad.Rest],
+            left_counts=[1, 0],
+            right_classes=[abjad.Rest],
+            right_counts=[0, 1, 0],
             ),
         duration_spelling_specifier=abjad.rhythmmakertools.DurationSpellingSpecifier(
             decrease_durations_monotonically=True,

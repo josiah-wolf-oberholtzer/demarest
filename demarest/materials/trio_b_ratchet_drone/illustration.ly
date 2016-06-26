@@ -37,7 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 1 Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -81,7 +81,7 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 1 Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -95,7 +95,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 1 Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Violin 1 Voice] Measure 4
                         {
@@ -122,7 +122,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 1 Voice] Material: "trio_b_ratchet_drone"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
@@ -165,7 +165,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 2 Voice] Material: "trio_b_ratchet_drone"
                     {
                         {
                             \set Staff.instrumentName = \markup {
@@ -220,7 +220,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 2 Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
@@ -235,7 +235,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "trio_b_ratchet_done"
+                    % [Violin 2 Voice] Material: "trio_b_ratchet_drone"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
@@ -292,7 +292,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "trio_b_ratchet_done"
+                    % [Viola Voice] Material: "trio_b_ratchet_drone"
                     {
                         {
                             \set Staff.instrumentName = \markup {
@@ -354,7 +354,7 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "trio_b_ratchet_done"
+                    % [Viola Voice] Material: "trio_b_ratchet_drone"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
@@ -409,7 +409,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "trio_b_ratchet_done"
+                    % [Cello Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -453,7 +453,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "trio_b_ratchet_done"
+                    % [Cello Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -471,7 +471,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "trio_b_ratchet_done"
+                    % [Cello Voice] Material: "trio_b_ratchet_drone"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
@@ -500,7 +500,7 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "trio_b_ratchet_done"
+                    % [Cello Voice] Material: "trio_b_ratchet_drone"
                     {
                         % [Cello Voice] Measure 7
                         {
