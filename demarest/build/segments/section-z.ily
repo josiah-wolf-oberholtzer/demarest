@@ -1,17 +1,3 @@
-% package "abjad" @ b1ce61d [josiah/demarest] (2016-06-26 14:10:51)
-% package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ caa1fef [master] (2016-06-26 15:45:53)
-% package "demarest" @ c16dd46 [master] (2016-06-25 20:28:25)
-
-\version "2.19.41"
-\language "english"
-
-#(ly:set-option 'relative-includes #t)
-
-\include "../../stylesheets/stylesheet.ily"
-\include "../../stylesheets/nonfirst-segment.ily"
-
-\score {
     \context Score = "Demarest Score" \with {
         currentBarNumber = #177
     } <<
@@ -31992,4 +31978,3 @@
             >>
         >>
     >>
-}

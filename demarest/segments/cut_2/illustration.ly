@@ -1,7 +1,7 @@
-% package "abjad" @ 39106c4 [josiah/demarest] (2016-06-25 19:56:38)
+% package "abjad" @ b1ce61d [josiah/demarest] (2016-06-26 14:10:51)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 8b7af45 [master] (2016-06-25 19:49:07)
-% package "demarest" @ d06ec2e [master] (2016-06-25 01:12:21)
+% package "consort" @ caa1fef [master] (2016-06-26 15:45:53)
+% package "demarest" @ c16dd46 [master] (2016-06-25 20:28:25)
 
 \version "2.19.41"
 \language "english"
@@ -755,7 +755,35 @@
                                                 #0.5
                                                 \small
                                                     \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
                                                         marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
                                     \pad-around
@@ -768,25 +796,37 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <e''' g'''>2. :32 \f \( \>
+                                <e'' g''>2. :32 \f \( \> ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                mb.
+                                                            }
+                                    }
                             }
                             % [T 1 Percussion Voice] Measure 174
                             \times 2/3 {
                                 r16 [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a'16 -\accent -\staccato
+                                a16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16 -\staccato
+                                b16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a'16 -\accent -\staccato
+                                a16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
-                                <b' d''>16 \mf ]
+                                <b d'>16 \mf ]
                                 <> \)
                                 \clef "percussion"
                             }
@@ -824,36 +864,36 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <g'' c'''>16 \f \( \> [
+                                <g' c''>16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
-                                fs''16 -\staccato
+                                fs'16 -\staccato
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 r8
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
-                                f'16 -\accent -\staccato
+                                f16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                c''16 -\accent -\staccato
+                                c'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <ef'' gf''>16
+                                <ef' gf'>16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a'16 -\accent -\staccato
+                                a16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                c'16 -\staccato
+                                c16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <d' g'>16 \mf ]
+                                <d g>16 \mf ]
                                 <> \)
                                 \clef "percussion"
                             }
@@ -889,7 +929,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                ef''16 -\accent -\staccato \f \( \> [
+                                ef'16 -\accent -\staccato \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -898,12 +938,12 @@
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                e'16 -\accent -\staccato
+                                e16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
-                                d'16 -\accent -\staccato \mf ]
+                                d16 -\accent -\staccato \mf ]
                                 <> \)
                                 \clef "percussion"
                             }
@@ -993,7 +1033,12 @@
                                                 #0.5
                                                 \small
                                                     \italic
-                                                        vibraphone
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
                                     \pad-around
@@ -1003,7 +1048,12 @@
                                                 #0.5
                                                 \small
                                                     \italic
-                                                        vb.
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
                                     }
                                 r4..
                             }
@@ -1033,7 +1083,19 @@
                                                         vb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                a''16 -\accent -\staccato \f \( [
+                                a''16 -\accent -\staccato \f \( [ ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                vb.
+                                                            }
+                                    }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b'16 -\staccato
@@ -1081,7 +1143,7 @@
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a''16 -\accent -\staccato
+                                a'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 b'16 -\staccato
@@ -1158,7 +1220,7 @@
                                 r8
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
-                                c''16 -\accent -\staccato
+                                c'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -1167,7 +1229,7 @@
                                 <ef' gf'>16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                e''16 -\staccato
+                                e'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -1176,9 +1238,9 @@
                                 d'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <gs' cs''>16
+                                <gs cs'>16
                                 \set stemLeftBeamCount = 2
-                                f'16 -\staccato \mf ]
+                                f16 -\staccato \mf ]
                                 <> \)
                                 \clef "percussion"
                             }
@@ -1272,8 +1334,7 @@
                                                     \italic
                                                         \right-column
                                                             {
-                                                                four
-                                                                toms
+                                                                "four toms"
                                                                 and
                                                                 "bass drum"
                                                             }
@@ -1335,8 +1396,7 @@
                                                     \italic
                                                         \right-column
                                                             {
-                                                                four
-                                                                toms
+                                                                "four toms"
                                                                 and
                                                                 "bass drum"
                                                             }
@@ -1382,8 +1442,7 @@
                                                     \italic
                                                         \right-column
                                                             {
-                                                                four
-                                                                toms
+                                                                "four toms"
                                                                 and
                                                                 "bass drum"
                                                             }

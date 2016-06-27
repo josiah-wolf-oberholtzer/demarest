@@ -100,37 +100,6 @@ whispered_melange = consort.MusicSpecifierSequence(
         ],
     )
 
-### TRIO MUSIC SPECIFIERS ###
-
-trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
-trio_a_woodblock_fanfare = materials.trio_a_woodblock_fanfare
-trio_b_ratchet_drone = materials.trio_b_ratchet_drone
-trio_b_snare_drone = materials.trio_b_snare_drone
-trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
-trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
-trio_c_toms_fanfare = materials.trio_c_toms_fanfare
-trio_c_tubular_bell_tranquilo = materials.trio_c_tubular_bells_tranquilo
-
-### TRIO MELANGES ###
-
-#trio_a_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
-#trio_b_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
-#trio_c_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
 ### BACKGROUND MUSIC SETTINGS ###
 
 segment_maker.add_setting(
@@ -224,18 +193,45 @@ segment_maker.add_setting(
     b_4_voice=pitch_pipe_drone,
     )
 
+### TRIO MUSIC SPECIFIERS ###
+
+trio_a_marimba_drone = materials.trio_a_marimba_drone
+trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
+trio_a_woodblock_fanfare = materials.trio_a_woodblock_fanfare
+trio_b_ratchet_drone = materials.trio_b_ratchet_drone
+trio_b_snare_drone = materials.trio_b_snare_drone
+trio_b_vibraphone_drone = materials.trio_b_vibraphone_drone
+trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
+trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
+trio_c_toms_fanfare = materials.trio_c_toms_fanfare
+trio_c_tubular_bell_tranquilo = materials.trio_c_tubular_bells_tranquilo
+trio_c_bass_drum_drone = materials.trio_c_bass_drum_drone
+
 ### TRIO PERCUSSION MUSIC SETTINGS ###
 
 segment_maker.add_setting(
     timespan_maker=droning_timespan_maker,
     t_2_percussion=trio_b_snare_drone,
+    t_3_percussion=trio_c_bass_drum_drone,
     )
 
 segment_maker.add_setting(
-    timespan_maker=droning_timespan_maker,
-    timespan_identifier=rare_timespan_identifier.rotate(3),
-    t_1_percussion=trio_a_marimba_shimmer,
-    t_2_percussion=trio_b_vibraphone_shimmer,
+    timespan_maker=sparse_timespan_maker,
+    timespan_identifier=common_timespan_identifier.rotate(6),
+    t_1_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            trio_a_marimba_shimmer,
+            trio_a_marimba_drone,
+            ],
+        ),
+    t_2_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            trio_b_vibraphone_shimmer,
+            trio_b_vibraphone_drone,
+            ],
+        ),
     )
 
 segment_maker.add_setting(

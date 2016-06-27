@@ -17,8 +17,7 @@
             \center-align {
                 \override #'(font-name . "Didot Italic") {
                     \fontsize #1 {
-                        "to my mom,"
-                        "on her birthday"
+                        "in celebration of the 50th anniversary of BUTI"
                     }
                 }
                 \null
@@ -30,9 +29,7 @@
                 \null
                 \override #'(font-name . "Didot Italic") {
                     \fontsize #1 {
-                        "for Sam Solomon and the"
-                        "Boston University Tanglewood Institute"
-                        "Young Percussion Ensemble"
+                        "for eleven percussionists"
                     }
                 }
             }

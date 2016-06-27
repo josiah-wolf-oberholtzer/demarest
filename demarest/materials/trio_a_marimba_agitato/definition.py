@@ -10,4 +10,5 @@ trio_a_marimba_agitato = abjad.new(
     comment='trio_a_marimba_agitato',
     labels=['trio_a_marimba_agitato'],
     instrument=abbreviations.marimba,
+    register_handler__register_specifier__base_pitch='F2',
     )

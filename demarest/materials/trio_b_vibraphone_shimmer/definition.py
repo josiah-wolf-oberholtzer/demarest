@@ -10,4 +10,5 @@ trio_b_vibraphone_shimmer = abjad.new(
     comment='trio_b_vibraphone_shimmer',
     labels=['trio_b_vibraphone_shimmer'],
     instrument=abbreviations.vibraphone,
+    register_handler__register_specifier__base_pitch='F3',
     )

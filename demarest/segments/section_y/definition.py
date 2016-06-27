@@ -102,39 +102,6 @@ whispered_melange = consort.MusicSpecifierSequence(
         ],
     )
 
-### TRIO MUSIC SPECIFIERS ###
-
-trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
-trio_a_marimba_agitato = materials.trio_a_marimba_agitato
-trio_a_woodblock_fanfare = materials.trio_a_woodblock_fanfare
-trio_b_ratchet_drone = materials.trio_b_ratchet_drone
-trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
-trio_b_vibraphone_agitato = materials.trio_b_vibraphone_agitato
-trio_b_ratchet_drone = materials.trio_b_ratchet_drone
-trio_b_snare_drone = materials.trio_b_snare_drone
-#trio_c_bass_drum_pointillism = materials.trio_c_bass_drum_pointillism
-trio_c_toms_fanfare = materials.trio_c_toms_fanfare
-
-### TRIO MELANGES ###
-
-#trio_a_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
-#trio_b_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
-#trio_c_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
 ### BACKGROUND MUSIC SETTINGS ###
 
 segment_maker.add_setting(
@@ -237,4 +204,42 @@ segment_maker.add_setting(
     b_2_percussion=shaker_repetitions,
     b_3_percussion=shaker_repetitions,
     b_4_percussion=shaker_repetitions,
+    )
+
+### TRIO PERCUSSION MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    t_2_percussion=materials.trio_b_tam_tam_drone,
+    t_3_percussion=materials.trio_c_bass_drum_drone,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=droning_timespan_maker,
+    t_1_percussion=materials.trio_a_marimba_shimmer,
+    t_2_percussion=materials.trio_b_vibraphone_shimmer,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(5),
+    t_1_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            materials.trio_a_woodblock_fanfare,
+            materials.trio_a_marimba_agitato,
+            ],
+        ),
+    t_2_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            materials.trio_b_vibraphone_agitato,
+            materials.trio_b_ratchet_drone,
+            ],
+        ),
+    t_3_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            materials.trio_c_toms_fanfare,
+            materials.trio_c_tubular_bells_drone,
+            ],
+        ),
     )

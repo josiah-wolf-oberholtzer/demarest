@@ -92,39 +92,6 @@ pitch_pipe_melange = consort.MusicSpecifierSequence(
         ],
     )
 
-### TRIO MUSIC SPECIFIERS ###
-
-trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
-trio_a_crotales_tranquilo = materials.trio_a_crotales_tranquilo
-trio_b_ratchet_drone = materials.trio_b_ratchet_drone
-trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
-trio_b_tam_tam_tranquilo = materials.trio_b_tam_tam_tranquilo
-trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
-trio_b_vibraphone_tranquilo = materials.trio_b_vibraphone_tranquilo
-#trio_c_bass_drum_tranquilo = materials.trio_b_bass_drum_tranquilo
-trio_c_tubular_bells_tranquilo = materials.trio_c_tubular_bells_tranquilo
-trio_c_toms_fanfare = materials.trio_c_toms_fanfare
-
-### TRIO MELANGES ###
-
-#trio_a_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
-#trio_b_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
-#trio_c_melange = consort.MusicSpecifierSequence(
-#    application_rate='division',
-#    music_specifiers=[
-#        ],
-#    )
-
 ### BACKGROUND MUSIC SETTINGS ###
 
 segment_maker.add_setting(
@@ -197,4 +164,60 @@ segment_maker.add_setting(
     b_2_percussion=castanet_repetitions,
     b_3_percussion=castanet_repetitions,
     b_4_percussion=castanet_repetitions,
+    )
+
+### TRIO MUSIC SPECIFIERS ###
+
+trio_a_crotales_tranquilo = materials.trio_a_crotales_tranquilo
+trio_b_snare_drone = materials.trio_b_snare_drone
+trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
+trio_b_vibraphone_tranquilo = materials.trio_b_vibraphone_tranquilo
+trio_c_bass_drum_drone = materials.trio_c_bass_drum_drone
+trio_c_tubular_bells_tranquilo = materials.trio_c_tubular_bells_tranquilo
+
+#trio_c_bass_drum_tranquilo = materials.trio_b_bass_drum_tranquilo
+trio_a_marimba_drone = materials.trio_a_marimba_drone
+trio_a_marimba_shimmer = materials.trio_a_marimba_shimmer
+trio_b_tam_tam_tranquilo = materials.trio_b_tam_tam_tranquilo
+trio_b_vibraphone_drone = materials.trio_b_vibraphone_drone
+trio_b_vibraphone_shimmer = materials.trio_b_vibraphone_shimmer
+trio_c_toms_fanfare = materials.trio_c_toms_fanfare
+
+### TRIO PERCUSSION MUSIC SETTINGS ###
+
+segment_maker.add_setting(
+    t_2_percussion=trio_b_snare_drone,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=droning_timespan_maker,
+    t_2_percussion=trio_b_snare_drone,
+    t_3_percussion=trio_c_bass_drum_drone,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker,
+    timespan_identifier=rare_timespan_identifier.rotate(1),
+    t_1_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            trio_a_marimba_shimmer,
+            trio_a_marimba_drone,
+            ],
+        ),
+    t_2_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            trio_b_vibraphone_shimmer,
+            trio_b_vibraphone_drone,
+            ],
+        ),
+    )
+
+segment_maker.add_setting(
+    timespan_maker=sparse_timespan_maker.rotate(5),
+    timespan_identifier=common_timespan_identifier.rotate(5),
+    t_1_percussion=trio_a_crotales_tranquilo,
+    t_2_percussion=trio_b_vibraphone_tranquilo,
+    t_3_percussion=trio_c_tubular_bells_tranquilo,
     )

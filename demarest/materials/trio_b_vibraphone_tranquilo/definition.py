@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 import abjad
+import consort
 from demarest.materials import abbreviations
 from demarest.materials.abbreviations import make_text_spanner
 from demarest.materials.pitched_tranquilo.definition \
@@ -8,8 +9,12 @@ from demarest.materials.pitched_tranquilo.definition \
 
 trio_b_vibraphone_tranquilo = abjad.new(
     pitched_tranquilo,
-    attachment_handler__performance_instruction=make_text_spanner('bowed'),
+    attachment_handler__performance_instruction=consort.AttachmentExpression(
+        attachments=make_text_spanner('bowed'),
+        selector=abjad.selectortools.select_pitched_runs(),
+        ),
     comment='trio_b_vibraphone_tranquilo',
-    labels=['trio_b_vibraphone_tranquilo'],
     instrument=abbreviations.vibraphone,
+    labels=['trio_b_vibraphone_tranquilo'],
+    register_handler__register_specifier__base_pitch='F3',
     )

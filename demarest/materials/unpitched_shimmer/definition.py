@@ -15,8 +15,8 @@ unpitched_shimmer = consort.MusicSpecifier(
             start_dynamic_tokens='fp niente',
             stop_dynamic_tokens='niente f',
             ),
-        espressivo=consort.AttachmentExpression(
-            attachments=indicatortools.Articulation('espressivo'),
+        accent=consort.AttachmentExpression(
+            attachments=indicatortools.Articulation('accent'),
             selector=selectortools.select_pitched_runs()
                 .by_logical_tie()
                 .rest()

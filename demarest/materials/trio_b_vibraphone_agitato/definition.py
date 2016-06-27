@@ -10,4 +10,5 @@ trio_b_vibraphone_agitato = abjad.new(
     comment='trio_b_vibraphone_agitato',
     labels=['trio_b_vibraphone_agitato'],
     instrument=abbreviations.vibraphone,
+    register_handler__register_specifier__base_pitch='F3',
     )

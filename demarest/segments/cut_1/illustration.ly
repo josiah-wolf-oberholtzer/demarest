@@ -1,7 +1,7 @@
-% package "abjad" @ 39106c4 [josiah/demarest] (2016-06-25 19:56:38)
+% package "abjad" @ b1ce61d [josiah/demarest] (2016-06-26 14:10:51)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 8b7af45 [master] (2016-06-25 19:49:07)
-% package "demarest" @ d06ec2e [master] (2016-06-25 01:12:21)
+% package "consort" @ caa1fef [master] (2016-06-26 15:45:53)
+% package "demarest" @ c16dd46 [master] (2016-06-25 20:28:25)
 
 \version "2.19.41"
 \language "english"
@@ -755,7 +755,35 @@
                                                 #0.5
                                                 \small
                                                     \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
                                                         marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
                                     \pad-around
@@ -768,7 +796,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <b'' d'''>2 :32 \f \( \> ^ \markup {
+                                <b' d''>2 :32 \f \( \> ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -784,21 +812,21 @@
                             }
                             % [T 1 Percussion Voice] Measure 67
                             {
-                                a''16 -\staccato [
+                                a16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                b'16 -\accent -\staccato
+                                b16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a' d''>16
+                                <a d'>16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
-                                g'16 -\accent -\staccato \mf ]
+                                g16 -\accent -\staccato \mf ]
                                 <> \)
                                 \clef "percussion"
                             }
@@ -813,28 +841,48 @@
                             % [T 1 Percussion Voice] Measure 68
                             {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <c'' ef''>16 \f \( \> [
+                                <c' ef'>16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16 -\accent -\staccato
+                                d16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a'16 -\staccato
+                                a16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f' bf'>16
+                                <f bf>16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                e'16 -\staccato
+                                e16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato \mf ]
+                                d16 -\staccato \mf ]
                                 <> \)
                                 \clef "percussion"
                             }
@@ -926,7 +974,37 @@
                                                 #0.5
                                                 \small
                                                     \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
                                                         vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
                                     \pad-around
@@ -986,12 +1064,32 @@
                         {
                             {
                                 \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vibraphone
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        vb.
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
                                 <fs'' a''>4. :32 \f \( \>
                             }
                             % [T 2 Percussion Voice] Measure 68
                             {
-                                d''16 -\staccato [
+                                d'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a'16 -\staccato
@@ -1103,8 +1201,7 @@
                                                     \italic
                                                         \right-column
                                                             {
-                                                                four
-                                                                toms
+                                                                "four toms"
                                                                 and
                                                                 "bass drum"
                                                             }
@@ -1137,6 +1234,36 @@
                             % [T 3 Percussion Voice] Measure 67
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 6/8 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 r8 \( [
                                 \set stemLeftBeamCount = 1

@@ -207,7 +207,7 @@ tubular_bells = consort.Instrument(
     instrument_change_markup=make_text_markup('t.b.'),
     instrument_name_markup=make_instrument_column_markup(
         ['tubular', 'bells']),
-    pitch_range=pitchtools.PitchRange("[F3, F5]"),
+    pitch_range=pitchtools.PitchRange("[C4, F5]"),
     short_instrument_name_markup=make_instrument_markup('t.b.'),
     )
 
@@ -215,7 +215,7 @@ trio_c_percussion = consort.Instrument(
     instrument_name='trio_c_percussion',
     instrument_change_markup=make_text_markup('perc.'),
     instrument_name_markup=make_instrument_column_markup(
-        ['four', 'toms', 'and', 'bass drum']),
+        ['four toms', 'and', 'bass drum']),
     short_instrument_name_markup=make_instrument_column_markup(
         ['toms', '&', 'b.d.']),
     )
