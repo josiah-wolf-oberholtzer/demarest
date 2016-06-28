@@ -51,6 +51,36 @@
     page-breaking = #ly:optimal-breaking
     ragged-bottom = ##f
     ragged-last-bottom = ##f
+
+    oddHeaderMarkup = \markup {}
+    evenHeaderMarkup = \markup {}
+    oddFooterMarkup = \markup
+        \fill-line {
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "DEMAREST"
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 \date
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        \on-the-fly #print-page-number-check-first
+                        \fromproperty #'page:page-number-string
+                }
+            }
+    evenFooterMarkup = \markup
+        \fill-line {
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        \on-the-fly #print-page-number-check-first
+                        \fromproperty #'page:page-number-string
+                }
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 \date
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "DEMAREST"
+            }
+
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 12)
@@ -63,6 +93,7 @@
         (padding . 12)
         (stretchability . 20)
     )
+
     top-markup-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 0)
