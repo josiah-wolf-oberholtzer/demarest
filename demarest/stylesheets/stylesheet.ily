@@ -17,7 +17,8 @@
             \center-align {
                 \override #'(font-name . "Didot Italic") {
                     \fontsize #1 {
-                        "in celebration of the 50th anniversary of BUTI"
+                        "in celebration of the 50th anniversary of"
+                        "the Boston University Tanglewood Institute"
                     }
                 }
                 \null
