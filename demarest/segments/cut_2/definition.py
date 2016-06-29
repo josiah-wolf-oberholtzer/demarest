@@ -10,7 +10,7 @@ segment_maker = demarest.SegmentMaker(
     annotate_phrasing=False,
     desired_duration_in_seconds=7,
     permitted_time_signatures=[
-        (2, 4), (3, 4), (5, 8),
+        (4, 4),
         ],
     repeat=True,
     tempo=abjad.Tempo((1, 4), 96),

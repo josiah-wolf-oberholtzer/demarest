@@ -18,7 +18,7 @@ class SegmentMaker(consort.SegmentMaker):
         annotate_timespans=None,
         desired_duration_in_seconds=None,
         discard_final_silence=None,
-        maximum_meter_run_length=3,
+        maximum_meter_run_length=None,
         name=None,
         permitted_time_signatures=None,
         repeat=None,
@@ -42,7 +42,7 @@ class SegmentMaker(consort.SegmentMaker):
             score_template=score_template,
             settings=settings,
             tempo=tempo,
-            timespan_quantization=durationtools.Duration(1, 8),
+            timespan_quantization=durationtools.Duration(1, 4),
             )
 
     ### PUBLIC PROPERTIES ###

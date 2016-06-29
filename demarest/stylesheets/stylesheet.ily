@@ -80,7 +80,6 @@
             \override #'(font-name . "Didot")
                 \bold \fontsize #3 "DEMAREST"
             }
-
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 12)
@@ -93,7 +92,6 @@
         (padding . 12)
         (stretchability . 20)
     )
-
     top-markup-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 0)
@@ -104,6 +102,12 @@
         (basic-distance . 0)
         (minimum-distance . 10)
         (padding . 0)
+        (stretchability . 0)
+    )
+    last-bottom-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 0)
+        (padding . 8)
         (stretchability . 0)
     )
 }
