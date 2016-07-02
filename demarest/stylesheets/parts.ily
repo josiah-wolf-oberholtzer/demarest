@@ -1,5 +1,15 @@
 \layout {
     \context {
+        \TimeSignatureContext
+        \override VerticalAxisGroup.default-staff-staff-spacing = #'(
+            (basic-distance . 0)
+            (minimum-distance . 0)
+            (padding . 4)
+            (stretchability . 0)
+        \override VerticalAxisGroup.minimum-Y-extent = #'(-20 . 20)
+        )
+    }
+    \context {
         \Score
         \override StaffGrouper.staffgroup-staff-spacing = #'(
             (basic-distance . 0)
@@ -13,6 +23,7 @@
             (padding . 2)
             (stretchability . 0)
             )
+        \override PhrasingSlur.transparent = ##t
         proportionalNotationDuration = #(ly:make-moment 1 12)
         skipBars = ##t
     }
@@ -36,4 +47,3 @@
         (stretchability . 0)
     )
 }
-

@@ -11,6 +11,13 @@
     short-indent = 15\mm
 }
 
+\layout {
+    \context {
+        \Score
+        \override PhrasingSlur.transparent = ##t
+    }
+}
+
 \score {
     \include "../segments.ily"
 }

@@ -129,7 +129,6 @@
     \context {
         \Staff
         \remove Time_signature_engraver
-        \RemoveEmptyStaves
     }
 
     \context {
@@ -262,6 +261,7 @@
         \name VocalizationStaff
         \type Engraver_group
         \alias Staff
+        \RemoveEmptyStaves
         \override DynamicLineSpanner.outside-staff-priority = 1000
         \override DynamicText.outside-staff-priority = 1000
         \override StaffSymbol.line-positions = #'(0)
