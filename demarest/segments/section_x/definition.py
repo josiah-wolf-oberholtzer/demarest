@@ -12,7 +12,7 @@ segment_maker = demarest.SegmentMaker(
     annotate_phrasing=False,
     desired_duration_in_seconds=180,
     permitted_time_signatures=[
-        (4, 4), (5, 4),
+        (4, 4),
         ],
     tempo=abjad.Tempo((1, 4), 72),
     )
@@ -216,7 +216,10 @@ segment_maker.add_setting(
     )
 
 segment_maker.add_setting(
-    timespan_maker=sparse_timespan_maker,
+    timespan_maker=abjad.new(
+        sparse_timespan_maker,
+        padding=abjad.Duration(1, 2),
+        ),
     timespan_identifier=common_timespan_identifier.rotate(6),
     t_1_percussion=consort.MusicSpecifierSequence(
         application_rate='phrase',
@@ -232,6 +235,7 @@ segment_maker.add_setting(
             trio_b_vibraphone_drone,
             ],
         ),
+    silenced_contexts=['t_1_voice', 't_2_voice'],
     )
 
 segment_maker.add_setting(
@@ -244,6 +248,7 @@ segment_maker.add_setting(
     timespan_maker=abjad.new(
         boundary_timespan_maker,
         labels=['trio_b_ratchet_drone'],
+        padding=abjad.Duration(1, 2),
         timespan_specifier=consort.TimespanSpecifier(
             forbid_fusing=True,
             minimum_duration=abjad.Duration(1, 4),
@@ -251,4 +256,5 @@ segment_maker.add_setting(
         ),
     t_1_percussion=abjad.new(trio_a_woodblock_fanfare, seed=1),
     t_3_percussion=abjad.new(trio_c_toms_fanfare, seed=2),
+    silenced_contexts=['t_1_voice', 't_3_voice'],
     )

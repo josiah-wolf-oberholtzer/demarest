@@ -91,22 +91,26 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
                 ],
             ),
         ),
-    rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
-        denominators=[16, 16, 4, 16, 8, 4],
-        beam_specifier=abjad.rhythmmakertools.BeamSpecifier(
-            beam_each_division=False,
-            beam_divisions_together=False,
+    rhythm_maker=consort.CompositeRhythmMaker(
+        default=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
+            denominators=[4, 4, 4, 16],
+            burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
+                left_classes=[abjad.Rest],
+                left_counts=[1, 0],
+                right_classes=[abjad.Rest],
+                right_counts=[0, 1, 0],
+                ),
+            extra_counts_per_division=[0, 1, 0, 1, 2],
             ),
-        burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
-            left_classes=[abjad.Rest],
-            left_counts=[1, 0],
-            right_classes=[abjad.Rest],
-            right_counts=[0, 1, 0],
-            ),
-        duration_spelling_specifier=abjad.rhythmmakertools.DurationSpellingSpecifier(
-            decrease_durations_monotonically=True,
-            forbidden_written_duration=abjad.Duration(1, 2),
-            ),
-        extra_counts_per_division=[0, 1, 0, 1, 2],
-        )
+        only=abjad.rhythmmakertools.IncisedRhythmMaker(
+            incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
+                fill_with_notes=True,
+                prefix_talea=[1, 1, 1, -1],
+                prefix_counts=[2, 3, 2, 4],
+                suffix_talea=[1],
+                suffix_counts=[0, 0, 1],
+                talea_denominator=16,
+                ),
+            )
+        ),
     )

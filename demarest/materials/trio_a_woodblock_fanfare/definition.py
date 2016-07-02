@@ -1,12 +1,6 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad.tools import durationtools
-from abjad.tools import indicatortools
-from abjad.tools import patterntools
-from abjad.tools import pitchtools
-from abjad.tools import rhythmmakertools
-from abjad.tools import selectortools
-from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
 
@@ -19,7 +13,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
         chords=consort.AttachmentExpression(
             attachments=[
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_1,
@@ -28,7 +22,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                         ),
                     ],
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_2,
@@ -37,7 +31,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                         ),
                     ],
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_3,
@@ -46,7 +40,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                         ),
                     ],
                 [
-                    indicatortools.Articulation('accent'),
+                    abjad.indicatortools.Articulation('accent'),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_4,
@@ -56,11 +50,11 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                     ],
                 ],
             is_destructive=True,
-            selector=selectortools.Selector()
+            selector=abjad.select()
                 .by_logical_tie(pitched=True)
                 .by_duration('==', (1, 16), preprolated=True)
                 .by_pattern(
-                    patterntools.Pattern(
+                    abjad.patterntools.Pattern(
                         indices=[0, 3],
                         period=7,
                         ),
@@ -75,7 +69,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
         tremolo_chords=consort.AttachmentExpression(
             attachments=[
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_1,
@@ -84,7 +78,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                         ),
                     ],
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_2,
@@ -93,7 +87,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                         ),
                     ],
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_3,
@@ -102,7 +96,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                         ),
                     ],
                 [
-                    spannertools.StemTremoloSpanner(),
+                    abjad.spannertools.StemTremoloSpanner(),
                     consort.ChordExpression(
                         chord_expr=[
                             Percussion.WOOD_BLOCK_4,
@@ -112,7 +106,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                     ],
                 ],
             is_destructive=True,
-            selector=selectortools.Selector()
+            selector=abjad.select()
                 .by_logical_tie(pitched=True)
                 .by_duration('>', (1, 16), preprolated=True)
             ),
@@ -124,7 +118,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
     labels=['trio_a_woodblock_fanfare'],
     instrument=abbreviations.trio_a_percussion,
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=pitchtools.PitchSegment(
+        pitch_specifier=abjad.pitchtools.PitchSegment(
             items=[
                 Percussion.WOOD_BLOCK_1,
                 Percussion.WOOD_BLOCK_4,
@@ -134,16 +128,26 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                 ],
             ),
         ),
-    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-        denominators=[16, 16, 4, 16, 4],
-        beam_specifier=rhythmmakertools.BeamSpecifier(
-            beam_each_division=False,
-            beam_divisions_together=False,
+    rhythm_maker=consort.CompositeRhythmMaker(
+        default=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
+            denominators=[4, 4, 4, 16],
+            burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(
+                left_classes=[abjad.Rest],
+                left_counts=[1, 0],
+                right_classes=[abjad.Rest],
+                right_counts=[0, 1, 0],
+                ),
+            extra_counts_per_division=[0, 1, 0, 1, 2],
             ),
-        duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
-            decrease_durations_monotonically=True,
-            forbidden_written_duration=durationtools.Duration(1, 2),
-            ),
-        extra_counts_per_division=[0, 1, 0, 1, 2],
-        )
+        only=abjad.rhythmmakertools.IncisedRhythmMaker(
+            incise_specifier=abjad.rhythmmakertools.InciseSpecifier(
+                fill_with_notes=True,
+                prefix_talea=[1, 1, 1, -1],
+                prefix_counts=[2, 3, 2, 4],
+                suffix_talea=[1],
+                suffix_counts=[0, 0, 1],
+                talea_denominator=16,
+                ),
+            )
+        ),
     )

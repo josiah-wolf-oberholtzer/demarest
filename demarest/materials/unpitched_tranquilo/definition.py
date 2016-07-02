@@ -19,7 +19,7 @@ unpitched_tranquilo = consort.MusicSpecifier(
         .rotate_hue(-0.6),
     comment='unpitched_tranquilo',
     labels=['unpitched_tranquilo'],
-    pitch_handler=consort.AbsolutePitchHandler(),
+    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier='C4'),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=rhythmmakertools.InciseSpecifier(
             fill_with_notes=False,

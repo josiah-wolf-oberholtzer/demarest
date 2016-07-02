@@ -12,7 +12,7 @@ segment_maker = demarest.SegmentMaker(
     annotate_phrasing=False,
     desired_duration_in_seconds=180,
     permitted_time_signatures=[
-        (3, 4), (4, 4), (5, 4),
+        (4, 4),
         ],
     tempo=abjad.Tempo((1, 4), 64),
     )
@@ -109,7 +109,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=sparse_timespan_maker.rotate(0),
-    timespan_identifier=common_timespan_identifier.rotate(0),
+    timespan_identifier=common_timespan_identifier.rotate(0) + [-1],
     a_1_percussion=percussion_melange,
     a_2_percussion=percussion_melange,
     a_3_percussion=percussion_melange,
@@ -118,7 +118,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=sparse_timespan_maker.rotate(1),
-    timespan_identifier=common_timespan_identifier.rotate(1),
+    timespan_identifier=common_timespan_identifier.rotate(1) + [-1],
     b_1_percussion=percussion_melange,
     b_2_percussion=percussion_melange,
     b_3_percussion=percussion_melange,
@@ -127,7 +127,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=sparse_timespan_maker.rotate(2),
-    timespan_identifier=common_timespan_identifier.rotate(2),
+    timespan_identifier=common_timespan_identifier.rotate(2) + [-1],
     a_1_voice=pitch_pipe_melange,
     a_2_voice=pitch_pipe_melange,
     a_3_voice=pitch_pipe_melange,
@@ -136,7 +136,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=sparse_timespan_maker.rotate(3),
-    timespan_identifier=common_timespan_identifier.rotate(3),
+    timespan_identifier=common_timespan_identifier.rotate(3) + [-1],
     b_1_voice=pitch_pipe_melange,
     b_2_voice=pitch_pipe_melange,
     b_3_voice=pitch_pipe_melange,
@@ -145,7 +145,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=sparse_timespan_maker.rotate(4),
-    timespan_identifier=common_timespan_identifier.rotate(4),
+    timespan_identifier=common_timespan_identifier.rotate(4) + [-1],
     t_1_voice=pitch_pipe_melange,
     t_2_voice=pitch_pipe_melange,
     t_3_voice=pitch_pipe_melange,
@@ -155,7 +155,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=snaking_timespan_maker,
-    timespan_identifier=rare_timespan_identifier,
+    timespan_identifier=rare_timespan_identifier + [-1],
     a_1_percussion=castanet_repetitions,
     a_2_percussion=castanet_repetitions,
     a_3_percussion=castanet_repetitions,
@@ -196,8 +196,11 @@ segment_maker.add_setting(
     )
 
 segment_maker.add_setting(
-    timespan_maker=sparse_timespan_maker,
-    timespan_identifier=rare_timespan_identifier.rotate(1),
+    timespan_maker=abjad.new(
+        sparse_timespan_maker,
+        padding=abjad.Duration(1, 2),
+        ),
+    timespan_identifier=rare_timespan_identifier.rotate(1) + [-1],
     t_1_percussion=consort.MusicSpecifierSequence(
         application_rate='phrase',
         music_specifiers=[
@@ -215,8 +218,11 @@ segment_maker.add_setting(
     )
 
 segment_maker.add_setting(
-    timespan_maker=sparse_timespan_maker.rotate(5),
-    timespan_identifier=common_timespan_identifier.rotate(5),
+    timespan_maker=abjad.new(
+        sparse_timespan_maker.rotate(5),
+        padding=abjad.Duration(1, 2),
+        ),
+    timespan_identifier=common_timespan_identifier.rotate(5) + [-1],
     t_1_percussion=trio_a_crotales_tranquilo,
     t_2_percussion=trio_b_vibraphone_tranquilo,
     t_3_percussion=trio_c_tubular_bells_tranquilo,

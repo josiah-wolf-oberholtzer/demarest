@@ -14,5 +14,4 @@ shaker_repetitions = abjad.new(
     comment='shaker_repetitions',
     labels=['shaker_repetitions'],
     pitch_handler__pitch_specifier=abbreviations.UnpitchedPercussion.SHAKER,
-    rhythm_maker__extra_counts_per_division=[0, 0, 1, 0, 1, 2],
     )

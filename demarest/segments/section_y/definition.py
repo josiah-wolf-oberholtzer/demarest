@@ -12,7 +12,7 @@ segment_maker = demarest.SegmentMaker(
     annotate_phrasing=False,
     desired_duration_in_seconds=181,
     permitted_time_signatures=[
-        (3, 4), (4, 4), (5, 4),
+        (4, 4),
         ],
     tempo=abjad.Tempo((1, 4), 96),
     )
@@ -214,13 +214,19 @@ segment_maker.add_setting(
     )
 
 segment_maker.add_setting(
-    timespan_maker=droning_timespan_maker,
+    timespan_maker=abjad.new(
+        droning_timespan_maker,
+        padding=abjad.Duration(1, 2),
+        ),
     t_1_percussion=materials.trio_a_marimba_shimmer,
     t_2_percussion=materials.trio_b_vibraphone_shimmer,
     )
 
 segment_maker.add_setting(
-    timespan_maker=sparse_timespan_maker.rotate(5),
+    timespan_maker=abjad.new(
+        sparse_timespan_maker.rotate(5),
+        padding=abjad.Duration(1, 2),
+        ),
     t_1_percussion=consort.MusicSpecifierSequence(
         application_rate='phrase',
         music_specifiers=[
@@ -242,4 +248,5 @@ segment_maker.add_setting(
             materials.trio_c_tubular_bells_drone,
             ],
         ),
+    silenced_contexts=['t_1_voice', 't_2_voice', 't_3_voice'],
     )

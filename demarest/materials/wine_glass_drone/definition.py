@@ -7,6 +7,12 @@ from demarest.materials.unpitched_drone.definition import unpitched_drone
 
 wine_glass_drone = abjad.new(
     unpitched_drone,
+    attachment_handler__dynamics=consort.DynamicExpression(
+        division_period=2,
+        dynamic_tokens='p',
+        start_dynamic_tokens='niente',
+        stop_dynamic_tokens='p',
+        ),
     attachment_handler__performance_instruction=consort.AttachmentExpression(
         attachments=abbreviations.make_text_spanner('circle'),
         selector=abjad.selectortools.select_pitched_runs(),

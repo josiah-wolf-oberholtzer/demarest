@@ -32,7 +32,7 @@ unpitched_shimmer = consort.MusicSpecifier(
         .rotate_hue(-0.6),
     comment='unpitched_shimmer',
     labels=['unpitched_shimmer'],
-    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier="C4"),
+    pitch_handler=consort.AbsolutePitchHandler(pitch_specifier='C4'),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=[4, 8],
         division_masks=[

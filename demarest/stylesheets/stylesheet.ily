@@ -22,16 +22,16 @@
                     }
                 }
                 \null
+                \override #'(font-name . "Didot Italic") {
+                    \fontsize #6 "Three field studies from"
+                }
+                \null
                 \override #'(font-name . "Didot") {
-                    \fontsize #16 {
-                        "DEMAREST"
-                    }
+                    \fontsize #12 "DEMAREST/LLOYD"
                 }
                 \null
                 \override #'(font-name . "Didot Italic") {
-                    \fontsize #1 {
-                        "for eleven percussionists"
-                    }
+                    \fontsize #1 "for eleven percussionists"
                 }
             }
         }
@@ -129,6 +129,7 @@
     \context {
         \Staff
         \remove Time_signature_engraver
+        \RemoveEmptyStaves
     }
 
     \context {
@@ -395,7 +396,7 @@
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
-        proportionalNotationDuration = #(ly:make-moment 1 16)
+        proportionalNotationDuration = #(ly:make-moment 1 12)
         tupletFullLength = ##t
         barNumberFormatter = #format-oval-barnumbers
     }
