@@ -1,7 +1,7 @@
 % package "abjad" @ d47123b [josiah/demarest] (2016-07-01 13:26:31)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ aa64205 [master] (2016-06-27 23:25:13)
-% package "demarest" @ c294549 [master] (2016-06-28 22:53:06)
+% package "demarest" @ 4af7352 [master] (2016-07-01 20:49:44)
 
 \version "2.19.41"
 \language "english"
@@ -15729,6 +15729,7 @@
                 \context PercussionStaff = "T 3 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 134
                             {
@@ -15762,8 +15763,26 @@
                                                                 b.d.
                                                             }
                                     }
-                                r2
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
+                                f8 -\tenuto \laissezVibrer \f \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
                                 r8
+                                r4.
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"

@@ -1,7 +1,7 @@
 % package "abjad" @ d47123b [josiah/demarest] (2016-07-01 13:26:31)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ aa64205 [master] (2016-06-27 23:25:13)
-% package "demarest" @ c294549 [master] (2016-06-28 22:53:06)
+% package "demarest" @ 4af7352 [master] (2016-07-01 20:49:44)
 
 \version "2.19.41"
 \language "english"
@@ -23,11 +23,18 @@
                 \tempo 4=96
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                C
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        C
+                            " "
+                            \fontsize
+                                #-3
+                                "Repeat x4"
+                        }
                     }
                 s1 * 3
             }
@@ -688,13 +695,17 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                e''16 -\accent -\staccato \f \( \> [
+                                <e'' g''>1 :32 \f \( \>
+                            }
+                            % [T 1 Percussion Voice] Measure 132
+                            {
+                                a16 -\staccato [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
-                                bf'16 -\staccato
-                                <c' ef'>8 :64 ]
-                                <c' ef'>2 :32 \repeatTie
-                                <c' ef'>8. :64 \repeatTie [
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                b16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 a16 -\staccato \p ]
                                 <> \)
@@ -702,9 +713,8 @@
                             }
                         }
                         {
-                            % [T 1 Percussion Voice] Measure 132
                             {
-                                r2
+                                r4
                             }
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_agitato"
@@ -740,13 +750,16 @@
                                 \set stemRightBeamCount = 2
                                 r16
                                 <f af>16 :128 ]
-                                <f af>4 :32 \p \repeatTie
+                                <f af>4 :32 \repeatTie
+                            }
+                            % [T 1 Percussion Voice] Measure 133
+                            {
+                                <a, c>4 :32 \p
                                 <> \)
                                 \clef "percussion"
                             }
                         }
                         {
-                            % [T 1 Percussion Voice] Measure 133
                             {
                                 r2
                             }
@@ -776,19 +789,14 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                a16 -\accent -\staccato \f \( [
+                                af16 -\accent -\staccato \f \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 r16
                                 \set stemLeftBeamCount = 1
-                                <d f>8 :64 ]
+                                <f, af,>8 :64 ]
                                 <> \)
                                 \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r4
                             }
                         }
                     }
@@ -951,26 +959,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
                                 a''16 -\accent -\staccato \f \( \> [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <b' d''>8 :64
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <b' d''>8. :64 \repeatTie
-                                \set stemLeftBeamCount = 2
-                                ef'16 -\staccato \p ]
+                                <b' d''>8 :64 ]
+                                <b' d''>4.. :32 \repeatTie
+                                af'16 -\staccato \p
                                 <> \)
                                 \clef "percussion"
                             }
                         }
                         {
                             {
-                                r2
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 133
+                            {
+                                r4
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_agitato"
                         {
-                            % [T 2 Percussion Voice] Measure 133
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
@@ -1003,11 +1009,6 @@
                                 d'16 -\staccato \p
                                 <> \)
                                 \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r4
                             }
                         }
                     }
@@ -1076,7 +1077,6 @@
                 \context PercussionStaff = "T 3 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             % [T 3 Percussion Voice] Measure 131
                             {
@@ -1110,25 +1110,12 @@
                                                                 b.d.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \f \( [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
                                 r16
-                                \set stemLeftBeamCount = 1
-                                <a c'>8 :64 ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r2.
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
-                            % [T 3 Percussion Voice] Measure 132
-                            \times 2/3 {
+                            {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -1160,15 +1147,68 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                r4 \(
-                                <e' g'>4 :32 \parenthesizeDynamic \f \>
-                                <a c'>4 :32 \mf
+                                g'16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                <c' e'>16 -\accent ]
+                                <c' e'>4.. :32
+                                g'16 \mf
                                 <> \)
                             }
                         }
                         {
                             {
-                                r2
+                                r4
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 132
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <a c'>16 -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                e'16
+                                <a c'>8 :64 ]
+                                <a c'>2 :32 \mf \repeatTie
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
@@ -1206,15 +1246,16 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <c' e'>4 :32 \f \( \>
-                                <e' g'>4 :32
-                                <a c'>4 :32 \mf
+                                g'16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                <e' g'>16 :128 ]
+                                <e' g'>2. :32 \mf \repeatTie
                                 <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4
                             }
                         }
                     }

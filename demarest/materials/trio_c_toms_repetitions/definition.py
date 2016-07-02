@@ -40,5 +40,6 @@ trio_c_toms_repetitions = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(-0.3),
     comment='trio_c_toms_repetitions',
+    instrument=abbreviations.trio_c_percussion,
     labels=['trio_c_toms_repetitions'],
     )

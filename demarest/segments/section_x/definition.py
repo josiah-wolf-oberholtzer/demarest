@@ -239,7 +239,7 @@ segment_maker.add_setting(
     )
 
 segment_maker.add_setting(
-    timespan_identifier=rare_timespan_identifier.rotate(1),
+    timespan_identifier=rare_timespan_identifier.rotate(1) + [-1],
     timespan_maker=droning_timespan_maker,
     t_2_percussion=trio_b_ratchet_drone,
     )
@@ -257,4 +257,26 @@ segment_maker.add_setting(
     t_1_percussion=abjad.new(trio_a_woodblock_fanfare, seed=1),
     t_3_percussion=abjad.new(trio_c_toms_fanfare, seed=2),
     silenced_contexts=['t_1_voice', 't_3_voice'],
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=rare_timespan_identifier.rotate(5),
+    timespan_maker=abjad.new(
+        droning_timespan_maker.rotate(5),
+        padding=abjad.Duration(3, 4),
+        ),
+    t_1_percussion=materials.trio_a_marimba_repetitions,
+    t_2_percussion=materials.trio_b_tam_tam_repetitions,
+    t_3_percussion=materials.trio_c_bass_drum_repetitions,
+    silenced_contexts=['t_1_voice', 't_2_voice', 't_3_voice'],
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=abjad.Timespan(0, (1, 4)),
+    t_3_percussion=abjad.new(
+        materials.trio_c_bass_drum_tranquilo,
+        attachment_handler__dynamics=consort.DynamicExpression(
+            dynamic_tokens='f',
+            ),
+        ),
     )

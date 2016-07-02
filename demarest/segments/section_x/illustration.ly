@@ -1,7 +1,7 @@
 % package "abjad" @ d47123b [josiah/demarest] (2016-07-01 13:26:31)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ aa64205 [master] (2016-06-27 23:25:13)
-% package "demarest" @ c294549 [master] (2016-06-28 22:53:06)
+% package "demarest" @ 4af7352 [master] (2016-07-01 20:49:44)
 
 \version "2.19.41"
 \language "english"
@@ -19,7 +19,7 @@
             {
                 \tempo 4=72
                 \time 4/4
-                s1 * 55
+                s1 * 54
             }
         }
         \context SectionStaffGroup = "Chorus A" <<
@@ -182,7 +182,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -195,7 +209,39 @@
                             }
                             % [A 1 Vocalization Voice] Measure 8
                             {
-                                c'2. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -363,7 +409,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -373,8 +419,38 @@
                                                         sh-
                                                     }
                                         }
-                                c'2 \repeatTie
-                                c'8 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -548,7 +624,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -561,7 +651,9 @@
                             }
                             % [A 1 Vocalization Voice] Measure 18
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -593,7 +685,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -603,7 +695,26 @@
                                                         h-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -714,7 +825,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -724,7 +835,26 @@
                                                         sh-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -750,7 +880,51 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. \( \<
+                                c'8 \( [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -763,16 +937,7 @@
                             }
                             % [A 1 Vocalization Voice] Measure 25
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -904,24 +1069,8 @@
                         % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -934,11 +1083,56 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -986,7 +1180,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan
+                                c'8 \p \( \startTextSpan
                             }
                             % [A 1 Vocalization Voice] Measure 37
                             {
@@ -1148,7 +1342,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1158,7 +1352,23 @@
                                                         s-
                                                     }
                                         }
-                                c'4. \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -1361,7 +1571,10 @@
                             }
                             % [A 1 Vocalization Voice] Measure 46
                             {
-                                c'4. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1371,6 +1584,8 @@
                                                         h-
                                                     }
                                         }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -1549,12 +1764,23 @@
                         % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -1578,7 +1804,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -3612,15 +3838,6 @@
                             {
                                 r2..
                             }
-                            % [A 1 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
                         }
                     }
                 }
@@ -3765,16 +3982,7 @@
                             }
                             % [A 2 Vocalization Voice] Measure 8
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -3791,12 +3999,43 @@
                         {
                             % [A 2 Vocalization Voice] Measure 9
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. -\accent \fp \(
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3862,7 +4101,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3956,7 +4195,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -3966,7 +4205,26 @@
                                                         s-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -3992,7 +4250,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \<
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4145,12 +4423,43 @@
                         {
                             % [A 2 Vocalization Voice] Measure 17
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'1 -\accent \fp \(
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4378,7 +4687,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'8 \( [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4391,7 +4714,9 @@
                             }
                             % [A 2 Vocalization Voice] Measure 25
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4507,7 +4832,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4642,7 +4987,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -4652,7 +4997,35 @@
                                                         f-
                                                     }
                                         }
-                                c'2 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -4754,7 +5127,54 @@
                             }
                             % [A 2 Vocalization Voice] Measure 38
                             {
-                                c'1 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5077,12 +5497,23 @@
                         % [A 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -5272,15 +5703,6 @@
                             {
                                 r8.
                                 r2.
-                            }
-                            % [A 2 Vocalization Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }
@@ -7303,17 +7725,6 @@
                                 <> \stopTextSpan
                             }
                         }
-                        {
-                            % [A 2 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
                     }
                 }
             >>
@@ -7526,7 +7937,17 @@
                             }
                             % [A 3 Vocalization Voice] Measure 8
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7699,7 +8120,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7744,7 +8185,37 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'1 \( \<
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7920,7 +8391,10 @@
                             }
                             % [A 3 Vocalization Voice] Measure 19
                             {
-                                c'4. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -7930,6 +8404,8 @@
                                                         h-
                                                     }
                                         }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -8042,7 +8518,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8055,7 +8545,10 @@
                             }
                             % [A 3 Vocalization Voice] Measure 24
                             {
-                                c'2 -\accent
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8065,7 +8558,23 @@
                                                         sh-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -8104,16 +8613,7 @@
                             }
                             % [A 3 Vocalization Voice] Measure 26
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -8261,7 +8761,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8271,7 +8771,23 @@
                                                         f-
                                                     }
                                         }
-                                c'4. \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -8458,7 +8974,37 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'1 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8679,16 +9225,7 @@
                             }
                             % [A 3 Vocalization Voice] Measure 44
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -8796,24 +9333,8 @@
                         % [A 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -8826,11 +9347,56 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8848,24 +9414,8 @@
                         {
                             % [A 3 Vocalization Voice] Measure 47
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -8878,11 +9428,56 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8930,7 +9525,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \( \startTextSpan
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -8995,6 +9590,7 @@
                         {
                             % [A 3 Vocalization Voice] Measure 52
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -9032,7 +9628,37 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9067,7 +9693,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \<
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9080,7 +9716,7 @@
                             }
                             % [A 3 Vocalization Voice] Measure 54
                             {
-                                c'2 -\accent
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -9090,7 +9726,26 @@
                                                         f-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -9102,15 +9757,6 @@
                         {
                             {
                                 r4.
-                            }
-                            % [A 3 Vocalization Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }
@@ -11003,15 +11649,6 @@
                                 r8.
                                 r2
                             }
-                            % [A 3 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
                         }
                     }
                 }
@@ -11159,12 +11796,23 @@
                         % [A 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11200,7 +11848,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11293,7 +11941,39 @@
                             }
                             % [A 4 Vocalization Voice] Measure 11
                             {
-                                c'2. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11328,7 +12008,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \<
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11341,7 +12031,27 @@
                             }
                             % [A 4 Vocalization Voice] Measure 13
                             {
-                                c'2. -\accent \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11467,16 +12177,7 @@
                             }
                             % [A 4 Vocalization Voice] Measure 16
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -11502,7 +12203,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \<
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11512,11 +12213,41 @@
                                                         sh-
                                                     }
                                         }
-                                c'2 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                             }
                             % [A 4 Vocalization Voice] Measure 18
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11696,7 +12427,9 @@
                             }
                             % [A 4 Vocalization Voice] Measure 24
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11732,7 +12465,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'8 \( [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11745,7 +12492,39 @@
                             }
                             % [A 4 Vocalization Voice] Measure 26
                             {
-                                c'2. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -11885,24 +12664,8 @@
                         {
                             % [A 4 Vocalization Voice] Measure 36
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -11915,11 +12678,56 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -12125,7 +12933,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12138,7 +12966,17 @@
                             }
                             % [A 4 Vocalization Voice] Measure 41
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12301,7 +13139,7 @@
                             }
                             % [A 4 Vocalization Voice] Measure 46
                             {
-                                c'2 -\accent
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12311,7 +13149,26 @@
                                                         f-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -12337,7 +13194,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \<
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12350,7 +13227,17 @@
                             }
                             % [A 4 Vocalization Voice] Measure 48
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12428,7 +13315,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -12438,8 +13325,38 @@
                                                         sh-
                                                     }
                                         }
-                                c'2 \repeatTie
-                                c'8 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -12531,15 +13448,6 @@
                             {
                                 r8
                                 r2
-                            }
-                            % [A 4 Vocalization Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }
@@ -14460,15 +15368,6 @@
                                 r16
                                 r4
                             }
-                            % [A 4 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
                         }
                     }
                 }
@@ -14598,6 +15497,7 @@
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -14635,7 +15535,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14670,7 +15580,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \<
+                                c'4 \( \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14710,17 +15630,36 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 7
+                                R1 * 9
                                 \stopStaff
                                 \startStaff
+                            }
+                            % [T 1 Vocalization Voice] Measure 16
+                            {
+                                r2
                             }
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
-                            % [T 1 Vocalization Voice] Measure 14
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 -\accent \fp \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -14731,6 +15670,47 @@
                                                             {
                                                                 \vstrut
                                                                 "wh. (inhale)"
+                                                            }
+                                    }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 1 Vocalization Voice] Measure 17
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 1 Vocalization Voice] Measure 20
+                            {
+                                r8
+                            }
+                        }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14743,7 +15723,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                "pitch pipe"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14752,36 +15732,14 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'1 \( \startTextSpan \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                            }
-                            % [T 1 Vocalization Voice] Measure 15
-                            {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ]
                                 <> \)
-                                \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -14790,16 +15748,8 @@
                         }
                         {
                             {
-                                r2..
-                            }
-                            % [T 1 Vocalization Voice] Measure 16
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 5
-                                \stopStaff
-                                \startStaff
+                                r8
+                                r2
                             }
                             % [T 1 Vocalization Voice] Measure 21
                             {
@@ -14966,7 +15916,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -14979,16 +15943,7 @@
                             }
                             % [T 1 Vocalization Voice] Measure 24
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -15086,117 +16041,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 6
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 1 Vocalization Voice] Measure 33
-                            {
-                                r2
-                            }
-                        }
-                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            % [T 1 Vocalization Voice] Measure 34
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            % [T 1 Vocalization Voice] Measure 35
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r2..
-                            }
-                            % [T 1 Vocalization Voice] Measure 36
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 6
+                                R1 * 15
                                 \stopStaff
                                 \startStaff
                             }
@@ -15252,7 +16097,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -15286,7 +16131,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -15400,17 +16245,45 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
                                                     }
                                         }
-                                c'2 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -15523,115 +16396,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        s-
-                                                    }
-                                        }
-                                c'8 \repeatTie \p
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4.
-                            }
-                            % [T 1 Vocalization Voice] Measure 51
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 1 Vocalization Voice] Measure 52
-                            {
-                                r8
-                            }
-                        }
-                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 -\accent \fp \( \startTextSpan
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                        }
-                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 \( \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15641,9 +16406,16 @@
                                                         h-
                                                     }
                                         }
-                            }
-                            % [T 1 Vocalization Voice] Measure 53
-                            {
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
@@ -15664,8 +16436,20 @@
                         }
                         {
                             {
-                                r2
-                                r8
+                                r4
+                            }
+                            % [T 1 Vocalization Voice] Measure 51
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 2
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 1 Vocalization Voice] Measure 53
+                            {
+                                r2..
                             }
                         }
                         % [T 1 Vocalization Voice] Material: "whispered_pointillism"
@@ -15707,7 +16491,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan
+                                c'16 -\staccato \p \( \startTextSpan
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -15750,22 +16534,42 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
                                 r8.
-                                r2.
+                                r2
+                                r8
                             }
-                            % [T 1 Vocalization Voice] Measure 55
+                        }
+                        % [T 1 Vocalization Voice] Material: "whispered_pointillism"
+                        {
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
+                                c'16 -\staccato \(
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        t-
+                                                    }
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16
                             }
                         }
                     }
@@ -16152,13 +16956,145 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_repetitions"
+                        {
+                            % [T 1 Percussion Voice] Measure 14
+                            {
+                                \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <b' d''>16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                <b' d''>16 -\staccato ]
+                            }
+                            % [T 1 Percussion Voice] Measure 15
+                            {
+                                <b' d''>16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <b' d''>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                <b' d''>16 -\staccato \p ]
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
                             % [T 1 Percussion Voice] Measure 16
                             {
-                                r8.
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 2
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 1 Percussion Voice] Measure 18
+                            {
+                                r16
                             }
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
@@ -16212,68 +17148,16 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 <a c'>16 -\accent
-                                <a c'>8 :64 ]
-                                <a c'>4.. :32 \repeatTie
-                                f16 \mf
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <a c'>8. :64
+                                \set stemLeftBeamCount = 2
+                                f16 \mf ]
                                 <> \)
                             }
                         }
                         {
-                            % [T 1 Percussion Voice] Measure 17
                             {
-                                r2
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
-                        {
-                            {
-                                \clef "treble"
-                                \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <a' d''>2 :32 \( \< ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                mb.
-                                                            }
-                                    }
-                            }
-                            % [T 1 Percussion Voice] Measure 18
-                            {
-                                <a' d''>4. :32 \f \repeatTie
-                                <> \)
-                                \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r8
                                 r2
                             }
                         }
@@ -16310,72 +17194,13 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <f a>16 -\accent \parenthesizeDynamic \f \( [ ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
-                                    }
-                                a16 ]
-                                <f a>4. :32
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            % [T 1 Percussion Voice] Measure 20
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                g'16 \parenthesizeDynamic \f \( \> [
+                                <f a>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                <e' g'>16 :128 ]
-                                <e' g'>2 :32 \repeatTie
-                                <e' g'>8 :64 \mf \repeatTie
+                                \set stemRightBeamCount = 1
+                                a16
+                                <f a>8 :64 ]
+                                <f a>2 :32 \repeatTie
+                                <f a>8 :64 \mf \repeatTie
                                 <> \)
                             }
                         }
@@ -16383,12 +17208,12 @@
                             {
                                 r8
                             }
-                            % [T 1 Percussion Voice] Measure 21
+                            % [T 1 Percussion Voice] Measure 20
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 6
+                                R1 * 7
                                 \stopStaff
                                 \startStaff
                             }
@@ -16422,7 +17247,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <fs' a'>8 :64 \fp \( ^ \markup {
+                                <g' c''>8 :64 \ppp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -16435,7 +17260,7 @@
                                                                 mb.
                                                             }
                                     }
-                                <fs' a'>2 :32 \repeatTie
+                                <g' c''>2 :32 \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
@@ -16487,14 +17312,120 @@
                         {
                             {
                                 r8
-                                r8
+                                r2
                             }
                         }
-                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                g'16 \f \( \> [ ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
+                                    }
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16 -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                e'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 30
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                a16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                r16
+                                <c' e'>8 :64 ]
+                                <c' e'>2 :32 \repeatTie
+                                <c' e'>8. :64 \repeatTie [
+                                \set stemLeftBeamCount = 2
+                                g'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        {
+                            % [T 1 Percussion Voice] Measure 31
+                            {
+                                r2.
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
                                 \clef "treble"
-                                \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -16516,59 +17447,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <ef' gf'>8 :64 \( \<
-                                <ef' gf'>2 :32 \repeatTie
-                            }
-                            % [T 1 Percussion Voice] Measure 30
-                            {
-                                <ef' gf'>4. :32 \f \repeatTie
-                                <> \)
-                                \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                            % [T 1 Percussion Voice] Measure 31
-                            {
-                                r2
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                a16 \parenthesizeDynamic \f \( \> [ ^ \markup {
+                                <e a>4 :32 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -16578,72 +17457,15 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                perc.
+                                                                mb.
                                                             }
                                     }
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
-                                r16
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <c' e'>8 :64
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <c' e'>8. :64 \repeatTie
-                                \set stemLeftBeamCount = 2
-                                g'16 \mf ]
                                 <> \)
+                                \clef "percussion"
                             }
                         }
                         {
                             % [T 1 Percussion Voice] Measure 32
-                            {
-                                r16
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                f16 \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                e'16
-                                a16 ]
-                                <a c'>2. :32 \mf
-                                <> \)
-                            }
-                        }
-                        {
-                            % [T 1 Percussion Voice] Measure 33
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16652,168 +17474,12 @@
                                 \stopStaff
                                 \startStaff
                             }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
-                        {
-                            % [T 1 Percussion Voice] Measure 34
-                            {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <f' bf'>4 :32 \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                mb.
-                                                            }
-                                    }
-                                <> \)
-                                \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r2.
-                            }
-                            % [T 1 Percussion Voice] Measure 35
-                            {
-                                r2
-                                r8
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                g'16 \f \( [ ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
-                                    }
-                                f16 ]
-                                <f a>4 :32
-                                <> \)
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            % [T 1 Percussion Voice] Measure 36
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                a16 \parenthesizeDynamic \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                c'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                <e' g'>16 :128 ]
-                                <e' g'>4 :32 \repeatTie
-                                <e' g'>16 :128 \repeatTie [
-                                \set stemLeftBeamCount = 2
-                                f16 \mf ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r4.
-                            }
-                            % [T 1 Percussion Voice] Measure 37
+                            % [T 1 Percussion Voice] Measure 33
                             {
                                 r8
                             }
                         }
-                        % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_repetitions"
                         {
                             {
                                 \clef "treble"
@@ -16839,21 +17505,194 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <f bf>8 :64 \( \< ^ \markup {
-                                    \box
-                                        \whiteout
+                                <ef' gf'>16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                <ef' gf'>16 -\staccato ]
+                            }
+                            % [T 1 Percussion Voice] Measure 34
+                            {
+                                <ef' gf'>16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <ef' gf'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                <ef' gf'>16 -\staccato \p ]
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [T 1 Percussion Voice] Measure 35
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
+                        {
+                            {
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
                                             \pad-around
                                                 #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                mb.
-                                                            }
+                                                \small
+                                                    \italic
+                                                        marimba
                                     }
-                                <f bf>2 :32 \repeatTie
-                                <f bf>8 :64 \p \repeatTie
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <c ef>8 :64 \parenthesizeDynamic \p \( [
+                                \set stemLeftBeamCount = 1
+                                <c ef>8 :64 \repeatTie ]
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
+                        {
+                            % [T 1 Percussion Voice] Measure 36
+                            {
+                                \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <c'' ef''>2 :32 \fp \( \>
+                                <c'' ef''>8 :64 \repeatTie
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8 \!
+                                r8
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
+                        {
+                            {
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        marimba
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        mb.
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
+                                <ef gf>8 :64 \p \(
+                            }
+                            % [T 1 Percussion Voice] Measure 37
+                            {
+                                <ef gf>2.. :32 \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
@@ -16902,12 +17741,12 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <c'' ef''>2 :32 \( \<
+                                <d' f'>2 :32 \( \<
                             }
                             % [T 1 Percussion Voice] Measure 43
                             {
-                                <c'' ef''>2 :32 \repeatTie
-                                <c'' ef''>8 :64 \f \repeatTie
+                                <d' f'>2 :32 \repeatTie
+                                <d' f'>8 :64 \f \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
@@ -16952,7 +17791,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <c ef>4 :32 \p \(
+                                <a, d>4 :32 \p \(
                                 <> \)
                                 \clef "percussion"
                             }
@@ -17000,24 +17839,140 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d' f'>4 :32 \fp \(
+                                <a d'>8 :64 \fp \(
                                 <> \)
                                 \clef "percussion"
                             }
                         }
                         {
                             {
+                                r8
                                 r2
                             }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
                             % [T 1 Percussion Voice] Measure 48
                             {
-                                r4.
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                f16 \f \( [ ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
+                                    }
+                                e'16 ]
+                                <a c'>2.. :32
+                                <> \)
                             }
                         }
-                        % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
+                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
+                        {
+                            % [T 1 Percussion Voice] Measure 49
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                five
+                                                                wood
+                                                                blocks
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                w.b.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                                c'16 \parenthesizeDynamic \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                r16
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <f a>8 :64
+                                \set stemLeftBeamCount = 2
+                                e'16 \mf ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                            % [T 1 Percussion Voice] Measure 50
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 2
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 1 Percussion Voice] Measure 52
+                            {
+                                r4..
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_marimba_repetitions"
                         {
                             {
                                 \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -17039,65 +17994,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d f>8 :64 \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 1
-                                <d f>8 :64 \repeatTie ]
-                                <> \)
-                                \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r4.
-                            }
-                            % [T 1 Percussion Voice] Measure 49
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 1 Percussion Voice] Measure 50
-                            {
-                                r2
-                                r8
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                e'16 \f \( [ ^ \markup {
+                                <e' a'>16 -\staccato \( \< [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -17107,163 +18004,90 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                perc.
+                                                                mb.
                                                             }
                                     }
-                                r16 ]
-                                <c' e'>4 :32
-                                <> \)
-                            }
-                        }
-                        {
-                            % [T 1 Percussion Voice] Measure 51
-                            {
-                                r16
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <a c'>16 -\accent \parenthesizeDynamic \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16
-                                f16 ]
-                                <a c'>2. :32 \mf
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                <e' a'>16 -\staccato ]
+                            }
+                            % [T 1 Percussion Voice] Measure 53
+                            {
+                                <e' a'>16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' a'>16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                <e' a'>16 -\staccato \p ]
                                 <> \)
+                                \clef "percussion"
                             }
                         }
                         {
-                            % [T 1 Percussion Voice] Measure 52
+                            {
+                                r8
+                            }
+                            % [T 1 Percussion Voice] Measure 54
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
-                            }
-                            % [T 1 Percussion Voice] Measure 54
-                            {
-                                r4.
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                a16 \f \( \> [
-                                <f a>16 -\accent ]
-                                <f a>4.. :32
-                                f16 \mf
-                                <> \)
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
-                        {
-                            % [T 1 Percussion Voice] Measure 55
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                e'16 \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                a16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                <e' g'>16 :128 ]
-                                <e' g'>4 :32 \mf \repeatTie
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r2
                             }
                         }
                     }
@@ -17437,18 +18261,19 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 9
+                                R1 * 11
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 14
+                            % [T 2 Vocalization Voice] Measure 16
                             {
-                                r8
+                                r4.
                             }
                         }
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -17486,7 +18311,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. -\accent \fp \( \startTextSpan
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -17496,50 +18321,18 @@
                                                         s-
                                                     }
                                         }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            % [T 2 Vocalization Voice] Measure 15
-                            {
-                                r2
-                                r8
-                            }
-                        }
-                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
-                                                    }
-                                        }
-                            }
-                            % [T 2 Vocalization Voice] Measure 16
-                            {
-                                c'2. -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -17585,7 +18378,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -17750,22 +18543,13 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                             }
                             % [T 2 Vocalization Voice] Measure 24
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -17782,19 +18566,30 @@
                         {
                             % [T 2 Vocalization Voice] Measure 25
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -17826,24 +18621,8 @@
                         % [T 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -17856,11 +18635,60 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -17881,24 +18709,8 @@
                         {
                             % [T 2 Vocalization Voice] Measure 32
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -17911,11 +18723,56 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -17924,99 +18781,10 @@
                             }
                             % [T 2 Vocalization Voice] Measure 33
                             {
-                                r4
-                            }
-                        }
-                        % [T 2 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        t-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r4..
-                            }
-                        }
-                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            % [T 2 Vocalization Voice] Measure 34
-                            {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
@@ -18074,7 +18842,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -18122,7 +18890,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -18221,6 +18989,7 @@
                         {
                             % [T 2 Vocalization Voice] Measure 48
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -18258,14 +19027,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -18290,27 +19069,58 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \<
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                             }
                             % [T 2 Vocalization Voice] Measure 49
                             {
-                                c'2 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -18344,7 +19154,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -18409,92 +19219,10 @@
                             }
                             % [T 2 Vocalization Voice] Measure 52
                             {
-                                r8
-                            }
-                        }
-                        % [T 2 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. \( \startTextSpan \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                            }
-                            % [T 2 Vocalization Voice] Measure 53
-                            {
-                                c'4. -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                            % [T 2 Vocalization Voice] Measure 54
-                            {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -19064,48 +19792,17 @@
                         }
                         {
                             {
-                                r2
+                                r2.
+                            }
+                            % [T 2 Percussion Voice] Measure 14
+                            {
+                                r8
                             }
                         }
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        % [T 2 Percussion Voice] Material: "trio_b_tam_tam_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -19136,11 +19833,11 @@
                                                                 t.t.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                c'4 :32 \( \startTextSpan \< ^ \markup {
+                                f16 -\staccato \( \< [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -19153,37 +19850,127 @@
                                                                 perc.
                                                             }
                                     }
-                            }
-                            % [T 2 Percussion Voice] Measure 14
-                            {
-                                c'1 :32 \repeatTie
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
                             }
                             % [T 2 Percussion Voice] Measure 15
                             {
-                                c'1 :32 \mf \repeatTie
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
+                            }
+                            % [T 2 Percussion Voice] Measure 16
+                            {
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
-                            % [T 2 Percussion Voice] Measure 16
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
+                                r8
+                                r2
+                            }
+                            % [T 2 Percussion Voice] Measure 17
+                            {
+                                r8
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
-                            % [T 2 Percussion Voice] Measure 17
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -19219,11 +20006,56 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'1 \f \(
+                                g'2.. \f \(
+                                <> \)
+                                \stopStaff
+                                \startStaff
                             }
+                        }
+                        {
                             % [T 2 Percussion Voice] Measure 18
                             {
-                                g'1 \repeatTie
+                                r2
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'4. \parenthesizeDynamic \f \(
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -19231,7 +20063,6 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
-                            % [T 2 Percussion Voice] Measure 19
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
@@ -19255,7 +20086,7 @@
                                                         vb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <b' d''>2 :32 \p \( ^ \markup {
+                                <b' d''>8 :64 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -19268,63 +20099,17 @@
                                                                 vb.
                                                             }
                                     }
+                            }
+                            % [T 2 Percussion Voice] Measure 19
+                            {
+                                <b' d''>2 :32 \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
                         }
-                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'4. \f \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
-                                    }
-                                <> \)
-                                \stopStaff
-                                \startStaff
+                                r4
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
@@ -19352,19 +20137,7 @@
                                                         vb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <b'' d'''>8 :64 \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
-                                    }
+                                <b'' d'''>4 :32 \fp \(
                                 <> \)
                                 \clef "percussion"
                             }
@@ -19469,7 +20242,7 @@
                             % [T 2 Percussion Voice] Measure 22
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                c'1 :32 \mp \repeatTie \>
+                                c'1 :32 \mf \repeatTie \>
                             }
                             % [T 2 Percussion Voice] Measure 23
                             {
@@ -19536,7 +20309,7 @@
                             }
                             % [T 2 Percussion Voice] Measure 25
                             {
-                                c'4. :32 \p \repeatTie
+                                c'4. :32 \mp \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -19721,105 +20494,13 @@
                             }
                             % [T 2 Percussion Voice] Measure 31
                             {
-                                <fs' a'>2. :32 \p \repeatTie
+                                <fs' a'>4 :32 \p \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
                         }
-                        {
-                            {
-                                r4
-                            }
-                            % [T 2 Percussion Voice] Measure 32
-                            {
-                                r4
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
-                        {
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'4 :32 \mf \(
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
-                                    }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                <> \)
-                                \stopStaff
-                                \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                        }
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
-                            % [T 2 Percussion Voice] Measure 33
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -19855,13 +20536,21 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'1 \f \(
+                                g'2. \f \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
+                                    }
                             }
-                            % [T 2 Percussion Voice] Measure 34
-                            {
-                                g'1 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 35
+                            % [T 2 Percussion Voice] Measure 32
                             {
                                 g'2 \repeatTie
                                 g'8 \repeatTie
@@ -19870,14 +20559,19 @@
                                 \startStaff
                             }
                         }
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
+                                r4.
+                            }
+                            % [T 2 Percussion Voice] Measure 33
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_tam_tam_repetitions"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -19908,34 +20602,112 @@
                                                                 t.t.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                c'8 :64 \mp \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
+                                f16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
+                            }
+                            % [T 2 Percussion Voice] Measure 34
+                            {
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
+                            }
+                            % [T 2 Percussion Voice] Measure 35
+                            {
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
                             {
-                                r4
+                                r8
+                                r2
                             }
                             % [T 2 Percussion Voice] Measure 36
                             {
@@ -20032,7 +20804,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                c'4. :32 \p \(
+                                c'4. :32 \f \(
                                     ^ \markup {
                                     \box
                                         \whiteout
@@ -20101,7 +20873,7 @@
                                                         vb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d' f'>8 :64 \parenthesizeDynamic \p \( [ ^ \markup {
+                                <d' f'>8 :64 \p \( [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20201,7 +20973,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                c'4. :32 \f \( \startTextSpan ^ \markup {
+                                c'4. :32 \mf \( \startTextSpan ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20276,7 +21048,7 @@
                             }
                             % [T 2 Percussion Voice] Measure 41
                             {
-                                c'4. :32 \f \repeatTie
+                                c'4. :32 \mf \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -20546,7 +21318,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                c'8 :64 \mp \( \startTextSpan [ ^ \markup {
+                                c'8 :64 \parenthesizeDynamic \p \( \startTextSpan [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20567,6 +21339,7 @@
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -20575,76 +21348,7 @@
                             }
                             % [T 2 Percussion Voice] Measure 49
                             {
-                                r2
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'2 :32 \( \<
-                            }
-                            % [T 2 Percussion Voice] Measure 50
-                            {
-                                c'1 :32 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 51
-                            {
-                                c'4. :32 \mp \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                            % [T 2 Percussion Voice] Measure 52
-                            {
-                                r8
+                                r4.
                             }
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
@@ -20684,15 +21388,158 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'2.. \f \(
+                                g'8 \f \(
+                                g'2 \repeatTie
+                            }
+                            % [T 2 Percussion Voice] Measure 50
+                            {
+                                g'1 \repeatTie
+                                <> \)
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [T 2 Percussion Voice] Measure 51
+                            {
+                                r2.
+                                r16
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_tam_tam_repetitions"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                ratchet
+                                                                snare
+                                                                tam-tam
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                r.
+                                                                sn.
+                                                                t.t.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                f16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
+                            }
+                            % [T 2 Percussion Voice] Measure 52
+                            {
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
                             }
                             % [T 2 Percussion Voice] Measure 53
                             {
-                                g'1 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 54
-                            {
-                                g'4. \repeatTie
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -20701,9 +21548,8 @@
                         {
                             {
                                 r8
-                                r2
                             }
-                            % [T 2 Percussion Voice] Measure 55
+                            % [T 2 Percussion Voice] Measure 54
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -20821,24 +21667,8 @@
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20851,39 +21681,31 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            % [T 3 Vocalization Voice] Measure 5
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 9
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 3 Vocalization Voice] Measure 14
-                            {
-                                r4.
-                            }
-                        }
-                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -20893,7 +21715,48 @@
                                                         sh-
                                                     }
                                         }
-                                    ^ \markup {
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [T 3 Vocalization Voice] Measure 5
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 11
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 3 Vocalization Voice] Measure 16
+                            {
+                                r2.
+                            }
+                        }
+                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20906,39 +21769,31 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            % [T 3 Vocalization Voice] Measure 15
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 2
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            % [T 3 Vocalization Voice] Measure 17
-                            {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. -\accent \fp \(
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -20948,42 +21803,54 @@
                                                         s-
                                                     }
                                         }
-                                    ^ \markup {
-                                    \box
+                            }
+                            % [T 3 Vocalization Voice] Measure 17
+                            {
+                                c'4 -\accent
+                                    _ \markup {
                                         \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
+                                r4.
                             }
                             % [T 3 Vocalization Voice] Measure 18
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 3 Vocalization Voice] Measure 19
-                            {
-                                r2
+                                r2.
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_pointillism"
@@ -21026,11 +21893,75 @@
                         }
                         {
                             {
-                                r4..
+                                r8.
+                            }
+                            % [T 3 Vocalization Voice] Measure 19
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Vocalization Voice] Measure 20
                             {
-                                r2..
+                                r4.
+                            }
+                        }
+                        % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ]
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
@@ -21087,16 +22018,7 @@
                             }
                             % [T 3 Vocalization Voice] Measure 21
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -21198,6 +22120,7 @@
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -21235,7 +22158,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -21403,36 +22336,17 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 5
                                 \stopStaff
                                 \startStaff
-                            }
-                            % [T 3 Vocalization Voice] Measure 29
-                            {
-                                r2.
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
+                            % [T 3 Vocalization Voice] Measure 32
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -21445,44 +22359,6 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            % [T 3 Vocalization Voice] Measure 30
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 3
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 3 Vocalization Voice] Measure 33
-                            {
-                                r2
-                            }
-                        }
-                        % [T 3 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                wh.
-                                                            }
-                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \whiteout
@@ -21493,7 +22369,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                wh.
+                                                                "wh. (inhale)"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -21502,50 +22378,43 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \p \( \startTextSpan
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        f-
                                                     }
                                         }
-                                <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r4..
-                            }
-                        }
-                        % [T 3 Vocalization Voice] Material: "whispered_pointillism"
-                        {
-                            % [T 3 Vocalization Voice] Measure 34
-                            {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        f-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                                 <> \)
+                                \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -21554,26 +22423,26 @@
                         }
                         {
                             {
-                                r8.
-                                r2.
+                                r4.
                             }
-                            % [T 3 Vocalization Voice] Measure 35
+                            % [T 3 Vocalization Voice] Measure 33
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 37
+                            % [T 3 Vocalization Voice] Measure 36
                             {
-                                r8
+                                r2
                             }
                         }
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -21610,9 +22479,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                c'8 \repeatTie ]
+                                c'2 \( \startTextSpan \<
+                            }
+                            % [T 3 Vocalization Voice] Measure 37
+                            {
+                                c'4. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -21705,7 +22576,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -21718,16 +22603,7 @@
                             }
                             % [T 3 Vocalization Voice] Measure 43
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -21840,6 +22716,7 @@
                         % [T 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -21877,7 +22754,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -21909,7 +22796,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -21919,10 +22806,17 @@
                                                         f-
                                                     }
                                         }
-                            }
-                            % [T 3 Vocalization Voice] Measure 48
-                            {
-                                c'4. -\accent \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'8 -\accent \p
                                     _ \markup {
                                         \whiteout
                                             \italic
@@ -21943,7 +22837,15 @@
                         {
                             {
                                 r8
-                                r2
+                            }
+                            % [T 3 Vocalization Voice] Measure 48
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Vocalization Voice] Measure 49
                             {
@@ -21996,7 +22898,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -22025,7 +22927,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -22045,85 +22947,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 3 Vocalization Voice] Measure 52
-                            {
-                                r4.
-                            }
-                        }
-                        % [T 3 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                c'4. \repeatTie \p
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            % [T 3 Vocalization Voice] Measure 53
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -22180,7 +23004,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -22198,56 +23022,65 @@
                                 r8
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
                         }
                     }
                 }
-                \context PercussionStaff = "T 3 Percussion Staff" \with {
-                    instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                "four toms"
-                                                and
-                                                "bass drum"
-                                            }
-                    }
-                    shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                toms
-                                                &
-                                                b.d.
-                                            }
-                    }
-                } {
+                \context PercussionStaff = "T 3 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 1
                             {
-                                r4
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
+                                f8 -\tenuto \laissezVibrer \f \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
@@ -22522,13 +23355,17 @@
                         }
                         {
                             {
-                                r8
-                                r8
+                                r4.
+                            }
+                            % [T 3 Percussion Voice] Measure 14
+                            {
+                                r4.
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -22559,19 +23396,105 @@
                                                                 b.d.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f8 :64 \(
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                f16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
                             }
-                            % [T 3 Percussion Voice] Measure 14
+                            % [T 3 Percussion Voice] Measure 15
                             {
-                                f1 :32 \repeatTie
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
+                            }
+                            % [T 3 Percussion Voice] Measure 16
+                            {
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 15
+                            {
+                                r2.
+                            }
+                            % [T 3 Percussion Voice] Measure 17
                             {
                                 r2
+                                r8
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
@@ -22610,12 +23533,12 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 c'16 \f \( [
                                 r16 ]
-                                <e' g'>4. :32
+                                <e' g'>4 :32
                                 <> \)
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 16
+                            % [T 3 Percussion Voice] Measure 18
                             {
                                 r16
                             }
@@ -22658,107 +23581,20 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
-                                <c' e'>16 -\accent ]
-                                <c' e'>2 :32
-                                <c' e'>8. :64 \repeatTie [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                <c' e'>16 -\accent
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <c' e'>8. :64
                                 \set stemLeftBeamCount = 2
                                 a16 \mf ]
                                 <> \)
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 17
                             {
                                 r2
-                            }
-                        }
-                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f2 :32 \( \<
-                            }
-                            % [T 3 Percussion Voice] Measure 18
-                            {
-                                f8 :64 \p \repeatTie
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4.
-                            }
-                        }
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <a c'>16 -\accent \f \( [
-                                c'16 ]
-                                <a c'>4 :32
-                                <> \)
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
@@ -22796,15 +23632,9 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                a16 \parenthesizeDynamic \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <e' g'>16 -\accent
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                <e' g'>16 :128 ]
-                                <e' g'>4 :32 \mf \repeatTie
+                                <a c'>16 -\accent \f \( [
+                                c'16 ]
+                                <a c'>4. :32
                                 <> \)
                             }
                         }
@@ -22812,60 +23642,14 @@
                             {
                                 r2
                             }
-                        }
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
-                        {
                             % [T 3 Percussion Voice] Measure 20
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                e'16 \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
-                                r16
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <c' e'>8 :64
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <c' e'>8. :64 \repeatTie
-                                \set stemLeftBeamCount = 2
-                                g'16 \mf ]
-                                <> \)
-                            }
-                        }
-                        {
-                            {
-                                r2
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                             % [T 3 Percussion Voice] Measure 21
                             {
@@ -23033,7 +23817,6 @@
                         {
                             % [T 3 Percussion Voice] Measure 29
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -23065,25 +23848,17 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f1 :32 \( \<
-                            }
-                            % [T 3 Percussion Voice] Measure 30
-                            {
-                                f1 :32 \repeatTie
-                            }
-                            % [T 3 Percussion Voice] Measure 31
-                            {
-                                f4 :32 \p \repeatTie
+                                f2. :32 \parenthesizeDynamic \p \(
                                 <> \)
                             }
                         }
                         {
                             {
-                                r2.
+                                r4
                             }
-                            % [T 3 Percussion Voice] Measure 32
+                            % [T 3 Percussion Voice] Measure 30
                             {
-                                r16
+                                r4
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
@@ -23120,31 +23895,116 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \f \( \> [
+                                a16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                e'16
-                                a16 ]
-                                <a c'>2. :32 \mf
+                                <e' g'>16 -\accent
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                <e' g'>16 :128 ]
+                                <e' g'>2 :32 \mf \repeatTie
+                                <> \)
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 31
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                e'16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                <c' e'>16 -\accent \mf ]
                                 <> \)
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 33
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 3 Percussion Voice] Measure 34
                             {
                                 r2
+                                r8
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
+                        {
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                                f8 :64 \p \(
+                                <> \)
+                            }
+                        }
+                        {
+                            % [T 3 Percussion Voice] Measure 32
+                            {
+                                r2.
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23178,22 +24038,96 @@
                                                                 b.d.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f2 :32 \( \<
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                f16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
                             }
-                            % [T 3 Percussion Voice] Measure 35
+                            % [T 3 Percussion Voice] Measure 33
                             {
-                                f8 :64 \p \repeatTie
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
+                            }
+                            % [T 3 Percussion Voice] Measure 34
+                            {
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         {
                             {
                                 r8
-                                r4.
+                                r2
+                            }
+                            % [T 3 Percussion Voice] Measure 35
+                            {
+                                r2..
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
                         {
                             {
                                 \set Staff.instrumentName = \markup {
@@ -23226,60 +24160,12 @@
                                                                 b.d.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \f \( [
-                                e'16 ]
-                                <e' g'>4 :32
-                                <> \)
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                                f8 :64 \parenthesizeDynamic \p \(
                             }
-                        }
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
-                        {
                             % [T 3 Percussion Voice] Measure 36
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                g'16 \parenthesizeDynamic \f \( \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                c'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                r16
-                                <c' e'>16 :128 ]
-                                <c' e'>2 :32 \repeatTie
-                                <c' e'>8. :64 \repeatTie [
-                                \set stemLeftBeamCount = 2
-                                a16 \mf ]
+                                f1 :32 \repeatTie
                                 <> \)
                             }
                         }
@@ -23507,17 +24393,67 @@
                             }
                             % [T 3 Percussion Voice] Measure 48
                             {
-                                f2.. :32 \p \repeatTie
+                                f4. :32 \p \repeatTie
                                 <> \)
                             }
                         }
                         {
                             {
                                 r8
+                                r2
                             }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
                             % [T 3 Percussion Voice] Measure 49
                             {
-                                r2.
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                c'16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                e'16
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <a c'>8 :64
+                                \set stemLeftBeamCount = 1
+                                <a c'>8 :64 \mf \repeatTie ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4.
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
@@ -23555,7 +24491,7 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f4 :32 \( \<
+                                f8 :64 \( \<
                             }
                             % [T 3 Percussion Voice] Measure 50
                             {
@@ -23569,58 +24505,14 @@
                         }
                         {
                             {
-                                r8
-                                r4.
+                                r2..
                             }
-                        }
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
-                        {
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                g'16 \f \( [
-                                r16 ]
-                                <a c'>4 :32
-                                <> \)
-                            }
-                        }
-                        {
                             % [T 3 Percussion Voice] Measure 52
                             {
-                                r2
-                                r8
+                                r16
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23654,27 +24546,102 @@
                                                                 b.d.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f4. :32 \( \<
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                f16 -\staccato \( \< [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 53
                             {
-                                f2.. :32 \p \repeatTie
+                                f16 -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r8
+                                r4
                             }
                             % [T 3 Percussion Voice] Measure 54
                             {
-                                r4..
+                                r2
+                                r8
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -23705,31 +24672,22 @@
                                                                 b.d.
                                                             }
                                     }
-                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <e' g'>16 -\accent \f \( \> [
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                f16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                a16
+                                f16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
-                                g'16
-                                \set stemLeftBeamCount = 1
-                                <e' g'>8 :64 \mf ]
+                                \set stemRightBeamCount = 2
+                                f16 -\staccato
+                                \set stemLeftBeamCount = 2
+                                f16 -\staccato \p ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r4
-                            }
-                            % [T 3 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
+                                r8
                             }
                         }
                     }
@@ -23850,17 +24808,36 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -23928,14 +24905,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                             }
@@ -23948,7 +24935,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -23973,30 +24960,63 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \<
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
-                                c'2 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                             }
                             % [B 1 Vocalization Voice] Measure 12
                             {
-                                c'4. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -24031,7 +25051,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -24115,7 +25135,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -24143,17 +25163,33 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \<
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
-                                c'4. \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -24223,6 +25259,7 @@
                         % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -24260,14 +25297,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -24298,7 +25345,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -24392,7 +25439,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                     ^ \markup {
@@ -24478,22 +25525,27 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                             }
                             % [B 1 Vocalization Voice] Measure 27
                             {
-                                c'4. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -24569,7 +25621,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -24607,7 +25659,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -24661,7 +25713,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -24818,7 +25870,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -24855,7 +25907,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                             }
@@ -24868,7 +25920,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -24904,7 +25956,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -24936,6 +25988,7 @@
                         {
                             % [B 1 Vocalization Voice] Measure 43
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -24973,14 +26026,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -25008,30 +26071,93 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. \( \<
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                             }
                             % [B 1 Vocalization Voice] Measure 45
                             {
-                                c'2 -\accent
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -25095,7 +26221,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -25189,20 +26315,22 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                             }
                             % [B 1 Vocalization Voice] Measure 48
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -25233,7 +26361,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                             }
@@ -25246,7 +26374,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -25280,7 +26408,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -25313,7 +26441,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        t-
                                                     }
                                         }
                                     ^ \markup {
@@ -25345,7 +26473,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 4
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -27357,23 +28485,12 @@
                             }
                             % [B 1 Percussion Voice] Measure 54
                             {
-                                f'1 :32 \repeatTie
+                                f'1 :32 \repeatTie \!
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 1 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1 \!
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }
@@ -27408,24 +28525,8 @@
                         {
                             % [B 2 Vocalization Voice] Measure 1
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -27438,11 +28539,66 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -27460,7 +28616,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \parenthesizeDynamic \p \( ^ \markup {
+                                c'4. \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -27535,7 +28691,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -27564,7 +28720,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -27641,23 +28797,42 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                             }
                             % [B 2 Vocalization Voice] Measure 11
                             {
-                                c'2 -\accent
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -27683,27 +28858,57 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                             }
                             % [B 2 Vocalization Voice] Measure 13
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -27822,7 +29027,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -27852,17 +29057,33 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \<
+                                c'8 \( [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
-                                c'4. \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -27902,7 +29123,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -28055,7 +29276,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -28134,7 +29355,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -28168,20 +29389,37 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                             }
                             % [B 2 Vocalization Voice] Measure 28
                             {
-                                c'2 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -28247,7 +29485,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -28277,7 +29515,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -28345,7 +29583,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                             }
@@ -28358,7 +29596,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -28430,6 +29668,7 @@
                         {
                             % [B 2 Vocalization Voice] Measure 39
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -28467,14 +29706,34 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -28505,7 +29764,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -28602,7 +29861,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -28634,6 +29893,7 @@
                         % [B 2 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -28671,14 +29931,58 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. -\accent \fp \( \startTextSpan
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -28710,22 +30014,27 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                             }
                             % [B 2 Vocalization Voice] Measure 46
                             {
-                                c'4. -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -28760,7 +30069,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        ch-
                                                     }
                                         }
                                     ^ \markup {
@@ -28839,7 +30148,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -28858,19 +30167,50 @@
                         {
                             % [B 2 Vocalization Voice] Measure 49
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. -\accent \fp \(
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -28898,27 +30238,57 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                             }
                             % [B 2 Vocalization Voice] Measure 51
                             {
-                                c'2. -\accent \p
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -28938,7 +30308,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 4
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -31034,23 +32404,12 @@
                             }
                             % [B 2 Percussion Voice] Measure 54
                             {
-                                f'1 :32 \repeatTie
+                                f'1 :32 \repeatTie \!
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 2 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1 \!
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }
@@ -31104,7 +32463,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -31230,14 +32589,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
                                                     }
                                         }
                             }
@@ -31250,7 +32619,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -31327,20 +32696,22 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                             }
                             % [B 3 Vocalization Voice] Measure 11
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -31410,27 +32781,57 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                             }
                             % [B 3 Vocalization Voice] Measure 14
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -31497,7 +32898,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -31595,7 +32996,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -31632,7 +33033,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -31668,7 +33069,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -31718,7 +33119,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -31784,65 +33185,7 @@
                         {
                             % [B 3 Vocalization Voice] Measure 22
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "wh. (inhale)"
-                                                            }
-                                    }
-                                <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r2
-                            }
-                            % [B 3 Vocalization Voice] Measure 23
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 3
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [B 3 Vocalization Voice] Measure 26
-                            {
-                                r2
-                            }
-                        }
-                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
-                        {
-                            {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -31880,14 +33223,112 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                            % [B 3 Vocalization Voice] Measure 23
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 3 Vocalization Voice] Measure 26
+                            {
+                                r2
+                            }
+                        }
+                        % [B 3 Vocalization Voice] Material: "whispered_inhales"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -31918,7 +33359,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -31951,7 +33392,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -32040,7 +33481,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -32120,7 +33561,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -32263,14 +33704,34 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                             }
@@ -32283,7 +33744,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -32314,7 +33775,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -32356,7 +33817,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -32429,14 +33890,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                             }
@@ -32449,7 +33920,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -32467,19 +33938,30 @@
                         % [B 3 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4. -\accent \fp \(
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -32606,29 +34088,64 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2.. \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                             }
                             % [B 3 Vocalization Voice] Measure 50
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -32661,7 +34178,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -32683,7 +34200,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 4
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -34810,23 +36327,12 @@
                             }
                             % [B 3 Percussion Voice] Measure 54
                             {
-                                f'1 :32 \repeatTie
+                                f'1 :32 \repeatTie \!
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 3 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1 \!
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }
@@ -34904,17 +36410,45 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
-                                c'2 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -35014,7 +36548,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -35086,17 +36620,33 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
-                                c'4. \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ] \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -35129,20 +36679,22 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                             }
                             % [B 4 Vocalization Voice] Measure 13
                             {
-                                c'4 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 <> \)
@@ -35205,7 +36757,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -35235,7 +36787,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        ch-
                                                     }
                                         }
                                 <> \)
@@ -35292,28 +36844,73 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
-                                c'2 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ]
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                             }
                             % [B 4 Vocalization Voice] Measure 16
                             {
-                                c'2 -\accent \p
+                                c'8 \repeatTie [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -35348,22 +36945,13 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
                             }
                             % [B 4 Vocalization Voice] Measure 18
                             {
-                                c'8 -\accent \p
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
+                                c'8 \repeatTie \p
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -35428,17 +37016,36 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -35561,7 +37168,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -35626,7 +37233,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -35732,20 +37339,30 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                             }
                             % [B 4 Vocalization Voice] Measure 27
                             {
-                                c'4. -\accent \p
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
                                                     }
                                         }
                                 <> \)
@@ -35774,30 +37391,69 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. \( \<
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                             }
                             % [B 4 Vocalization Voice] Measure 29
                             {
-                                c'2 -\accent
+                                c'4 -\accent
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -35832,7 +37488,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        f-
                                                     }
                                         }
                                     ^ \markup {
@@ -35867,24 +37523,8 @@
                         % [B 4 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -35897,11 +37537,56 @@
                                                                 "wh. (inhale)"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "wh. (inhale)"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -36003,17 +37688,45 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \startTextSpan [ \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
-                                c'2 \repeatTie \p
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                c'8 \repeatTie
+                                \set stemLeftBeamCount = 1
+                                c'8 -\accent ] \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        h-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -36075,17 +37788,36 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
-                                c'8 \repeatTie \p
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
+                                c'8 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        sh-
+                                                    }
+                                        }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -36119,7 +37851,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        ch-
+                                                        s-
                                                     }
                                         }
                                     ^ \markup {
@@ -36159,6 +37891,7 @@
                         {
                             % [B 4 Vocalization Voice] Measure 45
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -36196,14 +37929,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2 -\accent \fp \( \startTextSpan
+                                c'4 \( \startTextSpan \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        f-
+                                                        s-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        s-
                                                     }
                                         }
                                 <> \)
@@ -36222,19 +37965,40 @@
                         {
                             % [B 4 Vocalization Voice] Measure 46
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'2. -\accent \fp \(
+                                c'4 \( \<
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        h-
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
+                                                    }
+                                        }
+                                c'4 -\accent \p
+                                    _ \markup {
+                                        \whiteout
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        f-
                                                     }
                                         }
                                 <> \)
@@ -36263,14 +38027,14 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.86 0.972)
-                                c'16 -\staccato \parenthesizeDynamic \p \(
+                                c'16 -\staccato \p \(
                                     _ \markup {
                                         \whiteout
                                             \italic
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        t-
+                                                        sh-
                                                     }
                                         }
                                     ^ \markup {
@@ -36359,7 +38123,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        h-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -36396,7 +38160,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        s-
+                                                        sh-
                                                     }
                                         }
                                 \set stemLeftBeamCount = 1
@@ -36490,7 +38254,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        sh-
+                                                        t-
                                                     }
                                         }
                                 <> \)
@@ -36510,7 +38274,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 4
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -38593,23 +40357,12 @@
                             }
                             % [B 4 Percussion Voice] Measure 54
                             {
-                                f'1 :32 \repeatTie
+                                f'1 :32 \repeatTie \!
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
                                 <> \stopTextSpan
-                            }
-                        }
-                        {
-                            % [B 4 Percussion Voice] Measure 55
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 1 \!
-                                \stopStaff
-                                \startStaff
                             }
                         }
                     }

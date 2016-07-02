@@ -48,7 +48,7 @@
     print-first-page-number = ##t
     print-page-number = ##t
     max-systems-per-page = 1
-    page-breaking = #ly:optimal-breaking
+    page-breaking = #ly:minimal-breaking
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 
@@ -362,7 +362,7 @@
         \shape #'((-1.5 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie                 
         \override RepeatTie.X-extent = ##f
         \override RepeatTie.breakable = ##t
-        \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 32)
+        \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 16)
         \override SpacingSpanner.strict-grace-spacing = ##f
         \override SpacingSpanner.strict-note-spacing = ##f
         \override SpacingSpanner.uniform-stretching = ##t
@@ -396,7 +396,7 @@
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
-        proportionalNotationDuration = #(ly:make-moment 1 12)
+        proportionalNotationDuration = #(ly:make-moment 1 16)
         tupletFullLength = ##t
         barNumberFormatter = #format-oval-barnumbers
     }

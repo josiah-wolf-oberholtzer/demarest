@@ -12,6 +12,7 @@ trio_c_bass_drum_repetitions = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(-0.3),
     comment='trio_c_bass_drum_repetitions',
+    instrument=abbreviations.trio_c_percussion,
     labels=['trio_c_bass_drum_repetitions'],
     pitch_handler__pitch_specifier=abbreviations.UnpitchedPercussion.BASS_DRUM,
     )

@@ -1,32 +1,27 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad import override
-from abjad.tools import rhythmmakertools
-from abjad.tools import indicatortools
-from abjad.tools import markuptools
-from abjad.tools import selectortools
-from abjad.tools import spannertools
 from demarest.materials import abbreviations
 
 
 performance_instruction = abbreviations.make_text_spanner('wh. (inhale)')
-override(performance_instruction).note_head.style = 'cross'
+abjad.override(performance_instruction).note_head.style = 'cross'
 performance_instruction = consort.AttachmentExpression(
     attachments=performance_instruction,
-    selector=selectortools.select_pitched_runs(),
+    selector=abjad.selectortools.select_pitched_runs(),
     )
 
 sibilances = [
-    markuptools.Markup.concat([
-        markuptools.Markup(r'\vstrut'),
-        markuptools.Markup(x),
+    abjad.Markup.concat([
+        abjad.Markup(r'\vstrut'),
+        abjad.Markup(x),
         ]).italic().whiteout()
     for x in ['f-', 's-', 'sh-', 'h-']
     ]
-sibilances = [markuptools.Markup(x, 'down') for x in sibilances]
+sibilances = [abjad.Markup(x, 'down') for x in sibilances]
 sibilances = consort.AttachmentExpression(
     attachments=sibilances,
-    selector=selectortools.Selector()
+    selector=abjad.select()
         .by_leaves()
         .by_logical_tie()
         [0],
@@ -36,8 +31,8 @@ sibilances = consort.AttachmentExpression(
 whispered_inhales = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         accents=consort.AttachmentExpression(
-            attachments=indicatortools.Articulation('accent'),
-            selector=selectortools.Selector()
+            attachments=abjad.Articulation('accent'),
+            selector=abjad.select()
                 .by_leaves()
                 .by_logical_tie(pitched=True)
                 .rest()
@@ -46,18 +41,18 @@ whispered_inhales = consort.MusicSpecifier(
         forte_piano=consort.AttachmentExpression(
             attachments=[
                 [
-                    indicatortools.Dynamic('fp'),
-                    indicatortools.Articulation('accent'),
+                    abjad.Dynamic('fp'),
+                    abjad.Articulation('accent'),
                     ],
                 ],
-            selector=selectortools.select_pitched_runs()
+            selector=abjad.selectortools.select_pitched_runs()
                 .by_length('<', 2)
             ),
         performance_instruction=performance_instruction,
         sibilances=sibilances,
         swells=consort.AttachmentExpression(
-            attachments=spannertools.Hairpin('niente < p'),
-            selector=selectortools.select_pitched_runs()
+            attachments=abjad.Hairpin('niente < p'),
+            selector=abjad.selectortools.select_pitched_runs()
                 .by_length('>', 1)
             ),
         ),
@@ -66,5 +61,7 @@ whispered_inhales = consort.MusicSpecifier(
         .rotate_hue(0.0),
     comment='whispered_inhales',
     labels=['whispered_inhales'],
-    rhythm_maker=rhythmmakertools.NoteRhythmMaker(),
+    rhythm_maker=abjad.rhythmmakertools.TaleaRhythmMaker(
+        talea=abjad.rhythmmakertools.Talea([1], 4)
+        ),
     )

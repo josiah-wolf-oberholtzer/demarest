@@ -227,3 +227,13 @@ segment_maker.add_setting(
     t_2_percussion=trio_b_vibraphone_tranquilo,
     t_3_percussion=trio_c_tubular_bells_tranquilo,
     )
+
+segment_maker.add_setting(
+    timespan_identifier=abjad.Timespan(0, (1, 4)),
+    t_3_percussion=abjad.new(
+        materials.trio_c_bass_drum_tranquilo,
+        attachment_handler__dynamics=consort.DynamicExpression(
+            dynamic_tokens='f',
+            ),
+        ),
+    )

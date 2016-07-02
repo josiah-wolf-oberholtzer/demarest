@@ -13,6 +13,7 @@ trio_a_marimba_repetitions = abjad.new(
         .scale_luminance(0)
         .rotate_hue(0.5),
     comment='trio_a_marimba_repetitions',
+    instrument=abbreviations.marimba,
     labels=['trio_a_marimba_repetitions'],
     pitch_handler=abjad.new(
         abbreviations.pitch_handler,

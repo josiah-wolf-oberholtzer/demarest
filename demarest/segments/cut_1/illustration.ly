@@ -1,7 +1,7 @@
 % package "abjad" @ d47123b [josiah/demarest] (2016-07-01 13:26:31)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
 % package "consort" @ aa64205 [master] (2016-06-27 23:25:13)
-% package "demarest" @ c294549 [master] (2016-06-28 22:53:06)
+% package "demarest" @ 4af7352 [master] (2016-07-01 20:49:44)
 
 \version "2.19.41"
 \language "english"
@@ -13,7 +13,7 @@
 
 \score {
     \context Score = "Demarest Score" \with {
-        currentBarNumber = #56
+        currentBarNumber = #55
     } <<
         \tag #'time
         \repeat volta 2
@@ -23,11 +23,18 @@
                 \tempo 4=72
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                A
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        A
+                            " "
+                            \fontsize
+                                #-3
+                                "Repeat x4"
+                        }
                     }
                 s1 * 2
             }
@@ -60,7 +67,7 @@
                     }
                     \context Voice = "A 1 Vocalization Voice" {
                         {
-                            % [A 1 Vocalization Voice] Measure 56
+                            % [A 1 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -129,7 +136,7 @@
                     }
                     \context Voice = "A 1 Percussion Voice" {
                         {
-                            % [A 1 Percussion Voice] Measure 56
+                            % [A 1 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -201,7 +208,7 @@
                     }
                     \context Voice = "A 2 Vocalization Voice" {
                         {
-                            % [A 2 Vocalization Voice] Measure 56
+                            % [A 2 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -270,7 +277,7 @@
                     }
                     \context Voice = "A 2 Percussion Voice" {
                         {
-                            % [A 2 Percussion Voice] Measure 56
+                            % [A 2 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -342,7 +349,7 @@
                     }
                     \context Voice = "A 3 Vocalization Voice" {
                         {
-                            % [A 3 Vocalization Voice] Measure 56
+                            % [A 3 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -411,7 +418,7 @@
                     }
                     \context Voice = "A 3 Percussion Voice" {
                         {
-                            % [A 3 Percussion Voice] Measure 56
+                            % [A 3 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -483,7 +490,7 @@
                     }
                     \context Voice = "A 4 Vocalization Voice" {
                         {
-                            % [A 4 Vocalization Voice] Measure 56
+                            % [A 4 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -552,7 +559,7 @@
                     }
                     \context Voice = "A 4 Percussion Voice" {
                         {
-                            % [A 4 Percussion Voice] Measure 56
+                            % [A 4 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -626,7 +633,7 @@
                     }
                     \context Voice = "T 1 Vocalization Voice" {
                         {
-                            % [T 1 Vocalization Voice] Measure 56
+                            % [T 1 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -663,7 +670,7 @@
                     \clef "percussion"
                     \context Voice = "T 1 Percussion Voice" {
                         {
-                            % [T 1 Percussion Voice] Measure 56
+                            % [T 1 Percussion Voice] Measure 55
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -673,12 +680,7 @@
                                                 #0.5
                                                 \small
                                                     \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
+                                                        marimba
                                     }
                                 \set Staff.shortInstrumentName = \markup {
                                     \pad-around
@@ -688,10 +690,7 @@
                                                 #0.5
                                                 \small
                                                     \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
+                                                        mb.
                                     }
                                 r16
                             }
@@ -721,19 +720,7 @@
                                                         mb.
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                b'16 -\accent -\staccato \f \( \> [ ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                mb.
-                                                            }
-                                    }
+                                b'16 -\accent -\staccato \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d'16 -\staccato
@@ -747,9 +734,9 @@
                             }
                         }
                         {
-                            % [T 1 Percussion Voice] Measure 57
+                            % [T 1 Percussion Voice] Measure 56
                             {
-                                r4
+                                r2
                             }
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_agitato"
@@ -778,15 +765,10 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
                                 <c' ef'>16 \f \( [
-                                ef16 -\staccato ]
+                                d16 -\staccato ]
                                 <a, c>4. :32
                                 <> \)
                                 \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r4
                             }
                         }
                     }
@@ -819,7 +801,7 @@
                     }
                     \context Voice = "T 2 Vocalization Voice" {
                         {
-                            % [T 2 Vocalization Voice] Measure 56
+                            % [T 2 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -857,7 +839,7 @@
                     \context Voice = "T 2 Percussion Voice" {
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_agitato"
                         {
-                            % [T 2 Percussion Voice] Measure 56
+                            % [T 2 Percussion Voice] Measure 55
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
@@ -934,7 +916,7 @@
                             {
                                 r2
                             }
-                            % [T 2 Percussion Voice] Measure 57
+                            % [T 2 Percussion Voice] Measure 56
                             {
                                 r16
                             }
@@ -969,15 +951,12 @@
                                 \set stemRightBeamCount = 2
                                 e''16 -\staccato
                                 <c'' f''>16 ]
-                                <ef' gf'>4.. :32
-                                a16 -\staccato \p
+                                <ef' gf'>2 :32
+                                <ef' gf'>8. :64 \repeatTie [
+                                \set stemLeftBeamCount = 2
+                                af16 -\staccato \p ]
                                 <> \)
                                 \clef "percussion"
-                            }
-                        }
-                        {
-                            {
-                                r4
                             }
                         }
                     }
@@ -1010,7 +989,7 @@
                     }
                     \context Voice = "T 3 Vocalization Voice" {
                         {
-                            % [T 3 Vocalization Voice] Measure 56
+                            % [T 3 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1046,44 +1025,9 @@
                 \context PercussionStaff = "T 3 Percussion Staff" {
                     \clef "percussion"
                     \context Voice = "T 3 Percussion Voice" {
-                        {
-                            % [T 3 Percussion Voice] Measure 56
-                            {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
-                                r2.
-                            }
-                        }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
+                            % [T 3 Percussion Voice] Measure 55
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -1116,19 +1060,82 @@
                                                             }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <c' e'>4 :32 \f \( \>
-                            }
-                            % [T 3 Percussion Voice] Measure 57
-                            {
-                                <e' g'>4 :32
-                                <a c'>4 :32
-                                <c' e'>4 :32 \mf
+                                a16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                g'16
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <c' e'>8 :64
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                <c' e'>8. :64 \repeatTie
+                                \set stemLeftBeamCount = 2
+                                e'16 \mf ]
                                 <> \)
                             }
                         }
                         {
                             {
                                 r4
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            \times 4/5 {
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                "four toms"
+                                                                and
+                                                                "bass drum"
+                                                            }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        \right-column
+                                                            {
+                                                                toms
+                                                                &
+                                                                b.d.
+                                                            }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <a c'>16 -\accent \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                c'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e'16
+                                \set stemLeftBeamCount = 2
+                                <c' e'>16 -\accent ]
+                            }
+                            % [T 3 Percussion Voice] Measure 56
+                            \times 4/6 {
+                                r4
+                                <a c'>4 :32
+                                <c' e'>4 :32
+                                <e' g'>4 :32
+                                <a c'>4 :32 \mf
+                                r4
+                                <> \)
                             }
                         }
                     }
@@ -1163,7 +1170,7 @@
                     }
                     \context Voice = "B 1 Vocalization Voice" {
                         {
-                            % [B 1 Vocalization Voice] Measure 56
+                            % [B 1 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1232,7 +1239,7 @@
                     }
                     \context Voice = "B 1 Percussion Voice" {
                         {
-                            % [B 1 Percussion Voice] Measure 56
+                            % [B 1 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1304,7 +1311,7 @@
                     }
                     \context Voice = "B 2 Vocalization Voice" {
                         {
-                            % [B 2 Vocalization Voice] Measure 56
+                            % [B 2 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1373,7 +1380,7 @@
                     }
                     \context Voice = "B 2 Percussion Voice" {
                         {
-                            % [B 2 Percussion Voice] Measure 56
+                            % [B 2 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1445,7 +1452,7 @@
                     }
                     \context Voice = "B 3 Vocalization Voice" {
                         {
-                            % [B 3 Vocalization Voice] Measure 56
+                            % [B 3 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1514,7 +1521,7 @@
                     }
                     \context Voice = "B 3 Percussion Voice" {
                         {
-                            % [B 3 Percussion Voice] Measure 56
+                            % [B 3 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1586,7 +1593,7 @@
                     }
                     \context Voice = "B 4 Vocalization Voice" {
                         {
-                            % [B 4 Vocalization Voice] Measure 56
+                            % [B 4 Vocalization Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1655,7 +1662,7 @@
                     }
                     \context Voice = "B 4 Percussion Voice" {
                         {
-                            % [B 4 Percussion Voice] Measure 56
+                            % [B 4 Percussion Voice] Measure 55
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)

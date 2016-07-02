@@ -10,4 +10,5 @@ trio_c_bass_drum_tranquilo = abjad.new(
     comment='trio_c_bass_drum_tranquilo',
     labels=['trio_c_bass_drum_tranquilo'],
     instrument=abbreviations.trio_c_percussion,
+    pitch_handler__pitch_specifier=abbreviations.UnpitchedPercussion.BASS_DRUM,
     )

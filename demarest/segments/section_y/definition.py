@@ -225,7 +225,7 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=abjad.new(
         sparse_timespan_maker.rotate(5),
-        padding=abjad.Duration(1, 2),
+        padding=abjad.Duration(3, 4),
         ),
     t_1_percussion=consort.MusicSpecifierSequence(
         application_rate='phrase',
@@ -249,4 +249,32 @@ segment_maker.add_setting(
             ],
         ),
     silenced_contexts=['t_1_voice', 't_2_voice', 't_3_voice'],
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=rare_timespan_identifier.rotate(5),
+    timespan_maker=abjad.new(
+        sparse_timespan_maker.rotate(5),
+        padding=abjad.Duration(3, 4),
+        ),
+    t_1_percussion=materials.trio_a_marimba_repetitions,
+    t_2_percussion=materials.trio_b_vibraphone_repetitions,
+    t_3_percussion=consort.MusicSpecifierSequence(
+        application_rate='phrase',
+        music_specifiers=[
+            materials.trio_c_toms_repetitions,
+            materials.trio_c_bass_drum_repetitions,
+            ],
+        ),
+    silenced_contexts=['t_1_voice', 't_2_voice', 't_3_voice'],
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=abjad.Timespan(0, (1, 4)),
+    t_3_percussion=abjad.new(
+        materials.trio_c_bass_drum_tranquilo,
+        attachment_handler__dynamics=consort.DynamicExpression(
+            dynamic_tokens='f',
+            ),
+        ),
     )

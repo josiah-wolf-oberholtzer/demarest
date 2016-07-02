@@ -13,6 +13,7 @@ trio_b_vibraphone_repetitions = abjad.new(
         .scale_luminance(0)
         .rotate_hue(0.5),
     comment='trio_b_vibraphone_repetitions',
+    instrument=abbreviations.vibraphone,
     labels=['trio_b_vibraphone_repetitions'],
     pitch_handler=abjad.new(
         abbreviations.pitch_handler,
