@@ -89,36 +89,48 @@
                 \context PercussionStaff = "A 1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 1 Percussion Voice" {
                         {
@@ -128,36 +140,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -230,36 +254,48 @@
                 \context PercussionStaff = "A 2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 2 Percussion Voice" {
                         {
@@ -269,36 +305,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -371,36 +419,48 @@
                 \context PercussionStaff = "A 3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 3 Percussion Voice" {
                         {
@@ -410,36 +470,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -512,36 +584,48 @@
                 \context PercussionStaff = "A 4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 4 Percussion Voice" {
                         {
@@ -551,36 +635,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A4
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                A4
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -659,24 +755,36 @@
                             % [T 1 Percussion Voice] Measure 55
                             {
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    marimba
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    mb.
+                                        }
                                     }
                                 r16
                             }
@@ -685,26 +793,6 @@
                         {
                             {
                                 \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
                                 b'16 -\accent -\staccato \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -716,7 +804,6 @@
                                 \set stemLeftBeamCount = 2
                                 g16 -\staccato \p ]
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -728,31 +815,10 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_agitato"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <c' ef'>16 \f \( [
+                                <c' ef'>16 \f \( \> [
                                 d16 -\staccato ]
-                                <a, c>4. :32
+                                <a, c>4. :32 \p
                                 <> \)
                                 \clef "percussion"
                             }
@@ -829,54 +895,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
                                 d'''16 -\accent -\staccato \f \( [ ^ \markup {
@@ -895,7 +943,6 @@
                                 r16 ]
                                 <cs'' e''>4. :32
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -910,27 +957,6 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_agitato"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
                                 a''16 -\accent -\staccato \parenthesizeDynamic \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -1015,36 +1041,6 @@
                         {
                             % [T 3 Percussion Voice] Measure 55
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 a16 \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -1069,36 +1065,6 @@
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             \times 4/5 {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 <a c'>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -1192,36 +1158,48 @@
                 \context PercussionStaff = "B 1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 1 Percussion Voice" {
                         {
@@ -1231,36 +1209,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -1333,36 +1323,48 @@
                 \context PercussionStaff = "B 2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 2 Percussion Voice" {
                         {
@@ -1372,36 +1374,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -1474,36 +1488,48 @@
                 \context PercussionStaff = "B 3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 3 Percussion Voice" {
                         {
@@ -1513,36 +1539,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff
@@ -1615,36 +1653,48 @@
                 \context PercussionStaff = "B 4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 4 Percussion Voice" {
                         {
@@ -1654,36 +1704,48 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                shaker
-                                                                castanet
-                                                                guiro
-                                                                "wine glass"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B4
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            shaker
+                                                                            castanet
+                                                                            guiro
+                                                                            "wine glass"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                sh.
-                                                                cst.
-                                                                g.
-                                                                w.g.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                B4
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            sh.
+                                                                            cst.
+                                                                            g.
+                                                                            w.g.
+                                                                        }
+                                        }
                                     }
                                 R1 * 2
                                 \stopStaff

@@ -22,7 +22,7 @@ sibilances = [abjad.Markup(x, 'down') for x in sibilances]
 sibilances = consort.AttachmentExpression(
     attachments=sibilances,
     selector=abjad.select()
-        .by_leaves()
+        .by_leaf()
         .by_logical_tie()
         [0],
     use_only_first_attachment=True,
@@ -33,7 +33,7 @@ whispered_inhales = consort.MusicSpecifier(
         accents=consort.AttachmentExpression(
             attachments=abjad.Articulation('accent'),
             selector=abjad.select()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)
                 .rest()
                 [0],

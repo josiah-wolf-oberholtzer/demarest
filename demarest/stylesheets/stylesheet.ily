@@ -379,7 +379,7 @@
         \override SustainPedalLineSpanner.padding = 2
         \override SustainPedalLineSpanner.outside-staff-padding = 2
         \override SustainPedalLineSpanner.to-barline = ##t
-        \override SystemStartSquare.thickness = 1.5
+        \override SystemStartSquare.thickness = 3
         \override SystemStartSquare.X-offset = -1.25
         \override TextScript.outside-staff-padding = 1
         \override TextSpanner.bound-details.right.padding = 2

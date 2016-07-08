@@ -14,7 +14,7 @@
 \layout {
     \context {
         \Score
-        \override PhrasingSlur.transparent = ##t
+        %\override PhrasingSlur.transparent = ##t
     }
 }
 

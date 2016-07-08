@@ -14,7 +14,7 @@ shaker_shimmer = consort.MusicSpecifier(
         accents=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('>'),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .flatten()
                 .by_duration('>', (1, 16), preprolated=True)
                 .by_contiguity()
@@ -30,14 +30,14 @@ shaker_shimmer = consort.MusicSpecifier(
         staccati=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .flatten()
                 .by_duration('==', (1, 16), preprolated=True)
             ),
         tremoli=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner,
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .flatten()
                 .by_duration('>', (1, 16), preprolated=True)
                 .by_contiguity(),

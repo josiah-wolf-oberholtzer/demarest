@@ -12,7 +12,7 @@ unpitched_pointillism = consort.MusicSpecifier(
         staccati=consort.AttachmentExpression(
             attachments=abjad.indicatortools.Articulation('.'),
             selector=abjad.select()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)
                 [0],
             ),

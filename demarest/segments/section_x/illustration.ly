@@ -1,9 +1,9 @@
-% package "abjad" @ d47123b [josiah/demarest] (2016-07-01 13:26:31)
+% package "abjad" @ d0d1bb4 [josiah/unified-iterate-select] (2016-07-07 00:56:12)
 % package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ aa64205 [master] (2016-06-27 23:25:13)
-% package "demarest" @ 4af7352 [master] (2016-07-01 20:49:44)
+% package "consort" @ 097ddaf [master] (2016-07-04 16:03:51)
+% package "demarest" @ f6c9924 [master] (2016-07-02 12:36:46)
 
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -1814,36 +1814,48 @@
                 \context PercussionStaff = "A 1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "guiro_shimmer"
@@ -2249,7 +2261,6 @@
                             % [A 1 Percussion Voice] Measure 10
                             {
                                 f'2 :32 \p \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -2261,7 +2272,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -2840,7 +2851,6 @@
                                 d'16 -\staccato \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\staccato ]
-                                <> \)
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_repetitions"
@@ -2848,7 +2858,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -2881,7 +2891,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [A 1 Percussion Voice] Material: "shaker_drone"
@@ -2924,7 +2933,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'8 :64 \( \startTextSpan \<
+                                f'8 :64 \) \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 28
                             {
@@ -3425,7 +3434,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato ]
-                                <> \)
                             }
                         }
                         % [A 1 Percussion Voice] Material: "guiro_shimmer"
@@ -3437,7 +3445,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b4. :32 \( ^ \markup {
+                                b4. :32 \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -5710,36 +5718,48 @@
                 \context PercussionStaff = "A 2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 2 Percussion Voice" {
                         {
@@ -6111,7 +6131,6 @@
                             % [A 2 Percussion Voice] Measure 11
                             {
                                 f'4. :32 \p \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -6123,7 +6142,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -6717,7 +6736,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [A 2 Percussion Voice] Material: "shaker_drone"
@@ -6760,7 +6778,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'8 :64 \( \startTextSpan \<
+                                f'8 :64 \) \( \startTextSpan \<
                                 f'2 :32 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 28
@@ -9764,36 +9782,48 @@
                 \context PercussionStaff = "A 3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "shaker_drone"
@@ -10211,7 +10241,6 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 f'8 :64 \parenthesizeDynamic \p \( \startTextSpan
                                 f'2 :32 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -10223,7 +10252,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -10232,7 +10261,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [A 3 Percussion Voice] Material: "guiro_pointillism"
@@ -10240,7 +10268,7 @@
                             % [A 3 Percussion Voice] Measure 11
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.961 0.972)
-                                b16 -\staccato \ppp \( [
+                                b16 -\staccato \ppp \) \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -10768,14 +10796,13 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [A 3 Percussion Voice] Material: "castanet_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \(
+                                d'16 -\staccato \) \(
                                 <> \)
                             }
                         }
@@ -13455,36 +13482,48 @@
                 \context PercussionStaff = "A 4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                A4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "shaker_drone"
@@ -13872,7 +13911,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [A 4 Percussion Voice] Material: "guiro_shimmer"
@@ -13884,7 +13922,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b4. :32 \( ^ \markup {
+                                b4. :32 \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -14416,7 +14454,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [A 4 Percussion Voice] Material: "shaker_drone"
@@ -14459,7 +14496,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'4. :32 \( \startTextSpan \<
+                                f'4. :32 \) \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 28
                             {
@@ -16583,29 +16620,40 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    marimba
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    mb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b' d''>4 :32 \fp \(
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16616,28 +16664,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b d'>4 :32 \( \<
                             }
@@ -16645,7 +16672,6 @@
                             {
                                 <b d'>8 :64 \p \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16657,28 +16683,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d'' f''>4 :32 \( \<
                             }
@@ -16686,7 +16691,6 @@
                             {
                                 <d'' f''>2.. :32 \f \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16710,33 +16714,11 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d' f'>8 :64 \p \( [
                                 \set stemLeftBeamCount = 1
                                 <d' f'>8 :64 \repeatTie ]
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16752,31 +16734,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <cs'' fs''>2.. :32 \fp \(
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16788,31 +16748,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <f bf>2. :32 \parenthesizeDynamic \p \(
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16833,33 +16771,11 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a' c''>8 :64 \ppp \( [
                                 \set stemLeftBeamCount = 1
                                 <a' c''>8 :64 \repeatTie ]
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16874,28 +16790,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b' d''>4 :32 \fp \( \>
                             }
@@ -16903,7 +16798,6 @@
                             {
                                 <b' d''>8 :64 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16915,28 +16809,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a c'>4 :32 \( \<
                             }
@@ -16944,7 +16817,6 @@
                             {
                                 <a c'>2.. :32 \p \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -16965,28 +16837,7 @@
                         {
                             % [T 1 Percussion Voice] Measure 14
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b' d''>16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
@@ -17101,32 +16952,44 @@
                         {
                             {
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 e'16 \f \( \> [ ^ \markup {
@@ -17165,34 +17028,6 @@
                         {
                             % [T 1 Percussion Voice] Measure 19
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 <f a>16 -\accent \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -17227,24 +17062,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    marimba
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    mb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <g' c''>8 :64 \ppp \( ^ \markup {
@@ -17262,7 +17109,6 @@
                                     }
                                 <g' c''>2 :32 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17277,28 +17123,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <g bf>2 :32 \( \<
                             }
@@ -17319,32 +17144,44 @@
                         {
                             {
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 g'16 \f \( \> [ ^ \markup {
@@ -17368,43 +17205,14 @@
                                 r16
                                 \set stemLeftBeamCount = 2
                                 e'16 \mf ]
-                                <> \)
                             }
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
                         {
                             % [T 1 Percussion Voice] Measure 30
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                a16 \f \( \> [
+                                a16 \f \) \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 r16
@@ -17427,24 +17235,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    marimba
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    mb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <e a>4 :32 \p \( ^ \markup {
@@ -17461,7 +17281,6 @@
                                                             }
                                     }
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17482,28 +17301,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_repetitions"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <ef' gf'>16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
@@ -17575,7 +17373,6 @@
                                 \set stemLeftBeamCount = 2
                                 <ef' gf'>16 -\staccato \p ]
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17590,33 +17387,11 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <c ef>8 :64 \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 1
                                 <c ef>8 :64 \repeatTie ]
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17628,33 +17403,11 @@
                         {
                             % [T 1 Percussion Voice] Measure 36
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <c'' ef''>2 :32 \fp \( \>
                                 <c'' ef''>8 :64 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17666,27 +17419,6 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <ef gf>8 :64 \p \(
                             }
@@ -17694,7 +17426,6 @@
                             {
                                 <ef gf>2.. :32 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17718,28 +17449,7 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d' f'>2 :32 \( \<
                             }
@@ -17748,7 +17458,6 @@
                                 <d' f'>2 :32 \repeatTie
                                 <d' f'>8 :64 \f \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17769,31 +17478,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 45
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a, d>4 :32 \p \(
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -17817,27 +17504,6 @@
                         % [T 1 Percussion Voice] Material: "trio_a_marimba_shimmer"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a d'>8 :64 \fp \(
                                 <> \)
@@ -17855,32 +17521,44 @@
                             % [T 1 Percussion Voice] Measure 48
                             {
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 f16 \f \( [ ^ \markup {
@@ -17898,43 +17576,14 @@
                                     }
                                 e'16 ]
                                 <a c'>2.. :32
-                                <> \)
                             }
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
                         {
                             % [T 1 Percussion Voice] Measure 49
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                five
-                                                                wood
-                                                                blocks
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                w.b.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                c'16 \parenthesizeDynamic \f \( \> [
+                                c'16 \parenthesizeDynamic \f \) \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -17974,24 +17623,36 @@
                                 \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        marimba
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    marimba
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        mb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    mb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <e' a'>16 -\staccato \( \< [ ^ \markup {
@@ -19231,34 +18892,46 @@
                 }
                 \context PercussionStaff = "T 2 Percussion Staff" \with {
                     instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                ratchet
-                                                snare
-                                                tam-tam
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                T2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            ratchet
+                                                            snare
+                                                            tam-tam
+                                                        }
+                        }
                     }
                     shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                r.
-                                                sn.
-                                                t.t.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                T2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            r.
+                                                            sn.
+                                                            t.t.
+                                                        }
+                        }
                     }
                 } {
                     \clef "percussion"
@@ -19274,24 +18947,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b'' d'''>4 :32 \fp \( ^ \markup {
@@ -19326,34 +19011,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
@@ -19405,24 +19102,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b' d''>4 :32 \p \( ^ \markup {
@@ -19439,7 +19148,6 @@
                                                             }
                                     }
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -19455,28 +19163,7 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d''' f'''>4. :32 \( \<
                             }
@@ -19484,7 +19171,6 @@
                             {
                                 <d''' f'''>2 :32 \f \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -19499,28 +19185,7 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d'' f''>2 :32 \( \<
                             }
@@ -19528,7 +19193,6 @@
                             {
                                 <d'' f''>8 :64 \p \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -19540,28 +19204,7 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <f'' bf''>4. :32 \fp \( \>
                             }
@@ -19569,7 +19212,6 @@
                             {
                                 <f'' bf''>4 :32 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -19581,27 +19223,6 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b' e''>8 :64 \p \(
                             }
@@ -19609,7 +19230,6 @@
                             {
                                 <b' e''>2.. :32 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -19624,27 +19244,6 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a'' c'''>8 :64 \ppp \(
                             }
@@ -19670,34 +19269,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
@@ -19749,24 +19360,36 @@
                                 \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a' c''>4 :32 \( \< ^ \markup {
@@ -19804,34 +19427,46 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 \stopStaff
@@ -19972,36 +19607,6 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
@@ -20021,42 +19626,11 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 g'4. \parenthesizeDynamic \f \(
-                                <> \)
                                 \stopStaff
                                 \startStaff
                             }
@@ -20066,27 +19640,39 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <b' d''>8 :64 \p \( ^ \markup {
+                                <b' d''>8 :64 \p \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20104,7 +19690,6 @@
                             {
                                 <b' d''>2 :32 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -20115,27 +19700,6 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b'' d'''>4 :32 \fp \(
                                 <> \)
@@ -20188,34 +19752,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
@@ -20271,36 +19847,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
@@ -20335,24 +19881,36 @@
                                 \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <g'' c'''>2 :32 \( \< ^ \markup {
@@ -20373,7 +19931,6 @@
                             {
                                 <g'' c'''>4. :32 \f \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -20389,32 +19946,10 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <g' c''>8 :64 \p \(
                                 <g' c''>2 :32 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -20426,28 +19961,7 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <fs'' a''>2 :32 \fp \( \>
                             }
@@ -20455,7 +19969,6 @@
                             {
                                 <fs'' a''>8 :64 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -20467,35 +19980,13 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <fs' a'>4 :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 31
                             {
                                 <fs' a'>4 :32 \p \repeatTie
-                                <> \)
                                 \clef "percussion"
                             }
                         }
@@ -20503,40 +19994,52 @@
                         {
                             {
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'2. \f \( ^ \markup {
+                                g'2. \f \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -20572,36 +20075,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
@@ -20719,24 +20192,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <ef'' gf''>2. :32 \ppp \( ^ \markup {
@@ -20771,34 +20256,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
@@ -20853,24 +20350,36 @@
                             {
                                 \clef "treble"
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d' f'>8 :64 \p \( [ ^ \markup {
@@ -20940,34 +20449,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
@@ -21006,36 +20527,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
@@ -21075,24 +20566,36 @@
                                 \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a' d''>4. :32 \fp \( \> ^ \markup {
@@ -21113,7 +20616,6 @@
                             {
                                 <a' d''>8 :64 \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -21128,31 +20630,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
                             {
-                                \clef "treble"
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a d'>4. :32 \p \(
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -21164,28 +20644,7 @@
                         {
                             % [T 2 Percussion Voice] Measure 45
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <c''' ef'''>1 :32 \( \<
                             }
@@ -21193,7 +20652,6 @@
                             {
                                 <c''' ef'''>8 :64 \f \repeatTie
                                 <> \)
-                                \clef "percussion"
                             }
                         }
                         {
@@ -21205,28 +20663,7 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_drone"
                         {
                             {
-                                \clef "treble"
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vibraphone
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        vb.
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <c' ef'>4 :32 \( \<
                             }
@@ -21285,34 +20722,46 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
@@ -21354,36 +20803,6 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
@@ -21410,36 +20829,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                ratchet
-                                                                snare
-                                                                tam-tam
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                r.
-                                                                sn.
-                                                                t.t.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
@@ -23033,34 +22422,46 @@
                             % [T 3 Percussion Voice] Measure 1
                             {
                                 \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            "four toms"
+                                                                            and
+                                                                            "bass drum"
+                                                                        }
+                                        }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            toms
+                                                                            &
+                                                                            b.d.
+                                                                        }
+                                        }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                                 f8 -\tenuto \laissezVibrer \f \(
@@ -23087,36 +22488,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2. :32 \( \<
                             }
@@ -23139,36 +22510,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f8 :64 \( \<
                                 f2 :32 \repeatTie
@@ -23197,36 +22538,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2. :32 \( \<
                             }
@@ -23255,36 +22566,6 @@
                             % [T 3 Percussion Voice] Measure 9
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f1 :32 \( \<
                             }
@@ -23309,36 +22590,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f8 :64 \( \<
                             }
@@ -23366,36 +22617,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 f16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
@@ -23500,36 +22721,6 @@
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 c'16 \f \( [
                                 r16 ]
@@ -23546,36 +22737,6 @@
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 a16 \parenthesizeDynamic \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -23601,36 +22762,6 @@
                         {
                             % [T 3 Percussion Voice] Measure 19
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 <a c'>16 -\accent \f \( [
                                 c'16 ]
@@ -23660,36 +22791,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2.. :32 \( \<
                             }
@@ -23713,36 +22814,6 @@
                             % [T 3 Percussion Voice] Measure 24
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f1 :32 \( \<
                             }
@@ -23765,36 +22836,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f8 :64 \( \<
                             }
@@ -23817,36 +22858,6 @@
                         {
                             % [T 3 Percussion Voice] Measure 29
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2. :32 \parenthesizeDynamic \p \(
                                 <> \)
@@ -23864,36 +22875,6 @@
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 a16 \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -23904,45 +22885,14 @@
                                 r16
                                 <e' g'>16 :128 ]
                                 <e' g'>2 :32 \mf \repeatTie
-                                <> \)
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
                         {
                             % [T 3 Percussion Voice] Measure 31
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                e'16 \f \( \> [
+                                e'16 \f \) \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -23963,36 +22913,6 @@
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f8 :64 \p \(
                                 <> \)
@@ -24008,36 +22928,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 f16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
@@ -24130,36 +23020,6 @@
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
                         {
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f8 :64 \parenthesizeDynamic \p \(
                             }
@@ -24179,36 +23039,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f4 :32 \( \<
                             }
@@ -24228,36 +23058,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2. :32 \( \<
                             }
@@ -24293,36 +23093,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2. :32 \( \<
                             }
@@ -24354,36 +23124,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2 :32 \( \<
                             }
@@ -24407,36 +23147,6 @@
                         {
                             % [T 3 Percussion Voice] Measure 49
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                                 c'16 \f \( \> [
                                 \set stemLeftBeamCount = 2
@@ -24460,36 +23170,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f8 :64 \( \<
                             }
@@ -24516,36 +23196,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 f16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
@@ -24642,36 +23292,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                "four toms"
-                                                                and
-                                                                "bass drum"
-                                                            }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        \right-column
-                                                            {
-                                                                toms
-                                                                &
-                                                                b.d.
-                                                            }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 f16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
@@ -26483,36 +25103,48 @@
                 \context PercussionStaff = "B 1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B1
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 1 Percussion Voice" {
                         {
@@ -27005,7 +25637,6 @@
                                                                 "scrape tremolo"
                                                             }
                                     }
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -27017,7 +25648,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -27026,7 +25657,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 1 Percussion Voice] Material: "guiro_shimmer"
@@ -27038,7 +25668,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b2. :32 \( ^ \markup {
+                                b2. :32 \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -27514,7 +26144,6 @@
                             {
                                 f'2 :32 \repeatTie
                                 f'8 :64 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -27526,7 +26155,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \! \< [
+                                f'16 -\staccato \) \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -27535,7 +26164,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 1 Percussion Voice] Material: "shaker_drone"
@@ -27578,7 +26206,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'8 :64 \( \startTextSpan \<
+                                f'8 :64 \) \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 27
                             {
@@ -28308,7 +26936,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 1 Percussion Voice] Material: "guiro_shimmer"
@@ -28320,7 +26947,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \( ^ \markup {
+                                b8 :64 \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -30318,36 +28945,48 @@
                 \context PercussionStaff = "B 2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B2
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "shaker_drone"
@@ -30893,7 +29532,6 @@
                                 f'8 :64 \( \startTextSpan \<
                                 f'2 :32 \repeatTie
                                 f'8 :64 \p \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -30905,7 +29543,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato ]
                             }
@@ -30944,7 +29582,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 2 Percussion Voice] Material: "shaker_drone"
@@ -30987,7 +29624,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'4 :32 \( \startTextSpan \<
+                                f'4 :32 \) \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 12
                             {
@@ -31445,7 +30082,6 @@
                             % [B 2 Percussion Voice] Measure 26
                             {
                                 f'1 :32 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -31458,7 +30094,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \! \< [
+                                f'16 -\staccato \) \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -31473,7 +30109,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 2 Percussion Voice] Material: "shaker_drone"
@@ -31516,7 +30151,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'8 :64 \( \startTextSpan \<
+                                f'8 :64 \) \( \startTextSpan \<
                                 f'2 :32 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 28
@@ -32226,7 +30861,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 2 Percussion Voice] Material: "guiro_shimmer"
@@ -32238,7 +30872,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \( ^ \markup {
+                                b8 :64 \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -34210,36 +32844,48 @@
                 \context PercussionStaff = "B 3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B3
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "shaker_drone"
@@ -34713,7 +33359,6 @@
                             % [B 3 Percussion Voice] Measure 11
                             {
                                 b4 :32 \p \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -34725,7 +33370,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -34758,7 +33403,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 3 Percussion Voice] Material: "shaker_drone"
@@ -34771,7 +33415,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'2 :32 \parenthesizeDynamic \p \( ^ \markup {
+                                f'2 :32 \parenthesizeDynamic \p \) \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -35300,7 +33944,6 @@
                             % [B 3 Percussion Voice] Measure 26
                             {
                                 f'2.. :32 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -35312,7 +33955,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \! \< [
+                                f'16 -\staccato \) \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato ]
                             }
@@ -35321,7 +33964,6 @@
                                 f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 3 Percussion Voice] Material: "shaker_drone"
@@ -35364,7 +34006,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'2.. :32 \( \startTextSpan \<
+                                f'2.. :32 \) \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 28
                             {
@@ -38284,36 +36926,48 @@
                 \context PercussionStaff = "B 4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                shaker
-                                                castanet
-                                                guiro
-                                                "wine glass"
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            shaker
+                                                            castanet
+                                                            guiro
+                                                            "wine glass"
+                                                        }
+                        }
                     }
                     \set Staff.shortInstrumentName = \markup {
-                    \pad-around
-                        #0.5
-                        \bracket
-                            \pad-around
-                                #0.5
-                                \small
-                                    \italic
-                                        \right-column
-                                            {
-                                                sh.
-                                                cst.
-                                                g.
-                                                w.g.
-                                            }
+                    \concat
+                        {
+                            \vcenter
+                                B4
+                            \vcenter
+                                \pad-around
+                                    #0.5
+                                    \bracket
+                                        \pad-around
+                                            #0.5
+                                            \small
+                                                \italic
+                                                    \right-column
+                                                        {
+                                                            sh.
+                                                            cst.
+                                                            g.
+                                                            w.g.
+                                                        }
+                        }
                     }
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "guiro_shimmer"
@@ -38894,7 +37548,6 @@
                             % [B 4 Percussion Voice] Measure 11
                             {
                                 b8 :64 \p \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -38906,7 +37559,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \< [
+                                f'16 -\staccato \) \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -38921,7 +37574,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 4 Percussion Voice] Material: "shaker_drone"
@@ -38964,7 +37616,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'2 :32 \( \startTextSpan \<
+                                f'2 :32 \) \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 12
                             {
@@ -39304,7 +37956,6 @@
                             % [B 4 Percussion Voice] Measure 27
                             {
                                 f'4 :32 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -39316,7 +37967,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.806 0.837)
-                                f'16 -\staccato \( \! \< [
+                                f'16 -\staccato \) \( \! \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 f'16 -\staccato
@@ -39367,7 +38018,6 @@
                                 f'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato \p ]
-                                <> \)
                             }
                         }
                         % [B 4 Percussion Voice] Material: "shaker_drone"
@@ -39410,7 +38060,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                f'8 :64 \( \startTextSpan \<
+                                f'8 :64 \) \( \startTextSpan \<
                                 f'2 :32 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 29
@@ -40143,7 +38793,6 @@
                                 f'16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 f'16 -\staccato ]
-                                <> \)
                             }
                         }
                         % [B 4 Percussion Voice] Material: "guiro_shimmer"
@@ -40185,7 +38834,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                b8 :64 \parenthesizeDynamic \p \( \startTextSpan
+                                b8 :64 \parenthesizeDynamic \p \) \( \startTextSpan
                                 b4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
