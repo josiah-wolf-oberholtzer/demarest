@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -42,31 +42,43 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            tubular
-                                                            bells
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        tubular
+                                                                        bells
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    t.b.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                t.b.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            b'8 -\tenuto \laissezVibrer \p \(
+                            cf''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -284,31 +296,43 @@
                     {
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            tubular
-                                                            bells
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        tubular
+                                                                        bells
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    t.b.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                t.b.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            cs'8 -\tenuto \laissezVibrer \ppp \(
+                            df'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -322,9 +346,16 @@
                                     }
                                 ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        t.b.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            t.b.
+                                                        }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
@@ -572,31 +603,43 @@
                         {
                             \clef "treble"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            tubular
-                                                            bells
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        tubular
+                                                                        bells
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    t.b.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                t.b.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            d'8 -\tenuto \laissezVibrer \p \(
+                            eff'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -610,12 +653,18 @@
                                     }
                                 ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        t.b.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            t.b.
+                                                        }
                                 }
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -627,7 +676,6 @@
                     {
                         % [Viola Voice] Measure 2
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c''8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
@@ -685,7 +733,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -700,7 +747,6 @@
                     % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             f''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -715,7 +761,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -726,7 +771,6 @@
                     % [Viola Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             af'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
@@ -741,7 +785,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -753,7 +796,6 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -782,7 +824,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -794,7 +835,6 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             c'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
@@ -850,31 +890,43 @@
                         {
                             \clef "treble"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            tubular
-                                                            bells
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        tubular
+                                                                        bells
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    t.b.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                t.b.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            b'8 -\tenuto \laissezVibrer \p \(
+                            cf''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -887,7 +939,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -899,7 +950,6 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
@@ -914,7 +964,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -926,7 +975,6 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             b'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -941,7 +989,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -953,7 +1000,6 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             a'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
@@ -968,7 +1014,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -979,9 +1024,8 @@
                     % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            ef'8 -\tenuto \laissezVibrer \p \(
+                            ds'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -994,7 +1038,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -1005,7 +1048,6 @@
                     % [Cello Voice] Material: "trio_c_tubular_bells_tranquilo"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             d'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
@@ -1020,7 +1062,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -1032,7 +1073,6 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
@@ -1061,7 +1101,6 @@
                                                         LV
                                     }
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -1082,7 +1121,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                             ef''8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {

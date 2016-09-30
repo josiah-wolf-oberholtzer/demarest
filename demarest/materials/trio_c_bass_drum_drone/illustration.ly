@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -43,41 +43,53 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. :32 \( \<
+                            f4. :32 \( \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            c'4 :32 \p \repeatTie
+                            f4 :32 \p \repeatTie
                             <> \)
                         }
                     }
@@ -90,38 +102,8 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 :64 \parenthesizeDynamic \p \(
+                            f8 :64 \parenthesizeDynamic \p \(
                             <> \)
                         }
                     }
@@ -135,47 +117,17 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. :32 \( \<
-                            c'8 :64 \repeatTie
+                            f4. :32 \( \<
+                            f8 :64 \repeatTie
                         }
                         {
-                            c'8 :64 \repeatTie
-                            c'4 :32 \repeatTie
+                            f8 :64 \repeatTie
+                            f4 :32 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            c'4 :32 \p \repeatTie
+                            f4 :32 \p \repeatTie
                             <> \)
                         }
                     }
@@ -191,42 +143,12 @@
                     % [Violin 1 Voice] Material: "trio_c_bass_drum_drone"
                     {
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 :64 \parenthesizeDynamic \p \(
+                            f8 :64 \parenthesizeDynamic \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -266,37 +188,49 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 :64 \( \< ^ \markup {
+                            f8 :64 \( \< ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -312,14 +246,14 @@
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                         }
                         {
-                            c'8 :64 \p \repeatTie
+                            f8 :64 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -332,38 +266,8 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 :32 \p \(
+                            f4 :32 \p \(
                             <> \)
                         }
                     }
@@ -377,57 +281,27 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 :64 \( \<
+                            f8 :64 \( \<
                         }
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            c'4 :32 \p \repeatTie
+                            f4 :32 \p \repeatTie
                         }
                         {
-                            c'8 :64 \repeatTie
+                            f8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. :32 \repeatTie \>
+                            f4. :32 \repeatTie \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8 :64 \repeatTie
+                            f8 :64 \repeatTie
                             <> \)
                         }
                     }
@@ -467,37 +341,49 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 :32 \( \< ^ \markup {
+                            f4 :32 \( \< ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -513,18 +399,18 @@
                         }
                         % [Viola Voice] Measure 2
                         {
-                            c'8 :64 \repeatTie
+                            f8 :64 \repeatTie
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 :64 \p \repeatTie \>
+                            f8 :64 \p \repeatTie \>
                         }
                         {
-                            c'8 :64 \repeatTie
+                            f8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 :64 \repeatTie
+                            f8 :64 \repeatTie
                             <> \)
                         }
                     }
@@ -541,54 +427,24 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 :64 \( \<
-                            c'4 :32 \repeatTie
+                            f8 :64 \( \<
+                            f4 :32 \repeatTie
                         }
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 :64 \p \repeatTie \>
+                            f8 :64 \p \repeatTie \>
                         }
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -630,41 +486,53 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. :32 \( \<
+                            f4. :32 \( \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            c'4 :32 \p \repeatTie
+                            f4 :32 \p \repeatTie
                             <> \)
                         }
                     }
@@ -678,42 +546,12 @@
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. :32 \( \<
+                            f4. :32 \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
-                            c'8 :64 \p \repeatTie
+                            f8 :64 \p \repeatTie
                             <> \)
                         }
                     }
@@ -726,48 +564,18 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 :32 \( \<
+                            f4 :32 \( \<
                         }
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            c'8 :64 \p \repeatTie
+                            f8 :64 \p \repeatTie
                         }
                         {
-                            c'4 :32 \repeatTie
+                            f4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -786,38 +594,8 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 :64 \p \(
+                            f8 :64 \p \(
                             <> \)
                         }
                     }

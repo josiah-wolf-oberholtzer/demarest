@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -201,7 +201,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -212,57 +211,13 @@
                     % [Violin 1 Voice] Material: "whispered_repetitions"
                     {
                         % [Violin 1 Voice] Measure 3
-                        \times 2/3 {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
+                        {
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    s-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
+                            c'16 -\staccato \parenthesizeDynamic \p \( [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -288,7 +243,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -304,44 +258,12 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \( \startTextSpan \< [
+                            c'16 -\staccato \( \< [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -423,21 +345,8 @@
                                                 }
                                     }
                         }
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
+                        {
                             c'16 -\staccato [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -559,7 +468,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -575,44 +483,12 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \( \startTextSpan \< [
+                            c'16 -\staccato \( \< [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -722,7 +598,7 @@
                     }
                     % [Violin 2 Voice] Material: "whispered_repetitions"
                     {
-                        \times 2/3 {
+                        {
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -762,18 +638,6 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    t-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -868,7 +732,7 @@
                                     }
                         }
                         % [Violin 2 Voice] Measure 3
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
                                 _ \markup {
                                     \whiteout
@@ -904,18 +768,6 @@
                                                 }
                                     }
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    t-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                                 _ \markup {
                                     \whiteout
@@ -931,7 +783,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -946,44 +797,12 @@
                     % [Violin 2 Voice] Material: "whispered_repetitions"
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \p \( \startTextSpan [
+                            c'16 -\staccato \p \( [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1021,7 +840,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -1034,44 +852,12 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \( \startTextSpan \< [
+                            c'16 -\staccato \( \< [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1141,20 +927,8 @@
                                     }
                         }
                         % [Violin 2 Voice] Measure 5
-                        \times 4/5 {
+                        {
                             c'16 -\staccato \p [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1297,20 +1071,8 @@
                                     }
                         }
                         % [Violin 2 Voice] Measure 7
-                        \times 2/3 {
+                        {
                             c'16 -\staccato [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1372,7 +1134,7 @@
                     }
                     % [Viola Voice] Material: "whispered_repetitions"
                     {
-                        \times 4/5 {
+                        {
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -1412,18 +1174,6 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
                             c'16 -\staccato \( \startTextSpan \< [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    s-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1517,20 +1267,8 @@
                                                 }
                                     }
                         }
-                        \times 2/3 {
+                        {
                             c'16 -\staccato [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    s-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1580,7 +1318,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -1597,44 +1334,12 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \( \startTextSpan \< [
+                            c'16 -\staccato \( \< [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1692,20 +1397,8 @@
                                                 }
                                     }
                         }
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    f-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -1824,20 +1517,8 @@
                                     }
                         }
                         % [Viola Voice] Measure 6
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    f-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -2086,7 +1767,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -2097,59 +1777,14 @@
                     % [Cello Voice] Material: "whispered_repetitions"
                     {
                         % [Cello Voice] Measure 3
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
+                        {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \( \startTextSpan \< [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
+                            c'16 -\staccato \( \< [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -2247,7 +1882,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -2260,44 +1894,12 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            wh.
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.806 0.806 0.961)
-                            c'16 -\staccato \( \startTextSpan \< [
+                            c'16 -\staccato \( \< [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -2331,20 +1933,8 @@
                                                 }
                                     }
                         }
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    ch-
-                                                }
-                                    }
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                                 _ \markup {
                                     \whiteout
                                         \italic

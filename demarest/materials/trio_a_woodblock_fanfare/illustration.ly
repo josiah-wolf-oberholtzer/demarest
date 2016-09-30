@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -37,49 +37,15 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \clef "percussion"
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <f a>16 -\accent -\accent \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <a c'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            a16 ]
-                        }
-                        % [Violin 1 Voice] Measure 2
-                        \times 4/5 {
-                            e'16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <c' e'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            <e' g'>16 -\accent -\accent \mf ]
-                            <> \)
-                            \clef "treble"
-                        }
-                    }
-                    {
-                        {
-                            r8
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/4
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
@@ -87,10 +53,63 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \clef "percussion"
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        five
+                                                                        wood
+                                                                        blocks
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        w.b.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <e' g'>8 :64 \f \(
+                            <f a>16 -\accent \f \( [ ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
+                                }
+                            \set stemLeftBeamCount = 2
+                            g'16 ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -101,16 +120,27 @@
                     % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Violin 1 Voice] Measure 4
-                        \times 8/9 {
-                            \clef "percussion"
+                        \times 2/3 {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            e'16 \parenthesizeDynamic \f \( \> [
+                            r4 \(
+                            <e' g'>4 :32 \parenthesizeDynamic \f \>
+                            <f a>4 :32
+                        }
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/8 {
+                            a16 [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f16
+                            <e' g'>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16 -\accent -\accent
+                            g'16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            a16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            <f a>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16
@@ -118,39 +148,19 @@
                             \set stemRightBeamCount = 2
                             a16
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <e' g'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            c'16 ]
-                        }
-                        {
-                            <c' e'>8 :64
-                            <c' e'>4 :32 \repeatTie
-                        }
-                        % [Violin 1 Voice] Measure 5
-                        {
-                            <f a>16 -\accent -\accent [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            <a c'>16 -\accent -\accent \mf ]
+                            c'16 \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
+                        % [Violin 1 Voice] Measure 5
                         {
-                            r8
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
                         }
                         % [Violin 1 Voice] Measure 6
                         {
@@ -160,31 +170,19 @@
                     % [Violin 1 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
-                            \clef "percussion"
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>8 :64 \f \( \>
-                        }
-                        % [Violin 1 Voice] Measure 7
-                        \times 4/5 {
-                            e'16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <a c'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            g'16 \mf ]
+                            <c' e'>8 :64 \f \(
                             <> \)
                             \clef "treble"
                         }
                     }
                     {
+                        % [Violin 1 Voice] Measure 7
                         {
-                            r8
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
                             \bar "|."
                         }
                     }
@@ -210,38 +208,102 @@
                     {
                         % [Violin 2 Voice] Measure 1
                         {
-                            r4
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
                     {
-                        \times 2/3 {
+                        % [Violin 2 Voice] Measure 2
+                        {
                             \clef "percussion"
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        five
+                                                                        wood
+                                                                        blocks
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        w.b.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <f a>16 -\accent -\accent \f \( \> [
+                            <a c'>4 :32 \f \( ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
+                                }
+                            <> \)
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
+                    {
+                        % [Violin 2 Voice] Measure 3
+                        \times 4/6 {
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            <f a>16 -\accent \parenthesizeDynamic \f \( \> [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             e'16
                             \set stemLeftBeamCount = 2
-                            f16 ]
-                        }
-                        % [Violin 2 Voice] Measure 2
-                        {
-                            <f a>4 :32
-                        }
-                        \times 2/3 {
-                            e'16 \mf [
-                            \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a c'>16 -\accent -\accent
+                            <a c'>16 -\accent \mf
                             \set stemLeftBeamCount = 2
-                            f16 ]
-                        }
-                        % [Violin 2 Voice] Measure 3
-                        {
-                            <a c'>4 :32
+                            r16 ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -253,88 +315,74 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \clef "percussion"
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            a16 \f \( \> [
+                            c'16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16 -\accent -\accent
+                            e'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g'16
+                            r16
                             \set stemLeftBeamCount = 2
-                            e'16 \mf ]
+                            g'16 \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
                         {
                             r8
-                            r8
+                            r4
                         }
                     }
                     % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
-                            \clef "percussion"
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <c' e'>8 :64 \f \( \>
-                        }
-                        {
-                            e'16 [
+                            f16 \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <c' e'>16 -\accent -\accent
+                            g'16
                             \set stemLeftBeamCount = 2
                             e'16 ]
+                            <> \)
+                        }
+                    }
+                    {
+                        {
+                            r16
                         }
                         % [Violin 2 Voice] Measure 5
-                        \times 4/5 {
-                            f16 \mf \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <e' g'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            g'16 ]
-                        }
                         {
-                            <e' g'>8 :64
+                            r4
                         }
+                    }
+                    % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            <a c'>8 :64 \parenthesizeDynamic \f \(
+                            <> \)
+                        }
+                    }
+                    {
                         % [Violin 2 Voice] Measure 6
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
-                            <f a>16 -\accent -\accent \mp \< [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <a c'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g'16
-                            \set stemLeftBeamCount = 2
-                            f16 ]
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
                         }
+                    }
+                    % [Violin 2 Voice] Material: "trio_a_woodblock_fanfare"
+                    {
                         % [Violin 2 Voice] Measure 7
                         {
-                            <f a>8 :64 \mf
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            a16 \f \( [
+                            \set stemLeftBeamCount = 2
+                            <f a>16 -\accent ]
                             <> \)
                             \clef "treble"
                         }
@@ -367,49 +415,93 @@
                     {
                         % [Viola Voice] Measure 1
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
+                        }
+                        % [Viola Voice] Measure 2
+                        {
                             r8
                         }
                     }
                     % [Viola Voice] Material: "trio_a_woodblock_fanfare"
                     {
-                        \times 4/5 {
+                        {
                             \clef "percussion"
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        five
+                                                                        wood
+                                                                        blocks
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        w.b.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>16 -\accent -\accent \f \( \< [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <c' e'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            g'16 ]
-                        }
-                        % [Viola Voice] Measure 2
-                        {
-                            <a c'>8 :64
-                        }
-                        {
-                            a16 \fff \> [
+                            c'16 \f \( [ ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
+                                }
                             \set stemLeftBeamCount = 2
                             g'16 ]
+                            <> \)
                         }
-                        \times 2/3 {
-                            <e' g'>16 -\accent -\accent [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g'16
-                            \set stemLeftBeamCount = 2
-                            e'16 ]
+                    }
+                    {
+                        {
+                            r8
                         }
+                    }
+                    % [Viola Voice] Material: "trio_a_woodblock_fanfare"
+                    {
                         % [Viola Voice] Measure 3
                         {
-                            <c' e'>8 :64 \mf
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            <c' e'>8 :64 \parenthesizeDynamic \f \(
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -418,74 +510,48 @@
                         }
                         % [Viola Voice] Measure 4
                         {
+                            r4.
                             r4
                         }
                     }
                     % [Viola Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
-                            \clef "percussion"
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <f a>8 :64 \f \( \>
-                            <f a>4 :32 \repeatTie
+                            <a c'>4 :32 \parenthesizeDynamic \f \(
+                            <> \)
                         }
-                        \times 4/5 {
-                            a16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <f a>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            <a c'>16 -\accent -\accent ]
-                        }
+                    }
+                    {
                         % [Viola Voice] Measure 5
                         {
-                            <a c'>8 :64 \mp \<
+                            r8
                         }
+                    }
+                    % [Viola Voice] Material: "trio_a_woodblock_fanfare"
+                    {
                         {
-                            g'16 [
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            e'16 \parenthesizeDynamic \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            <c' e'>16 -\accent -\accent ]
-                        }
-                        % [Viola Voice] Measure 6
-                        \times 4/5 {
-                            g'16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <e' g'>16 -\accent -\accent
+                            <f a>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             g'16
                             \set stemLeftBeamCount = 2
-                            e'16 \mf ]
+                            f16 \mf ]
                             <> \)
                             \clef "alto"
                         }
                     }
                     {
-                        {
-                            r8
-                        }
-                        % [Viola Voice] Measure 7
+                        % [Viola Voice] Measure 6
                         {
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
-                            R1 * 3/8
+                            R1 * 3/4
                             \bar "|."
                         }
                     }
@@ -515,68 +581,45 @@
                         \times 6/7 {
                             \clef "percussion"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        five
+                                                                        wood
+                                                                        blocks
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        w.b.
+                                                                    }
+                                    }
                                 }
-                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            e'16 \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <e' g'>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <f a>16 -\accent -\accent
-                            \set stemLeftBeamCount = 2
-                            c'16 ]
-                        }
-                        % [Cello Voice] Measure 2
-                        {
-                            <e' g'>4 :32 \mf
-                            <> \)
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
-                    {
-                        % [Cello Voice] Measure 3
-                        {
-                            \clef "percussion"
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                             f16 \f \( \> [
                             \set stemLeftBeamCount = 2
@@ -584,26 +627,44 @@
                             e'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            a16
+                            <e' g'>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16 -\accent -\accent
+                            c'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             g'16
                             \set stemLeftBeamCount = 2
-                            f16 ]
+                            \set stemRightBeamCount = 2
+                            f16
+                            \set stemLeftBeamCount = 2
+                            <f a>16 -\accent \mf ]
+                            <> \)
                         }
+                    }
+                    {
+                        % [Cello Voice] Measure 2
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/4
+                            \stopStaff
+                            \startStaff
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
+                    {
                         % [Cello Voice] Measure 4
                         \times 2/3 {
-                            <e' g'>16 -\accent -\accent [
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            <c' e'>16 -\accent \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g'16
+                            f16
                             \set stemLeftBeamCount = 2
-                            a16 \mf ]
+                            a16 ]
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -614,37 +675,34 @@
                     % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         {
-                            \clef "percussion"
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>4 :32 \f \( \>
-                        }
-                        {
-                            <a c'>16 -\accent -\accent [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g'16
-                            \set stemLeftBeamCount = 2
-                            a16 ]
-                        }
-                        % [Cello Voice] Measure 5
-                        \times 2/3 {
-                            <c' e'>16 -\accent -\accent \mf [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            e'16 ]
-                        }
-                        {
-                            <c' e'>4 :32
+                            <a c'>4 :32 \(
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
+                        {
+                            r4
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_a_woodblock_fanfare"
+                    {
+                        % [Cello Voice] Measure 5
+                        \times 2/3 {
+                            \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
+                            g'16 \parenthesizeDynamic \f \( [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16
+                            \set stemLeftBeamCount = 2
+                            r16 ]
+                            <> \)
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
                         % [Cello Voice] Measure 6
                         {
                             \stopStaff
@@ -658,15 +716,11 @@
                     % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Cello Voice] Measure 7
-                        \times 2/3 {
-                            \clef "percussion"
+                        {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                             c'16 \f \( [
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g'16
-                            \set stemLeftBeamCount = 2
-                            e'16 ]
+                            f16 ]
                             <> \)
                             \clef "bass"
                         }

@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -10,15 +10,15 @@
             {
                 \tempo 4=72
                 \time 3/8
-                s1 * 3/2
+                s1 * 9/8
             }
             {
                 \time 7/8
                 s1 * 7/8
             }
             {
-                \time 5/8
-                s1 * 5/8
+                \time 3/8
+                s1 * 9/8
             }
         }
         \tag #'violin-1
@@ -42,45 +42,82 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            \once \override NoteHead.color = #red
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato \p ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -92,13 +129,16 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \once \override NoteHead.color = #red
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \parenthesizeDynamic \p \( [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -114,72 +154,60 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                        }
+                        {
+                            f16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            \once \override NoteHead.color = #red
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                        }
-                        {
-                            \once \override NoteHead.color = #red
-                            f16 -\staccato [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato \p ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -195,30 +223,34 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
-                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                        }
+                        % [Violin 1 Voice] Measure 7
+                        {
+                            f16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato \p ]
-                            \bar "|."
                             <> \)
+                            \stopStaff
+                            \startStaff
+                        }
+                    }
+                    {
+                        {
+                            r8
+                            \bar "|."
                         }
                     }
                 }
@@ -250,53 +282,100 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            f16 -\staccato \( \< [
-                            \once \override NoteHead.color = #red
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f16 -\staccato \( \< [ ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
+                                }
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            \once \override NoteHead.color = #red
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
                             f16 -\staccato \p \> [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            \once \override NoteHead.color = #red
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -311,25 +390,24 @@
                     % [Violin 2 Voice] Material: "trio_b_tam_tam_repetitions"
                     {
                         {
-                            \once \override NoteHead.color = #red
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \p \( [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
                         {
                             r8
-                        }
-                        % [Violin 2 Voice] Measure 5
-                        {
                             r8
                         }
                     }
@@ -337,89 +415,74 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         {
-                            \once \override NoteHead.color = #red
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                        }
+                        % [Violin 2 Voice] Measure 5
+                        {
+                            f16 -\staccato \p [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            \once \override NoteHead.color = #red
-                            f16 -\staccato \p \> [
-                            \once \override NoteHead.color = #red
+                            f16 -\staccato [
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            \once \override NoteHead.color = #red
+                            \once \override Hairpin.circled-tip = ##t
+                            f16 -\staccato \> [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                        }
+                        % [Violin 2 Voice] Measure 7
+                        {
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
                         {
-                            r8 \!
+                            r4 \!
                             \bar "|."
                         }
                     }
@@ -452,8 +515,65 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            f16 -\staccato \( \< [
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f16 -\staccato \( \< [ ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
+                                }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
@@ -486,6 +606,8 @@
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -503,39 +625,42 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            f16 -\staccato \( \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f16 -\staccato \( \< [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                        }
+                        {
+                            f16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            f16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
                         }
                         % [Viola Voice] Measure 5
                         {
-                            f16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                        }
-                        {
-                            f16 -\staccato \p [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                        }
-                        {
-                            f16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                        }
-                        {
                             \once \override Hairpin.circled-tip = ##t
-                            f16 -\staccato \> [
+                            f16 -\staccato \p \> [
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                        }
+                        {
+                            f16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
@@ -557,12 +682,20 @@
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
                         {
                             r8 \!
-                            r4
+                        }
+                        % [Viola Voice] Measure 7
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
                             \bar "|."
                         }
                     }
@@ -590,7 +723,52 @@
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -619,6 +797,8 @@
                             \set stemLeftBeamCount = 2
                             f16 -\staccato \p ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -632,6 +812,9 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -654,14 +837,13 @@
                             \set stemLeftBeamCount = 2
                             f16 -\staccato \p ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
                         {
                             r4
-                        }
-                        % [Cello Voice] Measure 5
-                        {
                             r16
                         }
                     }
@@ -670,6 +852,9 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             f16 -\staccato \( \< [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -686,11 +871,12 @@
                             \set stemRightBeamCount = 2
                             f16 -\staccato
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
+                            f16 -\staccato ]
+                        }
+                        % [Cello Voice] Measure 5
+                        {
+                            \once \override Hairpin.circled-tip = ##t
+                            f16 -\staccato \p \> [
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
@@ -703,29 +889,42 @@
                             \set stemRightBeamCount = 2
                             f16 -\staccato
                             \set stemLeftBeamCount = 2
-                            f16 -\staccato \p ]
+                            f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
                         % [Cello Voice] Measure 6
                         {
-                            r4.
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8 \!
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     % [Cello Voice] Material: "trio_b_tam_tam_repetitions"
                     {
+                        % [Cello Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            f16 -\staccato \parenthesizeDynamic \p \( [
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
                         {
-                            r8
+                            r4
                             \bar "|."
                         }
                     }

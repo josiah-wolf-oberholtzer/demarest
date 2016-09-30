@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -61,7 +61,7 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <a'' c'''>8 :64 \ppp \(
+                            <a''' c''''>8 :64 \ppp \(
                             <> \)
                         }
                     }
@@ -84,19 +84,19 @@
                             <b'' e'''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <fs'' a''>8 :64 -\espressivo
+                            <fs'' a''>8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <gs' b'>8 :64 -\espressivo
+                            <gs'' b''>8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <f' bf'>8 :64 -\espressivo
+                            <f' bf'>8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            <ef' gf'>8 :64 -\espressivo ]
+                            <ef' gf'>8 :64 -\accent ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            <f' af'>4 :32 -\espressivo
+                            <f' af'>4 :32 -\accent
                             <> \)
                         }
                     }
@@ -164,11 +164,11 @@
                             <cs''' e'''>4 :32 \repeatTie
                         }
                         {
-                            <a' c''>8 :64 -\espressivo
+                            <a'' c'''>8 :64 -\accent
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            <a' c''>4 :32 \repeatTie \!
+                            <a'' c'''>4 :32 \repeatTie \!
                             <> \)
                         }
                     }
@@ -202,13 +202,13 @@
                             <g'' bf''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <ef' gf'>8 :64 -\espressivo
+                            <ef' gf'>8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            <c'' f''>8 :64 -\espressivo ]
+                            <c'' f''>8 :64 -\accent ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            <ef'' gf''>4 :32 -\espressivo \ppp \<
+                            <ef'' gf''>4 :32 -\accent \ppp \<
                         }
                         {
                             <ef'' gf''>8 :64 \repeatTie
@@ -216,11 +216,11 @@
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <a c'>4. :32 -\espressivo \mf \>
+                            <a' c''>4. :32 -\accent \mf \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            <a c'>8 :64 \repeatTie
+                            <a' c''>8 :64 \repeatTie
                             <> \)
                         }
                     }
@@ -261,23 +261,22 @@
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <b'' d'''>4 :32 \( \<
+                            <d'' f''>4 :32 \( \<
                         }
                         % [Viola Voice] Measure 2
                         {
-                            <b'' d'''>8 :64 \repeatTie
+                            <d'' f''>8 :64 \repeatTie
                         }
                         {
-                            <b'' d'''>8 :64 -\espressivo \p \<
+                            <b'' d'''>8 :64 -\accent \p \<
                         }
                         {
                             <b'' d'''>8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            <a' d''>8 :64 -\espressivo \f
+                            <a' d''>8 :64 -\accent \f
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -292,7 +291,6 @@
                     % [Viola Voice] Material: "pitched_shimmer"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <gs'' b''>8 :64 \fp \( \>
                             <gs'' b''>4 :32 \repeatTie
@@ -303,19 +301,19 @@
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <ef'' gf''>8 :64 -\espressivo \ppp \>
+                            <ef'' gf''>8 :64 -\accent \ppp \>
                         }
                         \times 2/3 {
                             <ef'' gf''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            <c'' f''>8 :64 -\espressivo
+                            <c'' f''>8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            <d' f'>8 :64 -\espressivo ]
+                            <d' f'>8 :64 -\accent ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            <c' ef'>4 :32 -\espressivo
+                            <c' ef'>4 :32 -\accent
                             <> \)
                             \clef "alto"
                         }
@@ -365,7 +363,6 @@
                         {
                             <b' d''>4 :32 \f \repeatTie
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -377,7 +374,6 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <a' c''>4. :32 \fp \( \>
@@ -386,7 +382,6 @@
                         {
                             <a' c''>8 :64 \repeatTie
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -397,7 +392,6 @@
                     % [Cello Voice] Material: "pitched_shimmer"
                     {
                         {
-                            \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <d'' g''>4 :32 \( \<
@@ -407,12 +401,11 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            <f' af'>8 :64 -\espressivo \f
+                            <f' af'>8 :64 -\accent \f
                         }
                         {
                             <f' af'>4 :32 \repeatTie
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -430,7 +423,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <ef'' gf''>8 :64 \fp \(
                             <> \)

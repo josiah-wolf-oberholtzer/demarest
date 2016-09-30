@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -81,12 +81,9 @@
                     % [Violin 1 Voice] Material: "unpitched_repetitions"
                     {
                         % [Violin 1 Voice] Measure 3
-                        \times 2/3 {
+                        {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
                             c'16 -\staccato \parenthesizeDynamic \p \( [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                             <> \)
@@ -125,12 +122,8 @@
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -225,13 +218,10 @@
                     }
                     % [Violin 2 Voice] Material: "unpitched_repetitions"
                     {
-                        \times 2/3 {
+                        {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
                             c'16 -\staccato \( \< [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -254,11 +244,8 @@
                             c'16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 3
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -319,11 +306,8 @@
                             c'16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 5
-                        \times 4/5 {
+                        {
                             c'16 -\staccato \p [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -358,11 +342,8 @@
                             c'16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 7
-                        \times 2/3 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                             <> \)
@@ -401,13 +382,10 @@
                     }
                     % [Viola Voice] Material: "unpitched_repetitions"
                     {
-                        \times 4/5 {
+                        {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
                             c'16 -\staccato \( \< [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -429,11 +407,8 @@
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
-                        \times 2/3 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -473,11 +448,8 @@
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -506,11 +478,8 @@
                             c'16 -\staccato ]
                         }
                         % [Viola Voice] Measure 6
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -598,14 +567,10 @@
                     % [Cello Voice] Material: "unpitched_repetitions"
                     {
                         % [Cello Voice] Measure 3
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
+                        {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
                             c'16 -\staccato \( \< [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -647,11 +612,8 @@
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
-                        \times 4/5 {
+                        {
                             c'16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato

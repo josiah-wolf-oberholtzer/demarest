@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -42,38 +42,59 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4. \f \(
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -86,8 +107,13 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'8 \f \(
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -100,17 +126,22 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \parenthesizeDynamic \f \(
-                            a'8 \repeatTie
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4. \parenthesizeDynamic \f \(
+                            g'8 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
-                            a'4 \repeatTie
+                            g'8 \repeatTie
+                            g'4 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -126,12 +157,17 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'8 \f \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -169,50 +205,78 @@
                     {
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \( ^ \markup {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'8 \f \( ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        perc.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -225,8 +289,13 @@
                         % [Violin 2 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4 \f \(
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -239,26 +308,31 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'8 \(
                         }
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            a'4. \repeatTie
+                            g'4. \repeatTie
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -296,53 +370,81 @@
                     {
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \f \( ^ \markup {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4 \f \( ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        perc.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
                                 }
                         }
                         % [Viola Voice] Measure 2
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -358,23 +460,28 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
-                            a'4 \repeatTie
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'8 \f \(
+                            g'4 \repeatTie
                         }
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -414,38 +521,59 @@
                         % [Cello Voice] Measure 1
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4. \f \(
                         }
                         % [Cello Voice] Measure 2
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -458,12 +586,17 @@
                         % [Cello Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4. \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4. \f \(
                         }
                         % [Cello Voice] Measure 4
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -475,18 +608,23 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'4 \parenthesizeDynamic \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'4 \parenthesizeDynamic \f \(
                         }
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            a'8 \repeatTie
+                            g'8 \repeatTie
                         }
                         {
-                            a'4 \repeatTie
+                            g'4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -505,8 +643,13 @@
                         % [Cello Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                            a'8 \f \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            g'8 \f \(
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {

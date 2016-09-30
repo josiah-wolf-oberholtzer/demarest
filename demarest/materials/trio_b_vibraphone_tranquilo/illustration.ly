@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -41,305 +41,6 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vibraphone
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vb.
-                                }
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            b'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Violin 1 Voice] Measure 2
-                        {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            cs''8 -\tenuto \laissezVibrer \ppp \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Violin 1 Voice] Measure 3
-                        {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            a'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Violin 1 Voice] Measure 4
-                        {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            b'8 -\tenuto \laissezVibrer \ppp \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                            r8
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            a'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Violin 1 Voice] Measure 5
-                        {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            ef'8 -\tenuto \laissezVibrer \ppp \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                        % [Violin 1 Voice] Measure 6
-                        {
-                            r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -375,8 +76,229 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            d'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                            cf''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Violin 1 Voice] Measure 2
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            cs''8 -\tenuto \laissezVibrer \ppp \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Violin 1 Voice] Measure 3
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            a'8 -\tenuto \laissezVibrer \p \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Violin 1 Voice] Measure 4
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            b'8 -\tenuto \laissezVibrer \ppp \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                            r8
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            a'8 -\tenuto \laissezVibrer \p \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Violin 1 Voice] Measure 5
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            ef'8 -\tenuto \laissezVibrer \ppp \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                        % [Violin 1 Voice] Measure 6
+                        {
+                            r4
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -480,27 +402,39 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vibraphone
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            cs'8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
+                            df'8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -514,9 +448,16 @@
                                     }
                                 ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        vb.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            vb.
+                                                        }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
@@ -537,7 +478,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -548,43 +488,11 @@
                     % [Violin 2 Voice] Material: "trio_b_vibraphone_tranquilo"
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            a'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                            a'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -615,7 +523,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -627,8 +534,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -645,19 +550,6 @@
                                                     \caps
                                                         LV
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -673,43 +565,11 @@
                     % [Violin 2 Voice] Material: "trio_b_vibraphone_tranquilo"
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            g'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                            g'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -739,7 +599,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -751,8 +610,6 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -769,19 +626,6 @@
                                                     \caps
                                                         LV
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -796,43 +640,11 @@
                     % [Violin 2 Voice] Material: "trio_b_vibraphone_tranquilo"
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            d'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                            d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -863,7 +675,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -875,8 +686,6 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -893,23 +702,11 @@
                                                     \caps
                                                         LV
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -947,80 +744,6 @@
                     {
                         {
                             \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vibraphone
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vb.
-                                }
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            d'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \pad-around
-                                        #0.5
-                                        vb.
-                                }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "alto"
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Viola Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Viola Voice] Measure 2
-                        {
-                            \clef "treble"
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -1056,8 +779,84 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            c''8 -\tenuto \laissezVibrer \ppp \( \startTextSpan \<
+                            eff'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                                ^ \markup {
+                                \box
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            vb.
+                                                        }
+                                }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    % [Viola Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Viola Voice] Measure 2
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            c''8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1116,8 +915,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
-                            \clef "alto"
                         }
                     }
                     {
@@ -1132,9 +929,6 @@
                     % [Viola Voice] Material: "trio_b_vibraphone_tranquilo"
                     {
                         {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1151,24 +945,10 @@
                                                     \caps
                                                         LV
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            \clef "alto"
                         }
                     }
                     {
@@ -1179,9 +959,6 @@
                     % [Viola Voice] Material: "trio_b_vibraphone_tranquilo"
                     {
                         {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1198,24 +975,10 @@
                                                     \caps
                                                         LV
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            \clef "alto"
                         }
                     }
                     {
@@ -1227,44 +990,11 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            \clef "treble"
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            c'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                            c'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1294,8 +1024,6 @@
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
-                            \clef "alto"
                         }
                     }
                     {
@@ -1307,9 +1035,6 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
@@ -1326,23 +1051,11 @@
                                                     \caps
                                                         LV
                                     }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            <> \stopTextSpan
                             \clef "alto"
                         }
                     }
@@ -1383,312 +1096,6 @@
                         % [Cello Voice] Measure 1
                         {
                             \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vibraphone
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vb.
-                                }
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            b'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Cello Voice] Measure 2
-                        {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            ef'8 -\tenuto \laissezVibrer \ppp \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Cello Voice] Measure 3
-                        {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            b'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Cello Voice] Measure 4
-                        {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            a'8 -\tenuto \laissezVibrer \ppp \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r4
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            ef'8 -\tenuto \laissezVibrer \p \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        {
-                            \clef "treble"
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            d'8 -\tenuto \laissezVibrer \ppp \(
-                                ^ \markup {
-                                    \pad-around
-                                        #0.5
-                                        \box
-                                            \pad-around
-                                                #0.5
-                                                \fontsize
-                                                    #-4
-                                                    \caps
-                                                        LV
-                                    }
-                                ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            bowed
-                                                        }
-                                }
-                            <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
-                    {
-                        % [Cello Voice] Measure 5
-                        {
-                            \clef "treble"
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -1724,8 +1131,224 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            ef''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                            cf''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Cello Voice] Measure 2
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            ef'8 -\tenuto \laissezVibrer \ppp \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Cello Voice] Measure 3
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            b'8 -\tenuto \laissezVibrer \p \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Cello Voice] Measure 4
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            a'8 -\tenuto \laissezVibrer \ppp \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            ds'8 -\tenuto \laissezVibrer \p \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            d'8 -\tenuto \laissezVibrer \ppp \(
+                                ^ \markup {
+                                    \pad-around
+                                        #0.5
+                                        \box
+                                            \pad-around
+                                                #0.5
+                                                \fontsize
+                                                    #-4
+                                                    \caps
+                                                        LV
+                                    }
+                            <> \)
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_b_vibraphone_tranquilo"
+                    {
+                        % [Cello Voice] Measure 5
+                        {
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                            ef''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1756,7 +1379,6 @@
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
                             <> \stopTextSpan
-                            \clef "bass"
                         }
                     }
                     {
@@ -1777,7 +1399,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \clef "treble"
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333

@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -41,26 +41,46 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <b' d''>16 \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            r16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            cs'16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c''16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            r16
-                            \set stemLeftBeamCount = 2
-                            <e' a'>16 ]
+                            <b'' d'''>16 \f \( \> [
+                            eff''16 -\staccato ]
+                            <e'' g''>4 :32
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            <ef'' gf''>4 :32 \mf
+                            <cs'' e''>4 :32 \p
                             <> \)
                         }
                     }
@@ -68,16 +88,15 @@
                         {
                             r8
                         }
-                        % [Violin 1 Voice] Measure 3
-                        {
-                            r16
-                        }
                     }
                     % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
+                        % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            a'16 -\accent -\staccato \f \(
+                            a''16 -\accent -\staccato \f \( [
+                            \set stemLeftBeamCount = 2
+                            <b' e''>16 ]
                             <> \)
                         }
                     }
@@ -91,41 +110,31 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <b' d''>4. :32 \parenthesizeDynamic \f \( \>
-                            <b' d''>8 :64 \repeatTie
+                            <a'' c'''>4. :32 \parenthesizeDynamic \f \( \>
+                            <a'' c'''>8 :64 \repeatTie
                         }
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 3/4 {
-                            r16 [
+                        {
+                            g'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            fs'16 -\accent -\staccato
+                            ds''16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            a'16 -\staccato
+                            <d'' f''>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            <f' af'>16
+                            r16
                             \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            r8
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
-                            ef'16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            r16 ]
+                            <f' af'>8 :64 ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            f''16 -\accent -\staccato [
+                            c'16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <c' f'>16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            r16
-                            \set stemLeftBeamCount = 2
-                            a'16 -\accent -\staccato \mf ]
+                            \set stemRightBeamCount = 1
+                            ef'16 -\staccato
+                            \set stemLeftBeamCount = 1
+                            <a c'>8 :64 \p ]
                             <> \)
                         }
                     }
@@ -136,27 +145,18 @@
                         % [Violin 1 Voice] Measure 6
                         {
                             r4
-                        }
-                    }
-                    % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
-                    {
-                        {
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            c''16 -\accent -\staccato \f \(
-                            <> \)
-                        }
-                    }
-                    {
-                        {
                             r16
                         }
                     }
                     % [Violin 1 Voice] Material: "trio_b_vibraphone_agitato"
                     {
-                        % [Violin 1 Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <ef'' gf''>4 :32 \parenthesizeDynamic \f \(
+                            ef''16 -\accent -\staccato \f \(
+                        }
+                        % [Violin 1 Voice] Measure 7
+                        {
+                            <fs a>4 :32
                             <> \)
                         }
                     }
@@ -189,88 +189,115 @@
                         % [Violin 2 Voice] Measure 1
                         {
                             r4
-                            r16
                         }
                     }
                     % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vibraphone
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            bf'16 -\accent -\staccato \f \( \> ^ \markup {
+                            <b'' d'''>16 \f \( \> [ ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        vb.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            vb.
+                                                        }
                                 }
+                            \set stemLeftBeamCount = 2
+                            cs''16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 2
-                        \times 4/5 {
-                            <d' g'>16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            cs'16 -\staccato
+                        {
+                            c''16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            b'16 -\accent -\staccato
+                            a''16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            a'16 -\staccato ]
+                            <b' e''>16 ]
                         }
                         {
-                            <b' d''>8 :64 \mp \<
+                            <a' c''>8 :64 \p
+                            <> \)
                         }
+                    }
+                    {
                         % [Violin 2 Voice] Measure 3
                         {
-                            <a' c''>16 [
+                            r16
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            b''16 -\accent -\staccato \f \( [
                             \set stemLeftBeamCount = 2
-                            b'16 -\staccato \mf ]
+                            \set stemRightBeamCount = 2
+                            a'16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            b'16 -\staccato ]
                             <> \)
                         }
                     }
                     {
                         {
-                            r4
+                            r8
                         }
                     }
                     % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Violin 2 Voice] Measure 4
-                        \times 4/5 {
+                        {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            a'16 -\accent -\staccato \f \( \> [
+                            a''16 -\accent -\staccato \parenthesizeDynamic \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             b'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a' c''>16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
                             r16
                             \set stemLeftBeamCount = 2
-                            b'16 -\accent -\staccato \mf ]
+                            a'16 -\accent -\staccato \p ]
                             <> \)
                         }
                     }
@@ -284,27 +311,35 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <g' c''>16 \f \( \< [
-                            \set stemLeftBeamCount = 2
-                            ef'16 -\staccato ]
+                            <fs'' b''>16 \f \(
+                            <> \)
                         }
+                    }
+                    {
                         {
-                            <e'' g''>4 :32
+                            r16
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            <e'' g''>4 :32 \( \>
                         }
                         % [Violin 2 Voice] Measure 5
-                        \times 4/5 {
-                            c''16 -\staccato \fff \> [
+                        {
+                            ef'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             <f' af'>16
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 1
-                            a'16 -\staccato
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            \set stemRightBeamCount = 2
+                            c''16 -\staccato
+                            \set stemLeftBeamCount = 2
+                            d'16 -\staccato ]
                         }
                         {
-                            c''16 -\accent -\staccato \mf
+                            <a d'>16 \p
                             <> \)
                         }
                     }
@@ -318,16 +353,21 @@
                         % [Violin 2 Voice] Measure 6
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <d'' f''>4. :32 \f \( \>
+                            <c'' ef''>4. :32 \f \(
+                            <> \)
                         }
+                    }
+                    {
                         % [Violin 2 Voice] Measure 7
-                        \times 2/3 {
-                            r16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            af'16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            <f'' af''>16 \mf ]
+                        {
+                            r16
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "trio_b_vibraphone_agitato"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
+                            af'16 -\accent -\staccato \parenthesizeDynamic \f \(
                             <> \)
                         }
                     }
@@ -359,7 +399,7 @@
                     {
                         % [Viola Voice] Measure 1
                         {
-                            r8
+                            r8.
                         }
                     }
                     % [Viola Voice] Material: "trio_b_vibraphone_agitato"
@@ -367,57 +407,61 @@
                         {
                             \clef "treble"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vibraphone
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    vb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            e''16 -\accent -\staccato \f \( \> [ ^ \markup {
+                            bf''16 -\accent -\staccato \f \( [ ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        vb.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            vb.
+                                                        }
                                 }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            r16
+                            eff''16 -\staccato
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            cs''16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            <c'' f''>16 ]
-                        }
-                        % [Viola Voice] Measure 2
-                        \times 2/3 {
-                            r16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b'16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            a'16 -\staccato ]
-                        }
-                        {
-                            <b' d''>8 :64 \mf
+                            ff'16 -\staccato ]
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
+                        % [Viola Voice] Measure 2
                         {
                             r16
                         }
@@ -425,24 +469,26 @@
                     % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            a'16 -\accent -\staccato \f \( \>
+                            d'''16 -\accent -\staccato \parenthesizeDynamic \f \( \>
+                        }
+                        {
+                            <b' d''>8 :64
+                        }
+                        {
+                            <a' c''>16 \p [
+                            \set stemLeftBeamCount = 2
+                            b'16 -\staccato ]
                         }
                         % [Viola Voice] Measure 3
-                        \times 2/3 {
-                            r16 [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            b'16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            a'16 -\staccato \mf ]
+                        {
+                            a'16 -\staccato
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
                         {
+                            r16
                             r4
                         }
                         % [Viola Voice] Measure 4
@@ -453,45 +499,30 @@
                     % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <gs' b'>8 :64 \f \( \>
-                            <gs' b'>4 :32 \repeatTie
+                            <gs'' b''>8 :64 \f \( \>
+                            <gs'' b''>4 :32 \repeatTie
                         }
-                        \times 2/3 {
-                            r8 [
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
-                            c'16 -\accent -\staccato
+                        {
+                            f'16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f''16 -\accent -\staccato
+                            c''16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
-                            ef'16 -\staccato \mf ]
-                            <> \)
-                            \clef "alto"
+                            <f' bf'>16 ]
                         }
-                    }
-                    {
                         % [Viola Voice] Measure 5
                         {
-                            r16
-                        }
-                    }
-                    % [Viola Voice] Material: "trio_b_vibraphone_agitato"
-                    {
-                        {
-                            \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            f''16 -\accent -\staccato \f \(
+                            c''16 -\staccato \p [
+                            \set stemLeftBeamCount = 2
+                            ef'16 -\staccato ]
                         }
                         {
-                            <c'' ef''>4 :32
+                            <d' f'>4 :32
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -503,14 +534,10 @@
                     % [Viola Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            a'16 -\accent -\staccato \parenthesizeDynamic \f \( [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            d'16 -\staccato ]
+                            <c'' ef''>16 \f \( [
+                            \set stemLeftBeamCount = 1
+                            <d' f'>8 :64 ]
                             <> \)
                             \clef "alto"
                         }
@@ -550,34 +577,55 @@
                     % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         % [Cello Voice] Measure 1
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 3/4 {
+                        {
                             \clef "treble"
+                            \set Staff.instrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vibraphone
+                                    }
+                                }
+                            \set Staff.shortInstrumentName = \markup {
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                vb.
+                                    }
+                                }
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <b' d''>16 \f \( \> [
+                            cf'''16 -\accent -\staccato \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            d'16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            r16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            bf'16 -\accent -\staccato
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <b' e''>16
+                            <cs'' fs''>16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
-                            d'16 -\staccato
+                            r16
                             \set stemLeftBeamCount = 1
-                            r8 ]
+                            <c'' ef''>8. :64 ]
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <f'' af''>4 :32 \mf
+                            <ef' gf'>4 :32 \p
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -589,43 +637,17 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            a'16 -\accent -\staccato \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            r16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <b' e''>16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a'16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            b'16 -\staccato \mf ]
-                            <> \)
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r16
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
-                    {
-                        % [Cello Voice] Measure 4
-                        \times 2/3 {
-                            \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            r16 \( [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a'16 -\accent -\staccato \f
-                            \set stemLeftBeamCount = 2
+                            a''16 -\accent -\staccato \f \( \> [
                             r16 ]
+                            <b' d''>4 :32
+                        }
+                        % [Cello Voice] Measure 4
+                        {
+                            a'16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            <b' d''>16 \p ]
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -636,11 +658,9 @@
                     % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <g' bf'>4 :32 \(
+                            <a'' c'''>4 :32 \f \(
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -651,35 +671,20 @@
                     % [Cello Voice] Material: "trio_b_vibraphone_agitato"
                     {
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            f''16 -\accent -\staccato \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            r16
-                            \set stemLeftBeamCount = 2
-                            c''16 -\accent -\staccato ]
+                            ef''16 -\accent -\staccato \( \> [
+                            \set stemLeftBeamCount = 1
+                            <f' af'>8 :64 ]
                         }
                         % [Cello Voice] Measure 5
                         {
-                            ef'16 -\staccato \mf
-                            <> \)
-                            \clef "bass"
+                            c''16 -\staccato [
+                            \set stemLeftBeamCount = 2
+                            ef'16 -\staccato ]
                         }
-                    }
-                    {
                         {
-                            r16
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_b_vibraphone_agitato"
-                    {
-                        {
-                            \clef "treble"
-                            \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            <d' f'>4 :32 \f \(
+                            <a c'>4 :32 \p
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -697,11 +702,10 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                            fs'16 -\accent -\staccato \f \( [
+                            c''16 -\accent -\staccato \f \( [
                             \set stemLeftBeamCount = 2
-                            af'16 -\staccato ]
+                            f'16 -\staccato ]
                             <> \)
                             \clef "bass"
                         }

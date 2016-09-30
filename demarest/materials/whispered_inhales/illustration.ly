@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -79,7 +79,17 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                            c'4. \( \startTextSpan \<
+                            c'4 \( \startTextSpan \<
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
+                                    }
+                            c'8 -\accent
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -92,7 +102,9 @@
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            c'4 -\accent \p
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ] \p
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -155,7 +167,7 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                            c'4. \( \<
+                            c'4 \( \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -165,10 +177,21 @@
                                                     sh-
                                                 }
                                     }
-                            c'8 \repeatTie
+                            c'8 -\accent [
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
+                            \set stemLeftBeamCount = 1
+                            c'8 \repeatTie ]
                         }
                         {
-                            c'8 -\accent
+                            c'8 -\accent [
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -178,11 +201,26 @@
                                                     sh-
                                                 }
                                     }
-                            c'4 \repeatTie
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 1
+                            c'8 \repeatTie
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ]
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            c'4 -\accent \p
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ] \p
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -230,7 +268,9 @@
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'4 -\accent \p
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ] \p
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -333,7 +373,9 @@
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            c'4 -\accent
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ]
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -345,16 +387,7 @@
                                     }
                         }
                         {
-                            c'8 -\accent
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    f-
-                                                }
-                                    }
+                            c'8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
@@ -433,7 +466,9 @@
                                     }
                         }
                         {
-                            c'4 -\accent
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ]
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -446,6 +481,24 @@
                         }
                         % [Violin 2 Voice] Measure 5
                         {
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ]
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
+                        }
+                        {
+                            c'8 \repeatTie
+                        }
+                        % [Violin 2 Voice] Measure 6
+                        {
                             c'4 -\accent
                                 _ \markup {
                                     \whiteout
@@ -456,22 +509,7 @@
                                                     sh-
                                                 }
                                     }
-                        }
-                        {
                             c'8 -\accent
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
-                        }
-                        % [Violin 2 Voice] Measure 6
-                        {
-                            c'4. -\accent
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -484,16 +522,7 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8 -\accent \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
+                            c'8 \repeatTie \p
                             <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
@@ -599,16 +628,7 @@
                                     }
                         }
                         {
-                            c'8 -\accent
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    s-
-                                                }
-                                    }
+                            c'8 \repeatTie
                         }
                         {
                             c'8 -\accent
@@ -624,16 +644,7 @@
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 -\accent \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    s-
-                                                }
-                                    }
+                            c'8 \repeatTie \p
                             <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
@@ -659,7 +670,7 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                            c'8 \( \<
+                            c'8 \( [ \<
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -669,10 +680,25 @@
                                                     f-
                                                 }
                                     }
-                            c'4 \repeatTie
+                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 1
+                            c'8 \repeatTie
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ]
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    f-
+                                                }
+                                    }
                         }
                         {
-                            c'4 -\accent
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ]
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -685,16 +711,7 @@
                         }
                         % [Viola Voice] Measure 5
                         {
-                            c'8 -\accent
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    f-
-                                                }
-                                    }
+                            c'8 \repeatTie
                         }
                         {
                             c'4 -\accent
@@ -802,7 +819,17 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                            c'4. \( \startTextSpan \<
+                            c'4 \( \startTextSpan \<
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    h-
+                                                }
+                                    }
+                            c'8 -\accent
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -815,7 +842,9 @@
                         }
                         % [Cello Voice] Measure 2
                         {
-                            c'4 -\accent \p
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ] \p
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -847,7 +876,17 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                            c'4. \( \<
+                            c'4 \( \<
+                                _ \markup {
+                                    \whiteout
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    sh-
+                                                }
+                                    }
+                            c'8 -\accent
                                 _ \markup {
                                     \whiteout
                                         \italic
@@ -860,16 +899,7 @@
                         }
                         % [Cello Voice] Measure 4
                         {
-                            c'8 -\accent \p
-                                _ \markup {
-                                    \whiteout
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    sh-
-                                                }
-                                    }
+                            c'8 \repeatTie \p
                             <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
@@ -928,7 +958,9 @@
                                     }
                         }
                         {
-                            c'4 -\accent \p
+                            c'8 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            c'8 -\accent ] \p
                                 _ \markup {
                                     \whiteout
                                         \italic

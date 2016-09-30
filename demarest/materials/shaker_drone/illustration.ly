@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -52,7 +52,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -65,7 +65,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -78,11 +78,11 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4. :32 \( \startTextSpan \<
+                            f'4. :32 \( \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            g'4 :32 \p \repeatTie
+                            f'4 :32 \p \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -119,7 +119,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -132,7 +132,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -145,16 +145,16 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4. :32 \( \startTextSpan \<
-                            g'8 :64 \repeatTie
+                            f'4. :32 \( \startTextSpan \<
+                            f'8 :64 \repeatTie
                         }
                         {
-                            g'8 :64 \repeatTie
-                            g'4 :32 \repeatTie
+                            f'8 :64 \repeatTie
+                            f'4 :32 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            g'4 :32 \p \repeatTie
+                            f'4 :32 \p \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -177,11 +177,11 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'8 :64 \parenthesizeDynamic \p \(
+                            f'8 :64 \parenthesizeDynamic \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -234,7 +234,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -247,7 +247,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -260,18 +260,18 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'8 :64 \( \startTextSpan \<
+                            f'8 :64 \( \startTextSpan \<
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                         }
                         {
-                            g'8 :64 \p \repeatTie
+                            f'8 :64 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -291,7 +291,7 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4 :32 \p \(
+                            f'4 :32 \p \(
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -312,26 +312,26 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'8 :64 \( \<
+                            f'8 :64 \( \<
                         }
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            g'4 :32 \p \repeatTie
+                            f'4 :32 \p \repeatTie
                         }
                         {
-                            g'8 :64 \repeatTie
+                            f'8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'4. :32 \repeatTie \>
+                            f'4. :32 \repeatTie \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            g'8 :64 \repeatTie
+                            f'8 :64 \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -384,7 +384,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -397,7 +397,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -410,22 +410,22 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4 :32 \( \startTextSpan \<
+                            f'4 :32 \( \startTextSpan \<
                         }
                         % [Viola Voice] Measure 2
                         {
-                            g'8 :64 \repeatTie
+                            f'8 :64 \repeatTie
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'8 :64 \p \repeatTie \>
+                            f'8 :64 \p \repeatTie \>
                         }
                         {
-                            g'8 :64 \repeatTie
+                            f'8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            g'8 :64 \repeatTie
+                            f'8 :64 \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -449,23 +449,23 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'8 :64 \( \<
-                            g'4 :32 \repeatTie
+                            f'8 :64 \( \<
+                            f'4 :32 \repeatTie
                         }
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            g'8 :64 \p \repeatTie \>
+                            f'8 :64 \p \repeatTie \>
                         }
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -520,7 +520,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -533,7 +533,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            rolled
+                                                            spun
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -546,11 +546,11 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4. :32 \( \startTextSpan \<
+                            f'4. :32 \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            g'4 :32 \p \repeatTie
+                            f'4 :32 \p \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -571,11 +571,11 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4. :32 \( \<
+                            f'4. :32 \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
-                            g'8 :64 \p \repeatTie
+                            f'8 :64 \p \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
@@ -595,17 +595,17 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                            g'4 :32 \( \<
+                            f'4 :32 \( \<
                         }
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            g'8 :64 \p \repeatTie
+                            f'8 :64 \p \repeatTie
                         }
                         {
-                            g'4 :32 \repeatTie
+                            f'4 :32 \repeatTie
                             <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period

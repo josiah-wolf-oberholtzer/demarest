@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -208,8 +208,7 @@
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            g4. \repeatTie \>
+                            g4. \repeatTie
                         }
                         % [Violin 2 Voice] Measure 7
                         {
@@ -223,7 +222,7 @@
                     }
                     {
                         {
-                            r4 \!
+                            r4
                             \bar "|."
                         }
                     }
@@ -309,8 +308,7 @@
                         }
                         % [Viola Voice] Measure 5
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            g8 \p \repeatTie \>
+                            g8 \p \repeatTie
                         }
                         {
                             g4 \repeatTie
@@ -327,7 +325,7 @@
                     }
                     {
                         {
-                            r8 \!
+                            r8
                         }
                         % [Viola Voice] Measure 7
                         {

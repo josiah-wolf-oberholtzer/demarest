@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -84,19 +84,19 @@
                             c'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8 :64 -\espressivo
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8 :64 -\espressivo
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8 :64 -\espressivo
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            c'8 :64 -\espressivo ]
+                            c'8 :64 -\accent ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            c'4 :32 -\espressivo
+                            c'4 :32 -\accent
                             <> \)
                         }
                     }
@@ -164,7 +164,7 @@
                             c'4 :32 \repeatTie
                         }
                         {
-                            c'8 :64 -\espressivo
+                            c'8 :64 -\accent
                         }
                         % [Violin 2 Voice] Measure 3
                         {
@@ -202,13 +202,13 @@
                             c'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8 :64 -\espressivo
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            c'8 :64 -\espressivo ]
+                            c'8 :64 -\accent ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            c'4 :32 -\espressivo \ppp \<
+                            c'4 :32 -\accent \ppp \<
                         }
                         {
                             c'8 :64 \repeatTie
@@ -216,7 +216,7 @@
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. :32 -\espressivo \mf \>
+                            c'4. :32 -\accent \mf \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
@@ -267,14 +267,14 @@
                             c'8 :64 \repeatTie
                         }
                         {
-                            c'8 :64 -\espressivo \p \<
+                            c'8 :64 -\accent \p \<
                         }
                         {
                             c'8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 :64 -\espressivo \f
+                            c'8 :64 -\accent \f
                             <> \)
                         }
                     }
@@ -300,19 +300,19 @@
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 :64 -\espressivo \ppp \>
+                            c'8 :64 -\accent \ppp \>
                         }
                         \times 2/3 {
                             c'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            c'8 :64 -\espressivo
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            c'8 :64 -\espressivo ]
+                            c'8 :64 -\accent ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            c'4 :32 -\espressivo
+                            c'4 :32 -\accent
                             <> \)
                         }
                     }
@@ -398,7 +398,7 @@
                         }
                         % [Cello Voice] Measure 5
                         {
-                            c'8 :64 -\espressivo \f
+                            c'8 :64 -\accent \f
                         }
                         {
                             c'4 :32 \repeatTie

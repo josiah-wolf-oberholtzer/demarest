@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -43,24 +43,36 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                marimba
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                mb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <b d'>4. :32 \( \<
@@ -80,26 +92,6 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <a c'>8 :64 \parenthesizeDynamic \p \(
                             <> \)
@@ -115,26 +107,6 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <b e'>4. :32 \( \<
                             <b e'>8 :64 \repeatTie
@@ -172,26 +144,6 @@
                     % [Violin 1 Voice] Material: "trio_a_marimba_drone"
                     {
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <c ef>8 :64 \parenthesizeDynamic \p \(
                         }
@@ -237,24 +189,36 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                marimba
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                mb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <cs' e'>8 :64 \( \< ^ \markup {
@@ -293,26 +257,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <a c'>4 :32 \p \(
                             <> \)
@@ -328,26 +272,6 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <fs b>8 :64 \( \<
                         }
@@ -409,24 +333,36 @@
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                marimba
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                mb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <d' f'>4 :32 \( \< ^ \markup {
@@ -458,7 +394,6 @@
                         {
                             <d' f'>8 :64 \repeatTie
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -473,28 +408,7 @@
                     % [Viola Voice] Material: "trio_a_marimba_drone"
                     {
                         {
-                            \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <e g>8 :64 \( \<
                             <e g>4 :32 \repeatTie
@@ -556,24 +470,36 @@
                             \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                marimba
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
+                                \concat
+                                    {
+                                        \vcenter
+                                            T1
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                mb.
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <b d'>4. :32 \( \<
@@ -582,7 +508,6 @@
                         {
                             <b d'>4 :32 \p \repeatTie
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -594,28 +519,7 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <a c'>4. :32 \( \<
                         }
@@ -623,7 +527,6 @@
                         {
                             <a c'>8 :64 \p \repeatTie
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -634,28 +537,7 @@
                     % [Cello Voice] Material: "trio_a_marimba_drone"
                     {
                         {
-                            \clef "treble"
                             \once \override Hairpin.circled-tip = ##t
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <g c'>4 :32 \( \<
                         }
@@ -669,7 +551,6 @@
                         {
                             <g c'>4 :32 \repeatTie
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -687,27 +568,6 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \clef "treble"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    marimba
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    mb.
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <d f>8 :64 \p \(
                             <> \)

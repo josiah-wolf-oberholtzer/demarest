@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -10,15 +10,15 @@
             {
                 \tempo 4=72
                 \time 3/8
-                s1 * 3/2
+                s1 * 9/8
             }
             {
                 \time 7/8
                 s1 * 7/8
             }
             {
-                \time 5/8
-                s1 * 5/8
+                \time 3/8
+                s1 * 9/8
             }
         }
         \tag #'violin-1
@@ -54,34 +54,46 @@
                         {
                             \clef "percussion"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <a c'>16 -\accent \f \( [ ^ \markup {
@@ -100,14 +112,50 @@
                             \set stemLeftBeamCount = 2
                             c'16 ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
                         {
                             r4
                         }
+                    }
+                    % [Violin 1 Voice] Material: "trio_c_toms_fanfare"
+                    {
                         % [Violin 1 Voice] Measure 4
+                        \times 2/3 {
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                            r4 \(
+                            <e' g'>4 :32 \parenthesizeDynamic \f \>
+                            <a c'>4 :32
+                        }
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/8 {
+                            e'16 [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            <e' g'>16 -\accent
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            g'16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            a16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            <a c'>16 -\accent
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            e'16
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            g'16
+                            \set stemLeftBeamCount = 2
+                            c'16 \mf ]
+                            <> \)
+                        }
+                    }
+                    {
+                        % [Violin 1 Voice] Measure 5
                         {
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -116,108 +164,28 @@
                             \stopStaff
                             \startStaff
                         }
-                    }
-                    % [Violin 1 Voice] Material: "trio_c_toms_fanfare"
-                    {
-                        % [Violin 1 Voice] Measure 5
-                        {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            a16 \f \( [
-                            \set stemLeftBeamCount = 2
-                            <e' g'>16 -\accent ]
-                            <> \)
-                            \clef "treble"
-                        }
-                    }
-                    {
-                        {
-                            r4
-                            r2
-                        }
                         % [Violin 1 Voice] Measure 6
                         {
                             r4
-                            r16
                         }
                     }
                     % [Violin 1 Voice] Material: "trio_c_toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            e'16 \parenthesizeDynamic \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 1
-                            <c' e'>16 -\accent
-                            \set stemLeftBeamCount = 1
-                            <c' e'>8 :64 \mf ]
-                            \bar "|."
+                            <c' e'>8 :64 \f \(
                             <> \)
                             \clef "treble"
+                        }
+                    }
+                    {
+                        % [Violin 1 Voice] Measure 7
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \bar "|."
                         }
                     }
                 }
@@ -256,34 +224,46 @@
                         {
                             \clef "percussion"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <a c'>4 :32 \f \( ^ \markup {
@@ -300,7 +280,6 @@
                                                         }
                                 }
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -312,37 +291,6 @@
                     {
                         % [Violin 2 Voice] Measure 3
                         \times 4/6 {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             <e' g'>16 -\accent \parenthesizeDynamic \f \( \> [
                             \set stemLeftBeamCount = 2
@@ -360,7 +308,6 @@
                             \set stemLeftBeamCount = 2
                             r16 ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
@@ -372,37 +319,6 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             c'16 \f \( \> [
                             \set stemLeftBeamCount = 2
@@ -412,14 +328,32 @@
                             \set stemRightBeamCount = 2
                             r16
                             \set stemLeftBeamCount = 2
-                            e'16 \mf ]
+                            a16 \mf ]
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
                         {
                             r8
+                            r4
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "trio_c_toms_fanfare"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                            c'16 \f \( [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            c'16
+                            \set stemLeftBeamCount = 2
+                            a16 ]
+                            <> \)
+                        }
+                    }
+                    {
+                        {
+                            r16
                         }
                         % [Violin 2 Voice] Measure 5
                         {
@@ -429,112 +363,37 @@
                     % [Violin 2 Voice] Material: "trio_c_toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            a16 \f \( \> [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            g'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            <a c'>16 -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            c'16
-                            \set stemLeftBeamCount = 2
-                            <c' e'>16 -\accent \mf ]
+                            <e' g'>8 :64 \parenthesizeDynamic \f \(
                             <> \)
-                            \clef "treble"
                         }
                     }
                     {
+                        % [Violin 2 Voice] Measure 6
                         {
-                            r8.
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     % [Violin 2 Voice] Material: "trio_c_toms_fanfare"
                     {
-                        % [Violin 2 Voice] Measure 6
+                        % [Violin 2 Voice] Measure 7
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <e' g'>4 :32 \f \( \>
-                            <a c'>8 :64 [
-                            \set stemLeftBeamCount = 1
-                            <a c'>8 :64 \mf \repeatTie ]
+                            e'16 \f \( [
+                            \set stemLeftBeamCount = 2
+                            <c' e'>16 -\accent ]
                             <> \)
                             \clef "treble"
                         }
                     }
                     {
                         {
-                            r8
+                            r4
                             \bar "|."
                         }
                     }
@@ -577,34 +436,46 @@
                         {
                             \clef "percussion"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             a16 \f \( [ ^ \markup {
@@ -621,9 +492,8 @@
                                                         }
                                 }
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 -\accent ]
+                            g'16 ]
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -635,41 +505,9 @@
                     {
                         % [Viola Voice] Measure 3
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <a c'>8 :64 \parenthesizeDynamic \f \(
+                            <e' g'>8 :64 \parenthesizeDynamic \f \(
                             <> \)
-                            \clef "alto"
                         }
                     }
                     {
@@ -678,113 +516,48 @@
                         }
                         % [Viola Voice] Measure 4
                         {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(0)
-                            \startStaff
-                            R1 * 3/8
-                            \stopStaff
-                            \startStaff
+                            r4.
+                            r4
                         }
                     }
                     % [Viola Voice] Material: "trio_c_toms_fanfare"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                            <c' e'>4 :32 \parenthesizeDynamic \f \(
+                            <> \)
+                        }
+                    }
                     {
                         % [Viola Voice] Measure 5
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <e' g'>4 :32 \f \(
-                            <> \)
-                            \clef "alto"
-                        }
-                    }
-                    {
-                        {
-                            r8
                             r8
                         }
                     }
                     % [Viola Voice] Material: "trio_c_toms_fanfare"
                     {
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            g'16 \( [
+                            g'16 \parenthesizeDynamic \f \( \> [
                             \set stemLeftBeamCount = 2
-                            e'16 ]
+                            \set stemRightBeamCount = 2
+                            <a c'>16 -\accent
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            a16
+                            \set stemLeftBeamCount = 2
+                            g'16 \mf ]
                             <> \)
                             \clef "alto"
                         }
                     }
                     {
-                        {
-                            r4
-                        }
                         % [Viola Voice] Measure 6
                         {
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
-                            R1 * 5/8
+                            R1 * 3/4
                             \bar "|."
                         }
                     }
@@ -814,43 +587,55 @@
                         \times 6/7 {
                             \clef "percussion"
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        "four toms"
+                                                                        and
+                                                                        "bass drum"
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T3
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        toms
+                                                                        &
+                                                                        b.d.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
                             a16 \f \( \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a c'>16 -\accent
+                            g'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            c'16
+                            <e' g'>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             e'16
@@ -859,11 +644,10 @@
                             a16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16 -\accent
+                            g'16
                             \set stemLeftBeamCount = 2
-                            c'16 \mf ]
+                            <a c'>16 -\accent \mf ]
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
@@ -881,46 +665,27 @@
                     {
                         % [Cello Voice] Measure 4
                         \times 2/3 {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            e'16 \f \( [
+                            <c' e'>16 -\accent \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             a16
                             \set stemLeftBeamCount = 2
                             c'16 ]
                             <> \)
-                            \clef "bass"
+                        }
+                    }
+                    {
+                        {
+                            r4
+                        }
+                    }
+                    % [Cello Voice] Material: "trio_c_toms_fanfare"
+                    {
+                        {
+                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                            <a c'>4 :32 \(
+                            <> \)
                         }
                     }
                     {
@@ -931,152 +696,46 @@
                     % [Cello Voice] Material: "trio_c_toms_fanfare"
                     {
                         % [Cello Voice] Measure 5
-                        {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
+                        \times 2/3 {
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            <c' e'>4 :32 \parenthesizeDynamic \f \(
-                            <> \)
-                            \clef "bass"
-                        }
-                    }
-                    {
-                        {
-                            r8
-                            r4
-                        }
-                    }
-                    % [Cello Voice] Material: "trio_c_toms_fanfare"
-                    {
-                        \times 4/5 {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
-                            \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            g'16 \( \> [
+                            e'16 \parenthesizeDynamic \f \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a c'>16 -\accent
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            e'16
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            a16 \mf
+                            a16
                             \set stemLeftBeamCount = 2
                             r16 ]
                             <> \)
-                            \clef "bass"
                         }
                     }
                     {
+                        {
+                            r4
+                        }
                         % [Cello Voice] Measure 6
                         {
-                            r4.
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     % [Cello Voice] Material: "trio_c_toms_fanfare"
                     {
+                        % [Cello Voice] Measure 7
                         {
-                            \clef "percussion"
-                            \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            "four toms"
-                                                            and
-                                                            "bass drum"
-                                                        }
-                                }
-                            \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            toms
-                                                            &
-                                                            b.d.
-                                                        }
-                                }
                             \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                            g'16 \f \( [
+                            a16 \f \( [
                             \set stemLeftBeamCount = 2
-                            e'16 ]
+                            c'16 ]
                             <> \)
                             \clef "bass"
                         }
                     }
                     {
                         {
-                            r8
+                            r4
                             \bar "|."
                         }
                     }

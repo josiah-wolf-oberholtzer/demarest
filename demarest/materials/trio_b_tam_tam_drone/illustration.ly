@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -78,42 +78,62 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \startTextSpan \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4. \( \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            c'4 \p \repeatTie
+                            f4 \p \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -125,26 +145,17 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \parenthesizeDynamic \p \( ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 \parenthesizeDynamic \p \(
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -160,57 +171,29 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \startTextSpan \<
-                            c'8 \repeatTie
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4. \( \<
+                            f8 \repeatTie
                         }
                         {
-                            c'8 \repeatTie
-                            c'4 \repeatTie
+                            f8 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            c'4 \p \repeatTie
+                            f4 \p \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -225,48 +208,21 @@
                     % [Violin 1 Voice] Material: "trio_b_tam_tam_drone"
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \parenthesizeDynamic \p \( \startTextSpan
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 \parenthesizeDynamic \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -344,54 +300,81 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \( \startTextSpan \< ^ \markup {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 \( \startTextSpan \< ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        perc.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                         }
                         {
-                            c'8 \p \repeatTie
+                            f8 \p \repeatTie
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -403,26 +386,17 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \once \override TextScript.parent-alignment-X = #left
-                            \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 \p \( ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4 \p \(
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -438,63 +412,36 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \( \startTextSpan \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 \( \<
                         }
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            c'4 \p \repeatTie
+                            f4 \p \repeatTie
                         }
                         {
-                            c'8 \repeatTie
+                            f8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'4. \repeatTie \>
+                            f4. \repeatTie \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8 \repeatTie
+                            f8 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -572,58 +519,85 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 \( \startTextSpan \< ^ \markup {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4 \( \startTextSpan \< ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        perc.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
                                 }
                         }
                         % [Viola Voice] Measure 2
                         {
-                            c'8 \repeatTie
+                            f8 \repeatTie
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \p \repeatTie \>
+                            f8 \p \repeatTie \>
                         }
                         {
-                            c'8 \repeatTie
+                            f8 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 \repeatTie
+                            f8 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -639,60 +613,33 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \( \startTextSpan \<
-                            c'4 \repeatTie
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 \( \<
+                            f4 \repeatTie
                         }
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'8 \p \repeatTie \>
+                            f8 \p \repeatTie \>
                         }
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -772,42 +719,62 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \startTextSpan \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4. \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            c'4 \p \repeatTie
+                            f4 \p \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -820,52 +787,24 @@
                         % [Cello Voice] Measure 3
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4. \( \startTextSpan \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4. \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
-                            c'8 \p \repeatTie
+                            f8 \p \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                         }
                     }
                     {
@@ -877,54 +816,27 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            superball
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'4 \( \startTextSpan \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f4 \( \<
                         }
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            c'8 \p \repeatTie
+                            f8 \p \repeatTie
                         }
                         {
-                            c'4 \repeatTie
+                            f4 \repeatTie
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
@@ -952,7 +864,10 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                            c'8 \p \( ^ \markup {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 \p \( ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -966,6 +881,8 @@
                                                         }
                                 }
                             <> \)
+                            \stopStaff
+                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style

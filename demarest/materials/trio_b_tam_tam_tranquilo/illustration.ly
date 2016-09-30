@@ -1,4 +1,4 @@
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -42,33 +42,52 @@
                         % [Violin 1 Voice] Measure 1
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -81,6 +100,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -93,7 +114,10 @@
                         % [Violin 1 Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -106,6 +130,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -118,7 +144,10 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -131,6 +160,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -143,7 +174,10 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -156,6 +190,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -168,7 +204,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -181,6 +220,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -193,7 +234,10 @@
                         % [Violin 1 Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -206,6 +250,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -221,7 +267,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -236,7 +285,7 @@
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -249,6 +298,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -286,33 +337,52 @@
                     {
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -326,14 +396,21 @@
                                     }
                                 ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        perc.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -346,6 +423,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -357,7 +436,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -372,7 +454,7 @@
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -385,6 +467,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -397,7 +481,10 @@
                         % [Violin 2 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -410,6 +497,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -422,7 +511,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -436,7 +528,7 @@
                                     }
                         }
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -449,6 +541,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -461,7 +555,10 @@
                         % [Violin 2 Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -474,6 +571,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -485,7 +584,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -500,7 +602,7 @@
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -513,6 +615,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -525,7 +629,10 @@
                         % [Violin 2 Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -538,6 +645,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -575,33 +684,52 @@
                     {
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -615,11 +743,20 @@
                                     }
                                 ^ \markup {
                                 \box
-                                    \pad-around
-                                        #0.5
-                                        perc.
+                                    \whiteout
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \smaller
+                                                    \concat
+                                                        {
+                                                            \vstrut
+                                                            perc.
+                                                        }
                                 }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -632,7 +769,10 @@
                         % [Viola Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \( \<
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -646,7 +786,7 @@
                                     }
                         }
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -660,7 +800,7 @@
                                     }
                         }
                         {
-                            e8 -\tenuto \laissezVibrer \p
+                            f8 -\tenuto \laissezVibrer \p
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -675,7 +815,7 @@
                         }
                         % [Viola Voice] Measure 3
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -688,6 +828,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -703,7 +845,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -716,6 +861,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -727,7 +874,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -740,6 +890,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -752,7 +904,10 @@
                         % [Viola Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -766,7 +921,7 @@
                                     }
                         }
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -779,6 +934,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -791,7 +948,10 @@
                         % [Viola Voice] Measure 6
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -804,6 +964,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -843,33 +1005,52 @@
                         % [Cello Voice] Measure 1
                         {
                             \set Staff.instrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            percussion
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        ratchet
+                                                                        snare
+                                                                        tam-tam
+                                                                    }
+                                    }
                                 }
                             \set Staff.shortInstrumentName = \markup {
-                                \pad-around
-                                    #0.5
-                                    \bracket
-                                        \pad-around
-                                            #0.5
-                                            \small
-                                                \italic
-                                                    \right-column
-                                                        {
-                                                            perc.
-                                                        }
+                                \concat
+                                    {
+                                        \vcenter
+                                            T2
+                                        \vcenter
+                                            \pad-around
+                                                #0.5
+                                                \bracket
+                                                    \pad-around
+                                                        #0.5
+                                                        \small
+                                                            \italic
+                                                                \right-column
+                                                                    {
+                                                                        r.
+                                                                        sn.
+                                                                        t.t.
+                                                                    }
+                                    }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -882,6 +1063,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -894,7 +1077,10 @@
                         % [Cello Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -907,6 +1093,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -919,7 +1107,10 @@
                         % [Cello Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -932,6 +1123,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -944,7 +1137,10 @@
                         % [Cello Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -957,6 +1153,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -968,7 +1166,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -981,6 +1182,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -992,7 +1195,10 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1005,6 +1211,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -1017,7 +1225,10 @@
                         % [Cello Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \p \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1031,7 +1242,7 @@
                                     }
                         }
                         {
-                            e8 -\tenuto \laissezVibrer
+                            f8 -\tenuto \laissezVibrer
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1044,6 +1255,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -1065,7 +1278,10 @@
                         % [Cello Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            e8 -\tenuto \laissezVibrer \ppp \(
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -1078,6 +1294,8 @@
                                                         LV
                                     }
                             <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
