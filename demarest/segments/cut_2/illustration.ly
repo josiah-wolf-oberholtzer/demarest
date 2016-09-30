@@ -1,7 +1,7 @@
-% package "abjad" @ 304adbb [josiah/demarest] (2016-07-07 17:45:56)
-% package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 6b6917c [master] (2016-07-07 17:51:54)
-% package "demarest" @ f6c9924 [master] (2016-07-02 12:36:46)
+% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
+% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
+% package "demarest" @ 06a0da0 [master] (2016-09-29 23:44:40)
 
 \version "2.19.44"
 \language "english"

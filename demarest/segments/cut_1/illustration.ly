@@ -1,7 +1,7 @@
-% package "abjad" @ d0d1bb4 [josiah/unified-iterate-select] (2016-07-07 00:56:12)
-% package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 097ddaf [master] (2016-07-04 16:03:51)
-% package "demarest" @ f6c9924 [master] (2016-07-02 12:36:46)
+% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
+% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
+% package "demarest" @ 06a0da0 [master] (2016-09-29 23:44:40)
 
 \version "2.19.44"
 \language "english"
@@ -808,10 +808,10 @@
                             {
                                 \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                b'16 -\accent -\staccato \f \( \> [
+                                cf''16 -\accent -\staccato \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                eff'16 -\staccato
                                 <cs' fs'>16 ]
                                 <b d'>2 :32
                                 <b d'>8. :64 \repeatTie [
@@ -830,9 +830,9 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <c' ef'>16 \f \( \> [
+                                <c' ef'>16 \f \( [
                                 d16 -\staccato ]
-                                <a, c>4. :32 \p
+                                <a, c>4. :32
                                 <> \)
                                 \clef "percussion"
                             }
@@ -941,7 +941,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                d'''16 -\accent -\staccato \f \( [ ^ \markup {
+                                eff'''16 -\accent -\staccato \f \( [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around

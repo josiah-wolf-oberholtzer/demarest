@@ -1,7 +1,7 @@
-% package "abjad" @ d0d1bb4 [josiah/unified-iterate-select] (2016-07-07 00:56:12)
-% package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 097ddaf [master] (2016-07-04 16:03:51)
-% package "demarest" @ f6c9924 [master] (2016-07-02 12:36:46)
+% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
+% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
+% package "demarest" @ 06a0da0 [master] (2016-09-29 23:44:40)
 
 \version "2.19.44"
 \language "english"
@@ -9109,7 +9109,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                cf'''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9154,7 +9154,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                eff''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11326,7 +11326,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                cf''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11357,7 +11357,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                eff'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11540,7 +11540,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                cs'8 -\tenuto \laissezVibrer \p \(
+                                df'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -13048,7 +13048,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                ef'8 -\tenuto \laissezVibrer \p \(
+                                ds'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -15294,7 +15294,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b'8 -\tenuto \laissezVibrer \p \(
+                                cf''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -15477,7 +15477,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                eff'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5

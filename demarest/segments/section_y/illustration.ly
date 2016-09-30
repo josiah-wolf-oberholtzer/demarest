@@ -1,7 +1,7 @@
-% package "abjad" @ 304adbb [josiah/demarest] (2016-07-07 17:45:56)
-% package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 6b6917c [master] (2016-07-07 17:51:54)
-% package "demarest" @ f6c9924 [master] (2016-07-02 12:36:46)
+% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
+% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
+% package "demarest" @ 06a0da0 [master] (2016-09-29 23:44:40)
 
 \version "2.19.44"
 \language "english"
@@ -22030,7 +22030,7 @@
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
-                                d'16 -\staccato
+                                eff'16 -\staccato
                                 \set stemLeftBeamCount = 1
                                 <cs' e'>8 :64 ]
                                 <> \)
@@ -22176,7 +22176,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                e'16 -\accent -\staccato \f \( \> [ ^ \markup {
+                                ff'16 -\accent -\staccato \f \( \> [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -23506,7 +23506,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                ef'16 -\accent -\staccato \f \( \> [ ^ \markup {
+                                ds'16 -\accent -\staccato \f \( \> [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -26070,7 +26070,7 @@
                                 <b'' d'''>16 \f \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
-                                d''16 -\staccato
+                                eff''16 -\staccato
                                 \set stemLeftBeamCount = 1
                                 <cs'' e''>8 :64 ]
                                 <> \)
@@ -26222,7 +26222,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                e''16 -\accent -\staccato \f \( \> [ ^ \markup {
+                                ff''16 -\accent -\staccato \f \( \> [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -26249,7 +26249,7 @@
                                 b''16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
-                                d''16 -\staccato
+                                eff''16 -\staccato
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 <cs'' e''>8 :64
@@ -27818,7 +27818,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                ef''16 -\accent -\staccato \parenthesizeDynamic \f \( [ ^ \markup {
+                                ds''16 -\accent -\staccato \parenthesizeDynamic \f \( [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -31061,7 +31061,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d'' f''>8 :64 \p \( ^ \markup {
+                                <b' d''>8 :64 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -31074,7 +31074,7 @@
                                                                 t.b.
                                                             }
                                     }
-                                <d'' f''>4. :32 \repeatTie
+                                <b' d''>4. :32 \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }

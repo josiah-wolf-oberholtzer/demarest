@@ -1,7 +1,7 @@
-% package "abjad" @ d0d1bb4 [josiah/unified-iterate-select] (2016-07-07 00:56:12)
-% package "ide" @ 856f148 [master] (2016-06-01 10:42:00)
-% package "consort" @ 097ddaf [master] (2016-07-04 16:03:51)
-% package "demarest" @ f6c9924 [master] (2016-07-02 12:36:46)
+% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
+% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
+% package "demarest" @ 06a0da0 [master] (2016-09-29 23:44:40)
 
 \version "2.19.44"
 \language "english"
@@ -19165,11 +19165,11 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d''' f'''>4. :32 \( \<
+                                <b'' d'''>4. :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 5
                             {
-                                <d''' f'''>2 :32 \f \repeatTie
+                                <b'' d'''>2 :32 \f \repeatTie
                                 <> \)
                             }
                         }
