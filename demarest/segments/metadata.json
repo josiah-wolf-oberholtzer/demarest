@@ -1,9 +1,5 @@
 {
     "segments": [
-        "section_x",
-        "cut_1",
-        "section_y",
-        "cut_2",
-        "section_z"
+        "texture_glass"
     ]
 }
