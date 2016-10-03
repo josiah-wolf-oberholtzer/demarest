@@ -1,5 +1,11 @@
 {
     "segments": [
-        "texture_glass"
+        "texture_glass",
+        "texture_wood",
+        "texture_sand",
+        "texture_stone",
+        "texture_wind",
+        "texture_gulls",
+        "texture_waves"
     ]
 }
