@@ -68,7 +68,7 @@ rare_timespan_identifier = abjad.sequencetools.Sequence(
 
 ### MUSIC SPECIFIERS ###
 
-castanet_pointillism = materials.castanet_pointillism
+guiro_tapped_pointillism = materials.guiro_tapped_pointillism
 guiro_pointillism = materials.guiro_pointillism
 guiro_repetitions = materials.guiro_repetitions
 guiro_shimmer = materials.guiro_shimmer
@@ -86,7 +86,7 @@ percussion_melange = consort.MusicSpecifierSequence(
     application_rate='division',
     music_specifiers=[
         guiro_shimmer,
-        castanet_pointillism,
+        guiro_tapped_pointillism,
         guiro_pointillism,
         ],
     )

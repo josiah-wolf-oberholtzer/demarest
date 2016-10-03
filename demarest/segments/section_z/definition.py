@@ -60,8 +60,8 @@ rare_timespan_identifier = abjad.sequencetools.Sequence(
 
 ### MUSIC SPECIFIERS ###
 
-castanet_pointillism = materials.castanet_pointillism
-castanet_repetitions = materials.castanet_repetitions
+guiro_tapped_pointillism = materials.guiro_tapped_pointillism
+guiro_tapped_repetitions = materials.guiro_tapped_repetitions
 guiro_shimmer = materials.guiro_shimmer
 pitch_pipe_drone = materials.pitch_pipe_drone
 pitch_pipe_flutter = materials.pitch_pipe_flutter
@@ -75,10 +75,10 @@ wine_glass_drone = materials.wine_glass_drone
 percussion_melange = consort.MusicSpecifierSequence(
     application_rate='division',
     music_specifiers=[
-        castanet_pointillism,
+        guiro_tapped_pointillism,
         shaker_pointillism,
-        castanet_repetitions,
-        castanet_pointillism,
+        guiro_tapped_repetitions,
+        guiro_tapped_pointillism,
         guiro_shimmer,
         ],
     )
@@ -156,14 +156,14 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=snaking_timespan_maker,
     timespan_identifier=rare_timespan_identifier + [-1],
-    a_1_percussion=castanet_repetitions,
-    a_2_percussion=castanet_repetitions,
-    a_3_percussion=castanet_repetitions,
-    a_4_percussion=castanet_repetitions,
-    b_1_percussion=castanet_repetitions,
-    b_2_percussion=castanet_repetitions,
-    b_3_percussion=castanet_repetitions,
-    b_4_percussion=castanet_repetitions,
+    a_1_percussion=guiro_tapped_repetitions,
+    a_2_percussion=guiro_tapped_repetitions,
+    a_3_percussion=guiro_tapped_repetitions,
+    a_4_percussion=guiro_tapped_repetitions,
+    b_1_percussion=guiro_tapped_repetitions,
+    b_2_percussion=guiro_tapped_repetitions,
+    b_3_percussion=guiro_tapped_repetitions,
+    b_4_percussion=guiro_tapped_repetitions,
     )
 
 ### TRIO MUSIC SPECIFIERS ###

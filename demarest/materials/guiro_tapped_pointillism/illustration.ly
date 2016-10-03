@@ -37,7 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -57,7 +57,7 @@
                             r16
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -72,7 +72,7 @@
                             r8.
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -91,7 +91,7 @@
                             r16
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -105,7 +105,7 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -124,7 +124,7 @@
                             r16
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -143,7 +143,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_pointillism"
+                    % [Violin 1 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -193,7 +193,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -214,7 +214,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -227,7 +227,7 @@
                             r16
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Violin 2 Voice] Measure 3
                         {
@@ -246,7 +246,7 @@
                             r8.
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Violin 2 Voice] Measure 4
                         {
@@ -262,7 +262,7 @@
                             r8.
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -280,7 +280,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Violin 2 Voice] Measure 5
                         {
@@ -296,7 +296,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -309,7 +309,7 @@
                             r16
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Violin 2 Voice] Measure 6
                         {
@@ -332,7 +332,7 @@
                             r16
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_pointillism"
+                    % [Violin 2 Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -371,7 +371,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -393,7 +393,7 @@
                             r16
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -411,7 +411,7 @@
                             r16
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -433,7 +433,7 @@
                             r4
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -449,7 +449,7 @@
                             r16
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -462,7 +462,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Viola Voice] Measure 5
                         {
@@ -483,7 +483,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "castanet_pointillism"
+                    % [Viola Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Viola Voice] Measure 6
                         {
@@ -525,7 +525,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -540,7 +540,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Cello Voice] Measure 2
                         {
@@ -563,7 +563,7 @@
                             r16
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -578,7 +578,7 @@
                             r8.
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Cello Voice] Measure 4
                         {
@@ -593,7 +593,7 @@
                             r4
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -608,7 +608,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -621,7 +621,7 @@
                             r8.
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Cello Voice] Measure 5
                         {
@@ -637,7 +637,7 @@
                             r16
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -659,7 +659,7 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "castanet_pointillism"
+                    % [Cello Voice] Material: "guiro_tapped_pointillism"
                     {
                         % [Cello Voice] Measure 7
                         {

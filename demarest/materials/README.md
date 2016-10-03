@@ -9,9 +9,9 @@ timespan makers:
 
 ## Chorus                   Color       [Seg. X]    [Seg. Y]    [Seg. Z]
 
-castanets:                  [-0.3]
-- + `castanet_pointillism`  0           .           +           X
-- + `castanet_repetitions`  1                       X            
+guiros:                  [-0.3]
+- + `guiro_tapped_pointillism`  0           .           +           X
+- + `guiro_tapped_repetitions`  1                       X            
 
 guiro:                      [-0.15]
 - + `guiro_pointillism`     1           +           +            

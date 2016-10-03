@@ -889,7 +889,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -918,7 +918,7 @@
                         }
                     }
                     \context Voice = "A 1 Percussion Voice" {
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 133
                             {
@@ -939,7 +939,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -1012,7 +1012,7 @@
                                 r2
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1120,7 +1120,7 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -1238,7 +1238,7 @@
                                 <> \stopTextSpan
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -1254,7 +1254,7 @@
                                 r8.
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -1267,7 +1267,7 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 147
                             {
@@ -1313,7 +1313,7 @@
                                 r16
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1366,7 +1366,7 @@
                                 r8
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -1431,7 +1431,7 @@
                                 r2..
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -1476,7 +1476,7 @@
                                 r2..
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -1543,7 +1543,7 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -1556,7 +1556,7 @@
                                 r8.
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 160
                             {
@@ -1613,7 +1613,7 @@
                                 \startStaff
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             % [A 1 Percussion Voice] Measure 163
                             {
@@ -1718,7 +1718,7 @@
                                 r16
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -1736,7 +1736,7 @@
                                 r16
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -1749,7 +1749,7 @@
                                 r8
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 171
                             {
@@ -1846,7 +1846,7 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -1872,7 +1872,7 @@
                                 r4.
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -2918,7 +2918,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -2966,7 +2966,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -2997,7 +2997,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3017,7 +3017,7 @@
                                 r16
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3122,7 +3122,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3232,7 +3232,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3342,7 +3342,7 @@
                                 r16
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3395,7 +3395,7 @@
                                 r8.
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3473,7 +3473,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3516,7 +3516,7 @@
                                 \startStaff
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             % [A 2 Percussion Voice] Measure 157
                             {
@@ -3601,7 +3601,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 2 Percussion Voice] Measure 160
                             {
@@ -3696,7 +3696,7 @@
                                 r4.
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3815,7 +3815,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3837,7 +3837,7 @@
                                 r8.
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -3889,7 +3889,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -3959,7 +3959,7 @@
                                 r8.
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -4035,7 +4035,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -4914,7 +4914,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -4962,7 +4962,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -4993,7 +4993,7 @@
                                 r4.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5046,7 +5046,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5147,7 +5147,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5201,7 +5201,7 @@
                                 r8.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -5283,7 +5283,7 @@
                                 r16
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5297,7 +5297,7 @@
                                 r2
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             % [A 3 Percussion Voice] Measure 147
                             {
@@ -5348,7 +5348,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5375,7 +5375,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5440,7 +5440,7 @@
                                 r4.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5459,7 +5459,7 @@
                                 r2
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5472,7 +5472,7 @@
                                 r4..
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 155
                             {
@@ -5554,7 +5554,7 @@
                                 r16
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -5626,7 +5626,7 @@
                                 r8.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5642,7 +5642,7 @@
                                 r2
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 161
                             {
@@ -5677,7 +5677,7 @@
                                 r2
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             % [A 3 Percussion Voice] Measure 163
                             {
@@ -5734,7 +5734,7 @@
                                 r2
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5820,7 +5820,7 @@
                                 <> \stopTextSpan
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -5842,7 +5842,7 @@
                                 r4.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5858,7 +5858,7 @@
                                 r16
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -5972,7 +5972,7 @@
                                 r8.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -6037,7 +6037,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -6056,7 +6056,7 @@
                                 r2
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 178
                             {
@@ -6996,7 +6996,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -7044,7 +7044,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -7076,7 +7076,7 @@
                                 r8.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7089,7 +7089,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 134
                             {
@@ -7183,7 +7183,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 141
                             {
@@ -7288,7 +7288,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7297,7 +7297,7 @@
                                 d'16 -\staccato ]
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7411,7 +7411,7 @@
                                 r2
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7461,7 +7461,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7510,7 +7510,7 @@
                                 r8.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7530,7 +7530,7 @@
                                 r4.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7552,7 +7552,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7628,7 +7628,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7709,7 +7709,7 @@
                                 r8
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7728,7 +7728,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7767,7 +7767,7 @@
                                 r4.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7795,7 +7795,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 164
                             {
@@ -7885,7 +7885,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7901,7 +7901,7 @@
                                 r4.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -7941,7 +7941,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -7961,7 +7961,7 @@
                                 r8
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7976,7 +7976,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 174
                             {
@@ -8029,7 +8029,7 @@
                                 r2.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -8048,7 +8048,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -17881,7 +17881,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -17929,7 +17929,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -17960,7 +17960,7 @@
                                 r4
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18020,7 +18020,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18047,7 +18047,7 @@
                                 r8.
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18060,7 +18060,7 @@
                                 r4
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 138
                             {
@@ -18196,7 +18196,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18211,7 +18211,7 @@
                                 r2
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 142
                             {
@@ -18294,7 +18294,7 @@
                                 <> \stopTextSpan
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -18369,7 +18369,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18384,7 +18384,7 @@
                                 r4
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 150
                             {
@@ -18480,7 +18480,7 @@
                                 r4
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18534,7 +18534,7 @@
                                 r4..
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -18618,7 +18618,7 @@
                                 r16
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18696,7 +18696,7 @@
                                 r2
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18719,7 +18719,7 @@
                                 r16
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18807,7 +18807,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18903,7 +18903,7 @@
                                 r8.
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             % [B 1 Percussion Voice] Measure 171
                             {
@@ -18926,7 +18926,7 @@
                                 r2
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -19892,7 +19892,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -19940,7 +19940,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -19971,7 +19971,7 @@
                                 r4.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20070,7 +20070,7 @@
                                 r16
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20112,7 +20112,7 @@
                                 r16
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20127,7 +20127,7 @@
                                 r16
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 139
                             {
@@ -20205,7 +20205,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20220,7 +20220,7 @@
                                 r4
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 142
                             {
@@ -20297,7 +20297,7 @@
                                 <> \stopTextSpan
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20380,7 +20380,7 @@
                                 r4
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 149
                             {
@@ -20478,7 +20478,7 @@
                                 r4
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20497,7 +20497,7 @@
                                 r4
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 155
                             {
@@ -20536,7 +20536,7 @@
                                 r2
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20577,7 +20577,7 @@
                                 r16
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20590,7 +20590,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 159
                             {
@@ -20649,7 +20649,7 @@
                                 r2.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 162
                             {
@@ -20666,7 +20666,7 @@
                                 r4.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20681,7 +20681,7 @@
                                 r4
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 163
                             {
@@ -20784,7 +20784,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20823,7 +20823,7 @@
                                 r4..
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -20875,7 +20875,7 @@
                                 r8.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -21817,7 +21817,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -21865,7 +21865,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -21897,7 +21897,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -21919,7 +21919,7 @@
                                 r16
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -21972,7 +21972,7 @@
                                 r4.
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -21998,7 +21998,7 @@
                                 r2..
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22014,7 +22014,7 @@
                                 r16
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22086,7 +22086,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22113,7 +22113,7 @@
                                 r16
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22224,7 +22224,7 @@
                                 <> \stopTextSpan
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -22295,7 +22295,7 @@
                                 r4
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22311,7 +22311,7 @@
                                 r2
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 150
                             {
@@ -22397,7 +22397,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22443,7 +22443,7 @@
                                 r8.
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22537,7 +22537,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22555,7 +22555,7 @@
                                 r8.
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 160
                             {
@@ -22634,7 +22634,7 @@
                                 r8.
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22724,7 +22724,7 @@
                                 r4
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22739,7 +22739,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 168
                             {
@@ -22787,7 +22787,7 @@
                                 r4..
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22810,7 +22810,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -22833,7 +22833,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -22848,7 +22848,7 @@
                                 r4
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 172
                             {
@@ -23761,7 +23761,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -23790,7 +23790,7 @@
                         }
                     }
                     \context Voice = "B 4 Percussion Voice" {
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 133
                             {
@@ -23811,7 +23811,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -23932,7 +23932,7 @@
                                 r16
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -23998,7 +23998,7 @@
                                 r16
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24024,7 +24024,7 @@
                                 r4
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24145,7 +24145,7 @@
                                 <> \stopTextSpan
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24229,7 +24229,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24319,7 +24319,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24332,7 +24332,7 @@
                                 r16
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 155
                             {
@@ -24379,7 +24379,7 @@
                                 r4
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
@@ -24412,7 +24412,7 @@
                                 r16
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24498,7 +24498,7 @@
                                 r4.
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24513,7 +24513,7 @@
                                 r2
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 162
                             {
@@ -24527,7 +24527,7 @@
                                 r8.
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -24619,7 +24619,7 @@
                                 r4
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 168
                             {
@@ -24662,7 +24662,7 @@
                                 r8.
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_repetitions"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_repetitions"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)

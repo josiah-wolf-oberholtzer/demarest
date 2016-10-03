@@ -278,11 +278,18 @@
         \alias Staff
         \override DynamicLineSpanner.outside-staff-priority = 1000
         \override DynamicText.outside-staff-priority = 1000
-        %% \override StaffSymbol.line-positions = #'(-3 -1 1 3)
         \override Stem.direction = #DOWN
         \override TextScript.outside-staff-padding = 1
         \override TextScript.outside-staff-priority = 500
         \override TextSpanner.outside-staff-padding = 1
+    }
+
+    \context {
+        \PercussionStaff
+        \name ChorusPercussionStaff
+        \type Engraver_group
+        \alias PercussionStaff
+        \override StaffSymbol.line-positions = #'(-4 0 4)
     }
 
     \context {
@@ -291,6 +298,7 @@
         \type Engraver_group
         \alias StaffGroup
         \accepts PercussionStaff
+        \accepts ChorusPercussionStaff
         \accepts VocalizationStaff
         \override StaffGrouper.staff-staff-spacing = #'(
             (basic-distance . 10)

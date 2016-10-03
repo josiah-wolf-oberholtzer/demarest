@@ -37,7 +37,7 @@
             \context StringStaff = "Violin 1 Staff" {
                 \context Voice = "Violin 1 Voice" {
                     \clef "treble"
-                    % [Violin 1 Voice] Material: "castanet_repetitions"
+                    % [Violin 1 Voice] Material: "guiro_tapped_repetitions"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -78,7 +78,7 @@
                             r8
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_repetitions"
+                    % [Violin 1 Voice] Material: "guiro_tapped_repetitions"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
@@ -98,7 +98,7 @@
                             r16
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_repetitions"
+                    % [Violin 1 Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -162,7 +162,7 @@
                             r4
                         }
                     }
-                    % [Violin 1 Voice] Material: "castanet_repetitions"
+                    % [Violin 1 Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -216,7 +216,7 @@
                             r4
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_repetitions"
+                    % [Violin 2 Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -266,7 +266,7 @@
                             r16
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_repetitions"
+                    % [Violin 2 Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
@@ -285,7 +285,7 @@
                             r8
                         }
                     }
-                    % [Violin 2 Voice] Material: "castanet_repetitions"
+                    % [Violin 2 Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -380,7 +380,7 @@
                             r8
                         }
                     }
-                    % [Viola Voice] Material: "castanet_repetitions"
+                    % [Viola Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -430,7 +430,7 @@
                             r16
                         }
                     }
-                    % [Viola Voice] Material: "castanet_repetitions"
+                    % [Viola Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -523,7 +523,7 @@
             \context StringStaff = "Cello Staff" {
                 \context Voice = "Cello Voice" {
                     \clef "bass"
-                    % [Cello Voice] Material: "castanet_repetitions"
+                    % [Cello Voice] Material: "guiro_tapped_repetitions"
                     {
                         % [Cello Voice] Measure 1
                         {
@@ -564,7 +564,7 @@
                             r8
                         }
                     }
-                    % [Cello Voice] Material: "castanet_repetitions"
+                    % [Cello Voice] Material: "guiro_tapped_repetitions"
                     {
                         % [Cello Voice] Measure 3
                         {
@@ -600,7 +600,7 @@
                             r16
                         }
                     }
-                    % [Cello Voice] Material: "castanet_repetitions"
+                    % [Cello Voice] Material: "guiro_tapped_repetitions"
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
@@ -654,7 +654,7 @@
                             \startStaff
                         }
                     }
-                    % [Cello Voice] Material: "castanet_repetitions"
+                    % [Cello Voice] Material: "guiro_tapped_repetitions"
                     {
                         % [Cello Voice] Measure 7
                         {

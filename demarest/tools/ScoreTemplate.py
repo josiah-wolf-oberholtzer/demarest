@@ -161,13 +161,13 @@ class ScoreTemplate(consort.ScoreTemplate):
         instrument = None
         if chorus:
             instrument_name_markup = self._make_column_markup(
-                ['shaker', 'castanet', 'guiro', 'wine glass']).vcenter()
+                ['shaker', 'guiro', 'wine glass']).vcenter()
             instrument_name_markup = markuptools.Markup.concat([
                 markuptools.Markup('{}{}'.format(group, index)).vcenter(),
                 instrument_name_markup,
                 ])
             short_instrument_name_markup = self._make_column_markup(
-                ['sh.', 'cst.', 'g.', 'w.g.']).vcenter()
+                ['sh.', 'g.', 'w.g.']).vcenter()
             short_instrument_name_markup = markuptools.Markup.concat([
                 markuptools.Markup('{}{}'.format(group, index)).vcenter(),
                 short_instrument_name_markup,
@@ -176,11 +176,14 @@ class ScoreTemplate(consort.ScoreTemplate):
                 instrument_name_markup=instrument_name_markup,
                 short_instrument_name_markup=short_instrument_name_markup,
                 )
+        context_name = 'PercussionStaff'
+        if chorus:
+            context_name = 'ChorusPercussionStaff'
         percussion_staff = self._make_staff(
             '{} {} Percussion'.format(group, index),
             'percussion',
             abbreviation='{}_{}_percussion'.format(group, index).lower(),
-            context_name='PercussionStaff',
+            context_name=context_name,
             instrument=instrument,
             )
         return percussion_staff

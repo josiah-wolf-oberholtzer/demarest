@@ -44,8 +44,8 @@ rare_timespan_identifier = abjad.sequencetools.Sequence(
 
 ### MUSIC SPECIFIERS ###
 
-castanet_pointillism = materials.castanet_pointillism
-castanet_repetitions = materials.castanet_repetitions
+guiro_tapped_pointillism = materials.guiro_tapped_pointillism
+guiro_tapped_repetitions = materials.guiro_tapped_repetitions
 guiro_shimmer = materials.guiro_shimmer
 pitch_pipe_drone = materials.pitch_pipe_drone
 pitch_pipe_flutter = materials.pitch_pipe_flutter
@@ -58,10 +58,10 @@ wine_glass_drone = materials.wine_glass_drone
 percussion_melange = consort.MusicSpecifierSequence(
     application_rate='division',
     music_specifiers=[
-        castanet_pointillism,
+        guiro_tapped_pointillism,
         shaker_pointillism,
-        castanet_repetitions,
-        castanet_pointillism,
+        guiro_tapped_repetitions,
+        guiro_tapped_pointillism,
         guiro_shimmer,
         ],
     )

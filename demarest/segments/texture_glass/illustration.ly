@@ -1,7 +1,7 @@
 % package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
 % package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
 % package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 6a94374 [master] (2016-09-29 23:54:22)
+% package "demarest" @ 3917471 [master] (2016-10-02 22:57:34)
 
 \version "2.19.44"
 \language "english"
@@ -204,12 +204,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "A 1 Percussion Staff" {
+                \context ChorusPercussionStaff = "A 1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -227,7 +228,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -249,7 +249,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -297,11 +296,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 2
                             {
-                                g2. \p \repeatTie
+                                f2. \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -314,15 +313,56 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 3
                             {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \( [
+                                c'16 -\staccato \parenthesizeDynamic \p \( \startTextSpan [
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                c'16 -\staccato ]
                                 <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -370,28 +410,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2 \( \startTextSpan \<
+                                f2 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 4
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 5
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 6
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 7
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -523,12 +562,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 2
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "A 2 Percussion Staff" {
+                \context ChorusPercussionStaff = "A 2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -546,7 +586,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -568,7 +607,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -616,36 +654,35 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 3
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 4
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 5
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 6
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 7
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -837,12 +874,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 2
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "A 3 Percussion Staff" {
+                \context ChorusPercussionStaff = "A 3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -860,7 +898,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -882,7 +919,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -930,27 +966,27 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 3
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 4
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 5
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 6
                             {
-                                g4 \repeatTie
+                                f4 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -963,17 +999,58 @@
                                 r4
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \p \( [
+                                c'16 -\staccato \p \( \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                c'16 -\staccato ]
                                 <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1026,12 +1103,11 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2. \( \startTextSpan \<
+                                f2. \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 8
                             {
-                                g1 \p \repeatTie
-                                \bar "|."
+                                f1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1215,12 +1291,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "A 4 Percussion Staff" {
+                \context ChorusPercussionStaff = "A 4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -1238,7 +1315,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -1260,7 +1336,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -1308,19 +1383,19 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 3
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 4
                             {
-                                g4 \repeatTie
+                                f4 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1334,12 +1409,34 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \parenthesizeDynamic \p \(
+                                c'16 -\staccato \parenthesizeDynamic \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
                                 <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1391,20 +1488,19 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2.. \( \startTextSpan \<
+                                f2.. \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 6
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 7
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1625,7 +1721,6 @@
                         {
                             {
                                 r2
-                                \bar "|."
                             }
                         }
                     }
@@ -1989,7 +2084,6 @@
                         {
                             {
                                 r2..
-                                \bar "|."
                             }
                         }
                     }
@@ -2200,7 +2294,8 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
@@ -2826,7 +2921,6 @@
                         {
                             {
                                 r2..
-                                \bar "|."
                             }
                         }
                     }
@@ -3033,7 +3127,8 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
@@ -3420,7 +3515,6 @@
                         {
                             {
                                 r2..
-                                \bar "|."
                             }
                         }
                     }
@@ -3617,12 +3711,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "B 1 Percussion Staff" {
+                \context ChorusPercussionStaff = "B 1 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -3640,7 +3735,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -3662,7 +3756,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -3710,36 +3803,35 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 3
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 4
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 5
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 6
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 7
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3952,12 +4044,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "B 2 Percussion Staff" {
+                \context ChorusPercussionStaff = "B 2 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -3975,7 +4068,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -3997,7 +4089,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -4045,36 +4136,35 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 3
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 4
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 5
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 6
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 7
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4284,12 +4374,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 2
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "B 3 Percussion Staff" {
+                \context ChorusPercussionStaff = "B 3 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -4307,7 +4398,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -4329,7 +4419,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -4377,36 +4466,35 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 3
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 4
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 5
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 6
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 7
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4607,12 +4695,13 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 2
-                                \bar "|."
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
                 }
-                \context PercussionStaff = "B 4 Percussion Staff" {
+                \context ChorusPercussionStaff = "B 4 Percussion Staff" {
                     \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
@@ -4630,7 +4719,6 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -4652,7 +4740,6 @@
                                                     \right-column
                                                         {
                                                             sh.
-                                                            cst.
                                                             g.
                                                             w.g.
                                                         }
@@ -4700,15 +4787,15 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g1 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 2
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 3
                             {
-                                g4 \p \repeatTie
+                                f4 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -4721,14 +4808,55 @@
                                 r4
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                d'16 -\staccato \( [
+                                c'16 -\staccato \( \startTextSpan [
                                 \set stemLeftBeamCount = 2
-                                d'16 -\staccato ]
+                                c'16 -\staccato ]
                                 <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4780,24 +4908,23 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                g2.. \( \startTextSpan \<
+                                f2.. \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 5
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 6
                             {
-                                g1 \p \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 7
                             {
-                                g1 \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 8
                             {
-                                g1 \repeatTie
-                                \bar "|."
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period

@@ -42,7 +42,7 @@
 ## [2] @64
 
 - glass drone
-- pitch pipe drones with castanet attacks
+- pitch pipe drones with guiro attacks
 - bowed vibraphone
 - bowed crotales
 - low-end fanfare

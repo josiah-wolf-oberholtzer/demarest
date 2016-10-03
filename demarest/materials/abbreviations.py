@@ -46,10 +46,9 @@ def make_instrument_column_markup(pieces):
 
 class UnpitchedPercussion(object):
 
-    SHAKER = pitchtools.NamedPitch('F4')
-    CASTANET = pitchtools.NamedPitch('D4')
-    GUIRO = pitchtools.NamedPitch('B3')
-    WINE_GLASS = pitchtools.NamedPitch('G3')
+    SHAKER = pitchtools.NamedPitch('G4')
+    GUIRO = pitchtools.NamedPitch('C4')
+    WINE_GLASS = pitchtools.NamedPitch('F3')
 
     WOOD_BLOCK_5 = pitchtools.NamedPitch('G4')
     WOOD_BLOCK_4 = pitchtools.NamedPitch('E4')
@@ -90,7 +89,7 @@ percussion_staff = consort.AttachmentExpression(
     attachments=[
         [
             spannertools.StaffLinesSpanner(
-                lines=[-4, 4],
+                lines=[-4, 0, 4],
                 overrides={
                     'note_head__style': 'cross',
                     'note_head__no_ledgers': True,

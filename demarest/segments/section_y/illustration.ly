@@ -2709,7 +2709,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -2759,7 +2759,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -2792,7 +2792,7 @@
                                 b16 -\staccato ]
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3132,7 +3132,7 @@
                                 r8
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3433,7 +3433,7 @@
                                 r8.
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3613,7 +3613,7 @@
                                 r8
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -3628,7 +3628,7 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 86
                             {
@@ -3978,7 +3978,7 @@
                                 r8
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -4252,7 +4252,7 @@
                                 r4
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -4495,7 +4495,7 @@
                                 r16
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -4508,7 +4508,7 @@
                                 r4.
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 1 Percussion Voice] Measure 114
                             {
@@ -4891,7 +4891,7 @@
                                 r8
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -4914,7 +4914,7 @@
                                 r16
                             }
                         }
-                        % [A 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -7585,7 +7585,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -7636,7 +7636,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -7681,7 +7681,7 @@
                                 f'16 -\staccato \p ]
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -8021,7 +8021,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -8035,7 +8035,7 @@
                                 r2
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 2 Percussion Voice] Measure 70
                             {
@@ -8393,7 +8393,7 @@
                                 r16
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -8654,7 +8654,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -9019,7 +9019,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -9317,7 +9317,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -9601,7 +9601,7 @@
                                 r8.
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -9614,7 +9614,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 2 Percussion Voice] Measure 114
                             {
@@ -9944,7 +9944,7 @@
                                 r8
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -9959,7 +9959,7 @@
                                 r4
                             }
                         }
-                        % [A 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 2 Percussion Voice] Measure 124
                             {
@@ -12908,7 +12908,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -12956,7 +12956,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -12987,7 +12987,7 @@
                                 r4.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -13290,7 +13290,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -13304,7 +13304,7 @@
                                 r4
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 70
                             {
@@ -13695,7 +13695,7 @@
                                 r8.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -13866,7 +13866,7 @@
                                 r4
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -14230,7 +14230,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -14564,7 +14564,7 @@
                                 r8
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -14578,7 +14578,7 @@
                                 r4
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 106
                             {
@@ -14921,7 +14921,7 @@
                                 r8.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -15209,7 +15209,7 @@
                                 r4 \!
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -15224,7 +15224,7 @@
                                 r4.
                             }
                         }
-                        % [A 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 3 Percussion Voice] Measure 122
                             {
@@ -18283,7 +18283,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -18331,7 +18331,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -18406,7 +18406,7 @@
                                 f'16 -\staccato \p ]
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -18692,7 +18692,7 @@
                                 \startStaff
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 69
                             {
@@ -19089,7 +19089,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -19103,7 +19103,7 @@
                                 r2
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 79
                             {
@@ -19356,7 +19356,7 @@
                                 r8
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -19644,7 +19644,7 @@
                                 r4.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -19659,7 +19659,7 @@
                                 r4
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 94
                             {
@@ -20019,7 +20019,7 @@
                                 r4.
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20032,7 +20032,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [A 4 Percussion Voice] Measure 106
                             {
@@ -20296,7 +20296,7 @@
                                 r16
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -20625,7 +20625,7 @@
                                 r8
                             }
                         }
-                        % [A 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -36708,7 +36708,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -36763,7 +36763,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -36920,7 +36920,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -37172,7 +37172,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -37186,7 +37186,7 @@
                                 r2
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 74
                             {
@@ -37525,7 +37525,7 @@
                                 r16
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -37683,7 +37683,7 @@
                                 r2..
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -37954,7 +37954,7 @@
                                 r4 \!
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -38303,7 +38303,7 @@
                                 r8
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -38322,7 +38322,7 @@
                                 r4
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 110
                             {
@@ -38519,7 +38519,7 @@
                                 r8.
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -38532,7 +38532,7 @@
                                 r4
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 1 Percussion Voice] Measure 118
                             {
@@ -38831,7 +38831,7 @@
                                 r4.
                             }
                         }
-                        % [B 1 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -41556,7 +41556,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -41604,7 +41604,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -41787,7 +41787,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -42045,7 +42045,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -42059,7 +42059,7 @@
                                 r4
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 74
                             {
@@ -42374,7 +42374,7 @@
                                 r16
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -42598,7 +42598,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -42905,7 +42905,7 @@
                                 r4.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -43313,7 +43313,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -43584,7 +43584,7 @@
                                 r8.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -44027,7 +44027,7 @@
                                 r8
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -44042,7 +44042,7 @@
                                 r4.
                             }
                         }
-                        % [B 2 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 2 Percussion Voice] Measure 128
                             {
@@ -47021,7 +47021,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -47069,7 +47069,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -47209,7 +47209,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -47228,7 +47228,7 @@
                                 r16
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -47432,7 +47432,7 @@
                                 r2. \!
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 73
                             {
@@ -47765,7 +47765,7 @@
                                 r16
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -47795,7 +47795,7 @@
                                 f'16 -\staccato \p ]
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -47967,7 +47967,7 @@
                                 r2
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -48258,7 +48258,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -48272,7 +48272,7 @@
                                 r4
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 98
                             {
@@ -48611,7 +48611,7 @@
                                 r8.
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -48857,7 +48857,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -49297,7 +49297,7 @@
                                 r8
                             }
                         }
-                        % [B 3 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 3 Percussion Voice] Measure 127
                             {
@@ -52030,7 +52030,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -52078,7 +52078,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -52267,7 +52267,7 @@
                                 \startStaff
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 61
                             {
@@ -52590,7 +52590,7 @@
                                 r16
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -52606,7 +52606,7 @@
                                 r2
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 74
                             {
@@ -52976,7 +52976,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -53001,7 +53001,7 @@
                                 f'16 -\staccato \p ]
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -53017,7 +53017,7 @@
                                 r16
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -53283,7 +53283,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -53301,7 +53301,7 @@
                                 r8.
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 90
                             {
@@ -53588,7 +53588,7 @@
                                 r8.
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -53896,7 +53896,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -54132,7 +54132,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -54415,7 +54415,7 @@
                                 r8
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
@@ -54429,7 +54429,7 @@
                                 r4
                             }
                         }
-                        % [B 4 Percussion Voice] Material: "castanet_pointillism"
+                        % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             % [B 4 Percussion Voice] Measure 126
                             {
