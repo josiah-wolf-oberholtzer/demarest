@@ -19,28 +19,28 @@
 | wine glass tap point   |       |       |       |       |       |       |       |
 | wine glass tap rep     |       |       |       |       |       |       |       |
 |                        | glass | gulls | sand  | stone | waves | wind  | wood  |
-| crotales tranquilo     |       |       |       |       |       |       |       |
-| marimba agitato        |       |       |       |       |       |       |       |
-| marimba drone          |       |       |       |       |       |       |       |
+| crotales tranquilo     | √√√   |       |       |       |       |       |       |
+| marimba agitato        |       | √√√   |       |       |       |       |       |
+| marimba drone          | √     |       |       |       |       |       |       |
 | marimba repetitions    |       |       |       |       |       |       |       |
-| marimba shimmer        |       |       |       |       |       |       |       |
+| marimba shimmer        | √     |       |       |       |       |       |       |
 | woodblock fanfare      |       |       |       |       |       |       |       |
 |                        | glass | gulls | sand  | stone | waves | wind  | wood  |
 | ratchet drone          |       |       |       |       |       |       |       |
-| snare drone            |       |       |       |       |       |       |       |
-| tam tam drone          |       |       |       |       |       |       |       |
+| snare drone            | √     |       |       |       |       |       |       |
+| tam tam drone          | √     |       |       |       |       |       |       |
 | tam tam repetitions    |       |       |       |       |       |       |       |
 | tam tam tranquilo      |       |       |       |       |       |       |       |
-| vibraphone agitato     |       |       |       |       |       |       |       |
-| vibraphone drone       |       |       |       |       |       |       |       |
+| vibraphone agitato     |       | √√√   |       |       |       |       |       |
+| vibraphone drone       | √     |       |       |       |       |       |       |
 | vibraphone repetitions |       |       |       |       |       |       |       |
-| vibraphone shimmer     |       |       |       |       |       |       |       |
-| vibraphone tranquilo   |       |       |       |       |       |       |       |
+| vibraphone shimmer     | √     |       |       |       |       |       |       |
+| vibraphone tranquilo   | √√√   |       |       |       |       |       |       |
 |                        | glass | gulls | sand  | stone | waves | wind  | wood  |
-| bass drum drone        |       |       |       |       |       |       |       |
+| bass drum drone        | √     |       |       |       |       |       |       |
 | bass drum repetitions  |       |       |       |       |       |       |       |
 | bass drum tranquilo    |       |       |       |       |       |       |       |
-| toms fanfare           |       |       |       |       |       |       |       |
+| toms fanfare           |       | √√√   |       |       |       |       |       |
 | toms repetitions       |       |       |       |       |       |       |       |
 | t.b. drone             |       |       |       |       |       |       |       |
-| t.b. tranquilo         |       |       |       |       |       |       |       |
+| t.b. tranquilo         | √√√   |       |       |       |       |       |       |
