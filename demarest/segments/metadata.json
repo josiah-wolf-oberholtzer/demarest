@@ -1,11 +1,18 @@
 {
     "segments": [
-        "texture_glass",
-        "texture_wood",
-        "texture_sand",
-        "texture_stone",
-        "texture_wind",
-        "texture_gulls",
-        "texture_waves"
+        "segment_wood_a",
+        "segment_glass_a",
+        "segment_stone_a",
+        "segment_sand_a",
+        "segment_stone_b",
+        "segment_wood_b",
+        "segment_waves_a",
+        "segment_sand_b",
+        "segment_glass_b",
+        "segment_stone_c",
+        "segment_waves_b",
+        "segment_wood_c",
+        "segment_waves_c",
+        "segment_glass_c"
     ]
 }

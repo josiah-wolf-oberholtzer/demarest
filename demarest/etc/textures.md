@@ -37,10 +37,10 @@
 | vibraphone shimmer     | √     |       |       |       |       |       |       |
 | vibraphone tranquilo   | √√√   |       |       |       |       |       |       |
 |                        | glass | gulls | sand  | stone | waves | wind  | wood  |
-| bass drum drone        | √     |       |       |       |       |       |       |
-| bass drum repetitions  |       |       |       |       |       |       |       |
+| bass drum drone        | √     |       | √     |       | √     | √     | √     |
+| bass drum repetitions  |       |       |       | √     |       |       |       |
 | bass drum tranquilo    |       |       |       |       |       |       |       |
 | toms fanfare           |       | √√√   |       |       |       |       |       |
 | toms repetitions       |       |       |       |       |       |       |       |
-| t.b. drone             |       |       |       |       |       |       |       |
+| t.b. drone             |       |       |       | √     |       |       |       |
 | t.b. tranquilo         | √√√   |       |       |       |       |       |       |
