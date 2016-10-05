@@ -11,6 +11,7 @@ segment_maker = demarest.SegmentMaker(
     annotate_colors=True,
     annotate_phrasing=False,
     desired_duration_in_seconds=30,
+    name='Gulls',
     permitted_time_signatures=[
         (4, 4),
         ],

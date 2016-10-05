@@ -62,9 +62,9 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
             ),
         dynamics=consort.DynamicExpression(
             division_period=2,
-            dynamic_tokens='mf mp fff',
-            start_dynamic_tokens='f',
-            stop_dynamic_tokens='mf',
+            dynamic_tokens='p ppp',
+            start_dynamic_tokens='ppp p',
+            stop_dynamic_tokens='p ppp',
             ),
         tremolo_chords=consort.AttachmentExpression(
             attachments=[

@@ -1,7 +1,7 @@
 % package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
 % package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
 % package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 151a979 [master] (2016-10-03 21:58:53)
+% package "demarest" @ d608d0e [master] (2016-10-04 19:54:44)
 
 \version "2.19.44"
 \language "english"
@@ -13,7 +13,7 @@
 
 \score {
     \context Score = "Demarest Score" \with {
-        currentBarNumber = #125
+        currentBarNumber = #126
     } <<
         \tag #'time
         \context TimeSignatureContext = "Time Signature Context" {
@@ -21,11 +21,18 @@
                 \tempo 4=64
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                M
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        M
+                            " "
+                            \fontsize
+                                #-3
+                                Glass
+                        }
                     }
                 s1 * 48
             }
@@ -58,7 +65,7 @@
                     \bar "||"
                     \context Voice = "A 1 Vocalization Voice" {
                         {
-                            % [A 1 Vocalization Voice] Measure 125
+                            % [A 1 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -87,7 +94,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 129
+                            % [A 1 Vocalization Voice] Measure 130
                             {
                                 r2
                                 r8
@@ -135,7 +142,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
-                            % [A 1 Vocalization Voice] Measure 130
+                            % [A 1 Vocalization Voice] Measure 131
                             {
                                 c'2. \p \repeatTie
                                 <> \)
@@ -149,7 +156,7 @@
                             {
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 131
+                            % [A 1 Vocalization Voice] Measure 132
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -161,7 +168,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 1 Vocalization Voice] Measure 132
+                            % [A 1 Vocalization Voice] Measure 133
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -213,7 +220,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            % [A 1 Vocalization Voice] Measure 133
+                            % [A 1 Vocalization Voice] Measure 134
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -248,7 +255,7 @@
                             {
                                 r8 \!
                             }
-                            % [A 1 Vocalization Voice] Measure 134
+                            % [A 1 Vocalization Voice] Measure 135
                             {
                                 r8
                             }
@@ -275,7 +282,7 @@
                             {
                                 r8
                             }
-                            % [A 1 Vocalization Voice] Measure 135
+                            % [A 1 Vocalization Voice] Measure 136
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -284,7 +291,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 136
+                            % [A 1 Vocalization Voice] Measure 137
                             {
                                 r2
                                 r8
@@ -332,7 +339,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
-                            % [A 1 Vocalization Voice] Measure 137
+                            % [A 1 Vocalization Voice] Measure 138
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -346,7 +353,7 @@
                             {
                                 r2.
                             }
-                            % [A 1 Vocalization Voice] Measure 138
+                            % [A 1 Vocalization Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -355,7 +362,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 142
+                            % [A 1 Vocalization Voice] Measure 143
                             {
                                 r2
                             }
@@ -402,7 +409,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \startTextSpan \<
                             }
-                            % [A 1 Vocalization Voice] Measure 143
+                            % [A 1 Vocalization Voice] Measure 144
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -428,7 +435,7 @@
                                 c'8 \( \<
                                 c'2 \repeatTie
                             }
-                            % [A 1 Vocalization Voice] Measure 144
+                            % [A 1 Vocalization Voice] Measure 145
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -443,7 +450,7 @@
                                 r8
                                 r2
                             }
-                            % [A 1 Vocalization Voice] Measure 145
+                            % [A 1 Vocalization Voice] Measure 146
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -455,7 +462,7 @@
                         }
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 1 Vocalization Voice] Measure 147
+                            % [A 1 Vocalization Voice] Measure 148
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -496,7 +503,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'1 \( \startTextSpan \<
                             }
-                            % [A 1 Vocalization Voice] Measure 148
+                            % [A 1 Vocalization Voice] Measure 149
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -509,7 +516,7 @@
                             {
                                 r2..
                             }
-                            % [A 1 Vocalization Voice] Measure 149
+                            % [A 1 Vocalization Voice] Measure 150
                             {
                                 r2
                             }
@@ -533,7 +540,7 @@
                             {
                                 r4
                             }
-                            % [A 1 Vocalization Voice] Measure 150
+                            % [A 1 Vocalization Voice] Measure 151
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -542,7 +549,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 151
+                            % [A 1 Vocalization Voice] Measure 152
                             {
                                 r2.
                             }
@@ -600,7 +607,7 @@
                             }
                         }
                         {
-                            % [A 1 Vocalization Voice] Measure 152
+                            % [A 1 Vocalization Voice] Measure 153
                             {
                                 r2.. \!
                             }
@@ -614,7 +621,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \(
                             }
-                            % [A 1 Vocalization Voice] Measure 153
+                            % [A 1 Vocalization Voice] Measure 154
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -639,7 +646,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [A 1 Vocalization Voice] Measure 154
+                            % [A 1 Vocalization Voice] Measure 155
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -653,7 +660,7 @@
                             {
                                 r2..
                             }
-                            % [A 1 Vocalization Voice] Measure 155
+                            % [A 1 Vocalization Voice] Measure 156
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -662,7 +669,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 158
+                            % [A 1 Vocalization Voice] Measure 159
                             {
                                 r4.
                             }
@@ -719,7 +726,7 @@
                             {
                                 r4.
                             }
-                            % [A 1 Vocalization Voice] Measure 159
+                            % [A 1 Vocalization Voice] Measure 160
                             {
                                 r2
                             }
@@ -740,7 +747,7 @@
                             }
                         }
                         {
-                            % [A 1 Vocalization Voice] Measure 160
+                            % [A 1 Vocalization Voice] Measure 161
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -749,7 +756,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 161
+                            % [A 1 Vocalization Voice] Measure 162
                             {
                                 r8
                             }
@@ -821,7 +828,7 @@
                             }
                         }
                         {
-                            % [A 1 Vocalization Voice] Measure 162
+                            % [A 1 Vocalization Voice] Measure 163
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -880,7 +887,7 @@
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 1 Percussion Voice] Measure 125
+                            % [A 1 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -963,17 +970,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 1 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 1 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 129
                             {
@@ -1005,6 +1008,10 @@
                             }
                             % [A 1 Percussion Voice] Measure 136
                             {
+                                f1 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 137
+                            {
                                 f2. \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -1020,7 +1027,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 137
+                            % [A 1 Percussion Voice] Measure 138
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -1090,7 +1097,7 @@
                             {
                                 r8
                             }
-                            % [A 1 Percussion Voice] Measure 138
+                            % [A 1 Percussion Voice] Measure 139
                             {
                                 r16
                             }
@@ -1160,7 +1167,7 @@
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
-                            % [A 1 Percussion Voice] Measure 139
+                            % [A 1 Percussion Voice] Measure 140
                             {
                                 c'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -1226,17 +1233,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2 \( \startTextSpan \<
                             }
-                            % [A 1 Percussion Voice] Measure 140
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 1 Percussion Voice] Measure 141
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 142
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 143
                             {
@@ -1251,6 +1254,10 @@
                                 f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 146
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 147
                             {
                                 f2 \repeatTie
                                 <> \)
@@ -1325,7 +1332,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 147
+                            % [A 1 Percussion Voice] Measure 148
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -1369,7 +1376,7 @@
                         }
                         % [A 1 Percussion Voice] Material: "shaker_pointillism"
                         {
-                            % [A 1 Percussion Voice] Measure 148
+                            % [A 1 Percussion Voice] Measure 149
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
                                 g'16 -\staccato \ppp \( [
@@ -1382,7 +1389,7 @@
                             {
                                 r2..
                             }
-                            % [A 1 Percussion Voice] Measure 149
+                            % [A 1 Percussion Voice] Measure 150
                             {
                                 r8
                             }
@@ -1429,17 +1436,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2.. \( \startTextSpan \<
                             }
-                            % [A 1 Percussion Voice] Measure 150
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 1 Percussion Voice] Measure 151
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 152
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 153
                             {
@@ -1462,6 +1465,10 @@
                                 f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 158
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 159
                             {
                                 f2 \repeatTie
                                 f8 \repeatTie
@@ -1520,7 +1527,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \p \( \startTextSpan
                             }
-                            % [A 1 Percussion Voice] Measure 159
+                            % [A 1 Percussion Voice] Measure 160
                             {
                                 c'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -1537,7 +1544,7 @@
                             {
                                 r2..
                             }
-                            % [A 1 Percussion Voice] Measure 160
+                            % [A 1 Percussion Voice] Measure 161
                             {
                                 r4
                             }
@@ -1584,17 +1591,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2. \( \startTextSpan \<
                             }
-                            % [A 1 Percussion Voice] Measure 161
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 1 Percussion Voice] Measure 162
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 163
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 164
                             {
@@ -1629,6 +1632,10 @@
                                 f1 \repeatTie
                             }
                             % [A 1 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -1669,7 +1676,7 @@
                     \bar "||"
                     \context Voice = "A 2 Vocalization Voice" {
                         {
-                            % [A 2 Vocalization Voice] Measure 125
+                            % [A 2 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1698,7 +1705,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 129
+                            % [A 2 Vocalization Voice] Measure 130
                             {
                                 r2..
                             }
@@ -1745,7 +1752,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \startTextSpan \<
                             }
-                            % [A 2 Vocalization Voice] Measure 130
+                            % [A 2 Vocalization Voice] Measure 131
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -1760,7 +1767,7 @@
                             {
                                 r4.
                             }
-                            % [A 2 Vocalization Voice] Measure 131
+                            % [A 2 Vocalization Voice] Measure 132
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1772,7 +1779,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 2 Vocalization Voice] Measure 132
+                            % [A 2 Vocalization Voice] Measure 133
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -1804,7 +1811,7 @@
                                 r8
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 133
+                            % [A 2 Vocalization Voice] Measure 134
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1813,7 +1820,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 134
+                            % [A 2 Vocalization Voice] Measure 135
                             {
                                 r4.
                             }
@@ -1878,7 +1885,7 @@
                             {
                                 r8 \!
                             }
-                            % [A 2 Vocalization Voice] Measure 135
+                            % [A 2 Vocalization Voice] Measure 136
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1890,7 +1897,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 2 Vocalization Voice] Measure 136
+                            % [A 2 Vocalization Voice] Measure 137
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -1942,7 +1949,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 2 Vocalization Voice] Measure 137
+                            % [A 2 Vocalization Voice] Measure 138
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -1960,7 +1967,7 @@
                             {
                                 r8
                             }
-                            % [A 2 Vocalization Voice] Measure 138
+                            % [A 2 Vocalization Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1969,7 +1976,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 142
+                            % [A 2 Vocalization Voice] Measure 143
                             {
                                 r2.
                             }
@@ -2016,7 +2023,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [A 2 Vocalization Voice] Measure 143
+                            % [A 2 Vocalization Voice] Measure 144
                             {
                                 c'2 \p \repeatTie
                                 <> \)
@@ -2030,7 +2037,7 @@
                             {
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 144
+                            % [A 2 Vocalization Voice] Measure 145
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -2039,7 +2046,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 147
+                            % [A 2 Vocalization Voice] Measure 148
                             {
                                 r8
                             }
@@ -2095,7 +2102,7 @@
                             {
                                 r4.
                             }
-                            % [A 2 Vocalization Voice] Measure 148
+                            % [A 2 Vocalization Voice] Measure 149
                             {
                                 r2
                                 r8
@@ -2116,7 +2123,7 @@
                             }
                         }
                         {
-                            % [A 2 Vocalization Voice] Measure 149
+                            % [A 2 Vocalization Voice] Measure 150
                             {
                                 r2
                             }
@@ -2139,7 +2146,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [A 2 Vocalization Voice] Measure 150
+                            % [A 2 Vocalization Voice] Measure 151
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -2163,7 +2170,7 @@
                             {
                                 r4. \!
                             }
-                            % [A 2 Vocalization Voice] Measure 151
+                            % [A 2 Vocalization Voice] Measure 152
                             {
                                 r4
                             }
@@ -2178,7 +2185,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2. \( \<
                             }
-                            % [A 2 Vocalization Voice] Measure 152
+                            % [A 2 Vocalization Voice] Measure 153
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -2192,7 +2199,7 @@
                                 r8
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 153
+                            % [A 2 Vocalization Voice] Measure 154
                             {
                                 r2..
                             }
@@ -2206,7 +2213,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
-                            % [A 2 Vocalization Voice] Measure 154
+                            % [A 2 Vocalization Voice] Measure 155
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -2220,7 +2227,7 @@
                             {
                                 r2..
                             }
-                            % [A 2 Vocalization Voice] Measure 155
+                            % [A 2 Vocalization Voice] Measure 156
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -2229,7 +2236,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 2 Vocalization Voice] Measure 157
+                            % [A 2 Vocalization Voice] Measure 158
                             {
                                 r2.
                             }
@@ -2276,7 +2283,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [A 2 Vocalization Voice] Measure 158
+                            % [A 2 Vocalization Voice] Measure 159
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -2293,7 +2300,7 @@
                         }
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 2 Vocalization Voice] Measure 159
+                            % [A 2 Vocalization Voice] Measure 160
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -2302,7 +2309,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'1 \( \<
                             }
-                            % [A 2 Vocalization Voice] Measure 160
+                            % [A 2 Vocalization Voice] Measure 161
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -2317,7 +2324,7 @@
                                 r8
                                 r2
                             }
-                            % [A 2 Vocalization Voice] Measure 161
+                            % [A 2 Vocalization Voice] Measure 162
                             {
                                 r2
                                 r8
@@ -2381,7 +2388,7 @@
                             }
                         }
                         {
-                            % [A 2 Vocalization Voice] Measure 162
+                            % [A 2 Vocalization Voice] Measure 163
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -2440,7 +2447,7 @@
                     \context Voice = "A 2 Percussion Voice" {
                         % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 2 Percussion Voice] Measure 125
+                            % [A 2 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2523,17 +2530,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 2 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 129
                             {
@@ -2566,6 +2569,10 @@
                             % [A 2 Percussion Voice] Measure 136
                             {
                                 f1 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 137
+                            {
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2574,7 +2581,7 @@
                             }
                         }
                         {
-                            % [A 2 Percussion Voice] Measure 137
+                            % [A 2 Percussion Voice] Measure 138
                             {
                                 r4
                             }
@@ -2637,7 +2644,7 @@
                         }
                         % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [A 2 Percussion Voice] Measure 138
+                            % [A 2 Percussion Voice] Measure 139
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -2702,17 +2709,13 @@
                                 f8 \( \startTextSpan \<
                                 f2 \repeatTie
                             }
-                            % [A 2 Percussion Voice] Measure 139
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 2 Percussion Voice] Measure 140
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 141
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 142
                             {
@@ -2731,6 +2734,10 @@
                                 f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 146
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 147
                             {
                                 f2 \repeatTie
                                 f8 \repeatTie
@@ -2791,7 +2798,7 @@
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
-                            % [A 2 Percussion Voice] Measure 147
+                            % [A 2 Percussion Voice] Measure 148
                             {
                                 c'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -2852,17 +2859,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f4 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 148
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 2 Percussion Voice] Measure 149
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 150
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 151
                             {
@@ -2894,6 +2897,10 @@
                             }
                             % [A 2 Percussion Voice] Measure 158
                             {
+                                f1 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 159
+                            {
                                 f2.. \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -2906,7 +2913,7 @@
                             {
                                 r8
                             }
-                            % [A 2 Percussion Voice] Measure 159
+                            % [A 2 Percussion Voice] Measure 160
                             {
                                 r8
                             }
@@ -2949,7 +2956,7 @@
                         }
                         % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 2 Percussion Voice] Measure 160
+                            % [A 2 Percussion Voice] Measure 161
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2990,17 +2997,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 161
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 2 Percussion Voice] Measure 162
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 163
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 164
                             {
@@ -3035,6 +3038,10 @@
                                 f1 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 2 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -3075,7 +3082,7 @@
                     \bar "||"
                     \context Voice = "A 3 Vocalization Voice" {
                         {
-                            % [A 3 Vocalization Voice] Measure 125
+                            % [A 3 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3104,7 +3111,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 129
+                            % [A 3 Vocalization Voice] Measure 130
                             {
                                 r4
                             }
@@ -3151,7 +3158,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2. \( \startTextSpan \<
                             }
-                            % [A 3 Vocalization Voice] Measure 130
+                            % [A 3 Vocalization Voice] Measure 131
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -3167,7 +3174,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 3 Vocalization Voice] Measure 131
+                            % [A 3 Vocalization Voice] Measure 132
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -3185,7 +3192,7 @@
                                 r8
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 132
+                            % [A 3 Vocalization Voice] Measure 133
                             {
                                 r4.
                             }
@@ -3211,7 +3218,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [A 3 Vocalization Voice] Measure 133
+                            % [A 3 Vocalization Voice] Measure 134
                             {
                                 c'8 -\tenuto
                                 <> \)
@@ -3236,7 +3243,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [A 3 Vocalization Voice] Measure 134
+                            % [A 3 Vocalization Voice] Measure 135
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -3253,7 +3260,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 3 Vocalization Voice] Measure 135
+                            % [A 3 Vocalization Voice] Measure 136
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -3270,7 +3277,7 @@
                             {
                                 r2.
                             }
-                            % [A 3 Vocalization Voice] Measure 136
+                            % [A 3 Vocalization Voice] Measure 137
                             {
                                 r4
                             }
@@ -3296,7 +3303,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 3 Vocalization Voice] Measure 137
+                            % [A 3 Vocalization Voice] Measure 138
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -3314,7 +3321,7 @@
                             {
                                 r4
                             }
-                            % [A 3 Vocalization Voice] Measure 138
+                            % [A 3 Vocalization Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3323,7 +3330,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 142
+                            % [A 3 Vocalization Voice] Measure 143
                             {
                                 r2..
                             }
@@ -3369,7 +3376,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( \startTextSpan
                             }
-                            % [A 3 Vocalization Voice] Measure 143
+                            % [A 3 Vocalization Voice] Measure 144
                             {
                                 c'1 \repeatTie
                                 <> \)
@@ -3380,7 +3387,7 @@
                             }
                         }
                         {
-                            % [A 3 Vocalization Voice] Measure 144
+                            % [A 3 Vocalization Voice] Measure 145
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3389,7 +3396,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 147
+                            % [A 3 Vocalization Voice] Measure 148
                             {
                                 r4.
                             }
@@ -3437,7 +3444,7 @@
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
-                            % [A 3 Vocalization Voice] Measure 148
+                            % [A 3 Vocalization Voice] Measure 149
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -3450,7 +3457,7 @@
                             {
                                 r2..
                             }
-                            % [A 3 Vocalization Voice] Measure 149
+                            % [A 3 Vocalization Voice] Measure 150
                             {
                                 r4.
                             }
@@ -3475,7 +3482,7 @@
                             {
                                 r4.
                             }
-                            % [A 3 Vocalization Voice] Measure 150
+                            % [A 3 Vocalization Voice] Measure 151
                             {
                                 r4.
                             }
@@ -3511,7 +3518,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \(
                             }
-                            % [A 3 Vocalization Voice] Measure 151
+                            % [A 3 Vocalization Voice] Measure 152
                             {
                                 c'2 \repeatTie
                                 <> \)
@@ -3525,7 +3532,7 @@
                             {
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 152
+                            % [A 3 Vocalization Voice] Measure 153
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3534,7 +3541,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Vocalization Voice] Measure 153
+                            % [A 3 Vocalization Voice] Measure 154
                             {
                                 r4
                             }
@@ -3571,7 +3578,7 @@
                             {
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 154
+                            % [A 3 Vocalization Voice] Measure 155
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3583,7 +3590,7 @@
                         }
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 3 Vocalization Voice] Measure 158
+                            % [A 3 Vocalization Voice] Measure 159
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -3632,7 +3639,7 @@
                             {
                                 r2
                             }
-                            % [A 3 Vocalization Voice] Measure 159
+                            % [A 3 Vocalization Voice] Measure 160
                             {
                                 r4
                             }
@@ -3666,7 +3673,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'4 -\accent \fp \( \>
                             }
-                            % [A 3 Vocalization Voice] Measure 160
+                            % [A 3 Vocalization Voice] Measure 161
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -3681,7 +3688,7 @@
                             {
                                 r2. \!
                             }
-                            % [A 3 Vocalization Voice] Measure 161
+                            % [A 3 Vocalization Voice] Measure 162
                             {
                                 r2
                                 r8
@@ -3708,7 +3715,7 @@
                             {
                                 r8
                             }
-                            % [A 3 Vocalization Voice] Measure 162
+                            % [A 3 Vocalization Voice] Measure 163
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3767,7 +3774,7 @@
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 3 Percussion Voice] Measure 125
+                            % [A 3 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -3850,17 +3857,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 3 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 129
                             {
@@ -3895,6 +3898,10 @@
                                 f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 137
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 138
                             {
                                 f8 \repeatTie
                                 <> \)
@@ -3944,7 +3951,7 @@
                             {
                                 r2
                             }
-                            % [A 3 Percussion Voice] Measure 138
+                            % [A 3 Percussion Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -3953,7 +3960,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 3 Percussion Voice] Measure 139
+                            % [A 3 Percussion Voice] Measure 140
                             {
                                 r16
                             }
@@ -4014,17 +4021,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f4 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 140
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 3 Percussion Voice] Measure 141
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 142
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 143
                             {
@@ -4040,6 +4043,10 @@
                             }
                             % [A 3 Percussion Voice] Measure 146
                             {
+                                f1 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 147
+                            {
                                 f2.. \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -4052,7 +4059,7 @@
                             {
                                 r8
                             }
-                            % [A 3 Percussion Voice] Measure 147
+                            % [A 3 Percussion Voice] Measure 148
                             {
                                 r8
                             }
@@ -4159,17 +4166,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f8 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 148
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 3 Percussion Voice] Measure 149
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 150
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 151
                             {
@@ -4200,6 +4203,10 @@
                                 f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 158
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 159
                             {
                                 f4 \repeatTie
                                 <> \)
@@ -4268,7 +4275,7 @@
                             {
                                 r4.
                             }
-                            % [A 3 Percussion Voice] Measure 159
+                            % [A 3 Percussion Voice] Measure 160
                             {
                                 r16
                             }
@@ -4294,7 +4301,7 @@
                             {
                                 r2..
                             }
-                            % [A 3 Percussion Voice] Measure 160
+                            % [A 3 Percussion Voice] Measure 161
                             {
                                 r2
                             }
@@ -4316,7 +4323,7 @@
                         }
                         % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 3 Percussion Voice] Measure 161
+                            % [A 3 Percussion Voice] Measure 162
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -4357,17 +4364,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 162
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 3 Percussion Voice] Measure 163
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 164
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 165
                             {
@@ -4398,6 +4401,10 @@
                                 f1 \repeatTie
                             }
                             % [A 3 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 3 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -4438,7 +4445,7 @@
                     \bar "||"
                     \context Voice = "A 4 Vocalization Voice" {
                         {
-                            % [A 4 Vocalization Voice] Measure 125
+                            % [A 4 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4467,7 +4474,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 129
+                            % [A 4 Vocalization Voice] Measure 130
                             {
                                 r2
                             }
@@ -4504,7 +4511,7 @@
                             {
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 130
+                            % [A 4 Vocalization Voice] Measure 131
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4516,7 +4523,7 @@
                         }
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [A 4 Vocalization Voice] Measure 131
+                            % [A 4 Vocalization Voice] Measure 132
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -4566,7 +4573,7 @@
                                 r8
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 132
+                            % [A 4 Vocalization Voice] Measure 133
                             {
                                 r8
                             }
@@ -4602,7 +4609,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [A 4 Vocalization Voice] Measure 133
+                            % [A 4 Vocalization Voice] Measure 134
                             {
                                 c'4 -\tenuto
                                 <> \)
@@ -4635,7 +4642,7 @@
                             {
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 134
+                            % [A 4 Vocalization Voice] Measure 135
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4644,7 +4651,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 135
+                            % [A 4 Vocalization Voice] Measure 136
                             {
                                 r8
                             }
@@ -4696,7 +4703,7 @@
                             }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 136
+                            % [A 4 Vocalization Voice] Measure 137
                             {
                                 r4.
                             }
@@ -4712,7 +4719,7 @@
                                 c'8 \( \<
                                 c'2 \repeatTie
                             }
-                            % [A 4 Vocalization Voice] Measure 137
+                            % [A 4 Vocalization Voice] Measure 138
                             {
                                 c'2 \p \repeatTie
                                 <> \)
@@ -4726,7 +4733,7 @@
                             {
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 138
+                            % [A 4 Vocalization Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4735,7 +4742,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 143
+                            % [A 4 Vocalization Voice] Measure 144
                             {
                                 r8
                             }
@@ -4782,7 +4789,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
                             }
-                            % [A 4 Vocalization Voice] Measure 144
+                            % [A 4 Vocalization Voice] Measure 145
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -4797,7 +4804,7 @@
                                 r8
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 145
+                            % [A 4 Vocalization Voice] Measure 146
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4806,7 +4813,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 146
+                            % [A 4 Vocalization Voice] Measure 147
                             {
                                 r2.
                             }
@@ -4853,7 +4860,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [A 4 Vocalization Voice] Measure 147
+                            % [A 4 Vocalization Voice] Measure 148
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -4866,7 +4873,7 @@
                             {
                                 r2.
                             }
-                            % [A 4 Vocalization Voice] Measure 148
+                            % [A 4 Vocalization Voice] Measure 149
                             {
                                 r2
                                 r8
@@ -4882,7 +4889,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [A 4 Vocalization Voice] Measure 149
+                            % [A 4 Vocalization Voice] Measure 150
                             {
                                 c'2 \p \repeatTie
                                 <> \)
@@ -4896,7 +4903,7 @@
                             {
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 150
+                            % [A 4 Vocalization Voice] Measure 151
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -4905,7 +4912,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 151
+                            % [A 4 Vocalization Voice] Measure 152
                             {
                                 r2
                             }
@@ -4960,7 +4967,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [A 4 Vocalization Voice] Measure 152
+                            % [A 4 Vocalization Voice] Measure 153
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 5/6 {
                                 c'8 -\tenuto [
@@ -4988,7 +4995,7 @@
                             {
                                 r4. \!
                             }
-                            % [A 4 Vocalization Voice] Measure 153
+                            % [A 4 Vocalization Voice] Measure 154
                             {
                                 r2
                             }
@@ -5012,7 +5019,7 @@
                             {
                                 r4
                             }
-                            % [A 4 Vocalization Voice] Measure 154
+                            % [A 4 Vocalization Voice] Measure 155
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -5021,7 +5028,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 158
+                            % [A 4 Vocalization Voice] Measure 159
                             {
                                 r8
                             }
@@ -5080,7 +5087,7 @@
                                 r8
                                 r2
                             }
-                            % [A 4 Vocalization Voice] Measure 159
+                            % [A 4 Vocalization Voice] Measure 160
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -5089,7 +5096,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Vocalization Voice] Measure 160
+                            % [A 4 Vocalization Voice] Measure 161
                             {
                                 r4.
                             }
@@ -5143,7 +5150,7 @@
                             }
                         }
                         {
-                            % [A 4 Vocalization Voice] Measure 161
+                            % [A 4 Vocalization Voice] Measure 162
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -5202,7 +5209,7 @@
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 4 Percussion Voice] Measure 125
+                            % [A 4 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -5285,17 +5292,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 4 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 129
                             {
@@ -5330,6 +5333,10 @@
                                 f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 137
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 138
                             {
                                 f4. \repeatTie
                                 <> \)
@@ -5401,7 +5408,7 @@
                         }
                         % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 138
+                            % [A 4 Percussion Voice] Measure 139
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -5434,7 +5441,7 @@
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                             }
-                            % [A 4 Percussion Voice] Measure 139
+                            % [A 4 Percussion Voice] Measure 140
                             {
                                 g'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -5490,17 +5497,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f4. \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 140
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 4 Percussion Voice] Measure 141
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 142
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 143
                             {
@@ -5515,6 +5518,10 @@
                                 f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 146
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 147
                             {
                                 f4 \repeatTie
                                 <> \)
@@ -5586,7 +5593,7 @@
                                 r16
                                 r4
                             }
-                            % [A 4 Percussion Voice] Measure 147
+                            % [A 4 Percussion Voice] Measure 148
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -5595,7 +5602,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 4 Percussion Voice] Measure 148
+                            % [A 4 Percussion Voice] Measure 149
                             {
                                 r4
                             }
@@ -5613,7 +5620,7 @@
                                 r8.
                                 r2
                             }
-                            % [A 4 Percussion Voice] Measure 149
+                            % [A 4 Percussion Voice] Measure 150
                             {
                                 r4
                             }
@@ -5660,17 +5667,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2. \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 150
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 4 Percussion Voice] Measure 151
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 152
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 153
                             {
@@ -5693,6 +5696,10 @@
                                 f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 158
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 159
                             {
                                 f2 \repeatTie
                                 <> \)
@@ -5762,7 +5769,7 @@
                             {
                                 r8
                             }
-                            % [A 4 Percussion Voice] Measure 159
+                            % [A 4 Percussion Voice] Measure 160
                             {
                                 r2.
                                 r16
@@ -5783,7 +5790,7 @@
                         }
                         % [A 4 Percussion Voice] Material: "shaker_pointillism"
                         {
-                            % [A 4 Percussion Voice] Measure 160
+                            % [A 4 Percussion Voice] Measure 161
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
                                 g'16 -\staccato \ppp \( [
@@ -5862,7 +5869,7 @@
                         }
                         % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 4 Percussion Voice] Measure 161
+                            % [A 4 Percussion Voice] Measure 162
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -5903,17 +5910,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 162
-                            {
-                                f1 \repeatTie
-                            }
                             % [A 4 Percussion Voice] Measure 163
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 164
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 165
                             {
@@ -5944,6 +5947,10 @@
                                 f1 \repeatTie
                             }
                             % [A 4 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [A 4 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -5986,7 +5993,7 @@
                     \bar "||"
                     \context Voice = "T 1 Vocalization Voice" {
                         {
-                            % [T 1 Vocalization Voice] Measure 125
+                            % [T 1 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6015,7 +6022,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 127
+                            % [T 1 Vocalization Voice] Measure 128
                             {
                                 r2.
                             }
@@ -6062,7 +6069,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [T 1 Vocalization Voice] Measure 128
+                            % [T 1 Vocalization Voice] Measure 129
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -6087,7 +6094,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [T 1 Vocalization Voice] Measure 129
+                            % [T 1 Vocalization Voice] Measure 130
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -6102,7 +6109,7 @@
                             {
                                 r4.
                             }
-                            % [T 1 Vocalization Voice] Measure 130
+                            % [T 1 Vocalization Voice] Measure 131
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6111,7 +6118,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 131
+                            % [T 1 Vocalization Voice] Measure 132
                             {
                                 r8
                             }
@@ -6148,7 +6155,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Vocalization Voice] Measure 132
+                            % [T 1 Vocalization Voice] Measure 133
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6157,7 +6164,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 138
+                            % [T 1 Vocalization Voice] Measure 139
                             {
                                 r2
                             }
@@ -6204,7 +6211,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \startTextSpan \<
                             }
-                            % [T 1 Vocalization Voice] Measure 139
+                            % [T 1 Vocalization Voice] Measure 140
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -6219,7 +6226,7 @@
                             {
                                 r4.
                             }
-                            % [T 1 Vocalization Voice] Measure 140
+                            % [T 1 Vocalization Voice] Measure 141
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6231,7 +6238,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 1 Vocalization Voice] Measure 141
+                            % [T 1 Vocalization Voice] Measure 142
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -6262,7 +6269,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Vocalization Voice] Measure 142
+                            % [T 1 Vocalization Voice] Measure 143
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6271,7 +6278,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 143
+                            % [T 1 Vocalization Voice] Measure 144
                             {
                                 r4
                             }
@@ -6328,7 +6335,7 @@
                             {
                                 r2
                             }
-                            % [T 1 Vocalization Voice] Measure 144
+                            % [T 1 Vocalization Voice] Measure 145
                             {
                                 r4.
                             }
@@ -6352,7 +6359,7 @@
                             {
                                 r8
                             }
-                            % [T 1 Vocalization Voice] Measure 145
+                            % [T 1 Vocalization Voice] Measure 146
                             {
                                 r2..
                             }
@@ -6366,7 +6373,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
-                            % [T 1 Vocalization Voice] Measure 146
+                            % [T 1 Vocalization Voice] Measure 147
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -6391,7 +6398,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [T 1 Vocalization Voice] Measure 147
+                            % [T 1 Vocalization Voice] Measure 148
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -6405,7 +6412,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Vocalization Voice] Measure 148
+                            % [T 1 Vocalization Voice] Measure 149
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6414,7 +6421,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 154
+                            % [T 1 Vocalization Voice] Measure 155
                             {
                                 r2..
                             }
@@ -6460,7 +6467,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( \startTextSpan
                             }
-                            % [T 1 Vocalization Voice] Measure 155
+                            % [T 1 Vocalization Voice] Measure 156
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -6476,7 +6483,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 1 Vocalization Voice] Measure 156
+                            % [T 1 Vocalization Voice] Measure 157
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -6494,7 +6501,7 @@
                             {
                                 r2
                             }
-                            % [T 1 Vocalization Voice] Measure 157
+                            % [T 1 Vocalization Voice] Measure 158
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6503,7 +6510,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Vocalization Voice] Measure 159
+                            % [T 1 Vocalization Voice] Measure 160
                             {
                                 r2.
                             }
@@ -6550,7 +6557,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [T 1 Vocalization Voice] Measure 160
+                            % [T 1 Vocalization Voice] Measure 161
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -6563,7 +6570,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Vocalization Voice] Measure 161
+                            % [T 1 Vocalization Voice] Measure 162
                             {
                                 r4
                             }
@@ -6589,7 +6596,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            % [T 1 Vocalization Voice] Measure 162
+                            % [T 1 Vocalization Voice] Measure 163
                             \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -6618,7 +6625,7 @@
                             {
                                 r2 \!
                             }
-                            % [T 1 Vocalization Voice] Measure 163
+                            % [T 1 Vocalization Voice] Measure 164
                             {
                                 r8
                             }
@@ -6633,7 +6640,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \<
                             }
-                            % [T 1 Vocalization Voice] Measure 164
+                            % [T 1 Vocalization Voice] Measure 165
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -6647,7 +6654,7 @@
                             {
                                 r4.
                             }
-                            % [T 1 Vocalization Voice] Measure 165
+                            % [T 1 Vocalization Voice] Measure 166
                             {
                                 r2..
                             }
@@ -6661,7 +6668,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
-                            % [T 1 Vocalization Voice] Measure 166
+                            % [T 1 Vocalization Voice] Measure 167
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -6677,7 +6684,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            % [T 1 Vocalization Voice] Measure 167
+                            % [T 1 Vocalization Voice] Measure 168
                             \times 2/3 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -6703,7 +6710,7 @@
                         }
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 1 Vocalization Voice] Measure 168
+                            % [T 1 Vocalization Voice] Measure 169
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -6731,7 +6738,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
-                            % [T 1 Vocalization Voice] Measure 169
+                            % [T 1 Vocalization Voice] Measure 170
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -6755,7 +6762,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'8 -\accent \fp \(
                             }
-                            % [T 1 Vocalization Voice] Measure 170
+                            % [T 1 Vocalization Voice] Measure 171
                             {
                                 c'8 -\tenuto
                                 <> \)
@@ -6769,7 +6776,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Vocalization Voice] Measure 171
+                            % [T 1 Vocalization Voice] Measure 172
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6785,7 +6792,7 @@
                     \bar "||"
                     \context Voice = "T 1 Percussion Voice" {
                         {
-                            % [T 1 Percussion Voice] Measure 125
+                            % [T 1 Percussion Voice] Measure 126
                             {
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -6800,7 +6807,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    crotales
+                                                                    marimba
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -6816,7 +6823,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    ct.
+                                                                    mb.
                                         }
                                     }
                                 r4
@@ -6861,6 +6868,38 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    crotales
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    ct.
+                                        }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cf'''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
@@ -6874,6 +6913,19 @@
                                                         \caps
                                                             LV
                                         }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                ct.
+                                                            }
+                                    }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -6888,7 +6940,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 126
+                            % [T 1 Percussion Voice] Measure 127
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -6917,7 +6969,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 127
+                            % [T 1 Percussion Voice] Measure 128
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -6926,7 +6978,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Percussion Voice] Measure 130
+                            % [T 1 Percussion Voice] Measure 131
                             {
                                 r2
                                 r8
@@ -6996,7 +7048,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 131
+                            % [T 1 Percussion Voice] Measure 132
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7025,7 +7077,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 132
+                            % [T 1 Percussion Voice] Measure 133
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -7034,7 +7086,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Percussion Voice] Measure 133
+                            % [T 1 Percussion Voice] Measure 134
                             {
                                 r8
                             }
@@ -7100,7 +7152,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Percussion Voice] Measure 134
+                            % [T 1 Percussion Voice] Measure 135
                             {
                                 r4
                             }
@@ -7136,7 +7188,7 @@
                                 r8
                                 r2
                             }
-                            % [T 1 Percussion Voice] Measure 135
+                            % [T 1 Percussion Voice] Measure 136
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -7145,7 +7197,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Percussion Voice] Measure 141
+                            % [T 1 Percussion Voice] Measure 142
                             {
                                 r2
                                 r8
@@ -7212,7 +7264,7 @@
                             {
                                 r4
                             }
-                            % [T 1 Percussion Voice] Measure 142
+                            % [T 1 Percussion Voice] Measure 143
                             {
                                 r2.
                             }
@@ -7249,7 +7301,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 143
+                            % [T 1 Percussion Voice] Measure 144
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7277,7 +7329,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 144
+                            % [T 1 Percussion Voice] Measure 145
                             {
                                 r4
                             }
@@ -7315,7 +7367,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 145
+                            % [T 1 Percussion Voice] Measure 146
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7343,7 +7395,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 146
+                            % [T 1 Percussion Voice] Measure 147
                             {
                                 r8
                             }
@@ -7380,7 +7432,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 147
+                            % [T 1 Percussion Voice] Measure 148
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7409,7 +7461,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 148
+                            % [T 1 Percussion Voice] Measure 149
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -7421,7 +7473,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 149
+                            % [T 1 Percussion Voice] Measure 150
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -7481,7 +7533,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 150
+                            % [T 1 Percussion Voice] Measure 151
                             {
                                 r2
                             }
@@ -7515,7 +7567,7 @@
                             {
                                 r4.
                             }
-                            % [T 1 Percussion Voice] Measure 151
+                            % [T 1 Percussion Voice] Measure 152
                             {
                                 r4
                             }
@@ -7551,7 +7603,7 @@
                                 r8
                                 r2
                             }
-                            % [T 1 Percussion Voice] Measure 152
+                            % [T 1 Percussion Voice] Measure 153
                             {
                                 r2.
                             }
@@ -7607,7 +7659,7 @@
                                                             }
                                     }
                             }
-                            % [T 1 Percussion Voice] Measure 153
+                            % [T 1 Percussion Voice] Measure 154
                             {
                                 <ef gf>4 :32 \p \repeatTie
                                 <> \)
@@ -7617,7 +7669,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Percussion Voice] Measure 154
+                            % [T 1 Percussion Voice] Measure 155
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -7626,7 +7678,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Percussion Voice] Measure 157
+                            % [T 1 Percussion Voice] Measure 158
                             {
                                 r4
                             }
@@ -7741,7 +7793,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 158
+                            % [T 1 Percussion Voice] Measure 159
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7769,7 +7821,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 159
+                            % [T 1 Percussion Voice] Measure 160
                             {
                                 r8
                             }
@@ -7804,7 +7856,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Percussion Voice] Measure 160
+                            % [T 1 Percussion Voice] Measure 161
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -7813,7 +7865,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Percussion Voice] Measure 162
+                            % [T 1 Percussion Voice] Measure 163
                             {
                                 r2
                                 r8
@@ -7883,7 +7935,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 163
+                            % [T 1 Percussion Voice] Measure 164
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7945,7 +7997,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 164
+                            % [T 1 Percussion Voice] Measure 165
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -7974,7 +8026,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 165
+                            % [T 1 Percussion Voice] Measure 166
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -7983,7 +8035,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 1 Percussion Voice] Measure 166
+                            % [T 1 Percussion Voice] Measure 167
                             {
                                 r8
                             }
@@ -8049,7 +8101,7 @@
                             {
                                 r2.
                             }
-                            % [T 1 Percussion Voice] Measure 167
+                            % [T 1 Percussion Voice] Measure 168
                             {
                                 r2
                             }
@@ -8086,7 +8138,7 @@
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
-                            % [T 1 Percussion Voice] Measure 168
+                            % [T 1 Percussion Voice] Measure 169
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -8116,7 +8168,7 @@
                             {
                                 r2..
                             }
-                            % [T 1 Percussion Voice] Measure 169
+                            % [T 1 Percussion Voice] Measure 170
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8155,7 +8207,7 @@
                     \bar "||"
                     \context Voice = "T 2 Vocalization Voice" {
                         {
-                            % [T 2 Vocalization Voice] Measure 125
+                            % [T 2 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8187,7 +8239,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 2 Vocalization Voice] Measure 128
+                            % [T 2 Vocalization Voice] Measure 129
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -8218,7 +8270,7 @@
                             {
                                 r2.
                             }
-                            % [T 2 Vocalization Voice] Measure 129
+                            % [T 2 Vocalization Voice] Measure 130
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8227,7 +8279,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 130
+                            % [T 2 Vocalization Voice] Measure 131
                             {
                                 r4
                             }
@@ -8282,7 +8334,7 @@
                             {
                                 r2
                             }
-                            % [T 2 Vocalization Voice] Measure 131
+                            % [T 2 Vocalization Voice] Measure 132
                             {
                                 r4.
                             }
@@ -8315,7 +8367,7 @@
                             }
                         }
                         {
-                            % [T 2 Vocalization Voice] Measure 132
+                            % [T 2 Vocalization Voice] Measure 133
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8324,7 +8376,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 138
+                            % [T 2 Vocalization Voice] Measure 139
                             {
                                 r2
                                 r8
@@ -8377,7 +8429,7 @@
                             }
                         }
                         {
-                            % [T 2 Vocalization Voice] Measure 139
+                            % [T 2 Vocalization Voice] Measure 140
                             {
                                 r2
                             }
@@ -8392,7 +8444,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \<
                             }
-                            % [T 2 Vocalization Voice] Measure 140
+                            % [T 2 Vocalization Voice] Measure 141
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -8406,7 +8458,7 @@
                             {
                                 r4.
                             }
-                            % [T 2 Vocalization Voice] Measure 141
+                            % [T 2 Vocalization Voice] Measure 142
                             {
                                 r4
                             }
@@ -8421,7 +8473,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'2. -\accent \fp \( \>
                             }
-                            % [T 2 Vocalization Voice] Measure 142
+                            % [T 2 Vocalization Voice] Measure 143
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -8441,7 +8493,7 @@
                                 r8 \!
                                 r2
                             }
-                            % [T 2 Vocalization Voice] Measure 143
+                            % [T 2 Vocalization Voice] Measure 144
                             {
                                 r2
                                 r8
@@ -8499,7 +8551,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Vocalization Voice] Measure 144
+                            % [T 2 Vocalization Voice] Measure 145
                             {
                                 r2
                                 r8
@@ -8525,7 +8577,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Vocalization Voice] Measure 145
+                            % [T 2 Vocalization Voice] Measure 146
                             {
                                 r8
                             }
@@ -8557,7 +8609,7 @@
                             {
                                 r4. \!
                             }
-                            % [T 2 Vocalization Voice] Measure 146
+                            % [T 2 Vocalization Voice] Measure 147
                             {
                                 r2..
                             }
@@ -8571,7 +8623,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \(
                             }
-                            % [T 2 Vocalization Voice] Measure 147
+                            % [T 2 Vocalization Voice] Measure 148
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -8585,7 +8637,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Vocalization Voice] Measure 148
+                            % [T 2 Vocalization Voice] Measure 149
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8594,7 +8646,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 154
+                            % [T 2 Vocalization Voice] Measure 155
                             {
                                 r4
                             }
@@ -8649,7 +8701,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Vocalization Voice] Measure 155
+                            % [T 2 Vocalization Voice] Measure 156
                             {
                                 r2.
                             }
@@ -8669,7 +8721,7 @@
                             }
                         }
                         {
-                            % [T 2 Vocalization Voice] Measure 156
+                            % [T 2 Vocalization Voice] Measure 157
                             {
                                 r2
                             }
@@ -8699,7 +8751,7 @@
                             {
                                 r8 \!
                             }
-                            % [T 2 Vocalization Voice] Measure 157
+                            % [T 2 Vocalization Voice] Measure 158
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8711,7 +8763,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 2 Vocalization Voice] Measure 160
+                            % [T 2 Vocalization Voice] Measure 161
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -8763,7 +8815,7 @@
                         }
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 2 Vocalization Voice] Measure 161
+                            % [T 2 Vocalization Voice] Measure 162
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -8780,7 +8832,7 @@
                             {
                                 r2.
                             }
-                            % [T 2 Vocalization Voice] Measure 162
+                            % [T 2 Vocalization Voice] Measure 163
                             {
                                 r2.
                             }
@@ -8797,7 +8849,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [T 2 Vocalization Voice] Measure 163
+                            % [T 2 Vocalization Voice] Measure 164
                             {
                                 c'8 -\tenuto
                                 <> \)
@@ -8811,7 +8863,7 @@
                             {
                                 r2.. \!
                             }
-                            % [T 2 Vocalization Voice] Measure 164
+                            % [T 2 Vocalization Voice] Measure 165
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8820,7 +8872,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Vocalization Voice] Measure 165
+                            % [T 2 Vocalization Voice] Measure 166
                             {
                                 r8
                             }
@@ -8872,7 +8924,7 @@
                             }
                         }
                         {
-                            % [T 2 Vocalization Voice] Measure 166
+                            % [T 2 Vocalization Voice] Measure 167
                             {
                                 r2..
                             }
@@ -8886,7 +8938,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
-                            % [T 2 Vocalization Voice] Measure 167
+                            % [T 2 Vocalization Voice] Measure 168
                             {
                                 c'4. \repeatTie
                                 <> \)
@@ -8900,7 +8952,7 @@
                                 r8
                                 r2
                             }
-                            % [T 2 Vocalization Voice] Measure 168
+                            % [T 2 Vocalization Voice] Measure 169
                             {
                                 r8
                             }
@@ -8915,7 +8967,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \<
                             }
-                            % [T 2 Vocalization Voice] Measure 169
+                            % [T 2 Vocalization Voice] Measure 170
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -8930,7 +8982,7 @@
                             {
                                 r4.
                             }
-                            % [T 2 Vocalization Voice] Measure 170
+                            % [T 2 Vocalization Voice] Measure 171
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -8946,7 +8998,7 @@
                     \bar "||"
                     \context Voice = "T 2 Percussion Voice" {
                         {
-                            % [T 2 Percussion Voice] Measure 125
+                            % [T 2 Percussion Voice] Measure 126
                             {
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -8961,7 +9013,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    vibraphone
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -8977,7 +9034,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    vb.
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
                                         }
                                     }
                                 r4.
@@ -9022,6 +9084,38 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cf''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
@@ -9035,6 +9129,19 @@
                                                         \caps
                                                             LV
                                         }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                vb.
+                                                            }
+                                    }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -9048,7 +9155,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 126
+                            % [T 2 Percussion Voice] Measure 127
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -9173,7 +9280,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Percussion Voice] Measure 127
+                            % [T 2 Percussion Voice] Measure 128
                             {
                                 r2
                             }
@@ -9269,7 +9376,7 @@
                             {
                                 r4.
                             }
-                            % [T 2 Percussion Voice] Measure 128
+                            % [T 2 Percussion Voice] Measure 129
                             {
                                 r4
                             }
@@ -9386,7 +9493,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Percussion Voice] Measure 129
+                            % [T 2 Percussion Voice] Measure 130
                             {
                                 r2
                             }
@@ -9436,7 +9543,7 @@
                                 \startStaff
                                 c'2 :32 \( \startTextSpan \<
                             }
-                            % [T 2 Percussion Voice] Measure 130
+                            % [T 2 Percussion Voice] Measure 131
                             {
                                 c'4. :32 \f \repeatTie
                                 <> \)
@@ -9552,7 +9659,7 @@
                                                             }
                                     }
                             }
-                            % [T 2 Percussion Voice] Measure 131
+                            % [T 2 Percussion Voice] Measure 132
                             {
                                 b'8 -\tenuto \laissezVibrer
                                     ^ \markup {
@@ -9576,7 +9683,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 132
+                            % [T 2 Percussion Voice] Measure 133
                             {
                                 r4.
                             }
@@ -9610,7 +9717,7 @@
                             {
                                 r2
                             }
-                            % [T 2 Percussion Voice] Measure 133
+                            % [T 2 Percussion Voice] Measure 134
                             {
                                 r8
                             }
@@ -9644,7 +9751,7 @@
                             {
                                 r2.
                             }
-                            % [T 2 Percussion Voice] Measure 134
+                            % [T 2 Percussion Voice] Measure 135
                             {
                                 r2
                                 r8
@@ -9682,7 +9789,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 135
+                            % [T 2 Percussion Voice] Measure 136
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -9712,7 +9819,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 136
+                            % [T 2 Percussion Voice] Measure 137
                             {
                                 r8
                             }
@@ -9816,7 +9923,7 @@
                                                             }
                                     }
                             }
-                            % [T 2 Percussion Voice] Measure 137
+                            % [T 2 Percussion Voice] Measure 138
                             {
                                 f2. \p \repeatTie
                                 <> \)
@@ -9832,7 +9939,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Percussion Voice] Measure 138
+                            % [T 2 Percussion Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -9841,7 +9948,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Percussion Voice] Measure 139
+                            % [T 2 Percussion Voice] Measure 140
                             {
                                 r8
                             }
@@ -9891,7 +9998,7 @@
                                 \startStaff
                                 c'2.. :32 \( \startTextSpan \<
                             }
-                            % [T 2 Percussion Voice] Measure 140
+                            % [T 2 Percussion Voice] Measure 141
                             {
                                 c'2 :32 \mf \repeatTie
                                 <> \)
@@ -9910,7 +10017,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 141
+                            % [T 2 Percussion Voice] Measure 142
                             {
                                 \clef "treble"
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -10016,7 +10123,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 142
+                            % [T 2 Percussion Voice] Measure 143
                             {
                                 r2
                             }
@@ -10050,7 +10157,7 @@
                             {
                                 r4.
                             }
-                            % [T 2 Percussion Voice] Measure 143
+                            % [T 2 Percussion Voice] Measure 144
                             {
                                 r2
                                 r8
@@ -10088,7 +10195,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 144
+                            % [T 2 Percussion Voice] Measure 145
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -10149,7 +10256,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Percussion Voice] Measure 145
+                            % [T 2 Percussion Voice] Measure 146
                             {
                                 r4.
                             }
@@ -10247,7 +10354,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Percussion Voice] Measure 146
+                            % [T 2 Percussion Voice] Measure 147
                             {
                                 r4
                             }
@@ -10344,7 +10451,7 @@
                                 r8
                                 r2
                             }
-                            % [T 2 Percussion Voice] Measure 147
+                            % [T 2 Percussion Voice] Measure 148
                             {
                                 r2.
                             }
@@ -10448,7 +10555,7 @@
                                                             }
                                     }
                             }
-                            % [T 2 Percussion Voice] Measure 148
+                            % [T 2 Percussion Voice] Measure 149
                             {
                                 f4 \p \repeatTie
                                 <> \)
@@ -10572,7 +10679,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Percussion Voice] Measure 149
+                            % [T 2 Percussion Voice] Measure 150
                             {
                                 r4
                             }
@@ -10610,7 +10717,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 150
+                            % [T 2 Percussion Voice] Measure 151
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -10672,7 +10779,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 151
+                            % [T 2 Percussion Voice] Measure 152
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -10701,7 +10808,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 152
+                            % [T 2 Percussion Voice] Measure 153
                             {
                                 r8
                             }
@@ -10720,7 +10827,7 @@
                             {
                                 r4
                             }
-                            % [T 2 Percussion Voice] Measure 153
+                            % [T 2 Percussion Voice] Measure 154
                             {
                                 r4
                             }
@@ -10818,7 +10925,7 @@
                             {
                                 r4.
                             }
-                            % [T 2 Percussion Voice] Measure 154
+                            % [T 2 Percussion Voice] Measure 155
                             {
                                 r2..
                             }
@@ -10868,11 +10975,11 @@
                                 \startStaff
                                 c'8 :64 \( \startTextSpan \<
                             }
-                            % [T 2 Percussion Voice] Measure 155
+                            % [T 2 Percussion Voice] Measure 156
                             {
                                 c'1 :32 \repeatTie
                             }
-                            % [T 2 Percussion Voice] Measure 156
+                            % [T 2 Percussion Voice] Measure 157
                             {
                                 c'8 :64 \p \repeatTie
                                 <> \)
@@ -10888,7 +10995,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 157
+                            % [T 2 Percussion Voice] Measure 158
                             {
                                 r4.
                             }
@@ -11003,7 +11110,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 158
+                            % [T 2 Percussion Voice] Measure 159
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -11033,7 +11140,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 159
+                            % [T 2 Percussion Voice] Measure 160
                             {
                                 r4
                             }
@@ -11137,7 +11244,7 @@
                                                             }
                                     }
                             }
-                            % [T 2 Percussion Voice] Measure 160
+                            % [T 2 Percussion Voice] Measure 161
                             {
                                 c'2 :32 \f \repeatTie
                                 <> \)
@@ -11153,7 +11260,7 @@
                             {
                                 r2
                             }
-                            % [T 2 Percussion Voice] Measure 161
+                            % [T 2 Percussion Voice] Measure 162
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11162,7 +11269,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 2 Percussion Voice] Measure 162
+                            % [T 2 Percussion Voice] Measure 163
                             {
                                 r2..
                             }
@@ -11265,7 +11372,7 @@
                                                             }
                                     }
                             }
-                            % [T 2 Percussion Voice] Measure 163
+                            % [T 2 Percussion Voice] Measure 164
                             {
                                 a'8 -\tenuto \laissezVibrer
                                     ^ \markup {
@@ -11290,7 +11397,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 164
+                            % [T 2 Percussion Voice] Measure 165
                             {
                                 r8
                             }
@@ -11352,7 +11459,7 @@
                             {
                                 r8
                             }
-                            % [T 2 Percussion Voice] Measure 165
+                            % [T 2 Percussion Voice] Measure 166
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11364,7 +11471,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 167
+                            % [T 2 Percussion Voice] Measure 168
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -11424,7 +11531,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 168
+                            % [T 2 Percussion Voice] Measure 169
                             {
                                 r4.
                             }
@@ -11461,7 +11568,7 @@
                         }
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
-                            % [T 2 Percussion Voice] Measure 169
+                            % [T 2 Percussion Voice] Measure 170
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -11491,7 +11598,7 @@
                             {
                                 r2..
                             }
-                            % [T 2 Percussion Voice] Measure 170
+                            % [T 2 Percussion Voice] Measure 171
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11530,7 +11637,7 @@
                     \bar "||"
                     \context Voice = "T 3 Vocalization Voice" {
                         {
-                            % [T 3 Vocalization Voice] Measure 125
+                            % [T 3 Vocalization Voice] Measure 126
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11559,7 +11666,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 128
+                            % [T 3 Vocalization Voice] Measure 129
                             {
                                 r8
                             }
@@ -11606,7 +11713,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \startTextSpan \<
                             }
-                            % [T 3 Vocalization Voice] Measure 129
+                            % [T 3 Vocalization Voice] Measure 130
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -11619,7 +11726,7 @@
                             {
                                 r2.
                             }
-                            % [T 3 Vocalization Voice] Measure 130
+                            % [T 3 Vocalization Voice] Measure 131
                             {
                                 r4
                             }
@@ -11645,7 +11752,7 @@
                         }
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            % [T 3 Vocalization Voice] Measure 131
+                            % [T 3 Vocalization Voice] Measure 132
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 7/8 {
                                 \once \override Hairpin.circled-tip = ##t
@@ -11684,7 +11791,7 @@
                             {
                                 r8 \!
                             }
-                            % [T 3 Vocalization Voice] Measure 132
+                            % [T 3 Vocalization Voice] Measure 133
                             {
                                 r2
                             }
@@ -11705,7 +11812,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 133
+                            % [T 3 Vocalization Voice] Measure 134
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11714,7 +11821,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 138
+                            % [T 3 Vocalization Voice] Measure 139
                             {
                                 r2..
                             }
@@ -11760,7 +11867,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( \startTextSpan
                             }
-                            % [T 3 Vocalization Voice] Measure 139
+                            % [T 3 Vocalization Voice] Measure 140
                             {
                                 c'4. \repeatTie
                                 <> \)
@@ -11774,7 +11881,7 @@
                                 r8
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 140
+                            % [T 3 Vocalization Voice] Measure 141
                             {
                                 r2.
                             }
@@ -11789,7 +11896,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
-                            % [T 3 Vocalization Voice] Measure 141
+                            % [T 3 Vocalization Voice] Measure 142
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -11803,7 +11910,7 @@
                             {
                                 r2..
                             }
-                            % [T 3 Vocalization Voice] Measure 142
+                            % [T 3 Vocalization Voice] Measure 143
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11812,7 +11919,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 143
+                            % [T 3 Vocalization Voice] Measure 144
                             {
                                 r8
                             }
@@ -11876,7 +11983,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [T 3 Vocalization Voice] Measure 144
+                            % [T 3 Vocalization Voice] Measure 145
                             \times 2/3 {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -11894,7 +12001,7 @@
                             {
                                 r2. \!
                             }
-                            % [T 3 Vocalization Voice] Measure 145
+                            % [T 3 Vocalization Voice] Measure 146
                             {
                                 r8
                             }
@@ -11909,7 +12016,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \<
                             }
-                            % [T 3 Vocalization Voice] Measure 146
+                            % [T 3 Vocalization Voice] Measure 147
                             {
                                 c'4 \repeatTie
                             }
@@ -11926,7 +12033,7 @@
                             {
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 147
+                            % [T 3 Vocalization Voice] Measure 148
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11935,7 +12042,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 148
+                            % [T 3 Vocalization Voice] Measure 149
                             {
                                 r2
                             }
@@ -11972,7 +12079,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Vocalization Voice] Measure 149
+                            % [T 3 Vocalization Voice] Measure 150
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -11981,7 +12088,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 154
+                            % [T 3 Vocalization Voice] Measure 155
                             {
                                 r2
                             }
@@ -12028,7 +12135,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \startTextSpan \<
                             }
-                            % [T 3 Vocalization Voice] Measure 155
+                            % [T 3 Vocalization Voice] Measure 156
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -12042,7 +12149,7 @@
                             {
                                 r4.
                             }
-                            % [T 3 Vocalization Voice] Measure 156
+                            % [T 3 Vocalization Voice] Measure 157
                             {
                                 r4
                             }
@@ -12068,7 +12175,7 @@
                             {
                                 r8
                             }
-                            % [T 3 Vocalization Voice] Measure 157
+                            % [T 3 Vocalization Voice] Measure 158
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -12077,7 +12184,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Vocalization Voice] Measure 160
+                            % [T 3 Vocalization Voice] Measure 161
                             {
                                 r8
                             }
@@ -12133,7 +12240,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Vocalization Voice] Measure 161
+                            % [T 3 Vocalization Voice] Measure 162
                             {
                                 r2.
                             }
@@ -12153,7 +12260,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 162
+                            % [T 3 Vocalization Voice] Measure 163
                             {
                                 r2
                                 r8
@@ -12174,7 +12281,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [T 3 Vocalization Voice] Measure 163
+                            % [T 3 Vocalization Voice] Measure 164
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -12196,7 +12303,7 @@
                         }
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [T 3 Vocalization Voice] Measure 164
+                            % [T 3 Vocalization Voice] Measure 165
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -12213,7 +12320,7 @@
                             {
                                 r2.
                             }
-                            % [T 3 Vocalization Voice] Measure 165
+                            % [T 3 Vocalization Voice] Measure 166
                             {
                                 r2
                             }
@@ -12233,7 +12340,7 @@
                             }
                         }
                         {
-                            % [T 3 Vocalization Voice] Measure 166
+                            % [T 3 Vocalization Voice] Measure 167
                             {
                                 r2.
                             }
@@ -12250,7 +12357,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [T 3 Vocalization Voice] Measure 167
+                            % [T 3 Vocalization Voice] Measure 168
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -12271,7 +12378,7 @@
                             {
                                 r2 \!
                             }
-                            % [T 3 Vocalization Voice] Measure 168
+                            % [T 3 Vocalization Voice] Measure 169
                             {
                                 r4.
                             }
@@ -12287,7 +12394,7 @@
                                 c'8 \( \<
                                 c'2 \repeatTie
                             }
-                            % [T 3 Vocalization Voice] Measure 169
+                            % [T 3 Vocalization Voice] Measure 170
                             {
                                 c'2 \p \repeatTie
                                 <> \)
@@ -12301,7 +12408,7 @@
                             {
                                 r2
                             }
-                            % [T 3 Vocalization Voice] Measure 170
+                            % [T 3 Vocalization Voice] Measure 171
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -12318,50 +12425,8 @@
                     \context Voice = "T 3 Percussion Voice" {
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 125
+                            % [T 3 Percussion Voice] Measure 126
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T3
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    \right-column
-                                                                        {
-                                                                            "four toms"
-                                                                            and
-                                                                            "bass drum"
-                                                                        }
-                                        }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T3
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    \right-column
-                                                                        {
-                                                                            toms
-                                                                            &
-                                                                            b.d.
-                                                                        }
-                                        }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                                 f8 -\tenuto \laissezVibrer \f \(
                                     ^ \markup {
@@ -12375,19 +12440,6 @@
                                                         \caps
                                                             LV
                                         }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
-                                    }
                                 <> \)
                             }
                         }
@@ -12471,7 +12523,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Percussion Voice] Measure 126
+                            % [T 3 Percussion Voice] Measure 127
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -12480,7 +12532,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Percussion Voice] Measure 127
+                            % [T 3 Percussion Voice] Measure 128
                             {
                                 r2
                                 r8
@@ -12547,11 +12599,11 @@
                                                             }
                                     }
                             }
-                            % [T 3 Percussion Voice] Measure 128
+                            % [T 3 Percussion Voice] Measure 129
                             {
                                 f1 :32 \repeatTie
                             }
-                            % [T 3 Percussion Voice] Measure 129
+                            % [T 3 Percussion Voice] Measure 130
                             {
                                 f2 :32 \repeatTie
                                 f8 :64 \p \repeatTie
@@ -12562,7 +12614,7 @@
                             {
                                 r4.
                             }
-                            % [T 3 Percussion Voice] Measure 130
+                            % [T 3 Percussion Voice] Measure 131
                             {
                                 r4
                             }
@@ -12644,7 +12696,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 131
+                            % [T 3 Percussion Voice] Measure 132
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 f'8 -\tenuto \laissezVibrer \p \(
@@ -12730,7 +12782,7 @@
                                                             }
                                     }
                             }
-                            % [T 3 Percussion Voice] Measure 132
+                            % [T 3 Percussion Voice] Measure 133
                             {
                                 f8 :64 \repeatTie
                                 <> \)
@@ -12815,7 +12867,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Percussion Voice] Measure 133
+                            % [T 3 Percussion Voice] Measure 134
                             {
                                 r2
                                 r8
@@ -12844,7 +12896,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Percussion Voice] Measure 134
+                            % [T 3 Percussion Voice] Measure 135
                             {
                                 r8
                             }
@@ -12873,7 +12925,7 @@
                             {
                                 r2.
                             }
-                            % [T 3 Percussion Voice] Measure 135
+                            % [T 3 Percussion Voice] Measure 136
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -12882,7 +12934,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Percussion Voice] Measure 136
+                            % [T 3 Percussion Voice] Measure 137
                             {
                                 r8
                             }
@@ -12948,7 +13000,7 @@
                                                             }
                                     }
                             }
-                            % [T 3 Percussion Voice] Measure 137
+                            % [T 3 Percussion Voice] Measure 138
                             {
                                 f2.. :32 \p \repeatTie
                                 <> \)
@@ -12958,7 +13010,7 @@
                             {
                                 r8
                             }
-                            % [T 3 Percussion Voice] Measure 138
+                            % [T 3 Percussion Voice] Measure 139
                             {
                                 r4.
                             }
@@ -12971,14 +13023,14 @@
                                 f8 :64 \( \<
                                 f2 :32 \repeatTie
                             }
-                            % [T 3 Percussion Voice] Measure 139
+                            % [T 3 Percussion Voice] Measure 140
                             {
                                 f1 :32 \p \repeatTie
                                 <> \)
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 140
+                            % [T 3 Percussion Voice] Measure 141
                             {
                                 r2
                                 r8
@@ -12996,7 +13048,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Percussion Voice] Measure 141
+                            % [T 3 Percussion Voice] Measure 142
                             {
                                 r4
                             }
@@ -13078,7 +13130,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 142
+                            % [T 3 Percussion Voice] Measure 143
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
@@ -13100,7 +13152,7 @@
                             {
                                 r2..
                             }
-                            % [T 3 Percussion Voice] Measure 143
+                            % [T 3 Percussion Voice] Measure 144
                             {
                                 r4
                             }
@@ -13129,7 +13181,7 @@
                                 r8
                                 r2
                             }
-                            % [T 3 Percussion Voice] Measure 144
+                            % [T 3 Percussion Voice] Measure 145
                             {
                                 r2..
                             }
@@ -13151,7 +13203,7 @@
                                                             LV
                                         }
                             }
-                            % [T 3 Percussion Voice] Measure 145
+                            % [T 3 Percussion Voice] Measure 146
                             {
                                 b'8 -\tenuto \laissezVibrer
                                     ^ \markup {
@@ -13200,7 +13252,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 146
+                            % [T 3 Percussion Voice] Measure 147
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
@@ -13222,7 +13274,7 @@
                             {
                                 r2..
                             }
-                            % [T 3 Percussion Voice] Measure 147
+                            % [T 3 Percussion Voice] Measure 148
                             {
                                 r8
                             }
@@ -13313,7 +13365,7 @@
                                                             }
                                     }
                             }
-                            % [T 3 Percussion Voice] Measure 148
+                            % [T 3 Percussion Voice] Measure 149
                             {
                                 f8 :64 \repeatTie
                                 <> \)
@@ -13398,7 +13450,7 @@
                             {
                                 r4
                             }
-                            % [T 3 Percussion Voice] Measure 149
+                            % [T 3 Percussion Voice] Measure 150
                             {
                                 r4.
                             }
@@ -13429,7 +13481,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 150
+                            % [T 3 Percussion Voice] Measure 151
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 a'8 -\tenuto \laissezVibrer \ppp \(
@@ -13455,7 +13507,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
                         {
-                            % [T 3 Percussion Voice] Measure 151
+                            % [T 3 Percussion Voice] Measure 152
                             {
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -13517,7 +13569,7 @@
                             }
                         }
                         {
-                            % [T 3 Percussion Voice] Measure 152
+                            % [T 3 Percussion Voice] Measure 153
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -13529,13 +13581,13 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
                         {
-                            % [T 3 Percussion Voice] Measure 154
+                            % [T 3 Percussion Voice] Measure 155
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f1 :32 \( \<
                             }
-                            % [T 3 Percussion Voice] Measure 155
+                            % [T 3 Percussion Voice] Measure 156
                             {
                                 f4 :32 \p \repeatTie
                                 <> \)
@@ -13545,7 +13597,7 @@
                             {
                                 r2.
                             }
-                            % [T 3 Percussion Voice] Measure 156
+                            % [T 3 Percussion Voice] Measure 157
                             {
                                 r8
                             }
@@ -13557,7 +13609,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2.. :32 \( \<
                             }
-                            % [T 3 Percussion Voice] Measure 157
+                            % [T 3 Percussion Voice] Measure 158
                             {
                                 f8 :64 \p \repeatTie
                                 <> \)
@@ -13645,7 +13697,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 158
+                            % [T 3 Percussion Voice] Measure 159
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 d''8 -\tenuto \laissezVibrer \ppp \(
@@ -13668,7 +13720,7 @@
                             {
                                 r2..
                             }
-                            % [T 3 Percussion Voice] Measure 159
+                            % [T 3 Percussion Voice] Measure 160
                             {
                                 r4
                             }
@@ -13734,7 +13786,7 @@
                                                             }
                                     }
                             }
-                            % [T 3 Percussion Voice] Measure 160
+                            % [T 3 Percussion Voice] Measure 161
                             {
                                 f2 :32 \p \repeatTie
                                 <> \)
@@ -13744,7 +13796,7 @@
                             {
                                 r2
                             }
-                            % [T 3 Percussion Voice] Measure 161
+                            % [T 3 Percussion Voice] Measure 162
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -13753,7 +13805,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Percussion Voice] Measure 162
+                            % [T 3 Percussion Voice] Measure 163
                             {
                                 r4
                             }
@@ -13835,7 +13887,7 @@
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 163
+                            % [T 3 Percussion Voice] Measure 164
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 c''8 -\tenuto \laissezVibrer \ppp \(
@@ -13857,7 +13909,7 @@
                             {
                                 r2..
                             }
-                            % [T 3 Percussion Voice] Measure 164
+                            % [T 3 Percussion Voice] Measure 165
                             {
                                 r2
                             }
@@ -13885,7 +13937,7 @@
                             {
                                 r4.
                             }
-                            % [T 3 Percussion Voice] Measure 165
+                            % [T 3 Percussion Voice] Measure 166
                             {
                                 r2
                             }
@@ -13913,7 +13965,7 @@
                             {
                                 r4.
                             }
-                            % [T 3 Percussion Voice] Measure 166
+                            % [T 3 Percussion Voice] Measure 167
                             {
                                 r4.
                             }
@@ -13941,7 +13993,7 @@
                             {
                                 r2
                             }
-                            % [T 3 Percussion Voice] Measure 167
+                            % [T 3 Percussion Voice] Measure 168
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -13950,7 +14002,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [T 3 Percussion Voice] Measure 168
+                            % [T 3 Percussion Voice] Measure 169
                             {
                                 r8
                             }
@@ -13978,7 +14030,7 @@
                             {
                                 r2.
                             }
-                            % [T 3 Percussion Voice] Measure 169
+                            % [T 3 Percussion Voice] Measure 170
                             {
                                 r8
                             }
@@ -14025,7 +14077,7 @@
                                                             LV
                                         }
                             }
-                            % [T 3 Percussion Voice] Measure 170
+                            % [T 3 Percussion Voice] Measure 171
                             {
                                 d'8 -\tenuto \laissezVibrer
                                     ^ \markup {
@@ -14047,7 +14099,7 @@
                             {
                                 r2..
                             }
-                            % [T 3 Percussion Voice] Measure 171
+                            % [T 3 Percussion Voice] Measure 172
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14088,7 +14140,7 @@
                     \bar "||"
                     \context Voice = "B 1 Vocalization Voice" {
                         {
-                            % [B 1 Vocalization Voice] Measure 125
+                            % [B 1 Vocalization Voice] Measure 126
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -14156,7 +14208,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \startTextSpan \<
                             }
-                            % [B 1 Vocalization Voice] Measure 126
+                            % [B 1 Vocalization Voice] Measure 127
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -14172,7 +14224,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 1 Vocalization Voice] Measure 127
+                            % [B 1 Vocalization Voice] Measure 128
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -14203,7 +14255,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'8 -\accent \fp \( \>
                             }
-                            % [B 1 Vocalization Voice] Measure 128
+                            % [B 1 Vocalization Voice] Measure 129
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -14234,7 +14286,7 @@
                             {
                                 r8 \!
                             }
-                            % [B 1 Vocalization Voice] Measure 129
+                            % [B 1 Vocalization Voice] Measure 130
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14243,7 +14295,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 134
+                            % [B 1 Vocalization Voice] Measure 135
                             {
                                 r2
                             }
@@ -14290,7 +14342,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \startTextSpan \<
                             }
-                            % [B 1 Vocalization Voice] Measure 135
+                            % [B 1 Vocalization Voice] Measure 136
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -14316,7 +14368,7 @@
                                 c'8 \( \<
                                 c'2 \repeatTie
                             }
-                            % [B 1 Vocalization Voice] Measure 136
+                            % [B 1 Vocalization Voice] Measure 137
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -14330,7 +14382,7 @@
                                 r8
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 137
+                            % [B 1 Vocalization Voice] Measure 138
                             {
                                 r2..
                             }
@@ -14351,7 +14403,7 @@
                             }
                         }
                         {
-                            % [B 1 Vocalization Voice] Measure 138
+                            % [B 1 Vocalization Voice] Measure 139
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14363,7 +14415,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 1 Vocalization Voice] Measure 140
+                            % [B 1 Vocalization Voice] Measure 141
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -14412,7 +14464,7 @@
                             {
                                 r2.
                             }
-                            % [B 1 Vocalization Voice] Measure 141
+                            % [B 1 Vocalization Voice] Measure 142
                             {
                                 r8
                             }
@@ -14439,7 +14491,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 1 Vocalization Voice] Measure 142
+                            % [B 1 Vocalization Voice] Measure 143
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -14448,7 +14500,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'1 \( \<
                             }
-                            % [B 1 Vocalization Voice] Measure 143
+                            % [B 1 Vocalization Voice] Measure 144
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -14462,7 +14514,7 @@
                             {
                                 r2..
                             }
-                            % [B 1 Vocalization Voice] Measure 144
+                            % [B 1 Vocalization Voice] Measure 145
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14471,7 +14523,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 149
+                            % [B 1 Vocalization Voice] Measure 150
                             {
                                 r4.
                             }
@@ -14528,7 +14580,7 @@
                             {
                                 r8
                             }
-                            % [B 1 Vocalization Voice] Measure 150
+                            % [B 1 Vocalization Voice] Measure 151
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14537,7 +14589,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 1 Vocalization Voice] Measure 154
+                            % [B 1 Vocalization Voice] Measure 155
                             {
                                 r4.
                             }
@@ -14594,7 +14646,7 @@
                             {
                                 r4.
                             }
-                            % [B 1 Vocalization Voice] Measure 155
+                            % [B 1 Vocalization Voice] Measure 156
                             {
                                 r2
                             }
@@ -14615,7 +14667,7 @@
                             }
                         }
                         {
-                            % [B 1 Vocalization Voice] Measure 156
+                            % [B 1 Vocalization Voice] Measure 157
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14627,7 +14679,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            % [B 1 Vocalization Voice] Measure 157
+                            % [B 1 Vocalization Voice] Measure 158
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -14689,7 +14741,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
-                            % [B 1 Vocalization Voice] Measure 158
+                            % [B 1 Vocalization Voice] Measure 159
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -14714,11 +14766,11 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \<
                             }
-                            % [B 1 Vocalization Voice] Measure 159
+                            % [B 1 Vocalization Voice] Measure 160
                             {
                                 c'1 \repeatTie
                             }
-                            % [B 1 Vocalization Voice] Measure 160
+                            % [B 1 Vocalization Voice] Measure 161
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -14735,7 +14787,7 @@
                         }
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 1 Vocalization Voice] Measure 161
+                            % [B 1 Vocalization Voice] Measure 162
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -14752,7 +14804,7 @@
                             {
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 162
+                            % [B 1 Vocalization Voice] Measure 163
                             {
                                 r2
                             }
@@ -14775,7 +14827,7 @@
                             {
                                 r4
                             }
-                            % [B 1 Vocalization Voice] Measure 163
+                            % [B 1 Vocalization Voice] Measure 164
                             {
                                 r4
                             }
@@ -14801,7 +14853,7 @@
                             {
                                 r2
                             }
-                            % [B 1 Vocalization Voice] Measure 164
+                            % [B 1 Vocalization Voice] Measure 165
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -14860,7 +14912,7 @@
                     \context Voice = "B 1 Percussion Voice" {
                         % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 1 Percussion Voice] Measure 125
+                            % [B 1 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -14943,17 +14995,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 1 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 129
                             {
@@ -15000,6 +15048,10 @@
                                 f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 140
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 141
                             {
                                 f4 \repeatTie
                                 <> \)
@@ -15069,7 +15121,7 @@
                             {
                                 r4.
                             }
-                            % [B 1 Percussion Voice] Measure 141
+                            % [B 1 Percussion Voice] Measure 142
                             {
                                 r2
                             }
@@ -15092,7 +15144,7 @@
                                 r16
                                 r4
                             }
-                            % [B 1 Percussion Voice] Measure 142
+                            % [B 1 Percussion Voice] Measure 143
                             {
                                 r4
                             }
@@ -15139,17 +15191,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2. \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 143
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 1 Percussion Voice] Measure 144
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 145
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 146
                             {
@@ -15164,6 +15212,10 @@
                                 f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 149
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 150
                             {
                                 f8 \repeatTie
                                 <> \)
@@ -15239,7 +15291,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 150
+                            % [B 1 Percussion Voice] Measure 151
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -15305,17 +15357,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f4 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 151
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 1 Percussion Voice] Measure 152
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 153
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 154
                             {
@@ -15342,6 +15390,10 @@
                                 f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 160
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 161
                             {
                                 f4. \repeatTie
                                 <> \)
@@ -15412,7 +15464,7 @@
                         }
                         % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 1 Percussion Voice] Measure 161
+                            % [B 1 Percussion Voice] Measure 162
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -15477,17 +15529,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 162
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 1 Percussion Voice] Measure 163
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 164
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 165
                             {
@@ -15518,6 +15566,10 @@
                                 f1 \repeatTie
                             }
                             % [B 1 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 1 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -15559,7 +15611,7 @@
                     \context Voice = "B 2 Vocalization Voice" {
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 2 Vocalization Voice] Measure 125
+                            % [B 2 Vocalization Voice] Measure 126
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -15610,7 +15662,7 @@
                             {
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 126
+                            % [B 2 Vocalization Voice] Measure 127
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15619,7 +15671,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 127
+                            % [B 2 Vocalization Voice] Measure 128
                             {
                                 r8
                             }
@@ -15678,7 +15730,7 @@
                                 r8
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 128
+                            % [B 2 Vocalization Voice] Measure 129
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15687,7 +15739,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 129
+                            % [B 2 Vocalization Voice] Measure 130
                             {
                                 r4.
                             }
@@ -15753,7 +15805,7 @@
                             {
                                 r4 \!
                             }
-                            % [B 2 Vocalization Voice] Measure 130
+                            % [B 2 Vocalization Voice] Measure 131
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15762,7 +15814,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 134
+                            % [B 2 Vocalization Voice] Measure 135
                             {
                                 r2.
                             }
@@ -15809,7 +15861,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [B 2 Vocalization Voice] Measure 135
+                            % [B 2 Vocalization Voice] Measure 136
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -15823,7 +15875,7 @@
                             {
                                 r4.
                             }
-                            % [B 2 Vocalization Voice] Measure 136
+                            % [B 2 Vocalization Voice] Measure 137
                             {
                                 r2
                                 r8
@@ -15839,7 +15891,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [B 2 Vocalization Voice] Measure 137
+                            % [B 2 Vocalization Voice] Measure 138
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -15865,7 +15917,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [B 2 Vocalization Voice] Measure 138
+                            % [B 2 Vocalization Voice] Measure 139
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 3/4 {
                                 c'8 -\tenuto [
@@ -15891,7 +15943,7 @@
                         }
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 2 Vocalization Voice] Measure 139
+                            % [B 2 Vocalization Voice] Measure 140
                             {
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -15906,7 +15958,7 @@
                             }
                         }
                         {
-                            % [B 2 Vocalization Voice] Measure 140
+                            % [B 2 Vocalization Voice] Measure 141
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -15915,7 +15967,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 141
+                            % [B 2 Vocalization Voice] Measure 142
                             {
                                 r4
                             }
@@ -15970,7 +16022,7 @@
                             {
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 142
+                            % [B 2 Vocalization Voice] Measure 143
                             {
                                 r8
                             }
@@ -15997,7 +16049,7 @@
                             {
                                 r8
                             }
-                            % [B 2 Vocalization Voice] Measure 143
+                            % [B 2 Vocalization Voice] Measure 144
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16006,7 +16058,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 149
+                            % [B 2 Vocalization Voice] Measure 150
                             {
                                 r2
                                 r8
@@ -16065,7 +16117,7 @@
                             {
                                 r8
                             }
-                            % [B 2 Vocalization Voice] Measure 150
+                            % [B 2 Vocalization Voice] Measure 151
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16074,7 +16126,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 153
+                            % [B 2 Vocalization Voice] Measure 154
                             {
                                 r2.
                             }
@@ -16121,7 +16173,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \startTextSpan \<
                             }
-                            % [B 2 Vocalization Voice] Measure 154
+                            % [B 2 Vocalization Voice] Measure 155
                             {
                                 c'2.. \p \repeatTie
                                 <> \)
@@ -16135,7 +16187,7 @@
                             {
                                 r8
                             }
-                            % [B 2 Vocalization Voice] Measure 155
+                            % [B 2 Vocalization Voice] Measure 156
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16144,7 +16196,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 156
+                            % [B 2 Vocalization Voice] Measure 157
                             {
                                 r8
                             }
@@ -16202,7 +16254,7 @@
                                 r8
                                 r2
                             }
-                            % [B 2 Vocalization Voice] Measure 157
+                            % [B 2 Vocalization Voice] Measure 158
                             {
                                 r8
                             }
@@ -16239,7 +16291,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [B 2 Vocalization Voice] Measure 158
+                            % [B 2 Vocalization Voice] Measure 159
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -16252,7 +16304,7 @@
                             {
                                 r2..
                             }
-                            % [B 2 Vocalization Voice] Measure 159
+                            % [B 2 Vocalization Voice] Measure 160
                             {
                                 r2
                             }
@@ -16276,7 +16328,7 @@
                             {
                                 r4
                             }
-                            % [B 2 Vocalization Voice] Measure 160
+                            % [B 2 Vocalization Voice] Measure 161
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16285,7 +16337,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 2 Vocalization Voice] Measure 161
+                            % [B 2 Vocalization Voice] Measure 162
                             {
                                 r4
                             }
@@ -16342,7 +16394,7 @@
                             {
                                 r8
                             }
-                            % [B 2 Vocalization Voice] Measure 162
+                            % [B 2 Vocalization Voice] Measure 163
                             {
                                 r2
                             }
@@ -16363,7 +16415,7 @@
                             }
                         }
                         {
-                            % [B 2 Vocalization Voice] Measure 163
+                            % [B 2 Vocalization Voice] Measure 164
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -16422,7 +16474,7 @@
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 2 Percussion Voice] Measure 125
+                            % [B 2 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -16505,17 +16557,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 2 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 129
                             {
@@ -16562,6 +16610,10 @@
                                 f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 140
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 141
                             {
                                 f4. \repeatTie
                                 <> \)
@@ -16634,7 +16686,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 141
+                            % [B 2 Percussion Voice] Measure 142
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -16703,17 +16755,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f4 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 142
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 2 Percussion Voice] Measure 143
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 144
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 145
                             {
@@ -16732,6 +16780,10 @@
                                 f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 149
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 150
                             {
                                 f4. \repeatTie
                                 <> \)
@@ -16804,7 +16856,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 150
+                            % [B 2 Percussion Voice] Measure 151
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -16869,17 +16921,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 151
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 2 Percussion Voice] Measure 152
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 153
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 154
                             {
@@ -16903,6 +16951,10 @@
                             }
                             % [B 2 Percussion Voice] Measure 159
                             {
+                                f1 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 160
+                            {
                                 f2. \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -16918,7 +16970,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 160
+                            % [B 2 Percussion Voice] Measure 161
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -16955,7 +17007,7 @@
                         }
                         % [B 2 Percussion Voice] Material: "shaker_pointillism"
                         {
-                            % [B 2 Percussion Voice] Measure 161
+                            % [B 2 Percussion Voice] Measure 162
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
                                 g'16 -\staccato \parenthesizeDynamic \p \( [
@@ -16968,7 +17020,7 @@
                             {
                                 r2..
                             }
-                            % [B 2 Percussion Voice] Measure 162
+                            % [B 2 Percussion Voice] Measure 163
                             {
                                 r8
                             }
@@ -17015,17 +17067,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2.. \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 163
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 2 Percussion Voice] Measure 164
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 165
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 166
                             {
@@ -17052,6 +17100,10 @@
                                 f1 \repeatTie
                             }
                             % [B 2 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 2 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -17092,7 +17144,7 @@
                     \bar "||"
                     \context Voice = "B 3 Vocalization Voice" {
                         {
-                            % [B 3 Vocalization Voice] Measure 125
+                            % [B 3 Vocalization Voice] Measure 126
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -17167,7 +17219,7 @@
                             {
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 126
+                            % [B 3 Vocalization Voice] Measure 127
                             {
                                 r2
                                 r8
@@ -17183,7 +17235,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [B 3 Vocalization Voice] Measure 127
+                            % [B 3 Vocalization Voice] Measure 128
                             {
                                 c'2 \p \repeatTie
                                 <> \)
@@ -17196,7 +17248,7 @@
                             {
                                 r2
                             }
-                            % [B 3 Vocalization Voice] Measure 128
+                            % [B 3 Vocalization Voice] Measure 129
                             {
                                 r2
                                 r8
@@ -17223,7 +17275,7 @@
                             {
                                 r8
                             }
-                            % [B 3 Vocalization Voice] Measure 129
+                            % [B 3 Vocalization Voice] Measure 130
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17232,7 +17284,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 134
+                            % [B 3 Vocalization Voice] Measure 135
                             {
                                 r2..
                             }
@@ -17278,7 +17330,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( \startTextSpan
                             }
-                            % [B 3 Vocalization Voice] Measure 135
+                            % [B 3 Vocalization Voice] Measure 136
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -17303,7 +17355,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
-                            % [B 3 Vocalization Voice] Measure 136
+                            % [B 3 Vocalization Voice] Measure 137
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -17350,7 +17402,7 @@
                             }
                         }
                         {
-                            % [B 3 Vocalization Voice] Measure 137
+                            % [B 3 Vocalization Voice] Measure 138
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17359,7 +17411,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 138
+                            % [B 3 Vocalization Voice] Measure 139
                             {
                                 r4.
                             }
@@ -17416,7 +17468,7 @@
                             {
                                 r8
                             }
-                            % [B 3 Vocalization Voice] Measure 139
+                            % [B 3 Vocalization Voice] Measure 140
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17425,7 +17477,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 140
+                            % [B 3 Vocalization Voice] Measure 141
                             {
                                 r2..
                             }
@@ -17471,7 +17523,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( \startTextSpan
                             }
-                            % [B 3 Vocalization Voice] Measure 141
+                            % [B 3 Vocalization Voice] Measure 142
                             {
                                 c'2. \repeatTie
                                 <> \)
@@ -17484,7 +17536,7 @@
                             {
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 142
+                            % [B 3 Vocalization Voice] Measure 143
                             {
                                 r4.
                             }
@@ -17500,7 +17552,7 @@
                                 c'8 \( \<
                                 c'2 \repeatTie
                             }
-                            % [B 3 Vocalization Voice] Measure 143
+                            % [B 3 Vocalization Voice] Measure 144
                             {
                                 c'4 \p \repeatTie
                                 <> \)
@@ -17514,7 +17566,7 @@
                             {
                                 r2.
                             }
-                            % [B 3 Vocalization Voice] Measure 144
+                            % [B 3 Vocalization Voice] Measure 145
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17526,7 +17578,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 3 Vocalization Voice] Measure 149
+                            % [B 3 Vocalization Voice] Measure 150
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -17557,7 +17609,7 @@
                             {
                                 r2.
                             }
-                            % [B 3 Vocalization Voice] Measure 150
+                            % [B 3 Vocalization Voice] Measure 151
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17566,7 +17618,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 151
+                            % [B 3 Vocalization Voice] Measure 152
                             {
                                 r4
                             }
@@ -17603,7 +17655,7 @@
                             {
                                 r2
                             }
-                            % [B 3 Vocalization Voice] Measure 152
+                            % [B 3 Vocalization Voice] Measure 153
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17615,7 +17667,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
-                            % [B 3 Vocalization Voice] Measure 154
+                            % [B 3 Vocalization Voice] Measure 155
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
@@ -17646,7 +17698,7 @@
                             {
                                 r2.
                             }
-                            % [B 3 Vocalization Voice] Measure 155
+                            % [B 3 Vocalization Voice] Measure 156
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17655,7 +17707,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 3 Vocalization Voice] Measure 156
+                            % [B 3 Vocalization Voice] Measure 157
                             {
                                 r4
                             }
@@ -17702,7 +17754,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2. \( \startTextSpan \<
                             }
-                            % [B 3 Vocalization Voice] Measure 157
+                            % [B 3 Vocalization Voice] Measure 158
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -17718,7 +17770,7 @@
                         }
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
-                            % [B 3 Vocalization Voice] Measure 158
+                            % [B 3 Vocalization Voice] Measure 159
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \override TextSpanner.dash-fraction = #0.333
@@ -17747,7 +17799,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [B 3 Vocalization Voice] Measure 159
+                            % [B 3 Vocalization Voice] Measure 160
                             \times 2/3 {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -17765,7 +17817,7 @@
                             {
                                 r2. \!
                             }
-                            % [B 3 Vocalization Voice] Measure 160
+                            % [B 3 Vocalization Voice] Measure 161
                             {
                                 r4
                             }
@@ -17788,7 +17840,7 @@
                             {
                                 r4
                             }
-                            % [B 3 Vocalization Voice] Measure 161
+                            % [B 3 Vocalization Voice] Measure 162
                             {
                                 r4.
                             }
@@ -17804,7 +17856,7 @@
                                 c'8 \( \<
                                 c'2 \repeatTie
                             }
-                            % [B 3 Vocalization Voice] Measure 162
+                            % [B 3 Vocalization Voice] Measure 163
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -17819,7 +17871,7 @@
                             {
                                 r4.
                             }
-                            % [B 3 Vocalization Voice] Measure 163
+                            % [B 3 Vocalization Voice] Measure 164
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -17878,7 +17930,7 @@
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 3 Percussion Voice] Measure 125
+                            % [B 3 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -17961,17 +18013,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 3 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 129
                             {
@@ -18018,6 +18066,10 @@
                                 f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 140
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 141
                             {
                                 f2 \repeatTie
                                 f8 \repeatTie
@@ -18076,7 +18128,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \p \( \startTextSpan
                             }
-                            % [B 3 Percussion Voice] Measure 141
+                            % [B 3 Percussion Voice] Measure 142
                             {
                                 c'16 -\staccato [
                                 \set stemLeftBeamCount = 2
@@ -18096,7 +18148,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 3 Percussion Voice] Measure 142
+                            % [B 3 Percussion Voice] Measure 143
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -18137,17 +18189,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 143
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 3 Percussion Voice] Measure 144
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 145
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 146
                             {
@@ -18158,6 +18206,10 @@
                                 f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 148
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 149
                             {
                                 f2. \repeatTie
                                 <> \)
@@ -18174,7 +18226,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 149
+                            % [B 3 Percussion Voice] Measure 150
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -18232,7 +18284,7 @@
                                 r16
                                 r2.
                             }
-                            % [B 3 Percussion Voice] Measure 150
+                            % [B 3 Percussion Voice] Measure 151
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18244,7 +18296,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "shaker_pointillism"
                         {
-                            % [B 3 Percussion Voice] Measure 151
+                            % [B 3 Percussion Voice] Measure 152
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
                                 g'16 -\staccato \ppp \(
@@ -18298,17 +18350,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 152
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 3 Percussion Voice] Measure 153
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 154
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 155
                             {
@@ -18329,6 +18377,10 @@
                             % [B 3 Percussion Voice] Measure 159
                             {
                                 f1 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 160
+                            {
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -18337,7 +18389,7 @@
                             }
                         }
                         {
-                            % [B 3 Percussion Voice] Measure 160
+                            % [B 3 Percussion Voice] Measure 161
                             {
                                 r4
                             }
@@ -18398,7 +18450,7 @@
                                 r8
                                 r2
                             }
-                            % [B 3 Percussion Voice] Measure 161
+                            % [B 3 Percussion Voice] Measure 162
                             {
                                 r16
                             }
@@ -18421,7 +18473,7 @@
                         }
                         % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 3 Percussion Voice] Measure 162
+                            % [B 3 Percussion Voice] Measure 163
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -18462,17 +18514,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 163
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 3 Percussion Voice] Measure 164
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 165
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 166
                             {
@@ -18499,6 +18547,10 @@
                                 f1 \repeatTie
                             }
                             % [B 3 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 3 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."
@@ -18539,7 +18591,7 @@
                     \bar "||"
                     \context Voice = "B 4 Vocalization Voice" {
                         {
-                            % [B 4 Vocalization Voice] Measure 125
+                            % [B 4 Vocalization Voice] Measure 126
                             {
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
@@ -18607,7 +18659,7 @@
                                 c'8 \( \startTextSpan \<
                                 c'2 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 126
+                            % [B 4 Vocalization Voice] Measure 127
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -18632,7 +18684,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [B 4 Vocalization Voice] Measure 127
+                            % [B 4 Vocalization Voice] Measure 128
                             {
                                 c'4. \p \repeatTie
                                 <> \)
@@ -18646,7 +18698,7 @@
                                 r8
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 128
+                            % [B 4 Vocalization Voice] Measure 129
                             {
                                 r8
                             }
@@ -18669,7 +18721,7 @@
                             {
                                 r2.
                             }
-                            % [B 4 Vocalization Voice] Measure 129
+                            % [B 4 Vocalization Voice] Measure 130
                             {
                                 r2
                             }
@@ -18693,7 +18745,7 @@
                             {
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 130
+                            % [B 4 Vocalization Voice] Measure 131
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18702,7 +18754,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 135
+                            % [B 4 Vocalization Voice] Measure 136
                             {
                                 r8
                             }
@@ -18754,7 +18806,7 @@
                             }
                         }
                         {
-                            % [B 4 Vocalization Voice] Measure 136
+                            % [B 4 Vocalization Voice] Measure 137
                             {
                                 r2..
                             }
@@ -18769,7 +18821,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \<
                             }
-                            % [B 4 Vocalization Voice] Measure 137
+                            % [B 4 Vocalization Voice] Measure 138
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -18783,7 +18835,7 @@
                             {
                                 r4.
                             }
-                            % [B 4 Vocalization Voice] Measure 138
+                            % [B 4 Vocalization Voice] Measure 139
                             {
                                 r2
                                 r8
@@ -18809,7 +18861,7 @@
                             {
                                 r8
                             }
-                            % [B 4 Vocalization Voice] Measure 139
+                            % [B 4 Vocalization Voice] Measure 140
                             {
                                 r4.
                             }
@@ -18834,7 +18886,7 @@
                             {
                                 r4.
                             }
-                            % [B 4 Vocalization Voice] Measure 140
+                            % [B 4 Vocalization Voice] Measure 141
                             {
                                 r4
                             }
@@ -18859,7 +18911,7 @@
                             {
                                 r8
                             }
-                            % [B 4 Vocalization Voice] Measure 141
+                            % [B 4 Vocalization Voice] Measure 142
                             {
                                 r2.
                             }
@@ -18874,11 +18926,11 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
-                            % [B 4 Vocalization Voice] Measure 142
+                            % [B 4 Vocalization Voice] Measure 143
                             {
                                 c'1 \repeatTie
                             }
-                            % [B 4 Vocalization Voice] Measure 143
+                            % [B 4 Vocalization Voice] Measure 144
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -18892,7 +18944,7 @@
                             {
                                 r2..
                             }
-                            % [B 4 Vocalization Voice] Measure 144
+                            % [B 4 Vocalization Voice] Measure 145
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18901,7 +18953,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 149
+                            % [B 4 Vocalization Voice] Measure 150
                             {
                                 r4
                             }
@@ -18956,7 +19008,7 @@
                             {
                                 r2
                             }
-                            % [B 4 Vocalization Voice] Measure 150
+                            % [B 4 Vocalization Voice] Measure 151
                             {
                                 r4.
                             }
@@ -18981,7 +19033,7 @@
                             {
                                 r8
                             }
-                            % [B 4 Vocalization Voice] Measure 151
+                            % [B 4 Vocalization Voice] Measure 152
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -18990,7 +19042,7 @@
                                 \stopStaff
                                 \startStaff
                             }
-                            % [B 4 Vocalization Voice] Measure 154
+                            % [B 4 Vocalization Voice] Measure 155
                             {
                                 r8
                             }
@@ -19058,7 +19110,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \(
                             }
-                            % [B 4 Vocalization Voice] Measure 155
+                            % [B 4 Vocalization Voice] Measure 156
                             {
                                 c'8 \repeatTie
                                 <> \)
@@ -19088,7 +19140,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [B 4 Vocalization Voice] Measure 156
+                            % [B 4 Vocalization Voice] Measure 157
                             {
                                 c'8 -\tenuto [
                                 \set stemLeftBeamCount = 1
@@ -19103,7 +19155,7 @@
                             {
                                 r2. \!
                             }
-                            % [B 4 Vocalization Voice] Measure 157
+                            % [B 4 Vocalization Voice] Measure 158
                             {
                                 r2
                             }
@@ -19126,7 +19178,7 @@
                             {
                                 r4
                             }
-                            % [B 4 Vocalization Voice] Measure 158
+                            % [B 4 Vocalization Voice] Measure 159
                             {
                                 r2
                             }
@@ -19141,7 +19193,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \<
                             }
-                            % [B 4 Vocalization Voice] Measure 159
+                            % [B 4 Vocalization Voice] Measure 160
                             {
                                 c'8 \p \repeatTie
                                 <> \)
@@ -19173,7 +19225,7 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
-                            % [B 4 Vocalization Voice] Measure 160
+                            % [B 4 Vocalization Voice] Measure 161
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
                                 c'8 -\tenuto [
@@ -19204,7 +19256,7 @@
                             {
                                 r4 \!
                             }
-                            % [B 4 Vocalization Voice] Measure 161
+                            % [B 4 Vocalization Voice] Measure 162
                             {
                                 r2
                                 r8
@@ -19220,7 +19272,7 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
-                            % [B 4 Vocalization Voice] Measure 162
+                            % [B 4 Vocalization Voice] Measure 163
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
@@ -19235,7 +19287,7 @@
                             {
                                 r4.
                             }
-                            % [B 4 Vocalization Voice] Measure 163
+                            % [B 4 Vocalization Voice] Measure 164
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -19294,7 +19346,7 @@
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 4 Percussion Voice] Measure 125
+                            % [B 4 Percussion Voice] Measure 126
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -19377,17 +19429,13 @@
                                     }
                                 f1 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 126
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 4 Percussion Voice] Measure 127
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 128
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 129
                             {
@@ -19432,6 +19480,10 @@
                             % [B 4 Percussion Voice] Measure 139
                             {
                                 f1 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 140
+                            {
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19440,7 +19492,7 @@
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 140
+                            % [B 4 Percussion Voice] Measure 141
                             {
                                 r4
                             }
@@ -19480,7 +19532,7 @@
                                 r8.
                                 r2
                             }
-                            % [B 4 Percussion Voice] Measure 141
+                            % [B 4 Percussion Voice] Measure 142
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -19492,7 +19544,7 @@
                         }
                         % [B 4 Percussion Voice] Material: "shaker_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 142
+                            % [B 4 Percussion Voice] Measure 143
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
                                 g'16 -\staccato \p \( [
@@ -19548,17 +19600,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 143
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 4 Percussion Voice] Measure 144
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 145
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 146
                             {
@@ -19571,6 +19619,10 @@
                             % [B 4 Percussion Voice] Measure 148
                             {
                                 f1 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 149
+                            {
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -19579,7 +19631,7 @@
                             }
                         }
                         {
-                            % [B 4 Percussion Voice] Measure 149
+                            % [B 4 Percussion Voice] Measure 150
                             {
                                 r4
                                 r16
@@ -19641,7 +19693,7 @@
                                 r16
                                 r2
                             }
-                            % [B 4 Percussion Voice] Measure 150
+                            % [B 4 Percussion Voice] Measure 151
                             {
                                 r4
                             }
@@ -19661,7 +19713,7 @@
                                 r8
                                 r2
                             }
-                            % [B 4 Percussion Voice] Measure 151
+                            % [B 4 Percussion Voice] Measure 152
                             {
                                 r16
                             }
@@ -19767,17 +19819,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f2 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 152
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 4 Percussion Voice] Measure 153
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 154
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 155
                             {
@@ -19800,6 +19848,10 @@
                                 f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 160
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 161
                             {
                                 f8 \repeatTie
                                 <> \)
@@ -19872,7 +19924,7 @@
                         }
                         % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
-                            % [B 4 Percussion Voice] Measure 161
+                            % [B 4 Percussion Voice] Measure 162
                             {
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
@@ -19936,17 +19988,13 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f4 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 162
-                            {
-                                f1 \repeatTie
-                            }
                             % [B 4 Percussion Voice] Measure 163
                             {
-                                f1 \p \repeatTie
+                                f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 164
                             {
-                                f1 \repeatTie
+                                f1 \p \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 165
                             {
@@ -19977,6 +20025,10 @@
                                 f1 \repeatTie
                             }
                             % [B 4 Percussion Voice] Measure 172
+                            {
+                                f1 \repeatTie
+                            }
+                            % [B 4 Percussion Voice] Measure 173
                             {
                                 f1 \repeatTie
                                 \bar "|."

@@ -7,11 +7,18 @@
                 \tempo 4=32
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                G
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        G
+                            " "
+                            \fontsize
+                                #-3
+                                Sand
+                        }
                     }
                 s1 * 4
             }
@@ -1045,7 +1052,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    crotales
+                                                                    marimba
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -1061,7 +1068,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    ct.
+                                                                    mb.
                                         }
                                     }
                                 \stopStaff

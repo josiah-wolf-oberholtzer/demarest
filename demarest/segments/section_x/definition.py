@@ -41,14 +41,6 @@ droning_timespan_maker = abjad.new(
     fuse_groups=True,
     )
 
-snaking_timespan_maker = consort.CascadingTimespanMaker(
-    cascade_pattern=[-3, 1],
-    playing_talea=abjad.rhythmmakertools.Talea([1, 1, 2], 8),
-    playing_groupings=[1, 2],
-    silence_talea=abjad.rhythmmakertools.Talea([1], 8),
-    repeat=False,
-    )
-
 sparse_timespan_maker = abjad.new(
     materials.sparse_timespan_maker,
     playing_groupings=[1, 1, 2, 1, 2, 3],

@@ -7,11 +7,18 @@
                 \tempo 4=64
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                A
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        A
+                            " "
+                            \fontsize
+                                #-3
+                                Glass
+                        }
                     }
                 s1 * 4
             }
@@ -1314,12 +1321,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    \right-column
-                                                                        {
-                                                                            five
-                                                                            wood
-                                                                            blocks
-                                                                        }
+                                                                    marimba
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -1335,10 +1337,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    \right-column
-                                                                        {
-                                                                            w.b.
-                                                                        }
+                                                                    mb.
                                         }
                                     }
                                 \stopStaff

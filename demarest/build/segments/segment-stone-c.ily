@@ -7,11 +7,18 @@
                 \tempo 4=96
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                I
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        I
+                            " "
+                            \fontsize
+                                #-3
+                                Stone
+                        }
                     }
                 s1 * 18
             }
@@ -944,6 +951,7 @@
                     \clef "percussion"
                     \bar "||"
                     \context Voice = "T 3 Percussion Voice" {
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 83
                             {
@@ -962,8 +970,9 @@
                                                                 \italic
                                                                     \right-column
                                                                         {
-                                                                            tubular
-                                                                            bells
+                                                                            "four toms"
+                                                                            and
+                                                                            "bass drum"
                                                                         }
                                         }
                                     }
@@ -980,13 +989,53 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    t.b.
+                                                                    \right-column
+                                                                        {
+                                                                            toms
+                                                                            &
+                                                                            b.d.
+                                                                        }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
+                                f8 -\tenuto \laissezVibrer \f \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
+                                    }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                            % [T 3 Percussion Voice] Measure 84
+                            {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 18
+                                R1 * 17
                                 \stopStaff
                                 \startStaff
                             }

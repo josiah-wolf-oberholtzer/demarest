@@ -1,7 +1,7 @@
 % package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
 % package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
 % package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 151a979 [master] (2016-10-03 21:58:53)
+% package "demarest" @ d608d0e [master] (2016-10-04 19:54:44)
 
 \version "2.19.44"
 \language "english"
@@ -21,11 +21,18 @@
                 \tempo 4=64
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                H
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        H
+                            " "
+                            \fontsize
+                                #-3
+                                Glass
+                        }
                     }
                 s1 * 16
             }
@@ -3044,6 +3051,50 @@
                                                             #0.5
                                                             \small
                                                                 \italic
+                                                                    marimba
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    mb.
+                                        }
+                                    }
+                                r4
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
+                        {
+                            {
+                                \clef "treble"
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
                                                                     crotales
                                         }
                                     }
@@ -3063,18 +3114,6 @@
                                                                     ct.
                                         }
                                     }
-                                r4
-                            }
-                        }
-                        % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
-                        {
-                            {
-                                \clef "treble"
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cf'''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
@@ -3088,6 +3127,19 @@
                                                         \caps
                                                             LV
                                         }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                ct.
+                                                            }
+                                    }
                                     ^ \markup {
                                     \box
                                         \whiteout

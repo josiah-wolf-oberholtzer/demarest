@@ -7,11 +7,18 @@
                 \tempo 4=48
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                J
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        J
+                            " "
+                            \fontsize
+                                #-3
+                                Waves
+                        }
                     }
                 s1 * 3
             }
@@ -944,49 +951,36 @@
                     \clef "percussion"
                     \bar "||"
                     \context Voice = "T 3 Percussion Voice" {
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_tranquilo"
                         {
                             % [T 3 Percussion Voice] Measure 101
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T3
-                                            \vcenter
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
+                                f8 -\tenuto \laissezVibrer \f \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
                                                 \pad-around
                                                     #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    \right-column
-                                                                        {
-                                                                            tubular
-                                                                            bells
-                                                                        }
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
                                         }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T3
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    t.b.
-                                        }
-                                    }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                            % [T 3 Percussion Voice] Measure 102
+                            {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 3
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }

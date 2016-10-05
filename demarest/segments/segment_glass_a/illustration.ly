@@ -1,7 +1,7 @@
 % package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
 % package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
 % package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 151a979 [master] (2016-10-03 21:58:53)
+% package "demarest" @ d608d0e [master] (2016-10-04 19:54:44)
 
 \version "2.19.44"
 \language "english"
@@ -21,11 +21,18 @@
                 \tempo 4=64
                 \time 4/4
                 \mark \markup {
-                    \box
-                        \pad-around
-                            #0.5
-                            \caps
-                                A
+                    \concat
+                        {
+                            \box
+                                \pad-around
+                                    #0.5
+                                    \caps
+                                        A
+                            " "
+                            \fontsize
+                                #-3
+                                Glass
+                        }
                     }
                 s1 * 4
             }
@@ -1328,12 +1335,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    \right-column
-                                                                        {
-                                                                            five
-                                                                            wood
-                                                                            blocks
-                                                                        }
+                                                                    marimba
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -1349,10 +1351,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    \right-column
-                                                                        {
-                                                                            w.b.
-                                                                        }
+                                                                    mb.
                                         }
                                     }
                                 \stopStaff
