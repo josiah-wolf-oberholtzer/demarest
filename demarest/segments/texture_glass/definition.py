@@ -196,6 +196,8 @@ segment_maker.add_setting(
     t_3_percussion=trio_c_tubular_bells_tranquilo,
     )
 
+### DETAILS ###
+
 segment_maker.add_setting(
     timespan_identifier=abjad.Timespan(0, (1, 4)),
     t_3_percussion=abjad.new(

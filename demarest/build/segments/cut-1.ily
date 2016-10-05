@@ -104,7 +104,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -155,7 +155,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -269,7 +269,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -320,7 +320,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -434,7 +434,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -485,7 +485,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -599,7 +599,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -650,7 +650,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -794,10 +794,10 @@
                             {
                                 \clef "treble"
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                b'16 -\accent -\staccato \f \( \> [
+                                cf''16 -\accent -\staccato \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d'16 -\staccato
+                                eff'16 -\staccato
                                 <cs' fs'>16 ]
                                 <b d'>2 :32
                                 <b d'>8. :64 \repeatTie [
@@ -816,9 +816,9 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                <c' ef'>16 \f \( \> [
+                                <c' ef'>16 \f \( [
                                 d16 -\staccato ]
-                                <a, c>4. :32 \p
+                                <a, c>4. :32
                                 <> \)
                                 \clef "percussion"
                             }
@@ -927,7 +927,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.961 0.961 0.806)
-                                d'''16 -\accent -\staccato \f \( [ ^ \markup {
+                                eff'''16 -\accent -\staccato \f \( [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1173,7 +1173,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -1224,7 +1224,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -1338,7 +1338,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -1389,7 +1389,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -1503,7 +1503,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -1554,7 +1554,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }
@@ -1668,7 +1668,7 @@
                                                     \right-column
                                                         {
                                                             shaker
-                                                            castanet
+                                                            guiro
                                                             guiro
                                                             "wine glass"
                                                         }
@@ -1719,7 +1719,7 @@
                                                                     \right-column
                                                                         {
                                                                             shaker
-                                                                            castanet
+                                                                            guiro
                                                                             guiro
                                                                             "wine glass"
                                                                         }

@@ -1,31 +1,17 @@
-% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
-% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
-% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 151a979 [master] (2016-10-03 21:58:53)
-
-\version "2.19.44"
-\language "english"
-
-#(ly:set-option 'relative-includes #t)
-
-\include "../../stylesheets/stylesheet.ily"
-\include "../../stylesheets/nonfirst-segment.ily"
-
-\score {
     \context Score = "Demarest Score" \with {
-        currentBarNumber = #63
+        currentBarNumber = #6
     } <<
         \tag #'time
         \context TimeSignatureContext = "Time Signature Context" {
             {
-                \tempo 4=32
+                \tempo 4=64
                 \time 4/4
                 \mark \markup {
                     \box
                         \pad-around
                             #0.5
                             \caps
-                                G
+                                A
                     }
                 s1 * 4
             }
@@ -58,7 +44,7 @@
                     \bar "||"
                     \context Voice = "A 1 Vocalization Voice" {
                         {
-                            % [A 1 Vocalization Voice] Measure 63
+                            % [A 1 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -83,36 +69,25 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 3
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
-                            % [A 1 Vocalization Voice] Measure 66
+                            % [A 1 Vocalization Voice] Measure 7
                             {
-                                r2.
+                                r2
                             }
                         }
-                        % [A 1 Vocalization Voice] Material: "whispered_inhales"
+                        % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        f-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -122,14 +97,27 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                "pitch pipe"
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [A 1 Vocalization Voice] Measure 8
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 2
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
@@ -180,47 +168,12 @@
                     }
                     \bar "||"
                     \context Voice = "A 1 Percussion Voice" {
-                        % [A 1 Percussion Voice] Material: "shaker_drone"
                         {
-                            % [A 1 Percussion Voice] Measure 63
+                            % [A 1 Percussion Voice] Measure 6
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                spun
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                spun
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -263,20 +216,117 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
-                            % [A 1 Percussion Voice] Measure 64
+                        }
+                        % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
+                        {
+                            % [A 1 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                struck
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.style = #'cross
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
+                                c'16 -\staccato \p \( \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
-                            % [A 1 Percussion Voice] Measure 65
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        % [A 1 Percussion Voice] Material: "wine_glass_drone"
+                        {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                circle
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                                f2 \( \startTextSpan \<
                             }
-                            % [A 1 Percussion Voice] Measure 66
+                            % [A 1 Percussion Voice] Measure 8
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
+                            }
+                            % [A 1 Percussion Voice] Measure 9
+                            {
+                                f1 \p \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -314,7 +364,7 @@
                     \bar "||"
                     \context Voice = "A 2 Vocalization Voice" {
                         {
-                            % [A 2 Vocalization Voice] Measure 63
+                            % [A 2 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -339,7 +389,50 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 4
+                                R1 * 2
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [A 2 Vocalization Voice] Measure 8
+                            {
+                                r2.
+                            }
+                        }
+                        % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            % [A 2 Vocalization Voice] Measure 9
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -392,9 +485,9 @@
                     }
                     \bar "||"
                     \context Voice = "A 2 Percussion Voice" {
-                        % [A 2 Percussion Voice] Material: "shaker_drone"
+                        % [A 2 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 2 Percussion Voice] Measure 63
+                            % [A 2 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -407,7 +500,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -420,7 +513,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -432,7 +525,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -475,20 +568,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [A 2 Percussion Voice] Measure 64
+                            % [A 2 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [A 2 Percussion Voice] Measure 65
+                            % [A 2 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [A 2 Percussion Voice] Measure 66
+                            % [A 2 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -526,11 +618,8 @@
                     \bar "||"
                     \context Voice = "A 3 Vocalization Voice" {
                         {
-                            % [A 3 Vocalization Voice] Measure 63
+                            % [A 3 Vocalization Voice] Measure 6
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -551,7 +640,47 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 4
+                                r4
+                            }
+                        }
+                        % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [A 3 Vocalization Voice] Measure 7
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3
                                 \stopStaff
                                 \startStaff
                             }
@@ -604,9 +733,9 @@
                     }
                     \bar "||"
                     \context Voice = "A 3 Percussion Voice" {
-                        % [A 3 Percussion Voice] Material: "shaker_drone"
+                        % [A 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 3 Percussion Voice] Measure 63
+                            % [A 3 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -619,7 +748,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -632,7 +761,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -644,7 +773,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -687,20 +816,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [A 3 Percussion Voice] Measure 64
+                            % [A 3 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 65
+                            % [A 3 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [A 3 Percussion Voice] Measure 66
+                            % [A 3 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -738,7 +866,7 @@
                     \bar "||"
                     \context Voice = "A 4 Vocalization Voice" {
                         {
-                            % [A 4 Vocalization Voice] Measure 63
+                            % [A 4 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -763,7 +891,77 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 4
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [A 4 Vocalization Voice] Measure 7
+                            {
+                                r2.
+                            }
+                        }
+                        % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                            }
+                            % [A 4 Vocalization Voice] Measure 8
+                            {
+                                c'8 \p \repeatTie
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                            % [A 4 Vocalization Voice] Measure 9
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -816,9 +1014,9 @@
                     }
                     \bar "||"
                     \context Voice = "A 4 Percussion Voice" {
-                        % [A 4 Percussion Voice] Material: "shaker_drone"
+                        % [A 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [A 4 Percussion Voice] Measure 63
+                            % [A 4 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -831,7 +1029,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -844,7 +1042,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -856,7 +1054,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -899,20 +1097,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [A 4 Percussion Voice] Measure 64
+                            % [A 4 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [A 4 Percussion Voice] Measure 65
+                            % [A 4 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [A 4 Percussion Voice] Measure 66
+                            % [A 4 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -952,11 +1149,8 @@
                     \bar "||"
                     \context Voice = "T 1 Vocalization Voice" {
                         {
-                            % [T 1 Vocalization Voice] Measure 63
+                            % [T 1 Vocalization Voice] Measure 6
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -977,36 +1171,13 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [T 1 Vocalization Voice] Measure 64
-                            {
-                                r2.
+                                r4
                             }
                         }
-                        % [T 1 Vocalization Voice] Material: "whispered_inhales"
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        h-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1016,25 +1187,109 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( \startTextSpan
                                 <> \)
-                                \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
                             }
                         }
                         {
-                            % [T 1 Vocalization Voice] Measure 65
+                            {
+                                r2
+                            }
+                            % [T 1 Vocalization Voice] Measure 7
+                            {
+                                r4
+                            }
+                        }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4. \parenthesizeDynamic \p \(
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [T 1 Vocalization Voice] Measure 8
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 2
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
+                            }
+                        }
+                        % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            % [T 1 Vocalization Voice] Measure 9
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                         }
                     }
@@ -1044,8 +1299,96 @@
                     \bar "||"
                     \context Voice = "T 1 Percussion Voice" {
                         {
-                            % [T 1 Percussion Voice] Measure 63
+                            % [T 1 Percussion Voice] Measure 6
                             {
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
+                                        }
+                                    }
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 2
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
+                        {
+                            % [T 1 Percussion Voice] Measure 8
+                            {
+                                \clef "treble"
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1078,12 +1421,77 @@
                                                                     ct.
                                         }
                                     }
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
-                                R1 * 4
-                                \stopStaff
-                                \startStaff
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                a''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                ct.
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                            % [T 1 Percussion Voice] Measure 9
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
+                        {
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2
                             }
                         }
                     }
@@ -1116,7 +1524,7 @@
                     \bar "||"
                     \context Voice = "T 2 Vocalization Voice" {
                         {
-                            % [T 2 Vocalization Voice] Measure 63
+                            % [T 2 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1141,22 +1549,18 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 4
+                                R1 * 2
                                 \stopStaff
                                 \startStaff
                             }
-                        }
-                    }
-                }
-                \context PercussionStaff = "T 2 Percussion Staff" {
-                    \clef "percussion"
-                    \bar "||"
-                    \context Voice = "T 2 Percussion Voice" {
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
-                        {
-                            % [T 2 Percussion Voice] Measure 63
+                            % [T 2 Vocalization Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
+                                r2
+                            }
+                        }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -1167,7 +1571,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "pitch pipe"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1180,7 +1584,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "pitch pipe"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1192,18 +1596,32 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'1 :32 \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 64
-                            {
-                                c'2. :32 \p \repeatTie
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( \startTextSpan
                                 <> \)
-                                \stopStaff
-                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 2 Vocalization Voice] Measure 9
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \parenthesizeDynamic \p \(
+                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
@@ -1212,9 +1630,151 @@
                         }
                         {
                             {
+                                r2
+                            }
+                        }
+                    }
+                }
+                \context PercussionStaff = "T 2 Percussion Staff" {
+                    \clef "percussion"
+                    \bar "||"
+                    \context Voice = "T 2 Percussion Voice" {
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            % [T 2 Percussion Voice] Measure 6
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                c'2. :32 \f \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                brushed
+                                                            }
+                                    }
+                                <> \)
+                                \stopStaff
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
                                 r4
                             }
-                            % [T 2 Percussion Voice] Measure 65
+                            % [T 2 Percussion Voice] Measure 7
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
+                        {
+                            {
+                                \clef "treble"
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vibraphone
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    vb.
+                                        }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                b'8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                vb.
+                                                            }
+                                    }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                            % [T 2 Percussion Voice] Measure 8
                             {
                                 r4
                             }
@@ -1258,15 +1818,66 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                f2. \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 66
-                            {
-                                f2.. \p \repeatTie
+                                f2 \( \startTextSpan \< ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
+                                    }
+                                f8 \p \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -1279,6 +1890,15 @@
                         {
                             {
                                 r8
+                            }
+                            % [T 2 Percussion Voice] Measure 9
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
@@ -1311,7 +1931,7 @@
                     \bar "||"
                     \context Voice = "T 3 Vocalization Voice" {
                         {
-                            % [T 3 Vocalization Voice] Measure 63
+                            % [T 3 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1349,7 +1969,7 @@
                     \context Voice = "T 3 Percussion Voice" {
                         % [T 3 Percussion Voice] Material: "trio_c_bass_drum_tranquilo"
                         {
-                            % [T 3 Percussion Voice] Measure 63
+                            % [T 3 Percussion Voice] Measure 6
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                                 f8 -\tenuto \laissezVibrer \f \(
@@ -1369,103 +1989,257 @@
                         }
                         {
                             {
-                                r8
+                                r4.
                             }
                         }
-                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_repetitions"
+                        % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                f8 -\staccato \( \< [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                f8 -\staccato ]
-                            }
-                            % [T 3 Percussion Voice] Measure 64
-                            {
-                                f8 -\staccato [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                f8 -\staccato ]
-                            }
-                            % [T 3 Percussion Voice] Measure 65
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                f8 -\staccato \p \> [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                f8 -\staccato ]
-                            }
-                            % [T 3 Percussion Voice] Measure 66
-                            {
-                                f8 -\staccato [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                f8 -\staccato
-                                \set stemLeftBeamCount = 1
-                                f8 -\staccato \! ]
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            tubular
+                                                                            bells
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    t.b.
+                                        }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                ef''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                t.b.
+                                                            }
+                                    }
                                 <> \)
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [T 3 Percussion Voice] Measure 7
+                            {
+                                r2
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [T 3 Percussion Voice] Measure 8
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_bass_drum_drone"
+                        {
+                            {
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            "four toms"
+                                                                            and
+                                                                            "bass drum"
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            toms
+                                                                            &
+                                                                            b.d.
+                                                                        }
+                                        }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
+                                f8 :64 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                perc.
+                                                            }
+                                    }
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_tubular_bells_tranquilo"
+                        {
+                            % [T 3 Percussion Voice] Measure 9
+                            {
+                                \clef "treble"
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            tubular
+                                                                            bells
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    t.b.
+                                        }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                c'8 -\tenuto \laissezVibrer \parenthesizeDynamic \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                t.b.
+                                                            }
+                                    }
+                                <> \)
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
                             }
                         }
                     }
@@ -1500,11 +2274,8 @@
                     \bar "||"
                     \context Voice = "B 1 Vocalization Voice" {
                         {
-                            % [B 1 Vocalization Voice] Measure 63
+                            % [B 1 Vocalization Voice] Measure 6
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -1525,36 +2296,14 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 2
-                                \stopStaff
-                                \startStaff
-                            }
-                            % [B 1 Vocalization Voice] Measure 65
-                            {
-                                r2
+                                r2.
                             }
                         }
-                        % [B 1 Vocalization Voice] Material: "whispered_inhales"
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override NoteHead.style = #'cross
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.9 0.9 0.98)
-                                c'4 -\accent \fp \(
-                                    _ \markup {
-                                        \whiteout
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        sh-
-                                                    }
-                                        }
-                                    ^ \markup {
+                                \once \override Hairpin.circled-tip = ##t
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1564,21 +2313,50 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                "pitch pipe"
                                                             }
                                     }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \( \startTextSpan \<
+                            }
+                            % [B 1 Vocalization Voice] Measure 7
+                            {
+                                c'4. \p \repeatTie
                                 <> \)
-                                \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4
+                                r8
+                                r2
                             }
-                            % [B 1 Vocalization Voice] Measure 66
+                            % [B 1 Vocalization Voice] Measure 8
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1586,6 +2364,40 @@
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
+                            }
+                        }
+                        % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            % [B 1 Vocalization Voice] Measure 9
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \p \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r2.
                             }
                         }
                     }
@@ -1636,9 +2448,9 @@
                     }
                     \bar "||"
                     \context Voice = "B 1 Percussion Voice" {
-                        % [B 1 Percussion Voice] Material: "shaker_drone"
+                        % [B 1 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 1 Percussion Voice] Measure 63
+                            % [B 1 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1651,7 +2463,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1664,7 +2476,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1676,7 +2488,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1719,20 +2531,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [B 1 Percussion Voice] Measure 64
+                            % [B 1 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [B 1 Percussion Voice] Measure 65
+                            % [B 1 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [B 1 Percussion Voice] Measure 66
+                            % [B 1 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1770,7 +2581,7 @@
                     \bar "||"
                     \context Voice = "B 2 Vocalization Voice" {
                         {
-                            % [B 2 Vocalization Voice] Measure 63
+                            % [B 2 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -1795,7 +2606,92 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 4
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            % [B 2 Vocalization Voice] Measure 7
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'2 \p \( \startTextSpan
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                            % [B 2 Vocalization Voice] Measure 8
+                            {
+                                r2
+                            }
+                        }
+                        % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \parenthesizeDynamic \p \(
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [B 2 Vocalization Voice] Measure 9
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -1848,9 +2744,9 @@
                     }
                     \bar "||"
                     \context Voice = "B 2 Percussion Voice" {
-                        % [B 2 Percussion Voice] Material: "shaker_drone"
+                        % [B 2 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 2 Percussion Voice] Measure 63
+                            % [B 2 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -1863,7 +2759,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1876,7 +2772,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1888,7 +2784,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1931,20 +2827,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [B 2 Percussion Voice] Measure 64
+                            % [B 2 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [B 2 Percussion Voice] Measure 65
+                            % [B 2 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [B 2 Percussion Voice] Measure 66
+                            % [B 2 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1982,7 +2877,7 @@
                     \bar "||"
                     \context Voice = "B 3 Vocalization Voice" {
                         {
-                            % [B 3 Vocalization Voice] Measure 63
+                            % [B 3 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -2007,7 +2902,95 @@
                                                     \italic
                                                         v.
                                     }
-                                R1 * 4
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [B 3 Vocalization Voice] Measure 7
+                            {
+                                r8
+                            }
+                        }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                "pitch pipe"
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'8 \p \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                c'8 \repeatTie ]
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r2
+                            }
+                            % [B 3 Vocalization Voice] Measure 8
+                            {
+                                r2.
+                            }
+                        }
+                        % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
+                        {
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                c'4 \parenthesizeDynamic \p \(
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [B 3 Vocalization Voice] Measure 9
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
@@ -2060,9 +3043,9 @@
                     }
                     \bar "||"
                     \context Voice = "B 3 Percussion Voice" {
-                        % [B 3 Percussion Voice] Material: "shaker_drone"
+                        % [B 3 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 3 Percussion Voice] Measure 63
+                            % [B 3 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2075,7 +3058,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2088,7 +3071,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2100,7 +3083,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2143,20 +3126,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [B 3 Percussion Voice] Measure 64
+                            % [B 3 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 65
+                            % [B 3 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [B 3 Percussion Voice] Measure 66
+                            % [B 3 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2194,7 +3176,7 @@
                     \bar "||"
                     \context Voice = "B 4 Vocalization Voice" {
                         {
-                            % [B 4 Vocalization Voice] Measure 63
+                            % [B 4 Vocalization Voice] Measure 6
                             {
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
@@ -2272,9 +3254,9 @@
                     }
                     \bar "||"
                     \context Voice = "B 4 Percussion Voice" {
-                        % [B 4 Percussion Voice] Material: "shaker_drone"
+                        % [B 4 Percussion Voice] Material: "wine_glass_drone"
                         {
-                            % [B 4 Percussion Voice] Measure 63
+                            % [B 4 Percussion Voice] Measure 6
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
@@ -2287,7 +3269,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2300,7 +3282,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                spun
+                                                                circle
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2312,7 +3294,7 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2355,20 +3337,19 @@
                                                                         }
                                         }
                                     }
-                                g'1 :32 \( \startTextSpan \<
+                                f1 \( \startTextSpan \<
                             }
-                            % [B 4 Percussion Voice] Measure 64
+                            % [B 4 Percussion Voice] Measure 7
                             {
-                                g'1 :32 \repeatTie
+                                f1 \repeatTie
                             }
-                            % [B 4 Percussion Voice] Measure 65
+                            % [B 4 Percussion Voice] Measure 8
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                g'1 :32 \p \repeatTie \>
+                                f1 \p \repeatTie
                             }
-                            % [B 4 Percussion Voice] Measure 66
+                            % [B 4 Percussion Voice] Measure 9
                             {
-                                g'1 :32 \repeatTie \!
+                                f1 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -2381,4 +3362,3 @@
             >>
         >>
     >>
-}

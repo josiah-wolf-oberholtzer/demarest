@@ -28,15 +28,15 @@
             1,
             4
         ],
-        64
+        96
     ],
     "end_time_signature": [
         4,
         4
     ],
-    "first_bar_number": 97,
+    "first_bar_number": 83,
     "is_repeated": null,
-    "measure_count": 12,
+    "measure_count": 18,
     "segment_count": 14,
     "segment_number": 10
 }

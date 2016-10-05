@@ -14,7 +14,7 @@ segment_maker = demarest.SegmentMaker(
     permitted_time_signatures=[
         (4, 4),
         ],
-    tempo=abjad.Tempo((1, 4), 64),
+    tempo=abjad.Tempo((1, 4), 72),
     )
 
 ### TIMESPAN MAKERS ###
@@ -55,3 +55,15 @@ rare_timespan_identifier = abjad.sequencetools.Sequence(
 ### TRIO MUSIC SPECIFIERS ###
 
 ### TRIO PERCUSSION MUSIC SETTINGS ###
+
+### DETAILS ###
+
+segment_maker.add_setting(
+    timespan_identifier=abjad.Timespan(0, (1, 4)),
+    t_3_percussion=abjad.new(
+        materials.trio_c_bass_drum_tranquilo,
+        attachment_handler__dynamics=consort.DynamicExpression(
+            dynamic_tokens='f',
+            ),
+        ),
+    )
