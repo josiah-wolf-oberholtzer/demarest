@@ -1848,7 +1848,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    crotales
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -1864,7 +1869,10 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    ct.
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
                                         }
                                     }
                                 \stopStaff

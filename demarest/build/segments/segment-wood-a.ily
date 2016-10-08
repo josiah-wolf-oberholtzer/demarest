@@ -1739,7 +1739,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                e'16 \parenthesizeDynamic \p \( \> [ ^ \markup {
+                                e'16 \f \( \> [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1755,7 +1755,7 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
-                                <a c'>16 -\accent ]
+                                <a e'>16 -\accent ]
                                 <a c'>4.. :32
                                 f16 \ppp
                                 <> \)
@@ -1771,7 +1771,7 @@
                             % [T 1 Percussion Voice] Measure 3
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <f a>16 -\accent \parenthesizeDynamic \ppp \( \< [
+                                <f c'>16 -\accent \parenthesizeDynamic \ppp \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 a16
@@ -2238,7 +2238,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'4 \) \(
+                                g'4 :32 \) \(
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -2586,12 +2586,12 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \ppp \( \< [
+                                c'16 \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 r16
                                 <e' g'>8 :64 ]
-                                <e' g'>2 :32 \p \repeatTie
+                                <e' g'>2 :32 \repeatTie
                                 <> \)
                             }
                         }
@@ -2649,7 +2649,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                a16 \parenthesizeDynamic \p \( [
+                                a16 \f \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 g'16
@@ -2668,7 +2668,7 @@
                             % [T 3 Percussion Voice] Measure 5
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                f2 :32 \parenthesizeDynamic \p \(
+                                f2 :32 \p \(
                                 <> \)
                             }
                         }

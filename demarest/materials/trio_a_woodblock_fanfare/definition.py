@@ -6,49 +6,38 @@ from demarest.materials import abbreviations
 
 Percussion = abbreviations.UnpitchedPercussion
 
+pairs = [
+    (Percussion.WOOD_BLOCK_1, Percussion.WOOD_BLOCK_3),
+    (Percussion.WOOD_BLOCK_2, Percussion.WOOD_BLOCK_4),
+    (Percussion.WOOD_BLOCK_1, Percussion.WOOD_BLOCK_5),
+    (Percussion.WOOD_BLOCK_3, Percussion.WOOD_BLOCK_4),
+    (Percussion.WOOD_BLOCK_2, Percussion.WOOD_BLOCK_5),
+    (Percussion.WOOD_BLOCK_1, Percussion.WOOD_BLOCK_4),
+    (Percussion.WOOD_BLOCK_3, Percussion.WOOD_BLOCK_4),
+    (Percussion.WOOD_BLOCK_2, Percussion.WOOD_BLOCK_3),
+    (Percussion.WOOD_BLOCK_1, Percussion.WOOD_BLOCK_2),
+    (Percussion.WOOD_BLOCK_4, Percussion.WOOD_BLOCK_5),
+    ]
+
+chord_expressions = [
+    consort.ChordExpression(chord_expr=pair)
+    for pair in pairs
+    ]
+
+attachments = [
+    [
+        abjad.indicatortools.Articulation('accent'),
+        chord_expression,
+        ]
+    for chord_expression in chord_expressions
+    ]
+
 
 trio_a_woodblock_fanfare = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         clef_spanner=consort.ClefSpanner('percussion'),
         chords=consort.AttachmentExpression(
-            attachments=[
-                [
-                    abjad.indicatortools.Articulation('accent'),
-                    consort.ChordExpression(
-                        chord_expr=[
-                            Percussion.WOOD_BLOCK_1,
-                            Percussion.WOOD_BLOCK_2,
-                            ],
-                        ),
-                    ],
-                [
-                    abjad.indicatortools.Articulation('accent'),
-                    consort.ChordExpression(
-                        chord_expr=[
-                            Percussion.WOOD_BLOCK_2,
-                            Percussion.WOOD_BLOCK_3,
-                            ],
-                        ),
-                    ],
-                [
-                    abjad.indicatortools.Articulation('accent'),
-                    consort.ChordExpression(
-                        chord_expr=[
-                            Percussion.WOOD_BLOCK_3,
-                            Percussion.WOOD_BLOCK_4,
-                            ],
-                        ),
-                    ],
-                [
-                    abjad.indicatortools.Articulation('accent'),
-                    consort.ChordExpression(
-                        chord_expr=[
-                            Percussion.WOOD_BLOCK_4,
-                            Percussion.WOOD_BLOCK_5,
-                            ],
-                        ),
-                    ],
-                ],
+            attachments=attachments,
             is_destructive=True,
             selector=abjad.select()
                 .by_logical_tie(pitched=True)
@@ -62,8 +51,8 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
             ),
         dynamics=consort.DynamicExpression(
             division_period=2,
-            dynamic_tokens='p ppp',
-            start_dynamic_tokens='ppp p',
+            dynamic_tokens='p mf ppp',
+            start_dynamic_tokens='ppp f p',
             stop_dynamic_tokens='p ppp',
             ),
         tremolo_chords=consort.AttachmentExpression(

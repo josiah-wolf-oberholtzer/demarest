@@ -23,7 +23,7 @@
                 }
                 \null
                 \override #'(font-name . "Didot Italic") {
-                    \fontsize #6 "Three field studies from"
+                    \fontsize #6 "Field studies from"
                 }
                 \null
                 \override #'(font-name . "Didot") {

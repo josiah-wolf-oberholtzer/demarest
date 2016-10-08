@@ -44,8 +44,8 @@ trio_c_toms_fanfare = consort.MusicSpecifier(
             ),
         dynamics=consort.DynamicExpression(
             division_period=2,
-            dynamic_tokens='p ppp',
-            start_dynamic_tokens='ppp p',
+            dynamic_tokens='p mf ppp',
+            start_dynamic_tokens='ppp f p',
             stop_dynamic_tokens='p ppp',
             ),
         tremolo_chords=consort.AttachmentExpression(

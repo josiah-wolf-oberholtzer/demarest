@@ -3037,7 +3037,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    marimba
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -3053,7 +3058,10 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    mb.
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
                                         }
                                     }
                                 r4

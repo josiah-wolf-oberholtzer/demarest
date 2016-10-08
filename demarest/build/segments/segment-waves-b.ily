@@ -749,7 +749,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    crotales
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -765,7 +770,10 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    ct.
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
                                         }
                                     }
                                 \stopStaff
@@ -858,7 +866,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    vibraphone
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -874,7 +887,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    vb.
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
                                         }
                                     }
                                 \stopStaff

@@ -7160,7 +7160,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                e'16 \p \( \> [ ^ \markup {
+                                e'16 \f \( \> [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -7178,7 +7178,7 @@
                                 a16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
-                                <a c'>16 -\accent
+                                <a e'>16 -\accent
                                 <a c'>8 :64 ]
                                 <a c'>4.. :32 \repeatTie
                                 f16 \ppp
@@ -7196,7 +7196,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                <f a>16 -\accent \parenthesizeDynamic \ppp \( [
+                                <f c'>16 -\accent \parenthesizeDynamic \ppp \( [
                                 a16 ]
                                 <f a>4 :32
                                 <> \)
@@ -7366,7 +7366,7 @@
                             % [T 1 Percussion Voice] Measure 115
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                a16 \parenthesizeDynamic \ppp \) \( \< [
+                                a16 \f \) \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -7374,7 +7374,7 @@
                                 \set stemRightBeamCount = 2
                                 c'16
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 -\accent \p ]
+                                <f a>16 -\accent \p ]
                                 <> \)
                             }
                         }
@@ -7387,7 +7387,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                f16 \( \> [
+                                f16 \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
@@ -7395,7 +7395,7 @@
                                 \set stemRightBeamCount = 1
                                 a16
                                 \set stemLeftBeamCount = 1
-                                <a c'>8 :64 \ppp ]
+                                <a c'>8 :64 ]
                             }
                         }
                         % [T 1 Percussion Voice] Material: "trio_a_woodblock_fanfare"
@@ -7403,12 +7403,12 @@
                             % [T 1 Percussion Voice] Measure 116
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                g'16 \parenthesizeDynamic \ppp \) \( \< [
+                                g'16 \p \) \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 f16
                                 <f a>8 :64 ]
-                                <f a>4. :32 \p \repeatTie
+                                <f a>4. :32 \repeatTie
                                 <> \)
                             }
                         }
@@ -7537,7 +7537,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                a16 \p \( \> [ ^ \markup {
+                                a16 \f \( \> [ ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -8076,6 +8076,56 @@
                                                             #0.5
                                                             \small
                                                                 \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
+                                    }
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
+                        {
+                            {
+                                \clef "treble"
+                                \once \override Hairpin.circled-tip = ##t
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
                                                                     vibraphone
                                         }
                                     }
@@ -8095,16 +8145,20 @@
                                                                     vb.
                                         }
                                     }
-                                r4
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_vibraphone_shimmer"
-                        {
-                            {
-                                \clef "treble"
-                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <b'' d'''>2 :32 \fp \( \>
+                                <b'' d'''>2 :32 \fp \( \> ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                vb.
+                                                            }
+                                    }
                                 <b'' d'''>8 :64 \repeatTie
                                 <> \)
                                 \clef "percussion"
@@ -8547,7 +8601,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'2 \f \( ^ \markup {
+                                g'2 :32 \f \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -8560,7 +8614,7 @@
                                                                 perc.
                                                             }
                                     }
-                                g'8 \repeatTie
+                                g'8 :64 \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -8772,7 +8826,7 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'4. \f \( ^ \markup {
+                                g'4. :32 \f \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -9715,7 +9769,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \ppp \( [
+                                c'16 \parenthesizeDynamic \p \( [
                                 r16 ]
                                 <e' g'>4. :32
                                 <> \)
@@ -9731,7 +9785,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                a16 \p \( \> [
+                                a16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -9855,7 +9909,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                e'16 \( \< [
+                                e'16 \f \( \> [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 r16
@@ -9904,12 +9958,12 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \parenthesizeDynamic \p \( \> [
+                                c'16 \ppp \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 e'16
                                 a16 ]
-                                <a c'>4. :32 \ppp
+                                <a c'>4. :32
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
@@ -9917,7 +9971,7 @@
                             % [T 3 Percussion Voice] Measure 120
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \parenthesizeDynamic \ppp \) \( \< [
+                                c'16 \p \) \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 e'16
@@ -9925,7 +9979,7 @@
                                 \set stemRightBeamCount = 1
                                 <e' g'>8 :64
                                 \set stemLeftBeamCount = 1
-                                <e' g'>8 :64 \p \repeatTie ]
+                                <e' g'>8 :64 \repeatTie ]
                                 <> \)
                             }
                         }

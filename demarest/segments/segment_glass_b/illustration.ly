@@ -1,7 +1,7 @@
 % package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
-% package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
+% package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
 % package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ d608d0e [master] (2016-10-04 19:54:44)
+% package "demarest" @ 4044540 [master] (2016-10-04 20:59:23)
 
 \version "2.19.44"
 \language "english"
@@ -3051,7 +3051,12 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    marimba
+                                                                    \right-column
+                                                                        {
+                                                                            five
+                                                                            wood
+                                                                            blocks
+                                                                        }
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -3067,7 +3072,10 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    mb.
+                                                                    \right-column
+                                                                        {
+                                                                            w.b.
+                                                                        }
                                         }
                                     }
                                 r4
