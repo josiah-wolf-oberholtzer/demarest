@@ -1,7 +1,7 @@
-% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 4044540 [master] (2016-10-04 20:59:23)
+% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
+% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
 
 \version "2.19.44"
 \language "english"
@@ -129,7 +129,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -1023,7 +1023,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -1579,7 +1579,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)

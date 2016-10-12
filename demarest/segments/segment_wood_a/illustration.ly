@@ -1,7 +1,7 @@
-% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 4044540 [master] (2016-10-04 20:59:23)
+% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
+% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
 
 \version "2.19.44"
 \language "english"
@@ -57,29 +57,9 @@
                         {
                             % [A 1 Vocalization Voice] Measure 1
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -110,7 +90,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -123,7 +103,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -269,7 +249,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \p \( ^ \markup {
+                                c'4 :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -428,7 +422,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \( ^ \markup {
+                                c'4 :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -518,7 +526,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4. :32 \parenthesizeDynamic \p \( ^ \markup {
+                                c'4. :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    narrow
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -586,29 +608,9 @@
                         {
                             % [A 2 Vocalization Voice] Measure 3
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'4. \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -657,7 +659,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -838,7 +840,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -851,7 +853,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -938,7 +940,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -1067,7 +1069,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \( ^ \markup {
+                                c'2 :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    narrow
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1214,7 +1230,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1227,7 +1243,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1414,7 +1430,6 @@
                         % [A 4 Percussion Voice] Material: "guiro_shimmer"
                         {
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -1451,11 +1466,24 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \( \startTextSpan \<
+                                c'4 :32 \( \startTextSpan
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
                             }
                             % [A 4 Percussion Voice] Measure 5
                             {
-                                c'2 :32 \p \repeatTie
+                                c'2 :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -1543,7 +1571,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -1585,7 +1613,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1598,7 +1626,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1753,17 +1781,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 e'16 \f \( \> [ ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -1841,17 +1876,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d' f'>8 :64 \ppp \( ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                mb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                mb.
+                                                                            }
                                     }
                                 <> \)
                                 \clef "percussion"
@@ -1927,7 +1969,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1940,7 +1982,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2113,17 +2155,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b'' d'''>4. :32 \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                     }
                                 <> \)
                                 \clef "percussion"
@@ -2223,17 +2272,24 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 c'8 :64 \f \( \startTextSpan ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                                 c'2 :32 \repeatTie
                                 \stopStaff
@@ -2247,14 +2303,34 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'4 :32 \) \(
+                                g'4 :32 \) \( ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                unmeasured
+                                                            }
+                                    }
                                 <> \)
                                 \stopStaff
                                 \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2302,17 +2378,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <g'' bf''>2 :32 \( \< ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 4
@@ -2382,17 +2465,24 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 f16 -\staccato \( \< [ ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -2469,7 +2559,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2482,7 +2572,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2746,7 +2836,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2759,7 +2849,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2856,7 +2946,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -2933,7 +3023,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4. :32 \p \( ^ \markup {
+                                c'4. :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    narrow
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -3018,7 +3122,6 @@
                         {
                             % [B 1 Percussion Voice] Measure 3
                             {
-                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -3055,8 +3158,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \( \startTextSpan \<
-                                c'8 :64 \p \repeatTie
+                                c'2 :32 \( \startTextSpan
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
+                                c'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -3187,7 +3303,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3200,7 +3316,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3290,7 +3406,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -3432,7 +3548,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2. :32 \( ^ \markup {
+                                c'2. :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -3571,7 +3701,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3584,7 +3714,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3666,7 +3796,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -3839,6 +3969,19 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 c'8 :64 \( \startTextSpan
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    narrow
+                                                                }
+                                        }
                                 c'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -3895,7 +4038,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \( ^ \markup {
+                                c'2 :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    narrow
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4011,7 +4168,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4024,7 +4181,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4129,7 +4286,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \p \( ^ \markup {
+                                c'2 :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4254,6 +4425,19 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
                                 c'8 :64 \( \startTextSpan [
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    narrow
+                                                                }
+                                        }
                                 \set stemLeftBeamCount = 1
                                 c'8 :64 \repeatTie ]
                                 <> \)
@@ -4332,7 +4516,21 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \( ^ \markup {
+                                c'4 :32 \(
+                                    ^ \markup {
+                                        \box
+                                            \whiteout
+                                                \pad-around
+                                                    #0.5
+                                                    \italic
+                                                        \smaller
+                                                            \concat
+                                                                {
+                                                                    \vstrut
+                                                                    wide
+                                                                }
+                                        }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around

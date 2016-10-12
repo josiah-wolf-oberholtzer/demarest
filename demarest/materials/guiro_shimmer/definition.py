@@ -8,11 +8,17 @@ from demarest.materials.unpitched_shimmer.definition \
 
 guiro_shimmer = abjad.new(
     unpitched_shimmer,
-    attachment_handler__dynamics=consort.DynamicExpression(
-        division_period=2,
-        dynamic_tokens='p',
-        start_dynamic_tokens='niente',
-        stop_dynamic_tokens='niente',
+    attachment_handler__dynamics=None,
+    attachment_handler__width=consort.AttachmentExpression(
+        attachments=[
+            abbreviations.make_text_markup('wide'),
+            abbreviations.make_text_markup('narrow'),
+            abbreviations.make_text_markup('wide'),
+            abbreviations.make_text_markup('narrow'),
+            abbreviations.make_text_markup('narrow'),
+            abbreviations.make_text_markup('wide'),
+            ],
+        selector=abjad.selectortools.select_pitched_runs()[0],
         ),
     attachment_handler__performance_instruction=consort.AttachmentExpression(
         attachments=abbreviations.make_text_spanner('scrape tremolo'),

@@ -16,10 +16,6 @@ pitch_pipe_flutter = consort.MusicSpecifier(
             start_dynamic_tokens='fp',
             stop_dynamic_tokens='niente',
             ),
-        performance_instruction=consort.AttachmentExpression(
-            attachments=abbreviations.make_text_spanner('pitch pipe'),
-            selector=abjad.selectortools.select_pitched_runs(),
-            ),
         tenuti=consort.AttachmentExpression(
             attachments=abjad.Articulation('tenuto'),
             selector=abjad.selectortools.select_pitched_runs()
@@ -32,6 +28,7 @@ pitch_pipe_flutter = consort.MusicSpecifier(
         .scale_luminance(1)
         .rotate_hue(0.15),
     comment='pitch_pipe_flutter',
+    instrument=abbreviations.pitch_pipe,
     labels=['pitch_pipe_flutter'],
     rhythm_maker=abjad.rhythmmakertools.EvenDivisionRhythmMaker(
         burnish_specifier=abjad.rhythmmakertools.BurnishSpecifier(

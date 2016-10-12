@@ -1,7 +1,7 @@
-% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 4044540 [master] (2016-10-04 20:59:23)
+% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
+% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
 
 \version "2.19.44"
 \language "english"
@@ -70,26 +70,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
@@ -102,52 +82,13 @@
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan
+                                c'8 \p \(
                             }
                             % [A 1 Vocalization Voice] Measure 69
                             {
                                 c'1 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -169,51 +110,13 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'4 \( \<
                             }
                             % [A 1 Vocalization Voice] Measure 73
                             {
                                 c'4. \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -230,9 +133,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \<
                             }
@@ -241,10 +141,6 @@
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -269,50 +165,11 @@
                         % [A 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
+                                c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -814,49 +671,10 @@
                         % [A 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan
+                                c'8 \p \(
                                 c'2 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -877,47 +695,9 @@
                         {
                             % [A 2 Vocalization Voice] Measure 73
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \p \( \startTextSpan
+                                c'2 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -934,9 +714,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \( \<
                             }
@@ -944,10 +721,6 @@
                             {
                                 c'4. \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -969,29 +742,9 @@
                         {
                             % [A 2 Vocalization Voice] Measure 78
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1362,51 +1115,13 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'2 \( \<
                             }
                             % [A 3 Vocalization Voice] Measure 69
                             {
                                 c'4 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1421,16 +1136,9 @@
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1454,49 +1162,11 @@
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
+                                c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1512,9 +1182,6 @@
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
@@ -1522,9 +1189,6 @@
                             {
                                 c'2. \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1539,16 +1203,9 @@
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1569,29 +1226,9 @@
                         % [A 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'2 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1978,47 +1615,9 @@
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( \startTextSpan
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2031,9 +1630,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
@@ -2041,9 +1637,6 @@
                             {
                                 c'4 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2054,18 +1647,11 @@
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_flutter"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'8 -\accent \fp \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2090,52 +1676,14 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2. \( \startTextSpan \<
+                                c'2. \( \<
                             }
                             % [A 4 Vocalization Voice] Measure 75
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2150,16 +1698,9 @@
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2180,49 +1721,10 @@
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan
+                                c'8 \p \(
                                 c'4. \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2579,26 +2081,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
@@ -2609,48 +2091,10 @@
                             % [T 1 Vocalization Voice] Measure 68
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'2 \( \<
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2663,9 +2107,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( \<
                             }
@@ -2674,10 +2115,6 @@
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2702,52 +2139,13 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'4 \( \<
                             }
                             % [T 1 Vocalization Voice] Measure 72
                             {
                                 c'2.. \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2771,49 +2169,10 @@
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan
+                                c'8 \p \(
                                 c'4. \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2837,49 +2196,11 @@
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
+                                c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2894,16 +2215,9 @@
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2921,47 +2235,9 @@
                         {
                             % [T 1 Vocalization Voice] Measure 80
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( \startTextSpan
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2973,9 +2249,6 @@
                         {
                             \times 2/3 {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
                                 c'8 -\accent \fp \( \> [
                                 \set stemLeftBeamCount = 1
@@ -2990,9 +2263,6 @@
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3003,16 +2273,9 @@
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3136,17 +2399,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                ct.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                ct.
+                                                                            }
                                     }
                                     ^ \markup {
                                     \box
@@ -3422,17 +2692,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d'' f''>4. :32 \fp \( ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                mb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                mb.
+                                                                            }
                                     }
                                 <> \)
                             }
@@ -3537,17 +2814,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                ct.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                ct.
+                                                                            }
                                     }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -3718,29 +3002,9 @@
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2. \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'2. \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3762,53 +3026,14 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \<
                             }
                             % [T 2 Vocalization Voice] Measure 72
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3833,50 +3058,11 @@
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
+                                c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3900,29 +3086,9 @@
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -3944,52 +3110,14 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \( \startTextSpan \<
+                                c'4 \( \<
                             }
                             % [T 2 Vocalization Voice] Measure 79
                             {
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4005,9 +3133,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2. \( \<
                             }
@@ -4015,9 +3140,6 @@
                             {
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4029,18 +3151,11 @@
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4166,17 +3281,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                     }
                                     ^ \markup {
                                     \box
@@ -4263,17 +3385,24 @@
                                 \startStaff
                                 c'4. :32 \f \(
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                                     ^ \markup {
                                     \box
@@ -4360,17 +3489,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                     }
                                     ^ \markup {
                                     \box
@@ -4487,17 +3623,24 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 f8 \( \startTextSpan \< ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                                 f2 \repeatTie
                                 f8 \p \repeatTie
@@ -4646,17 +3789,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                     }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -4866,17 +4016,24 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 c'4. :32 \( \startTextSpan \< ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 77
@@ -4956,17 +4113,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                vb.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                     }
                                     ^ \markup {
                                     \box
@@ -5177,53 +4341,14 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \<
                                 c'2 \repeatTie
                             }
                             % [T 3 Vocalization Voice] Measure 69
                             {
                                 c'4 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -5247,29 +4372,9 @@
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2.. \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'2.. \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5287,29 +4392,9 @@
                         {
                             % [T 3 Vocalization Voice] Measure 74
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5330,47 +4415,9 @@
                         {
                             % [T 3 Vocalization Voice] Measure 77
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( \startTextSpan
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5385,9 +4432,6 @@
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
@@ -5395,10 +4439,6 @@
                             {
                                 c'1 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -5498,17 +4538,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                t.b.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                t.b.
+                                                                            }
                                     }
                                 <> \)
                             }
@@ -5608,17 +4655,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f4 :32 \( \< ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                             }
                             % [T 3 Percussion Voice] Measure 71
@@ -5687,17 +4741,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                t.b.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                t.b.
+                                                                            }
                                     }
                                 <> \)
                             }
@@ -5842,17 +4903,24 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 f2 :32 \( \< ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                perc.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                     }
                             }
                             % [T 3 Percussion Voice] Measure 77
@@ -5928,17 +4996,24 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \box
-                                        \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
                                             \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                t.b.
-                                                            }
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                t.b.
+                                                                            }
                                     }
                                 <> \)
                             }
@@ -6017,26 +5092,6 @@
                         {
                             % [B 1 Vocalization Voice] Measure 67
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 r2
                                 r8
                             }
@@ -6045,52 +5100,13 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'4. \( \<
                             }
                             % [B 1 Vocalization Voice] Measure 68
                             {
                                 c'4 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -6115,48 +5131,10 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'2 \( \<
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6172,9 +5150,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \( \<
                             }
@@ -6182,9 +5157,6 @@
                             {
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6197,9 +5169,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
@@ -6207,10 +5176,6 @@
                             {
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -6234,49 +5199,11 @@
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
+                                c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6292,15 +5219,9 @@
                         % [B 1 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6312,16 +5233,9 @@
                         {
                             % [B 1 Vocalization Voice] Measure 79
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -6656,42 +5570,17 @@
                         {
                             % [B 2 Vocalization Voice] Measure 67
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
+                                \set Staff.instrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        voice
+                                    }
                                 \set Staff.instrumentName = \markup {
                                     \pad-around
                                         #0.5
@@ -6712,11 +5601,18 @@
                                                     \italic
                                                         v.
                                     }
-                                c'4 \p \( \startTextSpan
+                                \set Staff.shortInstrumentName = \markup {
+                                    \pad-around
+                                        #0.5
+                                        \bracket
+                                            \pad-around
+                                                #0.5
+                                                \small
+                                                    \italic
+                                                        v.
+                                    }
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6728,16 +5624,9 @@
                         {
                             % [B 2 Vocalization Voice] Measure 68
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -6763,51 +5652,13 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \( \startTextSpan \<
+                                c'2 \( \<
                             }
                             % [B 2 Vocalization Voice] Measure 71
                             {
                                 c'4 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6822,9 +5673,6 @@
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
@@ -6832,10 +5680,6 @@
                             {
                                 c'4. \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -6860,29 +5704,9 @@
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
+                                c'2 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6900,47 +5724,9 @@
                         {
                             % [B 2 Vocalization Voice] Measure 78
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( \startTextSpan
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6955,16 +5741,9 @@
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7238,47 +6017,9 @@
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2. \p \( \startTextSpan
+                                c'2. \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7290,16 +6031,9 @@
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7325,52 +6059,13 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \( \startTextSpan \<
+                                c'4. \( \<
                             }
                             % [B 3 Vocalization Voice] Measure 71
                             {
                                 c'2. \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7394,50 +6089,11 @@
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( \startTextSpan [
+                                c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7459,47 +6115,9 @@
                         {
                             % [B 3 Vocalization Voice] Measure 75
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2 \p \( \startTextSpan
+                                c'2 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7515,9 +6133,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \<
                             }
@@ -7526,9 +6141,6 @@
                                 c'2 \repeatTie
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7543,15 +6155,9 @@
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2.. \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7563,18 +6169,11 @@
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7938,53 +6537,14 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \<
                                 c'2 \repeatTie
                             }
                             % [B 4 Vocalization Voice] Measure 68
                             {
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8009,43 +6569,8 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \startTextSpan \<
+                                c'8 \( \<
                             }
                             % [B 4 Vocalization Voice] Measure 71
                             {
@@ -8055,9 +6580,6 @@
                             {
                                 c'8 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8069,9 +6591,6 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \<
                             }
@@ -8079,10 +6598,6 @@
                             {
                                 c'4 \p \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8106,47 +6621,9 @@
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "pitch pipe"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( \startTextSpan
+                                c'4 \p \(
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8161,9 +6638,6 @@
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \parenthesizeDynamic \p \(
                             }
@@ -8171,9 +6645,6 @@
                             {
                                 c'1 \repeatTie
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8186,18 +6657,11 @@
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
                         {
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( [
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {

@@ -4,7 +4,7 @@ import consort
 from demarest.materials import abbreviations
 
 
-performance_instruction = abbreviations.make_text_spanner('wh. (inhale)')
+performance_instruction = abbreviations.make_text_spanner('inhale')
 abjad.override(performance_instruction).note_head.style = 'cross'
 performance_instruction = consort.AttachmentExpression(
     attachments=performance_instruction,
@@ -60,6 +60,7 @@ whispered_inhales = consort.MusicSpecifier(
         .scale_luminance(0)
         .rotate_hue(0.0),
     comment='whispered_inhales',
+    instrument=abbreviations.whispered,
     labels=['whispered_inhales'],
     rhythm_maker=abjad.rhythmmakertools.TaleaRhythmMaker(
         talea=abjad.rhythmmakertools.Talea([1], 4)

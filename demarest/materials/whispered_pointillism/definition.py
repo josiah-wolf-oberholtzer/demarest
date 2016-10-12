@@ -6,8 +6,8 @@ from demarest.materials.unpitched_pointillism.definition import \
     unpitched_pointillism
 
 
-performance_instruction = abbreviations.make_text_spanner('wh.')
-#abjad.override(performance_instruction).note_head.style = 'cross'
+performance_instruction = abjad.spannertools.Spanner()
+abjad.override(performance_instruction).note_head.style = 'cross'
 
 sibilances = [
     abjad.Markup.concat([
@@ -40,6 +40,7 @@ whispered_pointillism = abjad.new(
         .scale_luminance(-0.5)
         .rotate_hue(0.0),
     comment='whispered_pointillism',
+    instrument=abbreviations.whispered,
     labels=['whispered_pointillism'],
     rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=abjad.rhythmmakertools.InciseSpecifier(

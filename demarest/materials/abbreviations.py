@@ -14,7 +14,21 @@ def make_text_markup(text):
         markuptools.Markup(r'\vstrut'),
         markuptools.Markup(text),
         ])
-    markup = markup.smaller().italic().pad_around(0.5).whiteout().box()
+    markup = markup.smaller()
+    markup = markup.italic()
+    markup = markup.pad_around(0.5)
+    markup = markup.whiteout()
+    markup = markup.box()
+    markup = markuptools.Markup(markup, 'up')
+    return markup
+
+
+def make_instrument_change_markup(text):
+    markup = make_text_markup(text)
+    markup = markup.override(('thickness', 1))
+    markup = markup.pad_around(0.125)
+    markup = markup.box()
+    markup = markup.override(('thickness', 2))
     markup = markuptools.Markup(markup, 'up')
     return markup
 
@@ -136,9 +150,6 @@ chordal_register_handler = consort.RegisterHandler(
         consort.ChordExpression(chord_expr=[0, 3]),
         consort.ChordExpression(chord_expr=[0, 3]),
         consort.ChordExpression(chord_expr=[0, 5]),
-        #consort.ChordExpression(chord_expr=[-3, 0, 5, 6]),
-        #consort.ChordExpression(chord_expr=[-3, 0, 1, 5]),
-        #consort.ChordExpression(chord_expr=[-2, 0, 1, 5]),
         ],
     register_specifier=consort.RegisterSpecifier(
         base_pitch='G3',
@@ -154,11 +165,23 @@ chordal_register_handler = consort.RegisterHandler(
     )
 
 
+### VOCALIZATIONS ###
+
+whispered = consort.Instrument(
+    instrument_name='whispering',
+    instrument_change_markup=None,
+    )
+
+pitch_pipe = consort.Instrument(
+    instrument_name='pitch_pipe',
+    instrument_change_markup=None,
+    )
+
 ### TRIO A ###
 
 crotales = consort.Instrument(
     instrument_name='crotales',
-    instrument_change_markup=make_text_markup('ct.'),
+    instrument_change_markup=make_instrument_change_markup('ct.'),
     instrument_name_markup=Markup.concat([
         Markup('T1').vcenter(),
         make_instrument_markup('crotales')
@@ -174,7 +197,7 @@ crotales = consort.Instrument(
 
 marimba = consort.Instrument(
     instrument_name='marimba',
-    instrument_change_markup=make_text_markup('mb.'),
+    instrument_change_markup=make_instrument_change_markup('mb.'),
     instrument_name_markup=Markup.concat([
         Markup('T1').vcenter(),
         make_instrument_markup('marimba')
@@ -190,7 +213,7 @@ marimba = consort.Instrument(
 
 trio_a_percussion = consort.Instrument(
     instrument_name='trio_a_percussion',
-    instrument_change_markup=make_text_markup('perc.'),
+    instrument_change_markup=make_instrument_change_markup('perc.'),
     instrument_name_markup=Markup.concat([
         Markup('T1').vcenter(),
         make_instrument_column_markup(['five', 'wood', 'blocks'])
@@ -207,7 +230,7 @@ trio_a_percussion = consort.Instrument(
 
 vibraphone = consort.Instrument(
     instrument_name='vibraphone',
-    instrument_change_markup=make_text_markup('vb.'),
+    instrument_change_markup=make_instrument_change_markup('vb.'),
     instrument_name_markup=Markup.concat([
         Markup('T2').vcenter(),
         make_instrument_markup('vibraphone')
@@ -223,7 +246,7 @@ vibraphone = consort.Instrument(
 
 trio_b_percussion = consort.Instrument(
     instrument_name='trio_b_percussion',
-    instrument_change_markup=make_text_markup('perc.'),
+    instrument_change_markup=make_instrument_change_markup('perc.'),
     instrument_name_markup=Markup.concat([
         Markup('T2').vcenter(),
         make_instrument_column_markup(['ratchet', 'snare', 'tam-tam'])
@@ -240,7 +263,7 @@ trio_b_percussion = consort.Instrument(
 
 tubular_bells = consort.Instrument(
     instrument_name='tubular_bells',
-    instrument_change_markup=make_text_markup('t.b.'),
+    instrument_change_markup=make_instrument_change_markup('t.b.'),
     instrument_name_markup=Markup.concat([
         Markup('T3').vcenter(),
         make_instrument_column_markup(['tubular', 'bells'])
@@ -256,7 +279,7 @@ tubular_bells = consort.Instrument(
 
 trio_c_percussion = consort.Instrument(
     instrument_name='trio_c_percussion',
-    instrument_change_markup=make_text_markup('perc.'),
+    instrument_change_markup=make_instrument_change_markup('perc.'),
     instrument_name_markup=Markup.concat([
         Markup('T3').vcenter(),
         make_instrument_column_markup(['four toms', 'and', 'bass drum'])

@@ -1,7 +1,7 @@
-% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
-% package "demarest" @ 4044540 [master] (2016-10-04 20:59:23)
+% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
+% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
 
 \version "2.19.44"
 \language "english"
@@ -70,26 +70,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 11
                                 \stopStaff
                                 \startStaff
@@ -113,7 +93,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -126,7 +106,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -402,26 +382,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 7
                                 \stopStaff
                                 \startStaff
@@ -445,7 +405,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -458,7 +418,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -561,7 +521,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -574,7 +534,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -845,26 +805,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -885,7 +825,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -898,7 +838,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -985,7 +925,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -1028,7 +968,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1041,7 +981,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1299,26 +1239,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 8
                                 \stopStaff
                                 \startStaff
@@ -1342,7 +1262,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1355,7 +1275,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1636,26 +1556,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -1676,7 +1576,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1689,7 +1589,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1770,7 +1670,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1783,7 +1683,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1932,26 +1832,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -1975,7 +1855,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1988,7 +1868,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2491,26 +2371,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -2534,7 +2394,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2547,7 +2407,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2613,7 +2473,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2626,7 +2486,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3029,26 +2889,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 7
                                 \stopStaff
                                 \startStaff
@@ -3072,7 +2912,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3085,7 +2925,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3173,7 +3013,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3186,7 +3026,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3452,26 +3292,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -3493,7 +3313,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3506,7 +3326,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3606,7 +3426,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3619,7 +3439,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3894,26 +3714,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -3953,7 +3753,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 <> \)
@@ -3995,7 +3795,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4008,7 +3808,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4276,26 +4076,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 5
                                 \stopStaff
                                 \startStaff
@@ -4319,7 +4099,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4332,7 +4112,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4411,7 +4191,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4424,7 +4204,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "wh. (inhale)"
+                                                                inhale
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f

@@ -6,7 +6,7 @@ from demarest.materials.unpitched_repetitions.definition \
     import unpitched_repetitions
 
 
-performance_instruction = abbreviations.make_text_spanner('wh.')
+performance_instruction = abjad.spannertools.Spanner()
 abjad.override(performance_instruction).note_head.style = 'cross'
 
 sibilances = [
@@ -33,5 +33,6 @@ whispered_repetitions = abjad.new(
         .scale_luminance(-1)
         .rotate_hue(0.0),
     comment='whispered_repetitions',
+    instrument=abbreviations.whispered,
     labels=['whispered_repetitions'],
     )
