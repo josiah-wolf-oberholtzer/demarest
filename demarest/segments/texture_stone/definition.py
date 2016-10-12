@@ -135,6 +135,7 @@ segment_maker.add_setting(
 trio_a_woodblock_fanfare = materials.trio_a_woodblock_fanfare
 trio_a_woodblock_repetitions = materials.trio_a_woodblock_repetitions
 trio_b_ratchet_drone = materials.trio_b_ratchet_drone
+trio_b_ratchet_repetitions = materials.trio_b_ratchet_repetitions
 trio_c_toms_fanfare = materials.trio_c_toms_fanfare
 trio_c_toms_repetitions = materials.trio_c_toms_repetitions
 
@@ -142,14 +143,19 @@ trio_c_toms_repetitions = materials.trio_c_toms_repetitions
 
 segment_maker.add_setting(
     t_1_percussion=trio_a_woodblock_repetitions,
-    t_2_percussion=trio_b_ratchet_drone,
     t_3_percussion=trio_c_toms_repetitions,
+    )
+
+segment_maker.add_setting(
+    timespan_maker=droning_timespan_maker,
+    t_2_percussion=trio_b_ratchet_repetitions,
     )
 
 segment_maker.add_setting(
     timespan_identifier=common_timespan_identifier,
     timespan_maker=sparse_timespan_maker,
     t_1_percussion=trio_a_woodblock_fanfare,
+    t_2_percussion=trio_b_ratchet_drone,
     t_3_percussion=trio_c_toms_fanfare,
     )
 

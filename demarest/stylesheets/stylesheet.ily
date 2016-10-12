@@ -377,8 +377,8 @@
         \override SpanBar.hair-thickness = 0.5
         \override StaffSymbol.color = #(x11-color 'grey50)
         \override StaffSymbol.layer = -1
-        \override Stem.details.beamed-lengths = #'(6)
-        \override Stem.details.lengths = #'(6)
+        \override Stem.details.beamed-lengths = #'(5)
+        \override Stem.details.lengths = #'(5)
         \override Stem.stemlet-length = 1.5
         \override StemTremolo.beam-width = 1.5
         \override StemTremolo.flag-count = 4

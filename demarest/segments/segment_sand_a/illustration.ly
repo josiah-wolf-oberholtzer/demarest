@@ -1,7 +1,7 @@
 % package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
-% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
+% package "consort" @ b097323 [master] (2016-10-11 20:14:58)
+% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
 
 \version "2.19.44"
 \language "english"
@@ -130,6 +130,27 @@
                                                         f-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 c'4 -\accent
                                     _ \markup {
                                         \whiteout
@@ -442,6 +463,27 @@
                                                         h-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                             }
                             % [A 2 Vocalization Voice] Measure 30
                             \tweak text #tuplet-number::calc-fraction-text
@@ -862,6 +904,27 @@
                                                         s-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
@@ -1299,6 +1362,27 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 \repeatTie
@@ -1613,6 +1697,27 @@
                                                         s-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 c'4 -\accent
                                     _ \markup {
                                         \whiteout
@@ -1792,7 +1897,117 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 12
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
+                        {
+                            % [T 1 Percussion Voice] Measure 23
+                            {
+                                \clef "treble"
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    crotales
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T1
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    ct.
+                                        }
+                                    }
+                                \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
+                                cf'''8 -\tenuto \laissezVibrer \p \(
+                                    ^ \markup {
+                                        \pad-around
+                                            #0.5
+                                            \box
+                                                \pad-around
+                                                    #0.5
+                                                    \fontsize
+                                                        #-4
+                                                        \caps
+                                                            LV
+                                        }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    ct.
+                                                                                }
+                                    }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                bowed
+                                                            }
+                                    }
+                                <> \)
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                \clef "percussion"
+                            }
+                        }
+                        {
+                            {
+                                r2..
+                            }
+                            % [T 1 Percussion Voice] Measure 24
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 10
                                 \stopStaff
                                 \startStaff
                             }
@@ -1892,6 +2107,27 @@
                                                         h-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 c'4 -\accent
                                     _ \markup {
                                         \whiteout
@@ -1940,62 +2176,158 @@
                     \clef "percussion"
                     \bar "||"
                     \context Voice = "T 2 Percussion Voice" {
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             % [T 2 Percussion Voice] Measure 22
                             {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
                                     }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [T 2 Percussion Voice] Measure 23
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
+                        {
+                            {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            ratchet
+                                                                            snare
+                                                                            tam-tam
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T2
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            r.
+                                                                            sn.
+                                                                            t.t.
+                                                                        }
+                                        }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                c'1 :32 \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 23
-                            {
-                                c'2. :32 \p \repeatTie
+                                c'2 :32 \f \(
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
+                                    }
+                                    ^ \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                brushed
+                                                            }
+                                    }
                                 <> \)
                                 \stopStaff
                                 \startStaff
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2004,336 +2336,12 @@
                             }
                             % [T 2 Percussion Voice] Measure 24
                             {
-                                r4
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                f2. \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 25
-                            {
-                                f2.. \p \repeatTie
-                                <> \)
+                                R1 * 10
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            % [T 2 Percussion Voice] Measure 26
-                            {
-                                r2
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'2 :32 \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 27
-                            {
-                                c'2 :32 \f \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                            % [T 2 Percussion Voice] Measure 28
-                            {
-                                r2.
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                f4 \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 29
-                            {
-                                f1 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 30
-                            {
-                                f2.. \p \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            % [T 2 Percussion Voice] Measure 31
-                            {
-                                r2
-                                r8
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                brushed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'4. :32 \( \startTextSpan \<
-                            }
-                            % [T 2 Percussion Voice] Measure 32
-                            {
-                                c'2.. :32 \mf \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            % [T 2 Percussion Voice] Measure 33
-                            {
-                                r8
-                            }
-                        }
-                        % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
-                        {
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                f8 \( \startTextSpan \<
-                                f2 \repeatTie
-                                f8 \p \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
                             }
                         }
                     }
@@ -2431,6 +2439,27 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
                                 <> \)
@@ -2543,6 +2572,48 @@
                         {
                             % [T 3 Percussion Voice] Measure 22
                             {
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            "four toms"
+                                                                            and
+                                                                            "bass drum"
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            toms
+                                                                            &
+                                                                            b.d.
+                                                                        }
+                                        }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                                 f8 -\tenuto \laissezVibrer \f \(
                                     ^ \markup {
@@ -2556,6 +2627,27 @@
                                                         \caps
                                                             LV
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
+                                    }
                                 <> \)
                             }
                         }
@@ -2949,6 +3041,27 @@
                                                         f-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                             }
                             % [B 1 Vocalization Voice] Measure 30
                             {
@@ -3350,6 +3463,27 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 c'8 -\accent [
                                     _ \markup {
                                         \whiteout
@@ -3744,6 +3878,27 @@
                                                     }
                                         }
                                     ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
+                                    ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4136,6 +4291,27 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
+                                    }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 \repeatTie

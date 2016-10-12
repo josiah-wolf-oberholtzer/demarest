@@ -109,6 +109,7 @@ segment_maker.add_setting(
 
 ### TRIO MUSIC SPECIFIERS ###
 
+trio_a_crotales_tranquilo = materials.trio_a_crotales_tranquilo
 trio_b_snare_drone = materials.trio_b_snare_drone
 trio_b_tam_tam_drone = materials.trio_b_tam_tam_drone
 trio_c_bass_drum_repetitions = materials.trio_c_bass_drum_repetitions
@@ -123,7 +124,12 @@ segment_maker.add_setting(
     )
 
 segment_maker.add_setting(
+    timespan_identifier=consort.RatioPartsExpression(
+        ratio=(1,),
+        mask_timespan=abjad.Timespan(1, 2),
+        ),
     timespan_maker=droning_timespan_maker,
+    t_1_percussion=trio_a_crotales_tranquilo,
     t_2_percussion=consort.MusicSpecifierSequence(
         application_rate='phrase',
         music_specifiers=[

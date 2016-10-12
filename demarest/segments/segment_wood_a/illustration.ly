@@ -1,7 +1,7 @@
 % package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
-% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
+% package "consort" @ b097323 [master] (2016-10-11 20:14:58)
+% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
 
 \version "2.19.44"
 \language "english"
@@ -127,6 +127,26 @@
                                                         f-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -609,7 +629,26 @@
                             % [A 2 Vocalization Voice] Measure 3
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \p \(
+                                c'4. \p \( ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                p.p.
+                                                                            }
+                                    }
                                 <> \)
                             }
                         }
@@ -649,6 +688,26 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                     ^ \markup {
                                     \box
                                         \whiteout
@@ -877,6 +936,26 @@
                                                         s-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
@@ -1267,6 +1346,26 @@
                                                         h-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                             }
                             % [A 4 Vocalization Voice] Measure 4
                             {
@@ -1561,6 +1660,26 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                     ^ \markup {
                                     \box
                                         \whiteout
@@ -1875,7 +1994,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d' f'>8 :64 \ppp \( ^ \markup {
+                                <c' ef'>8 :64 \ppp \( ^ \markup {
                                     \override
                                         #'(thickness . 2)
                                         \box
@@ -2006,6 +2125,26 @@
                                                         f-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
@@ -2377,7 +2516,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <g'' bf''>2 :32 \( \< ^ \markup {
+                                <fs'' a''>2 :32 \( \< ^ \markup {
                                     \override
                                         #'(thickness . 2)
                                         \box
@@ -2400,7 +2539,7 @@
                             }
                             % [T 2 Percussion Voice] Measure 4
                             {
-                                <g'' bf''>8 :64 \f \repeatTie
+                                <fs'' a''>8 :64 \f \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
@@ -2596,6 +2735,26 @@
                                                         sh-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                             }
                             % [T 3 Vocalization Voice] Measure 5
                             {
@@ -2873,6 +3032,26 @@
                                                         s-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 c'4 -\accent
                                     _ \markup {
                                         \whiteout
@@ -3340,6 +3519,26 @@
                                                         h-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 c'4 -\accent \p
                                     _ \markup {
                                         \whiteout
@@ -3738,6 +3937,26 @@
                                                         s-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
                                 <> \)
@@ -4205,6 +4424,26 @@
                                                         h-
                                                     }
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                    }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
                                 <> \)

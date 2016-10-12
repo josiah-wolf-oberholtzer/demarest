@@ -21,7 +21,7 @@ guiro_shimmer = abjad.new(
         selector=abjad.selectortools.select_pitched_runs()[0],
         ),
     attachment_handler__performance_instruction=consort.AttachmentExpression(
-        attachments=abbreviations.make_text_spanner('scrape tremolo'),
+        attachments=abbreviations.make_text_spanner('scrape'),
         selector=abjad.selectortools.select_pitched_runs(),
         ),
     color=consort.Color.from_x11('Lavender')

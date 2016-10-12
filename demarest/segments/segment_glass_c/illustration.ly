@@ -1,7 +1,7 @@
 % package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ e5e9d48 [master] (2016-10-11 18:19:57)
-% package "demarest" @ 5bc0c44 [master] (2016-10-07 21:39:58)
+% package "consort" @ b097323 [master] (2016-10-11 20:14:58)
+% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
 
 \version "2.19.44"
 \language "english"
@@ -70,26 +70,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 4
                                 \stopStaff
                                 \startStaff
@@ -1321,26 +1301,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 4
                                 \stopStaff
                                 \startStaff
@@ -2398,26 +2358,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 4
                                 \stopStaff
                                 \startStaff
@@ -3513,26 +3453,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 4
                                 \stopStaff
                                 \startStaff
@@ -4738,26 +4658,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 2
                                 \stopStaff
                                 \startStaff
@@ -5380,7 +5280,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                eff''8 -\tenuto \laissezVibrer \ppp \(
+                                df''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5457,7 +5357,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                f''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                ef''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5488,7 +5388,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b''8 -\tenuto \laissezVibrer \ppp \(
+                                f''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5564,7 +5464,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                b''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5598,7 +5498,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b''8 -\tenuto \laissezVibrer \ppp \(
+                                a''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5676,7 +5576,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                b''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5710,7 +5610,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b''8 -\tenuto \laissezVibrer \ppp \(
+                                a''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5741,7 +5641,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a''8 -\tenuto \laissezVibrer \p \(
+                                b''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5775,7 +5675,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                b''8 -\tenuto \laissezVibrer \ppp \(
+                                a''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5807,7 +5707,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a''8 -\tenuto \laissezVibrer \p \(
+                                b''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5841,7 +5741,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                af''8 -\tenuto \laissezVibrer \ppp \(
+                                f''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -6013,7 +5913,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                ef'''8 -\tenuto \laissezVibrer \ppp \(
+                                a''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -6281,7 +6181,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                c'''8 -\tenuto \laissezVibrer \p \(
+                                d'''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -6358,7 +6258,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d''8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
+                                c''8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -6561,7 +6461,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d''8 -\tenuto \laissezVibrer \p \(
+                                ef''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -6592,7 +6492,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                f''8 -\tenuto \laissezVibrer \ppp \(
+                                e''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -6660,26 +6560,6 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 R1 * 3
                                 \stopStaff
                                 \startStaff
@@ -7135,12 +7015,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    \right-column
-                                                                        {
-                                                                            ratchet
-                                                                            snare
-                                                                            tam-tam
-                                                                        }
+                                                                    vibraphone
                                         }
                                     }
                                 \set Staff.shortInstrumentName = \markup {
@@ -7156,12 +7031,7 @@
                                                             #0.5
                                                             \small
                                                                 \italic
-                                                                    \right-column
-                                                                        {
-                                                                            r.
-                                                                            sn.
-                                                                            t.t.
-                                                                        }
+                                                                    vb.
                                         }
                                     }
                                 r4.
@@ -7206,38 +7076,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \set Staff.instrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T2
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    vibraphone
-                                        }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T2
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    vb.
-                                        }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
                                 cf''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
@@ -7251,26 +7089,6 @@
                                                         \caps
                                                             LV
                                         }
-                                    ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
-                                    }
                                 <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
@@ -7290,7 +7108,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                eff'8 -\tenuto \laissezVibrer \ppp \(
+                                ff'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -7463,7 +7281,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                df'8 -\tenuto \laissezVibrer \p \(
+                                bf'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -7783,7 +7601,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                f'8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
+                                d'8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8579,7 +8397,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                f'8 -\tenuto \laissezVibrer \ppp \(
+                                af'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8890,7 +8708,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                g'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8922,7 +8740,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                g'8 -\tenuto \laissezVibrer \p \(
+                                ds'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8984,7 +8802,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                ds'8 -\tenuto \laissezVibrer \p \(
+                                ef'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9016,8 +8834,8 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <d''' f'''>8 :64 \fp \(
-                                <d''' f'''>2 :32 \repeatTie
+                                <e'' g''>8 :64 \fp \(
+                                <e'' g''>2 :32 \repeatTie
                                 <> \)
                                 \clef "percussion"
                             }
@@ -9601,7 +9419,7 @@
                             }
                             % [T 2 Percussion Voice] Measure 164
                             {
-                                a'8 -\tenuto \laissezVibrer
+                                c''8 -\tenuto \laissezVibrer
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9633,7 +9451,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <a' c''>8 :64 \ppp \(
+                                <d'' f''>8 :64 \ppp \(
                                 <> \)
                             }
                         }
@@ -9651,7 +9469,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                c'8 -\tenuto \laissezVibrer \p \(
+                                d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9770,7 +9588,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                e''8 -\tenuto \laissezVibrer \p \(
+                                af'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9801,7 +9619,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d'8 -\tenuto \laissezVibrer \ppp \(
+                                f'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9903,7 +9721,26 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'2.. \( \<
+                                c'2.. \( \< ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                p.p.
+                                                                            }
+                                    }
                             }
                             % [T 3 Vocalization Voice] Measure 130
                             {
@@ -10367,6 +10204,48 @@
                         {
                             % [T 3 Percussion Voice] Measure 126
                             {
+                                \set Staff.instrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            "four toms"
+                                                                            and
+                                                                            "bass drum"
+                                                                        }
+                                        }
+                                    }
+                                \set Staff.shortInstrumentName = \markup {
+                                    \concat
+                                        {
+                                            \vcenter
+                                                T3
+                                            \vcenter
+                                                \pad-around
+                                                    #0.5
+                                                    \bracket
+                                                        \pad-around
+                                                            #0.5
+                                                            \small
+                                                                \italic
+                                                                    \right-column
+                                                                        {
+                                                                            toms
+                                                                            &
+                                                                            b.d.
+                                                                        }
+                                        }
+                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                                 f8 -\tenuto \laissezVibrer \f \(
                                     ^ \markup {
@@ -10380,6 +10259,26 @@
                                                         \caps
                                                             LV
                                         }
+                                    ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
+                                    }
                                 <> \)
                             }
                         }
@@ -10430,7 +10329,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                cf''8 -\tenuto \laissezVibrer \p \(
+                                d''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -10614,7 +10513,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                eff'8 -\tenuto \laissezVibrer \ppp \(
+                                c'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -10660,7 +10559,7 @@
                             % [T 3 Percussion Voice] Measure 132
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                f'8 -\tenuto \laissezVibrer \p \(
+                                cs'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11219,7 +11118,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                af'8 -\tenuto \laissezVibrer \p \(
+                                d'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11244,7 +11143,7 @@
                             % [T 3 Percussion Voice] Measure 147
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d''8 -\tenuto \laissezVibrer \ppp \(
+                                e''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11921,7 +11820,7 @@
                             % [T 3 Percussion Voice] Measure 164
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                c''8 -\tenuto \laissezVibrer \ppp \(
+                                d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11949,7 +11848,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d'8 -\tenuto \laissezVibrer \p \(
+                                a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -11977,7 +11876,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a'8 -\tenuto \laissezVibrer \ppp \(
+                                d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -12042,7 +11941,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                af'8 -\tenuto \laissezVibrer \ppp \(
+                                d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -12070,7 +11969,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                f'8 -\tenuto \laissezVibrer \p \(
+                                e'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -12095,7 +11994,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                e''8 -\tenuto \laissezVibrer \ppp \(
+                                d''8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -12110,7 +12009,7 @@
                             }
                             % [T 3 Percussion Voice] Measure 171
                             {
-                                d'8 -\tenuto \laissezVibrer
+                                af'8 -\tenuto \laissezVibrer
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -12173,26 +12072,6 @@
                         {
                             % [B 1 Vocalization Voice] Measure 126
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 r2
                                 r8
                             }
@@ -13339,46 +13218,6 @@
                             % [B 2 Vocalization Voice] Measure 126
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 c'2. \p \(
                                 <> \)
                             }
@@ -14511,26 +14350,6 @@
                         {
                             % [B 3 Vocalization Voice] Measure 126
                             {
-                                \set Staff.instrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        voice
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \pad-around
-                                        #0.5
-                                        \bracket
-                                            \pad-around
-                                                #0.5
-                                                \small
-                                                    \italic
-                                                        v.
-                                    }
                                 r4
                             }
                         }
@@ -15683,7 +15502,26 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \( \<
+                                c'8 \( \< ^ \markup {
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                p.p.
+                                                                            }
+                                    }
                                 c'2 \repeatTie
                             }
                             % [B 4 Vocalization Voice] Measure 127

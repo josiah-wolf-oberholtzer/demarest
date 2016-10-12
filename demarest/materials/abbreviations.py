@@ -29,6 +29,7 @@ def make_instrument_change_markup(text):
     markup = markup.pad_around(0.125)
     markup = markup.box()
     markup = markup.override(('thickness', 2))
+    markup = markup.whiteout()
     markup = markuptools.Markup(markup, 'up')
     return markup
 
@@ -142,6 +143,7 @@ pitch_handler = consort.PitchClassPitchHandler(
             ],
         ratio=(1, 3, 1, 1, 2, 1),
         ),
+    use_self_as_seed_key=True,
     )
 
 
@@ -169,12 +171,12 @@ chordal_register_handler = consort.RegisterHandler(
 
 whispered = consort.Instrument(
     instrument_name='whispering',
-    instrument_change_markup=None,
+    instrument_change_markup=make_instrument_change_markup('wh.'),
     )
 
 pitch_pipe = consort.Instrument(
     instrument_name='pitch_pipe',
-    instrument_change_markup=None,
+    instrument_change_markup=make_instrument_change_markup('p.p.'),
     )
 
 ### TRIO A ###

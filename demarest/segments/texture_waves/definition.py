@@ -20,13 +20,6 @@ segment_maker = demarest.SegmentMaker(
 
 ### TIMESPAN MAKERS ###
 
-droning_timespan_maker = abjad.new(
-    materials.sparse_timespan_maker,
-    playing_groupings=[4, 5],
-    fuse_groups=True,
-    silence_talea__counts=[1, 2, 3, 4],
-    )
-
 sparse_timespan_maker = abjad.new(
     materials.sparse_timespan_maker,
     playing_groupings=[1, 1, 2, 1, 2, 3],
@@ -49,6 +42,7 @@ rare_timespan_identifier = abjad.sequencetools.Sequence(
 pitch_pipe_drone = materials.pitch_pipe_drone
 pitch_pipe_flutter = materials.pitch_pipe_flutter
 shaker_drone = materials.shaker_drone
+wine_glass_tapped_pointillism = materials.wine_glass_tapped_pointillism
 
 ### MELANGES ###
 
@@ -72,6 +66,24 @@ segment_maker.add_setting(
     b_2_percussion=shaker_drone,
     b_3_percussion=shaker_drone,
     b_4_percussion=shaker_drone,
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=common_timespan_identifier.rotate(1),
+    timespan_maker=sparse_timespan_maker,
+    a_1_percussion=wine_glass_tapped_pointillism,
+    a_2_percussion=wine_glass_tapped_pointillism,
+    a_3_percussion=wine_glass_tapped_pointillism,
+    a_4_percussion=wine_glass_tapped_pointillism,
+    )
+
+segment_maker.add_setting(
+    timespan_identifier=common_timespan_identifier.rotate(2),
+    timespan_maker=sparse_timespan_maker,
+    b_1_percussion=wine_glass_tapped_pointillism,
+    b_2_percussion=wine_glass_tapped_pointillism,
+    b_3_percussion=wine_glass_tapped_pointillism,
+    b_4_percussion=wine_glass_tapped_pointillism,
     )
 
 ### MELANGE MUSIC SETTINGS ###
@@ -105,61 +117,3 @@ segment_maker.add_setting(
 ### CASCADING MUSIC SETTINGS ###
 
 ### TRIO MUSIC SPECIFIERS ###
-
-trio_a_marimba_shimmer = abjad.new(
-    materials.trio_a_marimba_shimmer,
-    attachment_handler__dynamics=consort.DynamicExpression(
-        division_period=2,
-        dynamic_tokens='ppp',
-        start_dynamic_tokens='niente',
-        stop_dynamic_tokens='niente',
-        ),
-    register_handler__register_specifier__phrase_inflections=None,
-    )
-trio_b_vibraphone_shimmer = abjad.new(
-    materials.trio_b_vibraphone_shimmer,
-    attachment_handler__dynamics=consort.DynamicExpression(
-        division_period=2,
-        dynamic_tokens='ppp',
-        start_dynamic_tokens='niente',
-        stop_dynamic_tokens='niente',
-        ),
-    register_handler__register_specifier__phrase_inflections=None,
-    )
-trio_c_bass_drum_drone = materials.trio_c_bass_drum_drone
-trio_c_bass_drum_tranquilo = materials.trio_c_bass_drum_tranquilo
-trio_c_tubular_bells_shimmer = abjad.new(
-    materials.trio_c_tubular_bells_shimmer,
-    attachment_handler__dynamics=consort.DynamicExpression(
-        division_period=2,
-        dynamic_tokens='ppp',
-        start_dynamic_tokens='niente',
-        stop_dynamic_tokens='niente',
-        ),
-    register_handler__register_specifier__phrase_inflections=None,
-    )
-
-### TRIO PERCUSSION MUSIC SETTINGS ###
-
-segment_maker.add_setting(
-    t_3_percussion=materials.trio_c_bass_drum_drone,
-    )
-
-segment_maker.add_setting(
-    timespan_maker=droning_timespan_maker,
-    t_1_percussion=trio_a_marimba_shimmer,
-    t_2_percussion=trio_b_vibraphone_shimmer,
-    t_3_percussion=trio_c_tubular_bells_shimmer,
-    )
-
-### DETAILS ###
-
-segment_maker.add_setting(
-    timespan_identifier=abjad.Timespan(0, (1, 4)),
-    t_3_percussion=abjad.new(
-        trio_c_bass_drum_tranquilo,
-        attachment_handler__dynamics=consort.DynamicExpression(
-            dynamic_tokens='f',
-            ),
-        ),
-    )

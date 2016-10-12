@@ -6,7 +6,7 @@ from demarest.materials.unpitched_repetitions.definition import unpitched_repeti
 
 
 staff_lines_spanner = abjad.spannertools.StaffLinesSpanner(lines=[-4, 0, 4])
-abjad.override(staff_lines_spanner).note_head.transparent = True
+#abjad.override(staff_lines_spanner).note_head.transparent = True
 
 
 trio_b_ratchet_repetitions = abjad.new(
@@ -25,5 +25,5 @@ trio_b_ratchet_repetitions = abjad.new(
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=abbreviations.UnpitchedPercussion.RATCHET,
         ),
-    rhythm_maker__denominators=[16],
+    rhythm_maker__denominators=[16, 8, 4, 8, 4],
     )
