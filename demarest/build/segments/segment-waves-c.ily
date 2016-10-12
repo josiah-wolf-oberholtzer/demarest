@@ -67,24 +67,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -450,24 +451,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -664,24 +666,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -896,24 +899,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -1160,24 +1164,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -1301,24 +1306,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -1435,24 +1441,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <e'' g''>2. :32 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    vb.
+                                                                                }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 124
@@ -1622,24 +1629,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <fs' a'>8 :64 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                t.b.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    t.b.
+                                                                                }
                                     }
                                 <fs' a'>2 :32 \repeatTie
                             }
@@ -1709,24 +1717,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -2105,24 +2114,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -2399,24 +2409,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }

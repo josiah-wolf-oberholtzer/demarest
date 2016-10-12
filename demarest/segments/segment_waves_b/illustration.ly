@@ -1,7 +1,7 @@
-% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
+% package "abjad" @ b0f990d [josiah/dev] (2016-10-11 20:58:12)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
 % package "consort" @ b097323 [master] (2016-10-11 20:14:58)
-% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
+% package "demarest" @ 94fc788 [master] (2016-10-11 20:57:50)
 
 \version "2.19.44"
 \language "english"
@@ -1178,24 +1178,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <ef' gf'>1 :32 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                mb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    mb.
+                                                                                }
                                     }
                             }
                             % [T 1 Percussion Voice] Measure 102
@@ -1386,24 +1387,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <ef'' gf''>2. :32 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    vb.
+                                                                                }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 102
@@ -1573,24 +1575,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a' c''>8 :64 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                t.b.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    t.b.
+                                                                                }
                                     }
                                 <a' c''>2 :32 \repeatTie
                             }

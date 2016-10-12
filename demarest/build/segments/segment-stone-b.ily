@@ -70,24 +70,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \fp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -532,24 +533,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -901,24 +903,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \fp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                             }
                             % [A 3 Vocalization Voice] Measure 42
@@ -1232,24 +1235,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -1563,24 +1567,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -1668,24 +1673,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 <f c'>16 -\accent \ppp \( [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
@@ -1961,24 +1967,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -2038,9 +2045,182 @@
                     \clef "percussion"
                     \bar "||"
                     \context Voice = "T 2 Percussion Voice" {
-                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             % [T 2 Percussion Voice] Measure 39
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                measured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                measured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'16 \( \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                g'16 ]
+                            }
+                            % [T 2 Percussion Voice] Measure 40
+                            {
+                                g'8 [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                g'8
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                g'8
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                g'8
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                g'8
+                                \set stemLeftBeamCount = 1
+                                g'8 ]
+                                <> \)
+                                \stopStaff
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [T 2 Percussion Voice] Measure 41
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
+                        {
+                            {
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'4 \(
+                                g'4
+                                g'4
+                            }
+                            % [T 2 Percussion Voice] Measure 42
+                            {
+                                g'16 [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                g'16
+                                \set stemLeftBeamCount = 2
+                                g'16 ]
+                                <> \)
+                                \stopStaff
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -2081,27 +2261,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'1 :32 \( \startTextSpan
-                            }
-                            % [T 2 Percussion Voice] Measure 40
-                            {
-                                g'1 :32 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 41
-                            {
-                                g'1 :32 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 42
-                            {
-                                g'1 :32 \repeatTie
+                                g'4 :32 \( \startTextSpan
                             }
                             % [T 2 Percussion Voice] Measure 43
                             {
-                                g'1 :32 \repeatTie
-                            }
-                            % [T 2 Percussion Voice] Measure 44
-                            {
-                                g'1 :32 \repeatTie
+                                g'4 :32 \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
@@ -2109,6 +2273,136 @@
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
                                 <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                measured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                measured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'8 \( \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                g'8
+                                \set stemLeftBeamCount = 1
+                                g'8 ]
+                            }
+                            % [T 2 Percussion Voice] Measure 44
+                            {
+                                g'8
+                                <> \)
+                                \stopStaff
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                unmeasured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                unmeasured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                g'8 :64 \( \startTextSpan
+                                g'4. :32 \repeatTie
+                                <> \)
+                                \stopStaff
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
                             }
                         }
                     }
@@ -2146,24 +2440,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \fp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -2308,114 +2603,31 @@
                                 \set stemRightBeamCount = 2
                                 <a c'>16
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                <a c'>16 ]
-                            }
-                            % [T 3 Percussion Voice] Measure 41
-                            {
-                                \once \override Hairpin.circled-tip = ##t
-                                <a c'>16 \p \> [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                <a c'>16 ]
-                            }
-                            % [T 3 Percussion Voice] Measure 42
-                            {
-                                <a c'>16 [
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <a c'>16
-                                \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 \p ]
                                 <> \)
                             }
                         }
                         {
                             {
-                                r2 \!
-                            }
-                            % [T 3 Percussion Voice] Measure 43
-                            {
                                 r2
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            % [T 3 Percussion Voice] Measure 41
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 5/6 {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                <a c'>4 :32 \ppp \( \<
+                                <c' e'>4 :32 \p
+                                r4
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
                             }
                         }
                         % [T 3 Percussion Voice] Material: "trio_c_toms_repetitions"
@@ -2425,29 +2637,35 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
                                 <c' g'>16 \( \< [
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <c' g'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <c' g'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <c' g'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <c' g'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <c' g'>16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                <c' g'>16
-                                \set stemLeftBeamCount = 2
                                 <c' g'>16 ]
                             }
-                            % [T 3 Percussion Voice] Measure 44
+                            % [T 3 Percussion Voice] Measure 42
                             {
                                 <c' g'>16 [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <c' g'>16
                                 \set stemLeftBeamCount = 2
                                 <c' g'>16 \p ]
                                 <> \)
@@ -2463,18 +2681,88 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                <a c'>16 -\accent \ppp \( \< [
+                                c'16 \(
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                            % [T 3 Percussion Voice] Measure 43
+                            {
+                                r4..
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_repetitions"
+                        {
+                            {
+                                \once \override Hairpin.circled-tip = ##t
+                                \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
+                                <e' g'>16 \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g'16
+                                <e' g'>16
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                <e' g'>16 ]
+                            }
+                            % [T 3 Percussion Voice] Measure 44
+                            {
+                                <e' g'>16 [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                <e' g'>16
+                                \set stemLeftBeamCount = 2
+                                <e' g'>16 \p ]
+                                <> \)
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        % [T 3 Percussion Voice] Material: "trio_c_toms_fanfare"
+                        {
+                            {
+                                \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
+                                e'16 \f \( \> [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
                                 r16
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                <a c'>8. :64
-                                \set stemLeftBeamCount = 1
-                                <a c'>8 :64 \p \repeatTie ]
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                a16
+                                \set stemLeftBeamCount = 2
+                                <c' e'>16 -\accent \p ]
                                 <> \)
                             }
                         }
@@ -2534,24 +2822,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -2898,24 +3187,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \fp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                             }
                             % [B 2 Vocalization Voice] Measure 42
@@ -3201,24 +3491,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \fp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -3495,24 +3786,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }

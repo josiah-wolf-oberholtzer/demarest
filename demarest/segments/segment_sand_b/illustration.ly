@@ -1,7 +1,7 @@
-% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
+% package "abjad" @ b0f990d [josiah/dev] (2016-10-11 20:58:12)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
 % package "consort" @ b097323 [master] (2016-10-11 20:14:58)
-% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
+% package "demarest" @ 94fc788 [master] (2016-10-11 20:57:50)
 
 \version "2.19.44"
 \language "english"
@@ -1324,7 +1324,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 <> \)

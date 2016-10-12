@@ -1,7 +1,7 @@
-% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
+% package "abjad" @ b0f990d [josiah/dev] (2016-10-11 20:58:12)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
 % package "consort" @ b097323 [master] (2016-10-11 20:14:58)
-% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
+% package "demarest" @ 94fc788 [master] (2016-10-11 20:57:50)
 
 \version "2.19.44"
 \language "english"
@@ -143,24 +143,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
@@ -815,7 +816,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -929,7 +930,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -1030,7 +1031,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1043,7 +1044,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1291,7 +1292,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1304,7 +1305,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1526,7 +1527,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -1565,7 +1566,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -1578,7 +1579,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1820,24 +1821,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
@@ -2073,24 +2075,25 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'2 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                             }
                             % [A 2 Vocalization Voice] Measure 113
@@ -2161,24 +2164,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                             }
                             % [A 2 Vocalization Voice] Measure 115
@@ -2570,7 +2574,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -2663,7 +2667,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2676,7 +2680,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2789,7 +2793,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2802,7 +2806,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2997,7 +3001,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3010,7 +3014,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3193,7 +3197,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3206,7 +3210,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3329,7 +3333,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3342,7 +3346,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -3671,24 +3675,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'4 -\accent
                                     _ \markup {
@@ -4064,24 +4069,25 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                             }
                             % [A 3 Vocalization Voice] Measure 117
@@ -4116,24 +4122,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                     ^ \markup {
                                     \box
@@ -4441,7 +4448,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4454,7 +4461,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -4598,7 +4605,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -4657,7 +4664,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -4856,7 +4863,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -4941,7 +4948,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -4954,7 +4961,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5100,7 +5107,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5113,7 +5120,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -5439,24 +5446,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'4 -\accent \p
                                     _ \markup {
@@ -5589,24 +5597,25 @@
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4 \( \< ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                             }
                             % [A 4 Vocalization Voice] Measure 113
@@ -5676,24 +5685,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'4 -\accent
                                     _ \markup {
@@ -6164,7 +6174,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6177,7 +6187,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6389,7 +6399,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6402,7 +6412,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6544,7 +6554,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6557,7 +6567,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -6675,7 +6685,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -6688,7 +6698,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -7044,24 +7054,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'8 -\accent \p
                                     _ \markup {
@@ -7334,24 +7345,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 e'16 \f \( \> [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -7427,24 +7439,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <g' bf'>16 -\staccato \( \< [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                mb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    mb.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 <g' bf'>16 -\staccato ]
@@ -7526,24 +7539,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 g'16 \parenthesizeDynamic \p \( \> [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -7653,24 +7667,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <d' g'>8 :64 \fp \( [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                mb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    mb.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 <d' g'>8 :64 \repeatTie ]
@@ -7739,24 +7754,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                                 a16 \f \( \> [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -7837,24 +7853,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <e' a'>16 -\staccato \parenthesizeDynamic \p \( [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                mb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    mb.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -7975,24 +7992,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'4 -\accent \p
                                     _ \markup {
@@ -8347,7 +8365,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -8360,7 +8378,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -8419,24 +8437,25 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 c'8 :64 \f \( \startTextSpan [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 c'8 :64 \repeatTie ]
@@ -8496,24 +8515,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <b' d''>8 :64 \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    vb.
+                                                                                }
                                     }
                                 <b' d''>4. :32 \repeatTie
                                 <> \)
@@ -8581,24 +8601,25 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 f16 -\staccato \( \< [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -8653,7 +8674,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 <> \)
@@ -8708,24 +8729,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <a'' c'''>8 :64 \ppp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    vb.
+                                                                                }
                                     }
                             }
                             % [T 2 Percussion Voice] Measure 110
@@ -8826,24 +8848,25 @@
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
                                 g'2 :32 \( \startTextSpan ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 g'8 :64 \repeatTie
                                 <> \)
@@ -8886,7 +8909,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 <> \)
@@ -8977,24 +9000,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <fs'' b''>4. :32 \fp \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    vb.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -9075,24 +9099,25 @@
                                 \startStaff
                                 g'4. :32 \(
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                     ^ \markup {
                                     \box
@@ -9127,7 +9152,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -9140,7 +9165,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -9215,24 +9240,25 @@
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                                 <f'' af''>8 :64 \ppp \( [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                vb.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    vb.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 <f'' af''>8 :64 \repeatTie ]
@@ -9319,24 +9345,25 @@
                                 \startStaff
                                 c'2. :32 \f \(
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                     ^ \markup {
                                     \box
@@ -9348,7 +9375,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                brushed
+                                                                "scrape tremolo"
                                                             }
                                     }
                                 <> \)
@@ -9556,24 +9583,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
@@ -9759,24 +9787,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -9842,24 +9871,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
@@ -10060,24 +10090,25 @@
                                                             LV
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                perc.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    perc.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -10504,24 +10535,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                     ^ \markup {
                                     \box
@@ -10890,24 +10922,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'8 \p \( [ ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ]
@@ -10976,24 +11009,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'4 -\accent \p
                                     _ \markup {
@@ -11237,7 +11271,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -11460,7 +11494,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11473,7 +11507,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -11641,7 +11675,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11654,7 +11688,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -11767,7 +11801,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -11780,7 +11814,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -12027,7 +12061,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -12112,7 +12146,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -12125,7 +12159,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -12369,24 +12403,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 <> \)
                                 \revert NoteHead.style
@@ -12664,24 +12699,25 @@
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
                                 c'4. \p \( ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                p.p.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    p.p.
+                                                                                }
                                     }
                                 <> \)
                             }
@@ -12756,24 +12792,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 c'8 \repeatTie ] \p
@@ -13123,7 +13160,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13136,7 +13173,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13414,7 +13451,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -13503,7 +13540,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13516,7 +13553,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13763,7 +13800,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13776,7 +13813,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -13890,7 +13927,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -13903,7 +13940,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -14133,24 +14170,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 c'4 -\accent \p
                                     _ \markup {
@@ -14885,7 +14923,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -14898,7 +14936,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15125,7 +15163,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15138,7 +15176,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15255,7 +15293,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15268,7 +15306,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15381,7 +15419,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15394,7 +15432,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15676,7 +15714,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -15689,7 +15727,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -15821,7 +15859,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -16086,24 +16124,25 @@
                                                     }
                                         }
                                     ^ \markup {
-                                    \override
-                                        #'(thickness . 2)
-                                        \box
-                                            \pad-around
-                                                #0.125
-                                                \override
-                                                    #'(thickness . 1)
-                                                    \box
-                                                        \whiteout
-                                                            \pad-around
-                                                                #0.5
-                                                                \italic
-                                                                    \smaller
-                                                                        \concat
-                                                                            {
-                                                                                \vstrut
-                                                                                wh.
-                                                                            }
+                                    \whiteout
+                                        \override
+                                            #'(thickness . 2)
+                                            \box
+                                                \pad-around
+                                                    #0.125
+                                                    \override
+                                                        #'(thickness . 1)
+                                                        \box
+                                                            \whiteout
+                                                                \pad-around
+                                                                    #0.5
+                                                                    \italic
+                                                                        \smaller
+                                                                            \concat
+                                                                                {
+                                                                                    \vstrut
+                                                                                    wh.
+                                                                                }
                                     }
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
@@ -16718,7 +16757,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -16731,7 +16770,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -16966,7 +17005,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)
@@ -17094,7 +17133,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17107,7 +17146,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17221,7 +17260,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17234,7 +17273,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17478,7 +17517,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -17491,7 +17530,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -17625,7 +17664,7 @@
                                                         \concat
                                                             {
                                                                 \vstrut
-                                                                "scrape tremolo"
+                                                                scrape
                                                             }
                                     }
                                 <> \)

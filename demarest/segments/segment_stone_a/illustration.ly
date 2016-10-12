@@ -1,7 +1,7 @@
-% package "abjad" @ 113480e [josiah/dev] (2016-10-11 18:10:07)
+% package "abjad" @ b0f990d [josiah/dev] (2016-10-11 20:58:12)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
 % package "consort" @ b097323 [master] (2016-10-11 20:14:58)
-% package "demarest" @ b5425c7 [master] (2016-10-11 19:14:12)
+% package "demarest" @ 94fc788 [master] (2016-10-11 20:57:50)
 
 \version "2.19.44"
 \language "english"
@@ -83,27 +83,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \fp \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4. \fp \(
                                 <> \)
                             }
                         }
@@ -697,27 +677,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \fp \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4. \fp \(
                                 <> \)
                             }
                         }
@@ -1325,27 +1285,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'8 \p \(
                             }
                             % [A 3 Vocalization Voice] Measure 13
                             {
@@ -1939,27 +1879,7 @@
                             % [A 4 Vocalization Voice] Measure 10
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \fp \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4 \fp \(
                                 <> \)
                             }
                         }
@@ -2566,27 +2486,7 @@
                             % [T 1 Vocalization Voice] Measure 10
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \p \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4 \p \(
                                 <> \)
                             }
                         }
@@ -3291,27 +3191,7 @@
                             % [T 2 Vocalization Voice] Measure 10
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \fp \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4 \fp \(
                                 <> \)
                             }
                         }
@@ -3495,75 +3375,11 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \set Staff.instrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T2
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    \right-column
-                                                                        {
-                                                                            ratchet
-                                                                            snare
-                                                                            tam-tam
-                                                                        }
-                                        }
-                                    }
-                                \set Staff.shortInstrumentName = \markup {
-                                    \concat
-                                        {
-                                            \vcenter
-                                                T2
-                                            \vcenter
-                                                \pad-around
-                                                    #0.5
-                                                    \bracket
-                                                        \pad-around
-                                                            #0.5
-                                                            \small
-                                                                \italic
-                                                                    \right-column
-                                                                        {
-                                                                            r.
-                                                                            sn.
-                                                                            t.t.
-                                                                        }
-                                        }
-                                    }
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                                 \startStaff
-                                g'4. :32 \(
-                                    ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    perc.
-                                                                                }
-                                    }
-                                    ^ \markup {
+                                g'4. :32 \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4969,27 +4785,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4. \p \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4. \p \(
                                 <> \)
                             }
                         }
@@ -5629,27 +5425,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'8 \p \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'8 \p \(
                             }
                             % [B 2 Vocalization Voice] Measure 13
                             {
@@ -6249,27 +6025,7 @@
                             % [B 3 Vocalization Voice] Measure 10
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.9 0.98)
-                                c'4 \fp \( ^ \markup {
-                                    \whiteout
-                                        \override
-                                            #'(thickness . 2)
-                                            \box
-                                                \pad-around
-                                                    #0.125
-                                                    \override
-                                                        #'(thickness . 1)
-                                                        \box
-                                                            \whiteout
-                                                                \pad-around
-                                                                    #0.5
-                                                                    \italic
-                                                                        \smaller
-                                                                            \concat
-                                                                                {
-                                                                                    \vstrut
-                                                                                    p.p.
-                                                                                }
-                                    }
+                                c'4 \fp \(
                                 <> \)
                             }
                         }

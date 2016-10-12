@@ -17,7 +17,7 @@ trio_b_snare_drone = abjad.new(
         lines=[-4, 0, 4]),
     attachment_handler__tremoli=abjad.spannertools.StemTremoloSpanner,
     attachment_handler__performance_instruction=consort.AttachmentExpression(
-        attachments=abbreviations.make_text_spanner('brushed'),
+        attachments=abbreviations.make_text_spanner('scrape tremolo'),
         selector=abjad.selectortools.select_pitched_runs(),
         ),
     color=consort.Color.from_x11('Lavender')
