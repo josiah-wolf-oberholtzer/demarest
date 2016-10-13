@@ -389,6 +389,7 @@
         \override SustainPedalLineSpanner.to-barline = ##t
         \override SystemStartSquare.thickness = 3
         \override SystemStartSquare.X-offset = -1.25
+        \override TextScript.layer = 1000
         \override TextScript.outside-staff-padding = 1
         \override TextSpanner.bound-details.right.padding = 2
         \override TextSpanner.padding = 1

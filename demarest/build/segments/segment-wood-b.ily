@@ -330,21 +330,7 @@
                                                                         }
                                         }
                                     }
-                                c'4 :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'4 :32 \fp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -503,21 +489,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'4 :32 \ppp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -607,21 +579,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4. :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'4. :32 \fp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1279,21 +1237,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'2 :32 \ppp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -1684,6 +1628,7 @@
                         % [A 4 Percussion Voice] Material: "guiro_shimmer"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -1720,20 +1665,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'4 :32 \fp \( \startTextSpan \>
                             }
                             % [A 4 Percussion Voice] Measure 38
                             {
@@ -1747,7 +1679,7 @@
                         }
                         {
                             {
-                                r2
+                                r2 \!
                             }
                         }
                     }
@@ -3310,21 +3242,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4. :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'4. :32 \ppp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -3409,6 +3327,7 @@
                         {
                             % [B 1 Percussion Voice] Measure 36
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -3445,20 +3364,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'2 :32 \fp \( \startTextSpan \>
                                 c'8 :64 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -3469,7 +3375,7 @@
                         }
                         {
                             {
-                                r8
+                                r8 \!
                             }
                         }
                         % [B 1 Percussion Voice] Material: "shaker_drone"
@@ -3879,21 +3785,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2. :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'2. :32 \ppp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4343,20 +4235,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'8 :64 \( \startTextSpan
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'8 :64 \fp \( \startTextSpan
                                 c'4. :32 \repeatTie
                                 <> \)
                                 \revert TextSpanner.dash-fraction
@@ -4413,21 +4292,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'2 :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'2 :32 \ppp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4461,7 +4326,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
-                                g'4. :32 \parenthesizeDynamic \p \( ^ \markup {
+                                g'4. :32 \p \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4705,21 +4570,7 @@
                                                                         }
                                         }
                                     }
-                                c'2 :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'2 :32 \fp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around
@@ -4843,20 +4694,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'8 :64 \( \startTextSpan [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'8 :64 \ppp \( \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 c'8 :64 \repeatTie ]
                                 <> \)
@@ -4935,21 +4773,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                                c'4 :32 \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                    ^ \markup {
+                                c'4 :32 \fp \( ^ \markup {
                                     \box
                                         \whiteout
                                             \pad-around

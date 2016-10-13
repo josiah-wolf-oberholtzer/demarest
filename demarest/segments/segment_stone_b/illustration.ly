@@ -1,7 +1,7 @@
 % package "abjad" @ b0f990d [josiah/dev] (2016-10-11 20:58:12)
 % package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
 % package "consort" @ b097323 [master] (2016-10-11 20:14:58)
-% package "demarest" @ 94fc788 [master] (2016-10-11 20:57:50)
+% package "demarest" @ de3ecd7 [master] (2016-10-11 21:28:34)
 
 \version "2.19.44"
 \language "english"
@@ -208,6 +208,7 @@
                         {
                             % [A 1 Percussion Voice] Measure 39
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -251,20 +252,7 @@
                                                                         }
                                         }
                                     }
-                                c'16 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -316,7 +304,7 @@
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                             }
                         }
                         % [A 1 Percussion Voice] Material: "guiro_tapped_repetitions"
@@ -380,24 +368,12 @@
                         {
                             % [A 1 Percussion Voice] Measure 41
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \) \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'4 -\staccato \) \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -410,21 +386,9 @@
                         % [A 1 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -478,23 +442,10 @@
                             % [A 1 Percussion Voice] Measure 44
                             \times 4/5 {
                                 c'4 -\staccato
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -718,21 +669,9 @@
                         % [A 2 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'8 -\staccato \( \< [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -755,7 +694,7 @@
                             {
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -768,21 +707,9 @@
                         {
                             % [A 2 Percussion Voice] Measure 41
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -839,20 +766,8 @@
                             % [A 2 Percussion Voice] Measure 43
                             \times 4/5 {
                                 r2
-                                c'4 -\staccato
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4 -\staccato \p \>
                                 c'4 -\staccato
                                 c'4 -\staccato
                             }
@@ -865,7 +780,7 @@
                         }
                         {
                             {
-                                r2
+                                r2 \!
                             }
                         }
                     }
@@ -1007,6 +922,7 @@
                         {
                             % [A 3 Percussion Voice] Measure 39
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -1050,22 +966,9 @@
                                                                         }
                                         }
                                     }
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -1078,21 +981,9 @@
                         {
                             % [A 3 Percussion Voice] Measure 40
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'8 -\staccato \( \< [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -1119,7 +1010,7 @@
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -1132,21 +1023,9 @@
                         % [A 3 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -1197,20 +1076,7 @@
                             \times 4/5 {
                                 r2.
                                 c'4 -\staccato
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -1355,6 +1221,7 @@
                         {
                             % [A 4 Percussion Voice] Measure 39
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -1398,20 +1265,7 @@
                                                                         }
                                         }
                                     }
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -1421,7 +1275,7 @@
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -1434,21 +1288,9 @@
                         % [A 4 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'8 -\staccato \( \< [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -1467,7 +1309,7 @@
                             % [A 4 Percussion Voice] Measure 42
                             {
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -1483,21 +1325,9 @@
                         % [A 4 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -1540,7 +1370,7 @@
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -2960,6 +2790,7 @@
                         {
                             % [B 1 Percussion Voice] Measure 39
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -3003,23 +2834,10 @@
                                                                         }
                                         }
                                     }
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -3032,27 +2850,15 @@
                         % [B 1 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                                 c'4 -\staccato
                             }
                             % [B 1 Percussion Voice] Measure 41
                             {
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -3068,21 +2874,9 @@
                         % [B 1 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'8 -\staccato \( \< [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -3148,7 +2942,7 @@
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
+                                c'16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3352,27 +3146,15 @@
                                         }
                                     }
                                 r2 \(
-                                c'4 -\staccato
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4 -\staccato \<
                                 c'4 -\staccato
                                 c'4 -\staccato
                             }
                             % [B 2 Percussion Voice] Measure 40
                             {
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -3388,21 +3170,9 @@
                         % [B 2 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                             }
                             % [B 2 Percussion Voice] Measure 42
                             {
@@ -3433,7 +3203,7 @@
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
                                 \set stemLeftBeamCount = 1
-                                c'8 -\staccato ]
+                                c'8 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3446,22 +3216,10 @@
                         % [B 2 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                c'4 -\staccato
+                                c'4 -\staccato \( \<
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -3594,6 +3352,7 @@
                         {
                             % [B 3 Percussion Voice] Measure 39
                             \times 4/5 {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
@@ -3637,20 +3396,7 @@
                                                                         }
                                         }
                                     }
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 r2
@@ -3659,24 +3405,12 @@
                             \times 4/5 {
                                 r2.
                                 c'4 -\staccato
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
                                 c'4 -\staccato
                             }
                             % [B 3 Percussion Voice] Measure 41
                             {
-                                c'4 -\staccato
+                                \once \override Hairpin.circled-tip = ##t
+                                c'4 -\staccato \p \>
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -3693,28 +3427,16 @@
                         {
                             % [B 3 Percussion Voice] Measure 43
                             {
-                                r4
+                                r4 \!
                             }
                         }
                         % [B 3 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
-                                c'4 -\staccato
+                                c'4 -\staccato \( \<
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -3727,21 +3449,9 @@
                         {
                             % [B 3 Percussion Voice] Measure 44
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
+                                c'8 -\staccato \( \< [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -3761,7 +3471,7 @@
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
                                 \set stemLeftBeamCount = 1
-                                c'8 -\staccato ]
+                                c'8 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3936,21 +3646,9 @@
                         % [B 4 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( [
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'16 -\staccato \( \< [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -4001,7 +3699,7 @@
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -4014,22 +3712,10 @@
                         % [B 4 Percussion Voice] Material: "guiro_repetitions"
                         {
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    narrow
-                                                                }
-                                        }
-                                c'4 -\staccato
+                                c'4 -\staccato \( \<
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
@@ -4042,21 +3728,9 @@
                         {
                             % [B 4 Percussion Voice] Measure 43
                             {
+                                \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'4 -\staccato \(
-                                    ^ \markup {
-                                        \box
-                                            \whiteout
-                                                \pad-around
-                                                    #0.5
-                                                    \italic
-                                                        \smaller
-                                                            \concat
-                                                                {
-                                                                    \vstrut
-                                                                    wide
-                                                                }
-                                        }
+                                c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -4066,7 +3740,7 @@
                                 c'4 -\staccato
                                 c'4 -\staccato
                                 c'4 -\staccato
-                                c'4 -\staccato
+                                c'4 -\staccato \p
                                 <> \)
                             }
                         }
