@@ -139,7 +139,7 @@ pitch_handler = consort.PitchClassPitchHandler(
                 ]),
             None,
             pitchtools.Rotation(-1, stravinsky=True),
-            pitchtools.Retrogression(),
+            pitchtools.Retrograde(),
             ],
         ratio=(1, 3, 1, 1, 2, 1),
         ),
