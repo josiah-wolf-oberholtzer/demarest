@@ -131,14 +131,14 @@ pitch_handler = consort.PitchClassPitchHandler(
         ),
     pitch_operation_specifier=consort.PitchOperationSpecifier(
         pitch_operations=[
-            pitchtools.Rotation(1),
+            pitchtools.Rotation(1, stravinsky=True),
             None,
-            pitchtools.PitchOperation([
+            pitchtools.CompoundOperator([
                 pitchtools.Transposition(1),
                 pitchtools.Inversion(),
                 ]),
             None,
-            pitchtools.Rotation(-1),
+            pitchtools.Rotation(-1, stravinsky=True),
             pitchtools.Retrogression(),
             ],
         ratio=(1, 3, 1, 1, 2, 1),
