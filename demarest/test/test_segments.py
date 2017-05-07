@@ -11,14 +11,7 @@ segments_path = (test_path / '..' / 'segments').resolve()
 metadata_path = segments_path / 'metadata.json'
 with metadata_path.open('r') as file_pointer:
     metadata = json.loads(file_pointer.read())
-staged_segment_names = metadata.get('segments', [])
-segment_names = [
-    path.name for path in segments_path.iterdir()
-    if path.is_dir() and
-    (path / '__init__.py').exists() and
-    (path / 'definition.py').exists() and
-    path.name in staged_segment_names
-    ]
+segment_names = metadata.get('segments', [])
 
 
 @pytest.mark.parametrize('segment_name', segment_names)
