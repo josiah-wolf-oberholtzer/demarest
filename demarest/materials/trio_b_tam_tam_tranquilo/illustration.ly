@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,12 +35,15 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \set Staff.instrumentName = \markup {
                                 \concat
                                     {
@@ -84,9 +87,6 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -113,10 +113,10 @@
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -143,10 +143,10 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -173,10 +173,10 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -203,10 +203,10 @@
                     % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -233,10 +233,10 @@
                     {
                         % [Violin 1 Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -266,10 +266,10 @@
                     % [Violin 1 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -325,8 +325,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -336,6 +336,9 @@
                     % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \set Staff.instrumentName = \markup {
                                 \concat
                                     {
@@ -379,9 +382,6 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -395,17 +395,25 @@
                                                         LV
                                     }
                                 ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
@@ -435,10 +443,10 @@
                     % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -480,10 +488,10 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -510,10 +518,10 @@
                     % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -554,10 +562,10 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -583,10 +591,10 @@
                     % [Violin 2 Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -628,10 +636,10 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -672,8 +680,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -683,6 +691,9 @@
                     % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \set Staff.instrumentName = \markup {
                                 \concat
                                     {
@@ -726,9 +737,6 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -742,17 +750,25 @@
                                                         LV
                                     }
                                 ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                             <> \)
                             \stopStaff
@@ -768,10 +784,10 @@
                     {
                         % [Viola Voice] Measure 2
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \( \<
                                 ^ \markup {
                                     \pad-around
@@ -844,10 +860,10 @@
                     % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -873,10 +889,10 @@
                     % [Viola Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -903,10 +919,10 @@
                     {
                         % [Viola Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -947,10 +963,10 @@
                     {
                         % [Viola Voice] Measure 6
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -998,12 +1014,15 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         % [Cello Voice] Measure 1
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \set Staff.instrumentName = \markup {
                                 \concat
                                     {
@@ -1047,9 +1066,6 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -1076,10 +1092,10 @@
                     {
                         % [Cello Voice] Measure 2
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -1106,10 +1122,10 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -1136,10 +1152,10 @@
                     {
                         % [Cello Voice] Measure 4
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -1165,10 +1181,10 @@
                     % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -1194,10 +1210,10 @@
                     % [Cello Voice] Material: "trio_b_tam_tam_tranquilo"
                     {
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
@@ -1224,10 +1240,10 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
@@ -1277,10 +1293,10 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
                             \startStaff
+                            \colorSpan #-4 #4 #(rgb-color 0.972 0.905 0.86)
                             f8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around

@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "whispered_inhales"
                     {
                         % [Violin 1 Voice] Measure 1
@@ -52,7 +52,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -65,7 +65,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -103,6 +103,10 @@
                         % [Violin 1 Voice] Measure 2
                         {
                             c'8 \repeatTie [
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \set stemLeftBeamCount = 1
                             c'8 -\accent ] \p
                                 _ \markup {
@@ -115,10 +119,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -130,6 +130,10 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
@@ -146,10 +150,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -219,6 +219,10 @@
                         % [Violin 1 Voice] Measure 5
                         {
                             c'8 \repeatTie [
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \set stemLeftBeamCount = 1
                             c'8 -\accent ] \p
                                 _ \markup {
@@ -231,10 +235,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -269,6 +269,10 @@
                         % [Violin 1 Voice] Measure 7
                         {
                             c'8 \repeatTie [
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \set stemLeftBeamCount = 1
                             c'8 -\accent ] \p
                                 _ \markup {
@@ -281,10 +285,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -311,8 +311,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -333,7 +333,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -346,7 +346,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -370,6 +370,27 @@
                                                     f-
                                                 }
                                     }
+                                ^ \markup {
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                }
                         }
                         % [Violin 2 Voice] Measure 2
                         {
@@ -391,6 +412,10 @@
                         }
                         % [Violin 2 Voice] Measure 3
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'4 -\accent \p
                                 _ \markup {
                                     \whiteout
@@ -402,10 +427,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -417,6 +438,10 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
@@ -433,10 +458,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -522,12 +543,12 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8 \repeatTie \p
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 \repeatTie \p
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -554,8 +575,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -576,7 +597,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -589,7 +610,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -613,6 +634,27 @@
                                                     s-
                                                 }
                                     }
+                                ^ \markup {
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                wh.
+                                                                            }
+                                }
                         }
                         % [Viola Voice] Measure 2
                         {
@@ -644,12 +686,12 @@
                         }
                         % [Viola Voice] Measure 3
                         {
-                            c'8 \repeatTie \p
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 \repeatTie \p
+                            <> \)
                         }
                     }
                     {
@@ -727,6 +769,10 @@
                         }
                         % [Viola Voice] Measure 6
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'4 -\accent \p
                                 _ \markup {
                                     \whiteout
@@ -738,10 +784,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -775,8 +817,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "whispered_inhales"
                     {
                         % [Cello Voice] Measure 1
@@ -792,7 +834,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -805,7 +847,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -843,6 +885,10 @@
                         % [Cello Voice] Measure 2
                         {
                             c'8 \repeatTie [
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \set stemLeftBeamCount = 1
                             c'8 -\accent ] \p
                                 _ \markup {
@@ -855,10 +901,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -899,12 +941,12 @@
                         }
                         % [Cello Voice] Measure 4
                         {
-                            c'8 \repeatTie \p
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 \repeatTie \p
+                            <> \)
                         }
                     }
                     {
@@ -959,6 +1001,10 @@
                         }
                         {
                             c'8 \repeatTie [
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \set stemLeftBeamCount = 1
                             c'8 -\accent ] \p
                                 _ \markup {
@@ -971,10 +1017,6 @@
                                                 }
                                     }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -993,6 +1035,10 @@
                     {
                         % [Cello Voice] Measure 7
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override NoteHead.style = #'cross
@@ -1020,14 +1066,10 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "wh. (inhale)"
+                                                            inhale
                                                         }
                                 }
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {

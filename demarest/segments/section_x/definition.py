@@ -14,7 +14,7 @@ segment_maker = demarest.SegmentMaker(
     permitted_time_signatures=[
         (4, 4),
         ],
-    tempo=abjad.Tempo((1, 4), 72),
+    tempo=abjad.MetronomeMark((1, 4), 72),
     )
 
 ### TIMESPAN MAKERS ###
@@ -50,11 +50,11 @@ sparse_timespan_maker = abjad.new(
 
 ### TIMESPAN IDENTIFIERS ###
 
-common_timespan_identifier = abjad.sequencetools.Sequence(
+common_timespan_identifier = abjad.Sequence(
     [1, -1, 2, -2, 3, 1, -1, 1, -2, 3]
     )
 
-rare_timespan_identifier = abjad.sequencetools.Sequence(
+rare_timespan_identifier = abjad.Sequence(
     [-3, 1, -4, 1, -5, 1, -2],
     )
 

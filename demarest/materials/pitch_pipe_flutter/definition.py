@@ -8,7 +8,7 @@ pitch_pipe_flutter = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         accents=consort.AttachmentExpression(
             attachments=abjad.Articulation('accent'),
-            selector=abjad.selectortools.select_pitched_runs()[0],
+            selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord))[0],
             ),
         dynamics=consort.DynamicExpression(
             division_period=2,
@@ -18,7 +18,7 @@ pitch_pipe_flutter = consort.MusicSpecifier(
             ),
         tenuti=consort.AttachmentExpression(
             attachments=abjad.Articulation('tenuto'),
-            selector=abjad.selectortools.select_pitched_runs()
+            selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord))
                 .by_logical_tie()
                 .rest()
                 [0],
@@ -39,7 +39,7 @@ pitch_pipe_flutter = consort.MusicSpecifier(
         denominators=[8],
         division_masks=[
             abjad.rhythmmakertools.SustainMask(
-                pattern=abjad.patterntools.Pattern(
+                pattern=abjad.Pattern(
                     indices=[1, 5, 6],
                     period=9,
                     ),

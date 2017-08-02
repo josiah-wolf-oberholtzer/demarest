@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Violin 1 Voice] Measure 1
@@ -75,11 +75,11 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <b'' d'''>4. :32 \fp \( \>
+                            <c''' ef'''>4. :32 \fp \( \>
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            <b'' d'''>4 :32 \repeatTie
+                            <c''' ef'''>4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -93,7 +93,7 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <a'' c'''>8 :64 \ppp \(
+                            <b'' d'''>8 :64 \ppp \(
                             <> \)
                         }
                     }
@@ -108,12 +108,12 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <b'' e'''>4. :32 \fp \( \>
-                            <b'' e'''>8 :64 \repeatTie
+                            <a'' d'''>4. :32 \fp \( \>
+                            <a'' d'''>8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            <b'' e'''>8 :64 \repeatTie [
+                            <a'' d'''>8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             <fs' a'>8 :64 -\accent
@@ -176,8 +176,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -222,17 +222,25 @@
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
                             <cs''' e'''>8 :64 \fp \( \> ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            vb.
-                                                        }
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
@@ -323,8 +331,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -369,23 +377,31 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                            <b'' d'''>4 :32 \( \< ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            vb.
-                                                        }
+                            <d''' f'''>4 :32 \( \< ^ \markup {
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                vb.
+                                                                            }
                                 }
                         }
                         % [Viola Voice] Measure 2
                         {
-                            <b'' d'''>8 :64 \repeatTie
+                            <d''' f'''>8 :64 \repeatTie
                         }
                         {
                             <b'' d'''>8 :64 -\accent \p \<
@@ -468,8 +484,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "trio_b_vibraphone_shimmer"
                     {
                         % [Cello Voice] Measure 1

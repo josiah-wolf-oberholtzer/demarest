@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,19 +35,19 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "shaker_shimmer"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'4. :32 -\accent \fp \( \>
+                            g'4. :32 -\accent \fp \( \>
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            f'4 :32 \repeatTie
+                            g'4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -61,9 +61,9 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'16 -\staccato \fp \( [
+                            g'16 -\staccato \fp \( [
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            g'16 -\staccato ]
                             <> \)
                         }
                     }
@@ -78,27 +78,27 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'4. :32 -\accent \fp \( \>
-                            f'8 :64 \repeatTie
+                            g'4. :32 -\accent \fp \( \>
+                            g'8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            f'8 :64 \repeatTie [
+                            g'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            f'8 :64 -\accent ]
+                            g'8 :64 -\accent ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            f'4 :32 -\accent
+                            g'4 :32 -\accent
                             <> \)
                         }
                     }
@@ -115,11 +115,11 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'8 :64 -\accent \fp \(
+                            g'8 :64 -\accent \fp \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            f'4 :32 \repeatTie
+                            g'4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -146,8 +146,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -159,18 +159,18 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'8 :64 -\accent \fp \( \>
+                            g'8 :64 -\accent \fp \( \>
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            f'4 :32 \repeatTie
+                            g'4 :32 \repeatTie
                         }
                         {
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            f'4 :32 \repeatTie \!
+                            g'4 :32 \repeatTie \!
                             <> \)
                         }
                     }
@@ -185,15 +185,15 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'16 -\staccato \fp \( \> [
+                            g'16 -\staccato \fp \( [ \>
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            g'16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            f'16 -\staccato
+                            g'16 -\staccato
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            g'16 -\staccato ]
                             <> \)
                         }
                     }
@@ -207,42 +207,42 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'8 :64 -\accent \fp \( \<
+                            g'8 :64 -\accent \fp \( \<
                         }
                         \times 2/3 {
-                            f'8 :64 \repeatTie [
+                            g'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            f'8 :64 -\accent ]
+                            g'8 :64 -\accent ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            f'8 :64 -\accent \mf \> [
+                            g'8 :64 -\accent \mf [ \>
                             \set stemLeftBeamCount = 1
-                            f'8 :64 -\accent ]
+                            g'8 :64 -\accent ]
                         }
                         {
-                            f'8 :64 \repeatTie
+                            g'8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/4 {
                             \once \override Hairpin.circled-tip = ##t
-                            f'8 :64 -\accent \p \> [
+                            g'8 :64 -\accent \p [ \>
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            f'8 :64 -\accent ]
+                            g'8 :64 -\accent ]
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            f'8 :64 \repeatTie
+                            g'8 :64 \repeatTie
                             <> \)
                         }
                     }
@@ -269,8 +269,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -281,22 +281,22 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'4 :32 -\accent \fp \(
+                            g'4 :32 -\accent \fp \(
                         }
                         % [Viola Voice] Measure 2
                         {
-                            f'8 :64 \repeatTie
+                            g'8 :64 \repeatTie
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            f'8 :64 -\accent \parenthesizeDynamic \p \>
+                            g'8 :64 -\accent \parenthesizeDynamic \p \>
                         }
                         {
-                            f'8 :64 \repeatTie
+                            g'8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             <> \)
                         }
                     }
@@ -313,28 +313,28 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'8 :64 -\accent \fp \( \<
-                            f'4 :32 \repeatTie
+                            g'8 :64 -\accent \fp \( \<
+                            g'4 :32 \repeatTie
                         }
                         {
-                            f'4 :32 \repeatTie
+                            g'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            f'8 :64 -\accent \mf \>
+                            g'8 :64 -\accent \mf \>
                         }
                         \times 2/3 {
-                            f'8 :64 \repeatTie [
+                            g'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            f'8 :64 -\accent ]
+                            g'8 :64 -\accent ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            f'4 :32 -\accent
+                            g'4 :32 -\accent
                             <> \)
                         }
                     }
@@ -368,19 +368,19 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "shaker_shimmer"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'4. :32 -\accent \fp \( \>
+                            g'4. :32 -\accent \fp \( \>
                         }
                         % [Cello Voice] Measure 2
                         {
-                            f'4 :32 \repeatTie
+                            g'4 :32 \repeatTie
                             <> \)
                         }
                     }
@@ -395,11 +395,11 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'4. :32 -\accent \fp \( \>
+                            g'4. :32 -\accent \fp \( \>
                         }
                         % [Cello Voice] Measure 4
                         {
-                            f'8 :64 \repeatTie
+                            g'8 :64 \repeatTie
                             <> \)
                         }
                     }
@@ -413,19 +413,19 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'4 :32 -\accent \fp \( \>
+                            g'4 :32 -\accent \fp \( \>
                         }
                         {
-                            f'8 :64 \repeatTie [
+                            g'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
-                            f'8 :64 -\accent ]
+                            g'8 :64 -\accent ]
                         }
                         % [Cello Voice] Measure 5
                         {
-                            f'8 :64 -\accent
+                            g'8 :64 -\accent
                         }
                         {
-                            f'4 :32 \repeatTie \!
+                            g'4 :32 \repeatTie \!
                             <> \)
                         }
                     }
@@ -445,9 +445,9 @@
                         % [Cello Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.732 0.775)
-                            f'16 -\staccato \fp \( [
+                            g'16 -\staccato \fp \( [
                             \set stemLeftBeamCount = 2
-                            f'16 -\staccato ]
+                            g'16 -\staccato ]
                             <> \)
                         }
                     }

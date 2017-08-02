@@ -27,7 +27,6 @@
             \tag #'a-1
             \context PerformerStaffGroup = "A 1 Staff Group" <<
                 \context VocalizationStaff = "A 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -48,6 +47,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 1 Vocalization Voice" {
                         {
@@ -113,7 +113,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -306,7 +306,7 @@
                             \times 2/3 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -446,7 +446,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 1 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -489,6 +488,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "wine_glass_drone"
@@ -531,7 +531,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -574,6 +573,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 127
@@ -618,12 +618,11 @@
                             }
                             % [A 1 Percussion Voice] Measure 137
                             {
-                                f2. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -635,51 +634,19 @@
                         {
                             % [A 1 Percussion Voice] Measure 138
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -763,7 +730,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -782,14 +749,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                             }
                         }
                         {
@@ -801,43 +767,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f2 \( \startTextSpan \<
+                                f2 \( \<
                             }
                             % [A 1 Percussion Voice] Measure 141
                             {
@@ -865,12 +799,11 @@
                             }
                             % [A 1 Percussion Voice] Measure 147
                             {
-                                f2 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -881,54 +814,22 @@
                         % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
+                                c'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -946,13 +847,13 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -1077,12 +978,11 @@
                             % [A 1 Percussion Voice] Measure 159
                             {
                                 f2 \repeatTie
-                                f8 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f8 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -1094,56 +994,23 @@
                         % [A 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan
+                                c'16 -\staccato \p \(
                             }
                             % [A 1 Percussion Voice] Measure 160
                             {
                                 c'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -1159,43 +1026,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f2. \( \startTextSpan \<
+                                f2. \( \<
                             }
                             % [A 1 Percussion Voice] Measure 162
                             {
@@ -1243,13 +1078,13 @@
                             }
                             % [A 1 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -1258,7 +1093,6 @@
             \tag #'a-2
             \context PerformerStaffGroup = "A 2 Staff Group" <<
                 \context VocalizationStaff = "A 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -1279,6 +1113,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 2 Vocalization Voice" {
                         {
@@ -1357,7 +1192,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -1493,7 +1328,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -1657,7 +1492,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 2 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -1700,6 +1534,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 2 Percussion Voice" {
                         % [A 2 Percussion Voice] Material: "wine_glass_drone"
@@ -1742,7 +1577,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1785,6 +1619,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 127
@@ -1829,12 +1664,11 @@
                             }
                             % [A 2 Percussion Voice] Measure 137
                             {
-                                f1 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f1 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -1846,51 +1680,19 @@
                         % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -1903,6 +1705,10 @@
                         {
                             % [A 2 Percussion Voice] Measure 139
                             {
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -1910,11 +1716,6 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1927,43 +1728,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f8 \( \startTextSpan \<
+                                f8 \( \<
                                 f2 \repeatTie
                             }
                             % [A 2 Percussion Voice] Measure 140
@@ -1997,12 +1766,11 @@
                             % [A 2 Percussion Voice] Measure 147
                             {
                                 f2 \repeatTie
-                                f8 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f8 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -2014,58 +1782,25 @@
                         % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
+                                c'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
                             % [A 2 Percussion Voice] Measure 148
                             {
                                 c'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -2078,43 +1813,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f4 \( \startTextSpan \<
+                                f4 \( \<
                             }
                             % [A 2 Percussion Voice] Measure 149
                             {
@@ -2158,12 +1861,11 @@
                             }
                             % [A 2 Percussion Voice] Measure 159
                             {
-                                f2.. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2.. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -2178,31 +1880,17 @@
                         % [A 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
+                                c'16 -\staccato \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -2216,43 +1904,11 @@
                             % [A 2 Percussion Voice] Measure 161
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f1 \( \startTextSpan \<
+                                f1 \( \<
                             }
                             % [A 2 Percussion Voice] Measure 162
                             {
@@ -2300,13 +1956,13 @@
                             }
                             % [A 2 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -2315,7 +1971,6 @@
             \tag #'a-3
             \context PerformerStaffGroup = "A 3 Staff Group" <<
                 \context VocalizationStaff = "A 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -2336,6 +1991,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 3 Vocalization Voice" {
                         {
@@ -2395,7 +2051,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -2716,7 +2372,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 3 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -2759,6 +2414,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "wine_glass_drone"
@@ -2801,7 +2457,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2844,6 +2499,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 127
@@ -2892,12 +2548,11 @@
                             }
                             % [A 3 Percussion Voice] Measure 138
                             {
-                                f8 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f8 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -2909,31 +2564,18 @@
                         % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
+                                c'16 -\staccato \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3036,12 +2678,11 @@
                             }
                             % [A 3 Percussion Voice] Measure 147
                             {
-                                f2.. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2.. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -3056,55 +2697,22 @@
                         % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
+                                c'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -3117,43 +2725,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f8 \( \startTextSpan \<
+                                f8 \( \<
                             }
                             % [A 3 Percussion Voice] Measure 149
                             {
@@ -3197,12 +2773,11 @@
                             }
                             % [A 3 Percussion Voice] Measure 159
                             {
-                                f4 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -3213,51 +2788,19 @@
                         % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -3272,6 +2815,10 @@
                         % [A 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -3279,10 +2826,6 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -3395,13 +2938,13 @@
                             }
                             % [A 3 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -3410,7 +2953,6 @@
             \tag #'a-4
             \context PerformerStaffGroup = "A 4 Staff Group" <<
                 \context VocalizationStaff = "A 4 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -3431,6 +2973,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 4 Vocalization Voice" {
                         {
@@ -3495,7 +3038,7 @@
                             \times 7/8 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -3691,7 +3234,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -3808,7 +3351,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 4 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -3851,6 +3393,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "wine_glass_drone"
@@ -3893,7 +3436,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -3936,6 +3478,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 127
@@ -3984,12 +3527,11 @@
                             }
                             % [A 4 Percussion Voice] Measure 138
                             {
-                                f4. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -4001,49 +3543,17 @@
                         % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan
+                                c'16 -\staccato \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4062,13 +3572,13 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -4083,7 +3593,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.86 0.883)
-                                g'16 -\staccato \ppp \( \< [
+                                g'16 -\staccato \ppp \( [ \<
                                 \set stemLeftBeamCount = 2
                                 g'16 -\staccato ]
                             }
@@ -4169,12 +3679,11 @@
                             }
                             % [A 4 Percussion Voice] Measure 147
                             {
-                                f4 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -4186,51 +3695,19 @@
                         % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -4347,12 +3824,11 @@
                             }
                             % [A 4 Percussion Voice] Measure 159
                             {
-                                f2 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -4363,51 +3839,19 @@
                         % [A 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -4491,21 +3935,20 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                             }
                         }
                         {
@@ -4518,43 +3961,11 @@
                             % [A 4 Percussion Voice] Measure 162
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f1 \( \startTextSpan \<
+                                f1 \( \<
                             }
                             % [A 4 Percussion Voice] Measure 163
                             {
@@ -4598,13 +4009,13 @@
                             }
                             % [A 4 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -4615,7 +4026,6 @@
             \tag #'t-1
             \context PerformerStaffGroup = "T 1 Staff Group" <<
                 \context VocalizationStaff = "T 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -4636,6 +4046,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 1 Vocalization Voice" {
                         {
@@ -4956,7 +4367,7 @@
                             \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -5026,7 +4437,7 @@
                             \times 2/3 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -5146,6 +4557,9 @@
                         {
                             {
                                 \clef "treble"
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5214,7 +4628,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                cf'''8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                c'''8 -\tenuto \laissezVibrer \p \( \startTextSpan
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -5248,9 +4662,6 @@
                                                                                 }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5263,6 +4674,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 127
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5280,9 +4694,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5308,6 +4719,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5357,9 +4771,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5371,6 +4782,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 132
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5388,9 +4802,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5415,6 +4826,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5464,9 +4878,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5481,6 +4892,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5498,9 +4912,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5527,6 +4938,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5576,9 +4990,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5593,6 +5004,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5610,9 +5024,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5624,6 +5035,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 144
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5641,9 +5055,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5658,6 +5069,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5675,9 +5089,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5690,6 +5101,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 146
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5707,9 +5121,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5724,6 +5135,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5741,9 +5155,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5755,6 +5166,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 148
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5772,9 +5186,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5796,6 +5207,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 150
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5845,9 +5259,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5862,6 +5273,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5879,9 +5293,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -5896,6 +5307,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -5913,9 +5327,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -5966,7 +5377,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.98 0.9)
-                                <ef gf>4 :32 \( \< ^ \markup {
+                                <c ef>4 :32 \( \< ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -5990,7 +5401,7 @@
                             }
                             % [T 1 Percussion Voice] Measure 154
                             {
-                                <ef gf>4 :32 \p \repeatTie
+                                <c ef>4 :32 \p \repeatTie
                                 <> \)
                             }
                         }
@@ -6015,6 +5426,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6117,9 +5531,6 @@
                                                                                 }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6132,6 +5543,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 159
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6149,9 +5563,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6166,6 +5577,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6183,9 +5597,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6211,6 +5622,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6260,9 +5674,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6274,6 +5685,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 164
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6291,9 +5705,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6305,6 +5716,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6322,9 +5736,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6336,6 +5747,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 165
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6353,9 +5767,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -6380,6 +5791,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -6429,9 +5843,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6446,6 +5857,9 @@
                         % [T 1 Percussion Voice] Material: "trio_a_crotales_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6463,9 +5877,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -6477,6 +5888,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 169
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -6494,9 +5908,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                                 \clef "percussion"
                             }
@@ -6520,7 +5931,6 @@
             \tag #'t-2
             \context PerformerStaffGroup = "T 2 Staff Group" <<
                 \context VocalizationStaff = "T 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -6541,6 +5951,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 2 Vocalization Voice" {
                         {
@@ -6603,7 +6014,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -6744,7 +6155,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -6831,7 +6242,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -6891,7 +6302,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
@@ -7030,6 +6441,9 @@
                         {
                             {
                                 \clef "treble"
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -7079,9 +6493,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7093,6 +6504,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 127
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7110,10 +6524,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                                 \clef "percussion"
                             }
                         }
@@ -7126,8 +6536,12 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7174,11 +6588,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'8 :64 \f \(
-                                    ^ \markup {
+                                c'8 :64 \f \( ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -7199,25 +6609,9 @@
                                                                                     perc.
                                                                                 }
                                     }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7233,8 +6627,9 @@
                         {
                             {
                                 \clef "treble"
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7304,23 +6699,7 @@
                                                                                     vb.
                                                                                 }
                                     }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 \clef "percussion"
                             }
                         }
@@ -7336,39 +6715,10 @@
                         % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7415,10 +6765,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                f2 \( \startTextSpan \< ^ \markup {
+                                f2 \( \< ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -7439,14 +6786,13 @@
                                                                                     perc.
                                                                                 }
                                     }
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 f8 \p \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7461,58 +6807,25 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'2 :32 \( \startTextSpan \<
+                                c'2 :32 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 131
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 c'4. :32 \f \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7525,38 +6838,6 @@
                         {
                             {
                                 \clef "treble"
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7593,7 +6874,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                d'8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
+                                d'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -7629,6 +6910,9 @@
                             }
                             % [T 2 Percussion Voice] Measure 132
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 b'8 -\tenuto \laissezVibrer
                                     ^ \markup {
                                         \pad-around
@@ -7642,9 +6926,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7659,6 +6940,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7676,9 +6960,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7693,6 +6974,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7710,9 +6994,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7728,6 +7009,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7745,9 +7029,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -7759,6 +7040,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 136
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7776,10 +7060,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                                 \clef "percussion"
                             }
                         }
@@ -7795,39 +7075,10 @@
                         % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -7874,10 +7125,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                f2.. \( \startTextSpan \< ^ \markup {
+                                f2.. \( \< ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -7901,14 +7149,14 @@
                             }
                             % [T 2 Percussion Voice] Measure 138
                             {
-                                f2. \p \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f2. \p \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -7932,6 +7180,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
@@ -7969,21 +7220,17 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
                                 c'2.. :32 \( \startTextSpan \<
                             }
                             % [T 2 Percussion Voice] Measure 141
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 c'2 :32 \mf \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -7996,38 +7243,9 @@
                             % [T 2 Percussion Voice] Measure 142
                             {
                                 \clef "treble"
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8064,7 +7282,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a'8 -\tenuto \laissezVibrer \p \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8098,9 +7316,6 @@
                                                                                 }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8115,6 +7330,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8132,9 +7350,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8150,6 +7365,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8167,9 +7385,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8181,6 +7396,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 145
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8198,9 +7416,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8212,6 +7427,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8229,10 +7447,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                                 \clef "percussion"
                             }
                         }
@@ -8248,8 +7462,12 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8296,11 +7514,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'4. :32 \parenthesizeDynamic \p \(
-                                    ^ \markup {
+                                c'4. :32 \parenthesizeDynamic \p \( ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -8321,25 +7535,9 @@
                                                                                     perc.
                                                                                 }
                                     }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8355,8 +7553,9 @@
                         {
                             {
                                 \clef "treble"
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8426,23 +7625,7 @@
                                                                                     vb.
                                                                                 }
                                     }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 \clef "percussion"
                             }
                         }
@@ -8459,39 +7642,10 @@
                         % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8538,10 +7692,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                f4 \( \startTextSpan \< ^ \markup {
+                                f4 \( \< ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -8565,14 +7716,13 @@
                             }
                             % [T 2 Percussion Voice] Measure 149
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 f4 \p \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -8584,38 +7734,9 @@
                         {
                             {
                                 \clef "treble"
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8652,7 +7773,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                ef''8 -\tenuto \laissezVibrer \( \startTextSpan
+                                ds''8 -\tenuto \laissezVibrer \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8686,9 +7807,6 @@
                                                                                 }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8703,6 +7821,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8720,9 +7841,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8735,6 +7853,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 151
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8752,9 +7873,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8766,6 +7884,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8783,9 +7904,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8797,11 +7915,14 @@
                         {
                             % [T 2 Percussion Voice] Measure 152
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                ef'8 -\tenuto \laissezVibrer \p \(
+                                ds'8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -8814,9 +7935,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -8851,8 +7969,44 @@
                         % [T 2 Percussion Voice] Material: "trio_b_tam_tam_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                superball
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                superball
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -8899,11 +8053,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.98 0.932 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                f4. \parenthesizeDynamic \p \(
-                                    ^ \markup {
+                                f4. \parenthesizeDynamic \p \( \startTextSpan ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -8924,25 +8074,9 @@
                                                                                     perc.
                                                                                 }
                                     }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                superball
-                                                            }
-                                    }
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -8957,47 +8091,15 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'8 :64 \( \startTextSpan \<
+                                c'8 :64 \( \<
                             }
                             % [T 2 Percussion Voice] Measure 156
                             {
@@ -9005,14 +8107,13 @@
                             }
                             % [T 2 Percussion Voice] Measure 157
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 c'8 :64 \p \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -9028,38 +8129,9 @@
                         {
                             {
                                 \clef "treble"
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                bowed
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -9096,7 +8168,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                a'8 -\tenuto \laissezVibrer \ppp \( \startTextSpan
+                                a'8 -\tenuto \laissezVibrer \ppp \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -9130,9 +8202,6 @@
                                                                                 }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9144,6 +8213,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 159
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -9161,10 +8233,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                                 \clef "percussion"
                             }
                         }
@@ -9180,39 +8248,10 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                "scrape tremolo"
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -9259,10 +8298,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                c'2. :32 \( \startTextSpan \< ^ \markup {
+                                c'2. :32 \( \< ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -9286,14 +8322,14 @@
                             }
                             % [T 2 Percussion Voice] Measure 161
                             {
-                                c'2 :32 \f \repeatTie
-                                <> \)
-                                \stopStaff
-                                \startStaff
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                c'2 :32 \f \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -9422,6 +8458,9 @@
                             }
                             % [T 2 Percussion Voice] Measure 164
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 c''8 -\tenuto \laissezVibrer
                                     ^ \markup {
                                         \pad-around
@@ -9435,9 +8474,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                             }
                         }
@@ -9466,6 +8502,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
@@ -9498,9 +8537,6 @@
                                                             }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9521,6 +8557,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 168
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -9570,9 +8609,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9587,6 +8623,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_vibraphone_tranquilo"
                         {
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -9604,9 +8643,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -9618,6 +8654,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 170
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -9635,9 +8674,6 @@
                                                             LV
                                         }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 <> \stopTextSpan
                                 \clef "percussion"
                             }
@@ -9661,7 +8697,6 @@
             \tag #'t-3
             \context PerformerStaffGroup = "T 3 Staff Group" <<
                 \context VocalizationStaff = "T 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -9682,6 +8717,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 3 Vocalization Voice" {
                         {
@@ -9781,7 +8817,7 @@
                             \times 7/8 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -9895,7 +8931,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -10083,7 +9119,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -10144,7 +9180,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
@@ -11375,7 +10411,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                                ef''8 -\tenuto \laissezVibrer \p \(
+                                ds''8 -\tenuto \laissezVibrer \p \(
                                     ^ \markup {
                                         \pad-around
                                             #0.5
@@ -12064,7 +11100,6 @@
             \tag #'b-1
             \context PerformerStaffGroup = "B 1 Staff Group" <<
                 \context VocalizationStaff = "B 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -12085,6 +11120,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 1 Vocalization Voice" {
                         {
@@ -12487,7 +11523,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 1 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -12530,6 +11565,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 1 Percussion Voice" {
                         % [B 1 Percussion Voice] Material: "wine_glass_drone"
@@ -12572,7 +11608,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -12615,6 +11650,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 127
@@ -12675,12 +11711,11 @@
                             }
                             % [B 1 Percussion Voice] Measure 141
                             {
-                                f4 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -12691,51 +11726,19 @@
                         % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -12839,12 +11842,11 @@
                             }
                             % [B 1 Percussion Voice] Measure 150
                             {
-                                f8 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f8 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -12856,54 +11858,22 @@
                         % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
+                                c'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -12921,14 +11891,13 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -12941,43 +11910,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f4 \( \startTextSpan \<
+                                f4 \( \<
                             }
                             % [B 1 Percussion Voice] Measure 152
                             {
@@ -13017,12 +11954,11 @@
                             }
                             % [B 1 Percussion Voice] Measure 161
                             {
-                                f4. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -13034,49 +11970,17 @@
                         % [B 1 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan
+                                c'16 -\staccato \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -13094,14 +11998,13 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -13113,43 +12016,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f2 \( \startTextSpan \<
+                                f2 \( \<
                             }
                             % [B 1 Percussion Voice] Measure 163
                             {
@@ -13193,13 +12064,13 @@
                             }
                             % [B 1 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -13208,7 +12079,6 @@
             \tag #'b-2
             \context PerformerStaffGroup = "B 2 Staff Group" <<
                 \context VocalizationStaff = "B 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -13229,6 +12099,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 2 Vocalization Voice" {
                         % [B 2 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -13370,7 +12241,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 c'8 -\tenuto ]
                             }
@@ -13649,7 +12520,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 2 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -13692,6 +12562,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "wine_glass_drone"
@@ -13734,7 +12605,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -13777,6 +12647,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 127
@@ -13837,12 +12708,11 @@
                             }
                             % [B 2 Percussion Voice] Measure 141
                             {
-                                f4. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -13854,51 +12724,19 @@
                         % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -13919,14 +12757,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -13939,43 +12776,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f4 \( \startTextSpan \<
+                                f4 \( \<
                             }
                             % [B 2 Percussion Voice] Measure 143
                             {
@@ -14007,12 +12812,11 @@
                             }
                             % [B 2 Percussion Voice] Measure 150
                             {
-                                f4. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f4. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -14024,51 +12828,19 @@
                         % [B 2 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -14086,14 +12858,13 @@
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \( [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -14105,43 +12876,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f2 \( \startTextSpan \<
+                                f2 \( \<
                             }
                             % [B 2 Percussion Voice] Measure 152
                             {
@@ -14177,12 +12916,11 @@
                             }
                             % [B 2 Percussion Voice] Measure 160
                             {
-                                f2. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -14194,31 +12932,18 @@
                         {
                             % [B 2 Percussion Voice] Measure 161
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
+                                c'16 -\staccato \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -14327,13 +13052,13 @@
                             }
                             % [B 2 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -14342,7 +13067,6 @@
             \tag #'b-3
             \context PerformerStaffGroup = "B 3 Staff Group" <<
                 \context VocalizationStaff = "B 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -14363,6 +13087,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 3 Vocalization Voice" {
                         {
@@ -14483,7 +13208,7 @@
                             \times 5/6 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -14692,7 +13417,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -14782,7 +13507,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 3 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -14825,6 +13549,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "wine_glass_drone"
@@ -14867,7 +13592,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -14910,6 +13634,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 127
@@ -14971,12 +13696,11 @@
                             % [B 3 Percussion Voice] Measure 141
                             {
                                 f2 \repeatTie
-                                f8 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f8 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -14988,56 +13712,23 @@
                         % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan
+                                c'16 -\staccato \p \(
                             }
                             % [B 3 Percussion Voice] Measure 142
                             {
                                 c'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -15050,43 +13741,11 @@
                             % [B 3 Percussion Voice] Measure 143
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f1 \( \startTextSpan \<
+                                f1 \( \<
                             }
                             % [B 3 Percussion Voice] Measure 144
                             {
@@ -15110,12 +13769,11 @@
                             }
                             % [B 3 Percussion Voice] Measure 149
                             {
-                                f2. \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f2. \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -15127,54 +13785,22 @@
                         {
                             % [B 3 Percussion Voice] Measure 150
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
+                                c'16 -\staccato \p \( [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -15279,12 +13905,11 @@
                             }
                             % [B 3 Percussion Voice] Measure 160
                             {
-                                f1 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f1 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -15296,51 +13921,19 @@
                         % [B 3 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -15451,13 +14044,13 @@
                             }
                             % [B 3 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }
@@ -15466,7 +14059,6 @@
             \tag #'b-4
             \context PerformerStaffGroup = "B 4 Staff Group" <<
                 \context VocalizationStaff = "B 4 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -15487,6 +14079,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 4 Vocalization Voice" {
                         {
@@ -15834,7 +14427,7 @@
                             \times 2/3 {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -15898,7 +14491,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.986 0.949 0.99)
-                                c'8 -\accent \fp \( \> [
+                                c'8 -\accent \fp \( [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\tenuto
@@ -15972,7 +14565,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 4 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -16015,6 +14607,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "wine_glass_drone"
@@ -16057,7 +14650,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -16100,6 +14692,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                                 f1 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 127
@@ -16156,12 +14749,11 @@
                             }
                             % [B 4 Percussion Voice] Measure 140
                             {
-                                f1 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f1 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -16173,31 +14765,18 @@
                         % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
+                                c'16 -\staccato \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -16295,12 +14874,11 @@
                             }
                             % [B 4 Percussion Voice] Measure 149
                             {
-                                f1 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f1 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -16313,51 +14891,19 @@
                         % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -16435,14 +14981,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -16454,43 +14999,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f2 \( \startTextSpan \<
+                                f2 \( \<
                             }
                             % [B 4 Percussion Voice] Measure 153
                             {
@@ -16526,12 +15039,11 @@
                             }
                             % [B 4 Percussion Voice] Measure 161
                             {
-                                f8 \repeatTie
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
-                                <> \stopTextSpan
+                                f8 \repeatTie
+                                <> \)
                             }
                         }
                         {
@@ -16543,51 +15055,19 @@
                         % [B 4 Percussion Voice] Material: "guiro_tapped_pointillism"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                struck
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
-                                c'16 -\staccato \p \( \startTextSpan [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
+                                c'16 -\staccato \p \( [
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                             }
                         }
                         {
@@ -16599,6 +15079,10 @@
                         {
                             % [B 4 Percussion Voice] Measure 162
                             {
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \override NoteHead.style = #'cross
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
@@ -16606,11 +15090,6 @@
                                 \colorSpan #-4 #4 #(rgb-color 0.9 0.98 0.916)
                                 c'16 -\staccato \parenthesizeDynamic \p \(
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -16623,43 +15102,11 @@
                         {
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                circle
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                                f4 \( \startTextSpan \<
+                                f4 \( \<
                             }
                             % [B 4 Percussion Voice] Measure 163
                             {
@@ -16703,13 +15150,13 @@
                             }
                             % [B 4 Percussion Voice] Measure 173
                             {
-                                f1 \repeatTie
-                                \bar "|."
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                f1 \repeatTie
+                                <> \)
                                 <> \stopTextSpan
+                                \bar "|."
                             }
                         }
                     }

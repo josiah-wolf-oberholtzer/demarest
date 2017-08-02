@@ -4,7 +4,7 @@ sudo: false
 
 env:
     global:
-        - LILYPOND_VERSION=2.19.59
+        - LILYPOND_VERSION=2.19.65
 
 python:
     - 3.5
@@ -17,7 +17,6 @@ before_install:
     - pip install -U pip
 
 install:
-    - pip install -r requirements.txt
     - pip install -e .
 
 script:

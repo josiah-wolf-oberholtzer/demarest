@@ -8,7 +8,7 @@ pitched_agitato = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         accents=consort.AttachmentExpression(
             attachments=abjad.indicatortools.Articulation('accent'),
-            selector=abjad.selectortools.select_pitched_runs()[0],
+            selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord))[0],
             ),
         chords=consort.AttachmentExpression(
             attachments=[
@@ -20,7 +20,7 @@ pitched_agitato = consort.MusicSpecifier(
                 .by_logical_tie(pitched=True)
                 .by_duration('==', (1, 16), preprolated=True)
                 .by_pattern(
-                    abjad.patterntools.Pattern(
+                    abjad.Pattern(
                         indices=[0, 3],
                         period=7,
                         ),
@@ -87,7 +87,7 @@ pitched_agitato = consort.MusicSpecifier(
     rhythm_maker=abjad.rhythmmakertools.IncisedRhythmMaker(
         division_masks=[
             abjad.rhythmmakertools.SustainMask(
-                pattern=abjad.patterntools.Pattern(
+                pattern=abjad.Pattern(
                     indices=[1],
                     period=3,
                     ),

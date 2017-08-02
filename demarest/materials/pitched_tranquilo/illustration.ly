@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,14 +35,14 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "pitched_tranquilo"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            cf''8 -\tenuto \laissezVibrer \p \(
+                            c''8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -67,7 +67,7 @@
                         % [Violin 1 Voice] Measure 2
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            cs''8 -\tenuto \laissezVibrer \ppp \(
+                            b'8 -\tenuto \laissezVibrer \ppp \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -248,8 +248,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -505,8 +505,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -518,7 +518,7 @@
                         {
                             \clef "treble"
                             \colorSpan #-4 #4 #(rgb-color 0.972 0.972 0.86)
-                            eff'8 -\tenuto \laissezVibrer \p \(
+                            d'8 -\tenuto \laissezVibrer \p \(
                                 ^ \markup {
                                     \pad-around
                                         #0.5
@@ -748,8 +748,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "pitched_tranquilo"
                     {
                         % [Cello Voice] Measure 1

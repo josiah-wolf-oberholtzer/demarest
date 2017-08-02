@@ -14,7 +14,7 @@ trio_b_ratchet_drone = abjad.new(
         lines=[-4, 0, 4]),
     attachment_handler__stem_tremolo_spanner=consort.AttachmentExpression(
         attachments=abjad.spannertools.StemTremoloSpanner(),
-        selector=abjad.selectortools.select_pitched_runs(),
+        selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
         ),
     attachment_handler__tremoli=None,
     color=consort.Color.from_x11('Lavender')

@@ -14,7 +14,7 @@ wine_glass_tapped_pointillism = abjad.new(
     unpitched_pointillism,
     attachment_handler__performance_instruction=consort.AttachmentExpression(
         attachments=text_spanner,
-        selector=abjad.selectortools.select_pitched_runs(),
+        selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
         ),
     color=consort.Color.from_x11('Lavender')
         .scale_luminance(-1.5)

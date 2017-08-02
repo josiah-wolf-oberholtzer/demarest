@@ -19,7 +19,7 @@ sibilances = [
 sibilances = [abjad.Markup(x, 'down') for x in sibilances]
 sibilances = consort.AttachmentExpression(
     attachments=sibilances,
-    selector=abjad.selectortools.select_pitched_runs(),
+    selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
     use_only_first_attachment=True,
     )
 
@@ -33,7 +33,7 @@ whispered_pointillism = abjad.new(
         ),
     attachment_handler__performance_instruction=consort.AttachmentExpression(
         attachments=performance_instruction,
-        selector=abjad.selectortools.select_pitched_runs(),
+        selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
         ),
     attachment_handler__sibilances=sibilances,
     color=consort.Color.from_x11('Lavender')

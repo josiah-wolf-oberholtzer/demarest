@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "trio_a_woodblock_repetitions"
                     {
                         % [Violin 1 Voice] Measure 1
@@ -83,33 +83,33 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <f c'>16 \( \< [
+                            <f c'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f c'>16 ]
+                            <f c'>16 -\staccato ]
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            <f c'>16 [
+                            <f c'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f c'>16 \p ]
+                            <f c'>16 -\staccato \p ]
                             <> \)
                         }
                     }
@@ -123,9 +123,9 @@
                         % [Violin 1 Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <e' g'>16 \parenthesizeDynamic \p \( [
+                            <e' g'>16 -\staccato \parenthesizeDynamic \p \( [
                             \set stemLeftBeamCount = 2
-                            <e' g'>16 ]
+                            <e' g'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -143,53 +143,53 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <f a>16 \( \< [
+                            <f a>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f a>16 ]
+                            <f a>16 -\staccato ]
                         }
                         {
-                            <f a>16 [
+                            <f a>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f a>16 ]
+                            <f a>16 -\staccato ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            <f a>16 [
+                            <f a>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16
+                            <f a>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f a>16 \p ]
+                            <f a>16 -\staccato \p ]
                             <> \)
                         }
                     }
@@ -207,21 +207,21 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <a c'>16 \( \< [
+                            <a c'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
-                            <a c'>16 ]
+                            <a c'>16 -\staccato ]
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            <a c'>16 [
+                            <a c'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a c'>16
+                            <a c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a c'>16
+                            <a c'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <a c'>16 \p ]
+                            <a c'>16 -\staccato \p ]
                             <> \)
                         }
                     }
@@ -248,8 +248,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -301,7 +301,7 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <c' e'>16 \( \< [ ^ \markup {
+                            <c' e'>16 -\staccato \( [ \< ^ \markup {
                                 \whiteout
                                     \override
                                         #'(thickness . 2)
@@ -323,37 +323,37 @@
                                                                             }
                                 }
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            <c' e'>16 [
+                            <c' e'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16
+                            <c' e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16
+                            <c' e'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <c' e'>16 \p \> [
+                            <c' e'>16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            <c' e'>16 [
+                            <c' e'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16
+                            <c' e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16
+                            <c' e'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -370,12 +370,12 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <f e'>16 \p \( [
+                            <f e'>16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f e'>16
+                            <f e'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f e'>16 ]
+                            <f e'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -390,62 +390,62 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <a g'>16 \( \< [
+                            <a g'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
-                            <a g'>16 ]
+                            <a g'>16 -\staccato ]
                         }
                         {
-                            <a g'>16 [
+                            <a g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <a g'>16 ]
+                            <a g'>16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            <a g'>16 \p [
+                            <a g'>16 -\staccato \p [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <a g'>16 ]
+                            <a g'>16 -\staccato ]
                         }
                         {
-                            <a g'>16 [
+                            <a g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            <a g'>16 ]
+                            <a g'>16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <a g'>16 \> [
+                            <a g'>16 -\staccato [ \>
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a g'>16
+                            <a g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <a g'>16 ]
+                            <a g'>16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            <a g'>16 [
+                            <a g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            <a g'>16 ]
+                            <a g'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -472,8 +472,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -525,7 +525,7 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <c' e'>16 \( \< [ ^ \markup {
+                            <c' e'>16 -\staccato \( [ \< ^ \markup {
                                 \whiteout
                                     \override
                                         #'(thickness . 2)
@@ -548,35 +548,35 @@
                                 }
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16
+                            <c' e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <c' e'>16
+                            <c' e'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         % [Viola Voice] Measure 2
                         {
-                            <c' e'>16 [
+                            <c' e'>16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <c' e'>16 \p \> [
+                            <c' e'>16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         {
-                            <c' e'>16 [
+                            <c' e'>16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                         }
                         % [Viola Voice] Measure 3
                         {
-                            <c' e'>16 [
+                            <c' e'>16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            <c' e'>16 ]
+                            <c' e'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -595,59 +595,59 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <f g'>16 \( \< [
+                            <f g'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f g'>16 ]
+                            <f g'>16 -\staccato ]
                         }
                         {
-                            <f g'>16 [
+                            <f g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f g'>16 ]
+                            <f g'>16 -\staccato ]
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <f g'>16 \p \> [
+                            <f g'>16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
-                            <f g'>16 ]
+                            <f g'>16 -\staccato ]
                         }
                         {
-                            <f g'>16 [
+                            <f g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f g'>16 ]
+                            <f g'>16 -\staccato ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            <f g'>16 [
+                            <f g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f g'>16
+                            <f g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f g'>16 ]
+                            <f g'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -681,8 +681,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "trio_a_woodblock_repetitions"
                     {
                         % [Cello Voice] Measure 1
@@ -729,33 +729,33 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <a e'>16 \( \< [
+                            <a e'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a e'>16
+                            <a e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a e'>16
+                            <a e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a e'>16
+                            <a e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a e'>16
+                            <a e'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <a e'>16 ]
+                            <a e'>16 -\staccato ]
                         }
                         % [Cello Voice] Measure 2
                         {
-                            <a e'>16 [
+                            <a e'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a e'>16
+                            <a e'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a e'>16
+                            <a e'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <a e'>16 \p ]
+                            <a e'>16 -\staccato \p ]
                             <> \)
                         }
                     }
@@ -770,27 +770,27 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <f c'>16 \( \< [
+                            <f c'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f c'>16
+                            <f c'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <f c'>16 ]
+                            <f c'>16 -\staccato ]
                         }
                         % [Cello Voice] Measure 4
                         {
-                            <f c'>16 [
+                            <f c'>16 -\staccato [
                             \set stemLeftBeamCount = 2
-                            <f c'>16 \p ]
+                            <f c'>16 -\staccato \p ]
                             <> \)
                         }
                     }
@@ -805,41 +805,41 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <e' g'>16 \( \< [
+                            <e' g'>16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16
+                            <e' g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <e' g'>16 ]
+                            <e' g'>16 -\staccato ]
                         }
                         {
-                            <e' g'>16 [
+                            <e' g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16
+                            <e' g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16
+                            <e' g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <e' g'>16 ]
+                            <e' g'>16 -\staccato ]
                         }
                         % [Cello Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            <e' g'>16 \p \> [
+                            <e' g'>16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
-                            <e' g'>16 ]
+                            <e' g'>16 -\staccato ]
                         }
                         {
-                            <e' g'>16 [
+                            <e' g'>16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16
+                            <e' g'>16 -\staccato
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16
+                            <e' g'>16 -\staccato
                             \set stemLeftBeamCount = 2
-                            <e' g'>16 ]
+                            <e' g'>16 -\staccato ]
                             <> \)
                         }
                     }
@@ -859,9 +859,9 @@
                         % [Cello Voice] Measure 7
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                            <f a>16 \p \( [
+                            <f a>16 -\staccato \p \( [
                             \set stemLeftBeamCount = 2
-                            <f a>16 ]
+                            <f a>16 -\staccato ]
                             <> \)
                         }
                     }

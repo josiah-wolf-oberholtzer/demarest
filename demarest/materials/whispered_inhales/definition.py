@@ -8,7 +8,7 @@ performance_instruction = abbreviations.make_text_spanner('inhale')
 abjad.override(performance_instruction).note_head.style = 'cross'
 performance_instruction = consort.AttachmentExpression(
     attachments=performance_instruction,
-    selector=abjad.selectortools.select_pitched_runs(),
+    selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
     )
 
 sibilances = [
@@ -45,14 +45,14 @@ whispered_inhales = consort.MusicSpecifier(
                     abjad.Articulation('accent'),
                     ],
                 ],
-            selector=abjad.selectortools.select_pitched_runs()
+            selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord))
                 .by_length('<', 2)
             ),
         performance_instruction=performance_instruction,
         sibilances=sibilances,
         swells=consort.AttachmentExpression(
             attachments=abjad.Hairpin('niente < p'),
-            selector=abjad.selectortools.select_pitched_runs()
+            selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord))
                 .by_length('>', 1)
             ),
         ),

@@ -1,12 +1,10 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
 
 \score {
-    \context Score = "String Quartet Score" \with {
-        currentBarNumber = #1
-    } <<
+    \context Score = "String Quartet Score" <<
         \tag #'time
         \context TimeSignatureContext = "Time Signature Context" {
             {
@@ -37,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "wine_glass_drone"
                     {
                         % [Violin 1 Voice] Measure 1
@@ -82,14 +80,14 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             f16 -\staccato \ppp \( \startTextSpan [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -111,14 +109,14 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             f16 -\staccato \mf \( [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -130,6 +128,10 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
@@ -138,10 +140,6 @@
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             f16 -\staccato \p \(
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -149,80 +147,86 @@
                             r16
                             r4
                         }
+                        % [Violin 1 Voice] Measure 4
+                        {
+                            r16
+                        }
                     }
                     % [Violin 1 Voice] Material: "wine_glass_drone"
                     {
-                        % [Violin 1 Voice] Measure 4
-                        \times 8/9 {
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            r16 \( [
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato \ppp \<
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            r16 ]
-                            r4.
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \ppp \(
+                            <> \)
                         }
+                    }
+                    {
+                        {
+                            r4
+                            r8
+                        }
+                    }
+                    % [Violin 1 Voice] Material: "wine_glass_drone"
+                    {
                         {
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato \p ]
-                            <> \)
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \mf \( [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
                         {
                             r4
                         }
+                        % [Violin 1 Voice] Measure 5
+                        {
+                            r16
+                        }
                     }
                     % [Violin 1 Voice] Material: "wine_glass_drone"
                     {
-                        % [Violin 1 Voice] Measure 5
-                        \times 4/5 {
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            r16 \( [
+                        {
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato \mf
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 1
-                            f16 -\staccato
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \p \( [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
                             <> \)
                         }
                     }
                     {
                         {
-                            r8
+                            r8.
                         }
                         % [Violin 1 Voice] Measure 6
                         {
@@ -238,43 +242,40 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \p \( \< [
+                            f16 -\staccato \ppp \( [ \<
                             \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         % [Violin 1 Voice] Measure 7
-                        \times 4/5 {
-                            \once \override NoteHead.color = #red
-                            f16 -\staccato [
+                        {
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            f16 -\staccato [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             r16
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 1
-                            f16 -\staccato \mf
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            f16 -\staccato \p ]
                             <> \)
+                            <> \stopTextSpan
                         }
                     }
                     {
                         {
-                            r8
+                            r8.
                             \bar "|."
                         }
                     }
@@ -295,8 +296,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -305,7 +306,7 @@
                     }
                     % [Violin 2 Voice] Material: "wine_glass_drone"
                     {
-                        \times 2/3 {
+                        {
                             \once \override NoteHead.color = #red
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -344,46 +345,45 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \ppp \( \startTextSpan \< [
+                            f16 -\staccato \mf \( \startTextSpan [ \>
                             \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \set stemLeftBeamCount = 2
-                            r16 ]
+                            f16 -\staccato ]
                         }
                         % [Violin 2 Voice] Measure 2
-                        \times 2/3 {
-                            \once \override NoteHead.color = #red
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato [
-                            \once \override NoteHead.color = #red
-                            f16 -\staccato ]
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            r4
-                        }
                         {
                             \once \override NoteHead.color = #red
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato \p
-                            <> \)
+                            f16 -\staccato [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato \ppp ]
+                            <> \)
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "wine_glass_drone"
+                    {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \p \(
+                            <> \)
                         }
                     }
                     {
@@ -401,19 +401,19 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \mf \( [
+                            f16 -\staccato \ppp \( [
                             \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -424,27 +424,25 @@
                     % [Violin 2 Voice] Material: "wine_glass_drone"
                     {
                         % [Violin 2 Voice] Measure 4
-                        \times 2/3 {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \p \( [
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
-                            r16 ]
-                            r4
+                            f16 -\staccato \mf \(
                             <> \)
                         }
                     }
                     {
                         {
-                            r8
+                            r16
+                            r4
                             r8.
                         }
                     }
@@ -452,56 +450,24 @@
                     {
                         {
                             \once \override NoteHead.color = #red
-                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            tapped
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            tapped
-                                                        }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \ppp \( \startTextSpan
+                            f16 -\staccato \p \(
                         }
                         {
                             \once \override NoteHead.color = #red
                             f16 -\staccato [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -519,15 +485,15 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \mf \( [
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
+                            f16 -\staccato \ppp \( [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -537,21 +503,28 @@
                     }
                     % [Violin 2 Voice] Material: "wine_glass_drone"
                     {
-                        \times 2/3 {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \p \( \< [
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            f16 -\staccato \mf \(
+                            <> \)
                         }
+                    }
+                    {
+                        {
+                            r16
+                        }
+                    }
+                    % [Violin 2 Voice] Material: "wine_glass_drone"
+                    {
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override NoteHead.color = #red
@@ -559,19 +532,20 @@
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato [
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \p \( [
                             \once \override NoteHead.color = #red
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \once \override NoteHead.color = #red
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato \mf ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -586,6 +560,10 @@
                     % [Violin 2 Voice] Material: "wine_glass_drone"
                     {
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override NoteHead.color = #red
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
@@ -594,10 +572,6 @@
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             f16 -\staccato \ppp \(
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                             <> \stopTextSpan
                         }
                     }
@@ -624,8 +598,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -676,13 +650,13 @@
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -704,17 +678,14 @@
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             f16 -\staccato \p \(
                         }
-                        \times 2/3 {
+                        {
                             f16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
                             \set stemLeftBeamCount = 2
-                            r16 ]
+                            f16 -\staccato ]
                             <> \)
                         }
                     }
@@ -735,12 +706,12 @@
                         }
                         % [Viola Voice] Measure 3
                         {
-                            f16 -\staccato
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            f16 -\staccato
+                            <> \)
                         }
                     }
                     {
@@ -762,61 +733,64 @@
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
                             f16 -\staccato \mf \( [
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
                         {
                             r4
+                            r16
                         }
                     }
                     % [Viola Voice] Material: "wine_glass_drone"
                     {
-                        \times 4/5 {
-                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            r16 \( [
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato \p \<
+                        {
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 1
-                            r16
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \p \(
+                            <> \)
                         }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                    }
+                    % [Viola Voice] Material: "wine_glass_drone"
+                    {
                         % [Viola Voice] Measure 5
                         {
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato [
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \ppp \( [ \<
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
                         }
                         {
                             f16 -\staccato [
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato \mf ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato \p ]
+                            <> \)
                         }
                     }
                     {
@@ -827,29 +801,25 @@
                     % [Viola Voice] Material: "wine_glass_drone"
                     {
                         % [Viola Voice] Measure 6
-                        \times 4/5 {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \ppp \( [
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            r8
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            f16 -\staccato \mf \(
                             <> \)
+                            <> \stopTextSpan
                         }
                     }
                     {
                         {
-                            r8
+                            r16
+                            r4
                         }
                         % [Viola Voice] Measure 7
                         {
@@ -877,13 +847,16 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "wine_glass_drone"
                     {
                         % [Cello Voice] Measure 1
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 6/7 {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -921,31 +894,36 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \mf \( \startTextSpan \> [
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            r8 ]
+                            f16 -\staccato \p \( \startTextSpan
+                            <> \)
+                        }
+                    }
+                    {
+                        {
+                            r16
                             r4
                         }
+                    }
+                    % [Cello Voice] Material: "wine_glass_drone"
+                    {
                         % [Cello Voice] Measure 2
                         {
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato [
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \ppp \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16 -\staccato
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato \ppp ]
-                            <> \)
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -965,14 +943,14 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \p \( [
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
+                            f16 -\staccato \mf \( [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -984,17 +962,17 @@
                     {
                         % [Cello Voice] Measure 4
                         {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \ppp \(
+                            f16 -\staccato \p \(
                             <> \)
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -1011,14 +989,14 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \mf \( [
-                            \set stemLeftBeamCount = 2
-                            f16 -\staccato ]
-                            <> \)
+                            f16 -\staccato \ppp \( [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \set stemLeftBeamCount = 2
+                            f16 -\staccato ]
+                            <> \)
                         }
                     }
                     {
@@ -1028,60 +1006,70 @@
                     }
                     % [Cello Voice] Material: "wine_glass_drone"
                     {
-                        \times 4/5 {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \p \( \< [
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 1
-                            r8
-                            \set stemLeftBeamCount = 1
-                            r8 ]
+                            f16 -\staccato \mf \(
+                            <> \)
                         }
+                    }
+                    {
+                        {
+                            r8.
+                        }
+                    }
+                    % [Cello Voice] Material: "wine_glass_drone"
+                    {
                         % [Cello Voice] Measure 5
                         {
                             \override NoteHead.style = #'cross
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
-                            f16 -\staccato [
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \p \( [
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \set stemLeftBeamCount = 2
                             f16 -\staccato ]
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                        }
-                        \times 4/5 {
-                            r16 [
-                            \override NoteHead.style = #'cross
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato \mf
-                            \revert NoteHead.style
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
-                            <> \stopTextSpan
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 1
-                            r16
-                            \set stemLeftBeamCount = 1
-                            r8 ]
                             <> \)
                         }
                     }
                     {
+                        {
+                            r16
+                        }
+                    }
+                    % [Cello Voice] Material: "wine_glass_drone"
+                    {
+                        {
+                            \revert NoteHead.style
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
+                            \override NoteHead.style = #'cross
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
+                            f16 -\staccato \ppp \(
+                            <> \)
+                            <> \stopTextSpan
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
                         % [Cello Voice] Measure 6
                         {
                             \stopStaff
@@ -1095,7 +1083,7 @@
                     % [Cello Voice] Material: "wine_glass_drone"
                     {
                         % [Cello Voice] Measure 7
-                        \times 2/3 {
+                        {
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -1133,18 +1121,15 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            f16 -\staccato \ppp \( \startTextSpan [
-                            \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 2
-                            f16 -\staccato
+                            f16 -\staccato \mf \( \startTextSpan [
                             \revert NoteHead.style
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
-                            <> \stopTextSpan
                             \set stemLeftBeamCount = 2
-                            r16 ]
+                            f16 -\staccato ]
                             <> \)
+                            <> \stopTextSpan
                         }
                     }
                     {

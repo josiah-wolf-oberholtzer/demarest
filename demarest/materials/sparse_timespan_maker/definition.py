@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
 from abjad.tools import rhythmmakertools
 

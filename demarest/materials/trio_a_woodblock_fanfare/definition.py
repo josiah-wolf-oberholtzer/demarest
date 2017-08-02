@@ -43,7 +43,7 @@ trio_a_woodblock_fanfare = consort.MusicSpecifier(
                 .by_logical_tie(pitched=True)
                 .by_duration('==', (1, 16), preprolated=True)
                 .by_pattern(
-                    abjad.patterntools.Pattern(
+                    abjad.Pattern(
                         indices=[0, 3],
                         period=7,
                         ),

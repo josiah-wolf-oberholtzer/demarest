@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 import importlib
-import mock
 import pathlib
 import pytest
 from abjad.tools import commandlinetools
 from abjad.tools import systemtools
+from unittest import mock
 
 
 test_path = pathlib.Path(__file__).parent

@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,12 +35,15 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "trio_b_snare_drone"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -52,7 +55,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -65,7 +68,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -120,20 +123,17 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'4. :32 \( \startTextSpan \<
                         }
                         % [Violin 1 Voice] Measure 2
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'4 :32 \p \repeatTie
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -145,20 +145,20 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
-                            c'8 :64 \mf \(
-                            <> \)
-                            \stopStaff
                             \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            c'8 :64 \mf \(
+                            <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -170,14 +170,14 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'4. :32 \( \<
                             c'8 :64 \repeatTie
                         }
@@ -187,13 +187,13 @@
                         }
                         % [Violin 1 Voice] Measure 5
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'4 :32 \mf \repeatTie
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -208,25 +208,25 @@
                     % [Violin 1 Voice] Material: "trio_b_snare_drone"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'8 :64 \p \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            c'4 :32 \repeatTie
-                            <> \)
-                            \stopStaff
-                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie
+                            <> \)
                             <> \stopTextSpan
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -252,8 +252,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -263,6 +263,9 @@
                     % [Violin 2 Voice] Material: "trio_b_snare_drone"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -274,7 +277,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -287,7 +290,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -342,21 +345,26 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'8 :64 \( \startTextSpan \< ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                         }
                         % [Violin 2 Voice] Measure 2
@@ -368,13 +376,13 @@
                         }
                         % [Violin 2 Voice] Measure 3
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'4 :32 \repeatTie
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -386,20 +394,20 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
-                            \override TextSpanner.dash-fraction = #0.333
-                            \override TextSpanner.dash-period = #2.0
-                            \override TextSpanner.style = #'dashed-line
-                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
-                            c'4 :32 \mf \(
-                            <> \)
-                            \stopStaff
                             \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \override TextSpanner.dash-fraction = #0.333
+                            \override TextSpanner.dash-period = #2.0
+                            \override TextSpanner.style = #'dashed-line
+                            \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
+                            c'4 :32 \mf \(
+                            <> \)
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -411,14 +419,14 @@
                     % [Violin 2 Voice] Material: "trio_b_snare_drone"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'8 :64 \( \<
                         }
                         {
@@ -438,14 +446,14 @@
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            c'8 :64 \repeatTie
-                            <> \)
-                            \stopStaff
-                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 :64 \repeatTie
+                            <> \)
                             <> \stopTextSpan
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -471,8 +479,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -482,6 +490,9 @@
                     % [Viola Voice] Material: "trio_b_snare_drone"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -493,7 +504,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -506,7 +517,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -561,21 +572,26 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'4 :32 \( \startTextSpan \< ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                         }
                         % [Viola Voice] Measure 2
@@ -591,13 +607,13 @@
                         }
                         % [Viola Voice] Measure 3
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'8 :64 \repeatTie
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -612,14 +628,14 @@
                     % [Viola Voice] Material: "trio_b_snare_drone"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'8 :64 \( \<
                             c'4 :32 \repeatTie
                         }
@@ -636,14 +652,14 @@
                         }
                         % [Viola Voice] Measure 6
                         {
-                            c'4 :32 \repeatTie
-                            <> \)
-                            \stopStaff
-                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie
+                            <> \)
                             <> \stopTextSpan
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -676,12 +692,15 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "trio_b_snare_drone"
                     {
                         % [Cello Voice] Measure 1
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
@@ -693,7 +712,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -706,7 +725,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -761,20 +780,17 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'4. :32 \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'4 :32 \f \repeatTie
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -786,25 +802,25 @@
                     {
                         % [Cello Voice] Measure 3
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'4. :32 \( \<
                         }
                         % [Cello Voice] Measure 4
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             c'8 :64 \mf \repeatTie
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -815,14 +831,14 @@
                     % [Cello Voice] Material: "trio_b_snare_drone"
                     {
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
                             \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'4 :32 \( \<
                         }
                         {
@@ -833,14 +849,14 @@
                             c'8 :64 \mp \repeatTie
                         }
                         {
-                            c'4 :32 \repeatTie
-                            <> \)
-                            \stopStaff
-                            \startStaff
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie
+                            <> \)
                             <> \stopTextSpan
+                            \stopStaff
+                            \startStaff
                         }
                     }
                     {
@@ -858,15 +874,18 @@
                     {
                         % [Cello Voice] Measure 7
                         {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                            \startStaff
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                            \startStaff
                             c'8 :64 \f \( ^ \markup {
                                 \box
                                     \whiteout
@@ -877,15 +896,12 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            brushed
+                                                            "scrape tremolo"
                                                         }
                                 }
                             <> \)
                             \stopStaff
                             \startStaff
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {

@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
 from abjad import Rest
 from abjad.tools import rhythmmakertools
@@ -16,7 +17,7 @@ unpitched_repetitions = consort.MusicSpecifier(
             ),
         staccati=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('staccato'),
-            selector=selectortools.select_pitched_runs(),
+            selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
             ),
         ),
     color=consort.Color.from_x11('Lavender')

@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
 from abjad import Rest
 from abjad.tools import indicatortools
-from abjad.tools import patterntools
 from abjad.tools import rhythmmakertools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
@@ -61,10 +61,10 @@ shaker_shimmer = consort.MusicSpecifier(
             denominators=[8],
             division_masks=[
                 rhythmmakertools.SustainMask(
-                    patterntools.Pattern(indices=[0, -1]),
+                    abjad.Pattern(indices=[0, -1]),
                     ),
                 rhythmmakertools.SustainMask(
-                    patterntools.Pattern(indices=[1], period=4),
+                    abjad.Pattern(indices=[1], period=4),
                     ),
                 ],
             extra_counts_per_division=[0, 0, 1, 0, 0, 1, 2],

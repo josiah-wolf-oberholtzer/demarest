@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -94,18 +94,26 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <f a>16 -\accent \f \( [ ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                            <f c'>16 -\accent \ppp \( [ ^ \markup {
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                             \set stemLeftBeamCount = 2
                             g'16 ]
@@ -123,7 +131,7 @@
                         \times 2/3 {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                             r4 \(
-                            <e' g'>4 :32 \parenthesizeDynamic \f \>
+                            <e' g'>4 :32 \p \>
                             <f a>4 :32
                         }
                         \tweak text #tuplet-number::calc-fraction-text
@@ -140,7 +148,7 @@
                             a16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <f a>16 -\accent
+                            <f c'>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16
@@ -148,7 +156,7 @@
                             \set stemRightBeamCount = 2
                             a16
                             \set stemLeftBeamCount = 2
-                            c'16 \mf ]
+                            c'16 \ppp ]
                             <> \)
                         }
                     }
@@ -203,8 +211,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -262,18 +270,26 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>4 :32 \f \( ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                            <a c'>4 :32 \ppp \( ^ \markup {
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                             <> \)
                         }
@@ -288,7 +304,7 @@
                         % [Violin 2 Voice] Measure 3
                         \times 4/6 {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <f a>16 -\accent \parenthesizeDynamic \f \( \> [
+                            <c' e'>16 -\accent \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16
@@ -300,7 +316,7 @@
                             e'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <a c'>16 -\accent \mf
+                            <a c'>16 -\accent
                             \set stemLeftBeamCount = 2
                             r16 ]
                             <> \)
@@ -316,7 +332,7 @@
                         % [Violin 2 Voice] Measure 4
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            c'16 \f \( \> [
+                            c'16 \f \( [ \>
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             e'16
@@ -324,7 +340,7 @@
                             \set stemRightBeamCount = 2
                             r16
                             \set stemLeftBeamCount = 2
-                            g'16 \mf ]
+                            g'16 \ppp ]
                             <> \)
                         }
                     }
@@ -338,7 +354,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            f16 \f \( [
+                            f16 \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             g'16
@@ -360,7 +376,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>8 :64 \parenthesizeDynamic \f \(
+                            <a c'>8 :64 \p \(
                             <> \)
                         }
                     }
@@ -382,7 +398,7 @@
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
                             a16 \f \( [
                             \set stemLeftBeamCount = 2
-                            <f a>16 -\accent ]
+                            <f g'>16 -\accent ]
                             <> \)
                             \clef "treble"
                         }
@@ -410,8 +426,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -472,18 +488,26 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            c'16 \f \( [ ^ \markup {
-                                \box
-                                    \whiteout
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \smaller
-                                                    \concat
-                                                        {
-                                                            \vstrut
-                                                            perc.
-                                                        }
+                            c'16 \ppp \( [ ^ \markup {
+                                \whiteout
+                                    \override
+                                        #'(thickness . 2)
+                                        \box
+                                            \pad-around
+                                                #0.125
+                                                \override
+                                                    #'(thickness . 1)
+                                                    \box
+                                                        \whiteout
+                                                            \pad-around
+                                                                #0.5
+                                                                \italic
+                                                                    \smaller
+                                                                        \concat
+                                                                            {
+                                                                                \vstrut
+                                                                                perc.
+                                                                            }
                                 }
                             \set stemLeftBeamCount = 2
                             g'16 ]
@@ -500,7 +524,7 @@
                         % [Viola Voice] Measure 3
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <c' e'>8 :64 \parenthesizeDynamic \f \(
+                            <c' e'>8 :64 \p \(
                             <> \)
                         }
                     }
@@ -518,7 +542,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>4 :32 \parenthesizeDynamic \f \(
+                            <a c'>4 :32 \f \(
                             <> \)
                         }
                     }
@@ -532,7 +556,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            e'16 \parenthesizeDynamic \f \( \> [
+                            e'16 \ppp \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             <f a>16 -\accent
@@ -540,7 +564,7 @@
                             \set stemRightBeamCount = 2
                             g'16
                             \set stemLeftBeamCount = 2
-                            f16 \mf ]
+                            f16 \p ]
                             <> \)
                             \clef "alto"
                         }
@@ -572,8 +596,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "trio_a_woodblock_fanfare"
                     {
                         % [Cello Voice] Measure 1
@@ -621,13 +645,13 @@
                                     }
                                 }
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            f16 \f \( \> [
+                            f16 \p \( [ \>
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             e'16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            <e' g'>16 -\accent
+                            <a c'>16 -\accent
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16
@@ -638,7 +662,7 @@
                             \set stemRightBeamCount = 2
                             f16
                             \set stemLeftBeamCount = 2
-                            <f a>16 -\accent \mf ]
+                            <f a>16 -\accent \ppp ]
                             <> \)
                         }
                     }
@@ -676,7 +700,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            <a c'>4 :32 \(
+                            <a c'>4 :32 \ppp \(
                             <> \)
                         }
                     }
@@ -690,7 +714,7 @@
                         % [Cello Voice] Measure 5
                         \times 2/3 {
                             \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                            g'16 \parenthesizeDynamic \f \( [
+                            g'16 \p \( [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             f16

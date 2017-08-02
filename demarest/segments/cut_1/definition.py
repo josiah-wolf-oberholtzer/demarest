@@ -14,7 +14,7 @@ segment_maker = demarest.SegmentMaker(
         (4, 4),
         ],
     repeat=True,
-    tempo=abjad.Tempo((1, 4), 72),
+    tempo=abjad.MetronomeMark((1, 4), 72),
     )
 
 segment_maker.add_setting(

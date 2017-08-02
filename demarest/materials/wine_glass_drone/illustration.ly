@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
@@ -53,6 +53,7 @@
                         % [Violin 1 Voice] Measure 4
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override NoteHead.color = #red
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -89,20 +90,24 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g4. \( \startTextSpan \<
-                            g8 \repeatTie
+                            f4. \( \startTextSpan \<
+                            \once \override NoteHead.color = #red
+                            f8 \repeatTie
                         }
                         {
-                            g8 \repeatTie
-                            g4 \repeatTie
+                            \once \override NoteHead.color = #red
+                            f8 \repeatTie
+                            \once \override NoteHead.color = #red
+                            f4 \repeatTie
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            g4 \p \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            f4 \p \repeatTie
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -136,8 +141,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -158,6 +163,7 @@
                     {
                         {
                             \once \override Hairpin.circled-tip = ##t
+                            \once \override NoteHead.color = #red
                             \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                 \box
                                     \whiteout
@@ -194,29 +200,34 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \( \startTextSpan \<
+                            f8 \( \startTextSpan \<
                         }
                         {
-                            g4 \repeatTie
+                            \once \override NoteHead.color = #red
+                            f4 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            g4 \p \repeatTie
+                            \once \override NoteHead.color = #red
+                            f4 \p \repeatTie
                         }
                         {
-                            g8 \repeatTie
+                            \once \override NoteHead.color = #red
+                            f8 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
-                            g4. \repeatTie
+                            \once \override NoteHead.color = #red
+                            f4. \repeatTie
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            g8 \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            \once \override NoteHead.color = #red
+                            f8 \repeatTie
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -243,8 +254,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -300,26 +311,26 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.732 0.732 0.946)
-                            g8 \( \startTextSpan \<
-                            g4 \repeatTie
+                            f8 \( \startTextSpan \<
+                            f4 \repeatTie
                         }
                         {
-                            g4 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
-                            g8 \p \repeatTie
+                            f8 \p \repeatTie
                         }
                         {
-                            g4 \repeatTie
+                            f4 \repeatTie
                         }
                         % [Viola Voice] Measure 6
                         {
-                            g4 \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            f4 \repeatTie
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -353,23 +364,15 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
-                            R1 * 9/8
-                        }
-                        % [Cello Voice] Measure 4
-                        {
-                            R1 * 7/8
-                        }
-                        % [Cello Voice] Measure 5
-                        {
-                            R1 * 9/8
+                            R1 * 21/8
                             \bar "|."
                         }
                     }

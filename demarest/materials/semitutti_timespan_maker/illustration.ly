@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 #(set-default-paper-size "tabloid" 'landscape)
@@ -10,6 +10,11 @@
 \layout {}
 
 \paper {}
+
+% Backport for pre 2.19.20 versions of LilyPond
+#(define-markup-command (overlay layout props args)
+    (markup-list?)
+    (apply ly:stencil-add (interpret-markup-list layout props args)))
 
 \markup {
     \left-column

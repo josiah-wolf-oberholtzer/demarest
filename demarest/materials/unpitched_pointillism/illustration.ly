@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "unpitched_pointillism"
                     {
                         % [Violin 1 Voice] Measure 1
@@ -147,7 +147,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
-                            c'16 -\staccato \ppp \( \< [
+                            c'16 -\staccato \ppp \( [ \<
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -185,8 +185,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -197,7 +197,7 @@
                     {
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
-                            c'16 -\staccato \mf \( \> [
+                            c'16 -\staccato \mf \( [ \>
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -363,8 +363,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -467,7 +467,7 @@
                         % [Viola Voice] Measure 5
                         {
                             \colorSpan #-4 #4 #(rgb-color 0.961 0.868 0.806)
-                            c'16 -\staccato \ppp \( \< [
+                            c'16 -\staccato \ppp \( [ \<
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -523,8 +523,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "unpitched_pointillism"
                     {
                         % [Cello Voice] Measure 1

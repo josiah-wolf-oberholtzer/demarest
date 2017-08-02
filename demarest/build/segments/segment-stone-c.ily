@@ -27,7 +27,6 @@
             \tag #'a-1
             \context PerformerStaffGroup = "A 1 Staff Group" <<
                 \context VocalizationStaff = "A 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -48,6 +47,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 1 Vocalization Voice" {
                         {
@@ -208,7 +208,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 1 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -251,6 +250,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "guiro_repetitions"
@@ -258,7 +258,6 @@
                             % [A 1 Percussion Voice] Measure 83
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -301,7 +300,8 @@
                                                                         }
                                         }
                                     }
-                                c'16 -\staccato \( \< [
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -434,19 +434,19 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -471,7 +471,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -587,7 +587,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -600,13 +600,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -620,7 +620,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -646,7 +646,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -760,13 +760,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -781,7 +781,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -818,7 +818,6 @@
             \tag #'a-2
             \context PerformerStaffGroup = "A 2 Staff Group" <<
                 \context VocalizationStaff = "A 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -839,6 +838,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 2 Vocalization Voice" {
                         {
@@ -1034,7 +1034,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 2 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -1077,6 +1076,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 2 Percussion Voice" {
                         % [A 2 Percussion Voice] Material: "guiro_repetitions"
@@ -1084,7 +1084,6 @@
                             % [A 2 Percussion Voice] Measure 83
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1127,6 +1126,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -1152,7 +1152,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -1189,7 +1189,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -1323,7 +1323,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -1360,12 +1360,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -1415,7 +1415,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -1495,7 +1495,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -1514,13 +1514,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -1563,7 +1563,6 @@
             \tag #'a-3
             \context PerformerStaffGroup = "A 3 Staff Group" <<
                 \context VocalizationStaff = "A 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -1584,6 +1583,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 3 Vocalization Voice" {
                         {
@@ -1737,7 +1737,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 3 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -1780,6 +1779,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "guiro_repetitions"
@@ -1787,7 +1787,6 @@
                             % [A 3 Percussion Voice] Measure 83
                             \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1830,6 +1829,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -1885,7 +1885,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -1946,13 +1946,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -2076,7 +2076,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -2170,7 +2170,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -2189,12 +2189,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -2271,7 +2271,6 @@
             \tag #'a-4
             \context PerformerStaffGroup = "A 4 Staff Group" <<
                 \context VocalizationStaff = "A 4 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -2292,6 +2291,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 4 Vocalization Voice" {
                         % [A 4 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -2471,7 +2471,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 4 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -2514,6 +2513,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "guiro_repetitions"
@@ -2521,7 +2521,6 @@
                             % [A 4 Percussion Voice] Measure 83
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2564,7 +2563,8 @@
                                                                         }
                                         }
                                     }
-                                c'8 -\staccato \( \< [
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -2615,7 +2615,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -2726,7 +2726,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -2763,13 +2763,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -2797,7 +2797,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -2910,7 +2910,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -2920,12 +2920,12 @@
                             % [A 4 Percussion Voice] Measure 93
                             {
                                 c'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -2997,7 +2997,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -3093,7 +3093,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -3106,12 +3106,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -3143,7 +3143,6 @@
             \tag #'t-1
             \context PerformerStaffGroup = "T 1 Staff Group" <<
                 \context VocalizationStaff = "T 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -3164,6 +3163,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 1 Vocalization Voice" {
                         % [T 1 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -3413,136 +3413,136 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <f c'>16 \( \< [
+                                <f c'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f c'>16 ]
+                                <f c'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 84
                             {
-                                <f c'>16 [
+                                <f c'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f c'>16 ]
+                                <f c'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 85
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                <f c'>16 \p \> [
+                                <f c'>16 -\staccato \p [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f c'>16 ]
+                                <f c'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 86
                             {
-                                <f c'>16 [
+                                <f c'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f c'>16
+                                <f c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f c'>16 ]
+                                <f c'>16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -3555,7 +3555,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                c'16 \p \( \> [
+                                c'16 \p \( [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 <e' g'>16 -\accent
@@ -3584,63 +3584,63 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <e' g'>16 \( \< [
+                                <e' g'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <e' g'>16 ]
+                                <e' g'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 88
                             {
-                                <e' g'>16 [
+                                <e' g'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <e' g'>16 \p ]
+                                <e' g'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3656,7 +3656,7 @@
                             \tweak text #tuplet-number::calc-fraction-text
                             \times 12/14 {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                e'16 \f \( \> [
+                                e'16 \f \( [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 a16
@@ -3712,36 +3712,36 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <f a>16 \( \< [
+                                <f a>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f a>16
+                                <f a>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f a>16 \p ]
+                                <f a>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3777,87 +3777,87 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <a c'>16 \( \< [
+                                <a c'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 92
                             {
-                                <a c'>16 [
+                                <a c'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 93
                             {
-                                <a c'>16 [
+                                <a c'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 \p ]
+                                <a c'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -3890,7 +3890,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.868 0.961 0.806)
-                                f16 \f \( \> [
+                                f16 \f \( [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 <f e'>16 -\accent
@@ -3932,105 +3932,105 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <c' e'>16 \( \< [
+                                <c' e'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 ]
+                                <c' e'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 96
                             {
-                                <c' e'>16 [
+                                <c' e'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 ]
+                                <c' e'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 97
                             {
-                                <c' e'>16 [
+                                <c' e'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 \p ]
+                                <c' e'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -4068,42 +4068,42 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <f e'>16 \( \< [
+                                <f e'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f e'>16 ]
+                                <f e'>16 -\staccato ]
                             }
                             % [T 1 Percussion Voice] Measure 100
                             {
-                                <f e'>16 [
+                                <f e'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <f e'>16
+                                <f e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <f e'>16 \p ]
+                                <f e'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -4137,7 +4137,6 @@
             \tag #'t-2
             \context PerformerStaffGroup = "T 2 Staff Group" <<
                 \context VocalizationStaff = "T 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -4158,6 +4157,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 2 Vocalization Voice" {
                         % [T 2 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -4363,8 +4363,44 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \once \override TextScript.parent-alignment-X = #left
-                                \once \override TextScript.self-alignment-X = #left
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                unmeasured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \whiteout
+                                            \pad-around
+                                                #0.5
+                                                \italic
+                                                    \smaller
+                                                        \concat
+                                                            {
+                                                                \vstrut
+                                                                unmeasured
+                                                            }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
@@ -4411,11 +4447,7 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'4. :32 \(
-                                    ^ \markup {
+                                g'4. :32 \( \startTextSpan ^ \markup {
                                     \whiteout
                                         \override
                                             #'(thickness . 2)
@@ -4436,25 +4468,9 @@
                                                                                     perc.
                                                                                 }
                                     }
-                                    ^ \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4466,46 +4482,14 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'16 \( \startTextSpan [
+                                g'16 \( [
                                 \set stemLeftBeamCount = 2
                                 g'16 ]
                             }
@@ -4524,14 +4508,14 @@
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 g'8
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \set stemLeftBeamCount = 1
                                 g'8 ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4546,13 +4530,13 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
                                 g'4 \(
                                 g'4
                                 g'4
@@ -4572,15 +4556,14 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \set stemLeftBeamCount = 2
                                 g'16 ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4592,57 +4575,24 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'4. :32 \( \startTextSpan
+                                g'4. :32 \(
                             }
                             % [T 2 Percussion Voice] Measure 87
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 g'8 :64 \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4654,46 +4604,14 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'8 \( \startTextSpan [
+                                g'8 \( [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 g'8
@@ -4703,14 +4621,13 @@
                             % [T 2 Percussion Voice] Measure 88
                             {
                                 g'4
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 g'4
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4721,56 +4638,24 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'8 :64 \( \startTextSpan
+                                g'8 :64 \(
                             }
                             % [T 2 Percussion Voice] Measure 89
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 g'4 :32 \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -4782,20 +4667,20 @@
                         {
                             % [T 2 Percussion Voice] Measure 90
                             {
-                                \override TextSpanner.dash-fraction = #0.333
-                                \override TextSpanner.dash-period = #2.0
-                                \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'2. :32 \(
-                                <> \)
-                                \stopStaff
                                 \startStaff
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \override TextSpanner.dash-fraction = #0.333
+                                \override TextSpanner.dash-period = #2.0
+                                \override TextSpanner.style = #'dashed-line
+                                \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
+                                g'2. :32 \(
+                                <> \)
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -4807,13 +4692,13 @@
                         {
                             % [T 2 Percussion Voice] Measure 91
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
                                 g'2 :32 \(
                             }
                             {
@@ -4821,14 +4706,13 @@
                             }
                             % [T 2 Percussion Voice] Measure 92
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 g'8 :64 \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4840,46 +4724,14 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'4. \( \startTextSpan
+                                g'4. \(
                             }
                             % [T 2 Percussion Voice] Measure 93
                             {
@@ -4890,15 +4742,14 @@
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 g'8
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \set stemLeftBeamCount = 1
                                 g'8 ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4909,57 +4760,24 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'4 :32 \( \startTextSpan
+                                g'4 :32 \(
                             }
                             % [T 2 Percussion Voice] Measure 94
                             {
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 g'2 :32 \repeatTie
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4970,46 +4788,14 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'8 \( \startTextSpan [
+                                g'8 \( [
                                 \set stemLeftBeamCount = 1
                                 g'8 ]
                             }
@@ -5017,14 +4803,14 @@
                             {
                                 g'4
                                 g'4
-                                g'4
-                                <> \)
-                                \stopStaff
-                                \startStaff
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'4
+                                <> \)
                                 <> \stopTextSpan
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -5048,6 +4834,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5084,9 +4873,6 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
                                 g'16 \( \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -5115,15 +4901,14 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \set stemLeftBeamCount = 2
                                 g'16 ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -5138,55 +4923,22 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                unmeasured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'8 :64 \( \startTextSpan [
+                                g'8 :64 \( [
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \set stemLeftBeamCount = 1
                                 g'8 :64 \repeatTie ]
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -5198,55 +4950,23 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_repetitions"
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \whiteout
-                                            \pad-around
-                                                #0.5
-                                                \italic
-                                                    \smaller
-                                                        \concat
-                                                            {
-                                                                \vstrut
-                                                                measured
-                                                            }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
-                                g'8 \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                g'8 \repeatTie ]
-                                <> \)
-                                \stopStaff
-                                \startStaff
+                                g'8 \( [
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 1
+                                g'8 \repeatTie ]
+                                <> \)
                                 <> \stopTextSpan
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -5270,6 +4990,9 @@
                         % [T 2 Percussion Voice] Material: "trio_b_ratchet_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
                                 \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \whiteout
@@ -5306,19 +5029,16 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.905 0.972 0.86)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
                                 g'8 :64 \( \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                g'8 :64 \repeatTie ]
-                                <> \)
-                                \stopStaff
-                                \startStaff
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 1
+                                g'8 :64 \repeatTie ]
+                                <> \)
                                 <> \stopTextSpan
+                                \stopStaff
+                                \startStaff
                             }
                         }
                         {
@@ -5332,7 +5052,6 @@
             \tag #'t-3
             \context PerformerStaffGroup = "T 3 Staff Group" <<
                 \context VocalizationStaff = "T 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -5353,6 +5072,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 3 Vocalization Voice" {
                         % [T 3 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -5615,190 +5335,190 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <a c'>16 \( \< [
+                                <a c'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 85
                             {
-                                <a c'>16 [
+                                <a c'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 86
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                <a c'>16 \p \> [
+                                <a c'>16 -\staccato \p [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 87
                             {
-                                <a c'>16 [
+                                <a c'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 ]
+                                <a c'>16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -5812,7 +5532,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                e'16 \p \( \> [
+                                e'16 \p \( [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 <e' g'>16 -\accent
@@ -5835,45 +5555,45 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <c' g'>16 \( \< [
+                                <c' g'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' g'>16
+                                <c' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' g'>16 ]
+                                <c' g'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 90
                             {
-                                <c' g'>16 [
+                                <c' g'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
-                                <c' g'>16 \p ]
+                                <c' g'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -5887,7 +5607,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                c'16 \f \( \> [
+                                c'16 \f \( [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 r16
@@ -5913,24 +5633,24 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <e' g'>16 \( \< [
+                                <e' g'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <e' g'>16
+                                <e' g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <e' g'>16 \p ]
+                                <e' g'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -5964,69 +5684,69 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <a e'>16 \( \< [
+                                <a e'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a e'>16 ]
+                                <a e'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 93
                             {
-                                <a e'>16 [
+                                <a e'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a e'>16
+                                <a e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a e'>16 \p ]
+                                <a e'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -6058,142 +5778,142 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <c' e'>16 \( \< [
+                                <c' e'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 ]
+                                <c' e'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 96
                             {
-                                <c' e'>16 [
+                                <c' e'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 ]
+                                <c' e'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 97
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                <c' e'>16 \p \> [
+                                <c' e'>16 -\staccato \p [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <c' e'>16
+                                <c' e'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 ]
+                                <c' e'>16 -\staccato ]
                             }
                             % [T 3 Percussion Voice] Measure 98
                             {
-                                <c' e'>16 [
+                                <c' e'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
-                                <c' e'>16 ]
+                                <c' e'>16 -\staccato ]
                                 <> \)
                             }
                         }
@@ -6207,7 +5927,7 @@
                         {
                             {
                                 \colorSpan #-4 #4 #(rgb-color 0.818 0.946 0.732)
-                                a16 \f \( \> [
+                                a16 \f \( [ \>
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g'16
@@ -6230,19 +5950,19 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <a g'>16 \( \<
+                                <a g'>16 -\staccato \( \<
                             }
                             % [T 3 Percussion Voice] Measure 99
                             {
-                                <a g'>16 [
+                                <a g'>16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a g'>16
+                                <a g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a g'>16
+                                <a g'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a g'>16 \p ]
+                                <a g'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -6274,33 +5994,33 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                <a c'>16 \( \< [
+                                <a c'>16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                <a c'>16
+                                <a c'>16 -\staccato
                                 \set stemLeftBeamCount = 2
-                                <a c'>16 \p ]
+                                <a c'>16 -\staccato \p ]
                                 <> \)
                             }
                         }
@@ -6312,7 +6032,6 @@
             \tag #'b-1
             \context PerformerStaffGroup = "B 1 Staff Group" <<
                 \context VocalizationStaff = "B 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -6333,6 +6052,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 1 Vocalization Voice" {
                         {
@@ -6509,7 +6229,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 1 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -6552,6 +6271,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 1 Percussion Voice" {
                         % [B 1 Percussion Voice] Material: "guiro_repetitions"
@@ -6559,7 +6279,6 @@
                             % [B 1 Percussion Voice] Measure 83
                             \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -6602,6 +6321,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -6731,7 +6451,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -6750,12 +6470,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -6849,12 +6569,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
                                 <> \stopTextSpan
                             }
                         }
@@ -6863,7 +6583,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \) \( \< [
+                                c'16 -\staccato \) \( [ \<
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
@@ -6957,7 +6677,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -6976,13 +6696,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -6997,7 +6717,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -7058,7 +6778,6 @@
             \tag #'b-2
             \context PerformerStaffGroup = "B 2 Staff Group" <<
                 \context VocalizationStaff = "B 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -7079,6 +6798,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 2 Vocalization Voice" {
                         {
@@ -7252,7 +6972,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 2 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -7295,6 +7014,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "guiro_repetitions"
@@ -7302,7 +7022,6 @@
                             % [B 2 Percussion Voice] Measure 83
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -7345,7 +7064,8 @@
                                                                         }
                                         }
                                     }
-                                c'8 -\staccato \( \< [
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -7388,7 +7108,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -7496,7 +7216,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -7509,12 +7229,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -7543,7 +7263,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -7669,13 +7389,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -7702,7 +7422,7 @@
                             % [B 2 Percussion Voice] Measure 95
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                c'8 -\staccato \p \> [
+                                c'8 -\staccato \p [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -7746,7 +7466,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -7822,7 +7542,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
@@ -7847,12 +7567,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -7890,7 +7610,6 @@
             \tag #'b-3
             \context PerformerStaffGroup = "B 3 Staff Group" <<
                 \context VocalizationStaff = "B 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -7911,6 +7630,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 3 Vocalization Voice" {
                         % [B 3 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -8047,7 +7767,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 3 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -8090,6 +7809,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "guiro_repetitions"
@@ -8097,7 +7817,6 @@
                             % [B 3 Percussion Voice] Measure 83
                             \times 4/5 {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -8140,6 +7859,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -8191,7 +7911,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -8223,7 +7943,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -8334,7 +8054,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
@@ -8353,12 +8073,12 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }
@@ -8471,7 +8191,7 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -8481,13 +8201,13 @@
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -8501,7 +8221,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -8533,7 +8253,6 @@
             \tag #'b-4
             \context PerformerStaffGroup = "B 4 Staff Group" <<
                 \context VocalizationStaff = "B 4 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -8554,6 +8273,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 4 Vocalization Voice" {
                         % [B 4 Vocalization Voice] Material: "pitch_pipe_drone"
@@ -8717,7 +8437,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 4 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -8760,6 +8479,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "guiro_repetitions"
@@ -8767,7 +8487,6 @@
                             % [B 4 Percussion Voice] Measure 83
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -8810,6 +8529,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
                                 c'4 -\staccato \( \<
                                 c'4 -\staccato
                                 c'4 -\staccato
@@ -8828,7 +8548,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -8947,20 +8667,20 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \) \( \startTextSpan \< [
+                                c'16 -\staccato \) \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 c'16 -\staccato ]
                             }
                             % [B 4 Percussion Voice] Measure 89
                             {
                                 c'16 -\staccato [
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
-                                <> \)
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -8974,7 +8694,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'8 -\staccato \( \< [
+                                c'8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 c'8 -\staccato
@@ -9003,7 +8723,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.806 0.946 0.961)
-                                c'16 -\staccato \( \< [
+                                c'16 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
@@ -9178,19 +8898,19 @@
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                c'16 -\staccato \( \startTextSpan \< [
+                                c'16 -\staccato \( \startTextSpan [ \<
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\staccato
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato \p ]
                                 \revert NoteHead.style
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                \set stemLeftBeamCount = 2
+                                c'16 -\staccato \p ]
                                 <> \stopTextSpan
                             }
                         }

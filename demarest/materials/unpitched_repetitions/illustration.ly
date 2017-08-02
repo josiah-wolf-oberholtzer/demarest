@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,15 +35,15 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "unpitched_repetitions"
                     {
                         % [Violin 1 Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -103,7 +103,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -167,7 +167,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -208,8 +208,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -221,7 +221,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -239,7 +239,7 @@
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'16 -\staccato \p \> [
+                            c'16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -290,7 +290,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -325,7 +325,7 @@
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'16 -\staccato \> [
+                            c'16 -\staccato [ \>
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -372,8 +372,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -385,7 +385,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -403,7 +403,7 @@
                         }
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'16 -\staccato \p \> [
+                            c'16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -435,7 +435,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -462,7 +462,7 @@
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'16 -\staccato \p \> [
+                            c'16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }
@@ -521,15 +521,15 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "unpitched_repetitions"
                     {
                         % [Cello Voice] Measure 1
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -570,7 +570,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -605,7 +605,7 @@
                         {
                             \once \override Hairpin.circled-tip = ##t
                             \colorSpan #-4 #4 #(rgb-color 0.946 0.818 0.732)
-                            c'16 -\staccato \( \< [
+                            c'16 -\staccato \( [ \<
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\staccato
@@ -626,7 +626,7 @@
                         % [Cello Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            c'16 -\staccato \p \> [
+                            c'16 -\staccato \p [ \>
                             \set stemLeftBeamCount = 2
                             c'16 -\staccato ]
                         }

@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
+import abjad
 import consort
-from abjad.tools import patterntools
 from abjad.tools import rhythmmakertools
 
 
 semitutti_timespan_maker = consort.TaleaTimespanMaker(
     division_masks=[
         rhythmmakertools.SilenceMask(
-            patterntools.Pattern(indices=[1, 2, 5], period=6),
+            abjad.Pattern(indices=[1, 2, 5], period=6),
             ),
         rhythmmakertools.SilenceMask(
-            patterntools.Pattern(indices=[0], period=7),
+            abjad.Pattern(indices=[0], period=7),
             ),
         ],
     initial_silence_talea=None,

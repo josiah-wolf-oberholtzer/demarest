@@ -1,9 +1,8 @@
-% package "abjad" @ b0f990d [josiah/dev] (2016-10-11 20:58:12)
-% package "ide" @ eb3b7b9 [master] (2016-10-06 11:59:21)
-% package "consort" @ b097323 [master] (2016-10-11 20:14:58)
-% package "demarest" @ de3ecd7 [master] (2016-10-11 21:28:34)
+% package "abjad" @ 2.21
+% package "consort" @ 2e8c358 [abjad-2.21] (2017-08-07 20:03:33)
+% package "demarest" @ 4d99405 [abjad-2.21] (2017-08-09 19:09:11)
 
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -41,7 +40,6 @@
             \tag #'a-1
             \context PerformerStaffGroup = "A 1 Staff Group" <<
                 \context VocalizationStaff = "A 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -62,6 +60,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 1 Vocalization Voice" {
                         {
@@ -82,6 +81,10 @@
                         % [A 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
@@ -134,16 +137,11 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                     }
                 }
                 \context ChorusPercussionStaff = "A 1 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -186,6 +184,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 1 Percussion Voice" {
                         % [A 1 Percussion Voice] Material: "shaker_drone"
@@ -228,7 +227,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -271,6 +269,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [A 1 Percussion Voice] Measure 64
@@ -284,11 +283,11 @@
                             }
                             % [A 1 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -298,7 +297,6 @@
             \tag #'a-2
             \context PerformerStaffGroup = "A 2 Staff Group" <<
                 \context VocalizationStaff = "A 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -319,6 +317,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 2 Vocalization Voice" {
                         {
@@ -335,7 +334,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 2 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -378,6 +376,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 2 Percussion Voice" {
                         % [A 2 Percussion Voice] Material: "shaker_drone"
@@ -420,7 +419,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -463,6 +461,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [A 2 Percussion Voice] Measure 64
@@ -476,11 +475,11 @@
                             }
                             % [A 2 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -490,7 +489,6 @@
             \tag #'a-3
             \context PerformerStaffGroup = "A 3 Staff Group" <<
                 \context VocalizationStaff = "A 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -511,6 +509,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 3 Vocalization Voice" {
                         {
@@ -527,7 +526,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 3 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -570,6 +568,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 3 Percussion Voice" {
                         % [A 3 Percussion Voice] Material: "shaker_drone"
@@ -612,7 +611,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -655,6 +653,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [A 3 Percussion Voice] Measure 64
@@ -668,11 +667,11 @@
                             }
                             % [A 3 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -682,7 +681,6 @@
             \tag #'a-4
             \context PerformerStaffGroup = "A 4 Staff Group" <<
                 \context VocalizationStaff = "A 4 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -703,6 +701,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 4 Vocalization Voice" {
                         {
@@ -719,7 +718,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "A 4 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -762,6 +760,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "A 4 Percussion Voice" {
                         % [A 4 Percussion Voice] Material: "shaker_drone"
@@ -804,7 +803,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -847,6 +845,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [A 4 Percussion Voice] Measure 64
@@ -860,11 +859,11 @@
                             }
                             % [A 4 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -876,7 +875,6 @@
             \tag #'t-1
             \context PerformerStaffGroup = "T 1 Staff Group" <<
                 \context VocalizationStaff = "T 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -897,6 +895,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 1 Vocalization Voice" {
                         {
@@ -917,6 +916,10 @@
                         % [T 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
@@ -969,10 +972,6 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -995,6 +994,9 @@
                         {
                             % [T 1 Percussion Voice] Measure 63
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1027,9 +1029,6 @@
                                                                     mb.
                                         }
                                     }
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
@@ -1040,6 +1039,9 @@
                             % [T 1 Percussion Voice] Measure 64
                             {
                                 \clef "treble"
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
@@ -1125,9 +1127,6 @@
                                                             }
                                     }
                                 <> \)
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                                 \clef "percussion"
                             }
                         }
@@ -1151,7 +1150,6 @@
             \tag #'t-2
             \context PerformerStaffGroup = "T 2 Staff Group" <<
                 \context VocalizationStaff = "T 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -1172,6 +1170,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 2 Vocalization Voice" {
                         {
@@ -1194,6 +1193,9 @@
                         {
                             % [T 2 Percussion Voice] Measure 63
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1226,9 +1228,6 @@
                                                                     vb.
                                         }
                                     }
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(0)
-                                \startStaff
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
@@ -1241,6 +1240,12 @@
                         % [T 2 Percussion Voice] Material: "trio_b_snare_drone"
                         {
                             {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
+                                \startStaff
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
                                 \override TextSpanner.dash-fraction = #0.333
@@ -1289,9 +1294,6 @@
                                         }
                                     }
                                 \colorSpan #-4 #4 #(rgb-color 0.932 0.98 0.9)
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(-4 0 4)
-                                \startStaff
                                 c'2 :32 \f \(
                                     ^ \markup {
                                     \whiteout
@@ -1330,9 +1332,6 @@
                                 <> \)
                                 \stopStaff
                                 \startStaff
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1355,7 +1354,6 @@
             \tag #'t-3
             \context PerformerStaffGroup = "T 3 Staff Group" <<
                 \context VocalizationStaff = "T 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -1376,6 +1374,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "T 3 Vocalization Voice" {
                         {
@@ -1488,7 +1487,7 @@
                             {
                                 \once \override Hairpin.circled-tip = ##t
                                 \colorSpan #-4 #4 #(rgb-color 0.86 0.972 0.883)
-                                f8 -\staccato \( \< [
+                                f8 -\staccato \( [ \<
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 f8 -\staccato
@@ -1531,7 +1530,7 @@
                             % [T 3 Percussion Voice] Measure 65
                             {
                                 \once \override Hairpin.circled-tip = ##t
-                                f8 -\staccato \p \> [
+                                f8 -\staccato \p [ \>
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 f8 -\staccato
@@ -1575,7 +1574,7 @@
                                 \set stemRightBeamCount = 1
                                 f8 -\staccato
                                 \set stemLeftBeamCount = 1
-                                f8 -\staccato \! ]
+                                f8 -\staccato ] \!
                                 <> \)
                             }
                         }
@@ -1587,7 +1586,6 @@
             \tag #'b-1
             \context PerformerStaffGroup = "B 1 Staff Group" <<
                 \context VocalizationStaff = "B 1 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -1608,6 +1606,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 1 Vocalization Voice" {
                         {
@@ -1628,6 +1627,10 @@
                         % [B 1 Vocalization Voice] Material: "whispered_inhales"
                         {
                             {
+                                \revert NoteHead.style
+                                \revert TextSpanner.dash-fraction
+                                \revert TextSpanner.dash-period
+                                \revert TextSpanner.style
                                 \once \override TextScript.parent-alignment-X = #left
                                 \once \override TextScript.self-alignment-X = #left
                                 \override NoteHead.style = #'cross
@@ -1680,10 +1683,6 @@
                                                             }
                                     }
                                 <> \)
-                                \revert NoteHead.style
-                                \revert TextSpanner.dash-fraction
-                                \revert TextSpanner.dash-period
-                                \revert TextSpanner.style
                             }
                         }
                         {
@@ -1703,7 +1702,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 1 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -1746,6 +1744,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 1 Percussion Voice" {
                         % [B 1 Percussion Voice] Material: "shaker_drone"
@@ -1788,7 +1787,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -1831,6 +1829,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [B 1 Percussion Voice] Measure 64
@@ -1844,11 +1843,11 @@
                             }
                             % [B 1 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -1858,7 +1857,6 @@
             \tag #'b-2
             \context PerformerStaffGroup = "B 2 Staff Group" <<
                 \context VocalizationStaff = "B 2 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -1879,6 +1877,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 2 Vocalization Voice" {
                         {
@@ -1895,7 +1894,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 2 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -1938,6 +1936,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 2 Percussion Voice" {
                         % [B 2 Percussion Voice] Material: "shaker_drone"
@@ -1980,7 +1979,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2023,6 +2021,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [B 2 Percussion Voice] Measure 64
@@ -2036,11 +2035,11 @@
                             }
                             % [B 2 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -2050,7 +2049,6 @@
             \tag #'b-3
             \context PerformerStaffGroup = "B 3 Staff Group" <<
                 \context VocalizationStaff = "B 3 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -2071,6 +2069,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 3 Vocalization Voice" {
                         {
@@ -2087,7 +2086,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 3 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -2130,6 +2128,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 3 Percussion Voice" {
                         % [B 3 Percussion Voice] Material: "shaker_drone"
@@ -2172,7 +2171,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2215,6 +2213,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [B 3 Percussion Voice] Measure 64
@@ -2228,11 +2227,11 @@
                             }
                             % [B 3 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }
@@ -2242,7 +2241,6 @@
             \tag #'b-4
             \context PerformerStaffGroup = "B 4 Staff Group" <<
                 \context VocalizationStaff = "B 4 Vocalization Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \pad-around
                         #0.5
@@ -2263,6 +2261,7 @@
                                     \italic
                                         v.
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 4 Vocalization Voice" {
                         {
@@ -2279,7 +2278,6 @@
                     }
                 }
                 \context ChorusPercussionStaff = "B 4 Percussion Staff" {
-                    \clef "percussion"
                     \set Staff.instrumentName = \markup {
                     \concat
                         {
@@ -2322,6 +2320,7 @@
                                                         }
                         }
                     }
+                    \clef "percussion"
                     \bar "||"
                     \context Voice = "B 4 Percussion Voice" {
                         % [B 4 Percussion Voice] Material: "shaker_drone"
@@ -2364,7 +2363,6 @@
                                 \override TextSpanner.dash-fraction = #0.333
                                 \override TextSpanner.dash-period = #2.0
                                 \override TextSpanner.style = #'dashed-line
-                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 \set Staff.instrumentName = \markup {
                                     \concat
                                         {
@@ -2407,6 +2405,7 @@
                                                                         }
                                         }
                                     }
+                                \colorSpan #-4 #4 #(rgb-color 0.98 0.9 0.916)
                                 g'1 :32 \( \startTextSpan \<
                             }
                             % [B 4 Percussion Voice] Measure 64
@@ -2420,11 +2419,11 @@
                             }
                             % [B 4 Percussion Voice] Measure 66
                             {
-                                g'1 :32 \repeatTie \!
-                                <> \)
                                 \revert TextSpanner.dash-fraction
                                 \revert TextSpanner.dash-period
                                 \revert TextSpanner.style
+                                g'1 :32 \repeatTie \!
+                                <> \)
                                 <> \stopTextSpan
                             }
                         }

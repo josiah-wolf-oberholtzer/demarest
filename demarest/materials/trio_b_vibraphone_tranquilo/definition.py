@@ -11,7 +11,7 @@ trio_b_vibraphone_tranquilo = abjad.new(
     pitched_tranquilo,
     attachment_handler__performance_instruction=consort.AttachmentExpression(
         attachments=make_text_spanner('bowed'),
-        selector=abjad.selectortools.select_pitched_runs(),
+        selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
         ),
     comment='trio_b_vibraphone_tranquilo',
     instrument=abbreviations.vibraphone,

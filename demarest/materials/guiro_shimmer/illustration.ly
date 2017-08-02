@@ -1,4 +1,4 @@
-\version "2.19.44"
+\version "2.19.65"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
@@ -35,8 +35,8 @@
                 }
         } <<
             \context StringStaff = "Violin 1 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 1 Voice" {
-                    \clef "treble"
                     % [Violin 1 Voice] Material: "guiro_shimmer"
                     {
                         % [Violin 1 Voice] Measure 1
@@ -52,7 +52,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -65,7 +65,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -78,35 +78,35 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4. :32 \( \startTextSpan \<
+                            c'4. :32 \fp \( \startTextSpan \>
                         }
                         % [Violin 1 Voice] Measure 2
                         {
-                            b4 :32 \p \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie
+                            <> \)
                         }
                     }
                     {
                         {
-                            r8
+                            r8 \!
                         }
                     }
                     % [Violin 1 Voice] Material: "guiro_shimmer"
                     {
                         % [Violin 1 Voice] Measure 3
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b8 :64 \parenthesizeDynamic \p \(
+                            c'8 :64 \ppp \(
                             <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -123,36 +123,36 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4. :32 \( \<
-                            b8 :64 \repeatTie
+                            c'4. :32 \fp \( \>
+                            c'8 :64 \repeatTie
                         }
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 3/5 {
-                            b8 :64 \repeatTie [
+                            c'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            b8 :64 -\accent
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            b8 :64 -\accent
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            b8 :64 -\accent
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            b8 :64 -\accent ]
+                            c'8 :64 -\accent ]
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            b4 :32 -\accent \p
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 -\accent
+                            <> \)
                         }
                     }
                     {
                         {
-                            r8
+                            r8 \!
                         }
                         % [Violin 1 Voice] Measure 6
                         {
@@ -166,15 +166,15 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b8 :64 \parenthesizeDynamic \p \(
+                            c'8 :64 \ppp \(
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            b4 :32 \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -201,8 +201,8 @@
                 }
         } <<
             \context StringStaff = "Violin 2 Staff" {
+                \clef "treble"
                 \context Voice = "Violin 2 Voice" {
-                    \clef "treble"
                     {
                         % [Violin 2 Voice] Measure 1
                         {
@@ -223,7 +223,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -236,7 +236,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -249,22 +249,22 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b8 :64 \( \startTextSpan \<
+                            c'8 :64 \fp \( \startTextSpan \>
                         }
                         % [Violin 2 Voice] Measure 2
                         {
-                            b4 :32 \repeatTie
+                            c'4 :32 \repeatTie
                         }
                         {
-                            b8 :64 -\accent \p
+                            c'8 :64 -\accent
                         }
                         % [Violin 2 Voice] Measure 3
                         {
-                            b4 :32 \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie \!
+                            <> \)
                         }
                     }
                     {
@@ -276,15 +276,15 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4 :32 \p \(
+                            c'4 :32 \ppp \(
                             <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {
@@ -296,40 +296,39 @@
                     % [Violin 2 Voice] Material: "guiro_shimmer"
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b8 :64 \( \<
+                            c'8 :64 \fp \( \>
                         }
                         \times 2/3 {
-                            b8 :64 \repeatTie [
+                            c'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            b8 :64 -\accent
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            b8 :64 -\accent ]
+                            c'8 :64 -\accent ]
                         }
                         % [Violin 2 Voice] Measure 5
                         {
-                            b4 :32 -\accent \p
+                            c'4 :32 -\accent \ppp \<
                         }
                         {
-                            b8 :64 \repeatTie
+                            c'8 :64 \repeatTie
                         }
                         % [Violin 2 Voice] Measure 6
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            b4. :32 -\accent \>
+                            c'4. :32 -\accent \mf \>
                         }
                         % [Violin 2 Voice] Measure 7
                         {
-                            b8 :64 \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 :64 \repeatTie
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -356,8 +355,8 @@
                 }
         } <<
             \context StringStaff = "Viola Staff" {
+                \clef "alto"
                 \context Voice = "Viola Voice" {
-                    \clef "alto"
                     {
                         % [Viola Voice] Measure 1
                         {
@@ -378,7 +377,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -391,7 +390,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -404,31 +403,30 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4 :32 \( \startTextSpan \<
+                            c'4 :32 \( \startTextSpan \<
                         }
                         % [Viola Voice] Measure 2
                         {
-                            b8 :64 \repeatTie
+                            c'8 :64 \repeatTie
                         }
                         {
-                            \once \override Hairpin.circled-tip = ##t
-                            b8 :64 -\accent \p \>
+                            c'8 :64 -\accent \p \<
                         }
                         {
-                            b8 :64 \repeatTie
+                            c'8 :64 \repeatTie
                         }
                         % [Viola Voice] Measure 3
                         {
-                            b8 :64 -\accent
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 :64 -\accent \f
+                            <> \)
                         }
                     }
                     {
                         {
-                            r4 \!
+                            r4
                         }
                         % [Viola Voice] Measure 4
                         {
@@ -438,37 +436,36 @@
                     % [Viola Voice] Material: "guiro_shimmer"
                     {
                         {
-                            \once \override Hairpin.circled-tip = ##t
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b8 :64 \( \<
-                            b4 :32 \repeatTie
+                            c'8 :64 \fp \( \>
+                            c'4 :32 \repeatTie
                         }
                         {
-                            b4 :32 \repeatTie
+                            c'4 :32 \repeatTie
                         }
                         % [Viola Voice] Measure 5
                         {
                             \once \override Hairpin.circled-tip = ##t
-                            b8 :64 -\accent \p \>
+                            c'8 :64 -\accent \ppp \>
                         }
                         \times 2/3 {
-                            b8 :64 \repeatTie [
+                            c'8 :64 \repeatTie [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
-                            b8 :64 -\accent
+                            c'8 :64 -\accent
                             \set stemLeftBeamCount = 1
-                            b8 :64 -\accent ]
+                            c'8 :64 -\accent ]
                         }
                         % [Viola Voice] Measure 6
                         {
-                            b4 :32 -\accent
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 -\accent
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -502,8 +499,8 @@
                 }
         } <<
             \context StringStaff = "Cello Staff" {
+                \clef "bass"
                 \context Voice = "Cello Voice" {
-                    \clef "bass"
                     % [Cello Voice] Material: "guiro_shimmer"
                     {
                         % [Cello Voice] Measure 1
@@ -519,7 +516,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.left.text = \markup {
@@ -532,7 +529,7 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -545,15 +542,15 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4. :32 \( \startTextSpan \<
+                            c'4. :32 \( \startTextSpan \<
                         }
                         % [Cello Voice] Measure 2
                         {
-                            b4 :32 \p \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \f \repeatTie
+                            <> \)
                         }
                     }
                     {
@@ -570,20 +567,20 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4. :32 \( \<
+                            c'4. :32 \fp \( \>
                         }
                         % [Cello Voice] Measure 4
                         {
-                            b8 :64 \p \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'8 :64 \repeatTie
+                            <> \)
                         }
                     }
                     {
                         {
-                            r4
+                            r4 \!
                         }
                     }
                     % [Cello Voice] Material: "guiro_shimmer"
@@ -594,21 +591,21 @@
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b4 :32 \( \<
+                            c'4 :32 \( \<
                         }
                         {
-                            b4 :32 \repeatTie
+                            c'4 :32 \repeatTie
                         }
                         % [Cello Voice] Measure 5
                         {
-                            b8 :64 -\accent \p
+                            c'8 :64 -\accent \f
                         }
                         {
-                            b4 :32 \repeatTie
-                            <> \)
                             \revert TextSpanner.dash-fraction
                             \revert TextSpanner.dash-period
                             \revert TextSpanner.style
+                            c'4 :32 \repeatTie
+                            <> \)
                             <> \stopTextSpan
                         }
                     }
@@ -627,13 +624,16 @@
                     {
                         % [Cello Voice] Measure 7
                         {
+                            \revert TextSpanner.dash-fraction
+                            \revert TextSpanner.dash-period
+                            \revert TextSpanner.style
                             \once \override TextScript.parent-alignment-X = #left
                             \once \override TextScript.self-alignment-X = #left
                             \override TextSpanner.dash-fraction = #0.333
                             \override TextSpanner.dash-period = #2.0
                             \override TextSpanner.style = #'dashed-line
                             \colorSpan #-4 #4 #(rgb-color 0.9 0.972 0.98)
-                            b8 :64 \p \( ^ \markup {
+                            c'8 :64 \fp \( ^ \markup {
                                 \box
                                     \whiteout
                                         \pad-around
@@ -643,13 +643,10 @@
                                                     \concat
                                                         {
                                                             \vstrut
-                                                            "scrape tremolo"
+                                                            scrape
                                                         }
                                 }
                             <> \)
-                            \revert TextSpanner.dash-fraction
-                            \revert TextSpanner.dash-period
-                            \revert TextSpanner.style
                         }
                     }
                     {

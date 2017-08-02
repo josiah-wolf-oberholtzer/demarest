@@ -9,7 +9,7 @@ shaker_drone = abjad.new(
     unpitched_drone,
     attachment_handler__performance_instruction=consort.AttachmentExpression(
         attachments=abbreviations.make_text_spanner('spun'),
-        selector=abjad.selectortools.select_pitched_runs(),
+        selector=abjad.select().by_leaf().by_run((abjad.Note, abjad.Chord)),
         ),
     attachment_handler__tremoli=abjad.spannertools.StemTremoloSpanner,
     color=consort.Color.from_x11('Lavender')
