@@ -1,1 +1,2 @@
 -e git://github.com/josiah-wolf-oberholtzer/consort.git#egg=consort
+Sphinx==1.6.7
