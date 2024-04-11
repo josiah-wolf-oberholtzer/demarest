@@ -1,4 +1,4 @@
-% package "abjad" @ 168c6ef [josiah/dev] (2016-09-28 11:57:35)
+% package "abjad" @ 168c6ef [josephine/dev] (2016-09-28 11:57:35)
 % package "ide" @ c0caf44 [master] (2016-06-23 12:25:05)
 % package "consort" @ 1134a6c [master] (2016-09-29 23:35:23)
 % package "demarest" @ 06a0da0 [master] (2016-09-29 23:44:40)
